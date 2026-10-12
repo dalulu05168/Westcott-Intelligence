@@ -1,9 +1,7 @@
-# 升级入库与运行验收状态
+# v1.3视觉规则与运行验收边界
 
-原ZIP CRC及逐文件SHA256核验通过；原验证程序通过。
+完整MASTER PROMPT V2.0（17节、15项检查）及用户提供Logo已核验并纳入源码包；少字多图、大字突出重点规则已接入五个Skill和统一入口。
 
-这是规则升级审阅包，不是运行中的新闻采集服务。未发现原5项推送任务配置及执行日志；准确率尚未实测；MASTER PROMPT V2.0及原始Logo缺失。文件已入库到私有仓库`dalulu05168/Westcott-Intelligence`的main分支。首次完整导入提交：`d9e8ba0d2fc4773e5dc0c83ac3d54802c343b90c`；121个文件的远端Git blob校验值均与本地ZIP内容一致。
+本版本仅整合视觉规则与素材，没有安装到插件缓存、修改线上5项任务或触发图片生成。当前发布须以实际GitHub提交和文件读回为证；原v1.2提交不能代替v1.3证据。人物和已采用历史保留原始字节。实际新闻准确性、N01/N06、通知送达和实图15项验收仍须各自真实证据。
 
-新增 skills/p004-chat-suite/references/event-driven-20261013.md、同目录news-accuracy-acceptance.md及config/monitoring-plan.json；六个Skill入口引用新规则，CHANGELOG及报告更新。原始人物档案与memory保持逐字节一致。
-
-验证：在此目录运行 python scripts/validate_repository.py。此命令验证人物和结构一致性，不验证监测、消息发布或新闻准确率。
+原MASTER第10节示例额外引入月日的问题通过执行补充约束，原文保持完整不变。没有新的待发布财经内容，未将示例或旧新闻当新输入出图。

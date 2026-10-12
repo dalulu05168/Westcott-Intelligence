@@ -6,4 +6,4 @@ v1.2-review首次完整导入提交：`d9e8ba0d2fc4773e5dc0c83ac3d54802c343b90c`
 
 后续修改先读取当前main和相关文件，保留原始人物与历史资料，运行`python scripts/validate_repository.py`。上传后记录提交SHA、文件列表并读回；文件校验不代表新闻准确率或推送测试通过。
 
-当前教师：Jonathan Richard Hayes（Jonathan）。旧仓库不得自动删除。现有5项任务待取得实际配置与执行日志；准确率待实测，图片待补齐MASTER PROMPT V2.0与原始透明Logo。暂不修改Google Docs。
+当前教师：Jonathan Richard Hayes（Jonathan）。旧仓库不得自动删除。现有5项任务待取得实际配置与执行日志；准确率待实测，v1.3已补齐完整MASTER PROMPT V2.0与用户提供的原始透明Logo，实图验收尚未完成。暂不修改Google Docs。

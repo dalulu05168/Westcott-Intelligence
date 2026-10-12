@@ -1,19 +1,58 @@
 {
-  "archive_bytes": 222291,
-  "archive_entries": 117,
-  "zip_crc": "PASS",
-  "original_manifest": "PASS",
-  "existing_validator": "PASS: 65 canonical identities + 65 profiles + CSV + six large-investment personas + teacher Jonathan + five Skills + daily memory audit; editorial exceptions remain flagged",
-  "runtime_tasks": "NOT_VERIFIED",
-  "news_accuracy": "NOT_MEASURED",
-  "visual_acceptance": "BLOCKED_MISSING_MASTER_AND_LOGO",
-  "github_upload": "VERIFIED",
-  "original_history_preserved": true,
-  "github_repository": "dalulu05168/Westcott-Intelligence",
-  "github_visibility_at_upload": "private",
-  "import_commit_sha": "d9e8ba0d2fc4773e5dc0c83ac3d54802c343b90c",
-  "import_file_count": 121,
-  "remote_git_blob_matches": 121,
-  "archive_scope": "archive_bytes/archive_entries describe source v1.1 ZIP; import_file_count describes v1.2-review package",
-  "validation_scope": "Static identity and structure checks only; runtime and news accuracy remain unverified."
+  "package": "v1.3-visual-review",
+  "scope": "SOURCE_RULES_AND_ASSETS_ONLY",
+  "master_sections": 17,
+  "qa_checks": 15,
+  "master_sha256": "b5c793bdb89910959656b739c737f295575e46cd87cf9fa1d7a389404264aff0",
+  "logo_sha256": "22ba42f836b51b741c11f0d4fb255dd12fd9483c9e26817125903f841659c06c",
+  "logo_matches_previous_candidate": true,
+  "logo_metadata": {
+    "width": 1774,
+    "height": 887,
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ]
+  },
+  "protected_character_and_history_files_unchanged": 92,
+  "repository_validator": "PASS: 65 canonical identities + 65 profiles + CSV + six large-investment personas + teacher Jonathan + five Skills + daily memory audit; editorial exceptions remain flagged",
+  "skill_validators": {
+    "p004-assistant": {
+      "frontmatter_unchanged": "PASS",
+      "visual_references_resolve": "PASS",
+      "official_quick_validate": "UNAVAILABLE_MISSING_PYYAML"
+    },
+    "p004-chat-suite": {
+      "frontmatter_unchanged": "PASS",
+      "visual_references_resolve": "PASS",
+      "official_quick_validate": "UNAVAILABLE_MISSING_PYYAML"
+    },
+    "p004-director": {
+      "frontmatter_unchanged": "PASS",
+      "visual_references_resolve": "PASS",
+      "official_quick_validate": "UNAVAILABLE_MISSING_PYYAML"
+    },
+    "p004-members": {
+      "frontmatter_unchanged": "PASS",
+      "visual_references_resolve": "PASS",
+      "official_quick_validate": "UNAVAILABLE_MISSING_PYYAML"
+    },
+    "p004-teacher": {
+      "frontmatter_unchanged": "PASS",
+      "visual_references_resolve": "PASS",
+      "official_quick_validate": "UNAVAILABLE_MISSING_PYYAML"
+    },
+    "p004-writer": {
+      "frontmatter_unchanged": "PASS",
+      "visual_references_resolve": "PASS",
+      "official_quick_validate": "UNAVAILABLE_MISSING_PYYAML"
+    }
+  },
+  "visual_acceptance": "NOT_RUN_NO_IMAGE",
+  "github_upload": "SEE_ACTUAL_COMMIT_AND_READBACK_VERIFICATION",
+  "installed_plugin_modified": false,
+  "online_tasks_modified": false,
+  "google_docs_modified": false,
+  "example_conflict": "Section 10: no invented month/day when only 2028 was supplied."
 }

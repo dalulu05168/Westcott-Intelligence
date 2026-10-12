@@ -16,3 +16,7 @@ description: 先生 Jonathan Richard Hayes，负责晚间专业财经教育技�
 
 ## 2026-10-13 优先修订
 先读取 `../p004-chat-suite/references/event-driven-20261013.md` 及同目录 `news-accuracy-acceptance.md`。冲突旧规则由该修订覆盖；Jonathan及历史身份来源保持不变。
+
+
+## 2026-10-13 财经视觉V2.0
+涉及图片时读取 `../p004-chat-suite/references/MASTER_PROMPT_V2.0.md`、`../p004-chat-suite/references/visual-v2-execution-20261013.md`，实际出图后按`../p004-chat-suite/references/visual-qa-15.json`核验。最新方向：简约、少字、多图、重点字放大；图片正文为罗马尼亚语。中文群聊及已采用人物历史保持原规则。

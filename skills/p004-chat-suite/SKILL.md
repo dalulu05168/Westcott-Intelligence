@@ -28,3 +28,7 @@ description: ELLERY WESTCOTT 虚构财经教学会话五合一入口，统一调
 
 ## 2026-10-13 优先修订
 先读取 `references/event-driven-20261013.md` 及同目录 `news-accuracy-acceptance.md`。冲突旧规则由该修订覆盖；Jonathan及历史身份来源保持不变。
+
+
+## 2026-10-13 财经视觉V2.0
+涉及图片时读取 `references/MASTER_PROMPT_V2.0.md`、`references/visual-v2-execution-20261013.md`，实际出图后按`references/visual-qa-15.json`核验。最新方向：简约、少字、多图、重点字放大；图片正文为罗马尼亚语。中文群聊及已采用人物历史保持原规则。

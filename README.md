@@ -1,3 +1,7 @@
+# v1.3视觉规范与素材
+
+本次补齐视觉规范与原始Logo，保留五个组件、统一入口及人物历史。下方v1.2提交记录为历史；v1.3发布证据以实际GitHub提交和远端文件读回为准。
+
 # ELLERY WESTCOTT｜五合一Skill独立源码
 
 当前GitHub仓库：`dalulu05168/Westcott-Intelligence`（Private），分支：`main`。
@@ -27,7 +31,7 @@ v1.2-review已于2026-10-13入库，首次完整导入提交：`d9e8ba0d2fc4773e
 
 源码及规则已经入库；现有5项线上任务的配置和日志尚未取得。`config/monitoring-plan.json`仍为DRAFT_NOT_DEPLOYED，不能据此声称后台扫描或自动发布已启用。
 
-新闻准确性标准见`skills/p004-chat-suite/references/news-accuracy-acceptance.md`；准确率尚未实测。图片仍缺MASTER PROMPT V2.0及原始透明Logo。暂不修改Google Docs。
+新闻准确性标准见`skills/p004-chat-suite/references/news-accuracy-acceptance.md`；准确率尚未实测。v1.3已补齐完整MASTER PROMPT V2.0及用户提供的透明Logo；尚未完成实图验收。暂不修改Google Docs。
 
 ## 安全边界
 

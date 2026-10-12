@@ -64,9 +64,8 @@
     "新闻与配图证据审稿",
     "日终采用稿去重与成长归档"
   ],
-  "missing_assets": [
-    "MASTER PROMPT V2.0",
-    "原始透明Logo"
-  ],
-  "google_docs_write": false
+  "missing_assets": [],
+  "google_docs_write": false,
+  "visual_assets_local_status": "MASTER_17_SECTIONS_AND_USER_LOGO_VERIFIED",
+  "visual_generation_runtime": "NOT_TESTED_NOT_DEPLOYED"
 }

@@ -1,0 +1,96 @@
+{
+  "status": "NOT_RUN_NO_IMAGE",
+  "checks": [
+    {
+      "id": "01",
+      "criterion": "严格16:9",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "02",
+      "criterion": "最终3840×2160",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "03",
+      "criterion": "使用原始透明Logo",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "04",
+      "criterion": "Logo整体宽12%–13%",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "05",
+      "criterion": "Logo完整未变形",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "06",
+      "criterion": "规范罗马尼亚语",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "07",
+      "criterion": "拼写和变音字母正确",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "08",
+      "criterion": "金额百分比日期正确",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "09",
+      "criterion": "无原文外新增信息",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "10",
+      "criterion": "无虚构图表数据",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "11",
+      "criterion": "保留重要条件限制",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "12",
+      "criterion": "文字简洁且无密集小字",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "13",
+      "criterion": "核心重点醒目",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "14",
+      "criterion": "留白充分",
+      "status": "NOT_RUN",
+      "evidence": null
+    },
+    {
+      "id": "15",
+      "criterion": "品牌配色版式一致",
+      "status": "NOT_RUN",
+      "evidence": null
+    }
+  ],
+  "delivery_gate": "All applicable checks must PASS; no unsupported claim of native 4K."
+}
