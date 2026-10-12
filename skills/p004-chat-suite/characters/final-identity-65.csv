@@ -1,0 +1,66 @@
+id,name,nick,gender,age,occupation,investment_years,capital_scale,student_seniority,location,background_note
+01,Ion Dumitrescu,ION,男,46,软件工程师,2,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+02,Rodica Gabriela Petrescu,rodica,女,49,会计师,5,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+03,Andrei Andrieș,Andrieș,男,33,中学教师,3,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+04,Mihai Ion,Mihai,男,47,外贸主管,12,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+05,Vasile Anton Roșu,vasile,男,28,软件工程师,7,普通投资,新学员,法国,不在罗马尼亚（法国人/群内发罗马尼亚语，父母为罗马尼亚人或有罗马尼亚生活背景）
+06,Andrei Iulian Popescu,Andrei Popescu,男,26,跨国公司高管,1,大额投资,新学员,罗马尼亚,罗马尼亚本地居民
+07,Elena Oancea,Elena,女,33,银行职员,9,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+08,Daniel Paraschiv,Daniel,男,26,会计师,5,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+09,Gheorghe Mardare,Gheorghe,男,48,外贸主管,11,普通投资,老学员,罗马尼亚,罗马尼亚本地居民
+10,Mirela Pană,Mirela,女,39,HR经理,4,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+11,Cristian Mitroi,Cristian,男,44,软件工程师,5,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+12,Constantin Vlad,Constantin,男,50,执业医生,13,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+13,Catalin Cocoș,Catalin,男,48,建筑师,7,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+14,Daniel Badea,Badea,男,34,会计师,3,普通投资,老学员,罗马尼亚,罗马尼亚本地居民
+15,Mihai Lipa,Lipa,男,50,中学教师,6,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+16,Emma Andreea Tănase,Emma,女,28,私营企业主,7,大额投资,新学员,罗马尼亚,罗马尼亚本地居民
+17,Catalina Lăcătuș,Catalina,女,37,建筑师,14,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+18,Sergiu Manolache,Sergiu,男,45,软件工程师,5,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+19,Matei Cocoș,Matei,男,49,外贸主管,8,普通投资,老学员,罗马尼亚,罗马尼亚本地居民
+20,Andrei Trandafir,Andrei,男,29,中学教师,7,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+21,Ana-Maria Mitroi,Ana-Maria,女,43,银行职员,5,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+22,Ion Dorian Cozma,Ion Cozma,男,37,会计师,10,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+23,Alin Gabriel Vasile,Alin,男,48,软件工程师,2,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+24,Gheorghe Badea,Gheorghe Badea,男,47,市场经理,4,普通投资,老学员,德国,不在罗马尼亚（居住在德国）
+25,Cristian Dragoș Necula,Cristian Necula,男,28,中学教师,4,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+26,Daria Ana Palade,Daria,女,38,房地产开发商,5,大额投资,新学员,罗马尼亚,罗马尼亚本地居民
+27,Elena Oprea,Elena,女,46,建筑师,14,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+28,Daniel Ioan,Daniel Ioan,男,31,建筑师,6,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+29,Ion Tiberiu Pană,Ion Pană,男,32,市场经理,11,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+30,Victor Deliu,Victor,男,48,中学教师,15,普通投资,新学员,法国,不在罗马尼亚（法国人/群内发罗马尼亚语，父母为罗马尼亚人或有罗马尼亚生活背景）
+31,Daniel Lipa,Daniel Lipa,男,45,执业医生,11,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+32,Victor Mateescu,Victor,男,43,会计师,12,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+33,Cristian Roșca,Cristian Roșca,男,31,自由职业者,8,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+34,Daniel Deliu,Daniel Deliu,男,34,外贸主管,11,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+35,Daniel Cozma,Daniel Cozma,男,33,建筑师,11,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+36,Andrei Calin Tolontan,Andrei Tolontan,男,52,私营企业主,13,大额投资,新学员,罗马尼亚,罗马尼亚本地居民
+37,Mihaela Acatrinei,Mihaela,女,33,建筑师,1,普通投资,新学员,法国,不在罗马尼亚（法国人/群内发罗马尼亚语，父母为罗马尼亚人或有罗马尼亚生活背景）
+38,Victor Bădăuță,Victor Bădăuță,男,38,中学教师,5,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+39,Carmen Iulia Ioan,Carmen,女,32,建筑师,10,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+40,Radu Cozma,Radu,男,32,HR经理,11,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+41,Matei Cojocaru,Matei Cojocaru,男,38,HR经理,15,普通投资,老学员,德国,不在罗马尼亚（居住在德国）
+42,Anca Alexandra Palade,Anca,女,30,执业医生,5,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+43,GEORGE AURELIAN Cotoi,George,男,33,外贸主管,12,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+44,Mihai Lăcătuș,Mihai Lăcătuș,男,43,银行职员,5,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+45,Viorel oprea,Viorel,男,39,银行职员,15,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+46,Andrei Petrescu,Andrei Petrescu,男,38,跨国公司高管,6,大额投资,新学员,罗马尼亚,罗马尼亚本地居民
+47,Mariana Matei,Mariana,女,30,HR经理,9,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+48,Benjamin-Emil stancu,Benjamin-Emil,男,28,中学教师,1,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+49,Ionuț Georgescu,Ionuț,男,30,自由职业者,3,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+50,Cătălin Gabriel Vișan,Cătălin Gabriel,男,45,自由职业者,2,普通投资,新学员,意大利,不在罗马尼亚（居住在意大利）
+51,Cosmin-George Musteață,Cosmin-George,男,38,HR经理,10,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+52,Vasile Andrei Avădenei,Vasile Andrei,男,42,外贸主管,5,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+53,Alexandru Gabriel Chivu,Alexandru,男,26,中学教师,6,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+54,Teodor Lipai,Teodor,男,47,外贸主管,15,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+55,Cosmin-Tomel Marinca,Cosmin-Tomel,男,50,建筑师,5,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+56,Mircea Alexandru Armegioiu,Mircea,男,29,房地产开发商,5,大额投资,新学员,罗马尼亚,罗马尼亚本地居民
+57,Loredana Trandafir,Loredana,女,31,软件工程师,8,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+58,Ion Carp,Ion Carp,男,49,市场经理,15,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+59,Corin Bejan,Corin,男,42,执业医生,13,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+60,Constantin Dumitrescu,Constantin Dumitrescu,男,42,中学教师,15,普通投资,新学员,西班牙,不在罗马尼亚（居住在西班牙）
+61,Daniel Stroe,Daniel Stroe,男,46,外贸主管,5,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+62,Matei Cojocaru,Matei Cojocaru,男,45,执业医生,4,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+63,Cristian Mihai Lanca,Cristian Lanca,男,37,执业医生,13,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+64,Daniel Gheorghe Dinu,Daniel Dinu,男,43,外贸主管,13,普通投资,新学员,罗马尼亚,罗马尼亚本地居民
+65,Sergiu Negru,Sergiu Negru,男,26,建筑师,5,普通投资,新学员,罗马尼亚,罗马尼亚本地居民

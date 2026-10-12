@@ -1,0 +1,12 @@
+{
+  "archive_bytes": 222291,
+  "archive_entries": 117,
+  "zip_crc": "PASS",
+  "original_manifest": "PASS",
+  "existing_validator": "PASS: 65 canonical identities + 65 profiles + CSV + six large-investment personas + teacher Jonathan + five Skills + daily memory audit; editorial exceptions remain flagged",
+  "runtime_tasks": "NOT_VERIFIED",
+  "news_accuracy": "NOT_MEASURED",
+  "visual_acceptance": "BLOCKED_MISSING_MASTER_AND_LOGO",
+  "github_upload": "NOT_PERFORMED",
+  "original_history_preserved": true
+}

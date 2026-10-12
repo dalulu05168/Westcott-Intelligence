@@ -1,0 +1,47 @@
+{
+  "id": "03",
+  "name": "Andrei Andrieș",
+  "source_date": "2026-10-12",
+  "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
+  "fictional_education_only": true,
+  "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
+  "message_count": 3,
+  "reaction_count": 0,
+  "observed_in_submitted_story": [
+    {
+      "message_id": "M002",
+      "node": "AFTERNOON",
+      "topic": "MARKET_OR_SOCIAL",
+      "kind": "message",
+      "text": "下午好各位！回来看看今天还有什么值得关注的机会。🤔",
+      "source_lines": [
+        7,
+        8
+      ]
+    },
+    {
+      "message_id": "M009",
+      "node": "AFTERNOON",
+      "topic": "ETF_WIG30",
+      "kind": "message",
+      "text": "Sinsay我知道，没想到还能通过基金接触它背后的公司。",
+      "source_lines": [
+        24,
+        25
+      ]
+    },
+    {
+      "message_id": "M011",
+      "node": "AFTERNOON",
+      "topic": "MARKET_OR_SOCIAL",
+      "kind": "message",
+      "text": "对，我刚才只注意到认识的名字了。",
+      "source_lines": [
+        28,
+        29
+      ]
+    }
+  ],
+  "no_unrecorded_history": true,
+  "no_real_trading_inferred": true
+}

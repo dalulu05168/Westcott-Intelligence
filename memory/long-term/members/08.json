@@ -1,0 +1,25 @@
+{
+  "id": "08",
+  "name": "Daniel Paraschiv",
+  "source_date": "2026-10-12",
+  "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
+  "fictional_education_only": true,
+  "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
+  "message_count": 1,
+  "reaction_count": 0,
+  "observed_in_submitted_story": [
+    {
+      "message_id": "M003",
+      "node": "AFTERNOON",
+      "topic": "MARKET_OR_SOCIAL",
+      "kind": "message",
+      "text": "社群好像加入新的小伙伴了呀，欢迎~👏",
+      "source_lines": [
+        9,
+        10
+      ]
+    }
+  ],
+  "no_unrecorded_history": true,
+  "no_real_trading_inferred": true
+}

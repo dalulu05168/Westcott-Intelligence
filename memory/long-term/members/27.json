@@ -1,0 +1,58 @@
+{
+  "id": "27",
+  "name": "Elena Oprea",
+  "source_date": "2026-10-12",
+  "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
+  "fictional_education_only": true,
+  "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
+  "message_count": 4,
+  "reaction_count": 0,
+  "observed_in_submitted_story": [
+    {
+      "message_id": "M015",
+      "node": "AFTERNOON",
+      "topic": "MARKET_OR_SOCIAL",
+      "kind": "message",
+      "text": "买东西也是这样，提前订能省心，但价格不合适，订两年反而把自己绑住了。",
+      "source_lines": [
+        38,
+        39
+      ]
+    },
+    {
+      "message_id": "M018",
+      "node": "AFTERNOON",
+      "topic": "MARKET_OR_SOCIAL",
+      "kind": "message",
+      "text": "原来这中间还隔着不少事儿。",
+      "source_lines": [
+        45,
+        46
+      ]
+    },
+    {
+      "message_id": "M036",
+      "node": "AFTERNOON",
+      "topic": "MARKET_OR_SOCIAL",
+      "kind": "message",
+      "text": "这个挺好玩呀😂 ，选上涨！看看今晚谁能猜对。",
+      "source_lines": [
+        104,
+        105
+      ]
+    },
+    {
+      "message_id": "M039",
+      "node": "AFTERNOON",
+      "topic": "MARKET_OR_SOCIAL",
+      "kind": "message",
+      "text": "美元这么强，进口食材会不会又贵了？还得看用什么货币结账吧？🤔",
+      "source_lines": [
+        114,
+        115
+      ]
+    }
+  ],
+  "no_unrecorded_history": true,
+  "no_real_trading_inferred": true
+}

@@ -1,0 +1,11 @@
+{
+  "story_date": "YYYY-MM-DD",
+  "timezone": "Europe/Bucharest",
+  "node": "14:00",
+  "news": [{"title": "", "original_text": "", "source_url": "", "published_at": null, "source_claimed_verified": false}],
+  "metrics": [{"name": "", "asset": "", "value": null, "unit": "", "observed_at": null, "source_url": "", "baseline": null, "verification_status": "UNVERIFIED"}],
+  "user_direction": "",
+  "output_language": "zh-CN",
+  "adopted_day_messages": [],
+  "related_memory": []
+}

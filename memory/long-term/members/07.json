@@ -1,0 +1,36 @@
+{
+  "id": "07",
+  "name": "Elena Oancea",
+  "source_date": "2026-10-12",
+  "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
+  "fictional_education_only": true,
+  "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
+  "message_count": 2,
+  "reaction_count": 0,
+  "observed_in_submitted_story": [
+    {
+      "message_id": "M033",
+      "node": "AFTERNOON",
+      "topic": "CONTEST_SP500",
+      "kind": "message",
+      "text": "哈哈，这个有意思！我先选上涨，今天就让我乐观一回！",
+      "source_lines": [
+        98,
+        99
+      ]
+    },
+    {
+      "message_id": "M048",
+      "node": "EVENING",
+      "topic": "BREAKOUT_LESSON",
+      "kind": "message",
+      "text": "晚上好呀！每晚这个时间都是准时参加。",
+      "source_lines": [
+        140,
+        141
+      ]
+    }
+  ],
+  "no_unrecorded_history": true,
+  "no_real_trading_inferred": true
+}

@@ -1,0 +1,32 @@
+{
+  "story_id": "ellery-westcott-five-skills",
+  "story_date": "YYYY-MM-DD",
+  "timezone": "Europe/Bucharest",
+  "status": "DRAFT_NOT_ADOPTED",
+  "user_adopted": false,
+  "roster_status": "CANDIDATE_NOT_APPROVED",
+  "final_transcript_file": null,
+  "messages": [],
+  "character_updates": [],
+  "watchlist_outcomes": [],
+  "lesson_summary": [],
+  "open_questions": [],
+  "next_day_threads": [],
+  "source_ledger": [],
+  "published_status": "UNKNOWN",
+  "saved_at": null,
+  "rules_version": "2026-10-12-session-rules",
+  "revision": 1,
+  "supersedes_revision": null,
+  "actual_message_count": 0,
+  "interaction_pattern_uses": 0,
+  "appearance_counts": {},
+  "repository_sync": {
+    "status": "NOT_UPLOADED",
+    "repository": null,
+    "branch": null,
+    "path": null,
+    "commit_sha": null,
+    "verified_at": null
+  }
+}

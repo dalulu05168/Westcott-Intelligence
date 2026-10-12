@@ -1,0 +1,47 @@
+{
+  "id": "33",
+  "name": "Cristian Roșca",
+  "source_date": "2026-10-12",
+  "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
+  "fictional_education_only": true,
+  "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
+  "message_count": 3,
+  "reaction_count": 0,
+  "observed_in_submitted_story": [
+    {
+      "message_id": "M004",
+      "node": "AFTERNOON",
+      "topic": "MARKET_OR_SOCIAL",
+      "kind": "message",
+      "text": "上午没怎么盯盘，刚回来。大家关注哪些股票？",
+      "source_lines": [
+        11,
+        12
+      ]
+    },
+    {
+      "message_id": "M010",
+      "node": "AFTERNOON",
+      "topic": "MARKET_OR_SOCIAL",
+      "kind": "message",
+      "text": "不过买一只基金，不只是买这个品牌吧。其他公司占多少，也得看。",
+      "source_lines": [
+        26,
+        27
+      ]
+    },
+    {
+      "message_id": "M013",
+      "node": "AFTERNOON",
+      "topic": "MARKET_OR_SOCIAL",
+      "kind": "message",
+      "text": "我先看它到底买了什么。有的基金名字挺直观，里面的比例却未必是自己想的那样。",
+      "source_lines": [
+        32,
+        33
+      ]
+    }
+  ],
+  "no_unrecorded_history": true,
+  "no_real_trading_inferred": true
+}

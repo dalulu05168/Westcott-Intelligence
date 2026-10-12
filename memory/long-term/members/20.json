@@ -1,0 +1,36 @@
+{
+  "id": "20",
+  "name": "Andrei Trandafir",
+  "source_date": "2026-10-12",
+  "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
+  "fictional_education_only": true,
+  "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
+  "message_count": 2,
+  "reaction_count": 0,
+  "observed_in_submitted_story": [
+    {
+      "message_id": "M007",
+      "node": "AFTERNOON",
+      "topic": "MARKET_OR_SOCIAL",
+      "kind": "message",
+      "text": "分化万岁！有分化才有波动的空间！👍",
+      "source_lines": [
+        19,
+        20
+      ]
+    },
+    {
+      "message_id": "M041",
+      "node": "AFTERNOON",
+      "topic": "MARKET_OR_SOCIAL",
+      "kind": "message",
+      "text": "欧洲银行股还是很争气的，那咱们这边其他的有没有掉队啊？",
+      "source_lines": [
+        120,
+        121
+      ]
+    }
+  ],
+  "no_unrecorded_history": true,
+  "no_real_trading_inferred": true
+}

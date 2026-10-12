@@ -1,0 +1,25 @@
+{
+  "id": "09",
+  "name": "Gheorghe Mardare",
+  "source_date": "2026-10-12",
+  "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
+  "fictional_education_only": true,
+  "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
+  "message_count": 1,
+  "reaction_count": 0,
+  "observed_in_submitted_story": [
+    {
+      "message_id": "M024",
+      "node": "AFTERNOON",
+      "topic": "MARKET_OR_SOCIAL",
+      "kind": "message",
+      "text": "那几张纸就是个摆设，关键得看谁来踩油门、谁来带飞！",
+      "source_lines": [
+        62,
+        63
+      ]
+    }
+  ],
+  "no_unrecorded_history": true,
+  "no_real_trading_inferred": true
+}

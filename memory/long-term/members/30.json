@@ -1,0 +1,58 @@
+{
+  "id": "30",
+  "name": "Victor Deliu",
+  "source_date": "2026-10-12",
+  "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
+  "fictional_education_only": true,
+  "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
+  "message_count": 4,
+  "reaction_count": 0,
+  "observed_in_submitted_story": [
+    {
+      "message_id": "M021",
+      "node": "AFTERNOON",
+      "topic": "MARKET_OR_SOCIAL",
+      "kind": "message",
+      "text": "一亿欧元😱。",
+      "source_lines": [
+        54,
+        55
+      ]
+    },
+    {
+      "message_id": "M023",
+      "node": "AFTERNOON",
+      "topic": "SNO",
+      "kind": "message",
+      "text": "我一看到解除暂停，还以为SNO要有大动作了😅",
+      "source_lines": [
+        60,
+        61
+      ]
+    },
+    {
+      "message_id": "M042",
+      "node": "AFTERNOON",
+      "topic": "MARKET_OR_SOCIAL",
+      "kind": "message",
+      "text": "跟着欧洲老大哥凑热闹没用，关键得看它们今天在本地有没有人愿意接盘才行。",
+      "source_lines": [
+        122,
+        123
+      ]
+    },
+    {
+      "message_id": "M050",
+      "node": "EVENING",
+      "topic": "BREAKOUT_LESSON",
+      "kind": "message",
+      "text": "我也来了！😄",
+      "source_lines": [
+        144,
+        145
+      ]
+    }
+  ],
+  "no_unrecorded_history": true,
+  "no_real_trading_inferred": true
+}

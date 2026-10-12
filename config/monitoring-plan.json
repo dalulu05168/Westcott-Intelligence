@@ -1,0 +1,72 @@
+{
+  "status": "DRAFT_NOT_DEPLOYED",
+  "timezone": "Europe/Bucharest",
+  "check_interval_minutes": 60,
+  "monitoring_start": null,
+  "monitoring_end": null,
+  "scheduler": null,
+  "notification_channel": null,
+  "existing_five_tasks_verified": false,
+  "node_preparation": [
+    {
+      "node": "07:50",
+      "prepare": "07:35"
+    },
+    {
+      "node": "08:00",
+      "prepare": "07:45"
+    },
+    {
+      "node": "09:15",
+      "prepare": "09:00"
+    },
+    {
+      "node": "09:45",
+      "prepare": "09:30"
+    },
+    {
+      "node": "10:00",
+      "prepare": "09:45"
+    },
+    {
+      "node": "11:30",
+      "prepare": "11:15"
+    },
+    {
+      "node": "14:00",
+      "prepare": "13:45"
+    },
+    {
+      "node": "16:00",
+      "prepare": "15:45"
+    },
+    {
+      "node": "17:45",
+      "prepare": "17:30"
+    },
+    {
+      "node": "20:00",
+      "prepare": "19:45"
+    },
+    {
+      "node": "21:00",
+      "prepare": "20:45"
+    },
+    {
+      "node": "22:00",
+      "prepare": "21:45"
+    }
+  ],
+  "proposed_responsibilities": [
+    "早间隔夜事件筛选",
+    "日间重大事件核查",
+    "12节点提前15分钟备稿",
+    "新闻与配图证据审稿",
+    "日终采用稿去重与成长归档"
+  ],
+  "missing_assets": [
+    "MASTER PROMPT V2.0",
+    "原始透明Logo"
+  ],
+  "google_docs_write": false
+}

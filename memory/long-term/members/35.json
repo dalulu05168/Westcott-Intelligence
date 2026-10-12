@@ -1,0 +1,36 @@
+{
+  "id": "35",
+  "name": "Daniel Cozma",
+  "source_date": "2026-10-12",
+  "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
+  "fictional_education_only": true,
+  "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
+  "message_count": 2,
+  "reaction_count": 0,
+  "observed_in_submitted_story": [
+    {
+      "message_id": "M049",
+      "node": "EVENING",
+      "topic": "BREAKOUT_LESSON",
+      "kind": "message",
+      "text": "晚上好！我已经准备好了，今晚认真听听先生怎么讲。",
+      "source_lines": [
+        142,
+        143
+      ]
+    },
+    {
+      "message_id": "M063",
+      "node": "EVENING",
+      "topic": "BREAKOUT_LESSON",
+      "kind": "message",
+      "text": "对啊！这样的话，股价却死活冲不上去，是不是说明上面埋伏着一大堆人在拼命倒货抛售？",
+      "source_lines": [
+        184,
+        185
+      ]
+    }
+  ],
+  "no_unrecorded_history": true,
+  "no_real_trading_inferred": true
+}
