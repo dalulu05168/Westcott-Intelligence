@@ -1,0 +1,110 @@
+{
+  "old": {
+    "status": "BLOCK",
+    "errors": [
+      "UNAPPROVED_PUBLISHED_CLAIM:AIRPORT_DEADLINE",
+      "UNAPPROVED_PUBLISHED_CLAIM:US_INDEX_QUOTES",
+      "UNAPPROVED_PUBLISHED_CLAIM:AIRPORT_CAUSALITY"
+    ],
+    "claims": [
+      {
+        "id": "BET_LEVEL",
+        "status": "PASS",
+        "issues": [],
+        "text": "BVB在10月12日17:50:02记录的BET为33,253.02点。这是该时点记录，并非当前实时行情。"
+      },
+      {
+        "id": "AIRPORT_DEADLINE",
+        "status": "HOLD",
+        "issues": [
+          "EXACT_CLAIM_NOT_SUPPORTED",
+          "MISSING_LOCATABLE_EXCERPT",
+          "MISSING_SOURCE_TIMES",
+          "NOT_REVIEWED",
+          "SOURCE_BODY_NOT_READ"
+        ],
+        "text": "机场关闭延长至10月17日。"
+      },
+      {
+        "id": "US_INDEX_QUOTES",
+        "status": "HOLD",
+        "issues": [
+          "EXACT_CLAIM_NOT_SUPPORTED",
+          "MISSING_LOCATABLE_EXCERPT",
+          "MISSING_NUMERIC_FIELDS",
+          "MISSING_SOURCE_TIMES",
+          "NOT_REVIEWED",
+          "SOURCE_BODY_NOT_READ"
+        ],
+        "text": "S&P 500为7807.24、Nasdaq Composite为27245.90、Dow为51850.55。"
+      },
+      {
+        "id": "AIRPORT_CAUSALITY",
+        "status": "HOLD",
+        "issues": [
+          "EXACT_CLAIM_NOT_SUPPORTED",
+          "MISSING_LOCATABLE_EXCERPT",
+          "MISSING_SOURCE_TIMES",
+          "NOT_REVIEWED",
+          "SOURCE_BODY_NOT_READ"
+        ],
+        "text": "美国10月12日交易日，国际原油价格上涨，能源板块表现强于科技板块。沙特机场袭击是市场关注的风险因素之一，但不能将全部油价涨幅归因于这一事件。"
+      }
+    ],
+    "approved_facts": [],
+    "limitation": "Checks ledger consistency, not source authenticity, semantic truth, source independence, or completeness. External review is required; this script is not connected to ChatGPT Scheduled."
+  },
+  "repaired": {
+    "status": "PASS",
+    "errors": [],
+    "claims": [
+      {
+        "id": "BET_LEVEL",
+        "status": "PASS",
+        "issues": [],
+        "text": "BVB在10月12日17:50:02记录的BET为33,253.02点。这是该时点记录，并非当前实时行情。"
+      },
+      {
+        "id": "AIRPORT_DEADLINE",
+        "status": "HOLD",
+        "issues": [
+          "EXACT_CLAIM_NOT_SUPPORTED",
+          "MISSING_LOCATABLE_EXCERPT",
+          "MISSING_SOURCE_TIMES",
+          "NOT_REVIEWED",
+          "SOURCE_BODY_NOT_READ"
+        ],
+        "text": "机场关闭延长至10月17日。"
+      },
+      {
+        "id": "US_INDEX_QUOTES",
+        "status": "HOLD",
+        "issues": [
+          "EXACT_CLAIM_NOT_SUPPORTED",
+          "MISSING_LOCATABLE_EXCERPT",
+          "MISSING_NUMERIC_FIELDS",
+          "MISSING_SOURCE_TIMES",
+          "NOT_REVIEWED",
+          "SOURCE_BODY_NOT_READ"
+        ],
+        "text": "S&P 500为7807.24、Nasdaq Composite为27245.90、Dow为51850.55。"
+      },
+      {
+        "id": "AIRPORT_CAUSALITY",
+        "status": "HOLD",
+        "issues": [
+          "EXACT_CLAIM_NOT_SUPPORTED",
+          "MISSING_LOCATABLE_EXCERPT",
+          "MISSING_SOURCE_TIMES",
+          "NOT_REVIEWED",
+          "SOURCE_BODY_NOT_READ"
+        ],
+        "text": "美国10月12日交易日，国际原油价格上涨，能源板块表现强于科技板块。沙特机场袭击是市场关注的风险因素之一，但不能将全部油价涨幅归因于这一事件。"
+      }
+    ],
+    "approved_facts": [
+      "BVB在10月12日17:50:02记录的BET为33,253.02点。这是该时点记录，并非当前实时行情。"
+    ],
+    "limitation": "Checks ledger consistency, not source authenticity, semantic truth, source independence, or completeness. External review is required; this script is not connected to ChatGPT Scheduled."
+  }
+}

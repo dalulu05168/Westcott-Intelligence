@@ -20,3 +20,7 @@ description: 五合一编剧，编排自然有记忆的虚构财经教育群聊�
 
 ## 2026-10-13 财经视觉V2.0
 涉及图片时读取 `../p004-chat-suite/references/MASTER_PROMPT_V2.0.md`、`../p004-chat-suite/references/visual-v2-execution-20261013.md`，实际出图后按`../p004-chat-suite/references/visual-qa-15.json`核验。最新方向：简约、少字、多图、重点字放大；图片正文为罗马尼亚语。中文群聊及已采用人物历史保持原规则。
+
+
+## v1.4 发布前核验优先规则
+新闻、解释、对白及制图前读取 `../p004-chat-suite/references/news-release-gate-v1.4.md`。未确认主张不得进入可复制稿，所有角色共享同一批准事实集。规则与检查脚本不等于ChatGPT Scheduled已接入或已通过运行验收。

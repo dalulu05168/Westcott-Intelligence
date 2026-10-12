@@ -1,0 +1,128 @@
+{
+  "executed_at": "2026-10-12T23:24:52Z",
+  "audit_type": "POST_HOC_NOT_SCHEDULED_RUN",
+  "sample_message_id": "d5c2f592-72d0-44c2-8ac3-7968241fc549",
+  "sources": {
+    "bvb": {
+      "url": "https://bvb.ro/FinancialInstruments/Indices/IndicesProfiles.aspx?i=BET",
+      "access_status": "BODY_READ",
+      "source_type": "official",
+      "origin_id": "BVB",
+      "published_at": "2026-10-12T17:50:02+03:00",
+      "retrieved_at": "2026-10-12T23:24:52Z",
+      "published_at_kind": "dynamic_quote_timestamp",
+      "retrieved_at_kind": "recorded_immediately_after_tool_response"
+    },
+    "AIRPORT_DEADLINE": {
+      "url": "https://www.reuters.com/world/middle-east/skies-over-saudi-capital-riyadh-largely-empty-after-deadly-houthi-strikes-2026-10-12/",
+      "access_status": "BODY_UNAVAILABLE",
+      "source_type": "reliable_original",
+      "origin_id": "Reuters",
+      "published_at": null,
+      "retrieved_at": null
+    },
+    "US_INDEX_QUOTES": {
+      "url": "https://ca.finance.yahoo.com/news/us-equity-indexes-mixed-mega-205709615.html",
+      "access_status": "BODY_UNAVAILABLE",
+      "source_type": "reliable_original",
+      "origin_id": "MT Newswires",
+      "published_at": null,
+      "retrieved_at": null
+    },
+    "AIRPORT_CAUSALITY": {
+      "url": "https://www.reuters.com/business/us-stock-futures-muted-oil-stays-above-100-ahead-earnings-2026-10-12/",
+      "access_status": "BODY_UNAVAILABLE",
+      "source_type": "reliable_original",
+      "origin_id": "Reuters",
+      "published_at": null,
+      "retrieved_at": null
+    }
+  },
+  "claims": [
+    {
+      "id": "BET_LEVEL",
+      "text": "BVB在10月12日17:50:02记录的BET为33,253.02点。这是该时点记录，并非当前实时行情。",
+      "kind": "fact",
+      "review_status": "CONFIRMED",
+      "reviewed_by": "Codex source-page review 2026-10-13",
+      "is_numeric": true,
+      "evidence": [
+        {
+          "source_id": "bvb",
+          "excerpt": "BET® (BUCHAREST EXCHANGE TRADING) 33.253,02 12.10.2026 / 17:50:02 -0,44%",
+          "locator": "BVB index header, fetched text lines 36-39",
+          "supports_exact_claim": true
+        }
+      ],
+      "numbers": [
+        {
+          "instrument": "BET",
+          "unit": "index_points",
+          "basis": "index_level",
+          "market_state": "last_observation",
+          "as_of": "2026-10-12T17:50:02+03:00",
+          "value": "33253.02",
+          "source_value": "33253.02",
+          "source_id": "bvb",
+          "normalization_reviewed": true,
+          "quantity_type": "index_level"
+        }
+      ]
+    },
+    {
+      "id": "AIRPORT_DEADLINE",
+      "text": "机场关闭延长至10月17日。",
+      "kind": "fact",
+      "review_status": "PENDING",
+      "reviewed_by": "Codex post-hoc audit",
+      "is_numeric": false,
+      "evidence": [
+        {
+          "source_id": "AIRPORT_DEADLINE",
+          "excerpt": "",
+          "locator": "",
+          "supports_exact_claim": false
+        }
+      ]
+    },
+    {
+      "id": "US_INDEX_QUOTES",
+      "text": "S&P 500为7807.24、Nasdaq Composite为27245.90、Dow为51850.55。",
+      "kind": "fact",
+      "review_status": "PENDING",
+      "reviewed_by": "Codex post-hoc audit",
+      "is_numeric": true,
+      "evidence": [
+        {
+          "source_id": "US_INDEX_QUOTES",
+          "excerpt": "",
+          "locator": "",
+          "supports_exact_claim": false
+        }
+      ]
+    },
+    {
+      "id": "AIRPORT_CAUSALITY",
+      "text": "美国10月12日交易日，国际原油价格上涨，能源板块表现强于科技板块。沙特机场袭击是市场关注的风险因素之一，但不能将全部油价涨幅归因于这一事件。",
+      "kind": "fact",
+      "review_status": "PENDING",
+      "reviewed_by": "Codex post-hoc audit",
+      "is_numeric": false,
+      "evidence": [
+        {
+          "source_id": "AIRPORT_CAUSALITY",
+          "excerpt": "",
+          "locator": "",
+          "supports_exact_claim": false
+        }
+      ]
+    }
+  ],
+  "publish_claim_ids": [
+    "BET_LEVEL",
+    "AIRPORT_DEADLINE",
+    "US_INDEX_QUOTES",
+    "AIRPORT_CAUSALITY"
+  ],
+  "sample_scope": "Selected old-text claims summarized for post-hoc evidence review; not original execution ledger."
+}

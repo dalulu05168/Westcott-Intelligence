@@ -1,0 +1,81 @@
+{
+  "status": "PREPARED_NOT_APPLIED",
+  "version": "v1.4",
+  "repository_source": "dalulu05168/Westcott-Intelligence",
+  "baseline": "Previous local full prompt package; current online prompt not read back",
+  "do_not_create_tasks": true,
+  "do_not_change_ids_or_schedules": true,
+  "updates": [
+    {
+      "task_id": "6acd3adb3b488191a2614188a6e6950c",
+      "task_name": "Westcott 美罗重大事件雷达",
+      "operation": "UPDATE_EXISTING_PROMPT_ONLY",
+      "preserve_schedule_description": "每天每小时的第15分钟，条件触发通知。",
+      "preserve_timezone": "Europe/Bucharest",
+      "preserve_enabled_state": true,
+      "preserve_notification_and_email_settings": true,
+      "file": "01_Westcott 美罗重大事件雷达.txt",
+      "prior_prepared_prompt_sha256": "50e5c6ef44329b4114c870a8168fa7d7bde37b06d2701a861c5371aa55e7e899",
+      "prompt_file": "01_Westcott 美罗重大事件雷达.txt",
+      "prompt_sha256": "7572e6f04c85cfcd6dce10c112d020edfa79235a1e6d623c2e04bcfa09477e0d"
+    },
+    {
+      "task_id": "6acd3a7dd1108191b93a73188262b46a",
+      "task_name": "Westcott 重大主线晨报",
+      "operation": "UPDATE_EXISTING_PROMPT_ONLY",
+      "preserve_schedule_description": "周一至周五 07:35。",
+      "preserve_timezone": "Europe/Bucharest",
+      "preserve_enabled_state": true,
+      "preserve_notification_and_email_settings": true,
+      "file": "02_Westcott 重大主线晨报.txt",
+      "prior_prepared_prompt_sha256": "f241cfcb6306e1ce816372d3f280d7f4306a6d72b312485e6db3dbc328d80c1f",
+      "prompt_file": "02_Westcott 重大主线晨报.txt",
+      "prompt_sha256": "ef715dd7dec5e7d35b371d045dd42cec4f3e796cde1a93e1b4bdef4e1b119ede"
+    },
+    {
+      "task_id": "6acd3a91204c81919a3ea80f29f46948",
+      "task_name": "Westcott 主线盘前追踪",
+      "operation": "UPDATE_EXISTING_PROMPT_ONLY",
+      "preserve_schedule_description": "周一至周五 09:00。",
+      "preserve_timezone": "Europe/Bucharest",
+      "preserve_enabled_state": true,
+      "preserve_notification_and_email_settings": true,
+      "file": "03_Westcott 主线盘前追踪.txt",
+      "prior_prepared_prompt_sha256": "ff838b7ad0b6a681496b373faac67641e5a036c6b7a362ddbfac2aefd4aacb42",
+      "prompt_file": "03_Westcott 主线盘前追踪.txt",
+      "prompt_sha256": "814213dd9dc48988502364437301b95a2751e1e6bb77d54e1c74b5fed0c37e95"
+    },
+    {
+      "task_id": "6acd3aa4b3908191b7fd67faba8a8115",
+      "task_name": "Westcott 竞价尾盘主线",
+      "operation": "UPDATE_EXISTING_PROMPT_ONLY",
+      "preserve_schedule_description": "周一至周五 09:30、17:30。",
+      "preserve_timezone": "Europe/Bucharest",
+      "preserve_enabled_state": true,
+      "preserve_notification_and_email_settings": true,
+      "file": "04_Westcott 竞价尾盘主线.txt",
+      "prior_prepared_prompt_sha256": "786c75c03d2623144329cf89d46c18234a60cd0db96d7bcd1860c980981a86f4",
+      "prompt_file": "04_Westcott 竞价尾盘主线.txt",
+      "prompt_sha256": "a8d182e465a613f63be95e14a436c70a44dd80f89b2b01ccdbaa6150d7e83214"
+    },
+    {
+      "task_id": "6acd3abf4dec8191a73cb82d301791d7",
+      "task_name": "Westcott 事件群聊与晚课",
+      "operation": "UPDATE_EXISTING_PROMPT_ONLY",
+      "preserve_schedule_description": "周一至周五 07:45、09:45、13:45、15:45、19:45、20:45、21:45。",
+      "preserve_timezone": "Europe/Bucharest",
+      "preserve_enabled_state": true,
+      "preserve_notification_and_email_settings": true,
+      "file": "05_Westcott 事件群聊与晚课.txt",
+      "prior_prepared_prompt_sha256": "c12b2c34f91625ca0e85c0699512952c90b947cdbf64a91c077bf8bf8850b02b",
+      "prompt_file": "05_Westcott 事件群聊与晚课.txt",
+      "prompt_sha256": "c27ca65ec438672d40e53e6a653590c05454b5e3469b7117c16d87c49cacc758"
+    }
+  ],
+  "apply_requirements": [
+    "Read current task by ID and merge any newer online edits before updating",
+    "Update prompt only; preserve actual schedule, timezone, enabled and notification settings",
+    "Read back exact prompt and unchanged settings; only then mark APPLIED",
+    "Obtain new execution body; separately test N01 and N06; prompt changes do not prove accuracy"
+  ]
+}

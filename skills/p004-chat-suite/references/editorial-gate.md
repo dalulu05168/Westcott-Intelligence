@@ -33,3 +33,6 @@ Guvern/government、Politician/politician、Alegeri/elections、Parlament/parlia
 ## 当前选题与批次
 
 执行 [当前写作硬规则](session-rules.md)：先过滤核验，再按发布时间三条一批；新鲜不等于热门，普通车展与宣传不能无热度直接入主线。不足三条不凑数，独立重要性需明确触发依据。
+
+
+v1.4补充：当前重大事件优先级与发布前核验按 `news-release-gate-v1.4.md` 执行，不强制三条，不以传播热度替代事实核实。
