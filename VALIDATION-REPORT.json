@@ -7,6 +7,13 @@
   "runtime_tasks": "NOT_VERIFIED",
   "news_accuracy": "NOT_MEASURED",
   "visual_acceptance": "BLOCKED_MISSING_MASTER_AND_LOGO",
-  "github_upload": "NOT_PERFORMED",
-  "original_history_preserved": true
+  "github_upload": "VERIFIED",
+  "original_history_preserved": true,
+  "github_repository": "dalulu05168/Westcott-Intelligence",
+  "github_visibility_at_upload": "private",
+  "import_commit_sha": "d9e8ba0d2fc4773e5dc0c83ac3d54802c343b90c",
+  "import_file_count": 121,
+  "remote_git_blob_matches": 121,
+  "archive_scope": "archive_bytes/archive_entries describe source v1.1 ZIP; import_file_count describes v1.2-review package",
+  "validation_scope": "Static identity and structure checks only; runtime and news accuracy remain unverified."
 }

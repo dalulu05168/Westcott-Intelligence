@@ -1,7 +1,7 @@
 {
   ".gitignore": "a8537daf1d8a85a9bb60d7705dcba2eaee3f6ed22a480ad3c824294e40c7888d",
   "AGENTS.md": "1217ae64fe4375b9a114db9bbf4b0d7348495f3ca00cf199599eb8535a69ab42",
-  "CHANGELOG.md": "22ff1d9aab637a2c7f13f5edefbc813853ab44d1c7b144fa3b55da09b4619772",
+  "CHANGELOG.md": "62c86e09ffa4921a175a034bc321b384627483a8e25007653756fb466dba2cc0",
   "config/monitoring-plan.json": "1b3d152cc2a8590ae5ef40a399b4b19fae55d18f884f6cbf01a71d6593669fae",
   "memory/daily/2026-10-12/adopted-normalized.md": "85214d1cf490611436a1d60d8b543b11bc84a620c7d5e41917033747fba06bed",
   "memory/daily/2026-10-12/day-memory.json": "17ef9d763a44073860c45548aaff48fe8c5d4485896b15063dc1692efc1317ee",
@@ -26,8 +26,8 @@
   "memory/long-term/members/35.json": "180c16742cc23e7bc6f492317290a5bb335003914e4d90f54e1b0db62c13c33b",
   "memory/long-term/members/37.json": "0de71551c1f45deef42ade262271bc2e03849ad9d58b95009ca353027c1f35a5",
   "memory/README.md": "3114dac8c19fa7551d2013e65a8e79d27fbfc22885f743c66cd54eb20320f1b2",
-  "README.md": "b1bc7832a9935e416e5755ff60b964b7011e29f7fefa580219cc91d8de02a357",
-  "REVIEW-STATUS.md": "f79b7f82d041efb1501579505d040088bc92e85f9406a08c5f5bd216929305fd",
+  "README.md": "7d53e76d5f235ef5c58423b3eb540091270ebdf42efb063af744a16921e44d54",
+  "REVIEW-STATUS.md": "809a634c7c96987d71684b4894cc408a06db3d0d2c510b5407329192860314e6",
   "scripts/make_zip.py": "c567e42c4f349f03dadd56c1af34321bace5f65fae534af3d57f738cd90919f0",
   "scripts/validate_repository.py": "c8babfe62ab2fdbfd80f7978d98ba7d1b69ee5ac2fc9238c3b48580a8ea9f39a",
   "skills/p004-assistant/SKILL.md": "110eadeeb942ae6992e5332d50b11d37802b9a16c66b12ec919ed5bfa4b2fb6f",
@@ -117,6 +117,6 @@
   "skills/p004-teacher/SKILL.md": "cfdc3e82c9b049c2fd7648c561f080f079b25f507997a2652e1c8d59f7dc1e41",
   "skills/p004-writer/SKILL.md": "86a93399772fa6bf204fe2ac5cadd2085aedebde8826e817a8e21d1ae3aab89e",
   "source/用户最终65人人物表.md": "c22bdc415e25736c55dceaf558c6839d029927fb26bffff1c36e1da13ac96934",
-  "VALIDATION-REPORT.json": "86884751922306d42efed5a63f9eb7bdeeb1f677f8d8f14a5dfebd4df1fce778",
-  "首次导入GitHub说明.md": "0b62cf7003d7a505d2ed62345e86ddddf378cf1718572b5e3ef0f002d6775d77"
+  "VALIDATION-REPORT.json": "ff2f391195acc0b2e74d79f92a1c3ca6a4d34fa37248f193714f6cd205c5a1ec",
+  "首次导入GitHub说明.md": "65fff9e02e54663298af0e779752f50d4f7d1d6f18a8586e94589cc229bc7334"
 }

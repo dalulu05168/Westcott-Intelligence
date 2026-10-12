@@ -1,6 +1,8 @@
 # ELLERY WESTCOTT｜五合一Skill独立源码
 
-计划新建GitHub仓库：`dalulu05168/ellery-westcott-five-skills`；建议权限：Private。
+当前GitHub仓库：`dalulu05168/Westcott-Intelligence`（Private），分支：`main`。
+
+v1.2-review已于2026-10-13入库，首次完整导入提交：`d9e8ba0d2fc4773e5dc0c83ac3d54802c343b90c`。该提交含121个文件；远端文件列表与全部Git blob校验值已对照本地ZIP验证。
 
 项目目标：维护虚构罗马尼亚财经教育群聊的65人固定身份、五个独立Skill、12节点、连续剧情与可审计记忆。
 
@@ -21,9 +23,11 @@
 
 执行`python scripts/validate_repository.py`。2026-10-12归档中10号性别与10/13标题的冲突均保留待人工审核；此类审核问题不能自行改写历史。
 
-## 仓库创建
+## 当前运行状态
 
-本地资料包可以独立使用，但GitHub新仓库需要用户在网页完成创建（选择Private且不要预建README）；之后可使用`git`或GitHub Desktop导入本目录。此资料包不意味着已推送到GitHub。
+源码及规则已经入库；现有5项线上任务的配置和日志尚未取得。`config/monitoring-plan.json`仍为DRAFT_NOT_DEPLOYED，不能据此声称后台扫描或自动发布已启用。
+
+新闻准确性标准见`skills/p004-chat-suite/references/news-accuracy-acceptance.md`；准确率尚未实测。图片仍缺MASTER PROMPT V2.0及原始透明Logo。暂不修改Google Docs。
 
 ## 安全边界
 
@@ -31,4 +35,4 @@
 
 ## 删除旧仓库前的必要条件
 
-`dalulu05168/-Skill` 仍包含其他项目。只有新私有仓库实际创建、全量推送并完成文件对照及回读后，才可单独按用户指令删除旧仓库。当前资料包本身不能创建或删除GitHub仓库。
+`dalulu05168/-Skill` 仍包含其他项目。本仓库已完成入库与回读，但这不构成删除旧仓库的授权；任何清理仍须用户另行明确指令。
