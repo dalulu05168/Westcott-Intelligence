@@ -5,7 +5,7 @@
   "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
   "fictional_education_only": true,
   "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
-  "message_count": 2,
+  "message_count": 5,
   "reaction_count": 0,
   "observed_in_submitted_story": [
     {
@@ -29,8 +29,46 @@
         140,
         141
       ]
+    },
+    {
+      "message_id": "20261013-M009",
+      "source_date": "2026-10-13",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "美国银行的表现可以参考，但不能直接拿来判断 BRD 和 TLV。还是得看本地的贷款质量、\n资金成本和客户情况。",
+      "source_docx": "剧本.docx",
+      "extracted_source_line": 58,
+      "warnings": [],
+      "fictional_only": true,
+      "no_real_transaction_verified": true
+    },
+    {
+      "message_id": "20261013-M014",
+      "source_date": "2026-10-13",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "如果企业减少投资，贷款需求也可能跟着变化。银行后面的信贷数据值得留意。",
+      "source_docx": "剧本.docx",
+      "extracted_source_line": 98,
+      "warnings": [],
+      "fictional_only": true,
+      "no_real_transaction_verified": true
+    },
+    {
+      "message_id": "20261013-M026",
+      "source_date": "2026-10-13",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "我没有提交委托，继续看资料。参与讨论也不一定要交易。",
+      "source_docx": "剧本.docx",
+      "extracted_source_line": 212,
+      "warnings": [],
+      "fictional_only": true,
+      "no_real_transaction_verified": true
     }
   ],
   "no_unrecorded_history": true,
-  "no_real_trading_inferred": true
+  "no_real_trading_inferred": true,
+  "latest_source_date": "2026-10-13",
+  "review_only_2026_10_13": []
 }

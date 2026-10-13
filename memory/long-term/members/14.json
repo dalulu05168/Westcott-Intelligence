@@ -1,0 +1,86 @@
+{
+  "id": "14",
+  "name": "Daniel Badea",
+  "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
+  "fictional_education_only": true,
+  "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
+  "observed_in_submitted_story": [
+    {
+      "message_id": "20261013-M006",
+      "source_date": "2026-10-13",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "BRD 也不错。先看看收盘表现，再判断这波上涨有没有持续性。",
+      "source_docx": "剧本.docx",
+      "extracted_source_line": 35,
+      "warnings": [],
+      "fictional_only": true,
+      "no_real_transaction_verified": true
+    },
+    {
+      "message_id": "20261013-M010",
+      "source_date": "2026-10-13",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "对，还是看自己的业务数据更实际。",
+      "source_docx": "剧本.docx",
+      "extracted_source_line": 66,
+      "warnings": [],
+      "fictional_only": true,
+      "no_real_transaction_verified": true
+    },
+    {
+      "message_id": "20261013-M023",
+      "source_date": "2026-10-13",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "运气真的不错，刚好赶上欧美股市开盘前的短暂波动。他挂在 2.02 RON 的低价买单已经\n成交了一部分，剩下的数量还在订单簿里排队，继续等成交。",
+      "source_docx": "剧本.docx",
+      "extracted_source_line": 194,
+      "warnings": [
+        "“他挂单”指代不明"
+      ],
+      "fictional_only": true,
+      "no_real_transaction_verified": true
+    },
+    {
+      "message_id": "20261013-M045",
+      "source_date": "2026-10-13",
+      "node": "EVENING",
+      "kind": "message",
+      "text": "❌",
+      "source_docx": "剧本.docx",
+      "extracted_source_line": 353,
+      "warnings": [],
+      "fictional_only": true,
+      "no_real_transaction_verified": true
+    },
+    {
+      "message_id": "20261013-M061",
+      "source_date": "2026-10-13",
+      "node": "EVENING",
+      "kind": "message",
+      "text": "先生这句话很深奥，可以让人举一反三",
+      "source_docx": "剧本.docx",
+      "extracted_source_line": 505,
+      "warnings": [],
+      "fictional_only": true,
+      "no_real_transaction_verified": true
+    }
+  ],
+  "reaction_count": 0,
+  "no_unrecorded_history": true,
+  "message_count": 5,
+  "latest_source_date": "2026-10-13",
+  "no_real_trading_inferred": true,
+  "review_only_2026_10_13": [
+    {
+      "message_id": "20261013-M063",
+      "status": "REPEAT_EXCLUDED",
+      "text": "先生这句话很深奥，简直可以举一反三",
+      "reason": [
+        "重复的赞同评价"
+      ]
+    }
+  ]
+}

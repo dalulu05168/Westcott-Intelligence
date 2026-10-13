@@ -1,0 +1,42 @@
+{
+  "id": "04",
+  "name": "Mihai Ion",
+  "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
+  "fictional_education_only": true,
+  "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
+  "observed_in_submitted_story": [
+    {
+      "message_id": "20261013-M012",
+      "source_date": "2026-10-13",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "我做外贸，比较在意汇率和采购成本。两边一起波动，利润空间就容易受到挤压。",
+      "source_docx": "剧本.docx",
+      "extracted_source_line": 86,
+      "warnings": [],
+      "fictional_only": true,
+      "no_real_transaction_verified": true
+    },
+    {
+      "message_id": "20261013-M022",
+      "source_date": "2026-10-13",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "买到了，等待成交。",
+      "source_docx": "剧本.docx",
+      "extracted_source_line": 187,
+      "warnings": [
+        "“买到了／等待成交”交易状态含糊",
+        "仅虚构脚本中的交易陈述，不作为真实持仓"
+      ],
+      "fictional_only": true,
+      "no_real_transaction_verified": true
+    }
+  ],
+  "reaction_count": 0,
+  "no_unrecorded_history": true,
+  "message_count": 2,
+  "latest_source_date": "2026-10-13",
+  "no_real_trading_inferred": true,
+  "review_only_2026_10_13": []
+}

@@ -1,0 +1,29 @@
+{
+  "id": "39",
+  "name": "Carmen Iulia Ioan",
+  "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
+  "fictional_education_only": true,
+  "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
+  "observed_in_submitted_story": [
+    {
+      "message_id": "20261013-M024",
+      "source_date": "2026-10-13",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "订单已经挂好了，刚刚显示成交了。",
+      "source_docx": "剧本.docx",
+      "extracted_source_line": 200,
+      "warnings": [
+        "仅虚构脚本中的交易陈述，不作为真实持仓"
+      ],
+      "fictional_only": true,
+      "no_real_transaction_verified": true
+    }
+  ],
+  "reaction_count": 0,
+  "no_unrecorded_history": true,
+  "message_count": 1,
+  "latest_source_date": "2026-10-13",
+  "no_real_trading_inferred": true,
+  "review_only_2026_10_13": []
+}

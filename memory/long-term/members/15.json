@@ -1,0 +1,23 @@
+{
+  "id": "15",
+  "name": "Mihai Lipa",
+  "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
+  "fictional_education_only": true,
+  "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
+  "observed_in_submitted_story": [],
+  "reaction_count": 0,
+  "no_unrecorded_history": true,
+  "message_count": 0,
+  "latest_source_date": "2026-10-13",
+  "no_real_trading_inferred": true,
+  "review_only_2026_10_13": [
+    {
+      "message_id": "20261013-M060",
+      "status": "ATTRIBUTION_REVIEW",
+      "text": "我觉得利率也同样重要。如果借钱的利息变了，企业能赚多少钱就得重新算账了。",
+      "reason": [
+        "与21女的利率原句重复；15号性别正确，但归属待审"
+      ]
+    }
+  ]
+}
