@@ -67,7 +67,7 @@ def prepare():
     for task in manifest["updates"]:
         path = SCHEDULED / task["file"]
         body = path.read_bytes().decode("utf-8")
-        replacement = replace_once(body, BEGIN, END, context)
+        replacement = replace_once(body, BEGIN, END, context.rstrip("\r\n"))
         generated[path] = replacement
         if task.get("context_version") != "v1.5.2":
             task["context_version"] = "v1.5.2"
