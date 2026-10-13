@@ -3,7 +3,7 @@ from validate_runtime_context import ROOT, BEGIN, END, validate
 
 class RuntimeContextTest(unittest.TestCase):
     def setUp(self):
-        self.text=(ROOT/'skills/p004-chat-suite/references/runtime-context-v1.5.1.txt').read_text(encoding='utf-8')
+        self.text=(ROOT/'skills/p004-chat-suite/references/runtime-context-v1.5.2.txt').read_text(encoding='utf-8')
 
     def test_all_five_complete_prompts_match_actual_sources(self):
         for path in (ROOT/'integrations/chatgpt-scheduled').glob('*.txt'):
@@ -24,9 +24,20 @@ class RuntimeContextTest(unittest.TestCase):
         with self.assertRaises(ValueError): validate(changed)
 
     def test_unadopted_memory_rejected(self):
-        start=self.text.index('[ADOPTED_MEMORY_2026-10-12]')
+        start=self.text.index('[ADOPTED_MEMORY_CONFIRMED]')
         changed=self.text[:start]+self.text[start:].replace('"message_id":','"invented_id":',1)
         with self.assertRaises((ValueError,KeyError)): validate(changed)
+
+    def test_all_77_confirmed_events_present(self):
+        result=validate(self.text)
+        self.assertEqual(result['adopted_memory_entries'],77)
+        self.assertEqual(result['members_with_adopted_history'],30)
+
+    def test_cross_member_memory_assignment_rejected(self):
+        target='\"id\":\"02\",\"message_id\":\"M006\"'
+        self.assertIn(target,self.text)
+        with self.assertRaises(ValueError):
+            validate(self.text.replace(target,'\"id\":\"65\",\"message_id\":\"M006\"',1))
 
     def test_truncated_prompt_rejected(self):
         with self.assertRaises(ValueError): validate(self.text.split(END)[0])
