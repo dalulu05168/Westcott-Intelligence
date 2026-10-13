@@ -1,0 +1,19 @@
+name: Validate Westcott member memory
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  verify-memory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate canonical members
+        run: python scripts/validate_repository.py
+      - name: Validate 65-person runtime projection
+        run: python -m unittest discover -s scripts -p test_runtime_context.py -v
+      - name: Check all five prepared task prompts and hashes
+        run: python scripts/sync_runtime_memory.py --check
