@@ -1,0 +1,37 @@
+import unittest
+from validate_runtime_context import ROOT, BEGIN, END, validate
+
+class RuntimeContextTest(unittest.TestCase):
+    def setUp(self):
+        self.text=(ROOT/'skills/p004-chat-suite/references/runtime-context-v1.5.1.txt').read_text(encoding='utf-8')
+
+    def test_all_five_complete_prompts_match_actual_sources(self):
+        for path in (ROOT/'integrations/chatgpt-scheduled').glob('*.txt'):
+            self.assertEqual(validate(path.read_text(encoding='utf-8'))['identities'],65)
+
+    def test_missing_identity_rejected(self):
+        lines=self.text.splitlines()
+        start=lines.index('[IDENTITY_CSV]')
+        del lines[start+2]
+        with self.assertRaises(ValueError): validate('\n'.join(lines))
+
+    def test_identity_change_rejected(self):
+        with self.assertRaises(ValueError): validate(self.text.replace('Ion Dumitrescu','Changed Identity',1))
+
+    def test_voice_change_rejected(self):
+        start=self.text.index('[VOICE_REFERENCE]')
+        changed=self.text[:start]+self.text[start:].replace('01|','99|',1)
+        with self.assertRaises(ValueError): validate(changed)
+
+    def test_unadopted_memory_rejected(self):
+        start=self.text.index('[ADOPTED_MEMORY_2026-10-12]')
+        changed=self.text[:start]+self.text[start:].replace('"message_id":','"invented_id":',1)
+        with self.assertRaises((ValueError,KeyError)): validate(changed)
+
+    def test_truncated_prompt_rejected(self):
+        with self.assertRaises(ValueError): validate(self.text.split(END)[0])
+
+    def test_duplicate_snapshot_rejected(self):
+        with self.assertRaises(ValueError): validate(self.text+self.text)
+
+if __name__ == '__main__': unittest.main()

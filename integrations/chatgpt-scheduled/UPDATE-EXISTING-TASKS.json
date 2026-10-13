@@ -1,8 +1,8 @@
 {
   "status": "PREPARED_NOT_APPLIED",
-  "version": "v1.4",
+  "version": "v1.5.1",
   "repository_source": "dalulu05168/Westcott-Intelligence",
-  "baseline": "Previous local full prompt package; current online prompt not read back",
+  "baseline": "v1.4 repository prompt package; must merge actual online newer edits before application",
   "do_not_create_tasks": true,
   "do_not_change_ids_or_schedules": true,
   "updates": [
@@ -15,9 +15,13 @@
       "preserve_enabled_state": true,
       "preserve_notification_and_email_settings": true,
       "file": "01_Westcott 美罗重大事件雷达.txt",
-      "prior_prepared_prompt_sha256": "50e5c6ef44329b4114c870a8168fa7d7bde37b06d2701a861c5371aa55e7e899",
+      "prior_prepared_prompt_sha256": "7572e6f04c85cfcd6dce10c112d020edfa79235a1e6d623c2e04bcfa09477e0d",
       "prompt_file": "01_Westcott 美罗重大事件雷达.txt",
-      "prompt_sha256": "7572e6f04c85cfcd6dce10c112d020edfa79235a1e6d623c2e04bcfa09477e0d"
+      "prompt_sha256": "034244dcb496d34ce73a3bb7df81b6d8173dd04129b72a6144f49351ba632a6b",
+      "prompt_characters": 17825,
+      "prompt_utf8_bytes": 39247,
+      "context_mode": "INLINE_SOURCE_SNAPSHOT",
+      "context_version": "v1.5.1"
     },
     {
       "task_id": "6acd3a7dd1108191b93a73188262b46a",
@@ -28,9 +32,13 @@
       "preserve_enabled_state": true,
       "preserve_notification_and_email_settings": true,
       "file": "02_Westcott 重大主线晨报.txt",
-      "prior_prepared_prompt_sha256": "f241cfcb6306e1ce816372d3f280d7f4306a6d72b312485e6db3dbc328d80c1f",
+      "prior_prepared_prompt_sha256": "ef715dd7dec5e7d35b371d045dd42cec4f3e796cde1a93e1b4bdef4e1b119ede",
       "prompt_file": "02_Westcott 重大主线晨报.txt",
-      "prompt_sha256": "ef715dd7dec5e7d35b371d045dd42cec4f3e796cde1a93e1b4bdef4e1b119ede"
+      "prompt_sha256": "e1d56caab8624477c9285671eb2c1fcdd24b5b89ae2e9dabb4f02862caaf248f",
+      "prompt_characters": 17403,
+      "prompt_utf8_bytes": 37952,
+      "context_mode": "INLINE_SOURCE_SNAPSHOT",
+      "context_version": "v1.5.1"
     },
     {
       "task_id": "6acd3a91204c81919a3ea80f29f46948",
@@ -41,9 +49,13 @@
       "preserve_enabled_state": true,
       "preserve_notification_and_email_settings": true,
       "file": "03_Westcott 主线盘前追踪.txt",
-      "prior_prepared_prompt_sha256": "ff838b7ad0b6a681496b373faac67641e5a036c6b7a362ddbfac2aefd4aacb42",
+      "prior_prepared_prompt_sha256": "814213dd9dc48988502364437301b95a2751e1e6bb77d54e1c74b5fed0c37e95",
       "prompt_file": "03_Westcott 主线盘前追踪.txt",
-      "prompt_sha256": "814213dd9dc48988502364437301b95a2751e1e6bb77d54e1c74b5fed0c37e95"
+      "prompt_sha256": "a14727ad63ef3565301458ee2f3f0129810f525d32b6267e8265c5caa5f54f95",
+      "prompt_characters": 17328,
+      "prompt_utf8_bytes": 37785,
+      "context_mode": "INLINE_SOURCE_SNAPSHOT",
+      "context_version": "v1.5.1"
     },
     {
       "task_id": "6acd3aa4b3908191b7fd67faba8a8115",
@@ -54,9 +66,13 @@
       "preserve_enabled_state": true,
       "preserve_notification_and_email_settings": true,
       "file": "04_Westcott 竞价尾盘主线.txt",
-      "prior_prepared_prompt_sha256": "786c75c03d2623144329cf89d46c18234a60cd0db96d7bcd1860c980981a86f4",
+      "prior_prepared_prompt_sha256": "a8d182e465a613f63be95e14a436c70a44dd80f89b2b01ccdbaa6150d7e83214",
       "prompt_file": "04_Westcott 竞价尾盘主线.txt",
-      "prompt_sha256": "a8d182e465a613f63be95e14a436c70a44dd80f89b2b01ccdbaa6150d7e83214"
+      "prompt_sha256": "c5fb32a2151f54f1824099c2614f24cea654ce7e86f1e693b993031a7e834153",
+      "prompt_characters": 17371,
+      "prompt_utf8_bytes": 37990,
+      "context_mode": "INLINE_SOURCE_SNAPSHOT",
+      "context_version": "v1.5.1"
     },
     {
       "task_id": "6acd3abf4dec8191a73cb82d301791d7",
@@ -67,9 +83,13 @@
       "preserve_enabled_state": true,
       "preserve_notification_and_email_settings": true,
       "file": "05_Westcott 事件群聊与晚课.txt",
-      "prior_prepared_prompt_sha256": "c12b2c34f91625ca0e85c0699512952c90b947cdbf64a91c077bf8bf8850b02b",
+      "prior_prepared_prompt_sha256": "c27ca65ec438672d40e53e6a653590c05454b5e3469b7117c16d87c49cacc758",
       "prompt_file": "05_Westcott 事件群聊与晚课.txt",
-      "prompt_sha256": "c27ca65ec438672d40e53e6a653590c05454b5e3469b7117c16d87c49cacc758"
+      "prompt_sha256": "075f521103b6f43970f6b79c43bfce68e7f1c5cfa3640fd153378aa496cf72a0",
+      "prompt_characters": 17897,
+      "prompt_utf8_bytes": 39292,
+      "context_mode": "INLINE_SOURCE_SNAPSHOT",
+      "context_version": "v1.5.1"
     }
   ],
   "apply_requirements": [
@@ -77,5 +97,9 @@
     "Update prompt only; preserve actual schedule, timezone, enabled and notification settings",
     "Read back exact prompt and unchanged settings; only then mark APPLIED",
     "Obtain new execution body; separately test N01 and N06; prompt changes do not prove accuracy"
-  ]
+  ],
+  "context_source_commit": "3fa419ea0fccd682ecb2389b808c6799e0055f65",
+  "inline_context_complete_people": 65,
+  "online_length_limit": "NOT_VERIFIED",
+  "online_application": "NOT_PERFORMED"
 }

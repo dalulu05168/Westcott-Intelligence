@@ -32,3 +32,8 @@ description: ELLERY WESTCOTT 虚构财经教学会话五合一入口，统一调
 后台记录实际读取资料、event_id、本次新增和每条claim_id；各角色只使用同一批准事实集。N01仅后台备料不含成员对白，N06工作日11:15无新增也准备午间稿。普通雷达无新增不凑通知；旧闻无持续影响退出。适宜群聊节点提供3–6条可选虚构成员对白，未采用不算历史。
 
 图片按需读取`references/MASTER_PROMPT_V2.0.md`、`references/visual-v2-execution-20261013.md`、`references/visual-qa-15.json`，简约少字多图、字体突出重点、原始Logo不重绘。正式新闻验收读取`references/news-release-gate-v1.4.md`、`references/news-accuracy-acceptance.md`；离线测试与源码重建不当真实运行证据。
+
+
+## v1.5.1 人物资料加载
+
+遇到人物资料不可访问、语气草案未批准或缺少历史而取消全部候选时，读取`references/runtime-loading-v1.5.1.md`。任务内置快照在`references/runtime-context-v1.5.1.txt`；据实际读取方式记录来源，缺历史不编往事，身份已确认则可创作待选台词。N01仍不生成成员对白。

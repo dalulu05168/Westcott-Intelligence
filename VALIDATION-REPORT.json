@@ -1,81 +1,25 @@
 {
-  "version": "v1.5",
-  "base_commit": "cb6b3a45c60385bba18e42fad473f408d5f2bb1f",
-  "repository_validator": {
-    "result": "PASS",
-    "log": "PASS: 65 canonical identities + 65 profiles + CSV + six large-investment personas + teacher Jonathan + five Skills + daily memory audit; editorial exceptions remain flagged\n"
-  },
-  "ledger_unit_tests": {
-    "count": 31,
-    "result": "PASS",
-    "log": "test_analysis_cycle (test_news_release_gate.GateTest.test_analysis_cycle) ... ok\ntest_conflict (test_news_release_gate.GateTest.test_conflict) ... ok\ntest_duplicate_id_cannot_shadow_bad_candidate (test_news_release_gate.GateTest.test_duplicate_id_cannot_shadow_bad_candidate) ... ok\ntest_future_quote (test_news_release_gate.GateTest.test_future_quote) ... ok\ntest_future_requires_contract (test_news_release_gate.GateTest.test_future_requires_contract) ... ok\ntest_indexed_only_not_body (test_news_release_gate.GateTest.test_indexed_only_not_body) ... ok\ntest_invalid_ledger_shape_blocks (test_news_release_gate.GateTest.test_invalid_ledger_shape_blocks) ... ok\ntest_invalid_nested_shapes_block (test_news_release_gate.GateTest.test_invalid_nested_shapes_block) ... ok\ntest_missing_source_time (test_news_release_gate.GateTest.test_missing_source_time) ... ok\ntest_missing_timezone (test_news_release_gate.GateTest.test_missing_timezone) ... ok\ntest_nan_rejected (test_news_release_gate.GateTest.test_nan_rejected) ... ok\ntest_no_publishable_facts (test_news_release_gate.GateTest.test_no_publishable_facts) ... ok\ntest_no_source (test_news_release_gate.GateTest.test_no_source) ... ok\ntest_number_mismatch (test_news_release_gate.GateTest.test_number_mismatch) ... ok\ntest_number_missing_basis (test_news_release_gate.GateTest.test_number_missing_basis) ... ok\ntest_omit_bad_candidate_keep_verified_fact (test_news_release_gate.GateTest.test_omit_bad_candidate_keep_verified_fact) ... ok\ntest_one_source_causality (test_news_release_gate.GateTest.test_one_source_causality) ... ok\ntest_percent_baseline (test_news_release_gate.GateTest.test_percent_baseline) ... ok\ntest_price_requires_currency (test_news_release_gate.GateTest.test_price_requires_currency) ... ok\ntest_quote_after_source_retrieval (test_news_release_gate.GateTest.test_quote_after_source_retrieval) ... ok\ntest_reposts_do_not_count_as_independent (test_news_release_gate.GateTest.test_reposts_do_not_count_as_independent) ... ok\ntest_single_official_fact_allowed (test_news_release_gate.GateTest.test_single_official_fact_allowed) ... ok\ntest_source_after_execution (test_news_release_gate.GateTest.test_source_after_execution) ... ok\ntest_source_not_locatable (test_news_release_gate.GateTest.test_source_not_locatable) ... ok\ntest_transitive_invalid_analysis_first (test_news_release_gate.GateTest.test_transitive_invalid_analysis_first) ... ok\ntest_transitive_invalid_analysis_reverse (test_news_release_gate.GateTest.test_transitive_invalid_analysis_reverse) ... ok\ntest_two_independent_reviewed_sources (test_news_release_gate.GateTest.test_two_independent_reviewed_sources) ... ok\ntest_unconditional_analysis (test_news_release_gate.GateTest.test_unconditional_analysis) ... ok\ntest_unknown_published_fact (test_news_release_gate.GateTest.test_unknown_published_fact) ... ok\ntest_unreviewed_fact (test_news_release_gate.GateTest.test_unreviewed_fact) ... ok\ntest_valid_analysis_chain_either_order (test_news_release_gate.GateTest.test_valid_analysis_chain_either_order) ... ok\n\n----------------------------------------------------------------------\nRan 31 tests in 0.002s\n\nOK\n"
-  },
-  "pre_fix_new_regressions": {
-    "new_tests": 8,
-    "failures": 3,
-    "errors": 2,
-    "original_tests": 23
-  },
-  "post_hoc_old_fixtures": {
-    "results": {
-      "old": "BLOCK",
-      "repaired": "PASS"
-    },
-    "scope": "LEDGER_CONSISTENCY_ONLY_NOT_NEW_SCHEDULED_OUTPUT"
-  },
+  "version": "v1.5.1",
+  "base_source_commit": "3fa419ea0fccd682ecb2389b808c6799e0055f65",
   "component_count": 5,
-  "unified_entry_count": 1,
-  "canonical_people_count": 65,
-  "entries": [
-    {
-      "entry": "skills/p004-director/SKILL.md",
-      "frontmatter": "UNCHANGED",
-      "references": "RESOLVED",
-      "count": 7
-    },
-    {
-      "entry": "skills/p004-writer/SKILL.md",
-      "frontmatter": "UNCHANGED",
-      "references": "RESOLVED",
-      "count": 6
-    },
-    {
-      "entry": "skills/p004-teacher/SKILL.md",
-      "frontmatter": "UNCHANGED",
-      "references": "RESOLVED",
-      "count": 6
-    },
-    {
-      "entry": "skills/p004-assistant/SKILL.md",
-      "frontmatter": "UNCHANGED",
-      "references": "RESOLVED",
-      "count": 6
-    },
-    {
-      "entry": "skills/p004-members/SKILL.md",
-      "frontmatter": "UNCHANGED",
-      "references": "RESOLVED",
-      "count": 7
-    },
-    {
-      "entry": "skills/p004-chat-suite/SKILL.md",
-      "frontmatter": "UNCHANGED",
-      "references": "RESOLVED",
-      "count": 19
-    }
-  ],
-  "protected_character_and_history_FILE_count": 92,
-  "protected_files_BYTE_IDENTICAL": true,
-  "task_package_logo_master_plan_BYTE_IDENTICAL": true,
-  "original_skill_frontmatter": "BYTE_CONTENT_UNCHANGED_EXCEPT_LINE_ENDINGS",
+  "people_count": 65,
+  "unit_tests": {
+    "count": 38,
+    "status": "PASS",
+    "log": "test_analysis_cycle (test_news_release_gate.GateTest.test_analysis_cycle) ... ok\ntest_conflict (test_news_release_gate.GateTest.test_conflict) ... ok\ntest_duplicate_id_cannot_shadow_bad_candidate (test_news_release_gate.GateTest.test_duplicate_id_cannot_shadow_bad_candidate) ... ok\ntest_future_quote (test_news_release_gate.GateTest.test_future_quote) ... ok\ntest_future_requires_contract (test_news_release_gate.GateTest.test_future_requires_contract) ... ok\ntest_indexed_only_not_body (test_news_release_gate.GateTest.test_indexed_only_not_body) ... ok\ntest_invalid_ledger_shape_blocks (test_news_release_gate.GateTest.test_invalid_ledger_shape_blocks) ... ok\ntest_invalid_nested_shapes_block (test_news_release_gate.GateTest.test_invalid_nested_shapes_block) ... ok\ntest_missing_source_time (test_news_release_gate.GateTest.test_missing_source_time) ... ok\ntest_missing_timezone (test_news_release_gate.GateTest.test_missing_timezone) ... ok\ntest_nan_rejected (test_news_release_gate.GateTest.test_nan_rejected) ... ok\ntest_no_publishable_facts (test_news_release_gate.GateTest.test_no_publishable_facts) ... ok\ntest_no_source (test_news_release_gate.GateTest.test_no_source) ... ok\ntest_number_mismatch (test_news_release_gate.GateTest.test_number_mismatch) ... ok\ntest_number_missing_basis (test_news_release_gate.GateTest.test_number_missing_basis) ... ok\ntest_omit_bad_candidate_keep_verified_fact (test_news_release_gate.GateTest.test_omit_bad_candidate_keep_verified_fact) ... ok\ntest_one_source_causality (test_news_release_gate.GateTest.test_one_source_causality) ... ok\ntest_percent_baseline (test_news_release_gate.GateTest.test_percent_baseline) ... ok\ntest_price_requires_currency (test_news_release_gate.GateTest.test_price_requires_currency) ... ok\ntest_quote_after_source_retrieval (test_news_release_gate.GateTest.test_quote_after_source_retrieval) ... ok\ntest_reposts_do_not_count_as_independent (test_news_release_gate.GateTest.test_reposts_do_not_count_as_independent) ... ok\ntest_single_official_fact_allowed (test_news_release_gate.GateTest.test_single_official_fact_allowed) ... ok\ntest_source_after_execution (test_news_release_gate.GateTest.test_source_after_execution) ... ok\ntest_source_not_locatable (test_news_release_gate.GateTest.test_source_not_locatable) ... ok\ntest_transitive_invalid_analysis_first (test_news_release_gate.GateTest.test_transitive_invalid_analysis_first) ... ok\ntest_transitive_invalid_analysis_reverse (test_news_release_gate.GateTest.test_transitive_invalid_analysis_reverse) ... ok\ntest_two_independent_reviewed_sources (test_news_release_gate.GateTest.test_two_independent_reviewed_sources) ... ok\ntest_unconditional_analysis (test_news_release_gate.GateTest.test_unconditional_analysis) ... ok\ntest_unknown_published_fact (test_news_release_gate.GateTest.test_unknown_published_fact) ... ok\ntest_unreviewed_fact (test_news_release_gate.GateTest.test_unreviewed_fact) ... ok\ntest_valid_analysis_chain_either_order (test_news_release_gate.GateTest.test_valid_analysis_chain_either_order) ... ok\ntest_all_five_complete_prompts_match_actual_sources (test_runtime_context.RuntimeContextTest.test_all_five_complete_prompts_match_actual_sources) ... ok\ntest_duplicate_snapshot_rejected (test_runtime_context.RuntimeContextTest.test_duplicate_snapshot_rejected) ... ok\ntest_identity_change_rejected (test_runtime_context.RuntimeContextTest.test_identity_change_rejected) ... ok\ntest_missing_identity_rejected (test_runtime_context.RuntimeContextTest.test_missing_identity_rejected) ... ok\ntest_truncated_prompt_rejected (test_runtime_context.RuntimeContextTest.test_truncated_prompt_rejected) ... ok\ntest_unadopted_memory_rejected (test_runtime_context.RuntimeContextTest.test_unadopted_memory_rejected) ... ok\ntest_voice_change_rejected (test_runtime_context.RuntimeContextTest.test_voice_change_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 38 tests in 0.113s\n\nOK\n"
+  },
+  "repository_validation": "PASS: 65 canonical identities + 65 profiles + CSV + six large-investment personas + teacher Jonathan + five Skills + daily memory audit; editorial exceptions remain flagged\n",
+  "inline_projection_validation": "01_Westcott 美罗重大事件雷达.txt {\"identities\": 65, \"voice_references\": 65, \"adopted_memory_entries\": 35, \"result\": \"SOURCE_PROJECTION_MATCH_ONLY_NOT_ONLINE_LOADING_PROOF\"}\n02_Westcott 重大主线晨报.txt {\"identities\": 65, \"voice_references\": 65, \"adopted_memory_entries\": 35, \"result\": \"SOURCE_PROJECTION_MATCH_ONLY_NOT_ONLINE_LOADING_PROOF\"}\n03_Westcott 主线盘前追踪.txt {\"identities\": 65, \"voice_references\": 65, \"adopted_memory_entries\": 35, \"result\": \"SOURCE_PROJECTION_MATCH_ONLY_NOT_ONLINE_LOADING_PROOF\"}\n04_Westcott 竞价尾盘主线.txt {\"identities\": 65, \"voice_references\": 65, \"adopted_memory_entries\": 35, \"result\": \"SOURCE_PROJECTION_MATCH_ONLY_NOT_ONLINE_LOADING_PROOF\"}\n05_Westcott 事件群聊与晚课.txt {\"identities\": 65, \"voice_references\": 65, \"adopted_memory_entries\": 35, \"result\": \"SOURCE_PROJECTION_MATCH_ONLY_NOT_ONLINE_LOADING_PROOF\"}\n",
+  "canonical_identity_and_history_byte_identical": true,
+  "logo_master_plan_byte_identical": true,
+  "original_task_settings_in_manifest_preserved": true,
+  "inline_history_scope": "35 adopted entries from 16 member records, only 2026-10-12; not all later history",
+  "source_packet": "COMPLETED",
+  "online_application": "PREPARED_NOT_APPLIED",
+  "online_prompt_maximum_length": "NOT_VERIFIED",
+  "online_runtime_acceptance": "NOT_PASSED",
+  "news_accuracy": "NOT_MEASURED",
+  "style_revision_scope": "Edit of actual N02 body, not a scheduled rerun",
   "official_skill_quick_validate": "UNAVAILABLE_MISSING_PYYAML; not claimed passed",
-  "scenario_checklist": "DOCUMENTED_NOT_EXECUTED_AS_REAL_MODEL_OR_SCHEDULED_OUTPUT",
-  "online_tasks_modified": false,
-  "google_docs_modified": false,
-  "automatic_images_enabled": false,
-  "real_new_scheduled_output_samples_available": 0,
-  "news_accuracy_rate": "NOT_MEASURED",
-  "online_full_text_match": "NOT_PROVEN",
-  "delivery": "UNKNOWN",
-  "limitation": "31 tests verify deterministic ledger behavior only, not source semantics, model instruction adherence or online runtime."
+  "limitation": "Embedded context integrity and unit tests do not prove platform acceptance, live loading, model compliance or delivery."
 }
