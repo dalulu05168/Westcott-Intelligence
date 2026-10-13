@@ -53,7 +53,7 @@ def render_context(original, rows):
 
 def prepare():
     rows = records_from_members()
-    original = CONTEXT.read_text(encoding="utf-8")
+    original = CONTEXT.read_bytes().decode("utf-8")
     context = render_context(original, rows)
     # Checks identity/voice projections, all 77+ adopted records and their daily
     # sources. Review-only or excluded messages cannot pass this comparison.
@@ -66,8 +66,8 @@ def prepare():
     generated = {CONTEXT: context}
     for task in manifest["updates"]:
         path = SCHEDULED / task["file"]
-        body = path.read_text(encoding="utf-8")
-        replacement = replace_once(body, BEGIN, END, context.strip())
+        body = path.read_bytes().decode("utf-8")
+        replacement = replace_once(body, BEGIN, END, context)
         generated[path] = replacement
         if task.get("context_version") != "v1.5.2":
             task["context_version"] = "v1.5.2"
@@ -95,7 +95,7 @@ def main():
     # GitHub line endings may be CRLF; compare content semantically but enforce
     # all characters, history and hashes. --write uses consistent LF.
     changed = [p for p, value in generated.items()
-               if p.read_text(encoding="utf-8") != value]
+               if p.read_bytes().decode("utf-8") != value]
     if args.write:
         for path in changed:
             path.write_text(generated[path], encoding="utf-8", newline="\n")
