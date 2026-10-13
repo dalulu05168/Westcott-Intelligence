@@ -55,7 +55,7 @@ for day in sorted((root/'memory/daily').glob('*/day-memory.json')):
   if row['status'] not in ('ADOPTED_IN_SUBMITTED_TRANSCRIPT','ADOPTED_IN_USER_SUBMITTED_STORY'):
    continue
   ident = str(row.get('speaker_id', ''))
-  if re.fullmatch(r'\\d{2}',ident):
+  if re.fullmatch(r'\d{2}',ident):
    key = row['id']
    assert key not in source_adopted, ('duplicate historical message id',key)
    source_adopted[key] = (ident,row)
