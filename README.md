@@ -1,3 +1,16 @@
+# ELLERY WESTCOTT｜五Skill v1.5
+
+本版升级原五Skill及统一入口，清理冲突旧规则，补齐无新闻分支、批准事实交接、自然对白与连续教学；修复分析依据链和行情时点检查。固定65人身份与历史、原始Logo及Master V2.0保持原字节。
+
+- 入口：`skills/p004-chat-suite/SKILL.md`
+- 执行协议：`skills/p004-chat-suite/references/five-skill-workflow-v1.5.md`
+- 离线验证：`python scripts/validate_repository.py`；`python -m unittest discover -s scripts -p "test_news_release_gate.py"`
+- 版本验证记录：`VALIDATION-REPORT.json`
+
+本次不修改原五项ChatGPT Scheduled任务正文/ID/日程/通知，不自动同步线上。用户已提供v1.4线上更新回执，但本仓库未取得独立线上全文快照或真实新版运行正文，不能据源码声称推送与新闻准确率通过。Google Docs暂停，自动配图及群外自动发送不启用。以下为历史发布说明，历史状态不当当前线上读回。
+
+---
+
 # v1.4 新闻核验整改
 
 增加逐条证据账本、可执行发布检查、旧稿回归样本及原5项任务完整替换正文。代码及文稿已准备；线上任务写入、运行和送达尚待真实证据。当前事实核验规则见 `skills/p004-chat-suite/references/news-release-gate-v1.4.md`。

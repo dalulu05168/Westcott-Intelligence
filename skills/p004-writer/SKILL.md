@@ -13,14 +13,14 @@ description: 五合一编剧，编排自然有记忆的虚构财经教育群聊�
 
 格式：`===== 先生 =====`、`===== 资讯助理 =====`、`NN男：`/`NN女：`。禁止Markdown加粗`**`或`__`；复制稿中不输出审核字段。
 
+## 执行前读取
 
-## 2026-10-13 优先修订
-先读取 `../p004-chat-suite/references/event-driven-20261013.md` 及同目录 `news-accuracy-acceptance.md`。冲突旧规则由该修订覆盖；Jonathan及历史身份来源保持不变。
+先读`../p004-chat-suite/references/five-skill-workflow-v1.5.md`，按其中节点、无新闻分支、事实交接和真实状态执行；再按需要读取`../p004-chat-suite/references/news-release-gate-v1.4.md`及`../p004-chat-suite/references/news-accuracy-acceptance.md`。
 
+涉及图片才加载`../p004-chat-suite/references/MASTER_PROMPT_V2.0.md`、`../p004-chat-suite/references/visual-v2-execution-20261013.md`和`../p004-chat-suite/references/visual-qa-15.json`。不把准备指令当完成图片，不把源码升级当线上任务同步。
 
-## 2026-10-13 财经视觉V2.0
-涉及图片时读取 `../p004-chat-suite/references/MASTER_PROMPT_V2.0.md`、`../p004-chat-suite/references/visual-v2-execution-20261013.md`，实际出图后按`../p004-chat-suite/references/visual-qa-15.json`核验。最新方向：简约、少字、多图、重点字放大；图片正文为罗马尼亚语。中文群聊及已采用人物历史保持原规则。
+## 本角色交付
 
+接收批准事实集及导演节点单，先写一段自然助理播报，再围绕同一事件组织3–6条可选虚构成员对白；N01跳过群聊稿与对白。成员互答可留给后续节点，不固定顺序、不让所有人重复同一结论。后台保留每条新闻断言的claim_id映射，复制稿不显示审核字段。
 
-## v1.4 发布前核验优先规则
-新闻、解释、对白及制图前读取 `../p004-chat-suite/references/news-release-gate-v1.4.md`。未确认主张不得进入可复制稿，所有角色共享同一批准事实集。规则与检查脚本不等于ChatGPT Scheduled已接入或已通过运行验收。
+对白中的数字、因果、公司动态和市场状态不能超出批准事实集；新断言退回资讯助理核验。提问不能以问句形式暗藏未经核实的事实。保持不同句长和情绪，不替每个人写完整市场分析；用户未采用的候选不写入记忆。

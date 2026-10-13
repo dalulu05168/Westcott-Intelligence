@@ -11,16 +11,16 @@ description: 65位身份锁定的虚构成员，按职业、经验、个性和�
 
 六名大额投资者：06男（26岁跨国公司高管、投资1年）；16女（28岁私营企业主、投资7年）；26女（38岁房地产开发商、投资5年）；36男（52岁私营企业主、投资13年）；46男（38岁跨国公司高管、投资6年）；56男（29岁房地产开发商、投资5年）。专业深度依经验而异、措辞不能六人一致。26女的2026-10-12点赞是reaction，不是发言消息。
 
-课堂先生为Jonathan Richard Hayes（Jonathan）。允许出场范围按总导演所获用户授权执行，默认01—39优先。10号是女性Mirela Pană，2026-10-12源稿中的`10男`不能写入正式记忆。另须区分01成员ION与投资顾问Ion。
+课堂先生为Jonathan Richard Hayes（Jonathan）。全65人开放渐进出场，不机械轮号，不让03/33长期垄断。10号是女性Mirela Pană，2026-10-12源稿中的`10男`不能写入正式记忆。另须区分01成员ION与投资顾问Ion。
 
+## 执行前读取
 
-## 2026-10-13 优先修订
-先读取 `../p004-chat-suite/references/event-driven-20261013.md` 及同目录 `news-accuracy-acceptance.md`。冲突旧规则由该修订覆盖；Jonathan及历史身份来源保持不变。
+先读`../p004-chat-suite/references/five-skill-workflow-v1.5.md`，按其中节点、无新闻分支、事实交接和真实状态执行；再按需要读取`../p004-chat-suite/references/news-release-gate-v1.4.md`及`../p004-chat-suite/references/news-accuracy-acceptance.md`。
 
+涉及图片才加载`../p004-chat-suite/references/MASTER_PROMPT_V2.0.md`、`../p004-chat-suite/references/visual-v2-execution-20261013.md`和`../p004-chat-suite/references/visual-qa-15.json`。不把准备指令当完成图片，不把源码升级当线上任务同步。
 
-## 2026-10-13 财经视觉V2.0
-涉及图片时读取 `../p004-chat-suite/references/MASTER_PROMPT_V2.0.md`、`../p004-chat-suite/references/visual-v2-execution-20261013.md`，实际出图后按`../p004-chat-suite/references/visual-qa-15.json`核验。最新方向：简约、少字、多图、重点字放大；图片正文为罗马尼亚语。中文群聊及已采用人物历史保持原规则。
+## 本角色交付
 
+从65人正式名册逐个核对本轮候选的11项身份字段，读取对应profile及可访问已采用记忆。按正式学员资历区别新老学员，不从编号、财富或投资年限推断；语言DNA未采用部分仍为创作建议。
 
-## v1.4 发布前核验优先规则
-新闻、解释、对白及制图前读取 `../p004-chat-suite/references/news-release-gate-v1.4.md`。未确认主张不得进入可复制稿，所有角色共享同一批准事实集。规则与检查脚本不等于ChatGPT Scheduled已接入或已通过运行验收。
+为适宜节点给3–6条不同视角的虚构候选，N01为0条。至少让观点、疑问或表达重点有真实差别，不把同一判断换姓名重说；不强制每人都使用Emoji或术语。可以质疑、观望、不懂，老学员也能用大白话。后台记出场依据及本轮暂定状态；只在用户采用后提出有消息ID依据的成长更新，不自动改写档案。

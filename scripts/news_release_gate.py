@@ -16,7 +16,49 @@ def instant(value):
     return parsed
 
 
+def valid_shape(ledger):
+    """Reject malformed external ledgers before evaluating any candidate."""
+    if not isinstance(ledger, dict):
+        return False
+    sources, claims, publish = (ledger.get('sources', {}), ledger.get('claims', []),
+                                ledger.get('publish_claim_ids', []))
+    if not isinstance(sources, dict) or not isinstance(claims, list) or not isinstance(publish, list):
+        return False
+    if not all(isinstance(cid, str) for cid in publish):
+        return False
+    for sid, source in sources.items():
+        if not isinstance(sid, str) or not isinstance(source, dict):
+            return False
+        if any(not isinstance(source.get(k, ''), str) for k in
+               ('url', 'access_status', 'source_type', 'origin_id')):
+            return False
+    for claim in claims:
+        if not isinstance(claim, dict):
+            return False
+        if any(not isinstance(claim.get(k, ''), str) for k in ('id', 'text', 'kind')):
+            return False
+        refs, numbers, premises = (claim.get('evidence', []), claim.get('numbers', []),
+                                   claim.get('premise_claim_ids', []))
+        if not all(isinstance(v, list) for v in (refs, numbers, premises)):
+            return False
+        if not all(isinstance(v, str) for v in premises):
+            return False
+        for ref in refs:
+            if not isinstance(ref, dict) or any(not isinstance(ref.get(k, ''), str)
+                                               for k in ('source_id', 'excerpt', 'locator')):
+                return False
+        for number in numbers:
+            if not isinstance(number, dict) or not isinstance(number.get('source_id', ''), str):
+                return False
+            if number.get('percent_inputs') is not None and not isinstance(number['percent_inputs'], dict):
+                return False
+    return True
+
+
 def evaluate(ledger):
+    if not valid_shape(ledger):
+        return {'status': 'BLOCK', 'errors': ['INVALID_LEDGER_SHAPE'], 'claims': [],
+                'approved_facts': [], 'limitation': 'Malformed ledger; no publication allowed.'}
     errors = []
     try:
         execution = instant(ledger['executed_at'])
@@ -94,6 +136,9 @@ def evaluate(ledger):
                     issues.append('NUMBER_MISMATCH')
                 if instant(number['as_of']) > execution:
                     issues.append('FUTURE_MARKET_DATA')
+                number_source = sources.get(number.get('source_id'))
+                if number_source and instant(number['as_of']) > instant(number_source['retrieved_at']):
+                    issues.append('QUOTE_AFTER_SOURCE_RETRIEVAL')
                 calc = number.get('percent_inputs')
                 if calc:
                     current, previous = Decimal(str(calc['current'])), Decimal(str(calc['previous']))
@@ -107,20 +152,32 @@ def evaluate(ledger):
         results.append({'id': cid, 'status': 'HOLD' if issues else 'PASS',
                         'issues': sorted(set(issues)), 'text': claim.get('text', '')})
     by_id = {r['id']: r for r in results}
+    claims_by_id = {c['id']: c for c in ledger.get('claims', [])}
+    memo = {}
+    def supported(cid, visiting):
+        if cid in visiting or cid not in by_id or by_id[cid]['status'] != 'PASS':
+            return False
+        if cid in memo:
+            return memo[cid]
+        claim = claims_by_id[cid]
+        if claim.get('kind') != 'analysis':
+            memo[cid] = True
+        else:
+            dependencies = claim.get('premise_claim_ids', [])
+            memo[cid] = bool(dependencies) and all(supported(d, visiting | {cid}) for d in dependencies)
+        return memo[cid]
+    # Resolve the full premise graph before approving publication, independent of input order.
+    support = {cid: supported(cid, set()) for cid in by_id}
+    for claim in ledger.get('claims', []):
+        if claim.get('kind') == 'analysis' and not support.get(claim['id']):
+            by_id[claim['id']]['status'] = 'HOLD'
+            by_id[claim['id']]['issues'].append('UNVERIFIED_ANALYSIS_PREMISE')
     publish_ids = ledger.get('publish_claim_ids', [])
     if len(set(publish_ids)) != len(publish_ids):
         errors.append('DUPLICATE_PUBLISHED_CLAIM')
     for cid in publish_ids:
         if cid not in by_id or by_id[cid]['status'] != 'PASS':
             errors.append('UNAPPROVED_PUBLISHED_CLAIM:' + cid)
-    for claim in ledger.get('claims', []):
-        if claim.get('kind') == 'analysis':
-            dependencies = claim.get('premise_claim_ids', [])
-            if not dependencies or claim.get('id') in dependencies or any(d not in by_id or by_id[d]['status'] != 'PASS' for d in dependencies):
-                by_id[claim.get('id', '')]['status'] = 'HOLD'
-                by_id[claim.get('id', '')]['issues'].append('UNVERIFIED_ANALYSIS_PREMISE')
-                if claim.get('id') in publish_ids:
-                    errors.append('UNAPPROVED_ANALYSIS_PREMISE:' + claim['id'])
     # No free-form publication text is accepted: render only reviewed claim text.
     status = 'BLOCK' if errors else ('PASS' if publish_ids else 'NO_PUBLISHABLE_FACTS')
     approved = [by_id[c]['text'] for c in publish_ids] if status == 'PASS' else []

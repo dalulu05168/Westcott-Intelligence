@@ -1,21 +1,81 @@
 {
-  "version": "v1.4",
-  "repository_validator": "PASS: 65 canonical identities + 65 profiles + CSV + six large-investment personas + teacher Jonathan + five Skills + daily memory audit; editorial exceptions remain flagged",
-  "unit_tests": {
-    "count": 23,
+  "version": "v1.5",
+  "base_commit": "cb6b3a45c60385bba18e42fad473f408d5f2bb1f",
+  "repository_validator": {
     "result": "PASS",
-    "log": "test_conflict (test_news_release_gate.GateTest.test_conflict) ... ok\ntest_future_quote (test_news_release_gate.GateTest.test_future_quote) ... ok\ntest_future_requires_contract (test_news_release_gate.GateTest.test_future_requires_contract) ... ok\ntest_indexed_only_not_body (test_news_release_gate.GateTest.test_indexed_only_not_body) ... ok\ntest_missing_source_time (test_news_release_gate.GateTest.test_missing_source_time) ... ok\ntest_missing_timezone (test_news_release_gate.GateTest.test_missing_timezone) ... ok\ntest_nan_rejected (test_news_release_gate.GateTest.test_nan_rejected) ... ok\ntest_no_publishable_facts (test_news_release_gate.GateTest.test_no_publishable_facts) ... ok\ntest_no_source (test_news_release_gate.GateTest.test_no_source) ... ok\ntest_number_mismatch (test_news_release_gate.GateTest.test_number_mismatch) ... ok\ntest_number_missing_basis (test_news_release_gate.GateTest.test_number_missing_basis) ... ok\ntest_omit_bad_candidate_keep_verified_fact (test_news_release_gate.GateTest.test_omit_bad_candidate_keep_verified_fact) ... ok\ntest_one_source_causality (test_news_release_gate.GateTest.test_one_source_causality) ... ok\ntest_percent_baseline (test_news_release_gate.GateTest.test_percent_baseline) ... ok\ntest_price_requires_currency (test_news_release_gate.GateTest.test_price_requires_currency) ... ok\ntest_reposts_do_not_count_as_independent (test_news_release_gate.GateTest.test_reposts_do_not_count_as_independent) ... ok\ntest_single_official_fact_allowed (test_news_release_gate.GateTest.test_single_official_fact_allowed) ... ok\ntest_source_after_execution (test_news_release_gate.GateTest.test_source_after_execution) ... ok\ntest_source_not_locatable (test_news_release_gate.GateTest.test_source_not_locatable) ... ok\ntest_two_independent_reviewed_sources (test_news_release_gate.GateTest.test_two_independent_reviewed_sources) ... ok\ntest_unconditional_analysis (test_news_release_gate.GateTest.test_unconditional_analysis) ... ok\ntest_unknown_published_fact (test_news_release_gate.GateTest.test_unknown_published_fact) ... ok\ntest_unreviewed_fact (test_news_release_gate.GateTest.test_unreviewed_fact) ... ok\n\n----------------------------------------------------------------------\nRan 23 tests in 0.001s\n\nOK\n"
+    "log": "PASS: 65 canonical identities + 65 profiles + CSV + six large-investment personas + teacher Jonathan + five Skills + daily memory audit; editorial exceptions remain flagged\n"
   },
-  "old_sample": "BLOCK",
-  "repaired_sample": "PASS_LEDGER_CHECK_ONLY",
-  "online_task_prompts": "PREPARED_NOT_APPLIED",
-  "online_runtime": "NOT_VERIFIED",
-  "news_accuracy_rate": "NOT_MEASURED",
-  "delivery": "UNKNOWN",
+  "ledger_unit_tests": {
+    "count": 31,
+    "result": "PASS",
+    "log": "test_analysis_cycle (test_news_release_gate.GateTest.test_analysis_cycle) ... ok\ntest_conflict (test_news_release_gate.GateTest.test_conflict) ... ok\ntest_duplicate_id_cannot_shadow_bad_candidate (test_news_release_gate.GateTest.test_duplicate_id_cannot_shadow_bad_candidate) ... ok\ntest_future_quote (test_news_release_gate.GateTest.test_future_quote) ... ok\ntest_future_requires_contract (test_news_release_gate.GateTest.test_future_requires_contract) ... ok\ntest_indexed_only_not_body (test_news_release_gate.GateTest.test_indexed_only_not_body) ... ok\ntest_invalid_ledger_shape_blocks (test_news_release_gate.GateTest.test_invalid_ledger_shape_blocks) ... ok\ntest_invalid_nested_shapes_block (test_news_release_gate.GateTest.test_invalid_nested_shapes_block) ... ok\ntest_missing_source_time (test_news_release_gate.GateTest.test_missing_source_time) ... ok\ntest_missing_timezone (test_news_release_gate.GateTest.test_missing_timezone) ... ok\ntest_nan_rejected (test_news_release_gate.GateTest.test_nan_rejected) ... ok\ntest_no_publishable_facts (test_news_release_gate.GateTest.test_no_publishable_facts) ... ok\ntest_no_source (test_news_release_gate.GateTest.test_no_source) ... ok\ntest_number_mismatch (test_news_release_gate.GateTest.test_number_mismatch) ... ok\ntest_number_missing_basis (test_news_release_gate.GateTest.test_number_missing_basis) ... ok\ntest_omit_bad_candidate_keep_verified_fact (test_news_release_gate.GateTest.test_omit_bad_candidate_keep_verified_fact) ... ok\ntest_one_source_causality (test_news_release_gate.GateTest.test_one_source_causality) ... ok\ntest_percent_baseline (test_news_release_gate.GateTest.test_percent_baseline) ... ok\ntest_price_requires_currency (test_news_release_gate.GateTest.test_price_requires_currency) ... ok\ntest_quote_after_source_retrieval (test_news_release_gate.GateTest.test_quote_after_source_retrieval) ... ok\ntest_reposts_do_not_count_as_independent (test_news_release_gate.GateTest.test_reposts_do_not_count_as_independent) ... ok\ntest_single_official_fact_allowed (test_news_release_gate.GateTest.test_single_official_fact_allowed) ... ok\ntest_source_after_execution (test_news_release_gate.GateTest.test_source_after_execution) ... ok\ntest_source_not_locatable (test_news_release_gate.GateTest.test_source_not_locatable) ... ok\ntest_transitive_invalid_analysis_first (test_news_release_gate.GateTest.test_transitive_invalid_analysis_first) ... ok\ntest_transitive_invalid_analysis_reverse (test_news_release_gate.GateTest.test_transitive_invalid_analysis_reverse) ... ok\ntest_two_independent_reviewed_sources (test_news_release_gate.GateTest.test_two_independent_reviewed_sources) ... ok\ntest_unconditional_analysis (test_news_release_gate.GateTest.test_unconditional_analysis) ... ok\ntest_unknown_published_fact (test_news_release_gate.GateTest.test_unknown_published_fact) ... ok\ntest_unreviewed_fact (test_news_release_gate.GateTest.test_unreviewed_fact) ... ok\ntest_valid_analysis_chain_either_order (test_news_release_gate.GateTest.test_valid_analysis_chain_either_order) ... ok\n\n----------------------------------------------------------------------\nRan 31 tests in 0.002s\n\nOK\n"
+  },
+  "pre_fix_new_regressions": {
+    "new_tests": 8,
+    "failures": 3,
+    "errors": 2,
+    "original_tests": 23
+  },
+  "post_hoc_old_fixtures": {
+    "results": {
+      "old": "BLOCK",
+      "repaired": "PASS"
+    },
+    "scope": "LEDGER_CONSISTENCY_ONLY_NOT_NEW_SCHEDULED_OUTPUT"
+  },
+  "component_count": 5,
+  "unified_entry_count": 1,
   "canonical_people_count": 65,
-  "protected_files_unchanged": 92,
-  "task_ids_and_local_schedule_descriptions_preserved": true,
-  "logo_master_monitoring_plan_unchanged": true,
-  "official_skill_quick_validate": "UNAVAILABLE_MISSING_PYYAML",
-  "limitation": "Deterministic ledger checks do not prove semantic truth or online integration."
+  "entries": [
+    {
+      "entry": "skills/p004-director/SKILL.md",
+      "frontmatter": "UNCHANGED",
+      "references": "RESOLVED",
+      "count": 7
+    },
+    {
+      "entry": "skills/p004-writer/SKILL.md",
+      "frontmatter": "UNCHANGED",
+      "references": "RESOLVED",
+      "count": 6
+    },
+    {
+      "entry": "skills/p004-teacher/SKILL.md",
+      "frontmatter": "UNCHANGED",
+      "references": "RESOLVED",
+      "count": 6
+    },
+    {
+      "entry": "skills/p004-assistant/SKILL.md",
+      "frontmatter": "UNCHANGED",
+      "references": "RESOLVED",
+      "count": 6
+    },
+    {
+      "entry": "skills/p004-members/SKILL.md",
+      "frontmatter": "UNCHANGED",
+      "references": "RESOLVED",
+      "count": 7
+    },
+    {
+      "entry": "skills/p004-chat-suite/SKILL.md",
+      "frontmatter": "UNCHANGED",
+      "references": "RESOLVED",
+      "count": 19
+    }
+  ],
+  "protected_character_and_history_FILE_count": 92,
+  "protected_files_BYTE_IDENTICAL": true,
+  "task_package_logo_master_plan_BYTE_IDENTICAL": true,
+  "original_skill_frontmatter": "BYTE_CONTENT_UNCHANGED_EXCEPT_LINE_ENDINGS",
+  "official_skill_quick_validate": "UNAVAILABLE_MISSING_PYYAML; not claimed passed",
+  "scenario_checklist": "DOCUMENTED_NOT_EXECUTED_AS_REAL_MODEL_OR_SCHEDULED_OUTPUT",
+  "online_tasks_modified": false,
+  "google_docs_modified": false,
+  "automatic_images_enabled": false,
+  "real_new_scheduled_output_samples_available": 0,
+  "news_accuracy_rate": "NOT_MEASURED",
+  "online_full_text_match": "NOT_PROVEN",
+  "delivery": "UNKNOWN",
+  "limitation": "31 tests verify deterministic ledger behavior only, not source semantics, model instruction adherence or online runtime."
 }

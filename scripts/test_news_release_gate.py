@@ -123,5 +123,61 @@ class GateTest(unittest.TestCase):
         self.rejected(lambda d: d['claims'][0].update(kind='analysis', premise_claim_ids=['BET']))
 
 
+    def analysis(self, data, cid, premises):
+        claim = copy.deepcopy(data['claims'][0])
+        claim.update(id=cid, kind='analysis', conditional=True,
+                     boundary_text='仅为条件分析', premise_claim_ids=premises)
+        return claim
+
+    def test_transitive_invalid_analysis_first(self):
+        data = valid()
+        data['claims'] += [self.analysis(data, 'A', ['B']), self.analysis(data, 'B', ['missing'])]
+        data['publish_claim_ids'] = ['A']
+        self.assertEqual(evaluate(data)['status'], 'BLOCK')
+
+    def test_transitive_invalid_analysis_reverse(self):
+        data = valid()
+        data['claims'] += [self.analysis(data, 'B', ['missing']), self.analysis(data, 'A', ['B'])]
+        data['publish_claim_ids'] = ['A']
+        self.assertEqual(evaluate(data)['status'], 'BLOCK')
+
+    def test_analysis_cycle(self):
+        data = valid()
+        data['claims'] += [self.analysis(data, 'A', ['B']), self.analysis(data, 'B', ['A'])]
+        data['publish_claim_ids'] = ['A']
+        self.assertEqual(evaluate(data)['status'], 'BLOCK')
+
+    def test_valid_analysis_chain_either_order(self):
+        for reverse in (False, True):
+            data = valid()
+            chain = [self.analysis(data, 'A', ['B']), self.analysis(data, 'B', ['BET'])]
+            data['claims'] += chain[::-1] if reverse else chain
+            data['publish_claim_ids'] = ['A']
+            self.assertEqual(evaluate(data)['status'], 'PASS')
+
+    def test_quote_after_source_retrieval(self):
+        self.rejected(lambda d: d['claims'][0]['numbers'][0].update(as_of='2026-10-13T01:19:30+03:00'))
+
+    def test_invalid_ledger_shape_blocks(self):
+        for data in (None, [], {'executed_at': valid()['executed_at'], 'claims': 'wrong'},
+                     dict(valid(), sources=[]), dict(valid(), claims=[None]),
+                     dict(valid(), publish_claim_ids=[{}])):
+            self.assertEqual(evaluate(data)['status'], 'BLOCK')
+
+    def test_invalid_nested_shapes_block(self):
+        for fields in ({'evidence': [None]}, {'numbers': [None]}, {'text': 12},
+                       {'kind': 'analysis', 'premise_claim_ids': 'BET'}):
+            data = valid()
+            data['claims'][0].update(fields)
+            self.assertEqual(evaluate(data)['status'], 'BLOCK')
+
+    def test_duplicate_id_cannot_shadow_bad_candidate(self):
+        data = valid()
+        bad = copy.deepcopy(data['claims'][0])
+        bad['review_status'] = 'PENDING'
+        data['claims'].insert(0, bad)
+        self.assertEqual(evaluate(data)['status'], 'BLOCK')
+
+
 if __name__ == '__main__':
     unittest.main()
