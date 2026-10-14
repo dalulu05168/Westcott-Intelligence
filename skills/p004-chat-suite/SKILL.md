@@ -7,7 +7,7 @@ description: ELLERY WESTCOTT 虚构财经教学会话五合一入口，统一调
 
 本仓库是该项目唯一的Skill规则源，不依赖旧 `dalulu05168/-Skill` 仓库。Google Docs自动归档暂停，不自动发送WhatsApp/Telegram。当前无自动群发功能，只有经用户最终确认的文本才加入有效剧情记忆。
 
-必须先读`references/five-skill-workflow-v1.5.md`，核对实际输入、无新闻分支和事实交接；再按任务读取：
+必须先读`references/daily-editorial-and-memory-v1.6.md`（2026-10-14最新用户指令，当前只允许01—40号出场、每天BVB/美股各一次、角色记忆强制读取），再读`references/five-skill-workflow-v1.5.md`，核对实际输入、无新闻分支和事实交接；再按任务读取：
 - `references/staff-and-role-identity-20261012.md`（最新：先生 Jonathan Richard Hayes）
 - `characters/final-identity-65.json`（用户确认的65人、11项身份字段）
 - `references/session-rules.md`、`references/final-transcript-memory-and-format-20261012.md`
@@ -37,3 +37,10 @@ description: ELLERY WESTCOTT 虚构财经教学会话五合一入口，统一调
 ## v1.5.1 人物资料加载
 
 遇到人物资料不可访问、语气草案未批准或缺少历史而取消全部候选时，读取`references/runtime-loading-v1.5.1.md`。任务内置快照在`references/runtime-context-v1.5.1.txt`；据实际读取方式记录来源，缺历史不编往事，身份已确认则可创作待选台词。N01仍不生成成员对白。
+
+
+
+
+## 2026-10-14 最新用户执行修订 v1.6（优先于本文件旧描述）
+
+**必须先读取** `references/daily-editorial-and-memory-v1.6.md`，根据每日最新正式Google Doc、独立长期记忆和近期已采用剧情选角。身份仍为65人锁定，但**当前仅01—40号允许在剧情中发言**；41—65号保留档案但不出场。每天准备一只BVB与一只美国市场股票研究，上午下午各一次、具体先后由用户提前确定；未确定时记PENDING_USER_SLOT，不自行安排或声称实际发送。资讯主线最多1—2条重大、有实质新增的事件，避免重复和无意义热度；助理自然讲事实、变化、条件与可讨论方向。**禁止“助理1条→成员2条”机械循环**，必须体现成员彼此接话与个人记忆，允许连续互答、少人回应或沉默。若本文旧规则与v1.6不符，优先v1.6。GitHub规则同步不是线上自动任务或真实群发送。
