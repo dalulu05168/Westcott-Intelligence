@@ -1,4 +1,4 @@
-"""Manually approved news-to-Telegram pipeline. Never schedules or scrapes news."""
+"""Manually reviewed publisher using original source article images, never generated art."""
 import argparse
 import base64
 import hashlib
@@ -7,6 +7,7 @@ import os
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 import re
+import ipaddress
 import sys
 import urllib.error
 import urllib.parse
@@ -15,8 +16,7 @@ import urllib.request
 BASE = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(BASE / "scripts"))
 import news_release_gate as gate
-from image_background import render_background, select_topic
-from bridge import send_group_news_with_image
+from bridge import send_group_news_from_official_article
 
 EVENT_RE = re.compile(r"^[a-z0-9][a-z0-9_-]{5,71}$")
 FILE_RE = re.compile(r"^news/approved/[a-z0-9][a-z0-9_.-]{1,100}\.json$")
@@ -25,6 +25,70 @@ CONFIRM = "PUBLISH_REVIEWED_NEWS"
 
 class PublicationError(RuntimeError):
     pass
+
+
+def validate_public_https(value):
+    if not isinstance(value, str) or len(value) > 2048:
+        raise PublicationError("Image/article URL must be HTTPS with limited length.")
+    parsed = urllib.parse.urlsplit(value)
+    if (parsed.scheme != "https" or not parsed.hostname or parsed.username or parsed.password
+            or parsed.fragment or any(c in value for c in "\\r\\n\\t")):
+        raise PublicationError("Invalid original source HTTPS URL.")
+    try:
+        if parsed.port not in (None, 443):
+            raise PublicationError("Nonstandard URL port not allowed.")
+    except ValueError:
+        raise PublicationError("Invalid URL port.") from None
+    hostname = parsed.hostname.lower().rstrip(".")
+    if (hostname == "localhost" or hostname.endswith((".local", ".internal"))
+            or "." not in hostname):
+        raise PublicationError("Nonpublic source hostname.")
+    try:
+        ip = ipaddress.ip_address(hostname)
+    except ValueError:
+        pass
+    else:
+        if not ip.is_global:
+            raise PublicationError("Private/loopback source IP is not allowed.")
+    return value
+
+
+def select_original_image(ledger, selected_source_ids, default_source_id):
+    """Allow photo upload only when directly matched to official source and reuse approved.
+
+    Missing permission is NOT an instruction to scrape or copy: let Telegram render
+    the original article's native link preview, if one is available.
+    """
+    sources = ledger["sources"]
+    source_id = ledger.get("primary_article_source_id", default_source_id)
+    if source_id not in selected_source_ids:
+        raise PublicationError("Primary article must support a published claim.")
+    article_url = validate_public_https(sources[source_id]["url"])
+    metadata = ledger.get("original_image")
+    if not metadata:
+        return {"article_url": article_url, "image_url": None,
+                "image_decision": "original_article_link_preview"}
+    if not isinstance(metadata, dict):
+        raise PublicationError("Invalid original_image metadata.")
+    if metadata.get("source_id") != source_id:
+        raise PublicationError("Image must be connected to selected primary article.")
+    if metadata.get("article_url") != article_url:
+        raise PublicationError("Image article URL does not match official evidence.")
+    image_url = validate_public_https(metadata.get("image_url"))
+    permitted = (
+        metadata.get("matches_article_reviewed") is True
+        and metadata.get("reuse_permission_verified") is True
+        and isinstance(metadata.get("reviewed_by"), str)
+        and bool(metadata["reviewed_by"].strip())
+        and isinstance(metadata.get("rights_evidence_url"), str)
+        and bool(metadata["rights_evidence_url"].strip())
+    )
+    if not permitted:
+        return {"article_url": article_url, "image_url": None,
+                "image_decision": "original_article_link_preview_rights_unverified"}
+    validate_public_https(metadata["rights_evidence_url"])
+    return {"article_url": article_url, "image_url": image_url,
+            "image_decision": "verified_original_publisher_photo"}
 
 
 def prepare(ledger, filename, now=None):
@@ -49,12 +113,14 @@ def prepare(ledger, filename, now=None):
     # Derive URLs ONLY from the evidence for published claims.
     selected = set(ledger["publish_claim_ids"])
     urls = []
+    selected_source_ids = set()
     for claim in ledger["claims"]:
         if claim["id"] not in selected:
             continue
         for evidence in claim.get("evidence", []):
+            selected_source_ids.add(evidence["source_id"])
             source = ledger["sources"][evidence["source_id"]]
-            url = source["url"]
+            url = validate_public_https(source["url"])
             if url not in urls:
                 urls.append(url)
     if not urls or len(urls) > 12:
@@ -63,14 +129,20 @@ def prepare(ledger, filename, now=None):
     text += "\n\n原始来源：\n" + "\n".join(urls)
     if len(text.encode("utf-8")) > 14000:
         raise PublicationError("News text is too long for concise Telegram release.")
-    topic = select_topic(facts)
+    # Source page is the canonical visual context. No generated artwork is used.
+    default_source_id = next(
+        evidence["source_id"] for claim in ledger["claims"]
+        if claim["id"] in selected
+        for evidence in claim["evidence"]
+    )
+    media = select_original_image(ledger, selected_source_ids, default_source_id)
     ids = sorted(selected)
     fingerprint = hashlib.sha256(
         json.dumps({"claims": ids, "sources": sorted(urls)}, ensure_ascii=False,
                    sort_keys=True).encode("utf-8")
     ).hexdigest()
     return {"event_id": event_id, "fingerprint": fingerprint,
-            "claim_ids": ids, "sources": urls, "topic": topic,
+            "claim_ids": ids, "sources": urls, "media": media,
             "ledger": filename, "text": text}
 
 
@@ -124,7 +196,9 @@ def reserve(prepared, env, now=None):
         "claim_ids": prepared["claim_ids"],
         "evidence_urls": prepared["sources"],
         "ledger": prepared["ledger"],
-        "image_topic": prepared["topic"],
+        "original_article_url": prepared["media"]["article_url"],
+        "original_image_url": prepared["media"]["image_url"],
+        "image_decision": prepared["media"]["image_decision"],
         "reserved_at": (now or datetime.now(timezone.utc)).isoformat(),
         "message_ids": [],
     }
@@ -170,28 +244,33 @@ def github_store_asset(path, data, token, repo):
     return "https://github.com/" + repo + "/blob/main/" + path
 
 
-def save_preview(prepared, png_bytes, env):
+def save_preview(prepared, env):
     token, repo = env.get("GITHUB_TOKEN", "").strip(), env.get("GITHUB_REPOSITORY", "").strip()
     if not token or not repo or env.get("GITHUB_REF_NAME") != "main":
         raise PublicationError("Preview requires main branch GITHUB_TOKEN.")
     base = "news/previews/" + prepared["fingerprint"][:40]
-    image_url = github_store_asset(base + ".png", png_bytes, token, repo)
-    copy_url = github_store_asset(base + ".txt", prepared["text"].encode("utf-8"), token, repo)
-    return {"status": "PREVIEW_ONLY", "image_px": "1600x900", "topic": prepared["topic"],
-            "event_id": prepared["event_id"], "image_url": image_url, "text_url": copy_url}
+    text_url = github_store_asset(base + ".txt", prepared["text"].encode("utf-8"), token, repo)
+    return {"status": "PREVIEW_ONLY", "event_id": prepared["event_id"],
+            "original_article_url": prepared["media"]["article_url"],
+            "original_image_url": prepared["media"]["image_url"],
+            "image_decision": prepared["media"]["image_decision"],
+            "text_url": text_url}
 
 
-def publish(prepared, image_bytes, env):
+def publish(prepared, env):
     if env.get("PUBLISH_CONFIRMATION") != CONFIRM:
         raise PublicationError("Explicit publish confirmation required.")
     path, record, sha = reserve(prepared, env)
     try:
-        receipt = send_group_news_with_image(prepared["text"], image_bytes, env)
+        receipt = send_group_news_from_official_article(
+            prepared["text"], prepared["media"]["article_url"],
+            prepared["media"]["image_url"], env)
     except Exception:
         # PENDING remains committed; a human must reconcile Telegram before any retry.
         raise PublicationError("Delivery uncertain; pending audit blocks automatic retry.") from None
     record["state"] = "DELIVERED"
     record["photo_message_id"] = receipt["photo_message_id"]
+    record["image_delivery"] = receipt["image_delivery"]
     record["message_ids"] = receipt["message_ids"]
     record["group_title"] = receipt["group_title"]
     record["delivered_at"] = datetime.now(timezone.utc).isoformat()
@@ -200,7 +279,8 @@ def publish(prepared, image_bytes, env):
     except PublicationError:
         raise PublicationError("Telegram delivered but receipt update failed; reconcile PENDING manually.") from None
     return {"status": "DELIVERED", "event_id": prepared["event_id"],
-            "topic": prepared["topic"], "photo_message_id": receipt["photo_message_id"],
+            "image_delivery": receipt["image_delivery"],
+            "photo_message_id": receipt["photo_message_id"],
             "message_ids": receipt["message_ids"], "audit_path": path}
 
 
@@ -215,13 +295,10 @@ def main():
             raise PublicationError("Invalid approved ledger path.")
         ledger = json.loads((BASE / args.ledger).read_text(encoding="utf-8"))
         prepared = prepare(ledger, args.ledger)
-        png_bytes = render_background(prepared["topic"])
-        Path("/tmp/westcott-news-preview.png").write_bytes(png_bytes)
-        Path("/tmp/westcott-news-preview.txt").write_text(prepared["text"], encoding="utf-8")
         if args.mode == "preview":
-            result = save_preview(prepared, png_bytes, os.environ)
+            result = save_preview(prepared, os.environ)
         else:
-            result = publish(prepared, png_bytes, os.environ)
+            result = publish(prepared, os.environ)
         print(json.dumps(result, ensure_ascii=False))
         return 0
     except (PublicationError, ValueError, OSError, KeyError, TypeError) as exc:
