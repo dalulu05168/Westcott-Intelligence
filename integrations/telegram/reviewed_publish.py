@@ -32,7 +32,7 @@ def validate_public_https(value):
         raise PublicationError("Image/article URL must be HTTPS with limited length.")
     parsed = urllib.parse.urlsplit(value)
     if (parsed.scheme != "https" or not parsed.hostname or parsed.username or parsed.password
-            or parsed.fragment or any(c in value for c in "\\r\\n\\t")):
+            or parsed.fragment or any(ord(c) < 32 for c in value)):
         raise PublicationError("Invalid original source HTTPS URL.")
     try:
         if parsed.port not in (None, 443):
