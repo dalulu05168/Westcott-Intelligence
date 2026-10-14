@@ -1,0 +1,170 @@
+"""Inspect original publisher Open Graph image metadata; never generates or copies images."""
+import html
+from html.parser import HTMLParser
+import ipaddress
+import socket
+import urllib.error
+import urllib.parse
+import urllib.request
+
+MAX_HTML = 524_288
+
+
+class SourceMediaError(ValueError):
+    pass
+
+
+def public_https(value):
+    if not isinstance(value, str) or not 0 < len(value) <= 2048:
+        raise SourceMediaError("Source URL must be a nonempty HTTPS URL.")
+    if any(ord(c) < 33 for c in value):
+        raise SourceMediaError("Whitespace/control characters in URL.")
+    url = urllib.parse.urlsplit(value)
+    if url.scheme != "https" or not url.hostname or url.username or url.password or url.fragment:
+        raise SourceMediaError("Only public HTTPS URLs without credentials or fragments are allowed.")
+    try:
+        if url.port not in (None, 443):
+            raise SourceMediaError("Nonstandard URL port.")
+    except ValueError:
+        raise SourceMediaError("Malformed URL port.") from None
+    host = url.hostname.rstrip(".").lower()
+    if not host or "." not in host or host.endswith((".local", ".internal", ".localhost")):
+        raise SourceMediaError("Nonpublic hostname.")
+    try:
+        ip = ipaddress.ip_address(host)
+    except ValueError:
+        pass
+    else:
+        if not ip.is_global:
+            raise SourceMediaError("Nonpublic IP address.")
+    return value
+
+
+def public_dns(hostname):
+    """Fail closed for private resolutions; does not claim DNS answers are permanent."""
+    try:
+        addresses = socket.getaddrinfo(hostname, 443, type=socket.SOCK_STREAM)
+    except OSError:
+        raise SourceMediaError("Publisher hostname cannot be resolved.") from None
+    if not addresses:
+        raise SourceMediaError("Publisher hostname has no addresses.")
+    for addr in addresses:
+        try:
+            if not ipaddress.ip_address(addr[4][0]).is_global:
+                raise SourceMediaError("Publisher hostname resolves to private address.")
+        except ValueError:
+            raise SourceMediaError("Bad publisher address.") from None
+
+
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        raise SourceMediaError("Publisher redirected; use a separately verified final article URL.")
+
+
+def fetch_original_article(url, opener=None):
+    url = public_https(url)
+    public_dns(urllib.parse.urlsplit(url).hostname)
+    handler = opener or urllib.request.build_opener(NoRedirect())
+    request = urllib.request.Request(
+        url, headers={"User-Agent": "WestcottArticlePreview/1.0",
+                      "Accept": "text/html,application/xhtml+xml;q=0.9"}, method="GET")
+    try:
+        with handler.open(request, timeout=12) as response:
+            content_type = response.headers.get("Content-Type", "").lower()
+            if not ("text/html" in content_type or "application/xhtml+xml" in content_type):
+                raise SourceMediaError("Original article response is not HTML.")
+            content = response.read(MAX_HTML + 1)
+            if len(content) > MAX_HTML:
+                raise SourceMediaError("Original article metadata exceeds safe page size.")
+            encoding = response.headers.get_content_charset() or "utf-8"
+            try:
+                return content.decode(encoding, errors="replace")
+            except LookupError:
+                raise SourceMediaError("Unsupported publisher character encoding.") from None
+    except SourceMediaError:
+        raise
+    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError, ValueError):
+        raise SourceMediaError("Original article could not be inspected (restricted/blocked/network).") from None
+
+
+class HeadMetadata(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.meta = {}
+        self.canonical = None
+        self.title = ""
+        self.in_title = False
+        self.in_head = True
+
+    def handle_starttag(self, tag, attrs):
+        if not self.in_head:
+            return
+        attributes = {k.lower(): v for k, v in attrs if k and isinstance(v, str)}
+        if tag == "meta":
+            key = (attributes.get("property") or attributes.get("name") or "").lower()
+            val = attributes.get("content", "").strip()
+            if key and val and key not in self.meta:
+                self.meta[key] = val
+        elif tag == "link" and "canonical" in attributes.get("rel", "").lower().split():
+            self.canonical = self.canonical or attributes.get("href")
+        elif tag == "title":
+            self.in_title = True
+
+    def handle_data(self, data):
+        if self.in_title:
+            self.title += data
+
+    def handle_endtag(self, tag):
+        if tag == "title":
+            self.in_title = False
+        if tag == "head":
+            self.in_head = False
+
+
+def inspect_markup(article_url, markup):
+    article_url = public_https(article_url)
+    parser = HeadMetadata()
+    parser.feed(markup[:MAX_HTML])
+    canonical = parser.canonical or parser.meta.get("og:url")
+    # A canonical URL mismatch is a signal for human review, not evidence of identity.
+    canonical = urllib.parse.urljoin(article_url, canonical) if canonical else None
+    canonical_valid = False
+    if canonical:
+        try:
+            canonical = public_https(canonical)
+            article = urllib.parse.urlsplit(article_url)
+            canon = urllib.parse.urlsplit(canonical)
+            canonical_valid = (article.hostname == canon.hostname and
+                               article.path.rstrip("/") == canon.path.rstrip("/"))
+        except SourceMediaError:
+            canonical = None
+    origin = None
+    origin_key = None
+    for key in ("og:image:secure_url", "og:image", "twitter:image"):
+        if parser.meta.get(key):
+            possible = urllib.parse.urljoin(article_url, html.unescape(parser.meta[key]))
+            try:
+                origin = public_https(possible)
+                origin_key = key
+                break
+            except SourceMediaError:
+                continue
+    return {
+        "article_url": article_url,
+        "title": (parser.meta.get("og:title") or parser.meta.get("twitter:title")
+                  or parser.title).strip()[:300],
+        "canonical_url": canonical,
+        "canonical_matches_article": canonical_valid if canonical else None,
+        "image_candidate_url": origin,
+        "image_metadata_field": origin_key,
+        "verified_for_reuse": False,
+        "inspection_note": (
+            "Original-page metadata only; a candidate is NOT proof of story-image "
+            "accuracy or reproduction permission. Human review required."
+        ),
+    }
+
+
+def inspect_article(article_url, fetcher=None):
+    markup = (fetcher or fetch_original_article)(article_url)
+    return inspect_markup(article_url, markup)
