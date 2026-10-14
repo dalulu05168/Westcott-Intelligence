@@ -31,12 +31,54 @@
       ],
       "fictional_only": true,
       "no_real_transaction_verified": true
+    },
+    {
+      "message_id": "20261014-M025",
+      "source_date": "2026-10-14",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "确实漂亮，前几天回调踩得很扎实，现在布林中轨刚好撑住，MACD 快要金叉了，这波点位给得挺精准。",
+      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM/edit?tab=t.0",
+      "source_doc_revision": "AHj4eMRS4SLSXvqgAdUMG8LNztwDxKlskKeopED5zzPE-TDEq7BTY0vWsY_2ih_Hk1fv1R1BUtGzlhNUy9YSFjvECpUbF90ntTVl--YwVww",
+      "source_block_number": 96,
+      "warnings": [],
+      "fictional_only": true,
+      "no_real_transaction_verified": true
+    },
+    {
+      "message_id": "20261014-M043",
+      "source_date": "2026-10-14",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "12亿美元的罚款可真够狠的，这银行管风险的人肯定是彻底摊上事儿了😄",
+      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM/edit?tab=t.0",
+      "source_doc_revision": "AHj4eMRS4SLSXvqgAdUMG8LNztwDxKlskKeopED5zzPE-TDEq7BTY0vWsY_2ih_Hk1fv1R1BUtGzlhNUy9YSFjvECpUbF90ntTVl--YwVww",
+      "source_block_number": 114,
+      "warnings": [],
+      "fictional_only": true,
+      "no_real_transaction_verified": true
+    },
+    {
+      "message_id": "20261014-M074",
+      "source_date": "2026-10-14",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "这可不是小事啊！做外贸最怕运输线路出问题，船能不能安全到港，直接关系到后面的交货安排。",
+      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM/edit?tab=t.0",
+      "source_doc_revision": "AHj4eMRS4SLSXvqgAdUMG8LNztwDxKlskKeopED5zzPE-TDEq7BTY0vWsY_2ih_Hk1fv1R1BUtGzlhNUy9YSFjvECpUbF90ntTVl--YwVww",
+      "source_block_number": 145,
+      "warnings": [],
+      "fictional_only": true,
+      "no_real_transaction_verified": true
     }
   ],
   "reaction_count": 0,
   "no_unrecorded_history": true,
-  "message_count": 2,
-  "latest_source_date": "2026-10-13",
+  "message_count": 5,
+  "latest_source_date": "2026-10-14",
   "no_real_trading_inferred": true,
   "review_only_2026_10_13": []
 }
