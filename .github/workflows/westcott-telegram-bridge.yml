@@ -1,0 +1,55 @@
+name: Westcott Telegram Bridge
+on:
+  pull_request:
+    paths:
+      - "integrations/telegram/**"
+      - ".github/workflows/westcott-telegram-bridge.yml"
+  workflow_dispatch:
+    inputs:
+      command:
+        description: "verify, discover, smoke, or send"
+        type: choice
+        options:
+          - verify
+          - discover
+          - smoke
+          - send
+        required: true
+        default: verify
+      approved_news_text:
+        description: "Only for send; paste separately verified assistant news text"
+        type: string
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Offline transport unit tests
+        run: python -m unittest discover -s integrations/telegram -p "test_*.py"
+
+  telegram:
+    if: github.event_name == 'workflow_dispatch'
+    needs: tests
+    runs-on: ubuntu-latest
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TELEGRAM_MESSAGE_THREAD_ID: ${{ vars.TELEGRAM_MESSAGE_THREAD_ID }}
+      WESTCOTT_APPROVED_NEWS_TEXT: ${{ inputs.approved_news_text }}
+      COMMAND: ${{ inputs.command }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Execute explicitly requested Telegram action
+        run: python integrations/telegram/bridge.py "$COMMAND"
