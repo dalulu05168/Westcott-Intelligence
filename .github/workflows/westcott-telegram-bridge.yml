@@ -43,6 +43,7 @@ jobs:
     env:
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_EXPECTED_BOT_USERNAME: ZhongJianLoveBot
+      TELEGRAM_EXPECTED_GROUP_TITLE: 资讯快报
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       TELEGRAM_MESSAGE_THREAD_ID: ${{ vars.TELEGRAM_MESSAGE_THREAD_ID }}
       WESTCOTT_APPROVED_NEWS_TEXT: ${{ inputs.approved_news_text }}
