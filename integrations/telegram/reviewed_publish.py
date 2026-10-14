@@ -17,6 +17,7 @@ BASE = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(BASE / "scripts"))
 import news_release_gate as gate
 from bridge import send_group_news_from_official_article
+from source_media import SourceMediaError, inspect_article
 
 EVENT_RE = re.compile(r"^[a-z0-9][a-z0-9_-]{5,71}$")
 FILE_RE = re.compile(r"^news/approved/[a-z0-9][a-z0-9_.-]{1,100}\.json$")
@@ -146,6 +147,38 @@ def prepare(ledger, filename, now=None):
             "ledger": filename, "text": text}
 
 
+def inspect_media_for_preview(prepared):
+    """Read only original publisher metadata; no images are downloaded."""
+    url = prepared["media"]["article_url"]
+    try:
+        candidate = inspect_article(url)
+        selected = prepared["media"]["image_url"]
+        candidate["selected_photo_matches_og_image"] = (
+            candidate["image_candidate_url"] == selected if selected else None)
+        return {"status": "INSPECTED", **candidate}
+    except SourceMediaError as exc:
+        return {"status": "UNAVAILABLE", "article_url": url,
+                "image_candidate_url": None, "reason": str(exc)}
+
+
+def confirm_original_photo_source(prepared):
+    """Fail closed if a licensed photo cannot be matched to publisher metadata."""
+    photo = prepared["media"]["image_url"]
+    if not photo:
+        return None
+    try:
+        metadata = inspect_article(prepared["media"]["article_url"])
+    except SourceMediaError:
+        raise PublicationError(
+            "Cannot inspect original article image; no Telegram send or audit reservation."
+        ) from None
+    if metadata["image_candidate_url"] != photo:
+        raise PublicationError("Selected image differs from original article image metadata.")
+    if metadata["canonical_matches_article"] is False:
+        raise PublicationError("Publisher canonical URL differs from reviewed article.")
+    return metadata
+
+
 def github_write(path, record, token, repo, sha=None):
     if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repo):
         raise PublicationError("Invalid repository identifier.")
@@ -254,12 +287,14 @@ def save_preview(prepared, env):
             "original_article_url": prepared["media"]["article_url"],
             "original_image_url": prepared["media"]["image_url"],
             "image_decision": prepared["media"]["image_decision"],
+            "official_page_metadata": inspect_media_for_preview(prepared),
             "text_url": text_url}
 
 
 def publish(prepared, env):
     if env.get("PUBLISH_CONFIRMATION") != CONFIRM:
         raise PublicationError("Explicit publish confirmation required.")
+    confirm_original_photo_source(prepared)
     path, record, sha = reserve(prepared, env)
     try:
         receipt = send_group_news_from_official_article(
