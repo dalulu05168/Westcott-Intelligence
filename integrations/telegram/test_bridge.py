@@ -30,6 +30,8 @@ class TelegramBridgeTests(unittest.TestCase):
 
         def fake_api(token, method, body=None):
             calls.append((token, method, body))
+            if method == "getMe":
+                return {"id": 99, "is_bot": True, "username": "ZhongJianLoveBot"}
             if method == "getChat":
                 return {"id": -10012345, "type": "supergroup", "title": "Westcott"}
             if method == "sendMessage":
@@ -40,8 +42,23 @@ class TelegramBridgeTests(unittest.TestCase):
         with patch.object(bridge, "call_api", side_effect=fake_api):
             receipt = bridge.send_group_news("===== 资讯助理 =====\n已核验消息。", env)
         self.assertEqual(receipt["message_ids"], [428])
-        self.assertEqual(calls[1][2]["chat_id"], "-10012345")
-        self.assertNotIn("parse_mode", calls[1][2])
+        self.assertEqual(calls[2][2]["chat_id"], "-10012345")
+        self.assertNotIn("parse_mode", calls[2][2])
+        self.assertEqual(calls[0][1], "getMe")
+
+    def test_rejects_wrong_bot_username(self):
+        with patch.object(bridge, "call_api", return_value={
+            "id": 100, "is_bot": True, "username": "WrongBot"
+        }):
+            with self.assertRaisesRegex(bridge.TelegramError, "username mismatch"):
+                bridge.verify_bot_identity("secret")
+
+    def test_accepts_selected_bot_username(self):
+        with patch.object(bridge, "call_api", return_value={
+            "id": 100, "is_bot": True, "username": "ZhongJianLoveBot"
+        }):
+            account = bridge.verify_bot_identity("secret")
+        self.assertEqual(account["username"], "ZhongJianLoveBot")
 
     def test_missing_credentials(self):
         with self.assertRaises(bridge.TelegramError):
@@ -52,7 +69,13 @@ class TelegramBridgeTests(unittest.TestCase):
             {"message": {"chat": {"id": 123, "type": "private"}}},
             {"message": {"chat": {"id": -1007, "type": "supergroup", "title": "Group"}}},
         ]
-        with patch.object(bridge, "call_api", return_value=updates):
+        def fake_api(token, method, body=None):
+            if method == "getMe":
+                return {"id": 99, "is_bot": True, "username": "ZhongJianLoveBot"}
+            if method == "getUpdates":
+                return updates
+            raise AssertionError(method)
+        with patch.object(bridge, "call_api", side_effect=fake_api):
             found = bridge.discover_groups({"TELEGRAM_BOT_TOKEN": "secret"})
         self.assertEqual([item["chat_id"] for item in found], [-1007])
 
