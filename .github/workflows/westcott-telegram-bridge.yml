@@ -8,13 +8,12 @@ on:
   workflow_dispatch:
     inputs:
       command:
-        description: "discover, verify, smoke, smoke_image, send, preview, or publish"
+        description: "discover, verify, smoke, send, preview, or publish"
         type: choice
         options:
           - verify
           - discover
           - smoke
-          - smoke_image
           - send
           - preview
           - publish
@@ -47,8 +46,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install image renderer for offline tests
-        run: python -m pip install 'Pillow>=11,<13'
       - name: Offline transport unit tests
         run: python -m unittest discover -s integrations/telegram -p "test_*.py"
 
@@ -69,9 +66,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install news image renderer
-        if: inputs.command == 'smoke_image'
-        run: python -m pip install 'Pillow>=11,<13'
       - name: Execute explicitly requested Telegram action
         run: python integrations/telegram/bridge.py "$COMMAND"
 
@@ -101,7 +95,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install 16:9 image renderer
-        run: python -m pip install 'Pillow>=11,<13'
-      - name: Review evidence and prepare matching news image
+      - name: Review evidence and link the original article image
         run: python integrations/telegram/reviewed_publish.py --mode "$COMMAND" --ledger "$NEWS_LEDGER_PATH"
