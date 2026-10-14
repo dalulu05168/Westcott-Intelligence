@@ -1,0 +1,138 @@
+"""ELLERY WESTCOTT Telegram group transport. Requires an external verified publisher."""
+import argparse
+import json
+import os
+import sys
+import urllib.error
+import urllib.request
+
+
+class TelegramError(RuntimeError):
+    pass
+
+
+def _required(env, key):
+    value = env.get(key, "").strip()
+    if not value:
+        raise TelegramError("Missing " + key + "; configure in a secure secret store.")
+    return value
+
+
+def call_api(token, method, body=None):
+    """Never print the URL; it contains the secret Telegram Bot token."""
+    url = "https://api.telegram.org/bot" + token + "/" + method
+    data = json.dumps(body or {}, ensure_ascii=False).encode("utf-8")
+    req = urllib.request.Request(
+        url, data=data, headers={"Content-Type": "application/json"}, method="POST"
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=20) as response:
+            result = json.load(response)
+    except urllib.error.HTTPError as exc:
+        raise TelegramError("Telegram HTTP status " + str(exc.code)) from None
+    except (urllib.error.URLError, TimeoutError, OSError, ValueError):
+        # Ambiguous network failures are NOT retried: sendMessage might have succeeded.
+        raise TelegramError("Telegram request failed; delivery status unknown.") from None
+    if not isinstance(result, dict) or not result.get("ok"):
+        error_code = result.get("error_code", "unknown") if isinstance(result, dict) else "unknown"
+        raise TelegramError("Telegram API rejected request (code: " + str(error_code) + ")")
+    return result.get("result")
+
+
+def group_target(token, chat_id):
+    chat = call_api(token, "getChat", {"chat_id": chat_id})
+    if not isinstance(chat, dict) or chat.get("type") not in ("group", "supergroup"):
+        raise TelegramError("Configured TELEGRAM_CHAT_ID is not a group/supergroup.")
+    return {"id": chat.get("id"), "title": chat.get("title", ""), "type": chat["type"]}
+
+
+def chunks(text, max_units=3900):
+    """Telegram limit is 4096 characters; count UTF-16 units conservatively."""
+    section, units = [], 0
+    for char in text:
+        count = 2 if ord(char) > 0xFFFF else 1
+        if units + count > max_units:
+            yield "".join(section)
+            section, units = [], 0
+        section.append(char)
+        units += count
+    if section:
+        yield "".join(section)
+
+
+def validated_message(message):
+    if not isinstance(message, str) or not message.strip():
+        raise TelegramError("Message is empty.")
+    if not message.lstrip().startswith("===== 资讯助理 ====="):
+        raise TelegramError("News message must start with the agreed assistant heading.")
+    if "\x00" in message:
+        raise TelegramError("Invalid message character.")
+    return message.strip()
+
+
+def send_group_news(message, env=None):
+    """Only sends supplied text. Does NOT fetch news or certify any market claim."""
+    env = env if env is not None else os.environ
+    token = _required(env, "TELEGRAM_BOT_TOKEN")
+    chat_id = _required(env, "TELEGRAM_CHAT_ID")
+    group = group_target(token, chat_id)
+    text = validated_message(message)
+    thread = env.get("TELEGRAM_MESSAGE_THREAD_ID", "").strip()
+    receipts = []
+    for part in chunks(text):
+        request = {"chat_id": chat_id, "text": part, "disable_notification": False}
+        if thread:
+            request["message_thread_id"] = int(thread)
+        sent = call_api(token, "sendMessage", request)
+        if not isinstance(sent, dict) or not isinstance(sent.get("message_id"), int):
+            raise TelegramError("No Telegram message_id in response; verify delivery.")
+        receipts.append(sent["message_id"])
+    return {"group_id": group["id"], "group_title": group["title"],
+            "message_ids": receipts, "parts": len(receipts)}
+
+
+def discover_groups(env=None):
+    env = env if env is not None else os.environ
+    token = _required(env, "TELEGRAM_BOT_TOKEN")
+    updates = call_api(token, "getUpdates", {"limit": 100, "timeout": 0})
+    groups = {}
+    for update in updates or []:
+        if not isinstance(update, dict):
+            continue
+        obj = (update.get("message") or update.get("my_chat_member")
+               or update.get("channel_post") or {})
+        chat = obj.get("chat", {})
+        if chat.get("type") in ("group", "supergroup"):
+            groups[str(chat.get("id"))] = {
+                "chat_id": chat["id"], "title": chat.get("title", ""),
+                "type": chat["type"]
+            }
+    return list(groups.values())
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description="Westcott Telegram group delivery")
+    parser.add_argument("command", choices=["discover", "verify", "smoke", "send"])
+    args = parser.parse_args(argv)
+    try:
+        if args.command == "discover":
+            result = {"groups": discover_groups()}
+        elif args.command == "verify":
+            result = group_target(_required(os.environ, "TELEGRAM_BOT_TOKEN"),
+                                  _required(os.environ, "TELEGRAM_CHAT_ID"))
+        elif args.command == "smoke":
+            # An explicit test, not a news push.
+            result = send_group_news("===== 资讯助理 =====\nELLERY WESTCOTT Telegram 群组连接测试。")
+        else:
+            # Input supplied by an external human-verified/news-gated publisher.
+            result = send_group_news(_required(os.environ, "WESTCOTT_APPROVED_NEWS_TEXT"))
+        print(json.dumps({"status": "OK", "result": result}, ensure_ascii=False))
+        return 0
+    except (TelegramError, ValueError) as exc:
+        print(json.dumps({"status": "ERROR", "reason": str(exc)}, ensure_ascii=False),
+              file=sys.stderr)
+        return 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
