@@ -14,6 +14,13 @@ class TelegramBridgeTests(unittest.TestCase):
             with self.assertRaises(bridge.TelegramError):
                 bridge.group_target("secret", "3")
 
+    def test_rejects_wrong_group_title(self):
+        with patch.object(bridge, "call_api", return_value={
+            "id": -10012345, "type": "supergroup", "title": "其他群组"
+        }):
+            with self.assertRaisesRegex(bridge.TelegramError, "title mismatch"):
+                bridge.group_target("secret", "-10012345")
+
     def test_requires_assistant_heading(self):
         for text in ("", "hello", "===== 先生 =====\nNews"):
             with self.subTest(text=text), self.assertRaises(bridge.TelegramError):
@@ -33,7 +40,7 @@ class TelegramBridgeTests(unittest.TestCase):
             if method == "getMe":
                 return {"id": 99, "is_bot": True, "username": "ZhongJianLoveBot"}
             if method == "getChat":
-                return {"id": -10012345, "type": "supergroup", "title": "Westcott"}
+                return {"id": -10012345, "type": "supergroup", "title": "资讯快报"}
             if method == "sendMessage":
                 return {"message_id": 428, "chat": {"id": -10012345}}
             raise AssertionError(method)
@@ -67,7 +74,7 @@ class TelegramBridgeTests(unittest.TestCase):
     def test_discover_filters_private_chats(self):
         updates = [
             {"message": {"chat": {"id": 123, "type": "private"}}},
-            {"message": {"chat": {"id": -1007, "type": "supergroup", "title": "Group"}}},
+            {"message": {"chat": {"id": -1007, "type": "supergroup", "title": "资讯快报"}}},
         ]
         def fake_api(token, method, body=None):
             if method == "getMe":
