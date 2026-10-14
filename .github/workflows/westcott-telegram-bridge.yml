@@ -3,19 +3,33 @@ on:
   pull_request:
     paths:
       - "integrations/telegram/**"
+      - "news/approved/**"
       - ".github/workflows/westcott-telegram-bridge.yml"
   workflow_dispatch:
     inputs:
       command:
-        description: "verify, discover, smoke, or send"
+        description: "discover, verify, smoke, smoke_image, send, preview, or publish"
         type: choice
         options:
           - verify
           - discover
           - smoke
+          - smoke_image
           - send
+          - preview
+          - publish
         required: true
         default: verify
+      ledger_path:
+        description: "For preview/publish: committed reviewed ledger under news/approved/*.json"
+        type: string
+        required: false
+        default: ""
+      publish_confirmation:
+        description: "For publish only: type PUBLISH_REVIEWED_NEWS (sends image + text)"
+        type: string
+        required: false
+        default: ""
       approved_news_text:
         description: "Only for send; paste separately verified assistant news text"
         type: string
@@ -33,11 +47,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install image renderer for offline tests
+        run: python -m pip install 'Pillow>=11,<13'
       - name: Offline transport unit tests
         run: python -m unittest discover -s integrations/telegram -p "test_*.py"
 
   telegram:
-    if: github.event_name == 'workflow_dispatch'
+    if: github.event_name == 'workflow_dispatch' && inputs.command != 'preview' && inputs.command != 'publish'
     needs: tests
     runs-on: ubuntu-latest
     env:
@@ -53,5 +69,39 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install news image renderer
+        if: inputs.command == 'smoke_image'
+        run: python -m pip install 'Pillow>=11,<13'
       - name: Execute explicitly requested Telegram action
         run: python integrations/telegram/bridge.py "$COMMAND"
+
+  reviewed_news:
+    if: github.event_name == 'workflow_dispatch' && (inputs.command == 'preview' || inputs.command == 'publish')
+    needs: tests
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: westcott-telegram-reviewed-publish
+      cancel-in-progress: false
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TELEGRAM_EXPECTED_BOT_USERNAME: NuvexaCheckBot
+      TELEGRAM_EXPECTED_GROUP_TITLE: 资讯快报
+      TELEGRAM_MESSAGE_THREAD_ID: ${{ vars.TELEGRAM_MESSAGE_THREAD_ID }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
+      GITHUB_REF_NAME: ${{ github.ref_name }}
+      PUBLISH_CONFIRMATION: ${{ inputs.publish_confirmation }}
+      NEWS_LEDGER_PATH: ${{ inputs.ledger_path }}
+      COMMAND: ${{ inputs.command }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install 16:9 image renderer
+        run: python -m pip install 'Pillow>=11,<13'
+      - name: Review evidence and prepare matching news image
+        run: python integrations/telegram/reviewed_publish.py --mode "$COMMAND" --ledger "$NEWS_LEDGER_PATH"

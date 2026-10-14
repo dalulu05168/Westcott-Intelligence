@@ -3,6 +3,7 @@ import argparse
 import json
 import os
 import sys
+import uuid
 import urllib.error
 import urllib.request
 
@@ -114,6 +115,70 @@ def send_group_news(message, env=None):
             "message_ids": receipts, "parts": len(receipts)}
 
 
+def call_photo_api(token, chat_id, png_bytes, thread=""):
+    """Upload an actual PNG as Telegram multipart/form-data; do not log token/URL."""
+    if not isinstance(png_bytes, bytes) or not png_bytes.startswith(b"\x89PNG\r\n\x1a\n"):
+        raise TelegramError("Expected PNG image bytes.")
+    if len(png_bytes) > 9_000_000:
+        raise TelegramError("News image exceeds permitted upload size.")
+    boundary = "Westcott" + uuid.uuid4().hex
+    fields = {"chat_id": str(chat_id), "disable_notification": "false"}
+    if thread:
+        fields["message_thread_id"] = str(int(thread))
+    segments = []
+    for name, value in fields.items():
+        segments.append(("--" + boundary + "\r\n"
+                         + 'Content-Disposition: form-data; name="' + name + '"\r\n\r\n'
+                         + value + "\r\n").encode("utf-8"))
+    segments.append(("--" + boundary + "\r\n"
+                     + 'Content-Disposition: form-data; name="photo"; filename="westcott-news.png"\r\n'
+                     + "Content-Type: image/png\r\n\r\n").encode("ascii")
+                    + png_bytes + b"\r\n")
+    segments.append(("--" + boundary + "--\r\n").encode("ascii"))
+    req = urllib.request.Request(
+        "https://api.telegram.org/bot" + token + "/sendPhoto",
+        data=b"".join(segments),
+        headers={"Content-Type": "multipart/form-data; boundary=" + boundary},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=45) as response:
+            result = json.load(response)
+    except urllib.error.HTTPError as exc:
+        raise TelegramError("Telegram photo HTTP status " + str(exc.code)) from None
+    except (urllib.error.URLError, TimeoutError, OSError, ValueError):
+        raise TelegramError("Telegram photo request failed; delivery status unknown.") from None
+    if not isinstance(result, dict) or not result.get("ok"):
+        raise TelegramError("Telegram rejected photo upload.")
+    return result.get("result")
+
+
+def send_group_news_with_image(message, png_bytes, env=None):
+    """Photo then reviewed text. Never automatically retry if delivery is ambiguous."""
+    env = env if env is not None else os.environ
+    token = _required(env, "TELEGRAM_BOT_TOKEN")
+    chat_id = _required(env, "TELEGRAM_CHAT_ID")
+    verified = validated_message(message)
+    verify_bot_identity(token, env)
+    group = group_target(token, chat_id, env)
+    thread = env.get("TELEGRAM_MESSAGE_THREAD_ID", "").strip()
+    photo = call_photo_api(token, chat_id, png_bytes, thread)
+    if not isinstance(photo, dict) or not isinstance(photo.get("message_id"), int):
+        raise TelegramError("Telegram did not return photo message_id; delivery unknown.")
+    ids = []
+    for part in chunks(verified):
+        body = {"chat_id": chat_id, "text": part, "disable_notification": False}
+        if thread:
+            body["message_thread_id"] = int(thread)
+        sent = call_api(token, "sendMessage", body)
+        if not isinstance(sent, dict) or not isinstance(sent.get("message_id"), int):
+            raise TelegramError("Telegram did not return text message_id; delivery unknown.")
+        ids.append(sent["message_id"])
+    return {"group_id": group["id"], "group_title": group["title"],
+            "photo_message_id": photo["message_id"], "message_ids": ids,
+            "parts": len(ids)}
+
+
 def discover_groups(env=None):
     env = env if env is not None else os.environ
     token = _required(env, "TELEGRAM_BOT_TOKEN")
@@ -137,7 +202,7 @@ def discover_groups(env=None):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Westcott Telegram group delivery")
-    parser.add_argument("command", choices=["discover", "verify", "smoke", "send"])
+    parser.add_argument("command", choices=["discover", "verify", "smoke", "smoke_image", "send"])
     args = parser.parse_args(argv)
     try:
         if args.command == "discover":
@@ -150,6 +215,12 @@ def main(argv=None):
         elif args.command == "smoke":
             # An explicit test, not a news push.
             result = send_group_news("===== 资讯助理 =====\nELLERY WESTCOTT Telegram 群组连接测试。")
+        elif args.command == "smoke_image":
+            # Explicit manual graphic transport test; never real market news.
+            from image_background import render_background
+            result = send_group_news_with_image(
+                "===== 资讯助理 =====\nELLERY WESTCOTT Telegram 图文连接测试。",
+                render_background("global"))
         else:
             # Input supplied by an external human-verified/news-gated publisher.
             result = send_group_news(_required(os.environ, "WESTCOTT_APPROVED_NEWS_TEXT"))
