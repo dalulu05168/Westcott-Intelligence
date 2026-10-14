@@ -51,24 +51,6 @@ jobs:
         run: python -m pip install 'Pillow>=11,<13'
       - name: Offline transport unit tests
         run: python -m unittest discover -s integrations/telegram -p "test_*.py"
-      - name: Render non-factual news image style samples
-        run: |
-          python - <<'PY'
-          import sys
-          from pathlib import Path
-          sys.path.insert(0, "integrations/telegram")
-          from image_background import TOPICS, render_background
-          folder = Path("/tmp/westcott-image-samples")
-          folder.mkdir(parents=True, exist_ok=True)
-          for topic in TOPICS:
-              (folder / (topic + ".png")).write_bytes(render_background(topic))
-          PY
-      - name: Upload 16:9 image style samples
-        uses: actions/upload-artifact@v4
-        with:
-          name: westcott-image-style-samples
-          path: /tmp/westcott-image-samples/*.png
-          retention-days: 7
 
   telegram:
     if: github.event_name == 'workflow_dispatch' && inputs.command != 'preview' && inputs.command != 'publish'
@@ -123,12 +105,3 @@ jobs:
         run: python -m pip install 'Pillow>=11,<13'
       - name: Review evidence and prepare matching news image
         run: python integrations/telegram/reviewed_publish.py --mode "$COMMAND" --ledger "$NEWS_LEDGER_PATH"
-      - name: Upload review-only preview (never sends to Telegram)
-        if: inputs.command == 'preview'
-        uses: actions/upload-artifact@v4
-        with:
-          name: westcott-news-preview
-          path: |
-            /tmp/westcott-news-preview.png
-            /tmp/westcott-news-preview.txt
-          retention-days: 7
