@@ -38,7 +38,7 @@ class TelegramBridgeTests(unittest.TestCase):
         def fake_api(token, method, body=None):
             calls.append((token, method, body))
             if method == "getMe":
-                return {"id": 99, "is_bot": True, "username": "ZhongJianLoveBot"}
+                return {"id": 99, "is_bot": True, "username": "NuvexaCheckBot"}
             if method == "getChat":
                 return {"id": -10012345, "type": "supergroup", "title": "资讯快报"}
             if method == "sendMessage":
@@ -62,10 +62,10 @@ class TelegramBridgeTests(unittest.TestCase):
 
     def test_accepts_selected_bot_username(self):
         with patch.object(bridge, "call_api", return_value={
-            "id": 100, "is_bot": True, "username": "ZhongJianLoveBot"
+            "id": 100, "is_bot": True, "username": "NuvexaCheckBot"
         }):
             account = bridge.verify_bot_identity("secret")
-        self.assertEqual(account["username"], "ZhongJianLoveBot")
+        self.assertEqual(account["username"], "NuvexaCheckBot")
 
     def test_missing_credentials(self):
         with self.assertRaises(bridge.TelegramError):
@@ -78,7 +78,7 @@ class TelegramBridgeTests(unittest.TestCase):
         ]
         def fake_api(token, method, body=None):
             if method == "getMe":
-                return {"id": 99, "is_bot": True, "username": "ZhongJianLoveBot"}
+                return {"id": 99, "is_bot": True, "username": "NuvexaCheckBot"}
             if method == "getUpdates":
                 return updates
             raise AssertionError(method)
