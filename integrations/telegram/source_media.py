@@ -169,15 +169,45 @@ def inspect_article(article_url, fetcher=None):
     markup = (fetcher or fetch_original_article)(article_url)
     return inspect_markup(article_url, markup)
 
+def inspect_news_url(value, fetcher=None):
+    """Accept either publisher article URLs or direct publisher-hosted image URLs.
+
+    A direct image URL is recognized as such without attempting HTML parsing.
+    It is NOT proof the image belongs to any particular news report, that
+    the bytes are retrievable, or that it can legally be republished.
+    """
+    value = public_https(value)
+    path = urllib.parse.urlsplit(value).path.lower()
+    extensions = (".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif")
+    if path.endswith(extensions):
+        return {
+            "status": "IMAGE_URL_RECOGNIZED",
+            "input_type": "direct_image_url",
+            "image_candidate_url": value,
+            "article_url": None,
+            "image_url_syntax_checked": True,
+            "image_bytes_checked": False,
+            "matches_news_article": False,
+            "verified_for_reuse": False,
+            "inspection_note": (
+                "This is an image URL, not a news article. URL form recognized; "
+                "no news-to-image match or reproduction permission was verified."
+            ),
+        }
+    return {"status": "ARTICLE_METADATA_INSPECTED",
+            "input_type": "article_url",
+            **inspect_article(value, fetcher=fetcher)}
+
+
 def main():
     import argparse
     import json
-    parser = argparse.ArgumentParser(description="Read ONLY publisher metadata for one original news link")
+    parser = argparse.ArgumentParser(description="Inspect publisher article metadata or recognize a direct news image URL")
     parser.add_argument("--article-url", required=True)
     args = parser.parse_args()
     try:
-        metadata = inspect_article(args.article_url)
-        print(json.dumps({"status": "INSPECTED", **metadata}, ensure_ascii=False))
+        metadata = inspect_news_url(args.article_url)
+        print(json.dumps(metadata, ensure_ascii=False))
         return 0
     except SourceMediaError as exc:
         print(json.dumps({"status": "UNAVAILABLE", "reason": str(exc)}, ensure_ascii=False))

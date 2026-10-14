@@ -63,6 +63,29 @@ class OriginalSourceImageTests(unittest.TestCase):
             with self.assertRaises(media.SourceMediaError):
                 media.public_dns("news.example.org")
 
+    def test_direct_reuters_jpg_url_recognized_without_fetch(self):
+        url = ("https://www.reuters.com/resizer/v2/F7CJVSFRJFN4ZL7CPAUE5NW2DE.jpg"
+               "?auth=sample&width=1920&quality=80")
+        def forbidden_fetch(_):
+            raise AssertionError("The direct photo must not be parsed as an article")
+        found = media.inspect_news_url(url, fetcher=forbidden_fetch)
+        self.assertEqual(found["status"], "IMAGE_URL_RECOGNIZED")
+        self.assertEqual(found["input_type"], "direct_image_url")
+        self.assertEqual(found["image_candidate_url"], url)
+        self.assertFalse(found["matches_news_article"])
+        self.assertFalse(found["verified_for_reuse"])
+
+    def test_article_url_still_inspects_html(self):
+        url = "https://news.example.org/story"
+        found = media.inspect_news_url(
+            url, fetcher=lambda _: '<head><meta property="og:image" content="/one.jpg"></head>')
+        self.assertEqual(found["status"], "ARTICLE_METADATA_INSPECTED")
+        self.assertEqual(found["image_candidate_url"], "https://news.example.org/one.jpg")
+
+    def test_does_not_trust_invalid_photo_url(self):
+        with self.assertRaises(media.SourceMediaError):
+            media.inspect_news_url("http://127.0.0.1/secret.jpg")
+
     def test_inspection_uses_injected_fetcher_without_network(self):
         fake = lambda url: '<head><meta property="og:image" content="https://cdn.example.org/photo.webp"></head>'
         result = media.inspect_article("https://news.example.org/story", fetcher=fake)

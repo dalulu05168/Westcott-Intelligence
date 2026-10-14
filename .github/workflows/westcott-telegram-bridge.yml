@@ -21,7 +21,7 @@ on:
         required: true
         default: verify
       article_url:
-        description: "For inspect only: the exact original publisher HTTPS news article URL"
+        description: "For inspect: news ARTICLE or publisher IMAGE HTTPS URL (JPG/PNG/WebP)"
         type: string
         required: false
         default: ""
@@ -117,5 +117,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Inspect only publisher title, canonical and source image metadata
+      - name: Identify article metadata or recognize publisher image URL
         run: python integrations/telegram/source_media.py --article-url "$ORIGINAL_NEWS_ARTICLE_URL"

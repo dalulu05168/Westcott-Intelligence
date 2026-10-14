@@ -36,7 +36,9 @@
 
 ## 自动识别原新闻网站的配图（不会自动发布）
 
-可以直接在 GitHub Actions 的 `Westcott Telegram Bridge` 运行 `command=inspect`，在 `article_url` 粘贴原新闻官网的 HTTPS 文章链接。系统仅读取该页的 Open Graph `og:image` / `og:image:secure_url` / `twitter:image`、文章标题和 canonical 地址，并在执行日志输出原站配图候选链接。不会下载图片、裁剪、生成图片或向 Telegram 发送消息。
+可以直接在 GitHub Actions 的 `Westcott Telegram Bridge` 运行 `command=inspect`，在 `article_url` 粘贴官网 HTTPS 新闻文章地址，或者新闻官网的 JPG/PNG/WebP 图片地址。**不需要再把图片地址转换成文章地址才能执行检测。**
+
+如果输入原始图片 URL（例如 Reuters `/resizer/v2/...jpg`），系统返回 `IMAGE_URL_RECOGNIZED`，不再错误地尝试按网页 HTML 解析；但它只确认链接格式是图片 URL，并不能据此证明该照片属于哪一篇新闻、可以打开或允许转载。真实图文发布仍必须提供经过审查的文章与图片匹配证据。系统仅读取该页的 Open Graph `og:image` / `og:image:secure_url` / `twitter:image`、文章标题和 canonical 地址，并在执行日志输出原站配图候选链接。不会下载图片、裁剪、生成图片或向 Telegram 发送消息。
 
 重要：网页的分享配图只能算“原站宣称的候选图”，不自动证明图片与新闻事件准确对应，也不代表允许在 Telegram 转发原图。仍需人工确认图片及相关许可。遇到 403、重定向、反爬限制、网页没有元信息或不支持访问时，返回无法识别，不擅自使用替代图片。
 
