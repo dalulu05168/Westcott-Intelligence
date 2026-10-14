@@ -1,0 +1,82 @@
+{
+  "record_type": "westcott_radar_primary_source_evidence",
+  "event_id": "2026-10-14-MS-Q3-2026-RESULTS",
+  "observed_run_window": "2026-10-14 14:55 Europe/Bucharest (exact fetch timestamp not provided)",
+  "source": {
+    "origin_id": "MORGAN_STANLEY_IR",
+    "original_url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/3q2026.pdf",
+    "access_status": "BODY_READ",
+    "publication_date": "2026-10-14",
+    "publication_time": "UNKNOWN (original PDF states date only)",
+    "scheduled_release_time": "approximately 2026-10-14 07:30 America/New_York / 14:30 Europe/Bucharest",
+    "scheduled_time_source": "https://www.morganstanley.com/about-us-ir/morgan-stanley-third-quarter-2026-investor-conference-call"
+  },
+  "instrument": {
+    "symbol": "NYSE:MS",
+    "currency": "USD",
+    "market_phase": "US regular equity session not yet open at observed window; no live equity price asserted",
+    "quote_as_of": null,
+    "stock_price": null
+  },
+  "claims": [
+    {
+      "claim_id": "MS-20261014-Q3-REVENUE",
+      "status": "PRIMARY_DOCUMENT_CONFIRMED",
+      "value": 20338,
+      "unit": "USD million",
+      "basis": "Q3 2026",
+      "comparison": {
+        "value": 18224,
+        "unit": "USD million",
+        "basis": "Q3 2025"
+      },
+      "evidence_locator": "Q3 earnings release PDF page 1, Financial Summary, Net revenues"
+    },
+    {
+      "claim_id": "MS-20261014-Q3-EPS",
+      "status": "PRIMARY_DOCUMENT_CONFIRMED",
+      "value": 3.03,
+      "unit": "USD per diluted share",
+      "basis": "Q3 2026",
+      "comparison": {
+        "value": 2.8,
+        "unit": "USD per diluted share",
+        "basis": "Q3 2025"
+      },
+      "evidence_locator": "Q3 earnings release PDF page 1, Earnings per diluted share"
+    },
+    {
+      "claim_id": "MS-20261014-Q3-EQUITIES",
+      "status": "PRIMARY_DOCUMENT_CONFIRMED",
+      "value": 5799,
+      "unit": "USD million",
+      "basis": "Q3 2026 equity net revenues",
+      "comparison": {
+        "value": 4116,
+        "unit": "USD million",
+        "basis": "Q3 2025 equity net revenues"
+      },
+      "evidence_locator": "Q3 earnings release PDF pages 1-2, Equity net revenues up 41%"
+    },
+    {
+      "claim_id": "MS-20261014-Q3-FIXED-INCOME",
+      "status": "PRIMARY_DOCUMENT_CONFIRMED",
+      "value": 2011,
+      "unit": "USD million",
+      "basis": "Q3 2026 fixed income net revenues",
+      "comparison": {
+        "value": 2169,
+        "unit": "USD million",
+        "basis": "Q3 2025 fixed income net revenues"
+      },
+      "evidence_locator": "Q3 earnings release PDF pages 1-2, Fixed Income net revenues down 7%"
+    }
+  ],
+  "pending": {
+    "cross_task_dedup": "UNKNOWN: other ChatGPT scheduled task outputs not available",
+    "exact_release_minute": "UNKNOWN",
+    "market_price_response": "NOT_ASSERTED",
+    "gate_script_status": "NOT_RUN; source PDF only identifies calendar date, not exact published minute"
+  },
+  "destination": "ChatGPT scheduled task conversation only; no Telegram or WhatsApp"
+}
