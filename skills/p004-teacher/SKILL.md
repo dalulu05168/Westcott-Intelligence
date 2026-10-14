@@ -29,3 +29,8 @@ description: 先生 Jonathan Richard Hayes，负责晚间专业财经教育技�
 ## v1.5.1 人物资料加载
 
 遇到人物资料不可访问、语气草案未批准或缺少历史而取消全部候选时，读取`../p004-chat-suite/references/runtime-loading-v1.5.1.md`。任务内置快照在`../p004-chat-suite/references/runtime-context-v1.5.1.txt`；据实际读取方式记录来源，缺历史不编往事，身份已确认则可创作待选台词。N01仍不生成成员对白。
+
+
+## v1.6 每日内容与记忆执行优先级（2026-10-14）
+
+2026-10-15起每次作稿必须先读取 [最新每日运营门禁](../p004-chat-suite/references/daily-editorial-and-memory-v1.6.md)，其关于当前仅01—40号允许出场、每日日间BVB/美股各一次且上午下午由用户指定、新闻严格筛选、读取对应真实已采用人物记忆、禁止机械轮流发言及核验后才能宣称推送的要求，**覆盖本文件任何矛盾的旧说明**。 源码文件更新不表示Scheduled任务、Telegram/WhatsApp或交易自动执行。
