@@ -1,0 +1,56 @@
+{
+  "schema_version": "2026-10-14.1",
+  "purpose": "仅用于未来虚构群聊的人际连续性规划；不得把未来剧情建议冒充已采用历史",
+  "current_allowed_member_range": "01-40",
+  "created_after_user_confirmation": "2026-10-14",
+  "adoption_rule": "具体熟人关系、关系变化与共同往事只有出现在用户正式采用的剧情里才可记为已形成；普通共同出场不等于熟识",
+  "seeds": [
+    {
+      "member_ids": [
+        "10",
+        "15"
+      ],
+      "type": "recorded_direct_exchange",
+      "status": "ONE_DOCUMENTED_EXCHANGE_NOT_FIXED_RELATIONSHIP",
+      "source_date": "2026-10-14",
+      "evidence_message_ids": [
+        "20261014-M108",
+        "20261014-M109"
+      ],
+      "source_doc": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM/edit?tab=t.0",
+      "observed": "15男质疑基础课程内容，10女反问；14男随后表态维护认真学习的群氛围",
+      "candidate_direction": "以后涉及课程深浅、说话态度时可存在谨慎的观点延续；允许缓和、沉默或改观，不强迫继续争吵",
+      "no_unverified_familiarity": true
+    },
+    {
+      "member_ids": [
+        "09",
+        "35"
+      ],
+      "type": "candidate_pairing_only",
+      "status": "FUTURE_DEVELOPMENT_NOT_ADOPTED_HISTORY",
+      "evidence_message_ids": [],
+      "candidate_direction": "可能发展为互相调侃、轻松交换对行情和工作成本看法的群友；先让他们有真实的初次直接互动再谈熟悉",
+      "no_unverified_familiarity": true
+    },
+    {
+      "member_ids": [
+        "21",
+        "26"
+      ],
+      "type": "candidate_pairing_only",
+      "status": "FUTURE_DEVELOPMENT_NOT_ADOPTED_HISTORY",
+      "evidence_message_ids": [],
+      "candidate_direction": "可先从银行信贷、房地产融资和企业成本话题建立反复交流，逐步形成更熟悉的讨论关系；初期不写成工作伙伴或旧相识",
+      "no_unverified_familiarity": true
+    }
+  ],
+  "progress_policy": [
+    "当天选角之前读取相关双方最新个人记忆和近期有效剧情",
+    "有互动时记录双方实际说了什么以及回应顺序，不把仅有同日出场算成直接互动",
+    "出场可有间隔，关系不因隔一天没说话而自动升级或消失",
+    "一段互动可改变印象但不能凭空产生深厚友谊、私下联系或投资合作",
+    "关系必须多样、可变化、有分歧但不能强制冲突或一律和解",
+    "正式新增证据须有当天Google Doc对应稳定消息ID并在用户确认采用后入库"
+  ]
+}
