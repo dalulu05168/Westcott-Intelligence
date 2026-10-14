@@ -19,7 +19,7 @@ from image_background import render_background, select_topic
 from bridge import send_group_news_with_image
 
 EVENT_RE = re.compile(r"^[a-z0-9][a-z0-9_-]{5,71}$")
-FILE_RE = re.compile(r"^news/approved/[a-z0-9][a-z0-9_.-]{1,100}\\.json$")
+FILE_RE = re.compile(r"^news/approved/[a-z0-9][a-z0-9_.-]{1,100}\.json$")
 CONFIRM = "PUBLISH_REVIEWED_NEWS"
 
 
@@ -59,8 +59,8 @@ def prepare(ledger, filename, now=None):
                 urls.append(url)
     if not urls or len(urls) > 12:
         raise PublicationError("Source URLs missing or excessive.")
-    text = "===== 资讯助理 =====\\n\\n" + "\\n\\n".join(facts)
-    text += "\\n\\n原始来源：\\n" + "\\n".join(urls)
+    text = "===== 资讯助理 =====\n\n" + "\n\n".join(facts)
+    text += "\n\n原始来源：\n" + "\n".join(urls)
     if len(text.encode("utf-8")) > 14000:
         raise PublicationError("News text is too long for concise Telegram release.")
     topic = select_topic(facts)
@@ -81,7 +81,7 @@ def github_write(path, record, token, repo, sha=None):
     payload = {
         "message": "Record approved Telegram publication " + record["event_id"],
         "content": base64.b64encode(
-            (json.dumps(record, ensure_ascii=False, indent=2) + "\\n").encode("utf-8")
+            (json.dumps(record, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
         ).decode("ascii"),
         "branch": "main",
     }
