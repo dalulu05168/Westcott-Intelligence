@@ -179,6 +179,49 @@ def send_group_news_with_image(message, png_bytes, env=None):
             "parts": len(ids)}
 
 
+def send_group_news_from_official_article(message, article_url, image_url=None, env=None):
+    """Send reviewed article photo by ORIGINAL URL, or text with article link preview.
+
+    Does not create, edit, download or rehost images. The caller must verify
+    source relevance and permission before supplying an image_url.
+    """
+    env = env if env is not None else os.environ
+    token = _required(env, "TELEGRAM_BOT_TOKEN")
+    chat_id = _required(env, "TELEGRAM_CHAT_ID")
+    verified = validated_message(message)
+    verify_bot_identity(token, env)
+    group = group_target(token, chat_id, env)
+    thread = env.get("TELEGRAM_MESSAGE_THREAD_ID", "").strip()
+    photo_id = None
+    if image_url:
+        request = {"chat_id": chat_id, "photo": image_url, "disable_notification": False}
+        if thread:
+            request["message_thread_id"] = int(thread)
+        photo = call_api(token, "sendPhoto", request)
+        if not isinstance(photo, dict) or not isinstance(photo.get("message_id"), int):
+            raise TelegramError("Photo delivery status unknown: no Telegram message_id.")
+        photo_id = photo["message_id"]
+    ids = []
+    for i, part in enumerate(chunks(verified)):
+        request = {"chat_id": chat_id, "text": part, "disable_notification": False}
+        if thread:
+            request["message_thread_id"] = int(thread)
+        if not image_url and i == 0:
+            # Telegram normally renders the site's original og:image preview.
+            # Never claim that the publisher exposes or Telegram shows one.
+            request["link_preview_options"] = {
+                "url": article_url, "is_disabled": False, "prefer_large_media": True
+            }
+        sent = call_api(token, "sendMessage", request)
+        if not isinstance(sent, dict) or not isinstance(sent.get("message_id"), int):
+            raise TelegramError("Text delivery status unknown: no Telegram message_id.")
+        ids.append(sent["message_id"])
+    return {"group_id": group["id"], "group_title": group["title"],
+            "photo_message_id": photo_id, "message_ids": ids,
+            "image_delivery": "source_photo" if image_url else "article_link_preview",
+            "parts": len(ids)}
+
+
 def discover_groups(env=None):
     env = env if env is not None else os.environ
     token = _required(env, "TELEGRAM_BOT_TOKEN")
@@ -202,7 +245,7 @@ def discover_groups(env=None):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Westcott Telegram group delivery")
-    parser.add_argument("command", choices=["discover", "verify", "smoke", "smoke_image", "send"])
+    parser.add_argument("command", choices=["discover", "verify", "smoke", "send"])
     args = parser.parse_args(argv)
     try:
         if args.command == "discover":
@@ -215,12 +258,6 @@ def main(argv=None):
         elif args.command == "smoke":
             # An explicit test, not a news push.
             result = send_group_news("===== 资讯助理 =====\nELLERY WESTCOTT Telegram 群组连接测试。")
-        elif args.command == "smoke_image":
-            # Explicit manual graphic transport test; never real market news.
-            from image_background import render_background
-            result = send_group_news_with_image(
-                "===== 资讯助理 =====\nELLERY WESTCOTT Telegram 图文连接测试。",
-                render_background("global"))
         else:
             # Input supplied by an external human-verified/news-gated publisher.
             result = send_group_news(_required(os.environ, "WESTCOTT_APPROVED_NEWS_TEXT"))

@@ -35,10 +35,12 @@
 - 对于 HTTP 或网络故障，**不会自动重试**以免因请求已成功但响应丢失而重复推送。发布器应有持久化 claim_id / event_id / published_at / quote_as_of 与已发送 message_id，用于跨时段审计和去重；此轻量桥接不提供持久化调度与审计库。
 - Bot 与目标群的连通性已通过 GitHub Actions 的 `smoke` 验证，但不能据此声称定时新闻自动转发已经开启。
 
-## 审核后 16:9 新闻图片与 Telegram 图文
+## 新闻官网配图与 Telegram 发布
 
-- 新增 `preview`：读取 `news/approved/<file>.json`，先调用 `scripts/news_release_gate.py` 做审核账本的一致性校验，然后生成浅蓝白、无文字、1600×900 的匹配主题图片和可复制中文资讯助理稿，在 `news/previews/` 提交预览 PNG 与文字（日志返回链接）供人工检查；**预览不会向 Telegram 发送消息**。
-- 新增 `publish`：仅在同一正式证据账本审核通过、在 GitHub Actions 手动输入确认词 `PUBLISH_REVIEWED_NEWS` 后，先写入不可重复的证据指纹记录，再发送图片与文字，最后记录 `photo_message_id`、文字 `message_ids`、`claim_ids` 及来源链接。
-- 新闻背景为确定性生成的非新闻照片风格主题线条（能源/银行/科技/宏观/商品/BVB），不在图片中添加任何文字、数字或无依据的走势；**非 AI 图片模型或现场真实照片**。
-- 具体操作与账本格式请见 [news/approved/README.md](../../news/approved/README.md)。
-- ChatGPT Scheduled 五项任务继续暂停，尚未与 GitHub Telegram 发布器自动对接；不擅自启动、也不把旧新闻当新进展。
+- **停用并删除旧的 16:9 浅蓝白插画生成器**，不再生成、裁剪、添加新闻背景图，也不使用 AI 自动搜图。
+- `preview`：仅核对 `news/approved/<file>.json` 审核账本，并把已核实的资讯助理文字保存到 `news/previews/`。执行结果返回原文页面链接及（确有授权时）原新闻图片链接，不会复制、下载、生成任何图片。
+- `publish`：只能手动触发、确认 `PUBLISH_REVIEWED_NEWS` 后发布。如果图片确实属于该新闻且已确认允许转载，调用 Telegram `sendPhoto` 直接使用官网图片 URL；其他情况则发送中文稿与**原文链接预览**，由 Telegram 展示该网站公开的分享缩略图（不保证一定展示）。
+- 所用 `article_url` 必须是当前已审核 claim 的真实来源，图片 URL 和可转载依据需人工核对。独立授权标记不可代替实际版权核查；审核不通过则不上传图片。
+- 对同一组已核实事实及来源生成防重复指纹，发送前写审计占位；发送成功写入群组消息编号，状态不确定时不会自动重发。
+- 使用指南及数据字段见 [news/approved/README.md](../../news/approved/README.md)。旧的 `smoke_image` 已停止支持，因为不再生成示意图。
+- 原有 ChatGPT Scheduled 五项定时任务继续暂停，没有自动接入此 GitHub 发布流程。
