@@ -4,11 +4,26 @@
   "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
   "fictional_education_only": true,
   "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
-  "observed_in_submitted_story": [],
+  "observed_in_submitted_story": [
+    {
+      "message_id": "20261014-M108",
+      "source_date": "2026-10-14",
+      "node": "EVENING",
+      "kind": "message",
+      "text": "像这些入门道理，为什么要说那么多😂 不会还有人不知道这种基础东西吧？",
+      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM/edit?tab=t.0",
+      "source_doc_revision": "AHj4eMRS4SLSXvqgAdUMG8LNztwDxKlskKeopED5zzPE-TDEq7BTY0vWsY_2ih_Hk1fv1R1BUtGzlhNUy9YSFjvECpUbF90ntTVl--YwVww",
+      "source_block_number": 179,
+      "warnings": [],
+      "fictional_only": true,
+      "no_real_transaction_verified": true
+    }
+  ],
   "reaction_count": 0,
   "no_unrecorded_history": true,
-  "message_count": 0,
-  "latest_source_date": "2026-10-13",
+  "message_count": 1,
+  "latest_source_date": "2026-10-14",
   "no_real_trading_inferred": true,
   "review_only_2026_10_13": [
     {
