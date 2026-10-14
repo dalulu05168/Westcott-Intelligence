@@ -39,6 +39,21 @@ def call_api(token, method, body=None):
     return result.get("result")
 
 
+def verify_bot_identity(token, env=None):
+    """Fail closed unless the token belongs to the user-selected Bot."""
+    env = env if env is not None else os.environ
+    expected = env.get("TELEGRAM_EXPECTED_BOT_USERNAME", "ZhongJianLoveBot").strip().lstrip("@")
+    if not expected:
+        raise TelegramError("Missing TELEGRAM_EXPECTED_BOT_USERNAME.")
+    account = call_api(token, "getMe")
+    if not isinstance(account, dict) or not account.get("is_bot"):
+        raise TelegramError("Telegram token does not identify a bot.")
+    actual = account.get("username", "")
+    if actual.casefold() != expected.casefold():
+        raise TelegramError("Bot username mismatch; refusing group access or delivery.")
+    return {"id": account.get("id"), "username": actual}
+
+
 def group_target(token, chat_id):
     chat = call_api(token, "getChat", {"chat_id": chat_id})
     if not isinstance(chat, dict) or chat.get("type") not in ("group", "supergroup"):
@@ -75,6 +90,7 @@ def send_group_news(message, env=None):
     env = env if env is not None else os.environ
     token = _required(env, "TELEGRAM_BOT_TOKEN")
     chat_id = _required(env, "TELEGRAM_CHAT_ID")
+    verify_bot_identity(token, env)
     group = group_target(token, chat_id)
     text = validated_message(message)
     thread = env.get("TELEGRAM_MESSAGE_THREAD_ID", "").strip()
@@ -94,6 +110,7 @@ def send_group_news(message, env=None):
 def discover_groups(env=None):
     env = env if env is not None else os.environ
     token = _required(env, "TELEGRAM_BOT_TOKEN")
+    verify_bot_identity(token, env)
     updates = call_api(token, "getUpdates", {"limit": 100, "timeout": 0})
     groups = {}
     for update in updates or []:
@@ -118,8 +135,10 @@ def main(argv=None):
         if args.command == "discover":
             result = {"groups": discover_groups()}
         elif args.command == "verify":
-            result = group_target(_required(os.environ, "TELEGRAM_BOT_TOKEN"),
-                                  _required(os.environ, "TELEGRAM_CHAT_ID"))
+            token = _required(os.environ, "TELEGRAM_BOT_TOKEN")
+            identity = verify_bot_identity(token)
+            group = group_target(token, _required(os.environ, "TELEGRAM_CHAT_ID"))
+            result = {"bot": identity, "group": group}
         elif args.command == "smoke":
             # An explicit test, not a news push.
             result = send_group_news("===== 资讯助理 =====\nELLERY WESTCOTT Telegram 群组连接测试。")
