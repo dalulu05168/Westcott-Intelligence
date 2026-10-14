@@ -113,7 +113,8 @@ class OriginalArticleTests(unittest.TestCase):
         env = {"GITHUB_TOKEN": "secret", "GITHUB_REPOSITORY": "owner/repo", "GITHUB_REF_NAME": "main"}
         with patch.object(pub, "github_store_asset",
                           return_value="https://github.com/owner/repo/blob/main/news/previews/text.txt") as write:
-            preview = pub.save_preview(prepared, env)
+            with patch.object(pub, "inspect_article", side_effect=pub.SourceMediaError("blocked")):
+                preview = pub.save_preview(prepared, env)
         self.assertEqual(write.call_count, 1)
         self.assertTrue(write.call_args.args[0].endswith(".txt"))
         self.assertEqual(preview["original_image_url"], None)
@@ -144,12 +145,47 @@ class OriginalArticleTests(unittest.TestCase):
              "message_ids": [42], "image_delivery": "source_photo"}
         with patch.object(pub, "reserve",
                           return_value=("audit/id.json", {"event_id": p["event_id"]}, "sha")):
-            with patch.object(pub, "send_group_news_from_official_article", return_value=r) as send:
-                with patch.object(pub, "github_write") as audit:
-                    receipt = pub.publish(p, env)
+            with patch.object(pub, "inspect_article", return_value={
+                "image_candidate_url": "https://images.example.org/story-12.jpg",
+                "canonical_matches_article": True,
+            }):
+                with patch.object(pub, "send_group_news_from_official_article", return_value=r) as send:
+                    with patch.object(pub, "github_write") as audit:
+                        receipt = pub.publish(p, env)
         self.assertEqual(receipt["photo_message_id"], 41)
         self.assertEqual(audit.call_args.args[1]["image_delivery"], "source_photo")
         self.assertEqual(send.call_args.args[2], "https://images.example.org/story-12.jpg")
+
+    def test_preview_discovers_publisher_photo_but_cannot_claim_reuse(self):
+        prepared = pub.prepare(self.ledger(), "news/approved/reviewed.json")
+        fake = {"article_url": "https://news.example.org/article-12",
+                "image_candidate_url": "https://images.example.org/original.jpg",
+                "title": "Official report", "verified_for_reuse": False}
+        with patch.object(pub, "inspect_article", return_value=fake):
+            preview = pub.inspect_media_for_preview(prepared)
+        self.assertEqual(preview["image_candidate_url"], "https://images.example.org/original.jpg")
+        self.assertFalse(preview["verified_for_reuse"])
+
+    def test_licensed_image_blocks_before_reservation_if_article_mismatch(self):
+        ledger = self.ledger()
+        ledger["original_image"] = self.approved_photo()
+        prepared = pub.prepare(ledger, "news/approved/reviewed.json")
+        with patch.object(pub, "inspect_article", return_value={
+            "image_candidate_url": "https://images.example.org/unrelated.jpg",
+            "canonical_matches_article": True
+        }), patch.object(pub, "reserve") as reserve:
+            with self.assertRaises(pub.PublicationError):
+                pub.publish(prepared, {"PUBLISH_CONFIRMATION": pub.CONFIRM})
+            reserve.assert_not_called()
+
+    def test_licensed_image_unreachable_blocks_before_reservation(self):
+        ledger = self.ledger()
+        ledger["original_image"] = self.approved_photo()
+        prepared = pub.prepare(ledger, "news/approved/reviewed.json")
+        with patch.object(pub, "inspect_article", side_effect=pub.SourceMediaError("403")), patch.object(pub, "reserve") as reserve:
+            with self.assertRaises(pub.PublicationError):
+                pub.publish(prepared, {"PUBLISH_CONFIRMATION": pub.CONFIRM})
+            reserve.assert_not_called()
 
     def test_telegram_original_photo_and_text_send(self):
         calls = []
