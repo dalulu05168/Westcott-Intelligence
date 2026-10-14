@@ -8,12 +8,13 @@ on:
   workflow_dispatch:
     inputs:
       command:
-        description: "verify, discover, smoke, or send"
+        description: "discover, verify, smoke, smoke_image, send, preview, or publish"
         type: choice
         options:
           - verify
           - discover
           - smoke
+          - smoke_image
           - send
           - preview
           - publish
@@ -50,6 +51,24 @@ jobs:
         run: python -m pip install 'Pillow>=11,<13'
       - name: Offline transport unit tests
         run: python -m unittest discover -s integrations/telegram -p "test_*.py"
+      - name: Render non-factual news image style samples
+        run: |
+          python - <<'PY'
+          import sys
+          from pathlib import Path
+          sys.path.insert(0, "integrations/telegram")
+          from image_background import TOPICS, render_background
+          folder = Path("/tmp/westcott-image-samples")
+          folder.mkdir(parents=True, exist_ok=True)
+          for topic in TOPICS:
+              (folder / (topic + ".png")).write_bytes(render_background(topic))
+          PY
+      - name: Upload 16:9 image style samples
+        uses: actions/upload-artifact@v4
+        with:
+          name: westcott-image-style-samples
+          path: /tmp/westcott-image-samples/*.png
+          retention-days: 7
 
   telegram:
     if: github.event_name == 'workflow_dispatch' && inputs.command != 'preview' && inputs.command != 'publish'
@@ -68,6 +87,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install news image renderer
+        if: inputs.command == 'smoke_image'
+        run: python -m pip install 'Pillow>=11,<13'
       - name: Execute explicitly requested Telegram action
         run: python integrations/telegram/bridge.py "$COMMAND"
 
