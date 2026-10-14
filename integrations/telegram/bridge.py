@@ -54,11 +54,18 @@ def verify_bot_identity(token, env=None):
     return {"id": account.get("id"), "username": actual}
 
 
-def group_target(token, chat_id):
+def group_target(token, chat_id, env=None):
+    """Verify Telegram's actual destination type and title before sending."""
+    env = env if env is not None else os.environ
+    expected_title = env.get("TELEGRAM_EXPECTED_GROUP_TITLE", "资讯快报").strip()
+    if not expected_title:
+        raise TelegramError("Missing TELEGRAM_EXPECTED_GROUP_TITLE.")
     chat = call_api(token, "getChat", {"chat_id": chat_id})
     if not isinstance(chat, dict) or chat.get("type") not in ("group", "supergroup"):
         raise TelegramError("Configured TELEGRAM_CHAT_ID is not a group/supergroup.")
-    return {"id": chat.get("id"), "title": chat.get("title", ""), "type": chat["type"]}
+    if chat.get("title", "").strip() != expected_title:
+        raise TelegramError("Group title mismatch; refusing delivery to unintended chat.")
+    return {"id": chat.get("id"), "title": chat["title"], "type": chat["type"]}
 
 
 def chunks(text, max_units=3900):
@@ -91,7 +98,7 @@ def send_group_news(message, env=None):
     token = _required(env, "TELEGRAM_BOT_TOKEN")
     chat_id = _required(env, "TELEGRAM_CHAT_ID")
     verify_bot_identity(token, env)
-    group = group_target(token, chat_id)
+    group = group_target(token, chat_id, env)
     text = validated_message(message)
     thread = env.get("TELEGRAM_MESSAGE_THREAD_ID", "").strip()
     receipts = []
@@ -119,7 +126,8 @@ def discover_groups(env=None):
         obj = (update.get("message") or update.get("my_chat_member")
                or update.get("channel_post") or {})
         chat = obj.get("chat", {})
-        if chat.get("type") in ("group", "supergroup"):
+        if (chat.get("type") in ("group", "supergroup")
+                and chat.get("title", "").strip() == env.get("TELEGRAM_EXPECTED_GROUP_TITLE", "资讯快报").strip()):
             groups[str(chat.get("id"))] = {
                 "chat_id": chat["id"], "title": chat.get("title", ""),
                 "type": chat["type"]
