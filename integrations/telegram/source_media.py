@@ -168,3 +168,21 @@ def inspect_markup(article_url, markup):
 def inspect_article(article_url, fetcher=None):
     markup = (fetcher or fetch_original_article)(article_url)
     return inspect_markup(article_url, markup)
+
+def main():
+    import argparse
+    import json
+    parser = argparse.ArgumentParser(description="Read ONLY publisher metadata for one original news link")
+    parser.add_argument("--article-url", required=True)
+    args = parser.parse_args()
+    try:
+        metadata = inspect_article(args.article_url)
+        print(json.dumps({"status": "INSPECTED", **metadata}, ensure_ascii=False))
+        return 0
+    except SourceMediaError as exc:
+        print(json.dumps({"status": "UNAVAILABLE", "reason": str(exc)}, ensure_ascii=False))
+        return 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
