@@ -55,7 +55,7 @@
 打开 [Westcott Telegram Bridge](https://github.com/dalulu05168/Westcott-Intelligence/actions/workflows/westcott-telegram-bridge.yml)：
 
 1. 选择 main 与 `command=preview`，填写 `ledger_path=news/approved/<filename>.json`，运行。
-2. 在该运行的 **Artifacts** 下载 `westcott-news-preview`，其中有 `westcott-news-preview.png` 与文本草稿；图片固定 **1600×900 (16:9)**，浅蓝白渐变、无文字、按审核事实中的能源/银行/BVB/科技/宏观/商品关键词绘制非事实性线条元素。多个主题或无法确认时退回中性全球元素，**不捏造K线**。
+2. 从执行日志的 `image_url` 和 `text_url` 打开已保存到仓库 `news/previews/` 的图片与新闻稿。该预览不占用 GitHub Actions Artifact 配额；图片固定 **1600×900 (16:9)**，浅蓝白渐变、无文字、按审核事实中的能源/银行/BVB/科技/宏观/商品关键词绘制非事实性线条元素。多个主题或无法确认时退回中性全球元素，**不捏造K线**。
 3. 确认文图正确后，手动选择 `command=publish`，使用同一 `ledger_path`，并在 `publish_confirmation` 输入 `PUBLISH_REVIEWED_NEWS`。
 4. 发布程序先在 `audit/telegram-delivery/<fingerprint>.json` 预留不可重复的事实指纹；再向 **@NuvexaCheckBot / 资讯快报** 发送图片与新闻文字，成功后写入 photo_message_id、message_ids 与原始来源链接。未获得可靠回执、网络模糊失败、写回失败均不得自动重试，以免双发。
 
