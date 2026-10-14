@@ -1,0 +1,55 @@
+{
+  "run_slot": "2026-10-14T17:15:00+03:00",
+  "timezone": "Europe/Bucharest",
+  "delivery_channel": "ChatGPT_task_only",
+  "claim_id": "EW-RADAR-20261014-USOPEN-0934EDT",
+  "event_key": "2026-10-14-US-EQUITIES-OPEN-POST-CPI",
+  "event_time": "2026-10-14T09:34:00-04:00",
+  "classification": "material_new_market_observation",
+  "review_status": "SOURCE_BODY_CHECKED_NOT_INDEPENDENTLY_HUMAN_APPROVED",
+  "source": {
+    "url": "https://www.theguardian.com/business/live/2026/oct/14/imf-rising-government-borrowing-costs-inflation-oil-stock-markets-latest-news-updates",
+    "source_type": "original_live_market_reporting",
+    "entry_published_at": "2026-10-14T09:34:00-04:00",
+    "locator": "Live blog entry 'Wall Street is falling' at 09:34 EDT",
+    "excerpt": "The S&P 500 sharesindex has fallen by 0.4%, shedding 32 points to 7,773 points. The tech-focused Nasdaq is down 0.5%."
+  },
+  "facts": [
+    {
+      "instrument": "S&P 500",
+      "code": ".SPX",
+      "value": "-0.4",
+      "unit": "percent",
+      "basis": "change from previous session close",
+      "as_of": "2026-10-14T09:34:00-04:00",
+      "market_state": "regular session, after opening",
+      "source": "original live blog"
+    },
+    {
+      "instrument": "Nasdaq Composite",
+      "code": ".IXIC",
+      "value": "-0.5",
+      "unit": "percent",
+      "basis": "change from previous session close",
+      "as_of": "2026-10-14T09:34:00-04:00",
+      "market_state": "regular session, after opening",
+      "source": "original live blog"
+    }
+  ],
+  "context_previously_reported": {
+    "topic": "September 2026 US CPI",
+    "url": "https://www.bls.gov/news.release/cpi.htm",
+    "repost": false
+  },
+  "deduplication": {
+    "known_previous_N08": "US regular session not yet open at 15:45; CPI already discussed",
+    "cross_task_history_complete": false
+  },
+  "limitations": [
+    "No direct exchange structured snapshot retrieved for these intraday index levels.",
+    "The earlier CPI figures are not republished as new.",
+    "No Telegram/WhatsApp send was attempted.",
+    "Five-skill workflow document was not found in the checked repository paths.",
+    "Do not interpret early trading prices as closing prices."
+  ]
+}
