@@ -202,7 +202,7 @@ def discover_groups(env=None):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Westcott Telegram group delivery")
-    parser.add_argument("command", choices=["discover", "verify", "smoke", "send"])
+    parser.add_argument("command", choices=["discover", "verify", "smoke", "smoke_image", "send"])
     args = parser.parse_args(argv)
     try:
         if args.command == "discover":
@@ -215,6 +215,12 @@ def main(argv=None):
         elif args.command == "smoke":
             # An explicit test, not a news push.
             result = send_group_news("===== 资讯助理 =====\nELLERY WESTCOTT Telegram 群组连接测试。")
+        elif args.command == "smoke_image":
+            # Explicit manual graphic transport test; never real market news.
+            from image_background import render_background
+            result = send_group_news_with_image(
+                "===== 资讯助理 =====\nELLERY WESTCOTT Telegram 图文连接测试。",
+                render_background("global"))
         else:
             # Input supplied by an external human-verified/news-gated publisher.
             result = send_group_news(_required(os.environ, "WESTCOTT_APPROVED_NEWS_TEXT"))
