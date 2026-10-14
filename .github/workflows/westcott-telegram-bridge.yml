@@ -8,17 +8,23 @@ on:
   workflow_dispatch:
     inputs:
       command:
-        description: "discover, verify, smoke, send, preview, or publish"
+        description: "discover, verify, smoke, send, inspect, preview, or publish"
         type: choice
         options:
           - verify
           - discover
           - smoke
           - send
+          - inspect
           - preview
           - publish
         required: true
         default: verify
+      article_url:
+        description: "For inspect only: the exact original publisher HTTPS news article URL"
+        type: string
+        required: false
+        default: ""
       ledger_path:
         description: "For preview/publish: committed reviewed ledger under news/approved/*.json"
         type: string
@@ -50,7 +56,7 @@ jobs:
         run: python -m unittest discover -s integrations/telegram -p "test_*.py"
 
   telegram:
-    if: github.event_name == 'workflow_dispatch' && inputs.command != 'preview' && inputs.command != 'publish'
+    if: github.event_name == 'workflow_dispatch' && inputs.command != 'preview' && inputs.command != 'publish' && inputs.command != 'inspect'
     needs: tests
     runs-on: ubuntu-latest
     env:
@@ -97,3 +103,19 @@ jobs:
           python-version: "3.12"
       - name: Review evidence and link the original article image
         run: python integrations/telegram/reviewed_publish.py --mode "$COMMAND" --ledger "$NEWS_LEDGER_PATH"
+
+  inspect_original_article:
+    if: github.event_name == 'workflow_dispatch' && inputs.command == 'inspect'
+    needs: tests
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      ORIGINAL_NEWS_ARTICLE_URL: ${{ inputs.article_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Inspect only publisher title, canonical and source image metadata
+        run: python integrations/telegram/source_media.py --article-url "$ORIGINAL_NEWS_ARTICLE_URL"
