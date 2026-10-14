@@ -37,7 +37,7 @@
 
 ## 审核后 16:9 新闻图片与 Telegram 图文
 
-- 新增 `preview`：读取 `news/approved/<file>.json`，先调用 `scripts/news_release_gate.py` 做审核账本的一致性校验，然后生成浅蓝白、无文字、1600×900 的匹配主题图片和可复制中文资讯助理稿，输出 GitHub Artifact 供人工检查；**预览不会向 Telegram 发送消息**。
+- 新增 `preview`：读取 `news/approved/<file>.json`，先调用 `scripts/news_release_gate.py` 做审核账本的一致性校验，然后生成浅蓝白、无文字、1600×900 的匹配主题图片和可复制中文资讯助理稿，在 `news/previews/` 提交预览 PNG 与文字（日志返回链接）供人工检查；**预览不会向 Telegram 发送消息**。
 - 新增 `publish`：仅在同一正式证据账本审核通过、在 GitHub Actions 手动输入确认词 `PUBLISH_REVIEWED_NEWS` 后，先写入不可重复的证据指纹记录，再发送图片与文字，最后记录 `photo_message_id`、文字 `message_ids`、`claim_ids` 及来源链接。
 - 新闻背景为确定性生成的非新闻照片风格主题线条（能源/银行/科技/宏观/商品/BVB），不在图片中添加任何文字、数字或无依据的走势；**非 AI 图片模型或现场真实照片**。
 - 具体操作与账本格式请见 [news/approved/README.md](../../news/approved/README.md)。
