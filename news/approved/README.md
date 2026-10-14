@@ -34,11 +34,19 @@
 
 缺少授权或没有查到配图时，本系统自动降级为 **原文链接预览**，不会抓取第三方图片、使用图库替代图，也不会生成示意插画。原图不添加行情文字、logo 或人工涨跌箭头，原图长宽比由官网决定。
 
+## 自动识别原新闻网站的配图（不会自动发布）
+
+可以直接在 GitHub Actions 的 `Westcott Telegram Bridge` 运行 `command=inspect`，在 `article_url` 粘贴原新闻官网的 HTTPS 文章链接。系统仅读取该页的 Open Graph `og:image` / `og:image:secure_url` / `twitter:image`、文章标题和 canonical 地址，并在执行日志输出原站配图候选链接。不会下载图片、裁剪、生成图片或向 Telegram 发送消息。
+
+重要：网页的分享配图只能算“原站宣称的候选图”，不自动证明图片与新闻事件准确对应，也不代表允许在 Telegram 转发原图。仍需人工确认图片及相关许可。遇到 403、重定向、反爬限制、网页没有元信息或不支持访问时，返回无法识别，不擅自使用替代图片。
+
+在正式新闻 `preview` 时，也会自动检查审核账本的主要原始文章，输出 `official_page_metadata`（包括 `image_candidate_url`）。如需直接上传新闻照片，需在账本中填写匹配的官网图片 URL 与可转载依据；`publish` 时会重新读取原站元信息，不一致则停止发送。若没有已确认的可转载图片，保留原始文章链接预览作为默认方案。
+
 ## 预览与人工发布
 
 进入 [Westcott Telegram Bridge](https://github.com/dalulu05168/Westcott-Intelligence/actions/workflows/westcott-telegram-bridge.yml)：
 
-1. 选择 `main`，`command=preview`，填写 `ledger_path=news/approved/<filename>.json`，先审核输出的 `text_url`、`original_article_url`、`original_image_url`、`image_decision`。预览不会向 Telegram 发送消息或生成图片。
+1. 选择 `main`，`command=preview`，填写 `ledger_path=news/approved/<filename>.json`，先审核输出的 `text_url`、`original_article_url`、`original_image_url`、`image_decision`、`official_page_metadata`。预览不会向 Telegram 发送消息或生成图片。
 2. 如果图片的出处或授权有问题，改用原文链接预览；如果文字事实有问题，阻止发布并修正证据。
 3. 仅人工确认之后，运行 `command=publish`、相同 `ledger_path`，填写确认短语 `PUBLISH_REVIEWED_NEWS`。
 4. 脚本先登记 `audit/telegram-delivery/<fact-fingerprint>.json` 防重，再发送已核实照片（仅有授权时）或原始报道链接预览，与中文新闻稿一起发布到 `@NuvexaCheckBot` 所在「资讯快报」群。Telegram `message_id` 和采用的图片模式写入审计记录。
@@ -49,5 +57,5 @@
 ## 暂停事项
 
 - 原有五项 ChatGPT 定时新闻任务继续暂停；此 GitHub 工作流不自动读取它们的输出。
-- 没有持续定时抓取、新闻事件自动配图抓取器或 Telegram 持续自动推送。
+- 目前仅对明确指定的原文文章链接执行元数据检查；没有持续定时抓取、新闻发现引擎或 Telegram 持续自动推送。
 - `discover`、`verify`、`smoke`、`send` 既有文字命令继续可用；此前文字测试回执 `message_id=21`。
