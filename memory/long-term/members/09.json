@@ -5,7 +5,7 @@
   "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
   "fictional_education_only": true,
   "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
-  "message_count": 3,
+  "message_count": 8,
   "reaction_count": 0,
   "observed_in_submitted_story": [
     {
@@ -42,10 +42,80 @@
       "warnings": [],
       "fictional_only": true,
       "no_real_transaction_verified": true
+    },
+    {
+      "message_id": "20261014-M028",
+      "source_date": "2026-10-14",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "如果这几天能再往下踩一踩，就太好了！",
+      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM/edit?tab=t.0",
+      "source_doc_revision": "AHj4eMRS4SLSXvqgAdUMG8LNztwDxKlskKeopED5zzPE-TDEq7BTY0vWsY_2ih_Hk1fv1R1BUtGzlhNUy9YSFjvECpUbF90ntTVl--YwVww",
+      "source_block_number": 99,
+      "warnings": [],
+      "fictional_only": true,
+      "no_real_transaction_verified": true
+    },
+    {
+      "message_id": "20261014-M040",
+      "source_date": "2026-10-14",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "对他们来说融资渠道当然是越多越好了，不过真正走到上市那一步的话也不是那么容易的事情啊！",
+      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM/edit?tab=t.0",
+      "source_doc_revision": "AHj4eMRS4SLSXvqgAdUMG8LNztwDxKlskKeopED5zzPE-TDEq7BTY0vWsY_2ih_Hk1fv1R1BUtGzlhNUy9YSFjvECpUbF90ntTVl--YwVww",
+      "source_block_number": 111,
+      "warnings": [],
+      "fictional_only": true,
+      "no_real_transaction_verified": true
+    },
+    {
+      "message_id": "20261014-M047",
+      "source_date": "2026-10-14",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "这股现在全是泡沫，全靠大家用嘴吹上去的。后面要是拿不出新订单和真合同，迟早会出问题。",
+      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM/edit?tab=t.0",
+      "source_doc_revision": "AHj4eMRS4SLSXvqgAdUMG8LNztwDxKlskKeopED5zzPE-TDEq7BTY0vWsY_2ih_Hk1fv1R1BUtGzlhNUy9YSFjvECpUbF90ntTVl--YwVww",
+      "source_block_number": 118,
+      "warnings": [],
+      "fictional_only": true,
+      "no_real_transaction_verified": true
+    },
+    {
+      "message_id": "20261014-M067",
+      "source_date": "2026-10-14",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "我倒是选A。科技股最近波动这么大，说不定今天传统行业反而表现更好。😄",
+      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM/edit?tab=t.0",
+      "source_doc_revision": "AHj4eMRS4SLSXvqgAdUMG8LNztwDxKlskKeopED5zzPE-TDEq7BTY0vWsY_2ih_Hk1fv1R1BUtGzlhNUy9YSFjvECpUbF90ntTVl--YwVww",
+      "source_block_number": 138,
+      "warnings": [],
+      "fictional_only": true,
+      "no_real_transaction_verified": true
+    },
+    {
+      "message_id": "20261014-M097",
+      "source_date": "2026-10-14",
+      "node": "EVENING",
+      "kind": "message",
+      "text": "如果只看日线，感觉已经跌了不少；但把时间拉长再看，可能会发现，它其实还待在一个挺重要的长期价格区域里，对吧？",
+      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM/edit?tab=t.0",
+      "source_doc_revision": "AHj4eMRS4SLSXvqgAdUMG8LNztwDxKlskKeopED5zzPE-TDEq7BTY0vWsY_2ih_Hk1fv1R1BUtGzlhNUy9YSFjvECpUbF90ntTVl--YwVww",
+      "source_block_number": 168,
+      "warnings": [],
+      "fictional_only": true,
+      "no_real_transaction_verified": true
     }
   ],
   "no_unrecorded_history": true,
   "no_real_trading_inferred": true,
-  "latest_source_date": "2026-10-13",
+  "latest_source_date": "2026-10-14",
   "review_only_2026_10_13": []
 }
