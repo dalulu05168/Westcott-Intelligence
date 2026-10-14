@@ -132,6 +132,55 @@ def reserve(prepared, env, now=None):
     return path, record, sha
 
 
+def github_store_asset(path, data, token, repo):
+    """Save preview directly in the repo; avoids Actions artifact storage quota."""
+    if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repo):
+        raise PublicationError("Invalid GitHub repository.")
+    url = "https://api.github.com/repos/" + repo + "/contents/" + path
+    headers = {"Authorization": "Bearer " + token,
+               "Accept": "application/vnd.github+json",
+               "X-GitHub-Api-Version": "2022-11-28"}
+    existing_sha = None
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=20) as response:
+            current = json.load(response)
+        old_bytes = base64.b64decode(current.get("content", "").replace("\\n", ""))
+        if old_bytes == data:
+            return "https://github.com/" + repo + "/blob/main/" + path
+        raise PublicationError("Existing preview conflicts with reviewed content; refuse overwrite.")
+    except urllib.error.HTTPError as exc:
+        if exc.code != 404:
+            raise PublicationError("Could not inspect preview file; HTTP " + str(exc.code)) from None
+    except (urllib.error.URLError, TimeoutError, OSError, ValueError):
+        raise PublicationError("Could not inspect preview file.") from None
+    payload = {"message": "Save reviewed 16:9 preview " + path.rsplit("/", 1)[-1],
+               "content": base64.b64encode(data).decode("ascii"), "branch": "main"}
+    req = urllib.request.Request(
+        url, data=json.dumps(payload).encode("utf-8"), method="PUT",
+        headers={**headers, "Content-Type": "application/json"})
+    try:
+        with urllib.request.urlopen(req, timeout=25) as response:
+            created = json.load(response)
+    except urllib.error.HTTPError as exc:
+        raise PublicationError("Could not save preview; HTTP " + str(exc.code)) from None
+    except (urllib.error.URLError, TimeoutError, OSError, ValueError):
+        raise PublicationError("Could not save preview.") from None
+    if not (created.get("content") or {}).get("sha"):
+        raise PublicationError("Missing preview commit acknowledgment.")
+    return "https://github.com/" + repo + "/blob/main/" + path
+
+
+def save_preview(prepared, png_bytes, env):
+    token, repo = env.get("GITHUB_TOKEN", "").strip(), env.get("GITHUB_REPOSITORY", "").strip()
+    if not token or not repo or env.get("GITHUB_REF_NAME") != "main":
+        raise PublicationError("Preview requires main branch GITHUB_TOKEN.")
+    base = "news/previews/" + prepared["fingerprint"][:40]
+    image_url = github_store_asset(base + ".png", png_bytes, token, repo)
+    copy_url = github_store_asset(base + ".txt", prepared["text"].encode("utf-8"), token, repo)
+    return {"status": "PREVIEW_ONLY", "image_px": "1600x900", "topic": prepared["topic"],
+            "event_id": prepared["event_id"], "image_url": image_url, "text_url": copy_url}
+
+
 def publish(prepared, image_bytes, env):
     if env.get("PUBLISH_CONFIRMATION") != CONFIRM:
         raise PublicationError("Explicit publish confirmation required.")
@@ -170,9 +219,7 @@ def main():
         Path("/tmp/westcott-news-preview.png").write_bytes(png_bytes)
         Path("/tmp/westcott-news-preview.txt").write_text(prepared["text"], encoding="utf-8")
         if args.mode == "preview":
-            result = {"status": "PREVIEW_ONLY", "event_id": prepared["event_id"],
-                      "topic": prepared["topic"], "image_px": "1600x900",
-                      "claims": prepared["claim_ids"], "sources": prepared["sources"]}
+            result = save_preview(prepared, png_bytes, os.environ)
         else:
             result = publish(prepared, png_bytes, os.environ)
         print(json.dumps(result, ensure_ascii=False))
