@@ -117,7 +117,7 @@ def send_group_news(message, env=None):
 
 def call_photo_api(token, chat_id, png_bytes, thread=""):
     """Upload an actual PNG as Telegram multipart/form-data; do not log token/URL."""
-    if not isinstance(png_bytes, bytes) or not png_bytes.startswith(b"\\x89PNG\\r\\n\\x1a\\n"):
+    if not isinstance(png_bytes, bytes) or not png_bytes.startswith(b"\x89PNG\r\n\x1a\n"):
         raise TelegramError("Expected PNG image bytes.")
     if len(png_bytes) > 9_000_000:
         raise TelegramError("News image exceeds permitted upload size.")
@@ -127,14 +127,14 @@ def call_photo_api(token, chat_id, png_bytes, thread=""):
         fields["message_thread_id"] = str(int(thread))
     segments = []
     for name, value in fields.items():
-        segments.append(("--" + boundary + "\\r\\n"
-                         + 'Content-Disposition: form-data; name="' + name + '"\\r\\n\\r\\n'
-                         + value + "\\r\\n").encode("utf-8"))
-    segments.append(("--" + boundary + "\\r\\n"
-                     + 'Content-Disposition: form-data; name="photo"; filename="westcott-news.png"\\r\\n'
-                     + "Content-Type: image/png\\r\\n\\r\\n").encode("ascii")
-                    + png_bytes + b"\\r\\n")
-    segments.append(("--" + boundary + "--\\r\\n").encode("ascii"))
+        segments.append(("--" + boundary + "\r\n"
+                         + 'Content-Disposition: form-data; name="' + name + '"\r\n\r\n'
+                         + value + "\r\n").encode("utf-8"))
+    segments.append(("--" + boundary + "\r\n"
+                     + 'Content-Disposition: form-data; name="photo"; filename="westcott-news.png"\r\n'
+                     + "Content-Type: image/png\r\n\r\n").encode("ascii")
+                    + png_bytes + b"\r\n")
+    segments.append(("--" + boundary + "--\r\n").encode("ascii"))
     req = urllib.request.Request(
         "https://api.telegram.org/bot" + token + "/sendPhoto",
         data=b"".join(segments),
