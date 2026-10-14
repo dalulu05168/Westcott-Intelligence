@@ -137,6 +137,22 @@ class ReviewedPublicationTests(unittest.TestCase):
         self.assertEqual(result["message_ids"], [31])
         photo.assert_called_once()
 
+    def test_photo_multipart_contains_exact_png_and_chat_id(self):
+        from io import BytesIO
+        from unittest.mock import patch
+        png = b"\\x89PNG\\r\\n\\x1a\\n" + b"small-test"
+        response = BytesIO(b'{"ok":true,"result":{"message_id":54}}')
+        with patch.object(bridge.urllib.request, "urlopen", return_value=response) as mock:
+            result = bridge.call_photo_api("secret", "-10012345", png)
+            req = mock.call_args.args[0]
+        self.assertEqual(result["message_id"], 54)
+        self.assertEqual(req.get_method(), "POST")
+        self.assertIn(b'filename="westcott-news.png"', req.data)
+        self.assertIn(png, req.data)
+        self.assertIn(b"-10012345", req.data)
+        self.assertIn(b"\\r\\n", req.data)
+        self.assertIn("multipart/form-data", req.get_header("Content-type"))
+
     def test_photo_rejects_invalid_png_before_network(self):
         with self.assertRaises(bridge.TelegramError):
             bridge.call_photo_api("token", "-1001", b"bad")
