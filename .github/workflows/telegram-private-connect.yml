@@ -1,0 +1,31 @@
+name: Telegram Private Chat Connection
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Discover your private chat ID or send a private delivery test'
+        type: choice
+        required: true
+        default: discover
+        options: [discover, test]
+
+permissions:
+  contents: read
+
+jobs:
+  connect-private:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r telegram_news/requirements.txt
+      - name: Validate private Telegram bot and optional test delivery
+        env:
+          CONNECT_MODE: '${{ inputs.mode }}'
+          TELEGRAM_BOT_TOKEN: '${{ secrets.TELEGRAM_BOT_TOKEN }}'
+          TELEGRAM_CHAT_ID: '${{ secrets.TELEGRAM_CHAT_ID }}'
+        run: python telegram_news/connect_private.py

@@ -1,0 +1,23 @@
+name: Telegram News - Offline Checks
+
+on:
+  pull_request:
+    paths:
+      - 'telegram_news/**'
+      - '.github/workflows/telegram-news*.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  telegram-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r telegram_news/requirements.txt
+      - run: python -m unittest discover -s telegram_news -p 'test_*.py'
