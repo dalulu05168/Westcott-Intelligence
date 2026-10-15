@@ -256,7 +256,7 @@ def run():
     now = datetime.now(TZ)
     cron = os.getenv("EVENT_SCHEDULE", "").strip()
     node = os.getenv("NODE_INPUT", "").strip() or (
-        "RADAR" if cron.startswith("15 0-10,12-23 ") else SLOTS.get(cron, ("",))[0]
+        "RADAR" if cron == "15 * * * *" else SLOTS.get(cron, ("",))[0]
     )
     if node not in LABELS:
         raise ValueError("Unknown node or unmatched schedule: " + str(cron))
