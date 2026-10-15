@@ -3,6 +3,10 @@ on:
   schedule:
     - cron: '52 * * * *'
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'news/approved/*.json'
   pull_request:
     paths:
       - 'integrations/telegram/**'
@@ -48,7 +52,7 @@ jobs:
         run: python integrations/telegram/approved_queue.py
   maintenance_acceptance:
     # One explicitly authorized maintenance branch; no news ledger is sent here.
-    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'codex/news-chain-20261016'
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'codex/news-chain-20261016' && github.run_number == 1
     needs: tests
     runs-on: ubuntu-latest
     timeout-minutes: 5
