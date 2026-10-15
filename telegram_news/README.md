@@ -10,6 +10,19 @@
 - 自动保存已送达的 Telegram message_id 和新闻标识到独立 `telegram-news-state` 分支，不自动修改 `main` 下65人档案、课程或剧情。
 - 不保证实时股票价格、竞价、成交量、Brent 和 TTF 报价。GitHub Actions 可能延迟，极端情况下可能丢弃定时触发；Telegram 成功投递后若状态写入失败，重试时可能重复消息。
 
+## Telegram 私人聊天专用连接步骤（本版本优先）
+
+本次只允许机器人私聊发送，发送前使用 Telegram getChat 确认数字 ID 对应的 `type=private`；误填群组、频道或公开用户名会直接失败。
+
+1. 继续使用你掌控的 [@NuvexaCheckBot](https://t.me/NuvexaCheckBot)（如果 Telegram BotFather 中该机器人仍归你管理）。先在 Telegram 打开机器人，点击 Start 或发送 `/start`。
+2. 在仓库 Settings → Secrets and variables → Actions → Repository secrets 中设置 `TELEGRAM_BOT_TOKEN`（从你自己的 BotFather 获取）。**不要把 Token 发到聊天、GitHub Issue、Commit 中。**
+3. 合并 PR 后，去 Actions → **Telegram Private Chat Connection** → Run workflow → `mode=discover`。运行日志会显示机器人身份和最近发送过 `/start` 的私人会话 ID；确认显示的账号确实是你本人。此操作只读取消息，不清除更新，也不会自动发送新闻。**如果机器人正在使用 webhook，getUpdates 会返回冲突：禁止未经许可删除现有 webhook。**
+4. 将核实过的个人数字 chat ID 保存为另一个 Actions Repository Secret：`TELEGRAM_CHAT_ID`。
+5. 在 **Telegram Private Chat Connection** 选择 `mode=test`。机器人将发送一条带当前时间的私人连接测试；务必到 Telegram 实际确认收到了这条测试消息。
+6. Actions → **Telegram Finance News | 12 Bucharest Nodes** → Run workflow，先选 `node=N06`、`dry_run=true` 检查新闻来源；再手动 `dry_run=false` 做一次新闻推送验收（如果有新消息；否则为午间无新增通知）。
+7. 只有上述步骤通过后，才在 Settings → Secrets and variables → Actions → **Variables** 新增 `TELEGRAM_NEWS_ENABLED=true`。**变量不存在或非 true 时，所有计划触发的新闻推送任务均跳过。**原5项ChatGPT任务的暂停/启用状态不变。
+
+最新确认的范围是**私人聊天**，不是群聊或频道。后续要改发送位置必须另外明确提出并先修改私人聊天锁定逻辑。
 ## 首次连接 Telegram
 
 1. 在 Telegram 打开 [官方 BotFather](https://t.me/BotFather)，创建机器人，取得 token。不要把 token 粘贴到聊天、Issue 或源代码。
