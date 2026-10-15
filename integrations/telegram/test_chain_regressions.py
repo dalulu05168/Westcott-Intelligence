@@ -30,11 +30,43 @@ class ChainRegressions(unittest.TestCase):
         ledger['publish_claim_ids'] = ['new-local-id']
         self.assertEqual(first['fingerprint'], pub.prepare(ledger, 'news/approved/renamed.json')['fingerprint'])
 
-    def test_changed_fact_at_same_url_is_distinct_update(self):
+    def test_changed_copy_has_same_underlying_evidence_identity(self):
         ledger = fixtures.OriginalArticleTests().ledger()
         first = pub.prepare(ledger, 'news/approved/first.json')
         ledger['claims'][0]['text'] = '经核验的后续新增事实。'
         self.assertNotEqual(first['fingerprint'], pub.prepare(ledger, 'news/approved/update.json')['fingerprint'])
+        self.assertEqual(first['claim_evidence_keys'], pub.prepare(ledger, 'news/approved/update.json')['claim_evidence_keys'])
+
+    def test_genuinely_new_evidence_at_same_url_has_distinct_identity(self):
+        ledger = fixtures.OriginalArticleTests().ledger()
+        first = pub.prepare(ledger, 'news/approved/first.json')
+        ledger['claims'][0]['text'] = '新增已核实事实。'
+        ledger['claims'][0]['evidence'][0]['excerpt'] = 'A genuinely new official fact.'
+        second = pub.prepare(ledger, 'news/approved/update.json')
+        self.assertNotEqual(first['claim_evidence_keys'], second['claim_evidence_keys'])
+
+    def test_rewording_cannot_escape_delivered_or_pending_atomic_claim_lock(self):
+        for state in ('DELIVERED', 'PENDING_DO_NOT_RETRY'):
+            with self.subTest(state=state):
+                records = {}
+                def atomic_write(path, record, token, repo, sha=None):
+                    if path in records and sha is None:
+                        raise pub.PublicationError('Publication already reserved')
+                    records[path] = copy.deepcopy(record)
+                    return 'sha'
+                ledger = fixtures.OriginalArticleTests().ledger()
+                first = pub.prepare(ledger, 'news/approved/first.json')
+                env = {'GITHUB_TOKEN': 'secret', 'GITHUB_REPOSITORY': 'owner/repo', 'GITHUB_REF_NAME': 'main'}
+                with patch.object(pub, 'github_write', side_effect=atomic_write):
+                    path, record, sha = pub.reserve(first, env)
+                    records[path]['state'] = state
+                    ledger['claims'][0]['text'] = '同一事实的另一种中文表述。'
+                    ledger['claims'][0]['id'] = 'renamed-claim'
+                    ledger['publish_claim_ids'] = ['renamed-claim']
+                    ledger['event_id'] = 'renamed-event-00002'
+                    second = pub.prepare(ledger, 'news/approved/renamed.json')
+                    with self.assertRaisesRegex(pub.PublicationError, 'reserved'):
+                        pub.reserve(second, env)
 
     def test_query_identifies_different_article(self):
         result = media.inspect_markup('https://news.example.org/story?id=1',

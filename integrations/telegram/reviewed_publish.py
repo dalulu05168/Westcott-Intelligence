@@ -146,7 +146,17 @@ def prepare(ledger, filename, now=None):
                     "sources": sorted(urls)}, ensure_ascii=False,
                    sort_keys=True).encode("utf-8")
     ).hexdigest()
+    claim_evidence_keys = []
+    for claim in ledger['claims']:
+        if claim['id'] not in selected:
+            continue
+        evidence_identity = sorted(set(
+            (ledger['sources'][e['source_id']]['url'], ' '.join(e['excerpt'].split()))
+            for e in claim['evidence']))
+        claim_evidence_keys.append(hashlib.sha256(json.dumps(
+            evidence_identity, ensure_ascii=False, sort_keys=True).encode('utf-8')).hexdigest())
     return {"event_id": event_id, "fingerprint": fingerprint,
+            "claim_evidence_keys": sorted(set(claim_evidence_keys)),
             "ledger_digest": hashlib.sha256(json.dumps(ledger, ensure_ascii=False, sort_keys=True).encode('utf-8')).hexdigest(),
             "claim_ids": ids, "sources": urls, "media": media,
             "source_evidence": {url: [e['excerpt'] for c in ledger['claims']
@@ -252,11 +262,14 @@ def reserve(prepared, env, now=None):
     if not token or not repo or env.get("GITHUB_REF_NAME") != "main":
         raise PublicationError("Publishing requires main branch and GITHUB_TOKEN.")
     path = "audit/telegram-delivery/" + prepared["fingerprint"][:40] + ".json"
+    claim_paths = ['audit/telegram-claims/' + key + '.json' for key in prepared['claim_evidence_keys']]
     record = {
         "state": "PENDING_DO_NOT_RETRY",
         "event_id": prepared["event_id"],
         "fingerprint": prepared["fingerprint"],
         "claim_ids": prepared["claim_ids"],
+        "claim_evidence_keys": prepared['claim_evidence_keys'],
+        "claim_reservation_paths": claim_paths,
         "evidence_urls": prepared["sources"],
         "ledger": prepared["ledger"],
         "ledger_digest": prepared.get('ledger_digest'),
@@ -268,6 +281,14 @@ def reserve(prepared, env, now=None):
         "source_rechecks": prepared.get('source_rechecks', []),
     }
     sha = github_write(path, record, token, repo)
+    # Create-only atomic claims prevent rewritten copy, renamed files/IDs and
+    # mixed old/new claim sets from escaping an earlier ambiguous delivery.
+    # If any claim already exists, leave this parent PENDING and send nothing.
+    for claim_path in claim_paths:
+        github_write(claim_path, {
+            'event_id': prepared['event_id'], 'state': 'CLAIM_RESERVED_DO_NOT_RETRY',
+            'delivery_audit': path, 'reserved_at': record['reserved_at'],
+        }, token, repo)
     return path, record, sha
 
 

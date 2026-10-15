@@ -24,6 +24,10 @@ def drain(root, env):
                 results.append({'ledger': relative, 'status': 'ALREADY_RESERVED'})
                 continue
             prepared = publisher.prepare(ledger, relative)
+            if any((root / 'audit/telegram-claims' / (key + '.json')).exists()
+                   for key in prepared['claim_evidence_keys']):
+                results.append({'ledger': relative, 'status': 'ALREADY_RESERVED'})
+                continue
             audit = root / 'audit/telegram-delivery' / (prepared['fingerprint'][:40] + '.json')
             if audit.exists():
                 results.append({'ledger': relative, 'status': 'ALREADY_RESERVED'})
