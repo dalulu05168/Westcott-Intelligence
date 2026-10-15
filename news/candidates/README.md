@@ -1,6 +1,6 @@
 # ELLERY WESTCOTT — 官方新闻候选队列
 
-该目录只保存从固定 **美联储 / 欧洲央行** 官方 RSS 收集的候选线索。工作流独立于 ChatGPT 的五项已暂停定时任务。
+该目录只保存从固定 **美联储 / 欧洲央行 / 布加勒斯特交易所 BVB** 官方 RSS 收集的候选线索。工作流独立于 ChatGPT 的五项已暂停定时任务。
 
 **禁止把候选等同于正式发布。** 收集器不能自动判断完整原文是否正确、标题是否具有重大市场影响、图片是否获准转载，也不负责用 GPT 编造行情或因果关系。
 
@@ -10,6 +10,8 @@
 
 - 读取 Fed 货币政策官方 RSS `https://www.federalreserve.gov/feeds/press_monetary.xml`
 - 读取 ECB 官方新闻 RSS `https://www.ecb.europa.eu/rss/press.html`
+- 读取 BVB 官方市场新闻 RSS `https://www.bvb.ro/Rss/StiriBVB.ashx`
+- 读取 BVB 官方交易所操作与公告 RSS `https://www.bvb.ro/Rss/OperatiuniSiComunicateBVB.ashx`
 - 只接受指定官网域名的文章链接，以及带时区、发布时间不早于 36 小时的条目。
 - 按利率、货币政策、银行、流动性等关键词初筛，不足以保证它是“重大”新闻。
 - 按文章 URL 的稳定 SHA-256 指纹只创建一次 `news/candidates/<id>.json`；发现同一新闻不会覆盖已存在的档案。
@@ -17,7 +19,7 @@
 - 每条档案都写 `intake_status=UNREVIEWED`、`telegram_publishable=false`，不得自动发出。
 - 任何一个官网不可达都记录错误；所有来源都不可达则整个搜集运行失败，而不会伪称“没有新闻”。
 
-这只是 **官方 RSS 候选发现**，并不意味着已完成正式的新闻核验、GPT 中文撰写或机器人自动推送。罗马尼亚 BVB、企业财报、Reuters 等来源尚未并入受检 feed 列表。
+这只是 **官方 RSS 候选发现**，并不意味着已完成正式的新闻核验、GPT 中文撰写或机器人自动推送。已加入 BVB 官网新闻与公告，但不等同于覆盖所有公司财报详情、完整交易数据或 Reuters 等媒体报道。
 
 ## 检查结果
 
