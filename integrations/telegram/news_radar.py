@@ -56,7 +56,7 @@ def parse_time(value):
         raise RadarError("Feed item lacks a publication timestamp.")
     try:
         value = value.strip()
-        if "T" in value:
+        if re.match(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}T", value):
             time = datetime.fromisoformat(value.replace("Z", "+00:00"))
         else:
             time = parsedate_to_datetime(value)
