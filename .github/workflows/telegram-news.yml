@@ -1,0 +1,72 @@
+name: Telegram Finance News | 12 Bucharest Nodes
+
+on:
+  schedule:
+    - cron: '35 7 * * 1-5'
+      timezone: Europe/Bucharest
+    - cron: '45 7 * * 1-5'
+      timezone: Europe/Bucharest
+    - cron: '0 9 * * 1-5'
+      timezone: Europe/Bucharest
+    - cron: '30 9 * * 1-5'
+      timezone: Europe/Bucharest
+    - cron: '45 9 * * 1-5'
+      timezone: Europe/Bucharest
+    - cron: '15 11 * * 1-5'
+      timezone: Europe/Bucharest
+    - cron: '45 13 * * 1-5'
+      timezone: Europe/Bucharest
+    - cron: '45 15 * * 1-5'
+      timezone: Europe/Bucharest
+    - cron: '30 17 * * 1-5'
+      timezone: Europe/Bucharest
+    - cron: '45 19 * * 1-5'
+      timezone: Europe/Bucharest
+    - cron: '45 20 * * 1-5'
+      timezone: Europe/Bucharest
+    - cron: '45 21 * * 1-5'
+      timezone: Europe/Bucharest
+    - cron: '15 0-10,12-23 * * *'
+      timezone: Europe/Bucharest
+  workflow_dispatch:
+    inputs:
+      node:
+        description: 'Send news for a node; N01 is internal only'
+        type: choice
+        required: true
+        default: N06
+        options: [N01, N02, N03, N04, N05, N06, N07, N08, N09, N10, N11, N12, RADAR]
+      dry_run:
+        description: 'Preview in Actions log; do not send Telegram'
+        type: boolean
+        required: true
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: telegram-news-delivery
+  cancel-in-progress: false
+
+jobs:
+  news:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install news dependencies
+        run: python -m pip install -r telegram_news/requirements.txt
+      - name: Check Telegram node and dispatch verified official headlines
+        env:
+          EVENT_SCHEDULE: '${{ github.event.schedule }}'
+          NODE_INPUT: '${{ inputs.node }}'
+          DRY_RUN: '${{ inputs.dry_run }}'
+          TELEGRAM_BOT_TOKEN: '${{ secrets.TELEGRAM_BOT_TOKEN }}'
+          TELEGRAM_CHAT_ID: '${{ secrets.TELEGRAM_CHAT_ID }}'
+          GITHUB_TOKEN: '${{ github.token }}'
+          GITHUB_REPOSITORY: '${{ github.repository }}'
+        run: python telegram_news/main.py
