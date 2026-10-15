@@ -1,0 +1,6 @@
+{
+  "event_id": "romgaz-eon-gas-contract-20261015",
+  "state": "CLAIM_RESERVED_DO_NOT_RETRY",
+  "delivery_audit": "audit/telegram-delivery/388fd004025b45a7f29c881ca2ca867b89c8e804.json",
+  "reserved_at": "2026-10-15T23:59:43.561054+00:00"
+}
