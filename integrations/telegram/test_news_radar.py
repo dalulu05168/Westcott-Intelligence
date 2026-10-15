@@ -35,6 +35,20 @@ class OfficialRadarTests(unittest.TestCase):
         self.assertFalse(found[0]["telegram_publishable"])
         self.assertFalse(found[0]["image_reuse_permission_verified"])
 
+    def test_bvb_official_company_report_candidate(self):
+        bvb = next(feed for feed in radar.FEEDS if feed["id"] == "bvb_market")
+        rss = b"""<?xml version="1.0"?><rss version="2.0"><channel>
+        <item><title>TLV - Raport financiar si dividende</title>
+        <link>https://www.bvb.ro/FinancialInstruments/SelectedData/NewsItem.aspx?id=123</link>
+        <pubDate>Thu, 15 Oct 2026 09:00:00 GMT</pubDate></item>
+        </channel></rss>"""
+        stories = radar.extract_items(rss, bvb)
+        self.assertEqual(len(stories), 1)
+        choices = radar.pick_candidates(stories, self.now)
+        self.assertEqual(len(choices), 1)
+        self.assertEqual(choices[0]["source"], "Bucharest Stock Exchange")
+        self.assertFalse(choices[0]["telegram_publishable"])
+
     def test_atom(self):
         atom = """<feed xmlns="http://www.w3.org/2005/Atom">
         <entry><title>ECB interest rate decision</title>
