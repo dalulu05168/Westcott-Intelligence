@@ -172,6 +172,22 @@ def fetch_feed(feed):
         raise RadarError("Could not read official RSS feed: " + type(exc).__name__) from None
 
 
+def inspect_candidate_image(row, inspector=None):
+    """Publisher image candidate only; DO NOT treat og:image as a reuse license."""
+    from source_media import SourceMediaError, inspect_article
+    try:
+        page = (inspector or inspect_article)(row["article_url"])
+        if page.get("canonical_matches_article") is False:
+            raise SourceMediaError("Publisher canonical differs from feed story.")
+        return {**row, "original_image_candidate_url": page.get("image_candidate_url"),
+                "image_origin": "publisher_og_metadata",
+                "image_review_required": True, "image_reuse_permission_verified": False}
+    except (SourceMediaError, ValueError):
+        return {**row, "original_image_candidate_url": None,
+                "image_origin": "metadata_unavailable",
+                "image_review_required": True, "image_reuse_permission_verified": False}
+
+
 def git_queue_file(row, token, repo):
     if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repo):
         raise RadarError("Invalid GitHub repository identifier.")
@@ -226,7 +242,7 @@ def main():
             if not token or not repo or os.environ.get("GITHUB_REF_NAME") != "main":
                 raise RadarError("Queue mode requires main, GITHUB_TOKEN and GITHUB_REPOSITORY.")
             for row in items:
-                counts[git_queue_file(row, token, repo)] += 1
+                counts[git_queue_file(inspect_candidate_image(row), token, repo)] += 1
         # No Telegram secrets used; no news message ever sent.
         print(json.dumps({
             "status": "CANDIDATES_ONLY", "mode": args.mode,
