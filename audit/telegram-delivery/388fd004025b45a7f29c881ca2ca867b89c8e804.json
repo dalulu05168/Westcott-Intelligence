@@ -1,0 +1,34 @@
+{
+  "state": "PENDING_DO_NOT_RETRY",
+  "event_id": "romgaz-eon-gas-contract-20261015",
+  "fingerprint": "388fd004025b45a7f29c881ca2ca867b89c8e804a3f352b8dbc004d0c1b28343",
+  "claim_ids": [
+    "sng-contract-amount",
+    "sng-cumulative-threshold"
+  ],
+  "claim_evidence_keys": [
+    "bc7388bbd4c3904c530a30ff80347d2b2564b40e425d55a06a5dac778b6f3cfc",
+    "e7a5fdba8cb38167d80cd0eb195135ac29da9df00840310319b8a53592d67349"
+  ],
+  "claim_reservation_paths": [
+    "audit/telegram-claims/bc7388bbd4c3904c530a30ff80347d2b2564b40e425d55a06a5dac778b6f3cfc.json",
+    "audit/telegram-claims/e7a5fdba8cb38167d80cd0eb195135ac29da9df00840310319b8a53592d67349.json"
+  ],
+  "evidence_urls": [
+    "https://bvb.ro/FinancialInstruments/SelectedData/NewsItem/SNG-contract-cf-art-234-lit-i-reg-asf-5-din-2018/7B957"
+  ],
+  "ledger": "news/approved/romgaz-eon-contract-20261015.json",
+  "ledger_digest": "ce66b973117419c45d12fb2cb88188278629d99d4684ca30fb02a2972065b115",
+  "original_article_url": "https://bvb.ro/FinancialInstruments/SelectedData/NewsItem/SNG-contract-cf-art-234-lit-i-reg-asf-5-din-2018/7B957",
+  "original_image_url": null,
+  "image_decision": "original_article_link_preview",
+  "reserved_at": "2026-10-15T23:59:43.561054+00:00",
+  "message_ids": [],
+  "source_rechecks": [
+    {
+      "url": "https://bvb.ro/FinancialInstruments/SelectedData/NewsItem/SNG-contract-cf-art-234-lit-i-reg-asf-5-din-2018/7B957",
+      "source_text_sha256": "ea9c62b2c8d5c79dd3b9473ff4c9f74b60a38d345c75fbc6bbee4b3d16a0e7fa",
+      "checked_at": "2026-10-15T23:59:43.561024+00:00"
+    }
+  ]
+}
