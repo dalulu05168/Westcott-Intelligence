@@ -79,8 +79,14 @@ class BotTests(unittest.TestCase):
         response.json.return_value = {"ok": True, "result": {"id": 12345, "type": "group"}}
         with patch("main.SESSION.post", return_value=response) as call:
             with self.assertRaisesRegex(RuntimeError, "not a private"):
-                send_message("token-do-not-log", "12345", "test message")
+                ensure_private_destination("token-do-not-log", "12345")
             self.assertEqual(1, call.call_count)
+
+    def test_headline_only_send_cannot_bypass_verified_ledger(self):
+        with patch("main.SESSION.post") as call:
+            with self.assertRaisesRegex(RuntimeError, "reviewed evidence ledger"):
+                send_message("token-do-not-log", "12345", "Official title only")
+            call.assert_not_called()
 
     def test_private_destination_mismatch_is_rejected(self):
         response = Mock(status_code=200)
@@ -92,3 +98,4 @@ class BotTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

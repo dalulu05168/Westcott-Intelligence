@@ -256,18 +256,7 @@ def ensure_private_destination(token, chat_id):
 
 
 def send_message(token, chat_id, message):
-    ensure_private_destination(token, chat_id)
-    response = SESSION.post(
-        "https://api.telegram.org/bot" + token + "/sendMessage",
-        json={"chat_id": chat_id, "text": message, "disable_web_page_preview": True},
-        timeout=20)
-    # Do not include URL in failure logs: URL contains secret bot token.
-    if response.status_code != 200:
-        raise RuntimeError("Telegram API HTTP " + str(response.status_code))
-    data = response.json()
-    if not data.get("ok") or not data.get("result", {}).get("message_id"):
-        raise RuntimeError("Telegram did not acknowledge delivery")
-    return data["result"]["message_id"]
+    raise RuntimeError("Headline-only delivery is disabled; use a reviewed evidence ledger with integrations/telegram/reviewed_publish.py")
 
 
 def run():
@@ -279,6 +268,8 @@ def run():
     if node not in LABELS:
         raise ValueError("Unknown node or unmatched schedule: " + str(cron))
     dry_run = os.getenv("DRY_RUN", "false").lower() in ("1", "true", "yes")
+    if not dry_run:
+        raise RuntimeError("Headline-only delivery is disabled; use a reviewed evidence ledger")
     if cron and node != "RADAR" and not dry_run:
         # Skip stale scheduled events; do not send yesterday's briefing as today's.
         planned = LABELS[node][3]
@@ -339,3 +330,4 @@ if __name__ == "__main__":
         # Never print exception URLs or payloads that could contain bot credentials.
         print("ERROR", type(exc).__name__, str(exc).split("https://")[0][:180], file=sys.stderr)
         raise SystemExit(1)
+

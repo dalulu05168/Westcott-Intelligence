@@ -1,0 +1,108 @@
+{
+  "event_id": "romgaz-eon-gas-contract-20261015",
+  "executed_at": "2026-10-15T23:54:23.103253+00:00",
+  "review_method": "Codex read full original issuer disclosure retrieved by GitHub Actions job 116733711636; manually checked Chinese wording and Romanian numeric normalization. No market-price or profit inference.",
+  "review_evidence_run": "https://github.com/dalulu05168/Westcott-Intelligence/actions/runs/38826049684",
+  "sources": {
+    "bvb_iris_7b957": {
+      "url": "https://bvb.ro/FinancialInstruments/SelectedData/NewsItem/SNG-contract-cf-art-234-lit-i-reg-asf-5-din-2018/7B957",
+      "access_status": "BODY_READ",
+      "source_type": "official",
+      "origin_id": "ROMGAZ_issuer_IRIS_7B957",
+      "published_at": "2026-10-15T08:34:12+00:00",
+      "retrieved_at": "2026-10-15T23:51:44+00:00",
+      "body_sha256_at_review": "ea9c62b2c8d5c79dd3b9473ff4c9f74b60a38d345c75fbc6bbee4b3d16a0e7fa"
+    }
+  },
+  "claims": [
+    {
+      "id": "sng-contract-amount",
+      "kind": "fact",
+      "text": "📌 Romgaz（BVB：SNG）披露，已与 E.ON Energie Romania 签订天然气销售合同，合同金额为1,989,314.80列伊（不含增值税）。",
+      "review_status": "CONFIRMED",
+      "reviewed_by": "Codex / official issuer body review 2026-10-16 Europe/Bucharest",
+      "is_numeric": true,
+      "evidence": [
+        {
+          "source_id": "bvb_iris_7b957",
+          "excerpt": "E.ON ENERGIE ROMANIA S.A. Contract de vanzare gaze naturale",
+          "locator": "IRIS 7B957 contract table, counterparty and transaction type",
+          "supports_exact_claim": true
+        },
+        {
+          "source_id": "bvb_iris_7b957",
+          "excerpt": "1.989.314,80",
+          "locator": "IRIS 7B957 contract table, value excluding VAT in RON",
+          "supports_exact_claim": true
+        }
+      ],
+      "numbers": [
+        {
+          "quantity_type": "amount",
+          "value": "1989314.80",
+          "source_value": "1989314.80",
+          "unit": "RON",
+          "basis": "contract amount excluding VAT; not recognized revenue",
+          "instrument": "BVB:SNG / ROMGAZ–E.ON contract disclosure",
+          "market_state": "issuer_announcement_not_market_quote",
+          "as_of": "2026-10-15T08:34:12+00:00",
+          "source_id": "bvb_iris_7b957",
+          "normalization_reviewed": true,
+          "currency": "RON"
+        }
+      ]
+    },
+    {
+      "id": "sng-cumulative-threshold",
+      "kind": "fact",
+      "text": "公告中的披露门槛，按与同一交易对手过去12个月的累计交易额是否超过上一年度净营业额的10%判断，并非这份单独合同的占比。",
+      "review_status": "CONFIRMED",
+      "reviewed_by": "Codex / official issuer body review 2026-10-16 Europe/Bucharest",
+      "is_numeric": true,
+      "evidence": [
+        {
+          "source_id": "bvb_iris_7b957",
+          "excerpt": "pe o perioada de 12 luni, depaseste pragul de 10%",
+          "locator": "IRIS 7B957 paragraph immediately before the contract table; cumulative transactions and FY2025 net turnover basis",
+          "supports_exact_claim": true
+        }
+      ],
+      "numbers": [
+        {
+          "quantity_type": "count",
+          "value": "12",
+          "source_value": "12",
+          "unit": "months",
+          "basis": "rolling aggregation period for transactions with same counterparty",
+          "instrument": "BVB:SNG / ROMGAZ–E.ON contract disclosure",
+          "market_state": "issuer_announcement_not_market_quote",
+          "as_of": "2026-10-15T08:34:12+00:00",
+          "source_id": "bvb_iris_7b957",
+          "normalization_reviewed": true
+        },
+        {
+          "quantity_type": "percent",
+          "value": "10",
+          "source_value": "10",
+          "unit": "percent",
+          "basis": "disclosure threshold as percentage of prior FY2025 net turnover; not single-contract revenue share",
+          "instrument": "BVB:SNG / ROMGAZ–E.ON contract disclosure",
+          "market_state": "issuer_announcement_not_market_quote",
+          "as_of": "2026-10-15T08:34:12+00:00",
+          "source_id": "bvb_iris_7b957",
+          "normalization_reviewed": true
+        }
+      ]
+    }
+  ],
+  "publish_claim_ids": [
+    "sng-contract-amount",
+    "sng-cumulative-threshold"
+  ],
+  "primary_article_source_id": "bvb_iris_7b957",
+  "original_image_inspection": {
+    "image_candidate_url": null,
+    "checked_at": "2026-10-15T23:51:44+00:00",
+    "decision": "No original share image found; use source link preview only."
+  }
+}

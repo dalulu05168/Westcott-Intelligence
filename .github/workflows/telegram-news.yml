@@ -51,9 +51,9 @@ concurrency:
 
 jobs:
   news:
-    # Delivery remains OFF until the owner explicitly sets TELEGRAM_NEWS_ENABLED=true.
+    # Headline collector is preview-only; official news must use the reviewed-ledger publisher.
     # Manual dry-run remains available during review.
-    if: ${{ github.event_name == 'workflow_dispatch' || vars.TELEGRAM_NEWS_ENABLED == 'true' }}
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run == true }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -75,3 +75,4 @@ jobs:
           GITHUB_TOKEN: '${{ github.token }}'
           GITHUB_REPOSITORY: '${{ github.repository }}'
         run: python telegram_news/main.py
+

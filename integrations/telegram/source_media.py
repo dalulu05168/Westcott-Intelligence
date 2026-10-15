@@ -1,5 +1,6 @@
 """Inspect original publisher Open Graph image metadata; never generates or copies images."""
 import html
+import hashlib
 from html.parser import HTMLParser
 import ipaddress
 import socket
@@ -121,6 +122,28 @@ class HeadMetadata(HTMLParser):
             self.in_head = False
 
 
+class VisibleBody(HTMLParser):
+    """Extract a review snapshot, never certify the claims it contains."""
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.ignored = []
+        self.parts = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag in ('head', 'script', 'style', 'noscript', 'template'):
+            self.ignored.append(tag)
+
+    def handle_endtag(self, tag):
+        if self.ignored and tag == self.ignored[-1]:
+            self.ignored.pop()
+        elif not self.ignored:
+            self.parts.append(' ')
+
+    def handle_data(self, data):
+        if not self.ignored:
+            self.parts.append(data)
+
+
 def inspect_markup(article_url, markup):
     article_url = public_https(article_url)
     parser = HeadMetadata()
@@ -135,7 +158,8 @@ def inspect_markup(article_url, markup):
             article = urllib.parse.urlsplit(article_url)
             canon = urllib.parse.urlsplit(canonical)
             canonical_valid = (article.hostname == canon.hostname and
-                               article.path.rstrip("/") == canon.path.rstrip("/"))
+                               article.path.rstrip("/") == canon.path.rstrip("/") and
+                               article.query == canon.query)
         except SourceMediaError:
             canonical = None
     origin = None
@@ -149,7 +173,12 @@ def inspect_markup(article_url, markup):
                 break
             except SourceMediaError:
                 continue
+    body = VisibleBody()
+    body.feed(markup[:MAX_HTML])
+    source_text = ' '.join(''.join(body.parts).split())
     return {
+        "source_text": source_text,
+        "source_text_sha256": hashlib.sha256(source_text.encode('utf-8')).hexdigest(),
         "article_url": article_url,
         "title": (parser.meta.get("og:title") or parser.meta.get("twitter:title")
                   or parser.title).strip()[:300],
@@ -216,3 +245,4 @@ def main():
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

@@ -136,7 +136,25 @@ def pick_candidates(items, now=None, max_age_hours=MAX_AGE_HOURS):
     now = now or datetime.now(timezone.utc)
     seen = set()
     choices = []
+    # Group attachment variants only when there is ONE unambiguous HTML story
+    # for the same BVB issuer and timestamp. Preserve all URLs for verification.
+    groups = {}
     for row in items:
+        if row.get('feed_id', '').startswith('bvb_'):
+            key = (row['source'], row['title'], row['published_at'])
+            groups.setdefault(key, {})[row['article_url']] = row
+    replacements, attachments = {}, set()
+    for group in groups.values():
+        pages = [r for u, r in group.items() if '/NewsItem/' in u or '/NewsItem.aspx' in u]
+        if len(pages) == 1:
+            page = pages[0]
+            linked = [u for u in group if '/infocont/' in u and parse.urlsplit(u).path.lower().endswith('.pdf')]
+            replacements[page['article_url']] = {**page, 'related_source_urls': sorted([page['article_url']] + linked)}
+            attachments.update(linked)
+    for original in items:
+        if original['article_url'] in attachments:
+            continue
+        row = replacements.get(original['article_url'], original)
         stamp = parse_time(row["published_at"])
         age = now - stamp
         if age < timedelta(minutes=-2) or age > timedelta(hours=max_age_hours):
@@ -191,10 +209,15 @@ def inspect_candidate_image(row, inspector=None):
         if page.get("canonical_matches_article") is False:
             raise SourceMediaError("Publisher canonical differs from feed story.")
         return {**row, "original_image_candidate_url": page.get("image_candidate_url"),
+                "source_text_snapshot": page.get('source_text', '')[:80000],
+                "source_text_sha256": page.get('source_text_sha256'),
+                "source_text_truncated": len(page.get('source_text', '')) > 80000,
+                "body_fetch_status": 'FETCHED_FOR_REVIEW' if page.get('source_text') else 'UNAVAILABLE',
                 "image_origin": "publisher_og_metadata",
                 "image_review_required": True, "image_reuse_permission_verified": False}
     except (SourceMediaError, ValueError):
         return {**row, "original_image_candidate_url": None,
+                "body_fetch_status": 'UNAVAILABLE',
                 "image_origin": "metadata_unavailable",
                 "image_review_required": True, "image_reuse_permission_verified": False}
 
@@ -270,3 +293,4 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+

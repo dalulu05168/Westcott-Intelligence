@@ -1,0 +1,77 @@
+name: Westcott Verified News Delivery
+on:
+  schedule:
+    - cron: '52 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'news/approved/*.json'
+  pull_request:
+    paths:
+      - 'integrations/telegram/**'
+      - '.github/workflows/westcott-approved-news-dispatch.yml'
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s integrations/telegram -p 'test_*.py'
+      - run: python scripts/validate_repository.py
+  deliver:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    concurrency:
+      group: westcott-telegram-reviewed-publish
+      cancel-in-progress: false
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TELEGRAM_EXPECTED_BOT_USERNAME: NuvexaCheckBot
+      TELEGRAM_EXPECTED_GROUP_TITLE: 资讯快报
+      TELEGRAM_MESSAGE_THREAD_ID: ${{ vars.TELEGRAM_MESSAGE_THREAD_ID }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
+      GITHUB_REF_NAME: ${{ github.ref_name }}
+      PUBLISH_CONFIRMATION: PUBLISH_REVIEWED_NEWS
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Publish reviewed ledgers after live source recheck; pending blocks retries
+        run: python integrations/telegram/approved_queue.py
+  maintenance_acceptance:
+    # One explicitly authorized maintenance branch; no news ledger is sent here.
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'codex/news-chain-20261016' && github.run_number == 1
+    needs: tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TELEGRAM_EXPECTED_BOT_USERNAME: NuvexaCheckBot
+      TELEGRAM_EXPECTED_GROUP_TITLE: 资讯快报
+      TELEGRAM_MESSAGE_THREAD_ID: ${{ vars.TELEGRAM_MESSAGE_THREAD_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify the specified bot and destination
+        run: python integrations/telegram/bridge.py verify
+      - name: Explicit connection test, never a formal news release
+        run: python integrations/telegram/bridge.py smoke
+      - name: Check current official feeds without queue writes or sends
+        run: python integrations/telegram/news_radar.py --mode dry-run
+      - name: Read original BVB article and original image metadata for editorial review
+        run: python integrations/telegram/source_media.py --article-url 'https://bvb.ro/FinancialInstruments/SelectedData/NewsItem/SNG-contract-cf-art-234-lit-i-reg-asf-5-din-2018/7B957'

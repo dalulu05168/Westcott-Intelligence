@@ -1,4 +1,5 @@
 import unittest
+from sync_runtime_memory import records_from_members
 from validate_runtime_context import ROOT, BEGIN, END, validate
 
 class RuntimeContextTest(unittest.TestCase):
@@ -28,10 +29,11 @@ class RuntimeContextTest(unittest.TestCase):
         changed=self.text[:start]+self.text[start:].replace('"message_id":','"invented_id":',1)
         with self.assertRaises((ValueError,KeyError)): validate(changed)
 
-    def test_all_77_confirmed_events_present(self):
+    def test_all_current_confirmed_events_present(self):
         result=validate(self.text)
-        self.assertEqual(result['adopted_memory_entries'],77)
-        self.assertEqual(result['members_with_adopted_history'],30)
+        records=records_from_members()
+        self.assertEqual(result['adopted_memory_entries'],len(records))
+        self.assertEqual(result['members_with_adopted_history'],len({r['id'] for r in records}))
 
     def test_cross_member_memory_assignment_rejected(self):
         target='\"id\":\"02\",\"message_id\":\"M006\"'
@@ -46,3 +48,4 @@ class RuntimeContextTest(unittest.TestCase):
         with self.assertRaises(ValueError): validate(self.text+self.text)
 
 if __name__ == '__main__': unittest.main()
+
