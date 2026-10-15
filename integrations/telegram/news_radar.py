@@ -115,7 +115,7 @@ def extract_items(feed_xml, feed):
             continue
         if len(title) > 300:
             continue
-        result.append({"title": re.sub(r"\\s+", " ", title),
+        result.append({"title": re.sub(r"\s+", " ", title),
                        "article_url": article, "published_at": timestamp.isoformat(),
                        "source": feed["source"], "feed_id": feed["id"]})
     return result
@@ -193,7 +193,7 @@ def git_queue_file(row, token, repo):
         raise RadarError("Invalid GitHub repository identifier.")
     location = "news/candidates/" + row["id"] + ".json"
     url = "https://api.github.com/repos/" + repo + "/contents/" + location
-    content = (json.dumps(row, ensure_ascii=False, indent=2) + "\\n").encode("utf-8")
+    content = (json.dumps(row, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
     payload = json.dumps({
         "message": "Queue official news headline for human verification " + row["id"][:12],
         "branch": "main",
