@@ -238,7 +238,25 @@ def build_message(node, records, now):
     return "\n".join(lines).strip()[:4096]
 
 
+def ensure_private_destination(token, chat_id):
+    """Fail closed: this news bot may deliver only to an individual private chat."""
+    if not str(chat_id).strip().isdigit():
+        raise RuntimeError("PRIVATE_ONLY: a numeric private chat ID is required")
+    response = SESSION.post(
+        "https://api.telegram.org/bot" + token + "/getChat",
+        json={"chat_id": str(chat_id)}, timeout=20)
+    if response.status_code != 200:
+        raise RuntimeError("Telegram private-chat check HTTP " + str(response.status_code))
+    data = response.json()
+    if not data.get("ok") or data.get("result", {}).get("type") != "private":
+        raise RuntimeError("PRIVATE_ONLY: destination is not a private Telegram chat")
+    if str(data["result"].get("id")) != str(chat_id):
+        raise RuntimeError("PRIVATE_ONLY: destination ID mismatch")
+    return True
+
+
 def send_message(token, chat_id, message):
+    ensure_private_destination(token, chat_id)
     response = SESSION.post(
         "https://api.telegram.org/bot" + token + "/sendMessage",
         json={"chat_id": chat_id, "text": message, "disable_web_page_preview": True},
