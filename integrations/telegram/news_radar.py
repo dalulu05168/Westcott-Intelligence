@@ -24,6 +24,12 @@ FEEDS = (
     {"id": "ecb_press", "source": "European Central Bank",
      "url": "https://www.ecb.europa.eu/rss/press.html",
      "article_hosts": ("www.ecb.europa.eu", "ecb.europa.eu")},
+    {"id": "bvb_market", "source": "Bucharest Stock Exchange",
+     "url": "https://www.bvb.ro/Rss/StiriBVB.ashx",
+     "article_hosts": ("www.bvb.ro", "bvb.ro")},
+    {"id": "bvb_announcements", "source": "Bucharest Stock Exchange",
+     "url": "https://www.bvb.ro/Rss/OperatiuniSiComunicateBVB.ashx",
+     "article_hosts": ("www.bvb.ro", "bvb.ro")},
 )
 MAX_FEED_BYTES = 1_200_000
 MAX_PER_CYCLE = 12
@@ -33,6 +39,11 @@ SIGNAL = (
     "inflation", "financial stability", "deposit facility",
     "refinancing", "asset purchases", "rate decision", "liquidity",
     "policy decision", "rate cut", "rate increase", "emergency",
+    "dividend", "earnings", "corporate action", "listed", "bond issue",
+    "major shareholder", "capital", "listing", "fidelis",
+    "actiun", "actiuni", "emitent", "obligatiuni", "dividende", "majorare",
+    "raport financiar", "raport curent", "operatiuni",
+    "tlv", "brd", "snp", "sng", "h2o",
 )
 
 
