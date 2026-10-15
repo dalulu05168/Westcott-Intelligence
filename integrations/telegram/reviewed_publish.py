@@ -121,6 +121,9 @@ def prepare(ledger, filename, now=None):
         for evidence in claim.get("evidence", []):
             selected_source_ids.add(evidence["source_id"])
             source = ledger["sources"][evidence["source_id"]]
+            published = gate.instant(source['published_at'])
+            if now - published > timedelta(hours=36):
+                raise PublicationError('Original article is older than 36 hours; do not recycle old news.')
             url = validate_public_https(source["url"])
             if url not in urls:
                 urls.append(url)
@@ -139,12 +142,39 @@ def prepare(ledger, filename, now=None):
     media = select_original_image(ledger, selected_source_ids, default_source_id)
     ids = sorted(selected)
     fingerprint = hashlib.sha256(
-        json.dumps({"claims": ids, "sources": sorted(urls)}, ensure_ascii=False,
+        json.dumps({"facts": sorted(set(" ".join(f.split()) for f in facts)),
+                    "sources": sorted(urls)}, ensure_ascii=False,
                    sort_keys=True).encode("utf-8")
     ).hexdigest()
     return {"event_id": event_id, "fingerprint": fingerprint,
+            "ledger_digest": hashlib.sha256(json.dumps(ledger, ensure_ascii=False, sort_keys=True).encode('utf-8')).hexdigest(),
             "claim_ids": ids, "sources": urls, "media": media,
+            "source_evidence": {url: [e['excerpt'] for c in ledger['claims']
+                if c['id'] in selected for e in c['evidence']
+                if ledger['sources'][e['source_id']]['url'] == url] for url in urls},
             "ledger": filename, "text": text}
+
+
+def confirm_original_evidence(prepared):
+    """Re-read each original before any reservation or message side effect.
+
+    Matching excerpts proves that reviewed evidence still exists, not that a
+    translation or economic interpretation is automatically correct.
+    """
+    checked = []
+    for url, excerpts in prepared['source_evidence'].items():
+        try:
+            page = inspect_article(url)
+        except SourceMediaError:
+            raise PublicationError('Original evidence is unavailable; no Telegram send.') from None
+        if page.get('canonical_matches_article') is False:
+            raise PublicationError('Original evidence canonical differs from reviewed article.')
+        body = ' '.join(page.get('source_text', '').split())
+        if not body or any(' '.join(excerpt.split()) not in body for excerpt in excerpts):
+            raise PublicationError('Reviewed excerpt no longer matches original source body.')
+        checked.append({'url': url, 'source_text_sha256': hashlib.sha256(body.encode('utf-8')).hexdigest(),
+                        'checked_at': datetime.now(timezone.utc).isoformat()})
+    return checked
 
 
 def inspect_media_for_preview(prepared):
@@ -229,11 +259,13 @@ def reserve(prepared, env, now=None):
         "claim_ids": prepared["claim_ids"],
         "evidence_urls": prepared["sources"],
         "ledger": prepared["ledger"],
+        "ledger_digest": prepared.get('ledger_digest'),
         "original_article_url": prepared["media"]["article_url"],
         "original_image_url": prepared["media"]["image_url"],
         "image_decision": prepared["media"]["image_decision"],
         "reserved_at": (now or datetime.now(timezone.utc)).isoformat(),
         "message_ids": [],
+        "source_rechecks": prepared.get('source_rechecks', []),
     }
     sha = github_write(path, record, token, repo)
     return path, record, sha
@@ -294,6 +326,7 @@ def save_preview(prepared, env):
 def publish(prepared, env):
     if env.get("PUBLISH_CONFIRMATION") != CONFIRM:
         raise PublicationError("Explicit publish confirmation required.")
+    prepared = {**prepared, 'source_rechecks': confirm_original_evidence(prepared)}
     confirm_original_photo_source(prepared)
     path, record, sha = reserve(prepared, env)
     try:
@@ -344,3 +377,4 @@ def main():
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

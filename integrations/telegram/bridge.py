@@ -259,8 +259,7 @@ def main(argv=None):
             # An explicit test, not a news push.
             result = send_group_news("===== 资讯助理 =====\nELLERY WESTCOTT Telegram 群组连接测试。")
         else:
-            # Input supplied by an external human-verified/news-gated publisher.
-            result = send_group_news(_required(os.environ, "WESTCOTT_APPROVED_NEWS_TEXT"))
+            raise TelegramError("Raw send is disabled; use reviewed_publish.py with an evidence ledger.")
         print(json.dumps({"status": "OK", "result": result}, ensure_ascii=False))
         return 0
     except (TelegramError, ValueError) as exc:
@@ -271,3 +270,4 @@ def main(argv=None):
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

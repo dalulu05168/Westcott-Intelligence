@@ -11,6 +11,13 @@ import reviewed_publish as pub
 
 
 class OriginalArticleTests(unittest.TestCase):
+    def setUp(self):
+        network = patch.object(pub, 'inspect_article', return_value={
+            'source_text': '已核实的财经事实。', 'canonical_matches_article': True,
+            'image_candidate_url': None})
+        network.start()
+        self.addCleanup(network.stop)
+
     def ledger(self):
         now = datetime.now(timezone.utc).isoformat()
         return {
@@ -147,6 +154,7 @@ class OriginalArticleTests(unittest.TestCase):
                           return_value=("audit/id.json", {"event_id": p["event_id"]}, "sha")):
             with patch.object(pub, "inspect_article", return_value={
                 "image_candidate_url": "https://images.example.org/story-12.jpg",
+                "source_text": "已核实的财经事实。",
                 "canonical_matches_article": True,
             }):
                 with patch.object(pub, "send_group_news_from_official_article", return_value=r) as send:
@@ -233,3 +241,4 @@ class OriginalArticleTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

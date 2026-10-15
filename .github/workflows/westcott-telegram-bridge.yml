@@ -8,13 +8,12 @@ on:
   workflow_dispatch:
     inputs:
       command:
-        description: "discover, verify, smoke, send, inspect, preview, or publish"
+        description: "discover, verify, smoke, inspect, preview, or publish"
         type: choice
         options:
           - verify
           - discover
           - smoke
-          - send
           - inspect
           - preview
           - publish
@@ -32,11 +31,6 @@ on:
         default: ""
       publish_confirmation:
         description: "For publish only: type PUBLISH_REVIEWED_NEWS (sends image + text)"
-        type: string
-        required: false
-        default: ""
-      approved_news_text:
-        description: "Only for send; paste separately verified assistant news text"
         type: string
         required: false
         default: ""
@@ -65,7 +59,6 @@ jobs:
       TELEGRAM_EXPECTED_GROUP_TITLE: 资讯快报
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       TELEGRAM_MESSAGE_THREAD_ID: ${{ vars.TELEGRAM_MESSAGE_THREAD_ID }}
-      WESTCOTT_APPROVED_NEWS_TEXT: ${{ inputs.approved_news_text }}
       COMMAND: ${{ inputs.command }}
     steps:
       - uses: actions/checkout@v4
@@ -119,3 +112,4 @@ jobs:
           python-version: "3.12"
       - name: Identify article metadata or recognize publisher image URL
         run: python integrations/telegram/source_media.py --article-url "$ORIGINAL_NEWS_ARTICLE_URL"
+

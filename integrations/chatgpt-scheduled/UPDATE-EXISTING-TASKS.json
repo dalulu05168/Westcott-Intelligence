@@ -17,9 +17,9 @@
       "file": "01_Westcott 美罗重大事件雷达.txt",
       "prior_prepared_prompt_sha256": "034244dcb496d34ce73a3bb7df81b6d8173dd04129b72a6144f49351ba632a6b",
       "prompt_file": "01_Westcott 美罗重大事件雷达.txt",
-      "prompt_sha256": "2836af86c023cfd7887b6b013afb1eec3bd85f8ca3611924f47f8423bffe11b9",
-      "prompt_characters": 23066,
-      "prompt_utf8_bytes": 46884,
+      "prompt_sha256": "9b6a4f627217a2dcb53c88c8971a2466433879f8c8716ab520433a8dcc779617",
+      "prompt_characters": 31898,
+      "prompt_utf8_bytes": 60743,
       "context_mode": "INLINE_SOURCE_SNAPSHOT",
       "context_version": "v1.5.2"
     },
@@ -34,9 +34,9 @@
       "file": "02_Westcott 重大主线晨报.txt",
       "prior_prepared_prompt_sha256": "e1d56caab8624477c9285671eb2c1fcdd24b5b89ae2e9dabb4f02862caaf248f",
       "prompt_file": "02_Westcott 重大主线晨报.txt",
-      "prompt_sha256": "1e9fa743fe8a00425333d523e816e4b98ab04a13c6d8f609bec35d3b1af4618e",
-      "prompt_characters": 22644,
-      "prompt_utf8_bytes": 45589,
+      "prompt_sha256": "91ea3b86ed1008bb6897f44333542128c3b7701e2069168304472e37b46d5d9b",
+      "prompt_characters": 31476,
+      "prompt_utf8_bytes": 59448,
       "context_mode": "INLINE_SOURCE_SNAPSHOT",
       "context_version": "v1.5.2"
     },
@@ -51,9 +51,9 @@
       "file": "03_Westcott 主线盘前追踪.txt",
       "prior_prepared_prompt_sha256": "a14727ad63ef3565301458ee2f3f0129810f525d32b6267e8265c5caa5f54f95",
       "prompt_file": "03_Westcott 主线盘前追踪.txt",
-      "prompt_sha256": "0ff5ed8d1217ec4a900cb8d0b88ac51c341a50d942b88b2a75631e8ca0e2c8ae",
-      "prompt_characters": 22569,
-      "prompt_utf8_bytes": 45422,
+      "prompt_sha256": "31fa72886d35b469549c7dfaac934a7bc0e3731ea62f35bd7f02b46909bc713a",
+      "prompt_characters": 31401,
+      "prompt_utf8_bytes": 59281,
       "context_mode": "INLINE_SOURCE_SNAPSHOT",
       "context_version": "v1.5.2"
     },
@@ -68,9 +68,9 @@
       "file": "04_Westcott 竞价尾盘主线.txt",
       "prior_prepared_prompt_sha256": "c5fb32a2151f54f1824099c2614f24cea654ce7e86f1e693b993031a7e834153",
       "prompt_file": "04_Westcott 竞价尾盘主线.txt",
-      "prompt_sha256": "a4c88fcdbb7a8aaa000fef9013ada35a6f3628d71d72eb9cb841f8513999a427",
-      "prompt_characters": 22612,
-      "prompt_utf8_bytes": 45627,
+      "prompt_sha256": "4366c98376b91685061c8e2d091b63c82303d1c589b9a452d154cc892ccaa229",
+      "prompt_characters": 31444,
+      "prompt_utf8_bytes": 59486,
       "context_mode": "INLINE_SOURCE_SNAPSHOT",
       "context_version": "v1.5.2"
     },
@@ -85,9 +85,9 @@
       "file": "05_Westcott 事件群聊与晚课.txt",
       "prior_prepared_prompt_sha256": "075f521103b6f43970f6b79c43bfce68e7f1c5cfa3640fd153378aa496cf72a0",
       "prompt_file": "05_Westcott 事件群聊与晚课.txt",
-      "prompt_sha256": "49fbb7dd5441e3eb6a88707b6262f042cffa85a48dd66e049488bc5e238e1e58",
-      "prompt_characters": 23138,
-      "prompt_utf8_bytes": 46929,
+      "prompt_sha256": "9b62b1063b710f9bd544a34f4a8f55e6233d00b70707dcc76cd2952a70a7d160",
+      "prompt_characters": 31970,
+      "prompt_utf8_bytes": 60788,
       "context_mode": "INLINE_SOURCE_SNAPSHOT",
       "context_version": "v1.5.2"
     }
@@ -106,8 +106,8 @@
     "2026-10-12",
     "2026-10-13"
   ],
-  "confirmed_adopted_member_entries": 77,
-  "confirmed_adopted_member_count": 30,
+  "confirmed_adopted_member_entries": 152,
+  "confirmed_adopted_member_count": 35,
   "excluded_or_review_unadopted": true,
   "context_source_note": "Verified against committed memory/daily/2026-10-12 and 2026-10-13 adopted status records; online task bodies not read."
 }
