@@ -55,7 +55,7 @@
 
 ## 官方资讯自动发现（严格未审核）
 
-- 新增 [Westcott Official News Radar](../../.github/workflows/westcott-official-news-radar.yml)：每小时从 Fed / ECB 官方 RSS 抓取候选新闻，筛选最近36小时的新事件，保存到 `news/candidates/`。
+- 新增 [Westcott Official News Radar](../../.github/workflows/westcott-official-news-radar.yml)：每小时从 Fed / ECB / BVB 官方 RSS 抓取候选新闻，筛选最近36小时的新事件，保存到 `news/candidates/`。
 - 只生成 `UNREVIEWED` 队列及官方文章的 `og:image` 候选链接，**不触发 Telegram**，不编写“审核通过”的假证明；没有拿到网页原文时也不冒充已经读取。
 - 已有 `news_release_gate.py` 仍要求审查后的完整证据；从候选变成可正式发送的女性资讯助理中文稿，尚需可信的上游核验及发布批准。
 - 队列采集与原有五项已暂停的 ChatGPT 新闻任务相互独立。请勿把队列产生误当成已向 Telegram 「资讯快报」送达。
