@@ -107,3 +107,16 @@ jobs:
           print('EXTERNAL_MODEL_CALLED: FALSE')
           print('TELEGRAM_NEWS_SENT: FALSE')
           PY
+
+      - name: Check news model configuration presence only (NO MODEL CALL)
+        env:
+          NEWS_KEY: ${{ secrets.OPENAI_API_KEY }}
+          NEWS_MODEL: ${{ vars.OPENAI_NEWS_MODEL }}
+        run: |
+          python - <<'PY'
+          import os
+          print('OPENAI_NEWS_KEY_CONFIGURED:', bool(os.getenv('NEWS_KEY')))
+          print('OPENAI_NEWS_MODEL_CONFIGURED:', bool(os.getenv('NEWS_MODEL')))
+          print('MODEL_CALLED: FALSE')
+          print('TELEGRAM_NEWS_SENT: FALSE')
+          PY
