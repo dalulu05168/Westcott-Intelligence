@@ -54,7 +54,7 @@ class EditorialExecutionTest(unittest.TestCase):
                     'retrieved_at': '2026-10-16T12:00:00+03:00',
                     'tabs': [{'tabId': 'x', 'title': '10/16'}],
                     'paragraphs': [{'tabId': 'x', 'text':
-                                    '===== 资讯助理 =====\\n开始\\n===== 先生 =====\\n课程\\n25男：\\n收到'}]}
+                                    '===== 资讯助理 =====\n开始\n===== 先生 =====\n课程\n25男：\n收到'}]}
         adapted, live = execution.adapt_snapshot(snapshot, '2026-10-16')
         self.assertTrue(live)
         days, conflicts = execution.snapshot_messages(adapted, __import__('datetime').date(2026, 10, 16),
