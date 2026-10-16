@@ -31,6 +31,8 @@ def main():
         raise RuntimeError("TELEGRAM_BOT_TOKEN GitHub Actions secret is missing")
     mode = os.getenv("CONNECT_MODE", "discover").strip()
     bot = api(token, "getMe", {})
+    if str(bot.get("username", "")).casefold() != "nuvexacheckbot":
+        raise RuntimeError("Telegram bot identity mismatch; expected @NuvexaCheckBot")
     print("Connected Telegram bot username: @" + str(bot.get("username", "<not_set>")))
     if mode == "discover":
         updates = api(token, "getUpdates", {"limit": 100, "timeout": 0})
