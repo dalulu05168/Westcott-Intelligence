@@ -33,56 +33,105 @@ def read_json(root, path, hashes):
     return json.loads(data)
 
 
+def adapt_snapshot(snapshot, story_date):
+    """Accept native Docs snapshots and archived formal snapshots without faking freshness."""
+    if not isinstance(snapshot, dict):
+        raise ValueError('INVALID_FORMAL_DOCUMENT_SNAPSHOT')
+    if 'document_id' not in snapshot:
+        return snapshot, True
+    if snapshot.get('document_id') != FORMAL_DOC_ID or not snapshot.get('revision_id'):
+        raise ValueError('INVALID_FORMAL_DOCUMENT_SNAPSHOT')
+    if snapshot.get('date') != story_date or not snapshot.get('paragraphs'):
+        raise ValueError('SNAPSHOT_DATE_UNVERIFIED')
+    if not snapshot.get('date_attribution') or not snapshot.get('document_url'):
+        raise ValueError('SNAPSHOT_DATE_UNVERIFIED')
+    if not all(isinstance(p, dict) and isinstance(p.get('text'), str)
+               and isinstance(p.get('paragraph_index'), int) for p in snapshot['paragraphs']):
+        raise ValueError('EMPTY_OR_INCOMPLETE_FORMAL_SNAPSHOT')
+    indexes = [p['paragraph_index'] for p in snapshot['paragraphs']]
+    if indexes != list(range(indexes[0], indexes[0] + len(indexes))):
+        raise ValueError('NONCONTIGUOUS_ARCHIVE_PARAGRAPHS')
+    return {'documentId': snapshot['document_id'], 'revisionId': snapshot['revision_id'],
+            'tabs': [{'tabId': snapshot.get('tab_id', 't.0'),
+                      'title': snapshot.get('tab_title', '')}],
+            'paragraphs': [{'tabId': p.get('tab_id', snapshot.get('tab_id', 't.0')),
+                            'startIndex': p.get('start_index', p['paragraph_index']),
+                            'text': p['text']} for p in snapshot['paragraphs']],
+            '_verified_story_date': story_date,
+            '_archived_source': True,
+            '_date_attribution': snapshot['date_attribution']}, False
+
+
 def snapshot_messages(snapshot, story_date, roster):
     if snapshot.get('documentId') != FORMAL_DOC_ID or not snapshot.get('revisionId'):
         raise ValueError('INVALID_FORMAL_DOCUMENT_SNAPSHOT')
-    stamp = datetime.fromisoformat(snapshot['retrieved_at'].replace('Z', '+00:00'))
-    if stamp.tzinfo is None:
-        raise ValueError('SNAPSHOT_TIMEZONE_REQUIRED')
-    from zoneinfo import ZoneInfo
-    local = stamp.astimezone(ZoneInfo('Europe/Bucharest'))
-    if local.date() > story_date:
-        raise ValueError('FUTURE_SNAPSHOT')
-    if local.date() != story_date:
-        raise ValueError('SNAPSHOT_NOT_REFRESHED_ON_STORY_DATE')
-    if (not isinstance(snapshot.get('tabs'), list) or not snapshot['tabs']
-            or not isinstance(snapshot.get('paragraphs'), list) or not snapshot['paragraphs']
-            or any(not isinstance(p, dict) or not isinstance(p.get('text'), str) for p in snapshot['paragraphs'])):
+    stamp_value = snapshot.get('retrieved_at')
+    if stamp_value is not None:
+        stamp = datetime.fromisoformat(stamp_value.replace('Z', '+00:00'))
+        if stamp.tzinfo is None:
+            raise ValueError('SNAPSHOT_TIMEZONE_REQUIRED')
+        from zoneinfo import ZoneInfo
+        local = stamp.astimezone(ZoneInfo('Europe/Bucharest'))
+        if local.date() > story_date:
+            raise ValueError('FUTURE_SNAPSHOT')
+        if local.date() != story_date:
+            raise ValueError('SNAPSHOT_NOT_REFRESHED_ON_STORY_DATE')
+    elif not snapshot.get('_archived_source'):
+        raise ValueError('SNAPSHOT_RETRIEVAL_TIME_MISSING')
+    tabs, paragraphs = snapshot.get('tabs'), snapshot.get('paragraphs')
+    if (not isinstance(tabs, list) or not tabs or
+            not isinstance(paragraphs, list) or not paragraphs or
+            any(not isinstance(p, dict) or not isinstance(p.get('text'), str) for p in paragraphs)):
+        raise ValueError('EMPTY_OR_INCOMPLETE_FORMAL_SNAPSHOT')
+    if any(p.get('tabId') not in {t.get('tabId') for t in tabs} for p in paragraphs):
         raise ValueError('EMPTY_OR_INCOMPLETE_FORMAL_SNAPSHOT')
     days, conflicts = {}, []
-    tabs = snapshot.get('tabs', [])
     for tab in tabs:
         title = tab.get('title', '')
-        if not re.fullmatch(r'\d{1,2}/\d{1,2}', title):
+        match = re.fullmatch(r'(\d{1,2})/(\d{1,2})', title)
+        if match:
+            key = date(story_date.year, int(match.group(1)), int(match.group(2))).isoformat()
+        elif snapshot.get('_verified_story_date') == story_date:
+            key = story_date.isoformat()
+            conflicts.append({'type': 'DATE_ATTRIBUTION_REQUIRES_REVIEW',
+                              'evidence': snapshot.get('_date_attribution')})
+        else:
+            raise ValueError('UNVERIFIED_DATE_BOUNDARY:' + title)
+        if key > story_date.isoformat():
             continue
-        month, day = map(int, title.split('/'))
-        day_date = date(story_date.year, month, day)
-        if day_date > story_date:
-            continue
-        key = day_date.isoformat()
         if key in days:
             raise ValueError('DUPLICATE_DATE_TAB:' + key)
-        days[key] = []  # A now-empty dated tab also replaces its older archive.
-        pp = [p for p in snapshot['paragraphs'] if p.get('tabId') == tab['tabId']]
+        pp = [p for p in paragraphs if p['tabId'] == tab['tabId']]
+        days[key] = []
         text = '\n'.join(p['text'] for p in pp).replace('\x0b', '\n')
         matches = list(LABEL.finditer(text))
         for i, match in enumerate(matches):
-            if not match.group(1):
+            body = text[match.end():matches[i + 1].start() if i + 1 < len(matches) else len(text)].strip()
+            if not body:
                 continue
-            pid = f'{int(match.group(1)):02}'
-            body = text[match.end():matches[i+1].start() if i+1<len(matches) else len(text)].strip()
+            raw_id = match.group(1)
+            if raw_id:
+                pid = f'{int(raw_id):02}'
+                invalid = pid not in roster or roster[pid]['gender'] != match.group(2)
+            else:
+                label = re.sub(r'\s+', '', match.group(3) or '')
+                pid = ('news_assistant' if '资讯助理' in label else
+                       'teacher' if '先生' in label else
+                       'investment_advisor' if '投资顾问' in label else
+                       'consultant' if '咨询顾问' in label else None)
+                invalid = pid is None
             mid = 'DOC-' + digest(f'{key}|{pid}|{i}|{body}'.encode())[:20]
-            if pid not in roster or roster[pid]['gender'] != match.group(2) or not body:
+            if invalid:
                 conflicts.append({'id': mid, 'date': key, 'label': match.group(0), 'text': body})
                 continue
             days[key].append({'id': mid, 'speaker_id': pid, 'text': body, 'date': key,
                               'kind': 'message', 'tab_id': tab['tabId'],
                               'source_revision': snapshot['revisionId'],
-                              'status': 'PRESENT_IN_FORMAL_DOCUMENT'})
-    if not days or any(p.get('tabId') not in {t.get('tabId') for t in tabs} for p in snapshot['paragraphs']):
+                              'status': 'PRESENT_IN_FORMAL_DOCUMENT',
+                              'sequence': i})
+    if not days:
         raise ValueError('EMPTY_OR_INCOMPLETE_FORMAL_SNAPSHOT')
     return days, conflicts
-
 
 def build_context(root, story_date, member_ids, snapshot=None):
     root, day = Path(root), date.fromisoformat(story_date)
@@ -103,6 +152,7 @@ def build_context(root, story_date, member_ids, snapshot=None):
     original_days = {key: list(rows) for key, rows in days.items()}
     conflicts = []
     if snapshot is not None:
+        snapshot, live_source = adapt_snapshot(snapshot, story_date)
         current, conflicts = snapshot_messages(snapshot, day, roster)
         for key, rows in current.items():
             # Retain an existing message ID only for a unique exact match in the same day.
@@ -141,7 +191,9 @@ def build_context(root, story_date, member_ids, snapshot=None):
     return {'schema_version': 'editorial-execution-1.8', 'story_date': story_date,
             'active_member_range': '01-40', 'members': members,
             'documented_interactions': documented, 'candidate_pairings': candidates,
-            'freshness': 'CURRENT_DOCUMENT_LOADED' if snapshot is not None else 'ARCHIVE_ONLY_REQUIRES_DOCUMENT_REFRESH',
+            'freshness': ('CURRENT_DOCUMENT_LOADED' if snapshot is not None and live_source else
+                          'ARCHIVE_SNAPSHOT_REQUIRES_DOCUMENT_REFRESH' if snapshot is not None else
+                          'ARCHIVE_ONLY_REQUIRES_DOCUMENT_REFRESH'),
             'snapshot_revision': snapshot.get('revisionId') if snapshot else None,
             'snapshot_sha256': digest(json.dumps(snapshot, sort_keys=True, ensure_ascii=False).encode()) if snapshot else None,
             'source_hashes': hashes, 'source_conflicts': conflicts,
