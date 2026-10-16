@@ -3,7 +3,7 @@
 工作流 `Westcott Morning Opening and Prior US Close (Review Only)` 每工作日 07:30 按 Europe/Bucharest 调度。
 这是**早间开群和美股回顾**，与用户要求删除的「07:30 早间新闻」并非同一任务。
 
-当前程序 `scripts/morning_opening.py` 不发送 Telegram / WhatsApp，不更改 Google Docs / 人物记忆；只生成 Actions 工件 `morning-review.json`、`morning-review.txt`。状态为 `HELD_SOURCE_REQUIRED`、`HELD_INVALID_MARKET_EVIDENCE` 或 `READY_FOR_EDITORIAL_REVIEW`。即使 READY，也仍需复核原文、正式剧情与去重，再决定发布；校验通过不等于采用或送达。
+当前程序 `scripts/morning_opening.py` 不发送 Telegram / WhatsApp，不更改 Google Docs / 人物记忆；仅在当前运行生成临时 `morning-review.json`、`morning-review.txt`，并把可复制备稿与状态写入 GitHub Actions 运行摘要，不上传受配额限制的 Actions artifact。状态为 `HELD_SOURCE_REQUIRED`、`HELD_INVALID_MARKET_EVIDENCE` 或 `READY_FOR_EDITORIAL_REVIEW`。即使 READY，也仍需复核原文、正式剧情与去重，再决定发布；校验通过不等于采用或送达。
 
 ## 如何接入美股上一收盘数据
 
