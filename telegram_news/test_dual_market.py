@@ -159,5 +159,25 @@ class TwoCountryTests(unittest.TestCase):
             req.assert_not_called()
 
 
+    def test_us_after_market_window_sends_same_two_country_pair(self):
+        # Friday NY regular session close corresponds to Friday 22:00 Paris
+        # and later Friday after-hours are covered until Saturday 02:00 Paris.
+        friday = datetime(2026, 10, 16, 23, 0, tzinfo=PARIS)
+        saturday_after = datetime(2026, 10, 17, 1, 0, tzinfo=PARIS)
+        self.assertEqual((["RO", "FR"], "hourly"), due(friday, ""))
+        self.assertEqual((["RO", "FR"], "hourly"), due(saturday_after, ""))
+        self.assertEqual(([], ""), due(datetime(2026, 10, 17, 9, tzinfo=PARIS), ""))
+
+    def test_morning_without_market_data_never_invents_index_values(self):
+        now = datetime(2026, 10, 16, 7, 30, tzinfo=TZ)
+        record = {"url": "https://bvb.ro/news", "source": "BVB"}
+        analysis = {"headline": "Raport financiar", "verified_event": "Comunicat verificat",
+                    "local_market_path": "Impact posibil asupra pieței BET",
+                    "next_watch": "Următoarea publicare"}
+        text = caption("RO", record, analysis, "", now, "morning", None)
+        self.assertIn("nu sunt verificate", text)
+        self.assertNotIn("Nasdaq Composite:", text)
+
+
 if __name__ == "__main__":
     unittest.main()
