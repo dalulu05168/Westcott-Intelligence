@@ -110,5 +110,18 @@ class TwoCountryTests(unittest.TestCase):
         self.assertIsNotNone(materiality(record, "FR", now, "hourly", {}))
 
 
+    def test_central_bank_rate_decision_beats_generic_energy_announcement(self):
+        now = datetime(2026, 10, 16, 10, 0, tzinfo=PARIS)
+        timestamp = (now - timedelta(minutes=18)).isoformat()
+        items = [
+            {"source": "FR_GOV", "id": "gov", "title": "Énergie: réunion de concertation",
+             "published": timestamp},
+            {"source": "ECB", "id": "ecb", "title": "ECB announces monetary policy interest rates decision",
+             "published": timestamp},
+        ]
+        first = pick(items, "FR", now, "hourly", {"sent": {}})[0]
+        self.assertEqual("ecb", first["id"])
+
+
 if __name__ == "__main__":
     unittest.main()
