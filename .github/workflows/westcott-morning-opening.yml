@@ -5,6 +5,12 @@ on:
     - cron: '30 7 * * 1-5'
       timezone: Europe/Bucharest
   workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/westcott-morning-opening.yml'
+      - 'scripts/morning_opening.py'
+      - 'scripts/test_morning_opening.py'
+      - 'news/verified-market/**'
 
 permissions:
   contents: read
