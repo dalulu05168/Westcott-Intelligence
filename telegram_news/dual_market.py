@@ -18,6 +18,7 @@ import feedparser
 import requests
 from bs4 import BeautifulSoup
 from PIL import Image
+from pdf_official import verify_original_pdf
 
 from main import (TZ, BVB_URL, SESSION, ensure_private_destination,
                   fetch_bvb, fetch_feed, get_state, save_state)
@@ -139,6 +140,14 @@ def fetch_original(record):
         return None
     response = SESSION.get(record["url"], timeout=18)
     response.raise_for_status()
+    if record["source"] in {"BVB_MARKET", "BVB_FIN"} and (
+            response.content.startswith(b"%PDF-")
+            or "application/pdf" in response.headers.get("Content-Type", "").lower()):
+        # The BVB RSS links are commonly *original PDF disclosures*, not HTML.
+        # If a PDF is scanned/garbled, verify_original_pdf refuses it.
+        return verify_original_pdf(response.content, record["title"])
+    if "pdf" in response.headers.get("Content-Type", "").lower():
+        return None
     html = BeautifulSoup(response.content, "html.parser")
     body = html.select_one("article") or html.select_one("main") or html.body
     if body is None:
@@ -465,18 +474,30 @@ def publish():
                 if original is None:
                     continue
                 article, source_text = original
-                image_url = official_image(article, record)
-                if not image_url:
-                    print("OFFICIAL_ARTICLE_IMAGE_MISSING", record["source"])
-                    continue
-                photo = download_image(image_url, record)
-                if not photo:
-                    continue
+                if isinstance(article, dict) and article.get("kind") == "official_pdf_page1":
+                    # Clearly identify a real official PDF page preview, NOT a press photo.
+                    image_url = record["url"] + "#page=1"
+                    photo = (article["preview_png"], "image/png")
+                    media_kind = "official_pdf_page1"
+                else:
+                    image_url = official_image(article, record)
+                    if not image_url:
+                        print("OFFICIAL_ARTICLE_IMAGE_MISSING", record["source"])
+                        continue
+                    photo = download_image(image_url, record)
+                    if not photo:
+                        continue
+                    media_kind = "original_article_image"
                 quote = us_quote_snapshot() if kind == "morning" else None
                 data = localize(record, source_text, country, quote)
                 if not data:
                     continue
                 text = caption(country, record, data, image_url, now, kind, quote)
+                if media_kind == "official_pdf_page1" and text:
+                    note = ("\\nImagine: prima pagină a documentului oficial PDF."
+                            if country == "RO" else
+                            "\\nImage : première page du document PDF officiel.")
+                    text = text + note if len(text) + len(note) <= 1024 else None
                 if not text:
                     continue
                 if dry:
