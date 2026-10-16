@@ -49,7 +49,7 @@ jobs:
           LEGACY_TELEGRAM_NEWS_ENABLED: '${{ vars.TELEGRAM_NEWS_ENABLED }}'
           OFFICIAL_IMAGE_REUSE_APPROVED: '${{ vars.OFFICIAL_IMAGE_REUSE_APPROVED }}'
           TELEGRAM_BOT_TOKEN: '${{ secrets.TELEGRAM_BOT_TOKEN }}'
-          TELEGRAM_CHAT_ID: '${{ secrets.TELEGRAM_CHAT_ID }}'
+          TELEGRAM_PRIVATE_CHAT_ID: '${{ secrets.TELEGRAM_PRIVATE_CHAT_ID }}'
           OPENAI_API_KEY: '${{ secrets.OPENAI_API_KEY }}'
           OPENAI_NEWS_MODEL: '${{ vars.OPENAI_NEWS_MODEL }}'
           TWELVE_DATA_API_KEY: '${{ secrets.TWELVE_DATA_API_KEY }}'
