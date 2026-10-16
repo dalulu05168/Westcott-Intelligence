@@ -1,0 +1,39 @@
+{
+  "state": "PENDING_DO_NOT_RETRY",
+  "event_id": "raiffeisen-rbro33-20261016-manual",
+  "fingerprint": "f1bcd3d52d2f84049965b0f0b06ee29b892f1322f3c4a67752dc4e9da46337b1",
+  "claim_ids": [
+    "event",
+    "impact",
+    "instrument",
+    "watch"
+  ],
+  "claim_evidence_keys": [
+    "2ed065291d0b0a38c07c73e2296a620801f59aa2ad6efb89157a316b583a3b7e",
+    "2fd1eaa762ab59c5599b33447a8b0d5452d4bd8c7d707993654ef1214161e011",
+    "c47fcf19c2ccd1523aed1b412402e04bbf6d9f1c8a8fb1473adda1f0c5546381"
+  ],
+  "claim_reservation_paths": [
+    "audit/telegram-claims/RO/2ed065291d0b0a38c07c73e2296a620801f59aa2ad6efb89157a316b583a3b7e.json",
+    "audit/telegram-claims/RO/2fd1eaa762ab59c5599b33447a8b0d5452d4bd8c7d707993654ef1214161e011.json",
+    "audit/telegram-claims/RO/c47fcf19c2ccd1523aed1b412402e04bbf6d9f1c8a8fb1473adda1f0c5546381.json"
+  ],
+  "editorial_acceptance": null,
+  "evidence_urls": [
+    "https://bvb.ro/AboutUs/MediaCenter/PressItem/Raiffeisen-Bank-listeaza-o-noua-emisiune-de-obligatiuni-la-Bursa-de-Valori-Bucuresti-in-valoare-de-750-de-milioane-de-lei/6472"
+  ],
+  "ledger": "news/approved/raiffeisen-rbro33-20261016-manual.json",
+  "ledger_digest": "66df59e7219c0afa653fec54ae2591baaa02e0f4c300b3eef5fc1e3546b654d1",
+  "original_article_url": "https://bvb.ro/AboutUs/MediaCenter/PressItem/Raiffeisen-Bank-listeaza-o-noua-emisiune-de-obligatiuni-la-Bursa-de-Valori-Bucuresti-in-valoare-de-750-de-milioane-de-lei/6472",
+  "original_image_url": null,
+  "image_decision": "original_article_link_preview",
+  "reserved_at": "2026-10-16T08:54:12.601910+00:00",
+  "message_ids": [],
+  "source_rechecks": [
+    {
+      "url": "https://bvb.ro/AboutUs/MediaCenter/PressItem/Raiffeisen-Bank-listeaza-o-noua-emisiune-de-obligatiuni-la-Bursa-de-Valori-Bucuresti-in-valoare-de-750-de-milioane-de-lei/6472",
+      "source_text_sha256": "62b40a756f44e057c2d17f2aa8554b408385f657642d32f3057a98cb962cc287",
+      "checked_at": "2026-10-16T08:54:11.578250+00:00"
+    }
+  ]
+}
