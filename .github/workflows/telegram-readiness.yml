@@ -1,0 +1,39 @@
+name: Telegram RO FR | Private Readiness (No Send)
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'telegram_news/**'
+      - '.github/workflows/telegram-dual-market.yml'
+      - '.github/workflows/telegram-readiness.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  prerequisites:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r telegram_news/requirements.txt
+      - name: Read-only source bot identity and private destination readiness
+        env:
+          TELEGRAM_BOT_TOKEN: '${{ secrets.TELEGRAM_BOT_TOKEN }}'
+          TELEGRAM_PRIVATE_CHAT_ID: '${{ secrets.TELEGRAM_PRIVATE_CHAT_ID }}'
+          OPENAI_API_KEY: '${{ secrets.OPENAI_API_KEY }}'
+          OPENAI_NEWS_MODEL: '${{ vars.OPENAI_NEWS_MODEL }}'
+          TWELVE_DATA_API_KEY: '${{ secrets.TWELVE_DATA_API_KEY }}'
+          OFFICIAL_IMAGE_REUSE_APPROVED: '${{ vars.OFFICIAL_IMAGE_REUSE_APPROVED }}'
+          LEGACY_TELEGRAM_NEWS_ENABLED: '${{ vars.TELEGRAM_NEWS_ENABLED }}'
+          TELEGRAM_DUAL_MARKET_ENABLED: '${{ vars.TELEGRAM_DUAL_MARKET_ENABLED }}'
+        run: python telegram_news/readiness_probe.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: telegram-private-readiness
+          path: telegram-readiness.json
+          if-no-files-found: ignore
+          retention-days: 7
