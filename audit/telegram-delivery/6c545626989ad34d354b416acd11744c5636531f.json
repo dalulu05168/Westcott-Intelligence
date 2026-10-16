@@ -1,5 +1,5 @@
 {
-  "state": "PENDING_DO_NOT_RETRY",
+  "state": "DELIVERED",
   "event_id": "insee-business-creations-20261016-manual",
   "fingerprint": "6c545626989ad34d354b416acd11744c5636531fc52f97958360b939b23fcce3",
   "claim_ids": [
@@ -23,7 +23,9 @@
   "original_image_url": null,
   "image_decision": "original_article_link_preview",
   "reserved_at": "2026-10-16T08:56:53.131592+00:00",
-  "message_ids": [],
+  "message_ids": [
+    40
+  ],
   "source_rechecks": [
     {
       "url": "https://www.insee.fr/fr/statistiques/9078876",
@@ -38,5 +40,9 @@
     "image_exception_at": "2026-10-16T08:51:41Z",
     "scope": "User-requested single French news item; not an assertion of an automatic hourly winner."
   },
-  "release_mode": "USER_REQUESTED_SINGLE_REVIEWED_NEWS_LINK_ONLY"
+  "release_mode": "USER_REQUESTED_SINGLE_REVIEWED_NEWS_LINK_ONLY",
+  "photo_message_id": null,
+  "image_delivery": "article_link_preview",
+  "group_title": "🌐~~~资讯快报",
+  "delivered_at": "2026-10-16T08:56:58.299674+00:00"
 }
