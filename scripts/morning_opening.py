@@ -19,6 +19,26 @@ INDEX_NAMES = {
     "IXIC": "纳斯达克综合指数",
 }
 
+# Verify that every reported US index has its own index-owner source URL.
+# A recognized domain does not replace current original-page fact review.
+INDEX_OFFICIAL_HOSTS = {
+    "DJIA": ("spglobal.com",),
+    "SPX": ("spglobal.com",),
+    "IXIC": ("nasdaq.com",),
+}
+
+
+def is_official_index_source(symbol, url):
+    if not is_https(url):
+        return False
+    parsed = urlsplit(str(url))
+    if parsed.port not in (None, 443) or parsed.fragment:
+        return False
+    host = parsed.hostname.lower().rstrip(".")
+    return any(host == domain or host.endswith("." + domain)
+               for domain in INDEX_OFFICIAL_HOSTS.get(symbol, ()))
+
+
 def parse_iso(value):
     if not isinstance(value, str):
         raise ValueError("Expected ISO timestamp string")
@@ -40,8 +60,9 @@ def validate_close(data, now):
     lag = (ny_date - session_date).days
     if not (1 <= lag <= 7) or session_date.weekday() >= 5:
         raise ValueError("Not a recent, prior US weekday trading session")
-    if not is_https(data.get("source_url", "")):
-        raise ValueError("Snapshot requires an HTTPS source URL")
+    if not any(is_official_index_source(symbol, data.get("source_url", ""))
+               for symbol in INDEX_NAMES):
+        raise ValueError("Snapshot source must belong to an official US index owner")
     source_at = parse_iso(data["source_checked_at"])
     if source_at > now + timedelta(minutes=5) or source_at < now - timedelta(days=8):
         raise ValueError("Invalid source check freshness")
@@ -65,8 +86,8 @@ def validate_close(data, now):
         as_of = parse_iso(row["quote_as_of"])
         if as_of.astimezone(NEW_YORK).date() != session_date or as_of > now:
             raise ValueError("Quote timestamp not in the claimed market session")
-        if row.get("phase") != "REGULAR_CLOSE" or not is_https(row.get("source_url", "")):
-            raise ValueError("Unverifiable phase or missing quote source")
+        if row.get("phase") != "REGULAR_CLOSE" or not is_official_index_source(symbol, row.get("source_url", "")):
+            raise ValueError("Unverifiable phase or missing official index-owner quote source")
         if not row.get("evidence_excerpt"):
             raise ValueError("Missing quote evidence excerpt")
         found[symbol] = row
@@ -113,10 +134,15 @@ def build(now, market_data=None):
         pct = rows[symbol]["change_pct"]
         direction = "上涨" if pct > 0 else ("下跌" if pct < 0 else "持平")
         statements.append(f"{INDEX_NAMES[symbol]}{direction}{abs(pct):.2f}%")
+    official_links = [
+        INDEX_NAMES[symbol] + "：" + rows[symbol]["source_url"]
+        for symbol in ("DJIA", "SPX", "IXIC")
+    ]
     report["us_recap_draft"] = (
         f"===== 资讯助理 =====\n📊 {session_date:%Y年%m月%d日}美股常规交易时段收盘，"
         + "，".join(statements) + "。\n"
         + "以上是所提供审核材料中的收盘百分比；宏观及公司消息仍需逐条核实后再展开。"
+        + "\\n\\n🔗 官方指数原始来源：\\n" + "\\n".join(official_links)
     )
     report["status"] = "READY_FOR_EDITORIAL_REVIEW"
     report["reason"] = (
