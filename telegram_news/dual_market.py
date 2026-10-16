@@ -405,8 +405,13 @@ def caption(country, record, analysis, image_url, now, kind, quote=None):
              f"{terms[2]}: {analysis['next_watch']}",
              "", f"{terms[3]}: {record['url']}",
              f"{local_time:%Y-%m-%d %H:%M}"]
-    if kind == "morning" and quote:
-        parts.insert(2, "\n".join(quote["lines"]) + "\n" + quote["source"])
+    if kind == "morning":
+        if quote:
+            parts.insert(2, "\n".join(quote["lines"]) + "\n" + quote["source"])
+        else:
+            parts.insert(2, ("Indici bursieri SUA: cotațiile de închidere nu sunt verificate; fără cifre."
+                             if country == "RO" else
+                             "Indices américains : clôtures non vérifiées, aucun chiffre publié."))
     text = "\n".join(parts)
     return text if len(text) <= 1024 else None
 
@@ -433,13 +438,17 @@ def due(now, override):
                     "hourly" if override == "hourly_pair" else "morning"
                 )
     romania, france = now.astimezone(TZ), now.astimezone(PARIS)
-    if romania.weekday() >= 5:
+    # French 00:00–02:00 Tue–Sat is the previous US trading day's
+    # after-hours window. Saturday 00–02 covers Friday US post-market.
+    us_after_hours = france.weekday() in (1, 2, 3, 4, 5) and france.hour in (0, 1, 2)
+    if romania.weekday() >= 5 and not us_after_hours:
         return [], ""
     if france.hour == 7 and france.minute in range(25, 55):
         return ["FR"], "morning"
     if romania.hour == 7 and romania.minute in range(25, 55):
         return ["RO"], "morning"
-    if france.hour in range(9, 23) and france.minute in range(0, 25):
+    if ((france.weekday() < 5 and france.hour in range(9, 24))
+            or us_after_hours) and france.minute in range(0, 25):
         return ["RO", "FR"], "hourly"
     return [], ""
 
