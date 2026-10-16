@@ -19,6 +19,7 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 from morning_opening import build, parse_iso
+from morning_romania_us import build as build_romania_us
 
 TZ = ZoneInfo('Europe/Bucharest')
 DESTINATION = '🌐~~~资讯快报'
@@ -55,16 +56,21 @@ def check_package(package, now, root=ROOT):
     if read_at.astimezone(TZ).date().isoformat() != today or read_at > approved_at:
         raise ValueError('Formal story not checked before approval today')
     evidence = package.get('market_evidence')
-    report = build(local, evidence)
+    romania_evidence = package.get('romania_evidence')
+    report = build_romania_us(local, evidence, romania_evidence)
     if report['status'] != 'READY_FOR_EDITORIAL_REVIEW':
-        raise ValueError('US close evidence not accepted: ' + report['status'])
+        raise ValueError('Romania+US official evidence not accepted: ' + report['status'])
+    romania_checked_at = parse_iso(romania_evidence['source_checked_at'])
+    if romania_checked_at.astimezone(TZ).date().isoformat() != today or romania_checked_at > approved_at:
+        raise ValueError('Romanian original news not rechecked before morning approval')
     source_at = parse_iso(evidence['source_checked_at'])
     if source_at.astimezone(TZ).date().isoformat() != today or source_at > approved_at:
         raise ValueError('US close evidence not checked before approval today')
     message = package.get('approved_text')
     if (not isinstance(message, str) or report['opening_draft'] not in message
-            or report['us_recap_draft'] not in message):
-        raise ValueError('Exact validated opening/index recap missing from approved text')
+            or report['us_recap_draft'] not in message
+            or report['romania_draft'] not in message):
+        raise ValueError('Exact US index links/Romania official news absent from approved text')
     if len(message.strip()) > 16000 or not message.lstrip().startswith('===== 资讯助理 ====='):
         raise ValueError('Approved Telegram message format/size invalid')
     roster_file = root / 'skills/p004-chat-suite/characters/final-identity-65.json'
