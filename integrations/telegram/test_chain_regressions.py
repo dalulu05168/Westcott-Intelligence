@@ -110,8 +110,8 @@ class ChainRegressions(unittest.TestCase):
         with patch.object(pub, 'github_write', side_effect=atomic_write):
             pub.reserve(first, env)
             other = copy.deepcopy(ledger)
-            other['claims'][0]['text'] = 'Different genuinely new story.'
-            other['claims'][0]['evidence'][0]['excerpt'] = 'New original evidence.'
+            other['claims'][0]['text'] = '另一则已经核实的全新财经新闻。'
+            other['claims'][0]['evidence'][0]['excerpt'] = '另一份官方原文的最新证据。'
             second = pub.prepare(other, 'news/approved/second.json')
             second['editorial_acceptance'] = first['editorial_acceptance']
             with self.assertRaises(pub.PublicationError):
