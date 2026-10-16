@@ -217,7 +217,7 @@ class OriginalArticleTests(unittest.TestCase):
         env = {"TELEGRAM_BOT_TOKEN": "secret", "TELEGRAM_CHAT_ID": "-1001"}
         with patch.object(bridge, "call_api", side_effect=call):
             receipt = bridge.send_group_news_from_official_article(
-                "===== 资讯助理 =====\n消息", "https://news.example.org/article",
+                "===== 资讯助理 =====\n消息\n原始来源：https://news.example.org/article", "https://news.example.org/article",
                 "https://images.example.org/actual-photo.jpg", env)
         self.assertEqual([x[0] for x in calls], ["getMe", "getChat", "sendPhoto", "sendMessage"])
         self.assertEqual(calls[2][1]["photo"], "https://images.example.org/actual-photo.jpg")
@@ -236,7 +236,7 @@ class OriginalArticleTests(unittest.TestCase):
             raise AssertionError(method)
         with patch.object(bridge, "call_api", side_effect=call):
             receipt = bridge.send_group_news_from_official_article(
-                "===== 资讯助理 =====\n消息", "https://news.example.org/article", None,
+                "===== 资讯助理 =====\n消息\n原始来源：https://news.example.org/article", "https://news.example.org/article", None,
                 {"TELEGRAM_BOT_TOKEN": "secret", "TELEGRAM_CHAT_ID": "-1001"})
         self.assertEqual([x[0] for x in calls], ["getMe", "getChat", "sendMessage"])
         self.assertEqual(calls[-1][1]["link_preview_options"]["url"],
@@ -259,6 +259,21 @@ class OriginalArticleTests(unittest.TestCase):
                 with self.assertRaisesRegex(pub.PublicationError, 'must be Chinese'):
                     pub.prepare(ledger, "news/approved/reviewed.json")
 
+
+    def test_nonofficial_evidence_source_never_publishes(self):
+        ledger = self.ledger()
+        ledger["sources"]["s1"]["source_type"] = "media_summary"
+        with self.assertRaises(pub.PublicationError):
+            pub.prepare(ledger, "news/approved/reviewed.json")
+
+    def test_news_without_official_link_is_blocked_before_reservation(self):
+        prepared = pub.prepare(self.ledger(), "news/approved/reviewed.json")
+        prepared["text"] = prepared["text"].replace(
+            "https://news.example.org/article-12", "")
+        with patch.object(pub, "reserve") as reservation:
+            with self.assertRaisesRegex(pub.PublicationError, "Official source URL"):
+                pub.publish(prepared, {"PUBLISH_CONFIRMATION": pub.CONFIRM})
+        reservation.assert_not_called()
 
 if __name__ == "__main__":
     unittest.main()
