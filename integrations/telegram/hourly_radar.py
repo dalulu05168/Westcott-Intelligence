@@ -37,21 +37,8 @@ def collect_hour(feeds=None, fetcher=None, inspector=None, end=None, max_candida
             return {**row, 'body_fetch_status': 'UNAVAILABLE', 'inspection_error': type(exc).__name__}
     with ThreadPoolExecutor(max_workers=4) as pool:
         candidates = list(pool.map(inspect, candidates))
-    parents = {}
-    for parent in candidates:
-        if parent.get('body_fetch_status') != 'FETCHED_FOR_REVIEW':
-            continue
-        for child in candidates:
-            if (child['article_url'] in parent.get('linked_document_urls', [])
-                    and child['title'] == parent['title'] and child['source'] == parent['source']
-                    and child['published_at'] == parent['published_at']):
-                parents.setdefault(child['article_url'], []).append(parent)
-    attached = set()
-    for child_url, linked_parents in parents.items():
-        if len(linked_parents) == 1:
-            linked_parents[0].setdefault('verified_attachment_urls', []).append(child_url)
-            attached.add(child_url)
-    candidates = [c for c in candidates if c['article_url'] not in attached]
+    # A cover-page link proves association, not equivalent disclosure content.
+    # Keep PDF bodies independently visible and required for a complete comparison.
     complete = (not truncated and all(c['status'] == 'OK' for c in coverage)
                 and all(c.get('body_fetch_status') == 'FETCHED_FOR_REVIEW'
                         and c.get('source_text_truncated') is False for c in candidates))

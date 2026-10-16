@@ -71,7 +71,7 @@ class HourlyRadarTests(unittest.TestCase):
                 return {**self.inspector(row), 'linked_document_urls': [linked]}
             return {**row, 'body_fetch_status': 'UNAVAILABLE'}
         result = hourly.collect_hour(feeds, fetch, inspect, self.end)
-        self.assertEqual({r['article_url'] for r in result['candidates']}, {page, unrelated})
+        self.assertEqual({r['article_url'] for r in result['candidates']}, {page, linked, unrelated})
         self.assertEqual(result['status'], 'INCOMPLETE')
 
 
