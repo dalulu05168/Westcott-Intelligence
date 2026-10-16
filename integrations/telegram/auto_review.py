@@ -336,6 +336,10 @@ def main(llm=call_llm, gate=dry_run_gate, now=None):
     if MODE != "pending":
         raise RuntimeError("automatic_confirmation_disabled_external_review_required")
     summary = {"time": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "written": [], "held": []}
+    summary["reviewer_configuration"] = {"api_key_configured": bool(os.environ.get("OPENAI_API_KEY", "").strip()), "model_configured": bool(model_name().strip())}
+    if llm is call_llm and not all(summary["reviewer_configuration"].values()):
+        summary["held"].append(["*", "reviewer_not_configured"])
+        return finish(summary)
     try:
         path, edition = latest_edition(now)
     except Exception as e:
@@ -378,7 +382,7 @@ def finish(summary):
         json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(summary, ensure_ascii=False, indent=2))
     if not summary["written"]:
-        print("::warning::本轮没有任何账本写入 news/approved")
+        print("Draft-only run; no approved ledger or Telegram send.")
     return summary
 
 
