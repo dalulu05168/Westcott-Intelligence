@@ -1,0 +1,63 @@
+{
+  "status": "COMPLETE",
+  "window_start": "2026-10-16T17:07:00+00:00",
+  "window_end": "2026-10-16T18:07:00+00:00",
+  "captured_at": "2026-10-16T18:07:22.639047+00:00",
+  "required_feed_ids": [
+    "fed_monetary",
+    "ecb_press",
+    "bvb_market",
+    "bvb_announcements",
+    "insee_conjuncture",
+    "bls_cpi",
+    "bls_employment",
+    "eurostat_releases"
+  ],
+  "coverage": [
+    {
+      "feed_id": "fed_monetary",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "ecb_press",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "bvb_market",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "bvb_announcements",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "insee_conjuncture",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "bls_cpi",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "bls_employment",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "eurostat_releases",
+      "status": "OK",
+      "parsed_items": 0
+    }
+  ],
+  "truncated": false,
+  "candidates": [],
+  "assessments_status": "UNREVIEWED",
+  "telegram_publishable": false,
+  "ranking_scope": "Configured official sources only; not a claim of global exhaustive coverage."
+}
