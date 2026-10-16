@@ -237,7 +237,7 @@ class TwoCountryTests(unittest.TestCase):
         response.json.return_value = {"output": [
             {"content": [{"type": "output_text", "text": json.dumps(invalid, ensure_ascii=False)}]}
         ]}
-        with patch.dict(os.environ, {"OPENAI_API_KEY": "test-secret", "OPENAI_NEWS_MODEL": "test-model"}), \\
+        with patch.dict(os.environ, {"OPENAI_API_KEY": "test-secret", "OPENAI_NEWS_MODEL": "test-model"}), \
              patch("dual_market.requests.post", return_value=response):
             self.assertIsNone(localize(record, source, "FR"))
 
