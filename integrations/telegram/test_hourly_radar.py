@@ -98,6 +98,49 @@ class HourlyRadarTests(unittest.TestCase):
         self.assertIs(report['telegram_publishable'], False)
         self.assertEqual('news/editions/test.json', report['edition_path'])
 
+    def test_coverage_explains_empty_hour_without_calling_feed_empty(self):
+        def old_feed(feed):
+            return self.feed(feed).replace(b'09:10:00', b'07:10:00')
+        edition = hourly.collect_hour(self.feeds, old_feed, self.inspector, self.end)
+        row = edition['coverage'][0]
+        self.assertEqual('COMPLETE', edition['status'])
+        self.assertEqual([], edition['candidates'])
+        self.assertEqual(2, row['raw_entries'])
+        self.assertEqual(2, row['excluded_before_window'])
+        self.assertEqual(0, row['in_window_entries'])
+        self.assertEqual('2026-10-16T07:10:00+00:00', row['latest_published_at'])
+        self.assertEqual(64, len(row['feed_sha256']))
+        self.assertEqual(self.feeds[0]['url'], row['feed_url'])
+
+    def test_window_evidence_counts_start_inclusive_end_exclusive(self):
+        def boundary_feed(_):
+            dates = ('2026-10-16T08:36:59Z', '2026-10-16T10:37:00+02:00',
+                     '2026-10-16T09:36:59Z', '2026-10-16T09:37:00Z')
+            return ('<rss><channel>' + ''.join(
+                '<item><title>Official</title><link>https://publisher.example/' + str(i)
+                + '</link><pubDate>' + date + '</pubDate></item>'
+                for i, date in enumerate(dates)) + '</channel></rss>').encode()
+        edition = hourly.collect_hour(self.feeds, boundary_feed, self.inspector, self.end)
+        row = edition['coverage'][0]
+        self.assertEqual(4, row['raw_entries'])
+        self.assertEqual(1, row['excluded_before_window'])
+        self.assertEqual(1, row['excluded_at_or_after_end'])
+        self.assertEqual(2, row['in_window_entries'])
+        self.assertEqual(2, len(edition['candidates']))
+
+    def test_atom_window_evidence_preserves_published_precedence(self):
+        def atom_feed(_):
+            return b'''<feed xmlns="http://www.w3.org/2005/Atom"><entry>
+                <title>Official</title><link href="https://publisher.example/atom"/>
+                <published>2026-10-16T07:00:00Z</published>
+                <updated>2026-10-16T09:10:00Z</updated>
+                <dc:date xmlns:dc="http://purl.org/dc/elements/1.1/">2026-10-16T09:20:00Z</dc:date>
+                </entry></feed>'''
+        edition = hourly.collect_hour(self.feeds, atom_feed, self.inspector, self.end)
+        self.assertEqual([], edition['candidates'])
+        self.assertEqual('2026-10-16T07:00:00+00:00',
+                         edition['coverage'][0]['latest_published_at'])
+
 
 if __name__ == '__main__':
     unittest.main()

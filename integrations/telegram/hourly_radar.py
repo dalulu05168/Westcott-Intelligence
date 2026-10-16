@@ -1,6 +1,7 @@
 """Capture the full one-hour official-source comparison set; never approve/send."""
 import argparse
 import base64
+import hashlib
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 import json
@@ -8,6 +9,26 @@ import os
 from urllib import error, request
 import news_radar as radar
 from editorial_policy import digest
+
+
+def feed_window_evidence(feed_xml, start, end):
+    """Explain the window filter after strict feed validation; no approval."""
+    root = radar.ET.fromstring(feed_xml)
+    entries = root.findall('.//item')
+    date_tags = ['pubDate', '{http://purl.org/dc/elements/1.1/}date']
+    if not entries:
+        entries = root.findall('{http://www.w3.org/2005/Atom}entry')
+        date_tags = ['{http://www.w3.org/2005/Atom}published',
+                     '{http://www.w3.org/2005/Atom}updated']
+    stamps = [radar.parse_time(radar.first_text(node, date_tags)) for node in entries]
+    return {
+        'feed_sha256': hashlib.sha256(feed_xml).hexdigest(),
+        'raw_entries': len(entries),
+        'latest_published_at': max(stamps).isoformat(),
+        'excluded_before_window': sum(stamp < start for stamp in stamps),
+        'excluded_at_or_after_end': sum(stamp >= end for stamp in stamps),
+        'in_window_entries': sum(start <= stamp < end for stamp in stamps),
+    }
 
 
 def collect_hour(feeds=None, fetcher=None, inspector=None, end=None, max_candidates=80):
@@ -19,9 +40,13 @@ def collect_hour(feeds=None, fetcher=None, inspector=None, end=None, max_candida
     rows, coverage = [], []
     for feed in feeds:
         try:
-            items = radar.extract_items(fetcher(feed), feed, strict=True, window_start=start, window_end=end)
+            feed_xml = fetcher(feed)
+            retrieved_at = datetime.now(timezone.utc).isoformat()
+            items = radar.extract_items(feed_xml, feed, strict=True, window_start=start, window_end=end)
             rows.extend(items)
-            coverage.append({'feed_id': feed['id'], 'status': 'OK', 'parsed_items': len(items)})
+            coverage.append({'feed_id': feed['id'], 'status': 'OK', 'parsed_items': len(items),
+                             'feed_url': feed['url'], 'retrieved_at': retrieved_at,
+                             **feed_window_evidence(feed_xml, start, end)})
         except radar.RadarError as exc:
             coverage.append({'feed_id': feed['id'], 'status': 'ERROR', 'reason': str(exc)})
     # No keyword prefilter or top-12 truncation before country impact comparison.
@@ -116,6 +141,7 @@ def readable_readiness(edition, edition_path=None):
         'candidates_unverified': len(unavailable),
         'unverified_details': unavailable,
         'feed_failures': feeds_failed,
+        'source_windows': edition.get('coverage', []),
         'truncated': edition.get('truncated'),
         'assessments_status': edition.get('assessments_status'),
         'telegram_publishable': False,
