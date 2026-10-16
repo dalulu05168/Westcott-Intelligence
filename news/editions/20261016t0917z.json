@@ -1,0 +1,106 @@
+{
+  "status": "INCOMPLETE",
+  "window_start": "2026-10-16T08:17:00+00:00",
+  "window_end": "2026-10-16T09:17:00+00:00",
+  "captured_at": "2026-10-16T09:18:04.114001+00:00",
+  "required_feed_ids": [
+    "fed_monetary",
+    "ecb_press",
+    "bvb_market",
+    "bvb_announcements",
+    "insee_conjuncture",
+    "bls_cpi",
+    "bls_employment",
+    "eurostat_releases"
+  ],
+  "coverage": [
+    {
+      "feed_id": "fed_monetary",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "ecb_press",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "bvb_market",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "bvb_announcements",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "insee_conjuncture",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "bls_cpi",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "bls_employment",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "eurostat_releases",
+      "status": "OK",
+      "parsed_items": 2
+    }
+  ],
+  "truncated": false,
+  "candidates": [
+    {
+      "title": "Annual inflation up to 3.8% in the euro area",
+      "article_url": "https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/2-16102026-ap",
+      "feed_article_url": "https://ec.europa.eu/eurostat/product?code=2-16102026-ap",
+      "published_at": "2026-10-16T09:00:00+00:00",
+      "source": "Eurostat",
+      "feed_id": "eurostat_releases",
+      "id": "627a59ac67493464077c4d12917ca07434d27947",
+      "rank_signal_hits": 1,
+      "intake_status": "UNREVIEWED",
+      "body_read": false,
+      "numbers_checked": false,
+      "image_reuse_permission_verified": false,
+      "importance_confirmed": false,
+      "telegram_publishable": false,
+      "body_fetch_error": "Publisher canonical differs from feed story.",
+      "original_image_candidate_url": null,
+      "body_fetch_status": "UNAVAILABLE",
+      "image_origin": "metadata_unavailable",
+      "image_review_required": true
+    },
+    {
+      "title": "Euro area international trade in goods deficit €16.1 bn",
+      "article_url": "https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/6-16102026-bp",
+      "feed_article_url": "https://ec.europa.eu/eurostat/product?code=6-16102026-bp",
+      "published_at": "2026-10-16T09:00:00+00:00",
+      "source": "Eurostat",
+      "feed_id": "eurostat_releases",
+      "id": "5af1ba5f0b1cdbcabf9ce1f34061d291432db66b",
+      "rank_signal_hits": 0,
+      "intake_status": "UNREVIEWED",
+      "body_read": false,
+      "numbers_checked": false,
+      "image_reuse_permission_verified": false,
+      "importance_confirmed": false,
+      "telegram_publishable": false,
+      "body_fetch_error": "Publisher canonical differs from feed story.",
+      "original_image_candidate_url": null,
+      "body_fetch_status": "UNAVAILABLE",
+      "image_origin": "metadata_unavailable",
+      "image_review_required": true
+    }
+  ],
+  "assessments_status": "UNREVIEWED",
+  "telegram_publishable": false,
+  "ranking_scope": "Configured official sources only; not a claim of global exhaustive coverage."
+}
