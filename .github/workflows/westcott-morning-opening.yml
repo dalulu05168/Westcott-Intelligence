@@ -1,4 +1,4 @@
-name: Westcott Morning Opening and Prior US Close (Reviewed Group Gate)
+name: Westcott Parallel Morning Briefs (RO+US and FR+US)
 
 on:
   schedule:
@@ -14,6 +14,10 @@ on:
       - 'scripts/morning_group_delivery.py'
       - 'scripts/test_morning_group_delivery.py'
       - 'news/approved-morning/**'
+      - 'news/approved-morning-france-us/**'
+      - 'scripts/morning_france_us.py'
+      - 'scripts/test_morning_france_us.py'
+      - 'scripts/morning_france_us_delivery.py'
 
 permissions:
   contents: read
@@ -37,12 +41,28 @@ jobs:
         run: python -m unittest discover -s scripts -p 'test_morning_opening.py' -v
       - name: Test reviewed group delivery safeguards
         run: python -m unittest discover -s scripts -p 'test_morning_group_delivery.py' -v
+      - name: Test independent France plus US preparation and delivery safeguards
+        run: python -m unittest discover -s scripts -p 'test_morning_france_us.py' -v
       - name: Prepare morning opening and US previous close candidate
         run: |
           python scripts/morning_opening.py \
             --source news/verified-market/us-close-latest.json \
             --output morning-review.json \
             --text-output morning-review.txt
+      - name: Prepare parallel France + US morning candidate (review only)
+        run: |
+          python scripts/morning_france_us.py \
+            --us-source news/verified-market/us-close-latest.json \
+            --fr-source news/verified-market/france-morning-latest.json \
+            --output morning-france-review.json \
+            --text-output morning-france-review.txt
+      - name: France + US review-only summary
+        if: always()
+        run: |
+          if [ -f morning-france-review.json ]; then
+            echo '## France + US morning draft — not delivered' >> "$GITHUB_STEP_SUMMARY"
+            python -c 'import json,os; x=json.load(open("morning-france-review.json")); f=open(os.environ["GITHUB_STEP_SUMMARY"],"a"); f.write("- 状态："+x["status"]+"\n- "+x["reason"]+"\n- 法国/美国备稿与罗马尼亚/美国分别审核、分别去重。\n")'
+          fi
       - name: Report real preparation status
         if: always()
         run: |
@@ -90,3 +110,32 @@ jobs:
           python-version: '3.12'
       - name: Only approved, current-date briefing may be sent to verified group
         run: python scripts/morning_group_delivery.py
+
+  approved-france-us-telegram-delivery:
+    # France is an independent edition. No pull_request/manual dispatch may send.
+    if: github.event_name == 'schedule' && github.ref == 'refs/heads/main'
+    needs: morning-preview
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions:
+      contents: write
+    concurrency:
+      group: westcott-morning-france-us-reviewed-delivery
+      cancel-in-progress: false
+    env:
+      GITHUB_REF_NAME: ${{ github.ref_name }}
+      GITHUB_EVENT_NAME: ${{ github.event_name }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
+      GH_TOKEN: ${{ github.token }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TELEGRAM_MESSAGE_THREAD_ID: ${{ vars.TELEGRAM_MESSAGE_THREAD_ID }}
+      TELEGRAM_EXPECTED_BOT_USERNAME: NuvexaCheckBot
+      TELEGRAM_EXPECTED_GROUP_TITLE: 🌐~~~资讯快报
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Only reviewed France + US morning briefing may enter the same group
+        run: python scripts/morning_france_us_delivery.py
