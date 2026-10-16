@@ -96,9 +96,11 @@ def github_request(method, url, token, payload=None):
         return json.load(resp)
 
 
-def reserve(today, fingerprint, token, repo):
+def reserve(today, fingerprint, token, repo, audit_folder='morning-opening-delivery'):
     """A pre-existing PENDING/DELIVERED audit always prevents a second send."""
-    uri = f'https://api.github.com/repos/{repo}/contents/audit/morning-opening-delivery/{today}.json'
+    if audit_folder not in ('morning-opening-delivery', 'morning-france-us-delivery'):
+        raise ValueError('Invalid audited morning edition')
+    uri = f'https://api.github.com/repos/{repo}/contents/audit/{audit_folder}/{today}.json'
     try:
         github_request('GET', uri, token)
         return None
