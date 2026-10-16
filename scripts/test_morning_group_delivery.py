@@ -6,6 +6,7 @@ import unittest
 from zoneinfo import ZoneInfo
 from morning_group_delivery import check_package, run, DESTINATION, DOC_ID
 from morning_opening import build
+from morning_romania_us import build as build_ro
 
 NOW = datetime(2026, 10, 19, 7, 30, tzinfo=ZoneInfo('Europe/Bucharest'))
 
@@ -28,9 +29,29 @@ def market():
             for s, c, p in [('DJIA', 49000., 49100.), ('SPX', 6700., 6690.), ('IXIC', 23000., 23020.)]])
 
 
+def valid_ro():
+    return {
+        "target_country":"RO", "review_status":"REVIEWED",
+        "reviewed_by":"fixture-only",
+        "source_checked_at":"2026-10-19T07:14:00+03:00",
+        "events":[{
+            "event_key":"bvb-official-release-20261019-fixture",
+            "target_country":"RO","material_new_fact":True,
+            "source_url":"https://www.bvb.ro/NewsItem/fictional-fixture",
+            "published_at":"2026-10-19T06:35:00+03:00",
+            "source_body_sha256":"a"*64,
+            "source_excerpt":"fixture excerpt, not real",
+            "title_cn":"罗马尼亚交易所新闻（测试）",
+            "fact_cn":"仅是测试材料，绝不能发布。",
+            "impact_cn":"如果继续推进，可能影响罗马尼亚相关市场。",
+            "watch_cn":"留意后续官方公告。"
+        }]
+    }
+
 def approved():
     evidence = market()
-    result = build(NOW, evidence)
+    romania = valid_ro()
+    result = build_ro(NOW, evidence, romania)
     return dict(status='APPROVED_FOR_MORNING_GROUP', local_date='2026-10-19',
         target_group_title=DESTINATION, bot_username='NuvexaCheckBot',
         formal_story=dict(document_id=DOC_ID, revision_id='fixture-docs-revision',
@@ -39,8 +60,9 @@ def approved():
             approved_at='2026-10-19T07:20:00+03:00',
             decision='APPROVED', source_review_reference='fixture-review',
             member_dialogue_reviewed=False),
-        market_evidence=evidence,
-        approved_text=result['opening_draft'] + '\n\n' + result['us_recap_draft'])
+        market_evidence=evidence, romania_evidence=romania,
+        approved_text=result['opening_draft'] + '\n\n' + result['us_recap_draft']
+                   + '\n\n' + result['romania_draft'])
 
 
 class MorningGroupDeliveryTests(unittest.TestCase):
@@ -57,6 +79,18 @@ class MorningGroupDeliveryTests(unittest.TestCase):
     def test_valid_approved_draft(self):
         text = check_package(approved(), NOW, self.root)
         self.assertIn('标普500指数', text)
+
+    def test_requires_romanian_official_news(self):
+        p=approved(); del p['romania_evidence']
+        with self.assertRaises(ValueError): check_package(p,NOW,self.root)
+
+    def test_romanian_official_link_required_in_text(self):
+        p=approved(); p['approved_text']=p['approved_text'].replace('https://www.bvb.ro/NewsItem/fictional-fixture','')
+        with self.assertRaises(ValueError): check_package(p,NOW,self.root)
+
+    def test_nonofficial_romania_url_blocks(self):
+        p=approved(); p['romania_evidence']['events'][0]['source_url']='https://fake-bvb.ro/story'
+        with self.assertRaises(ValueError): check_package(p,NOW,self.root)
 
     def test_wrong_group_blocks(self):
         p = approved(); p['target_group_title'] = 'other'
