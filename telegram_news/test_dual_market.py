@@ -66,8 +66,7 @@ class TwoCountryTests(unittest.TestCase):
         self.assertEqual([record], pick([record], "FR", now, "hourly", {"sent": sent}))
 
     def test_reject_bogus_market_close_snapshot(self):
-        with patch.dict(os.environ, {"VERIFIED_US_CLOSE_JSON":
-             '{"verification":"pending","source_url":"https://nasdaq.com","as_of":"2026-10-15T16:00:00-04:00"}'}):
+        with patch.dict(os.environ, {"TWELVE_DATA_API_KEY": ""}):
             self.assertIsNone(us_quote_snapshot())
 
     def test_only_one_caption_for_photo_and_matching_country_path(self):
