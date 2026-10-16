@@ -12,7 +12,7 @@ def valid_data():
         "market": "US",
         "phase": "REGULAR_CLOSE",
         "session_date": "2026-10-15",
-        "source_url": "https://example.org/official-close",
+        "source_url": "https://www.spglobal.com/spdji/en/indices/equity/sp-500/",
         "source_checked_at": "2026-10-16T07:20:00+03:00",
         "review_status": "REVIEWED",
         "reviewed_by": "test-reviewer",
@@ -26,7 +26,11 @@ def valid_data():
                 "change_pct": round((close / previous - 1) * 100, 2),
                 "quote_as_of": "2026-10-15T16:00:00-04:00",
                 "phase": "REGULAR_CLOSE",
-                "source_url": f"https://example.org/{sym}",
+                "source_url": {
+                    "DJIA": "https://www.spglobal.com/spdji/en/indices/equity/dow-jones-industrial-average/",
+                    "SPX": "https://www.spglobal.com/spdji/en/indices/equity/sp-500/",
+                    "IXIC": "https://www.nasdaq.com/market-activity/index/comp",
+                }[sym],
                 "evidence_excerpt": "fixture value only",
             }
             for sym, close, previous in [
