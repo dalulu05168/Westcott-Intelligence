@@ -202,9 +202,9 @@ def us_quote_snapshot():
         print("US_CLOSE_FEED_UNCONFIGURED")
         return None
     symbols = {
-        "DJIA": os.getenv("US_INDEX_DOW_SYMBOL", "DJI"),
-        "S&P 500": os.getenv("US_INDEX_SP500_SYMBOL", "SPX"),
-        "Nasdaq Composite": os.getenv("US_INDEX_NASDAQ_SYMBOL", "IXIC"),
+        "DJIA": (os.getenv("US_INDEX_DOW_SYMBOL") or "DJI"),
+        "S&P 500": (os.getenv("US_INDEX_SP500_SYMBOL") or "SPX"),
+        "Nasdaq Composite": (os.getenv("US_INDEX_NASDAQ_SYMBOL") or "IXIC"),
     }
     lines, observations = [], []
     ny_now = datetime.now(ZoneInfo("America/New_York"))
