@@ -87,5 +87,14 @@ class TelegramBridgeTests(unittest.TestCase):
         self.assertEqual([item["chat_id"] for item in found], [-1007])
 
 
+    def test_article_sender_requires_visible_official_link_before_network(self):
+        env = {"TELEGRAM_BOT_TOKEN": "test", "TELEGRAM_CHAT_ID": "-10012345"}
+        with patch.object(bridge, "call_api") as call:
+            with self.assertRaisesRegex(bridge.TelegramError, "official article URL"):
+                bridge.send_group_news_from_official_article(
+                    "===== 资讯助理 =====\\n新闻摘要，没有来源链接。",
+                    "https://bvb.ro/NewsItem/example", env=env)
+        call.assert_not_called()
+
 if __name__ == "__main__":
     unittest.main()
