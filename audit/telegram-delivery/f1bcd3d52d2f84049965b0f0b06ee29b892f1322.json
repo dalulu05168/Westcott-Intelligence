@@ -35,5 +35,13 @@
       "source_text_sha256": "62b40a756f44e057c2d17f2aa8554b408385f657642d32f3057a98cb962cc287",
       "checked_at": "2026-10-16T08:54:11.578250+00:00"
     }
-  ]
+  ],
+  "manual_user_request": {
+    "requested_at": "2026-10-16T08:46:59Z",
+    "request": "你现在推送一条新闻就行 不用开盘的",
+    "image_exception_at": "2026-10-16T08:51:41Z",
+    "image_exception": "没有原图就给官网链接",
+    "scope": "One manually selected verified news item; not an automatic hourly winner assertion."
+  },
+  "release_mode": "USER_REQUESTED_SINGLE_REVIEWED_NEWS_LINK_ONLY"
 }
