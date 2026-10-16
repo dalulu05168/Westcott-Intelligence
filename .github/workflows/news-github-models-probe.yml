@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check Chinese-only summarization using existing GitHub token
         env:
-          GH_MODELS_TOKEN: \${{ secrets.GITHUB_TOKEN }}
+          GH_MODELS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python - <<'PY'
           import json, os, urllib.request, urllib.error
@@ -37,6 +37,8 @@ jobs:
               method='POST')
           try:
               with urllib.request.urlopen(req, timeout=45) as response:
+                  print('MODEL_RESPONSE_HTTP:', response.status)
+                  print('MODEL_RESPONSE_CONTENT_TYPE:', response.headers.get('Content-Type','')[:90])
                   output = json.load(response)
               answer = output['choices'][0]['message']['content']
               chinese = any('\u3400' <= character <= '\u9fff' for character in answer)
