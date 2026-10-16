@@ -129,6 +129,8 @@ def prepare(ledger, filename, now=None):
         for evidence in claim.get("evidence", []):
             selected_source_ids.add(evidence["source_id"])
             source = ledger["sources"][evidence["source_id"]]
+            if source.get("source_type") != "official":
+                raise PublicationError("Every news claim requires an official primary-source URL.")
             published = gate.instant(source['published_at'])
             if now - published > timedelta(hours=36):
                 raise PublicationError('Original article is older than 36 hours; do not recycle old news.')
@@ -137,6 +139,11 @@ def prepare(ledger, filename, now=None):
                 urls.append(url)
     if not urls or len(urls) > 12:
         raise PublicationError("Source URLs missing or excessive.")
+    # Source list is generated from the actual confirmed evidence, not from
+    # free-form assistant text or unverified link labels.
+    if any(ledger["sources"][source_id].get("source_type") != "official"
+           for source_id in selected_source_ids):
+        raise PublicationError("News has a nonofficial claimed evidence source.")
     text = "===== 资讯助理 =====\n\n" + "\n\n".join(facts)
     country = ledger.get('target_country')
     if country in COUNTRIES:
@@ -395,6 +402,11 @@ def save_preview(prepared, env):
 
 
 def publish(prepared, env):
+    # Check the exact URLs before reservations or any Telegram side effect.
+    if (not prepared.get("sources")
+            or any(url not in prepared.get("text", "") for url in prepared["sources"])
+            or prepared.get("media", {}).get("article_url") not in prepared.get("sources", [])):
+        raise PublicationError("Official source URL absent from the publishable news message.")
     if env.get("PUBLISH_CONFIRMATION") != CONFIRM:
         raise PublicationError("Explicit publish confirmation required.")
     try:
