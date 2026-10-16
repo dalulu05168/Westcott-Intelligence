@@ -30,10 +30,3 @@ jobs:
           LEGACY_TELEGRAM_NEWS_ENABLED: '${{ vars.TELEGRAM_NEWS_ENABLED }}'
           TELEGRAM_DUAL_MARKET_ENABLED: '${{ vars.TELEGRAM_DUAL_MARKET_ENABLED }}'
         run: python telegram_news/readiness_probe.py
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: telegram-private-readiness
-          path: telegram-readiness.json
-          if-no-files-found: ignore
-          retention-days: 7
