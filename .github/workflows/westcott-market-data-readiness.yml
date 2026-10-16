@@ -1,0 +1,26 @@
+name: Westcott Market Data Readiness (No Send)
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'integrations/telegram/market_readiness.py'
+      - 'integrations/telegram/test_market_readiness.py'
+      - '.github/workflows/westcott-market-data-readiness.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  readiness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test quote readiness boundaries
+        run: python -m unittest discover -s integrations/telegram -p 'test_*.py'
+      - name: Inspect official endpoints and configured licensed-feed key
+        env:
+          TWELVE_DATA_API_KEY: ${{ secrets.TWELVE_DATA_API_KEY }}
+        run: python integrations/telegram/market_readiness.py
