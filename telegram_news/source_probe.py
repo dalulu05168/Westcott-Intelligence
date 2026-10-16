@@ -46,6 +46,14 @@ def probe():
                     continue
                 summary["sample_article_verified"] += 1
                 html, text = original
+                if isinstance(html, dict) and html.get("kind") == "official_pdf_page1":
+                    summary["article_official_image"] += 1
+                    summary["image_downloaded"] += 1
+                    print("OFFICIAL_PDF_VERIFIED", source,
+                          "source_url", article["url"][:240],
+                          "pages", html["page_count"],
+                          "media", "unchanged original document first-page raster")
+                    continue
                 url = official_image(html, article)
                 if not url:
                     summary["blocked_or_missing"].append("official_article_image_metadata")
