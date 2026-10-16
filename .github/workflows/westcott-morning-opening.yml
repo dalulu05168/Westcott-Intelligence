@@ -47,13 +47,12 @@ jobs:
           else
             echo '- 未生成审核材料，见 Actions 日志。' >> "$GITHUB_STEP_SUMMARY"
           fi
-      - name: Save editable morning review packet
+      - name: Show the draft in GitHub Actions summary (no storage cost)
         if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: westcott-morning-review
-          path: |
-            morning-review.json
-            morning-review.txt
-          if-no-files-found: warn
-          retention-days: 14
+        run: |
+          if [ -f morning-review.txt ]; then
+            echo '### 可复制的早间候选稿（未经发布批准）' >> "$GITHUB_STEP_SUMMARY"
+            echo '\`\`\`text' >> "$GITHUB_STEP_SUMMARY"
+            cat morning-review.txt >> "$GITHUB_STEP_SUMMARY"
+            echo '\`\`\`' >> "$GITHUB_STEP_SUMMARY"
+          fi
