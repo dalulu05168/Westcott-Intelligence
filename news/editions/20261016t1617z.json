@@ -1,0 +1,144 @@
+{
+  "status": "COMPLETE",
+  "window_start": "2026-10-16T15:17:00+00:00",
+  "window_end": "2026-10-16T16:17:00+00:00",
+  "captured_at": "2026-10-16T16:17:47.256995+00:00",
+  "required_feed_ids": [
+    "fed_monetary",
+    "ecb_press",
+    "bvb_market",
+    "bvb_announcements",
+    "insee_conjuncture",
+    "bls_cpi",
+    "bls_employment",
+    "eurostat_releases"
+  ],
+  "coverage": [
+    {
+      "feed_id": "fed_monetary",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "ecb_press",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "bvb_market",
+      "status": "OK",
+      "parsed_items": 3
+    },
+    {
+      "feed_id": "bvb_announcements",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "insee_conjuncture",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "bls_cpi",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "bls_employment",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "eurostat_releases",
+      "status": "OK",
+      "parsed_items": 0
+    }
+  ],
+  "truncated": false,
+  "candidates": [
+    {
+      "title": "TRANSILVANIA INVESTMENTS ALLIANCE S.A. (TRANSI)",
+      "article_url": "https://bvb.ro/infocont/infocont26/TRANSI_20261016181423_RC-autorizare-membri-CS--RO.pdf",
+      "feed_article_url": "https://bvb.ro/infocont/infocont26/TRANSI_20261016181423_RC-autorizare-membri-CS--RO.pdf",
+      "published_at": "2026-10-16T15:21:08+00:00",
+      "source": "Bucharest Stock Exchange",
+      "feed_id": "bvb_market",
+      "id": "4ec1840cb756c76137f071df6e681593530b3d53",
+      "rank_signal_hits": 0,
+      "intake_status": "UNREVIEWED",
+      "body_read": false,
+      "numbers_checked": false,
+      "image_reuse_permission_verified": false,
+      "importance_confirmed": false,
+      "telegram_publishable": false,
+      "original_image_candidate_url": null,
+      "article_image_candidates": [],
+      "linked_document_urls": [],
+      "source_text_snapshot": "Nr. 6496/16.10.2026 Către: Bursa de Valori București Autoritatea de Supraveghere Financiară Sectorul Instrumentelor și Investițiilor Financiare RAPORT CURENT conform Legii nr. 24/2017 și a Regulamentului A.S.F. nr. 5/2018 Data raportului: 16.10.2026 Transilvania Investments Alliance S.A. Sediul social: str. Nicolae Iorga nr. 2, Brașov 500057 Telefon: 0268/415529, 416171; Fax 0268/473215 CUI/Cod de înregistrare fiscală: RO3047687 Număr de ordine în Registrul Comerțului: J1992003306085 Cod LEI (Legal Entity Identifier): 254900E2IL36VM93H128 Capital social subscris și vărsat: 212.644.000 RON Piața pe care se tranzacționează valorile mobiliare emise: B.V.B., Categoria Premium (simbol: TRANSI) Eveniment important de raportat: Transilvania Investments își consolidează structura de guvernanță prin autorizarea noilor membri ai Consiliul de Supraveghere Transilvania Investments anunță autorizarea de către Autoritatea de Supraveghere Financiară a componenței Consiliului de Supraveghere (Autorizația nr.148/16.10.2026) ca urmare a numirii dnei Luminița-Delia Runcan și a dlui Ioan Șumandea-Simionescu în calitate de membri ai Consiliului de Supraveghere, aleși de către Adunarea Generală Ordinară a Acţionarilor din data de 9 iulie a.c. pentru un mandat valabil până la data de 19.04.2029. Numirea noilor membri - profesioniști cu experiență relevantă în sectorul bancar - sprijină politicile interne de guvernanță și supraveghere ale fondului, într-un context economic în continuă schimbare. Luminița-Delia Runcan are peste 30 de ani de experiență în sistemul bancar și în administrarea riscurilor. Parcursul său profesional este completat de programe executive la INSEAD, London Business School, Oxford Saïd Business School și Frankfurt School of Finance & Management. Ioan Șumandea-Simionescu este specialist în guvernanță corporativă, drept bancar și piețe de capital, cu o activitate care îmbină experiența executivă, cercetarea academică și implicarea în dezvoltarea cadrului de reglementare al pieței financiare. Astfel, noua componență a Consiliului de Supraveghere, respectiv Adriana Tiron-Tudor, Luminița-Delia Runcan și loan Șumandea-Simionescu, și complementaritatea competențelor și experienței membrilor în domenii esențiale, precum audit, contabilitate, raportare financiară, administrarea riscurilor, guvernanță corporativă, vor asigura funcționarea optimă a organului de supraveghere si control din cadrul Transilvania Investments. Marius-Adrian Moldovan Președinte Executiv Dragoș-Ionuț Bosînceanu Ofițer de Conformitate Pag. 1/1 Transilvania Investments Alliance S.A. Str. Nicolae lorga 2, Brașov 500057, România Tel.: +40 268 415 529 Tel.: +40 268 416 171 office@transilvaniainvestments.ro www.transilvaniainvestments.ro CUI/CIF: RO 3047687 R.C. J1992003306085 Autorizată A.F.I.A.: Autorizație ASF nr. 40/15.02.2018 Autorizată F.l.A.I.R.: Autorizație ASF nr. 150/09.07.2021 Cod LEI (Legal Entity Identifier): 254900E2IL36VM93H128 Capital social: 212.644.000 lei Nr. Registru ASF: PJR071AFIAA/080005 Nr. Registru ASF: PJR09FIAIR/080006 IBAN B.C.R. Brașov: RO08 RNCB 0053 0085 8144 0001 Societate administrată în sistem dualist",
+      "source_text_sha256": "b7cee77813ba1d7f5723e18fd7e684e92962be3304d702a35d0858324e44e916",
+      "source_text_truncated": false,
+      "body_fetch_status": "FETCHED_FOR_REVIEW",
+      "image_origin": "publisher_og_metadata",
+      "image_review_required": true
+    },
+    {
+      "title": "TRANSILVANIA INVESTMENTS ALLIANCE S.A. (TRANSI)",
+      "article_url": "https://bvb.ro/infocont/infocont26/TRANSI_20261016181428_RC-autorizare-membri-CS--EN.pdf",
+      "feed_article_url": "https://bvb.ro/infocont/infocont26/TRANSI_20261016181428_RC-autorizare-membri-CS--EN.pdf",
+      "published_at": "2026-10-16T15:21:08+00:00",
+      "source": "Bucharest Stock Exchange",
+      "feed_id": "bvb_market",
+      "id": "42cef2ba897a8fe6ac071abc3b3f2511d5caff55",
+      "rank_signal_hits": 0,
+      "intake_status": "UNREVIEWED",
+      "body_read": false,
+      "numbers_checked": false,
+      "image_reuse_permission_verified": false,
+      "importance_confirmed": false,
+      "telegram_publishable": false,
+      "original_image_candidate_url": null,
+      "article_image_candidates": [],
+      "linked_document_urls": [],
+      "source_text_snapshot": "No. 6496/16.10.2026 To: Bucharest Stock Exchange Financial Supervisory Authority Financial Instruments and Investments Sector CURRENT REPORT According to Law no. 24/2017 and F.S.A. Regulation no. 5/2018 Report date: 16.10.2026 Transilvania Investments Alliance S.A. Headquarters: 2, Nicolae Iorga Street, Brasov 500057 Telephone: +40 268 415529, 416171; Fax: +40 268 473215 Tax registration code: RO3047687 Order number in the Trade Register: J1992003306085 LEI Code (Legal Entity Identifier): 254900E2IL36VM93H128 Subscribed and paid-in share capital: RON 212,644,000 Regulated market on which the issued securities are traded: B.S.E., Premium Category (Symbol: TRANSI) Important event to be reported: Transilvania Investments strengthens its governance structure following the authorization of the new members of the Supervisory Board Transilvania Investments announces the authorization by the Financial Supervisory Authority (Authorization no. 148/16.10.2026) of the composition of the Supervisory Board following the appointment of Ms. LuminițaDelia Runcan and Mr. Ioan Șumandea-Simionescu as members of the Supervisory Board, elected by the Ordinary General Meeting of Shareholders on July 9, 2026 for a term valid until 19.04.2029. The appointment of the new members- professionals with relevant experience in the financial sector - supports the Fund's internal governance and supervisory policies in a changing economic context. Luminița-Delia Runcan has over 30 years of experience in the banking system and risk management. Her professional career is complemented by executive programs at INSEAD, London Business School, Oxford Saïd Business School and Frankfurt School of Finance & Management. Ioan Șumandea-Simionescu is a specialist in corporate governance, banking law and capital markets, with an activity that combines executive experience, academic research and involvement in the development of the financial market regulatory framework. Thus, the new composition of the Supervisory Board, namely Adriana Tiron-Tudor, Luminița-Delia Runcan and loan Șumandea-Simionescu, and the complementarity of the members' skills and experience in essential areas, such as auditing, accounting, financial reporting, risk management, corporate governance, will ensure the optimal functioning of the supervisory and control body of Transilvania Investments. Marius-Adrian Moldovan Executive President Dragoș-Ionuț Bosînceanu Compliance Officer Pag. 1/1 Transilvania Investments Alliance S.A. Str. Nicolae lorga 2, Brașov 500057, România Tel.: +40 268 415 529 Tel.: +40 268 416 171 office@transilvaniainvestments.ro www.transilvaniainvestments.ro CUI/CIF: RO 3047687 R.C. J1992003306085 Autorizată A.F.I.A.: Autorizație ASF nr. 40/15.02.2018 Autorizată F.l.A.I.R.: Autorizație ASF nr. 150/09.07.2021 Cod LEI (Legal Entity Identifier): 254900E2IL36VM93H128 Capital social: 212.644.000 lei Nr. Registru ASF: PJR071AFIAA/080005 Nr. Registru ASF: PJR09FIAIR/080006 IBAN B.C.R. Brașov: RO08 RNCB 0053 0085 8144 0001 Societate administrată în sistem dualist",
+      "source_text_sha256": "205be409060aff65dcc1dadb094e19033e29b66e3b454f1cc55a5e02e4ffd142",
+      "source_text_truncated": false,
+      "body_fetch_status": "FETCHED_FOR_REVIEW",
+      "image_origin": "publisher_og_metadata",
+      "image_review_required": true
+    },
+    {
+      "title": "TRANSILVANIA INVESTMENTS ALLIANCE S.A. (TRANSI)",
+      "article_url": "https://bvb.ro/FinancialInstruments/SelectedData/NewsItem/TRANSI-autorizarea-noilor-membri-ai-consiliului-de-supraveghere/0CA7B",
+      "feed_article_url": "https://bvb.ro/FinancialInstruments/SelectedData/NewsItem/TRANSI-autorizarea-noilor-membri-ai-consiliului-de-supraveghere/0CA7B",
+      "published_at": "2026-10-16T15:21:08+00:00",
+      "source": "Bucharest Stock Exchange",
+      "feed_id": "bvb_market",
+      "id": "7631cc350ab2d5557d43eb22ab1ff57d53a8987b",
+      "rank_signal_hits": 0,
+      "intake_status": "UNREVIEWED",
+      "body_read": false,
+      "numbers_checked": false,
+      "image_reuse_permission_verified": false,
+      "importance_confirmed": false,
+      "telegram_publishable": false,
+      "original_image_candidate_url": null,
+      "article_image_candidates": [],
+      "linked_document_urls": [
+        "https://bvb.ro/info/Rapoarte/Ghiduri/Ghid_privind_raportarea_ESG.pdf",
+        "https://bvb.ro/infocont/infocont26/TRANSI_20261016181423_RC-autorizare-membri-CS--RO.pdf",
+        "https://bvb.ro/infocont/infocont26/TRANSI_20261016181428_RC-autorizare-membri-CS--EN.pdf",
+        "https://bvb.ro/juridic/files/RO%20CGC%20BVB%202025.pdf"
+      ],
+      "source_text_snapshot": "vineri | 16 octombrie, 2026 | Starea pietei: INCHISA Despre noi si Guvernanta | Relatia cu Investitorii | Contact Login Inregistrare Cautare avansata Pentru Companii De ce Bursa de Valori Bucuresti? Prezentare generala Instrumente pentru finantare Beneficiile listarii Infografice Piata Principala Actiuni Obligatiuni Intermediari Intrebari frecvente Piata AeRO Actiuni Obligatiuni Consultanti Autorizati Intrebari frecvente Materiale utile Ghidul privind raportarea ESG Codul de Guvernanta Corporativa Instrumente Financiare Piete Actiuni Obligatiuni Unitati de fond Certificate Warrants Cautare avansata Indici Privire generala Profile indici Factsheets indici Performanta indici Informatii BMR Operatiuni corporative Info dividend Modificari capital social Societati provenite din divizari Informatii selective Rapoarte curente Rezultate financiare Indicatori Calendar Financiar Calendar Adunari Generale Operatiuni de piata Raportari actionari Lista monitorizare Tranzactionare si Statistici Tranzactionare Pietele astazi Ziua curenta Statistici toate pietele Sumare tranzactionare Oferte publice in derulare Vanzari speciale la ordin Date MiFiD II Statistici Statistici generale Evolutia pietei (actiuni) Top tranzactionare Publicatii Rapoarte zilnice Rapoarte lunare Program de tranzactionare Bursa in direct Intermediari Liste intermediari Toti intermediarii Top intermediari Lista Market Makeri Lista Furnizori Lichiditate Performanta MM si LP Lista Agenti Delegati Cum devin intermediar Servicii Vanzare date Pentru distribuitori de date Pentru profesionisti Pentru investitori Licentiere indici Cum licentiez un indice BVB? Conectivitate Sistemul de tranzactionare Arena Sistem de brokeraj Reglementari Legislatie Legi si regulamente Reglementari BVB Raportari MiFID II / MiFIR Camera Arbitrala Utile Link-uri utile Institutiile pietei de capital Stiri Piata TRANSILVANIA INVESTMENTS ALLIANCE S.A. - TRANSI Autorizarea noilor membri ai Consiliului de Supraveghere Data Publicare: 16.10.2026 18:21:08 Cod IRIS: 0CA7B Nr. 6496/16.10.2026 Catre: Bursa de Valori Bucuresti Autoritatea de Supraveghere Financiara Sectorul Instrumentelor si Investitiilor Financiare RAPORT CURENT conform Legii nr. 24/2017 si a Regulamentului A.S.F. nr. 5/2018 Data raportului: 16.10.2026 Transilvania Investments Alliance S.A. Sediul social: str. Nicolae Iorga nr. 2, Brasov 500057 Telefon: 0268/415529, 416171; Fax 0268/473215 CUI/Cod de inregistrare fiscala: RO3047687 Numar de ordine in Registrul Comertului: J1992003306085 Cod LEI (Legal Entity Identifier): 254900E2IL36VM93H128 Capital social subscris si varsat: 212.644.000 RON Piata pe care se tranzactioneaza valorile mobiliare emise: B.V.B., Categoria Premium (simbol: TRANSI) Eveniment important de raportat: Transilvania Investments isi consolideaza structura de guvernanta prin autorizarea noilor membri ai Consiliul de Supraveghere Transilvania Investments anunta autorizarea de catre Autoritatea de Supraveghere Financiara a componentei Consiliului de Supraveghere (Autorizatia nr.148/16.10.2026) ca urmare a numirii dnei Luminita-Delia Runcan si a dlui Ioan Sumandea-Simionescu in calitate de membri ai Consiliului de Supraveghere, alesi de catre Adunarea Generala Ordinara a Actionarilor din data de 9 iulie a.c. pentru un mandat valabil pana la data de 19.04.2029. Numirea noilor membri - profesionisti cu experienta relevanta in sectorul bancar - sprijina politicile interne de guvernanta si supraveghere ale fondului, intr-un context economic in continua schimbare. Luminita-Delia Runcan are peste 30 de ani de experienta in sistemul bancar si in administrarea riscurilor. Parcursul sau profesional este completat de programe executive la INSEAD, London Business School, Oxford Said Business School si Frankfurt School of Finance & Management. Ioan Sumandea-Simionescu este specialist in guvernanta corporativa, drept bancar si piete de capital, cu o activitate care imbina experienta executiva, cercetarea academica si implicarea in dezvoltarea cadrului de reglementare al pietei financiare. Astfel, noua componenta a Consiliului de Supraveghere, respectiv Adriana Tiron-Tudor, Luminita-Delia Runcan si loan Sumandea-Simionescu, si complementaritatea competentelor si experientei membrilor in domenii esentiale, precum audit, contabilitate, raportare financiara, administrarea riscurilor, guvernanta corporativa, vor asigura functionarea optima a organului de supraveghere si control din cadrul Transilvania Investments. Marius-Adrian Moldovan Presedinte Executiv Dragos-Ionut Bosinceanu Ofiter de Conformitate TRANSI_20261016181423_RC-autorizare-membri-CS--RO.pdf TRANSI_20261016181428_RC-autorizare-membri-CS--EN.pdf Print Informatii furnizate prin IRIS , platforma de stiri a Bursei de Valori Bucuresti. ______________________ Bursa de Valori Bucuresti (\"BVB\") nu este responsabila de continutul acestui Raport. Emitentii ale caror instrumente financiare sunt tranzactionate pe pietele administrate de catre BVB au obligatia de a intocmi Rapoarte in conformitate cu prevederile legale si regulamentare incidente. BVB publica aceste Rapoarte in calitate de administrator al acestor piete, desemnat de catre ASF. In situatia in care, pentru informarea corespunzatoare a investitorilor, sunt publicate Rapoarte semnate de persoane diferite, sau cu informatii divergente, responsabilitatea juridica revine in totalitate semnatarilor respectivelor Rapoarte. BVB isi declina orice obligatie sau raspundere fata de emitenti sau terte parti, cu privire la realitatea, integralitatea si exactitatea informatiilor furnizate de catre acestia si distribuite de catre BVB. Utilizatorii website-ului au responsabilitatea de a verifica continutul rapoartelor. Orice raport (inclusiv orice prospect) care se adreseaza exclusiv unor persoane/tari specificate in acesta nu trebuie luate in considerare de catre persoanele / in tarile excluse. Termenii si conditiile , inclusiv restrictiile de utilizare si redistributie se aplica. ©2026 Bursa de Valori Bucuresti. Toate drepturile rezervate. Pentru Companii Prezentare generala Instrumente pentru finantare Beneficiile listarii Pentru Investitori Pentru inceput Devino Investitor La Bursa Exchange Live 2.0 Tranzactionare si Statistici Pietele astazi Statistici generale Top tranzactionare Despre noi si Guvernanta Descriere generala Structura de conducere Comunicate de presa Cariere Relatia cu Investitorii Privire generala Adunari Generale ale Actionarilor Raportari financiare Site-uri din Grupul BVB Depozitarul Central Website mobile | Termeni de Utilizare | Contact | © 2026 Bursa de Valori Bucuresti Distribuie: asp:PlaceHolder runat=\"server\">",
+      "source_text_sha256": "8f8aab9a1d92149ebe30fd6dd0c68175fe9d4da868f35ac61fb49fce724f35a9",
+      "source_text_truncated": false,
+      "body_fetch_status": "FETCHED_FOR_REVIEW",
+      "image_origin": "publisher_og_metadata",
+      "image_review_required": true
+    }
+  ],
+  "assessments_status": "UNREVIEWED",
+  "telegram_publishable": false,
+  "ranking_scope": "Configured official sources only; not a claim of global exhaustive coverage."
+}
