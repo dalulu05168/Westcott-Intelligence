@@ -7,6 +7,7 @@ from __future__ import annotations
 import json
 from datetime import datetime, timezone
 from urllib.parse import urlparse
+from bs4 import BeautifulSoup
 
 from dual_market import (BVB_ISSUER_FEEDS, AMF_RSS, FR_GOV_RSS, FEEDS,
                          PARIS, SESSION, TZ, download_image, feed_items,
@@ -29,6 +30,19 @@ def probe():
                 original = fetch_original(article)
                 if original is None:
                     summary["blocked_or_missing"].append("official_article_content_or_title")
+                    try:
+                        response = SESSION.get(article["url"], timeout=12)
+                        html = BeautifulSoup(response.content[:150000], "html.parser")
+                        headline = html.select_one("h1") or html.select_one("title")
+                        title_text = headline.get_text(" ", strip=True) if headline else "<none>"
+                        print("ARTICLE_DIAG", source,
+                              "url", article["url"][:230],
+                              "http", response.status_code,
+                              "mime", response.headers.get("Content-Type", "")[:45],
+                              "rss_title", article["title"][:105],
+                              "page_title", title_text[:105])
+                    except Exception as exc:
+                        print("ARTICLE_DIAG", source, type(exc).__name__)
                     continue
                 summary["sample_article_verified"] += 1
                 html, text = original
@@ -42,6 +56,15 @@ def probe():
                     summary["image_downloaded"] += 1
                 else:
                     summary["blocked_or_missing"].append("image_format_size_or_access")
+                    try:
+                        response = SESSION.get(url, stream=True, timeout=12)
+                        print("IMAGE_DIAG", source, "url", url[:220],
+                              "http", response.status_code,
+                              "mime", response.headers.get("Content-Type", "")[:90],
+                              "length", response.headers.get("Content-Length", "<unknown>"))
+                        response.close()
+                    except Exception as exc:
+                        print("IMAGE_DIAG", source, type(exc).__name__)
             except Exception as e:
                 summary["blocked_or_missing"].append(type(e).__name__)
         stats[source] = summary
