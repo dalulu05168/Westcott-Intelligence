@@ -75,5 +75,29 @@ class HourlyRadarTests(unittest.TestCase):
         self.assertEqual(result['status'], 'INCOMPLETE')
 
 
+    def test_compact_readiness_identifies_unavailable_pdf_without_leaking_body(self):
+        def bad(row):
+            return {**row, 'body_fetch_status': 'UNAVAILABLE',
+                    'body_fetch_error': 'Original PDF has insufficient readable text.',
+                    'source_text_snapshot': 'Long official body MUST NOT be echoed in Actions logs'}
+        edition = hourly.collect_hour(self.feeds, self.feed, bad, self.end)
+        report = hourly.readable_readiness(edition)
+        self.assertEqual('INCOMPLETE', report['edition_status'])
+        self.assertEqual(1, report['candidates_unverified'])
+        self.assertEqual('Original PDF has insufficient readable text.',
+                         report['unverified_details'][0]['reason'])
+        self.assertNotIn('source_text_snapshot', str(report))
+        self.assertEqual(0, report['messages_sent'])
+        self.assertIs(report['telegram_publishable'], False)
+
+    def test_complete_hour_still_appears_unreviewed(self):
+        edition = hourly.collect_hour(self.feeds, self.feed, self.inspector, self.end)
+        report = hourly.readable_readiness(edition, 'news/editions/test.json')
+        self.assertEqual('COMPLETE', report['edition_status'])
+        self.assertEqual('UNREVIEWED', report['assessments_status'])
+        self.assertIs(report['telegram_publishable'], False)
+        self.assertEqual('news/editions/test.json', report['edition_path'])
+
+
 if __name__ == '__main__':
     unittest.main()
