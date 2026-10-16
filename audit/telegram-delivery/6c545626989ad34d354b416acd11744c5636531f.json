@@ -30,5 +30,13 @@
       "source_text_sha256": "3a372d13defaa14b5677d3ca9821a7d438349aae9481704333e91d86bc327158",
       "checked_at": "2026-10-16T08:56:52.155189+00:00"
     }
-  ]
+  ],
+  "manual_user_request": {
+    "request": "法国的呢？",
+    "requested_at": "2026-10-16T08:54:53Z",
+    "image_exception": "没有原图就给官网链接",
+    "image_exception_at": "2026-10-16T08:51:41Z",
+    "scope": "User-requested single French news item; not an assertion of an automatic hourly winner."
+  },
+  "release_mode": "USER_REQUESTED_SINGLE_REVIEWED_NEWS_LINK_ONLY"
 }
