@@ -39,7 +39,12 @@ jobs:
               with urllib.request.urlopen(req, timeout=45) as response:
                   print('MODEL_RESPONSE_HTTP:', response.status)
                   print('MODEL_RESPONSE_CONTENT_TYPE:', response.headers.get('Content-Type','')[:90])
-                  output = json.load(response)
+                  raw = response.read(1500)
+                  print('MODEL_RESPONSE_BYTES:', len(raw))
+                  if 'application/json' not in response.headers.get('Content-Type',''):
+                      print('MODEL_NONJSON_BODY:', raw[:160].decode('utf-8', 'replace').replace(token, '[REDACTED]'))
+                      raise SystemExit('MODEL_NOT_AVAILABLE_FROM_RUNNER')
+                  output = json.loads(raw)
               answer = output['choices'][0]['message']['content']
               chinese = any('\u3400' <= character <= '\u9fff' for character in answer)
               print('GITHUB_MODELS_HTTP: 200')
