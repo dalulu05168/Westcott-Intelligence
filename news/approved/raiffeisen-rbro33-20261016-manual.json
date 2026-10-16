@@ -1,0 +1,133 @@
+{
+  "event_id": "raiffeisen-rbro33-20261016-manual",
+  "executed_at": "2026-10-16T08:53:14.854Z",
+  "target_country": "RO",
+  "primary_article_source_id": "bvb",
+  "local_impact_claim_id": "impact",
+  "watch_next_claim_id": "watch",
+  "manual_user_request": {
+    "requested_at": "2026-10-16T08:46:59Z",
+    "request": "你现在推送一条新闻就行 不用开盘的",
+    "image_exception_at": "2026-10-16T08:51:41Z",
+    "image_exception": "没有原图就给官网链接",
+    "scope": "One manually selected verified news item; not an automatic hourly winner assertion."
+  },
+  "sources": {
+    "bvb": {
+      "url": "https://bvb.ro/AboutUs/MediaCenter/PressItem/Raiffeisen-Bank-listeaza-o-noua-emisiune-de-obligatiuni-la-Bursa-de-Valori-Bucuresti-in-valoare-de-750-de-milioane-de-lei/6472",
+      "source_type": "official",
+      "origin_id": "bvb-press-6472",
+      "access_status": "BODY_READ",
+      "published_at": "2026-10-16T00:00:00+03:00",
+      "publication_precision": "date_only; midnight is conservative age bound, not claimed publication clock time",
+      "retrieved_at": "2026-10-16T08:53:14.854Z",
+      "source_text_sha256": "62b40a756f44e057c2d17f2aa8554b408385f657642d32f3057a98cb962cc287"
+    }
+  },
+  "claims": [
+    {
+      "review_status": "CONFIRMED",
+      "reviewed_by": "ChatGPT 原文审稿 2026-10-16T08:53:14.854Z",
+      "id": "event",
+      "kind": "fact",
+      "text": "📰 Raiffeisen Bank新债券在BVB上市\n\nBVB于2026年10月16日公告：Raiffeisen Bank新一批公司债券在其主板市场上市，总额7.5亿列伊。",
+      "is_numeric": true,
+      "evidence": [
+        {
+          "source_id": "bvb",
+          "excerpt": "listeaza vineri, 16 octombrie, o noua emisiune de obligatiuni corporative pe Piata Reglementata a Bursei, in valoare totala de 750 milioane de lei.",
+          "locator": "BVB press release6472, announcement body",
+          "supports_exact_claim": true
+        }
+      ],
+      "numbers": [
+        {
+          "quantity_type": "amount",
+          "currency": "RON",
+          "instrument_type": "bond",
+          "instrument": "Raiffeisen Bank corporate bond issue RBRO33",
+          "unit": "RON",
+          "basis": "Total nominal issue amount, not turnover or net fund inflow",
+          "market_state": "official listing announcement",
+          "as_of": "2026-10-16T00:00:00+03:00",
+          "value": "750000000",
+          "source_value": "750000000",
+          "source_id": "bvb",
+          "source_literal": "750 milioane de lei",
+          "normalization_reviewed": true
+        }
+      ]
+    },
+    {
+      "review_status": "CONFIRMED",
+      "reviewed_by": "ChatGPT 原文审稿 2026-10-16T08:53:14.854Z",
+      "id": "instrument",
+      "kind": "fact",
+      "text": "债券代码为RBRO33，募集资金将用于银行一般经营活动。",
+      "evidence": [
+        {
+          "source_id": "bvb",
+          "excerpt": "Principalele caracteristici ale emisiunii de obligatiuni RBRO33",
+          "locator": "BVB press release6472, announcement body",
+          "supports_exact_claim": true
+        },
+        {
+          "source_id": "bvb",
+          "excerpt": "Fondurile obtinute vor fi folosite pentru finantarea activitatii generale a companiei.",
+          "locator": "BVB press release6472, announcement body",
+          "supports_exact_claim": true
+        }
+      ]
+    },
+    {
+      "review_status": "CONFIRMED",
+      "reviewed_by": "ChatGPT 原文审稿 2026-10-16T08:53:14.854Z",
+      "id": "impact",
+      "kind": "analysis",
+      "target_country": "RO",
+      "conditional": true,
+      "boundary_text": "条件分析，不推断股票行情。",
+      "premise_claim_ids": [
+        "event",
+        "instrument"
+      ],
+      "text": "🇷🇴 对罗马尼亚市场的影响\n这为本地债券市场增加了可交易标的。若后续交易活跃，可能提升这批债券的流动性；这则上市公告本身不能证明银行股会上涨。",
+      "evidence": [
+        {
+          "source_id": "bvb",
+          "excerpt": "listeaza vineri, 16 octombrie, o noua emisiune de obligatiuni corporative pe Piata Reglementata a Bursei, in valoare totala de 750 milioane de lei.",
+          "locator": "BVB press release6472, announcement body",
+          "supports_exact_claim": true
+        }
+      ]
+    },
+    {
+      "review_status": "CONFIRMED",
+      "reviewed_by": "ChatGPT 原文审稿 2026-10-16T08:53:14.854Z",
+      "id": "watch",
+      "kind": "analysis",
+      "target_country": "RO",
+      "conditional": true,
+      "boundary_text": "后续待观察条件，不声称已出现成交或价格变化。",
+      "premise_claim_ids": [
+        "event",
+        "instrument"
+      ],
+      "text": "👀 后续关注\n关注RBRO33上市后的实际成交、买卖价差及银行后续披露，再评估其流动性。",
+      "evidence": [
+        {
+          "source_id": "bvb",
+          "excerpt": "Principalele caracteristici ale emisiunii de obligatiuni RBRO33",
+          "locator": "BVB press release6472, announcement body",
+          "supports_exact_claim": true
+        }
+      ]
+    }
+  ],
+  "publish_claim_ids": [
+    "event",
+    "instrument",
+    "impact",
+    "watch"
+  ]
+}

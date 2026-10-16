@@ -1,0 +1,63 @@
+name: User Requested Verified Single News
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/westcott-user-single-news-20261016.yml']
+permissions:
+  contents: write
+jobs:
+  publish-single:
+    if: github.event.head_commit.message == 'Publish user approved single verified news link-only 20261016' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    concurrency:
+      group: westcott-telegram-reviewed-publish
+      cancel-in-progress: false
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TELEGRAM_EXPECTED_BOT_USERNAME: NuvexaCheckBot
+      TELEGRAM_EXPECTED_GROUP_TITLE: 🌐~~~资讯快报
+      TELEGRAM_MESSAGE_THREAD_ID: ${{ vars.TELEGRAM_MESSAGE_THREAD_ID }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
+      GITHUB_REF_NAME: ${{ github.ref_name }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify repository rules
+        run: python scripts/validate_repository.py
+      - name: Fact-gated user-authorized single news, live original recheck and atomic deduplication
+        shell: python
+        run: |
+          import json,os,sys
+          from pathlib import Path
+          from datetime import datetime,timezone
+          sys.path.insert(0,'integrations/telegram')
+          import reviewed_publish as pub
+          from bridge import verify_bot_identity,group_target,send_group_news_from_official_article
+          filename='news/approved/raiffeisen-rbro33-20261016-manual.json'
+          ledger=json.loads(Path(filename).read_text())
+          prepared=pub.prepare(ledger,filename)
+          if prepared['ledger_digest'] != '66df59e7219c0afa653fec54ae2591baaa02e0f4c300b3eef5fc1e3546b654d1':
+              raise RuntimeError('Reviewed one-off ledger digest mismatch')
+          if prepared['event_id'] != 'raiffeisen-rbro33-20261016-manual' or prepared['target_country'] != 'RO':
+              raise RuntimeError('One-off approval does not cover this event/country')
+          if ledger.get('manual_user_request',{}).get('image_exception') != '没有原图就给官网链接':
+              raise RuntimeError('Explicit user link-only approval missing')
+          if prepared['media']['article_url'] != 'https://bvb.ro/AboutUs/MediaCenter/PressItem/Raiffeisen-Bank-listeaza-o-noua-emisiune-de-obligatiuni-la-Bursa-de-Valori-Bucuresti-in-valoare-de-750-de-milioane-de-lei/6472' or prepared['media']['image_url'] is not None:
+              raise RuntimeError('One-off source or media changed')
+          # User-selected single verified story, not a claim of hourly top-impact ranking.
+          prepared['source_rechecks']=pub.confirm_original_evidence(prepared)
+          verify_bot_identity(os.environ['TELEGRAM_BOT_TOKEN'])
+          group_target(os.environ['TELEGRAM_BOT_TOKEN'],os.environ['TELEGRAM_CHAT_ID'])
+          path,record,sha=pub.reserve(prepared,os.environ)
+          record['manual_user_request']=ledger['manual_user_request']
+          record['release_mode']='USER_REQUESTED_SINGLE_REVIEWED_NEWS_LINK_ONLY'
+          sha=pub.github_write(path,record,os.environ['GITHUB_TOKEN'],os.environ['GITHUB_REPOSITORY'],sha)
+          receipt=send_group_news_from_official_article(prepared['text'],prepared['media']['article_url'],None,os.environ)
+          record.update(state='DELIVERED',message_ids=receipt['message_ids'],photo_message_id=receipt['photo_message_id'],image_delivery=receipt['image_delivery'],group_title=receipt['group_title'],delivered_at=datetime.now(timezone.utc).isoformat())
+          pub.github_write(path,record,os.environ['GITHUB_TOKEN'],os.environ['GITHUB_REPOSITORY'],sha)
+          print(json.dumps({'state':'DELIVERED','audit_path':path,'message_ids':receipt['message_ids'],'group_title':receipt['group_title'],'image_delivery':receipt['image_delivery']},ensure_ascii=False))
