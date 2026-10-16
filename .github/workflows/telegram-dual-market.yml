@@ -6,7 +6,9 @@ on:
       timezone: Europe/Bucharest
     - cron: '30 7 * * 1-5'
       timezone: Europe/Paris
-    - cron: '0 9-22 * * 1-5'
+    - cron: '0 9-23 * * 1-5'
+      timezone: Europe/Paris
+    - cron: '0 0-2 * * 2-6'
       timezone: Europe/Paris
   workflow_dispatch:
     inputs:
