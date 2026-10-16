@@ -4,39 +4,10 @@
   "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
   "fictional_education_only": true,
   "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
-  "observed_in_submitted_story": [
-    {
-      "source_date": "2026-10-14",
-      "kind": "message",
-      "text": "是啊，交易活跃不代表股价一定上涨，收盘前还得继续观察。",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM/edit?tab=t.0",
-      "source_doc_revision": "AHj4eMRS4SLSXvqgAdUMG8LNztwDxKlskKeopED5zzPE-TDEq7BTY0vWsY_2ih_Hk1fv1R1BUtGzlhNUy9YSFjvECpUbF90ntTVl--YwVww",
-      "warnings": [],
-      "fictional_only": true,
-      "no_real_transaction_verified": true,
-      "message_id": "20261014-M064",
-      "node": "AFTERNOON",
-      "source_block_number": 135
-    },
-    {
-      "message_id": "20261014-M077",
-      "source_date": "2026-10-14",
-      "node": "AFTERNOON",
-      "kind": "message",
-      "text": "能源价格上涨对一些企业是机会，对另外一些企业却可能意味着成本增加，还是得分开看。",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM/edit?tab=t.0",
-      "source_doc_revision": "AHj4eMRS4SLSXvqgAdUMG8LNztwDxKlskKeopED5zzPE-TDEq7BTY0vWsY_2ih_Hk1fv1R1BUtGzlhNUy9YSFjvECpUbF90ntTVl--YwVww",
-      "source_block_number": 148,
-      "warnings": [],
-      "fictional_only": true,
-      "no_real_transaction_verified": true
-    }
-  ],
+  "observed_in_submitted_story": [],
   "reaction_count": 0,
   "no_unrecorded_history": true,
-  "message_count": 2,
+  "message_count": 0,
   "no_real_trading_inferred": true,
-  "latest_source_date": "2026-10-14"
+  "latest_source_date": null
 }

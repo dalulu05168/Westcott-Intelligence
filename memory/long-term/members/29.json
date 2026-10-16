@@ -10,32 +10,44 @@
       "source_date": "2026-10-13",
       "node": "AFTERNOON",
       "kind": "message",
-      "text": "太巧了！我刚好有关注这家公司",
-      "source_docx": "剧本.docx",
-      "extracted_source_line": 144,
-      "warnings": [],
-      "fictional_only": true,
-      "no_real_transaction_verified": true
+      "text": "太巧了！我刚好有关注这家公司"
     },
     {
       "message_id": "20261013-M021",
       "source_date": "2026-10-13",
       "node": "AFTERNOON",
       "kind": "message",
-      "text": "已经挂单了，现在排队等成交。我挂在 2.05 的价格，就等着成交了。",
-      "source_docx": "剧本.docx",
-      "extracted_source_line": 181,
-      "warnings": [
-        "仅虚构脚本中的交易陈述，不作为真实持仓"
-      ],
-      "fictional_only": true,
-      "no_real_transaction_verified": true
+      "text": "已经挂单了，现在排队等成交。我挂在 2.05 的价格，就等着成交了。"
+    },
+    {
+      "message_id": "20261014-DOC-019",
+      "source_date": "2026-10-14",
+      "node": "UNSPECIFIED_IN_SOURCE",
+      "kind": "message",
+      "text": "太巧了！我刚好有关注这家公司",
+      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
+      "source_block_number": 19,
+      "source_tab_id": "t.t7k4o87mkgzv"
+    },
+    {
+      "message_id": "20261014-DOC-021",
+      "source_date": "2026-10-14",
+      "node": "UNSPECIFIED_IN_SOURCE",
+      "kind": "message",
+      "text": "已经挂单了，现在排队等成交。我挂在2.05的价格，就等着成交了。",
+      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
+      "source_block_number": 21,
+      "source_tab_id": "t.t7k4o87mkgzv"
     }
   ],
   "reaction_count": 0,
   "no_unrecorded_history": true,
-  "message_count": 2,
-  "latest_source_date": "2026-10-13",
+  "message_count": 4,
+  "latest_source_date": "2026-10-14",
   "no_real_trading_inferred": true,
   "review_only_2026_10_13": []
 }

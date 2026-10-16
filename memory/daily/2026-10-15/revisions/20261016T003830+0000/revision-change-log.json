@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-15",
+  "source_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
+  "role_blocks": 104,
+  "approved_role_blocks": 103,
+  "member_text_messages": 77,
+  "members": [
+    "02",
+    "04",
+    "05",
+    "07",
+    "08",
+    "09",
+    "10",
+    "12",
+    "15",
+    "18",
+    "21",
+    "23",
+    "24",
+    "26",
+    "27",
+    "28",
+    "34",
+    "35",
+    "37"
+  ],
+  "quarantined_blocks": [
+    "20261015-DOC-030"
+  ],
+  "previous_adopted_ids_no_longer_effective": []
+}

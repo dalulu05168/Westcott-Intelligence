@@ -6,24 +6,58 @@
   "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
   "observed_in_submitted_story": [
     {
-      "message_id": "20261014-M108",
+      "message_id": "20261014-DOC-060",
       "source_date": "2026-10-14",
-      "node": "EVENING",
+      "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
-      "text": "像这些入门道理，为什么要说那么多😂 不会还有人不知道这种基础东西吧？",
+      "text": "我觉得利率也同样重要。如果借钱的利息变了，企业能赚多少钱就得重新算账了。",
       "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM/edit?tab=t.0",
-      "source_doc_revision": "AHj4eMRS4SLSXvqgAdUMG8LNztwDxKlskKeopED5zzPE-TDEq7BTY0vWsY_2ih_Hk1fv1R1BUtGzlhNUy9YSFjvECpUbF90ntTVl--YwVww",
-      "source_block_number": 179,
-      "warnings": [],
-      "fictional_only": true,
-      "no_real_transaction_verified": true
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
+      "source_block_number": 60,
+      "source_tab_id": "t.t7k4o87mkgzv"
+    },
+    {
+      "message_id": "20261015-DOC-025",
+      "source_date": "2026-10-15",
+      "node": "UNSPECIFIED_IN_SOURCE",
+      "kind": "message",
+      "text": "不要慌，一条新闻也不能左右整个市场。",
+      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
+      "source_block_number": 25,
+      "source_tab_id": "t.huff85y7dlym"
+    },
+    {
+      "message_id": "20261015-DOC-056",
+      "source_date": "2026-10-15",
+      "node": "UNSPECIFIED_IN_SOURCE",
+      "kind": "message",
+      "text": "不过这跟均线有没有应验是两回事吧？现在连具体的均线位置都没看，不能光凭股价跌了就说昨晚讲对了。",
+      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
+      "source_block_number": 56,
+      "source_tab_id": "t.huff85y7dlym"
+    },
+    {
+      "message_id": "20261015-DOC-096",
+      "source_date": "2026-10-15",
+      "node": "UNSPECIFIED_IN_SOURCE",
+      "kind": "message",
+      "text": "先生，如果股票下跌的时候，我们告诉自己要有耐心；后来继续下跌，又说需要坚持长期投资。\n那怎么判断自己究竟是在遵守纪律，还是不愿意承认判断错误？",
+      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
+      "source_block_number": 96,
+      "source_tab_id": "t.huff85y7dlym"
     }
   ],
   "reaction_count": 0,
   "no_unrecorded_history": true,
-  "message_count": 1,
-  "latest_source_date": "2026-10-14",
+  "message_count": 4,
+  "latest_source_date": "2026-10-15",
   "no_real_trading_inferred": true,
   "review_only_2026_10_13": [
     {

@@ -5,58 +5,32 @@
   "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
   "fictional_education_only": true,
   "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
-  "message_count": 4,
+  "message_count": 3,
   "reaction_count": 0,
   "observed_in_submitted_story": [
     {
       "message_id": "M004",
+      "source_date": "2026-10-12",
       "node": "AFTERNOON",
-      "topic": "MARKET_OR_SOCIAL",
       "kind": "message",
-      "text": "上午没怎么盯盘，刚回来。大家关注哪些股票？",
-      "source_lines": [
-        11,
-        12
-      ]
+      "text": "上午没怎么盯盘，刚回来。大家关注哪些股票？"
     },
     {
       "message_id": "M010",
+      "source_date": "2026-10-12",
       "node": "AFTERNOON",
-      "topic": "MARKET_OR_SOCIAL",
       "kind": "message",
-      "text": "不过买一只基金，不只是买这个品牌吧。其他公司占多少，也得看。",
-      "source_lines": [
-        26,
-        27
-      ]
+      "text": "不过买一只基金，不只是买这个品牌吧。其他公司占多少，也得看。"
     },
     {
       "message_id": "M013",
-      "node": "AFTERNOON",
-      "topic": "MARKET_OR_SOCIAL",
-      "kind": "message",
-      "text": "我先看它到底买了什么。有的基金名字挺直观，里面的比例却未必是自己想的那样。",
-      "source_lines": [
-        32,
-        33
-      ]
-    },
-    {
-      "message_id": "20261014-M035",
-      "source_date": "2026-10-14",
+      "source_date": "2026-10-12",
       "node": "AFTERNOON",
       "kind": "message",
-      "text": "喜欢下午的时光，可以空出时间清闲的看一下热点话题！",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM/edit?tab=t.0",
-      "source_doc_revision": "AHj4eMRS4SLSXvqgAdUMG8LNztwDxKlskKeopED5zzPE-TDEq7BTY0vWsY_2ih_Hk1fv1R1BUtGzlhNUy9YSFjvECpUbF90ntTVl--YwVww",
-      "source_block_number": 106,
-      "warnings": [],
-      "fictional_only": true,
-      "no_real_transaction_verified": true
+      "text": "我先看它到底买了什么。有的基金名字挺直观，里面的比例却未必是自己想的那样。"
     }
   ],
   "no_unrecorded_history": true,
   "no_real_trading_inferred": true,
-  "latest_source_date": "2026-10-14"
+  "latest_source_date": "2026-10-12"
 }

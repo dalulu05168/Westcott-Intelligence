@@ -5,84 +5,95 @@
   "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
   "fictional_education_only": true,
   "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
-  "message_count": 6,
+  "message_count": 9,
   "reaction_count": 0,
   "observed_in_submitted_story": [
     {
       "message_id": "M033",
+      "source_date": "2026-10-12",
       "node": "AFTERNOON",
-      "topic": "CONTEST_SP500",
       "kind": "message",
-      "text": "哈哈，这个有意思！我先选上涨，今天就让我乐观一回！",
-      "source_lines": [
-        98,
-        99
-      ]
+      "text": "哈哈，这个有意思！我先选上涨，今天就让我乐观一回！"
     },
     {
       "message_id": "M048",
+      "source_date": "2026-10-12",
       "node": "EVENING",
-      "topic": "BREAKOUT_LESSON",
       "kind": "message",
-      "text": "晚上好呀！每晚这个时间都是准时参加。",
-      "source_lines": [
-        140,
-        141
-      ]
+      "text": "晚上好呀！每晚这个时间都是准时参加。"
     },
     {
       "message_id": "20261013-M009",
       "source_date": "2026-10-13",
       "node": "AFTERNOON",
       "kind": "message",
-      "text": "美国银行的表现可以参考，但不能直接拿来判断 BRD 和 TLV。还是得看本地的贷款质量、\n资金成本和客户情况。",
-      "source_docx": "剧本.docx",
-      "extracted_source_line": 58,
-      "warnings": [],
-      "fictional_only": true,
-      "no_real_transaction_verified": true
+      "text": "美国银行的表现可以参考，但不能直接拿来判断 BRD 和 TLV。还是得看本地的贷款质量、\n资金成本和客户情况。"
     },
     {
       "message_id": "20261013-M014",
       "source_date": "2026-10-13",
       "node": "AFTERNOON",
       "kind": "message",
-      "text": "如果企业减少投资，贷款需求也可能跟着变化。银行后面的信贷数据值得留意。",
-      "source_docx": "剧本.docx",
-      "extracted_source_line": 98,
-      "warnings": [],
-      "fictional_only": true,
-      "no_real_transaction_verified": true
+      "text": "如果企业减少投资，贷款需求也可能跟着变化。银行后面的信贷数据值得留意。"
     },
     {
       "message_id": "20261013-M026",
       "source_date": "2026-10-13",
       "node": "AFTERNOON",
       "kind": "message",
-      "text": "我没有提交委托，继续看资料。参与讨论也不一定要交易。",
-      "source_docx": "剧本.docx",
-      "extracted_source_line": 212,
-      "warnings": [],
-      "fictional_only": true,
-      "no_real_transaction_verified": true
+      "text": "我没有提交委托，继续看资料。参与讨论也不一定要交易。"
     },
     {
-      "message_id": "20261014-M053",
+      "message_id": "20261014-DOC-009",
       "source_date": "2026-10-14",
-      "node": "AFTERNOON",
+      "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
-      "text": "哇，股票交易赚的钱居然飙升了41%，这也太夸张了吧！",
+      "text": "美国银行的表现可以参考，但不能直接拿来判断 BRD 和 TLV。还是得看本地的贷款质量、资金成本和客户情况。",
       "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM/edit?tab=t.0",
-      "source_doc_revision": "AHj4eMRS4SLSXvqgAdUMG8LNztwDxKlskKeopED5zzPE-TDEq7BTY0vWsY_2ih_Hk1fv1R1BUtGzlhNUy9YSFjvECpUbF90ntTVl--YwVww",
-      "source_block_number": 124,
-      "warnings": [],
-      "fictional_only": true,
-      "no_real_transaction_verified": true
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
+      "source_block_number": 9,
+      "source_tab_id": "t.t7k4o87mkgzv"
+    },
+    {
+      "message_id": "20261014-DOC-014",
+      "source_date": "2026-10-14",
+      "node": "UNSPECIFIED_IN_SOURCE",
+      "kind": "message",
+      "text": "如果企业减少投资，贷款需求也可能跟着变化。银行后面的信贷数据值得留意。",
+      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
+      "source_block_number": 14,
+      "source_tab_id": "t.t7k4o87mkgzv"
+    },
+    {
+      "message_id": "20261014-DOC-026",
+      "source_date": "2026-10-14",
+      "node": "UNSPECIFIED_IN_SOURCE",
+      "kind": "message",
+      "text": "我没有提交委托，继续看资料。参与讨论也不一定要交易。",
+      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
+      "source_block_number": 26,
+      "source_tab_id": "t.t7k4o87mkgzv"
+    },
+    {
+      "message_id": "20261015-DOC-014",
+      "source_date": "2026-10-15",
+      "node": "UNSPECIFIED_IN_SOURCE",
+      "kind": "message",
+      "text": "开盘就涨了不少啊，今天感觉比昨天还热闹。😂",
+      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
+      "source_block_number": 14,
+      "source_tab_id": "t.huff85y7dlym"
     }
   ],
   "no_unrecorded_history": true,
   "no_real_trading_inferred": true,
-  "latest_source_date": "2026-10-14",
+  "latest_source_date": "2026-10-15",
   "review_only_2026_10_13": []
 }

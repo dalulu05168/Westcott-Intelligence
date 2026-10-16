@@ -10,38 +10,27 @@
   "observed_in_submitted_story": [
     {
       "message_id": "M062",
+      "source_date": "2026-10-12",
       "node": "EVENING",
-      "topic": "BREAKOUT_LESSON",
       "kind": "message",
-      "text": "原来对比成交量得跟昨天同时段比啊。那今天资金明明多砸了一半，股价却没冲过去，这算怎么回事？",
-      "source_lines": [
-        182,
-        183
-      ]
+      "text": "原来对比成交量得跟昨天同时段比啊。那今天资金明明多砸了一半，股价却没冲过去，这算怎么回事？"
     },
     {
       "message_id": "M070",
+      "source_date": "2026-10-12",
       "node": "EVENING",
-      "topic": "BREAKOUT_LESSON",
       "kind": "message",
-      "text": "那我明天准备找一只BVB股票，对照今天讲的三个要点自己分析一下。",
-      "source_lines": [
-        205,
-        206
-      ]
+      "text": "那我明天准备找一只BVB股票，对照今天讲的三个要点自己分析一下。"
     },
     {
       "message_id": "M074",
+      "source_date": "2026-10-12",
       "node": "EVENING",
-      "topic": "BREAKOUT_LESSON",
       "kind": "message",
-      "text": "感谢先生辛苦授课，受益匪浅，祝先生晚安！",
-      "source_lines": [
-        217,
-        218
-      ]
+      "text": "感谢先生辛苦授课，受益匪浅，祝先生晚安！"
     }
   ],
   "no_unrecorded_history": true,
-  "no_real_trading_inferred": true
+  "no_real_trading_inferred": true,
+  "latest_source_date": "2026-10-12"
 }

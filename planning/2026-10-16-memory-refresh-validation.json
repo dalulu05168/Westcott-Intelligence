@@ -1,0 +1,99 @@
+{
+  "status": "MEMORY_REFRESH_VALIDATED_AND_FIVE_ROLE_CANDIDATE_EXECUTED",
+  "source_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
+  "source_retrieved_at": "2026-10-16T00:38:30Z",
+  "effective_date_counts": {
+    "2026-10-14": {
+      "all_blocks": 71,
+      "adopted_blocks": 70,
+      "member_messages": 44
+    },
+    "2026-10-15": {
+      "all_blocks": 104,
+      "adopted_blocks": 103,
+      "member_messages": 77
+    }
+  },
+  "total_tests": 143,
+  "checks": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/validate_repository.py"
+      ],
+      "exit_code": 0,
+      "output": "PASS: 65 identities and profiles; 36 reviewed member memory files; 198 confirmed history events; exclusions remain isolated\n"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/sync_runtime_memory.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "output": "PASS: 65 canonical identities; 198 adopted member events; five synchronized prepared prompts; 0 stale files\n"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0,
+      "output": "...............................................................\n----------------------------------------------------------------------\nRan 63 tests in 0.140s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "integrations/telegram",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0,
+      "output": ".................................................................\n----------------------------------------------------------------------\nRan 65 tests in 0.017s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "telegram_news",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0,
+      "output": "Connected Telegram bot username: @NuvexaCheckBot\nConnected Telegram bot username: @NuvexaCheckBot\nConnected Telegram bot username: @NuvexaCheckBot\nPRIVATE_TEST_SENT: Telegram acknowledged message_id 99\nOpen your personal Telegram conversation to confirm actual receipt.\n...............\n----------------------------------------------------------------------\nRan 15 tests in 0.005s\n\nOK\n"
+    }
+  ],
+  "memory_files": 36,
+  "adopted_events": 198,
+  "preserved": "65 identity rows, profiles, original submissions and previous derived revisions",
+  "semantic_limitations": [
+    "Archived market claims are not newly verified current news",
+    "No automated learning/homework/trade states inferred",
+    "Skill draft is not adopted story or external delivery"
+  ],
+  "online_tasks_modified": false,
+  "concurrent_remote_changes_preserved": "Telegram private connect and country-news changes from 281f360761a9c67bbe38da8bff380fa0c1f4fcb3; their test suite now has15 tests.",
+  "actual_candidate_run": {
+    "source_read_at": "2026-10-16T00:42:11.860Z",
+    "roles_applied": 5,
+    "independent_agents": false,
+    "cli_exit_code": 0,
+    "status": "EDITORIAL_REVIEW_REQUIRED",
+    "publication_allowed": false,
+    "news_scan_performed": false,
+    "adopted": false
+  }
+}
