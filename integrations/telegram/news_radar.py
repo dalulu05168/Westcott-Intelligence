@@ -150,12 +150,13 @@ def extract_items(feed_xml, feed, strict=False, window_start=None, window_end=No
             article = check_url(normalized, feed["article_hosts"])
             feed_article_url = article
             # Official Eurostat /product resolver returned this same-host route
-            # in live HTTP diagnostics. Do not enable arbitrary redirect following.
+            # in live HTTP diagnostics; its canonical omits the /en language prefix.
+            # Use that independently fetched canonical, not arbitrary redirects.
             if feed['id'] == 'eurostat_releases' and parts.hostname == 'ec.europa.eu' and parts.path == '/eurostat/product':
                 query = parse.parse_qs(parts.query, keep_blank_values=True)
                 codes = query.get('code', [])
                 if set(query) == {'code'} and len(codes) == 1 and re.fullmatch(r'[0-9]-[0-9]{8}-(?:ap|bp)', codes[0]):
-                    article = 'https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/' + codes[0]
+                    article = 'https://ec.europa.eu/eurostat/web/products-euro-indicators/w/' + codes[0]
             timestamp = parse_time(date)
         except RadarError as exc:
             if strict:

@@ -87,7 +87,7 @@ class OfficialRadarTests(unittest.TestCase):
         feed = next(f for f in radar.FEEDS if f['id'] == 'eurostat_releases')
         atom = b'<feed xmlns="http://www.w3.org/2005/Atom"><entry><title>Annual inflation</title><link href="https://ec.europa.eu/eurostat/product?code=2-16102026-ap"/><published>2026-10-16T09:00:00Z</published></entry></feed>'
         row = radar.extract_items(atom, feed, strict=True)[0]
-        self.assertEqual(row['article_url'], 'https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/2-16102026-ap')
+        self.assertEqual(row['article_url'], 'https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-16102026-ap')
         self.assertEqual(row['feed_article_url'], 'https://ec.europa.eu/eurostat/product?code=2-16102026-ap')
 
     def test_transient_feed_connection_failure_retries_read_only_get(self):
