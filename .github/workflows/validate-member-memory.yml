@@ -17,5 +17,14 @@ jobs:
         run: python -m unittest discover -s scripts -p test_runtime_context.py -v
       - name: Validate editorial execution and fact gate regressions
         run: python -m unittest discover -s scripts -p 'test_*.py' -v
+      - name: Audit 65 profiles and long-term evidence
+        run: python scripts/validate_member_p1.py
+      - name: Archive P1 validation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: westcott-p1-member-audit
+          path: audit/member-p1-validation.json
+          if-no-files-found: warn
       - name: Check all five prepared task prompts and hashes
         run: python scripts/sync_runtime_memory.py --check
