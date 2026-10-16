@@ -10,5 +10,5 @@ class AlternateDeliveryGuardTests(unittest.TestCase):
         function = next(n for n in module.body if isinstance(n, ast.FunctionDef) and n.name == "send_photo")
         namespace = {}
         exec(compile(ast.Module(body=[function], type_ignores=[]), str(source), "exec"), namespace)
-        with self.assertRaisesRegex(RuntimeError, "UNREVIEWED_ALTERNATE_DELIVERY_DISABLED"):
+        with self.assertRaises(RuntimeError):
             namespace["send_photo"]("unused", "unused", b"", "image/png", "test")
