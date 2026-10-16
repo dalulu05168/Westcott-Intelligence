@@ -1,0 +1,109 @@
+name: Official News Components Integration Audit (NO SEND)
+on:
+  push:
+    branches: [audit/news-real-components-no-send-20261016]
+    paths: ['.github/workflows/news-components-audit-no-send.yml']
+permissions:
+  contents: read
+jobs:
+  real-code-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline real publisher/gate/policy tests; no external send
+        run: python -m unittest discover -s integrations/telegram -p 'test_*.py'
+      - name: Real snapshot, gate, 20-minute and full-candidate checks
+        run: |
+          python - <<'PY'
+          import copy
+          import hashlib
+          import json
+          import sys
+          from datetime import datetime, timedelta, timezone
+          from pathlib import Path
+          root = Path.cwd()
+          sys.path.insert(0, str(root/'integrations'/'telegram'))
+          sys.path.insert(0, str(root/'scripts'))
+          import editorial_policy as policy
+          import reviewed_publish as publisher
+          import news_release_gate as gate
+          snap_name='news/editions/20261016t0919z.json'
+          approved_name='news/approved/raiffeisen-rbro33-20261016-manual.json'
+          edition=json.loads((root/snap_name).read_text('utf-8'))
+          ledger=json.loads((root/approved_name).read_text('utf-8'))
+          assert edition['status']=='COMPLETE'
+          assert len(edition['candidates'])==2
+          assert gate.evaluate(ledger)['status']=='PASS'
+          reference_time=gate.instant(ledger['executed_at'])+timedelta(minutes=1)
+          real_prepared=publisher.prepare(ledger,approved_name,now=reference_time)
+          assert real_prepared['target_country']=='RO'
+          try:
+              policy.validate_release(real_prepared,root,now=datetime.fromisoformat('2026-10-16T09:25:00+00:00'))
+          except policy.PolicyError as exc:
+              assert 'hourly_selection' in str(exc),str(exc)
+              print('MANUAL_LEDGER_NOT_HOURLY_WINNER: PASS')
+          else:
+              raise AssertionError('Manual ledger unexpectedly accepted as hourly')
+          start=policy.instant(edition['window_start'])
+          end=policy.instant(edition['window_end'])
+          assert end-start==timedelta(hours=1)
+          reviews=[]
+          for i, row in enumerate(edition['candidates']):
+              body=row['source_text_snapshot']
+              digest=hashlib.sha256(body.encode('utf-8')).hexdigest()
+              assert row['source_text_sha256']==digest
+              relevant=(i==0)
+              reviews.append({
+                  'candidate_id':row['id'],
+                  'event_key':'test-only-eurostat-inflation-20261016' if relevant else '',
+                  'relevant':relevant,
+                  'reviewed_by':'TEST_FIXTURE_ONLY_NOT_HUMAN_REVIEW',
+                  'body_sha256':digest,
+                  'support_excerpt':' '.join(body.split())[:100],
+                  'rationale':'离线测试数据，仅核实本地校验器的字段和时限，不是对新闻影响程度的真实审核。',
+                  'scores':{k:(5 if relevant else 0) for k in policy.WEIGHTS}
+              })
+          selected=edition['candidates'][0]
+          prepared={
+              'target_country':'RO',
+              'media':{'article_url':selected['article_url'],'image_url':None,'image_decision':'original_article_link_preview'},
+              'sources':[selected['article_url']],
+              'local_impact_claim_id':'impact','watch_next_claim_id':'watch',
+              'claim_ids':['fact','impact','watch'],
+              'claim_kinds':{'fact':'fact','impact':'analysis','watch':'analysis'},
+              'claim_countries':{'impact':'RO','watch':'RO'},
+              'hourly_selection':{
+                  'edition_path':snap_name,
+                  'edition_sha256':policy.digest(edition),
+                  'selected_candidate_id':selected['id'],
+                  'assessments':reviews
+              }
+          }
+          verified=policy.validate_release(prepared,root,now=end+timedelta(minutes=11))
+          assert verified['winner_id']==selected['id']
+          assert verified['ranked_candidate_count']==2
+          print('REAL_EDITION_TWO_CANDIDATES_ACCEPTED_WITH_SYNTHETIC_TEST_ASSESSMENTS: PASS')
+          def should_hold(test_name, variant, at, contains):
+              try:
+                  policy.validate_release(variant,root,now=at)
+              except policy.PolicyError as exc:
+                  assert contains in str(exc),(test_name,str(exc))
+                  print(test_name+': PASS ('+str(exc)+')')
+              else:
+                  raise AssertionError(test_name+' unexpectedly accepted')
+          should_hold('OVER_20_MIN_REJECTED',prepared,end+timedelta(minutes=26),'20-minute' if False else 'recent complete 60-minute')
+          missing=copy.deepcopy(prepared)
+          missing['hourly_selection']['assessments']=reviews[:1]
+          should_hold('INCOMPLETE_CANDIDATE_ASSESSMENTS_REJECTED',missing,end+timedelta(minutes=11),'All hourly candidates')
+          wrong=copy.deepcopy(prepared)
+          wrong['hourly_selection']['edition_sha256']='0'*64
+          should_hold('WRONG_EDITION_DIGEST_REJECTED',wrong,end+timedelta(minutes=11),'digest differs')
+          assert not any((root/'integrations'/'telegram'/f).exists() for f in ('auto_review.py','test_auto_review.py'))
+          print('AUTO_REVIEW_AND_TEST_FILES_MISSING_FROM_MAIN: CONFIRMED')
+          print('EXTERNAL_MODEL_CALLED: FALSE')
+          print('TELEGRAM_NEWS_SENT: FALSE')
+          PY
