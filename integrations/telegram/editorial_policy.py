@@ -68,7 +68,9 @@ def _validate(prepared, root, now, expected_feed_ids):
             raise PolicyError('Reviewed country-specific impact and watch-next analysis required.')
         if prepared.get('claim_countries', {}).get(cid) != country:
             raise PolicyError('Impact/watch analysis must explicitly concern the selected target country.')
-    selection = prepared.get('hourly_selection', {})
+    selection = prepared.get('hourly_selection')
+    if not isinstance(selection, dict) or not selection:
+        raise PolicyError('No reviewed hourly_selection attached; a manually sent news item is not an automatic hourly winner.')
     path = selection.get('edition_path', '')
     if not isinstance(path, str) or not EDITION_PATH.fullmatch(path):
         raise PolicyError('Committed hourly edition path is required.')
