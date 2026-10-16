@@ -441,7 +441,7 @@ def due(now, override):
     # French 00:00–02:00 Tue–Sat is the previous US trading day's
     # after-hours window. Saturday 00–02 covers Friday US post-market.
     us_after_hours = france.weekday() in (1, 2, 3, 4, 5) and france.hour in (0, 1, 2)
-    if romania.weekday() >= 5 and not us_after_hours:
+    if france.weekday() >= 5 and not us_after_hours:
         return [], ""
     if france.hour == 7 and france.minute in range(25, 55):
         return ["FR"], "morning"
