@@ -61,5 +61,32 @@ class ApprovedQueueTests(unittest.TestCase):
                 send.assert_not_called()
 
 
+    def test_incomplete_editorial_queue_is_not_a_fake_dispatch_failure(self):
+        with tempfile.TemporaryDirectory() as directory, patch.object(pub, 'publish') as send:
+            root = Path(directory)
+            (root/'news/approved').mkdir(parents=True)
+            ledger = fixtures.OriginalArticleTests().ledger()
+            ledger['claims'][0]['review_status'] = 'UNREVIEWED'
+            (root/'news/approved/unreviewed.json').write_text(json.dumps(ledger))
+            result = queue.drain(root, {})
+            self.assertEqual(result[0]['status'], 'HELD')
+            self.assertEqual(queue.exit_code(result), 0)
+            send.assert_not_called()
+
+    def test_telegram_delivery_failure_remains_critical_and_never_claims_success(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root/'news/approved').mkdir(parents=True)
+            ledger = fixtures.OriginalArticleTests().ledger()
+            (root/'news/approved/test.json').write_text(json.dumps(ledger))
+            with patch.object(pub, 'validate_release', return_value={'slot_key': 'TEST-01'}), \
+                 patch.object(pub, 'publish', side_effect=pub.PublicationError(
+                     'Delivery uncertain; pending audit blocks automatic retry.')) as send:
+                result = queue.drain(root, {})
+            self.assertEqual(result[0]['status'], 'DELIVERY_ERROR_DO_NOT_RETRY')
+            self.assertEqual(queue.exit_code(result), 1)
+            send.assert_called_once()
+
+
 if __name__ == '__main__':
     unittest.main()
