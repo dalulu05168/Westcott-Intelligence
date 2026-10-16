@@ -18,6 +18,51 @@ class EditorialExecutionTest(unittest.TestCase):
     def context(self, members=('10', '15')):
         return execution.build_context(ROOT, '2026-10-16', list(members))
 
+    def test_oct16_archive_parses_staff_and_member_in_original_order(self):
+        archive = json.loads((ROOT / 'memory/daily/2026-10-16/formal-google-doc-snapshot.json').read_text())
+        adapted, live = execution.adapt_snapshot(archive, '2026-10-16')
+        self.assertFalse(live)
+        days, conflicts = execution.snapshot_messages(adapted, __import__('datetime').date(2026, 10, 16),
+                                                       {p['id']: p for p in json.loads((ROOT / 'skills/p004-chat-suite/characters/final-identity-65.json').read_text())['people']})
+        rows = days['2026-10-16']
+        self.assertGreater(len(rows), 25)
+        self.assertEqual(rows[0]['speaker_id'], 'news_assistant')
+        self.assertEqual(rows[-1]['speaker_id'], 'news_assistant')
+        self.assertIn('下午再见', rows[-1]['text'])
+        self.assertTrue(any(m['speaker_id'] == '25' for m in rows))
+        self.assertTrue(any(c.get('type') == 'DATE_ATTRIBUTION_REQUIRES_REVIEW' for c in conflicts))
+        c = execution.build_context(ROOT, '2026-10-16', ['25'], snapshot=archive)
+        self.assertEqual(c['freshness'], 'ARCHIVE_SNAPSHOT_REQUIRES_DOCUMENT_REFRESH')
+        self.assertTrue(c['members']['25']['history'])
+
+    def test_undated_monthly_tab_refuses_silent_attribution(self):
+        snapshot = {'documentId': execution.FORMAL_DOC_ID, 'revisionId': 'r',
+                    'retrieved_at': '2026-10-16T12:00:00+03:00',
+                    'tabs': [{'tabId': 't.0', 'title': '⭕️🔟月汇总'}],
+                    'paragraphs': [{'tabId': 't.0', 'text': '===== 资讯助理 =====\\n测试'}]}
+        with self.assertRaisesRegex(ValueError, 'UNVERIFIED_DATE_BOUNDARY'):
+            execution.build_context(ROOT, '2026-10-16', ['25'], snapshot=snapshot)
+
+    def test_archived_snapshot_missing_date_provenance_is_rejected(self):
+        archive = json.loads((ROOT / 'memory/daily/2026-10-16/formal-google-doc-snapshot.json').read_text())
+        archive.pop('date_attribution')
+        with self.assertRaisesRegex(ValueError, 'SNAPSHOT_DATE_UNVERIFIED'):
+            execution.build_context(ROOT, '2026-10-16', ['25'], snapshot=archive)
+
+    def test_dated_tab_retains_teacher_and_assistant_turns(self):
+        snapshot = {'documentId': execution.FORMAL_DOC_ID, 'revisionId': 'r',
+                    'retrieved_at': '2026-10-16T12:00:00+03:00',
+                    'tabs': [{'tabId': 'x', 'title': '10/16'}],
+                    'paragraphs': [{'tabId': 'x', 'text':
+                                    '===== 资讯助理 =====\\n开始\\n===== 先生 =====\\n课程\\n25男：\\n收到'}]}
+        adapted, live = execution.adapt_snapshot(snapshot, '2026-10-16')
+        self.assertTrue(live)
+        days, conflicts = execution.snapshot_messages(adapted, __import__('datetime').date(2026, 10, 16),
+                                                       {p['id']: p for p in json.loads((ROOT / 'skills/p004-chat-suite/characters/final-identity-65.json').read_text())['people']})
+        self.assertEqual([r['speaker_id'] for r in days['2026-10-16']],
+                         ['news_assistant', 'teacher', '25'])
+        self.assertEqual(conflicts, [])
+
     def test_id_is_the_key_even_when_names_match(self):
         with self.assertRaisesRegex(ValueError, 'OUTSIDE_ACTIVE_RANGE'):
             self.context(('41', '62'))
