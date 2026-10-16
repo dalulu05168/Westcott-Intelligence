@@ -1,5 +1,5 @@
 {
-  "state": "PENDING_DO_NOT_RETRY",
+  "state": "DELIVERED",
   "event_id": "raiffeisen-rbro33-20261016-manual",
   "fingerprint": "f1bcd3d52d2f84049965b0f0b06ee29b892f1322f3c4a67752dc4e9da46337b1",
   "claim_ids": [
@@ -28,7 +28,9 @@
   "original_image_url": null,
   "image_decision": "original_article_link_preview",
   "reserved_at": "2026-10-16T08:54:12.601910+00:00",
-  "message_ids": [],
+  "message_ids": [
+    39
+  ],
   "source_rechecks": [
     {
       "url": "https://bvb.ro/AboutUs/MediaCenter/PressItem/Raiffeisen-Bank-listeaza-o-noua-emisiune-de-obligatiuni-la-Bursa-de-Valori-Bucuresti-in-valoare-de-750-de-milioane-de-lei/6472",
@@ -43,5 +45,9 @@
     "image_exception": "没有原图就给官网链接",
     "scope": "One manually selected verified news item; not an automatic hourly winner assertion."
   },
-  "release_mode": "USER_REQUESTED_SINGLE_REVIEWED_NEWS_LINK_ONLY"
+  "release_mode": "USER_REQUESTED_SINGLE_REVIEWED_NEWS_LINK_ONLY",
+  "photo_message_id": null,
+  "image_delivery": "article_link_preview",
+  "group_title": "🌐~~~资讯快报",
+  "delivered_at": "2026-10-16T08:54:21.017826+00:00"
 }
