@@ -1,0 +1,33 @@
+name: Telegram Expected Group Diagnostic (No Send)
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/westcott-target-diagnostic-20261016.yml']
+permissions:
+  contents: read
+jobs:
+  inspect:
+    if: github.event.head_commit.message == 'Diagnose Telegram destination mismatch 20261016T0714Z' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TELEGRAM_EXPECTED_BOT_USERNAME: NuvexaCheckBot
+      TELEGRAM_EXPECTED_GROUP_TITLE: 资讯快报
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read destination names only, never send
+        shell: python
+        run: |
+          import sys, os, json
+          sys.path.insert(0, 'integrations/telegram')
+          from bridge import call_api, verify_bot_identity, discover_groups
+          verify_bot_identity(os.environ['TELEGRAM_BOT_TOKEN'])
+          c=call_api(os.environ['TELEGRAM_BOT_TOKEN'],'getChat',{'chat_id':os.environ['TELEGRAM_CHAT_ID']})
+          print(json.dumps({'configured_target_type':c.get('type'),'configured_target_title':c.get('title'),'expected_target_title':'资讯快报'},ensure_ascii=False))
+          groups=discover_groups()
+          print(json.dumps({'matching_group_count':len(groups),'matching_groups':[{'title':g['title'],'type':g['type']} for g in groups]},ensure_ascii=False))
