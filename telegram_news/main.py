@@ -285,9 +285,9 @@ def run():
         print("Internal preparation only; no Telegram message.")
         return
     token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
-    chat = os.getenv("TELEGRAM_CHAT_ID", "").strip()
+    chat = os.getenv("TELEGRAM_PRIVATE_CHAT_ID", "").strip()
     if not dry_run and (not token or not chat):
-        raise RuntimeError("Add TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID as GitHub secrets")
+        raise RuntimeError("Add TELEGRAM_BOT_TOKEN and TELEGRAM_PRIVATE_CHAT_ID as GitHub secrets; keep existing group TELEGRAM_CHAT_ID unchanged")
     if dry_run:
         state, sha, target = {"sent": {}, "empty": {}}, None, None
     else:
