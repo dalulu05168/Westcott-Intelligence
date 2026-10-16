@@ -1,0 +1,37 @@
+name: User Requested Single News Source Check
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/westcott-single-news-probe-20261016.yml']
+permissions:
+  contents: write
+jobs:
+  inspect:
+    if: github.event.head_commit.message == 'Inspect original article and image for user requested single news 20261016T0847Z' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read original sources without Telegram access
+        shell: python
+        run: |
+          import sys,json,os
+          sys.path.insert(0,'integrations/telegram')
+          from source_media import inspect_article
+          from hourly_radar import store_edition
+          from reviewed_publish import github_write
+          results=[]
+          for u in ["https://bvb.ro/AboutUs/MediaCenter/PressItem/Raiffeisen-Bank-listeaza-o-noua-emisiune-de-obligatiuni-la-Bursa-de-Valori-Bucuresti-in-valoare-de-750-de-milioane-de-lei/6472","https://www.consilium.europa.eu/en/press/press-releases/2026/10/16/european-council-conclusions-on-competitiveness-the-next-multiannual-financial-framework-and-enlargement-and-reforms/","https://www.consilium.europa.eu/en/meetings/european-council/2026/10/15-16/"]:
+              try:
+                  page=inspect_article(u)
+                  results.append({'url':u,'status':'FETCHED','metadata':page})
+              except Exception as exc:
+                  results.append({'url':u,'status':'UNAVAILABLE','reason':str(exc)})
+          github_write('news/probes/single-news-20261016.json',{'event_id':'single-news-probe-20261016','sources':results},os.environ['GITHUB_TOKEN'],os.environ['GITHUB_REPOSITORY'])
+          print(json.dumps([{'url':r['url'],'status':r['status'],'images':r.get('metadata',{}).get('article_image_candidates',[]),'og':r.get('metadata',{}).get('image_candidate_url'),'reason':r.get('reason')} for r in results],ensure_ascii=False))
