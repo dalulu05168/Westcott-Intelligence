@@ -30,13 +30,18 @@ PROFILES = {
            "market": "CAC 40 / Euronext Paris", "label": "France"},
 }
 AMF_RSS = "https://www.amf-france.org/fr/flux-rss/display/23"
+BVB_ISSUER_FEEDS = {
+    "BVB_MARKET": "https://www.bvb.ro/Rss/StiriBVB.ashx",
+    "BVB_FIN": "https://www.bvb.ro/Rss2/LastFinancialData.ashx?allRep=true&lang=ro",
+}
 FEEDS = {
     "AMF": AMF_RSS,
     "ECB": "https://www.ecb.europa.eu/rss/press.html",
     "FED": "https://www.federalreserve.gov/feeds/press_all.xml",
 }
 TRUSTED = {
-    "BVB": ("bvb.ro",), "AMF": ("amf-france.org",),
+    "BVB": ("bvb.ro",), "BVB_MARKET": ("bvb.ro",),
+    "BVB_FIN": ("bvb.ro",), "AMF": ("amf-france.org",),
     "ECB": ("ecb.europa.eu",), "FED": ("federalreserve.gov",),
 }
 IMPACT_TERMS = re.compile(r"\b(rate|rates|interest|inflation|cpi|monetary|"
@@ -57,13 +62,38 @@ def host_allowed(url, domains):
     )
 
 
+def feed_items(source, endpoint, zone):
+    """Parse the original BVB RSS channels (publication timestamps mandatory)."""
+    response = SESSION.get(endpoint, timeout=18)
+    response.raise_for_status()
+    parsed = feedparser.parse(response.content)
+    if parsed.bozo and not parsed.entries:
+        raise ValueError("unreadable official RSS")
+    results = []
+    for row in parsed.entries[:60]:
+        url = row.get("link", "").strip()
+        title = " ".join(str(row.get("title", "")).split())
+        stamp = row.get("published_parsed") or row.get("updated_parsed")
+        if not (title and stamp and host_allowed(url, TRUSTED[source])):
+            continue
+        published = datetime(*stamp[:6], tzinfo=timezone.utc).astimezone(zone)
+        results.append({
+            "id": hashlib.sha256((source + "|" + url.split("#")[0]).encode()).hexdigest()[:24],
+            "source": source, "url": url.split("#")[0],
+            "title": title[:300], "published": published.isoformat(),
+        })
+    return results
+
+
 def source_records():
     """One unavailable provider does not certify that no major news exists."""
     output, errors = [], []
-    for source in ("BVB", "AMF", "ECB", "FED"):
+    for source in ("BVB", "BVB_MARKET", "BVB_FIN", "AMF", "ECB", "FED"):
         try:
             if source == "BVB":
                 items = fetch_bvb()
+            elif source in BVB_ISSUER_FEEDS:
+                items = feed_items(source, BVB_ISSUER_FEEDS[source], TZ)
             elif source == "AMF":
                 # AMF RSS has the authoritative original article URL, date and title.
                 data = feedparser.parse(SESSION.get(AMF_RSS, timeout=18).content)
@@ -168,10 +198,10 @@ def materiality(record, country, now, kind, used):
         return None
     source = record["source"]
     # Local sources prioritized, but major central-bank updates can outrank them.
-    home = {"RO": "BVB", "FR": "AMF"}[country]
-    if source != home and not IMPACT_TERMS.search(record["title"]):
+    home = {"RO": {"BVB", "BVB_MARKET", "BVB_FIN"}, "FR": {"AMF"}}[country]
+    if source not in home and not IMPACT_TERMS.search(record["title"]):
         return None
-    score = 45 if source == home else 20
+    score = 45 if source in home else 20
     if IMPACT_TERMS.search(record["title"]):
         score += 35
     if re.search(r"\b(rate|interest|monetary|inflation|cpi|taux|dobând|inflați)\w*",
