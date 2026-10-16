@@ -112,6 +112,13 @@ def prepare(ledger, filename, now=None):
     facts = checked["approved_facts"]
     if not facts or any(not isinstance(f, str) or not f.strip() for f in facts):
         raise PublicationError("No approved text.")
+    # Both Romanian-market and French-market releases must be Chinese, not
+    # Romanian/French prose. Keep authentic company names, tickers and links.
+    # This is a last-mile fail-closed check; the original-language evidence
+    # excerpts remain unchanged and are not part of Telegram news body.
+    if ledger.get("target_country") in COUNTRIES and any(
+            len(re.findall(r"[\u3400-\u9fff]", fact)) < 2 for fact in facts):
+        raise PublicationError("Country-specific Telegram news must be Chinese; no foreign-language story text.")
     # Derive URLs ONLY from the evidence for published claims.
     selected = set(ledger["publish_claim_ids"])
     urls = []
