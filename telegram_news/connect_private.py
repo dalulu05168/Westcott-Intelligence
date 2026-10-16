@@ -48,12 +48,12 @@ def main():
         _, match = max(matches, key=lambda pair: pair[0])
         print("Latest private /start chat_id:", match["id"])
         print("Telegram username, if configured: @" + str(match.get("username", "<unset>")))
-        print("Confirm this is your own account before saving the ID to GitHub secret TELEGRAM_CHAT_ID.")
+        print("Confirm this is your own account before saving the ID as secret TELEGRAM_PRIVATE_CHAT_ID; preserve the original group TELEGRAM_CHAT_ID.")
         print("Discovery does not send a message and does not consume or delete updates.")
     elif mode == "test":
-        chat_id = os.getenv("TELEGRAM_CHAT_ID", "").strip()
+        chat_id = os.getenv("TELEGRAM_PRIVATE_CHAT_ID", "").strip()
         if not chat_id:
-            raise RuntimeError("TELEGRAM_CHAT_ID GitHub Actions secret is missing")
+            raise RuntimeError("TELEGRAM_PRIVATE_CHAT_ID GitHub Actions secret is missing; never replace the existing group TELEGRAM_CHAT_ID")
         ensure_private_destination(token, chat_id)
         now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
         mid = send_message(token, chat_id,
