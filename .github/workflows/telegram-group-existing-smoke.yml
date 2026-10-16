@@ -1,0 +1,44 @@
+name: One-Time Existing Telegram Group Delivery Proof
+on:
+  push:
+    branches: [fix/dual-news-existing-group-20261016]
+    paths: ['.github/workflows/telegram-group-existing-smoke.yml']
+permissions:
+  contents: read
+concurrency:
+  group: westcott-existing-group-smoke-once
+  cancel-in-progress: false
+jobs:
+  telegram-group-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      TELEGRAM_BOT_TOKEN: '${{ secrets.TELEGRAM_BOT_TOKEN }}'
+      TELEGRAM_CHAT_ID: '${{ secrets.TELEGRAM_CHAT_ID }}'
+      TELEGRAM_EXPECTED_BOT_USERNAME: NuvexaCheckBot
+      TELEGRAM_EXPECTED_GROUP_TITLE: '🌐~~~资讯快报'
+      TELEGRAM_MESSAGE_THREAD_ID: '${{ vars.TELEGRAM_MESSAGE_THREAD_ID }}'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Use the existing approved Telegram group transport for an explicit test
+        run: |
+          python - <<'PY'
+          import sys
+          sys.path.insert(0, 'integrations/telegram')
+          from bridge import send_group_news
+          message = (
+              "===== 资讯助理 =====\n"
+              "✅ ELLERY WESTCOTT｜双国家新闻系统连接测试\n"
+              "此消息由 Westcott-Intelligence GitHub 新版测试工作流发送。"
+              "仅验证现有「🌐~~~资讯快报」群组目标，不是财经新闻。"
+          )
+          receipt = send_group_news(message)
+          print("EXISTING_GROUP_TEST_TELEGRAM_ACK: TRUE")
+          print("MESSAGE_IDS:", ",".join(str(v) for v in receipt["message_ids"]))
+          print("TARGET_TITLE_VERIFIED: TRUE")
+          print("NEWS_SENT: FALSE")
+          print("CHECK_ACTUAL_GROUP_RECEIPT: REQUIRED")
+          PY
