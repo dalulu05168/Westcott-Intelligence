@@ -134,7 +134,15 @@ def extract_items(feed_xml, feed, strict=False):
         if not title or not href or not date:
             raise RadarError('Feed item lacks title/link/time; complete hourly comparison is unavailable.')
         try:
-            article = check_url(href, feed["article_hosts"])
+            if any(ord(c) < 32 for c in href):
+                raise RadarError('Control character in feed URL.')
+            normalized = parse.urljoin(feed['url'], href).replace(' ', '%20')
+            parts = parse.urlsplit(normalized)
+            if parts.scheme == 'http' and parts.hostname in feed['article_hosts']:
+                normalized = parse.urlunsplit(('https', parts.netloc, parts.path, parts.query, parts.fragment))
+            if parts.scheme in ('http', 'https') and parts.netloc in ('bvb.ro', 'www.bvb.ro'):
+                normalized = parse.urlunsplit(('https', 'bvb.ro', parts.path, parts.query, parts.fragment))
+            article = check_url(normalized, feed["article_hosts"])
             timestamp = parse_time(date)
         except RadarError as exc:
             if strict:
@@ -150,7 +158,7 @@ def extract_items(feed_xml, feed, strict=False):
     return result
 
 
-def pick_candidates(items, now=None, max_age_hours=MAX_AGE_HOURS, limit=MAX_PER_CYCLE, require_signal=True):
+def pick_candidates(items, now=None, max_age_hours=MAX_AGE_HOURS, limit=MAX_PER_CYCLE, require_signal=True, group_attachments=True):
     now = now or datetime.now(timezone.utc)
     seen = set()
     choices = []
@@ -158,7 +166,7 @@ def pick_candidates(items, now=None, max_age_hours=MAX_AGE_HOURS, limit=MAX_PER_
     # for the same BVB issuer and timestamp. Preserve all URLs for verification.
     groups = {}
     for row in items:
-        if row.get('feed_id', '').startswith('bvb_'):
+        if group_attachments and row.get('feed_id', '').startswith('bvb_'):
             key = (row['source'], row['title'], row['published_at'])
             groups.setdefault(key, {})[row['article_url']] = row
     replacements, attachments = {}, set()
@@ -228,6 +236,7 @@ def inspect_candidate_image(row, inspector=None):
             raise SourceMediaError("Publisher canonical differs from feed story.")
         return {**row, "original_image_candidate_url": page.get("image_candidate_url"),
                 "article_image_candidates": page.get('article_image_candidates', []),
+                "linked_document_urls": page.get('linked_document_urls', []),
                 "source_text_snapshot": page.get('source_text', '')[:80000],
                 "source_text_sha256": page.get('source_text_sha256'),
                 "source_text_truncated": len(page.get('source_text', '')) > 80000,

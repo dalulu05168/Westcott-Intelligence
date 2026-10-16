@@ -48,6 +48,24 @@ class HourlyRadarTests(unittest.TestCase):
         self.assertTrue(result['truncated'])
         self.assertEqual(result['status'], 'INCOMPLETE')
 
+    def test_bvb_same_timestamp_pdf_is_not_discarded_without_actual_article_link(self):
+        feeds = [{'id': 'bvb_market', 'source': 'Bucharest Stock Exchange',
+            'url': 'https://bvb.ro/feed', 'article_hosts': ('bvb.ro',)}]
+        page = 'https://bvb.ro/FinancialInstruments/SelectedData/NewsItem/SNG/123'
+        linked = 'https://bvb.ro/infocont/report.pdf'
+        unrelated = 'https://bvb.ro/infocont/separate-disclosure.pdf'
+        def fetch(_):
+            return ('<rss><channel>' + ''.join('<item><title>ROMGAZ (SNG)</title><link>' + url
+                + '</link><pubDate>Fri, 16 Oct 2026 09:10:00 GMT</pubDate></item>'
+                for url in (page, linked, unrelated)) + '</channel></rss>').encode()
+        def inspect(row):
+            if row['article_url'] == page:
+                return {**self.inspector(row), 'linked_document_urls': [linked]}
+            return {**row, 'body_fetch_status': 'UNAVAILABLE'}
+        result = hourly.collect_hour(feeds, fetch, inspect, self.end)
+        self.assertEqual({r['article_url'] for r in result['candidates']}, {page, unrelated})
+        self.assertEqual(result['status'], 'INCOMPLETE')
+
 
 if __name__ == '__main__':
     unittest.main()

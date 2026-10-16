@@ -170,6 +170,18 @@ class ArticleImages(HTMLParser):
             self.excluded = max(0, self.excluded - 1)
 
 
+class LinkedDocuments(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.urls = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag == 'a':
+            href = dict(attrs).get('href', '')
+            if urllib.parse.urlsplit(href).path.lower().endswith('.pdf'):
+                self.urls.append(href)
+
+
 def inspect_markup(article_url, markup):
     article_url = public_https(article_url)
     parser = HeadMetadata()
@@ -213,7 +225,20 @@ def inspect_markup(article_url, markup):
         if url not in seen_images:
             body_images.append({**item, 'url': url})
             seen_images.add(url)
+    documents = LinkedDocuments()
+    documents.feed(markup[:MAX_HTML])
+    linked_docs = []
+    for href in documents.urls:
+        try:
+            document_url = urllib.parse.urljoin(article_url, href).replace(' ', '%20')
+            parts = urllib.parse.urlsplit(document_url)
+            if parts.scheme in ('http', 'https') and parts.netloc in ('bvb.ro', 'www.bvb.ro'):
+                document_url = urllib.parse.urlunsplit(('https', 'bvb.ro', parts.path, parts.query, parts.fragment))
+            linked_docs.append(public_https(document_url))
+        except SourceMediaError:
+            continue
     return {
+        "linked_document_urls": sorted(set(linked_docs)),
         "article_image_candidates": body_images,
         "source_text": source_text,
         "source_text_sha256": hashlib.sha256(source_text.encode('utf-8')).hexdigest(),

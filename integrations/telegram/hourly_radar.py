@@ -26,7 +26,8 @@ def collect_hour(feeds=None, fetcher=None, inspector=None, end=None, max_candida
             coverage.append({'feed_id': feed['id'], 'status': 'ERROR', 'reason': str(exc)})
     # No keyword prefilter or top-12 truncation before country impact comparison.
     rows = [r for r in rows if start <= radar.parse_time(r['published_at']) < end]
-    candidates = radar.pick_candidates(rows, end, max_age_hours=1, limit=None, require_signal=False)
+    candidates = radar.pick_candidates(rows, end, max_age_hours=1, limit=None,
+                                       require_signal=False, group_attachments=False)
     truncated = len(candidates) > max_candidates
     candidates = candidates[:max_candidates]
     def inspect(row):
@@ -36,7 +37,24 @@ def collect_hour(feeds=None, fetcher=None, inspector=None, end=None, max_candida
             return {**row, 'body_fetch_status': 'UNAVAILABLE', 'inspection_error': type(exc).__name__}
     with ThreadPoolExecutor(max_workers=4) as pool:
         candidates = list(pool.map(inspect, candidates))
-    complete = not truncated and all(c['status'] == 'OK' for c in coverage)
+    parents = {}
+    for parent in candidates:
+        if parent.get('body_fetch_status') != 'FETCHED_FOR_REVIEW':
+            continue
+        for child in candidates:
+            if (child['article_url'] in parent.get('linked_document_urls', [])
+                    and child['title'] == parent['title'] and child['source'] == parent['source']
+                    and child['published_at'] == parent['published_at']):
+                parents.setdefault(child['article_url'], []).append(parent)
+    attached = set()
+    for child_url, linked_parents in parents.items():
+        if len(linked_parents) == 1:
+            linked_parents[0].setdefault('verified_attachment_urls', []).append(child_url)
+            attached.add(child_url)
+    candidates = [c for c in candidates if c['article_url'] not in attached]
+    complete = (not truncated and all(c['status'] == 'OK' for c in coverage)
+                and all(c.get('body_fetch_status') == 'FETCHED_FOR_REVIEW'
+                        and c.get('source_text_truncated') is False for c in candidates))
     return {'status': 'COMPLETE' if complete else 'INCOMPLETE',
             'window_start': start.isoformat(), 'window_end': end.isoformat(),
             'captured_at': datetime.now(timezone.utc).isoformat(),
