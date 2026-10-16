@@ -436,7 +436,7 @@ def publish():
         return
     dry = os.getenv("DRY_RUN", "true").lower() == "true"
     token = os.getenv("TELEGRAM_BOT_TOKEN", "")
-    chat = os.getenv("TELEGRAM_CHAT_ID", "")
+    chat = os.getenv("TELEGRAM_PRIVATE_CHAT_ID", "")
     if not dry and (os.getenv("TELEGRAM_DUAL_MARKET_ENABLED") != "true"
                    or os.getenv("LEGACY_TELEGRAM_NEWS_ENABLED") == "true"
                    or os.getenv("OFFICIAL_IMAGE_REUSE_APPROVED") != "true"
