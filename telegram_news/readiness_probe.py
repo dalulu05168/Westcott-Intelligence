@@ -16,6 +16,7 @@ def check():
     image_rights = os.getenv("OFFICIAL_IMAGE_REUSE_APPROVED") == "true"
     legacy = os.getenv("LEGACY_TELEGRAM_NEWS_ENABLED") == "true"
     dual = os.getenv("TELEGRAM_DUAL_MARKET_ENABLED") == "true"
+    live_approved = os.getenv("TELEGRAM_DUAL_MARKET_LIVE_APPROVED") == "true"
     checks = {
         "bot_token_present": bool(token),
         "private_chat_secret_present": bool(private_chat),
@@ -26,6 +27,7 @@ def check():
         "official_image_reuse_approved": image_rights,
         "old_single_market_automation_disabled": not legacy,
         "new_dual_market_automation_enabled": dual,
+        "new_dual_market_explicit_live_approval": live_approved,
     }
     if token:
         try:
