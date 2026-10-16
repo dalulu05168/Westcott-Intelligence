@@ -4,11 +4,35 @@ import hashlib
 from html.parser import HTMLParser
 import ipaddress
 import socket
+import subprocess
+import tempfile
+from pathlib import Path
 import urllib.error
 import urllib.parse
 import urllib.request
 
 MAX_HTML = 524_288
+MAX_PDF = 6_000_000
+
+
+def pdf_markup(content):
+    """Extract real PDF text for comparison; never turn a PDF page into a photo."""
+    if not content.startswith(b'%PDF-') or len(content) > MAX_PDF:
+        raise SourceMediaError('Invalid or oversized original PDF.')
+    try:
+        with tempfile.TemporaryDirectory(prefix='westcott-pdf-') as directory:
+            source, target = Path(directory) / 'source.pdf', Path(directory) / 'body.txt'
+            source.write_bytes(content)
+            subprocess.run(['pdftotext', '-enc', 'UTF-8', str(source), str(target)],
+                           check=True, timeout=15, capture_output=True)
+            if target.stat().st_size > MAX_HTML // 2:
+                raise SourceMediaError('Original PDF text exceeds review limit.')
+            text = ' '.join(target.read_text(encoding='utf-8').split())
+    except (OSError, subprocess.SubprocessError, UnicodeError):
+        raise SourceMediaError('Original PDF text unavailable; scanned/encrypted files require review.') from None
+    if len(text) < 80 or text.count('\ufffd') > len(text) // 100:
+        raise SourceMediaError('Original PDF has insufficient readable text.')
+    return '<html><head><title>Original official PDF</title></head><body><article>' + html.escape(text) + '</article></body></html>'
 
 
 class SourceMediaError(ValueError):
@@ -68,10 +92,12 @@ def fetch_original_article(url, opener=None):
     handler = opener or urllib.request.build_opener(NoRedirect())
     request = urllib.request.Request(
         url, headers={"User-Agent": "WestcottArticlePreview/1.0",
-                      "Accept": "text/html,application/xhtml+xml;q=0.9"}, method="GET")
+                      "Accept": "text/html,application/xhtml+xml,application/pdf;q=0.9"}, method="GET")
     try:
         with handler.open(request, timeout=12) as response:
             content_type = response.headers.get("Content-Type", "").lower()
+            if 'application/pdf' in content_type or urllib.parse.urlsplit(url).path.lower().endswith('.pdf'):
+                return pdf_markup(response.read(MAX_PDF + 1))
             if not ("text/html" in content_type or "application/xhtml+xml" in content_type):
                 raise SourceMediaError("Original article response is not HTML.")
             content = response.read(MAX_HTML + 1)
