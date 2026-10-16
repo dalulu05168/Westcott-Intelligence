@@ -215,12 +215,21 @@ def materiality(record, country, now, kind, used):
     home = {"RO": {"BVB", "BVB_MARKET", "BVB_FIN"}, "FR": {"AMF", "FR_GOV"}}[country]
     if not IMPACT_TERMS.search(record["title"]):
         return None
-    score = 45 if source in home else 20
-    if IMPACT_TERMS.search(record["title"]):
-        score += 35
-    if re.search(r"\b(rate|interest|monetary|inflation|cpi|taux|dobând|inflați)\w*",
-                 record["title"], re.I):
-        score += 20
+    # Deterministic editorial hierarchy. A central-bank policy decision must
+    # outrank a low-impact domestic PR with only a generic energy/bank mention.
+    headline = record["title"]
+    score = 25 if source in home else 5
+    macro = bool(re.search(r"\b(rate|rates|interest|monetary|inflation|cpi|policy|taux|"
+                           r"dobând|inflați|politique monétaire)\w*", headline, re.I))
+    corporate = bool(re.search(r"\b(earnings|results|profit|merger|acquisition|"
+                               r"résultat|bilan|fuziune|achiziți|dividend)\w*",
+                               headline, re.I))
+    if macro and source in {"ECB", "FED", "AMF", "FR_GOV"}:
+        score += 85
+    elif corporate:
+        score += 60
+    else:
+        score += 28
     score += max(0, 12 - int(age))
     return score
 
