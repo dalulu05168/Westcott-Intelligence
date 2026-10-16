@@ -11,7 +11,8 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-MAX_HTML = 524_288
+MAX_HTML = 2_097_152
+MAX_PDF_TEXT = 262_144
 MAX_PDF = 6_000_000
 
 
@@ -25,7 +26,7 @@ def pdf_markup(content):
             source.write_bytes(content)
             subprocess.run(['pdftotext', '-enc', 'UTF-8', str(source), str(target)],
                            check=True, timeout=15, capture_output=True)
-            if target.stat().st_size > MAX_HTML // 2:
+            if target.stat().st_size > MAX_PDF_TEXT:
                 raise SourceMediaError('Original PDF text exceeds review limit.')
             text = ' '.join(target.read_text(encoding='utf-8').split())
     except (OSError, subprocess.SubprocessError, UnicodeError):
