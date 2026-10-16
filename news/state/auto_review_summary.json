@@ -1,0 +1,14 @@
+{
+  "time": "2026-10-16T15:36:50Z",
+  "written": [],
+  "held": [
+    [
+      "*",
+      "reviewer_not_configured"
+    ]
+  ],
+  "reviewer_configuration": {
+    "api_key_configured": false,
+    "model_configured": false
+  }
+}
