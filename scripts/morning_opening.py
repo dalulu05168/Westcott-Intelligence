@@ -142,7 +142,7 @@ def build(now, market_data=None):
         f"===== 资讯助理 =====\n📊 {session_date:%Y年%m月%d日}美股常规交易时段收盘，"
         + "，".join(statements) + "。\n"
         + "以上是所提供审核材料中的收盘百分比；宏观及公司消息仍需逐条核实后再展开。"
-        + "\\n\\n🔗 官方指数原始来源：\\n" + "\\n".join(official_links)
+        + "\n\n🔗 官方指数原始来源：\n" + "\n".join(official_links)
     )
     report["status"] = "READY_FOR_EDITORIAL_REVIEW"
     report["reason"] = (
