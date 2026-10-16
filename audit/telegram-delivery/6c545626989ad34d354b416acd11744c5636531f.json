@@ -1,0 +1,34 @@
+{
+  "state": "PENDING_DO_NOT_RETRY",
+  "event_id": "insee-business-creations-20261016-manual",
+  "fingerprint": "6c545626989ad34d354b416acd11744c5636531fc52f97958360b939b23fcce3",
+  "claim_ids": [
+    "event",
+    "impact",
+    "watch"
+  ],
+  "claim_evidence_keys": [
+    "61927a01edcd0acab3fe74ce00a7c18fb557a634385734de49df76b672af2983"
+  ],
+  "claim_reservation_paths": [
+    "audit/telegram-claims/FR/61927a01edcd0acab3fe74ce00a7c18fb557a634385734de49df76b672af2983.json"
+  ],
+  "editorial_acceptance": null,
+  "evidence_urls": [
+    "https://www.insee.fr/fr/statistiques/9078876"
+  ],
+  "ledger": "news/approved/insee-business-creations-20261016-manual.json",
+  "ledger_digest": "48b164cd0b09a0e86cf8c820dd19cff87bba69a27f3142532aae39a884d181e9",
+  "original_article_url": "https://www.insee.fr/fr/statistiques/9078876",
+  "original_image_url": null,
+  "image_decision": "original_article_link_preview",
+  "reserved_at": "2026-10-16T08:56:53.131592+00:00",
+  "message_ids": [],
+  "source_rechecks": [
+    {
+      "url": "https://www.insee.fr/fr/statistiques/9078876",
+      "source_text_sha256": "3a372d13defaa14b5677d3ca9821a7d438349aae9481704333e91d86bc327158",
+      "checked_at": "2026-10-16T08:56:52.155189+00:00"
+    }
+  ]
+}
