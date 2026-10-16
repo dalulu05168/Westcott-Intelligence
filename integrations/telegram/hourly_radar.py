@@ -19,7 +19,7 @@ def collect_hour(feeds=None, fetcher=None, inspector=None, end=None, max_candida
     rows, coverage = [], []
     for feed in feeds:
         try:
-            items = radar.extract_items(fetcher(feed), feed, strict=True)
+            items = radar.extract_items(fetcher(feed), feed, strict=True, window_start=start, window_end=end)
             rows.extend(items)
             coverage.append({'feed_id': feed['id'], 'status': 'OK', 'parsed_items': len(items)})
         except radar.RadarError as exc:

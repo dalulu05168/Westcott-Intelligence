@@ -48,6 +48,14 @@ class HourlyRadarTests(unittest.TestCase):
         self.assertTrue(result['truncated'])
         self.assertEqual(result['status'], 'INCOMPLETE')
 
+    def test_known_old_item_with_missing_title_does_not_corrupt_current_hour(self):
+        def fetch(feed):
+            return self.feed(feed).replace(b'</channel>',
+                b'<item><pubDate>Fri, 16 Oct 2026 06:00:00 GMT</pubDate></item></channel>')
+        result = hourly.collect_hour(self.feeds, fetch, self.inspector, self.end)
+        self.assertEqual(result['status'], 'COMPLETE')
+        self.assertEqual(len(result['candidates']), 1)
+
     def test_bvb_same_timestamp_pdf_is_not_discarded_without_actual_article_link(self):
         feeds = [{'id': 'bvb_market', 'source': 'Bucharest Stock Exchange',
             'url': 'https://bvb.ro/feed', 'article_hosts': ('bvb.ro',)}]

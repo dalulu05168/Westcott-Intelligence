@@ -98,7 +98,7 @@ def first_text(node, tags):
     return ""
 
 
-def extract_items(feed_xml, feed, strict=False):
+def extract_items(feed_xml, feed, strict=False, window_start=None, window_end=None):
     if len(feed_xml) > MAX_FEED_BYTES or b"<!DOCTYPE" in feed_xml.upper() or b"<!ENTITY" in feed_xml.upper():
         raise RadarError("Oversized or potentially unsafe XML feed.")
     try:
@@ -131,8 +131,13 @@ def extract_items(feed_xml, feed, strict=False):
         else:
             href = first_text(node, ["link"])
             date = first_text(node, ["pubDate", "{http://purl.org/dc/elements/1.1/}date"])
+        if date and window_start is not None and window_end is not None:
+            stamp = parse_time(date)
+            if not window_start <= stamp < window_end:
+                continue
         if not title or not href or not date:
-            raise RadarError('Feed item lacks title/link/time; complete hourly comparison is unavailable.')
+            raise RadarError('Feed item lacks title/link/time: title=' + repr(title)[:100]
+                             + ' link=' + repr(href)[:150] + ' date=' + repr(date)[:80])
         try:
             if any(ord(c) < 32 for c in href):
                 raise RadarError('Control character in feed URL.')
