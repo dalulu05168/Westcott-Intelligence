@@ -1,0 +1,107 @@
+{
+  "event_id": "insee-business-creations-20261016-manual",
+  "executed_at": "2026-10-16T08:56:09.186Z",
+  "target_country": "FR",
+  "primary_article_source_id": "insee",
+  "local_impact_claim_id": "impact",
+  "watch_next_claim_id": "watch",
+  "manual_user_request": {
+    "request": "法国的呢？",
+    "requested_at": "2026-10-16T08:54:53Z",
+    "image_exception": "没有原图就给官网链接",
+    "image_exception_at": "2026-10-16T08:51:41Z",
+    "scope": "User-requested single French news item; not an assertion of an automatic hourly winner."
+  },
+  "sources": {
+    "insee": {
+      "url": "https://www.insee.fr/fr/statistiques/9078876",
+      "source_type": "official",
+      "origin_id": "insee-ir249-20261016",
+      "access_status": "BODY_READ",
+      "published_at": "2026-10-16T06:45:00+00:00",
+      "retrieved_at": "2026-10-16T08:56:09.186Z",
+      "source_text_sha256": "3a372d13defaa14b5677d3ca9821a7d438349aae9481704333e91d86bc327158"
+    }
+  },
+  "claims": [
+    {
+      "review_status": "CONFIRMED",
+      "reviewed_by": "ChatGPT 原文审稿 2026-10-16T08:56:09.186Z",
+      "evidence": [
+        {
+          "source_id": "insee",
+          "excerpt": "En données brutes, le nombre cumulé d’entreprises créées de juillet à septembre 2026 augmente fortement par rapport à la même période un an auparavant : +45 500, soit +16,0 %.",
+          "locator": "Informations Rapides n249, 16/10/2026, opening summary",
+          "supports_exact_claim": true
+        }
+      ],
+      "id": "event",
+      "kind": "fact",
+      "text": "📰 法国第三季度企业新设数量同比增长16%\n\n法国INSEE于2026年10月16日公布：按未经季节调整的原始数据，今年7月至9月企业新设数量较去年同期增长16%。",
+      "is_numeric": true,
+      "numbers": [
+        {
+          "quantity_type": "percent",
+          "instrument": "France business creations July-September 2026",
+          "instrument_type": "economic_statistic",
+          "unit": "percent",
+          "basis": "Unadjusted cumulative July-September 2026 versus same period 2025; not monthly growth or index return",
+          "market_state": "official statistics release",
+          "as_of": "2026-09-30T23:59:59+02:00",
+          "value": "16.0",
+          "source_value": "16.0",
+          "source_literal": "+16,0 %",
+          "source_id": "insee",
+          "normalization_reviewed": true
+        }
+      ]
+    },
+    {
+      "review_status": "CONFIRMED",
+      "reviewed_by": "ChatGPT 原文审稿 2026-10-16T08:56:09.186Z",
+      "evidence": [
+        {
+          "source_id": "insee",
+          "excerpt": "En données brutes, le nombre cumulé d’entreprises créées de juillet à septembre 2026 augmente fortement par rapport à la même période un an auparavant : +45 500, soit +16,0 %.",
+          "locator": "Informations Rapides n249, 16/10/2026, opening summary",
+          "supports_exact_claim": true
+        }
+      ],
+      "id": "impact",
+      "kind": "analysis",
+      "target_country": "FR",
+      "conditional": true,
+      "boundary_text": "潜在传导条件分析，不把注册数量当作上市公司盈利或股票涨幅。",
+      "premise_claim_ids": [
+        "event"
+      ],
+      "text": "🇫🇷 对法国市场的影响\n这反映企业设立活动增加。若新增企业持续经营并形成融资、支付或企业服务需求，相关行业可能受益；但注册数量不能直接等同于上市公司盈利改善或CAC40上涨。"
+    },
+    {
+      "review_status": "CONFIRMED",
+      "reviewed_by": "ChatGPT 原文审稿 2026-10-16T08:56:09.186Z",
+      "evidence": [
+        {
+          "source_id": "insee",
+          "excerpt": "En données brutes, le nombre cumulé d’entreprises créées de juillet à septembre 2026 augmente fortement par rapport à la même période un an auparavant : +45 500, soit +16,0 %.",
+          "locator": "Informations Rapides n249, 16/10/2026, opening summary",
+          "supports_exact_claim": true
+        }
+      ],
+      "id": "watch",
+      "kind": "analysis",
+      "target_country": "FR",
+      "conditional": true,
+      "boundary_text": "待后续数据验证，不声称融资需求已实现。",
+      "premise_claim_ids": [
+        "event"
+      ],
+      "text": "👀 后续关注\n观察新增企业能否转化为持续经营、就业和实际融资需求，并结合后续企业活动数据判断持续性。"
+    }
+  ],
+  "publish_claim_ids": [
+    "event",
+    "impact",
+    "watch"
+  ]
+}

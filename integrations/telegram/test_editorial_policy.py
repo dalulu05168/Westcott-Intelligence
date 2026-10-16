@@ -74,6 +74,11 @@ class EditorialPolicyTests(unittest.TestCase):
         with self.assertRaisesRegex(policy.PolicyError, 'photo'):
             self.check()
 
+    def test_user_authorized_article_link_fallback_keeps_complete_country_ranking(self):
+        self.prepared['media']['image_url'] = None
+        self.prepared['media']['image_decision'] = 'original_article_link_preview'
+        self.assertEqual(self.check()['winner_id'], 'a')
+
     def test_missing_country_or_comparison_blocks(self):
         for key in ('target_country', 'hourly_selection'):
             changed = copy.deepcopy(self.prepared)
@@ -142,7 +147,7 @@ class EditorialPolicyTests(unittest.TestCase):
         prepared = pub.prepare(fixtures.OriginalArticleTests().ledger(), 'news/approved/test.json')
         prepared['target_country'] = 'RO'
         with patch.object(pub, 'reserve') as reserve, patch.object(pub, 'send_group_news_from_official_article') as send:
-            with self.assertRaisesRegex(pub.PublicationError, 'photo'):
+            with self.assertRaisesRegex(pub.PublicationError, 'country-specific'):
                 pub.publish(prepared, {'PUBLISH_CONFIRMATION': pub.CONFIRM})
             reserve.assert_not_called()
             send.assert_not_called()

@@ -44,8 +44,14 @@ def _validate(prepared, root, now, expected_feed_ids):
     if country not in COUNTRIES:
         raise PolicyError('Explicit RO or FR target country required.')
     media = prepared['media']
-    if not media.get('image_url') or media.get('image_decision') != 'verified_original_publisher_photo':
-        raise PolicyError('A matched, approved original publisher photo is mandatory; no preview fallback.')
+    # User explicitly approved original article links when no approved original photo exists.
+    if media.get('image_url'):
+        if media.get('image_decision') != 'verified_original_publisher_photo':
+            raise PolicyError('Uploaded photo must be matched and approved by the original publisher review.')
+    elif (media.get('image_decision') not in ('original_article_link_preview',
+            'original_article_link_preview_rights_unverified')
+            or not media.get('article_url') or media['article_url'] not in prepared.get('sources', [])):
+        raise PolicyError('Missing photo requires the selected original evidence article link.')
     for field in ('local_impact_claim_id', 'watch_next_claim_id'):
         cid = prepared.get(field)
         if cid not in prepared['claim_ids'] or prepared.get('claim_kinds', {}).get(cid) != 'analysis':
