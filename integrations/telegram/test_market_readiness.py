@@ -18,6 +18,23 @@ class MarketReadinessTests(unittest.TestCase):
         self.assertEqual(result['status'], 'NO_VERIFIED_QUOTE')
         self.assertFalse(result['publishable'])
 
+    def test_bet_page_numbers_normalize_but_page_time_is_not_quote_time(self):
+        text = 'Starea pietei: DESCHISA Indici BET 34.798,93 306,70 0,89% BET-TR 84.075,14 740,94 0,89% Ultima actualizare: 16.10.2026 12:11:16'
+        row = market.extract_bet_reference(text)
+        self.assertEqual(row['level'], '34798.93')
+        self.assertEqual(row['change_points'], '306.70')
+        self.assertEqual(row['change_percent'], '0.89')
+        self.assertEqual(row['unit'], 'index_points')
+        self.assertEqual(row['page_last_update'], '16.10.2026 12:11:16')
+        self.assertIsNone(row['quote_as_of'])
+        self.assertFalse(row['publishable'])
+
+    def test_wrong_percent_or_different_index_cannot_be_bet_reference(self):
+        for text in ('BET 34.798,93 306,70 9,89% Ultima actualizare: 16.10.2026 12:11:16',
+                     'BET-TR 84.075,14 740,94 0,89% Ultima actualizare: 16.10.2026 12:11:16'):
+            with self.assertRaises(ValueError):
+                market.extract_bet_reference(text)
+
     def test_credentials_report_never_exposes_values(self):
         report = market.credential_status({'TWELVE_DATA_API_KEY': 'do-not-persist-this-secret'})
         self.assertNotIn('do-not-persist-this-secret', str(report))

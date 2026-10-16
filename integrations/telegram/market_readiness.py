@@ -4,6 +4,8 @@ from datetime import datetime, timezone
 import hashlib
 import json
 import os
+import re
+from decimal import Decimal, ROUND_HALF_UP
 from urllib import error, parse, request
 from source_media import NoRedirect, public_https, public_dns, VisibleBody
 
@@ -32,6 +34,26 @@ def assess_response(status, content_type, body):
             'truncated': len(body) > MAX_RESPONSE, 'publishable': False}
 
 
+def extract_bet_reference(text):
+    number = r'-?(?:[0-9]{1,3}(?:[.][0-9]{3})*|[0-9]+),[0-9]+'
+    matches = list(re.finditer(r'\bBET\s+(' + number + r')\s+(' + number + r')\s+(' + number + r')%', text))
+    stamps = re.findall(r'Ultima actualizare:\s*([0-9]{2}[.][0-9]{2}[.][0-9]{4} [0-9]{2}:[0-9]{2}:[0-9]{2})', text)
+    if len(matches) != 1 or len(stamps) != 1:
+        raise ValueError('Unique BET row and explicit page date required.')
+    source = matches[0]
+    level, change, percent = [Decimal(v.replace('.', '').replace(',', '.')) for v in source.groups()]
+    baseline = level - change
+    if level <= 0 or baseline <= 0 or ((change / baseline) * 100).quantize(Decimal('0.01'), rounding=ROUND_HALF_UP) != percent:
+        raise ValueError('BET level/change/percent mismatch.')
+    # The timestamp is printed above the delayed stock table, not attached
+    # explicitly to the index. Never relabel it as the index quote's as_of.
+    return {'instrument': 'BET', 'unit': 'index_points', 'level': str(level),
+            'change_points': str(change), 'change_percent': str(percent),
+            'source_values': list(source.groups()), 'support_excerpt': source.group(0),
+            'page_last_update': stamps[0], 'quote_as_of': None,
+            'status': 'PAGE_REFERENCE_ONLY', 'publishable': False}
+
+
 def credential_status(env):
     return {'TWELVE_DATA_API_KEY': {
         'configured': bool(env.get('TWELVE_DATA_API_KEY', '').strip()),
@@ -56,6 +78,10 @@ def probe(item):
                 text = ' '.join(' '.join(parser.parts).split())
                 result.update(source_text_snapshot=text[:80000], source_text_truncated=len(text)>80000,
                     server_date=reply.headers.get('Date'), cache_age=reply.headers.get('Age'))
+                try:
+                    result['bet_reference'] = extract_bet_reference(text)
+                except ValueError:
+                    result['reference_error'] = 'BET row/time/number verification failed'
     except error.HTTPError as exc:
         result.update(assess_response(exc.code, exc.headers.get('Content-Type', ''),
                                       exc.read(MAX_RESPONSE + 1)))

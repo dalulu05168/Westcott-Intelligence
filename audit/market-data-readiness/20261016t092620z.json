@@ -1,0 +1,80 @@
+{
+  "status": "NOT_READY",
+  "executed_at": "2026-10-16T09:26:22.711920+00:00",
+  "purpose": "Read-only diagnosis; no quote approval or Telegram delivery",
+  "credentials": {
+    "TWELVE_DATA_API_KEY": {
+      "configured": false,
+      "coverage_verified": false,
+      "redistribution_verified": false,
+      "note": "Presence alone does not verify BET/CAC40/US index coverage or rights."
+    }
+  },
+  "checks": [
+    {
+      "source": "RO_BET_PAGE",
+      "url": "https://www.bvb.ro/TradingAndStatistics/Trading/CurrentTradingDay",
+      "publishable": false,
+      "retrieved_at": "2026-10-16T09:26:20.439070+00:00",
+      "status": "NO_VERIFIED_QUOTE",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "response_bytes": 162901,
+      "response_sha256": "cd4f17dfe2f74575f499027a24eeaf58edcab9fb0387730212e5eae32d143836",
+      "truncated": false,
+      "source_text_snapshot": "vineri | 16 octombrie, 2026 | Starea pietei: DESCHISA Despre noi si Guvernanta | Relatia cu Investitorii | Contact Login Inregistrare Cautare avansata Pentru Companii De ce Bursa de Valori Bucuresti? Prezentare generala Instrumente pentru finantare Beneficiile listarii Infografice Piata Principala Actiuni Obligatiuni Intermediari Intrebari frecvente Piata AeRO Actiuni Obligatiuni Consultanti Autorizati Intrebari frecvente Materiale utile Ghidul privind raportarea ESG Codul de Guvernanta Corporativa Instrumente Financiare Piete Actiuni Obligatiuni Unitati de fond Certificate Warrants Cautare avansata Indici Privire generala Profile indici Factsheets indici Performanta indici Informatii BMR Operatiuni corporative Info dividend Modificari capital social Societati provenite din divizari Informatii selective Rapoarte curente Rezultate financiare Indicatori Calendar Financiar Calendar Adunari Generale Operatiuni de piata Raportari actionari Lista monitorizare Tranzactionare si Statistici Tranzactionare Pietele astazi Ziua curenta Statistici toate pietele Sumare tranzactionare Oferte publice in derulare Vanzari speciale la ordin Date MiFiD II Statistici Statistici generale Evolutia pietei (actiuni) Top tranzactionare Publicatii Rapoarte zilnice Rapoarte lunare Program de tranzactionare Bursa in direct Intermediari Liste intermediari Toti intermediarii Top intermediari Lista Market Makeri Lista Furnizori Lichiditate Performanta MM si LP Lista Agenti Delegati Cum devin intermediar Servicii Vanzare date Pentru distribuitori de date Pentru profesionisti Pentru investitori Licentiere indici Cum licentiez un indice BVB? Conectivitate Sistemul de tranzactionare Arena Sistem de brokeraj Reglementari Legislatie Legi si regulamente Reglementari BVB Raportari MiFID II / MiFIR Camera Arbitrala Utile Link-uri utile Institutiile pietei de capital Tranzactionare Pietele astazi Ziua curenta Statistici toate pietele Sumare tranzactionare Oferte publice in derulare Vanzari speciale la ordin Date MiFiD II Statistici Statistici generale Evolutia pietei (actiuni) Top tranzactionare Publicatii Rapoarte zilnice Rapoarte lunare Program de tranzactionare Bursa in direct Ziua curenta Segment Bursa Tip instrument financiar Piata Adauga max. 10 simboluri Indici BET 34.798,93 306,70 0,89% BET-TR 84.075,14 740,94 0,89% BET-BK 6.562,97 40,17 0,62% BETPlus 5.047,48 42,85 0,86% BET-FI 113.674,73 266,84 0,24% BET-NG 2.749,00 23,24 0,85% BET-XT 2.993,01 24,36 0,82% BET-XT-TR 7.056,83 59,09 0,84% BET-TRN 80.799,90 712,09 0,89% BET-XT-TRN 6.802,12 56,70 0,84% BETAeRO 1.038,00 6,01 0,58% BET-EF 1.946,81 18,71 0,97% ROTX 78.890,75 727,06 0,93% Ultima actualizare: 16.10.2026 12:11:16 Simbol Piata Pret Var. (%) Ora Desch. Max. Min. Mediu Valoare Volum Nr. tranz. TLV REGS 35,7800 0,96 12:11:09 35,5200 35,8800 35,5200 35,7800 5.349.962,12 149.549 504 PE REGS 57,2000 2,51 12:10:33 55,8000 57,6000 55,8000 57,0000 2.925.544,40 51.392 74 SNP REGS 1,3280 1,76 12:10:55 1,3100 1,3300 1,3100 1,3220 2.911.941,65 2.202.271 568 SNG REGS 19,1000 1,06 12:07:47 18,9400 19,3000 18,9400 19,0600 2.356.703,52 123.612 424 H2O REGS 182,2000 0,00 12:03:32 182,8000 183,2000 181,2000 182,6000 2.137.472,00 11.706 187 RRC REGS 0,4780 2,14 12:11:14 0,5000 0,5350 0,4260 0,5100 1.740.796,79 3.424.644 691 BVB REGS 78,6000 -0,25 12:09:05 79,8000 79,8000 78,6000 79,0000 973.942,80 12.328 26 DN XRS1 3,5100 2,33 12:04:57 3,4000 3,5100 3,4000 3,4800 824.902,72 236.836 36 SNN REGS 59,6000 0,17 12:10:03 59,6000 60,0000 59,1000 59,6000 822.625,60 13.801 279 DIGI REGS 57,9000 0,70 12:10:44 57,8000 58,0000 57,6000 57,9000 659.620,80 11.388 146 M REGS 11,5000 0,35 12:10:30 11,5600 11,6600 11,4600 11,5600 476.467,84 41.240 101 TEL REGS 99,9000 -0,10 12:01:52 101,8000 102,0000 99,6000 100,2000 384.694,10 3.839 64 SMTL REGS 39,0000 2,90 12:07:39 38,0000 39,0000 38,0000 38,6000 348.410,60 9.025 64 TGN REGS 90,2000 -0,88 12:08:49 91,5000 91,7000 89,5000 90,6000 344.226,60 3.800 144 EL REGS 51,1000 0,79 12:02:34 51,2000 51,8000 50,6000 51,2000 327.535,80 6.402 92 IMP REGS 3,7600 1,62 12:09:36 3,7300 3,7600 3,6700 3,7000 298.368,97 80.730 36 BRD REGS 31,7500 2,09 12:01:16 31,4000 31,9000 31,3000 31,7000 281.375,00 8.882 106 EVER REGS 3,4200 0,59 11:48:29 3,4000 3,4200 3,3800 3,4000 230.823,10 67.889 13 EBS REGS 585,5000 -0,59 11:40:23 590,0000 590,0000 584,5000 586,5000 186.541,00 318 33 CFH REGS 50,4000 0,40 12:08:54 50,4000 51,2000 50,0000 50,7000 175.438,70 3.459 85 SFG REGS 33,3000 0,00 11:57:26 33,0000 33,8000 33,0000 33,3000 154.910,90 4.657 21 FOJE XRS1 35,0000 4,48 12:09:54 33,5000 35,2000 33,5000 34,4000 148.743,00 4.324 49 IARV REGS 29,2000 -1,68 12:10:24 29,6000 30,1000 29,2000 29,9000 122.698,40 4.100 30 TRP REGS 0,4050 0,00 12:03:26 0,4080 0,4080 0,4020 0,4050 119.935,13 296.257 31 STNM XRS1 29,8000 11,19 12:10:20 27,2000 32,0000 27,2000 29,6000 104.300,20 3.532 80 FP REGS 0,5880 1,03 12:06:20 0,5830 0,5890 0,5830 0,5870 101.478,96 172.814 61 TRIP REGS 1,3420 1,98 11:34:18 1,3140 1,3960 1,3120 1,3580 79.548,09 58.544 38 BNET REGS 0,1215 5,19 12:02:06 0,1180 0,1215 0,1180 0,1200 69.994,00 583.764 44 EAI REGS 16,1800 1,13 12:06:33 16,1600 16,2000 16,0000 16,1400 65.233,18 4.042 29 ATB REGS 2,0200 -0,74 12:09:57 2,0200 2,0300 2,0100 2,0150 55.258,49 27.428 29 ONE REGS 35,2000 0,00 12:04:10 35,2000 35,2000 34,8500 35,1000 45.656,45 1.301 25 LION REGS 4,8700 -0,41 11:48:14 4,8300 4,9100 4,8100 4,8300 43.826,98 9.075 21 ALW XRS1 24,1000 0,42 12:00:17 24,0000 24,4000 24,0000 24,1000 42.777,80 1.772 11 TBM REGS 0,3170 0,96 11:47:09 0,3150 0,3180 0,3120 0,3150 38.396,24 121.758 37 NRF XRS1 2,6200 -1,87 11:41:47 2,6700 2,6700 2,5800 2,6100 35.134,66 13.459 21 ARCU XRS1 3,0000 -6,83 11:27:39 3,1800 3,5400 3,0000 3,0600 28.843,92 9.411 23 BRK REGS 0,1555 -0,64 11:29:48 0,1570 0,1575 0,1555 0,1570 24.854,71 158.252 10 JTG XRS1 4,1900 -2,78 12:09:22 4,3100 4,3200 4,1900 4,2400 23.911,99 5.638 20 AROBS REGS 0,7380 1,10 12:05:34 0,7400 0,7400 0,7300 0,7380 23.669,28 32.092 20 PTR REGS 0,6800 -0,87 12:01:33 0,6860 0,6980 0,6520 0,6700 20.417,91 30.496 29 ARS REGS 17,2500 -0,86 12:10:49 17,4000 17,4000 17,2500 17,3000 17.127,75 990 16 INFINITY REGS 5,0200 -1,57 11:32:51 5,1200 5,1200 5,0200 5,1000 16.729,22 3.282 7 PBK REGS 0,1470 0,00 11:40:34 0,1470 0,1470 0,1465 0,1470 15.484,26 105.364 6 SAFE REGS 0,9900 0,41 12:09:15 0,9860 0,9900 0,9860 0,9880 15.330,33 15.502 17 ELMA REGS 0,2460 -1,60 11:36:39 0,2460 0,2500 0,2460 0,2500 14.501,23 58.005 3 COTE REGS 75,4000 0,27 12:03:28 75,6000 75,6000 75,2000 75,4000 13.786,40 183 11 AQ REGS 1,6200 -0,61 12:02:23 1,6300 1,6350 1,6150 1,6250 12.836,50 7.889 25 AG XRS1 1,3950 1,82 11:24:31 1,3750 1,3950 1,3750 1,3750 9.835,86 7.152 9 ALU REGS 2,6500 -0,75 12:02:13 2,6700 2,7000 2,6500 2,6800 9.151,62 3.415 8 CC XRS1 13,3000 -0,37 11:15:47 13,3500 13,3500 13,3000 13,3000 9.138,80 686 3 ASC XRS1 10,7500 -1,83 11:21:29 10,6500 10,9500 10,6500 10,7500 8.503,20 790 10 INTA XRS1 38,8000 0,00 11:02:25 38,8000 38,8000 38,8000 38,8000 8.148,00 210 4 WINE REGS 21,0000 0,48 12:09:17 21,0000 21,0000 21,0000 21,0000 7.896,00 376 9 TRANSI REGS 0,6800 -1,45 12:02:19 0,6900 0,6900 0,6760 0,6780 7.633,60 11.272 8 LONG REGS 2,5100 0,40 11:33:18 2,5000 2,5300 2,5000 2,5100 7.210,88 2.868 11 APP XRS1 1,3800 8,66 11:09:51 1,3000 1,4400 1,3000 1,3000 6.903,98 5.294 6 RMAH REGS 0,7680 2,95 12:00:07 0,7520 0,7680 0,7520 0,7620 6.428,67 8.441 5 RPH REGS 0,2040 0,00 12:05:15 0,2060 0,2060 0,2040 0,2060 6.196,04 30.107 3 OIL REGS 0,1150 -0,43 11:51:45 0,1160 0,1160 0,1150 0,1155 6.055,74 52.393 7 BENTO XRS1 9,7000 0,41 12:08:52 9,6600 9,7000 9,6600 9,6800 5.929,14 612 9 CLAIM XRS1 4,2200 0,48 12:08:13 4,2000 4,2200 4,2000 4,2000 5.888,00 1.400 2 CMP REGS 0,6600 0,00 10:27:00 0,6600 0,6760 0,6600 0,6620 5.751,58 8.700 5 SOCP REGS 1,8900 3,85 11:00:10 1,8200 1,8900 1,8200 1,8500 4.973,45 2.684 11 LHA XRSI 39,3000 0,56 11:06:46 39,3000 39,3000 39,3000 39,3000 3.930,00 100 1 STZ REGS 0,2590 7,47 11:56:39 0,2510 0,2590 0,2500 0,2540 3.624,14 14.285 10 CMCM REGS 0,3400 12,58 11:00:02 0,3200 0,3400 0,3200 0,3360 3.336,10 9.935 13 ADISS XRS1 0,2120 9,28 11:05:26 0,1900 0,2120 0,1900 0,1930 3.003,97 15.600 8 SEVE XRS1 7,8000 5,41 11:11:50 7,4000 7,8000 7,4000 7,4500 2.749,50 370 3 EM XRS1 40,0000 1,27 10:02:09 40,0000 40,0000 40,0000 40,0000 2.720,00 68 5 ADS XRSI 841,8000 1,18 10:44:27 838,0000 841,8000 838,0000 840,0000 2.520,20 3 3 RORX XRS1 26,0000 0,00 10:40:39 25,0000 26,0000 25,0000 25,2000 2.465,00 98 5 PREB REGS 2,0100 -0,50 10:00:15 2,0100 2,0100 2,0100 2,0100 2.010,00 1.000 1 CRC REGS 5,5000 -5,17 10:17:45 5,5400 5,5400 5,5000 5,5200 1.875,00 340 4 EFO REGS 0,9250 0,00 10:00:15 0,9250 0,9250 0,9250 0,9250 1.665,00 1.800 1 ARO XRS1 1,5000 7,14 10:57:31 1,4000 1,5000 1,4000 1,4800 1.479,10 1.000 3 HAI XRS1 0,2900 0,00 10:39:41 0,2750 0,3050 0,2750 0,2960 1.445,67 4.883 6 ELGS REGS 0,2340 0,00 10:00:15 0,2340 0,2340 0,2340 0,2340 1.396,04 5.966 2 AAB XRS1 4,3200 0,93 10:54:47 4,5800 4,5800 4,3200 4,4800 1.279,30 285 3 ABN XRS1 0,2060 -16,94 11:40:55 0,2480 0,2480 0,2060 0,2100 1.095,52 5.240 4 SAP XRSI 1.085,4000 1,31 10:44:52 1.085,4000 1.085,4000 1.085,4000 1.085,4000 1.085,40 1 1 BUCU XRS1 1,7800 0,56 10:36:03 1,7700 1,7800 1,7700 1,7700 1.062,88 600 3 REFE XRS1 26,6000 -17,39 10:19:40 25,6000 26,6000 25,6000 26,0000 831,20 32 2 TSND XRS1 0,0840 6,33 10:36:38 0,0790 0,0840 0,0790 0,0830 829,81 10.000 5 ALR REGS 1,3950 -0,36 11:21:28 1,4000 1,4000 1,3950 1,3950 684,73 490 4 FOSB XRS1 0,6300 0,00 10:04:10 0,6000 0,6300 0,6000 0,6000 600,63 1.001 3 ARTE REGS 8,1000 0,00 11:58:30 8,1000 8,1000 8,1000 8,1000 575,10 71 3 UNISEM XRS1 0,5700 0,00 11:14:47 0,5700 0,5700 0,5700 0,5700 570,00 1.000 2 TTS REGS 7,3200 0,00 12:09:45 7,3400 7,3400 7,3000 7,3200 541,98 74 5 HUNT XRS1 0,7820 -2,98 11:56:00 0,8040 0,8060 0,7820 0,8040 534,46 665 5 FERO XRS1 0,7650 -5,56 12:08:34 0,8050 0,8050 0,7650 0,7650 500,79 654 2 GGC XRS1 0,5000 -8,26 11:15:56 0,5000 0,5000 0,5000 0,5000 500,00 1.000 1 ROCE REGS 0,2200 0,92 12:04:56 0,2220 0,2220 0,2200 0,2210 442,00 2.000 3 IPRU XRS1 1,6250 0,00 11:38:48 1,6250 1,6250 1,6250 1,6250 325,00 200 1 TBK REGS 16,0500 -1,23 10:49:12 16,0500 16,0500 16,0500 16,0500 321,00 20 1 EMAI XRS1 6,4500 14,16 11:25:57 6,4500 6,4500 6,4500 6,4500 303,15 47 1 FEP XRS1 0,2680 4,69 11:14:08 0,2680 0,2680 0,2680 0,2680 297,21 1.109 1 ITG XRS1 6,2800 -0,32 11:03:28 6,2800 6,2800 6,2800 6,2800 276,32 44 3 CMF REGS 4,1200 -9,25 11:24:46 4,1200 4,1200 4,1200 4,1200 271,92 66 1 AVIO XRS1 2,5500 5,37 10:42:12 2,5500 2,5500 2,5500 2,5500 255,00 100 1 SPX XRS1 0,2620 0,00 10:49:18 0,2620 0,2620 0,2620 0,2620 249,69 953 1 MECA XRS1 39,4000 29,61 10:00:00 39,4000 39,4000 39,4000 39,4000 157,60 4 1 ROC1 REGS 0,6180 -0,32 10:30:27 0,6160 0,6180 0,6160 0,6160 123,24 200 2 CODE XRS1 1,1400 2,70 10:04:44 1,1400 1,1400 1,1400 1,1400 114,00 100 1 UZT REGS 1,0000 0,00 10:18:58 1,0000 1,0000 1,0000 1,0000 100,00 100 1 2P XRS1 0,9750 1,56 10:00:00 0,9750 0,9750 0,9750 0,9750 97,50 100 1 RCHI XRS1 0,2460 0,00 11:48:08 0,2460 0,2460 0,2460 0,2460 80,44 327 1 ASP XRS1 0,0200 0,00 10:00:00 0,0200 0,0200 0,0200 0,0200 65,00 3.250 2 AST XRS1 24,6000 2,50 10:00:53 24,6000 24,6000 24,6000 24,6000 49,20 2 1 ALT REGS 0,0665 0,00 10:37:20 0,0690 0,0690 0,0665 0,0690 45,05 653 2 BRM REGS 1,8400 -0,54 10:39:04 1,8400 1,8400 1,8400 1,8400 42,32 23 1 SIDG XRS1 0,2140 -7,76 12:11:08 0,2220 0,2220 0,2140 0,2160 6,46 30 2 ARM REGS 0,2580 -1,53 10:48:03 0,2580 0,2580 0,2580 0,2580 2,58 10 1 NC REGS 0,6450 0,78 10:00:15 0,6450 0,6450 0,6450 0,6450 1,94 3 1 BCM REGS 0,1300 0,00 10:00:15 0,1300 0,1300 0,1300 0,1300 0,52 4 1 ALB XRS1 0,0000 0,00 10:00:00 0,0000 0,0000 0,0000 0,0000 0,00 0 0 ELV XRS1 0,0000 0,00 10:00:00 0,0000 0,0000 0,0000 0,0000 0,00 0 0 Pentru Companii Prezentare generala Instrumente pentru finantare Beneficiile listarii Pentru Investitori Pentru inceput Devino Investitor La Bursa Exchange Live 2.0 Tranzactionare si Statistici Pietele astazi Statistici generale Top tranzactionare Despre noi si Guvernanta Descriere generala Structura de conducere Comunicate de presa Cariere Relatia cu Investitorii Privire generala Adunari Generale ale Actionarilor Raportari financiare Site-uri din Grupul BVB Depozitarul Central Website mobile | Termeni de Utilizare | Contact | © 2026 Bursa de Valori Bucuresti Distribuie: asp:PlaceHolder runat=\"server\">",
+      "source_text_truncated": false,
+      "server_date": "Fri, 16 Oct 2026 09:26:21 GMT",
+      "cache_age": null
+    },
+    {
+      "source": "RO_BET_SERVICE",
+      "url": "https://ws.bvb.ro/BVBDelayedWS/Intraday.asmx/GetIndex?code=BET",
+      "publishable": false,
+      "retrieved_at": "2026-10-16T09:26:20.439420+00:00",
+      "status": "PUBLISHER_ACCESS_DENIED",
+      "http_status": 500,
+      "content_type": "text/plain; charset=utf-8",
+      "response_bytes": 19,
+      "response_sha256": "9b96e23732da1cb8faed10c892af7cb1b26e70781d468b6a4595c62bf54b6e54",
+      "truncated": false
+    },
+    {
+      "source": "FR_CAC40_PAGE",
+      "url": "https://live.euronext.com/en/product/indices/FR0003500008-XPAR",
+      "publishable": false,
+      "retrieved_at": "2026-10-16T09:26:20.439812+00:00",
+      "status": "NO_VERIFIED_QUOTE",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "response_bytes": 248418,
+      "response_sha256": "97fc12537f0c88f0535ffd6eb23137a194110e9b0e91e86818c88494d72f4091",
+      "truncated": false
+    },
+    {
+      "source": "US_NASDAQ_PAGE",
+      "url": "https://www.nasdaq.com/market-activity/index/comp?as=json",
+      "publishable": false,
+      "retrieved_at": "2026-10-16T09:26:20.440152+00:00",
+      "status": "NO_VERIFIED_QUOTE",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "response_bytes": 172948,
+      "response_sha256": "b79b90d5d235a046ebc68ae7791863feb531226c4561d533f6bcafcd77886663",
+      "truncated": false
+    }
+  ],
+  "required_before_release": [
+    "verified instrument identity and point/price units",
+    "source quote timestamp and delay, distinct from retrieval time",
+    "exchange session/calendar and previous close baseline",
+    "data coverage and redistribution authorization",
+    "reviewed quote ledger and live recheck before existing publisher"
+  ],
+  "provenance": {
+    "workflow_run_id": 38880435227,
+    "source_commit": "fcb2199c1085081a207dd2080ea19d6548cc7745",
+    "reviewer": "ChatGPT自动排查",
+    "limitation": "Page timestamp is not verified as BET index quote timestamp; never approved for real-time release."
+  }
+}
