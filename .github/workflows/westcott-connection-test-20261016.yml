@@ -1,0 +1,27 @@
+name: Authorized Telegram Connection Test 20261016
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/westcott-connection-test-20261016.yml']
+permissions:
+  contents: read
+jobs:
+  connection-test:
+    if: github.event.head_commit.message == 'Run authorized Telegram connection test 20261016T0644Z' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TELEGRAM_EXPECTED_BOT_USERNAME: NuvexaCheckBot
+      TELEGRAM_EXPECTED_GROUP_TITLE: 资讯快报
+      TELEGRAM_MESSAGE_THREAD_ID: ${{ vars.TELEGRAM_MESSAGE_THREAD_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify specified bot and group
+        run: python integrations/telegram/bridge.py verify
+      - name: Send one explicitly authorized connection test
+        run: python integrations/telegram/bridge.py smoke
