@@ -78,6 +78,51 @@ def store_edition(edition, env):
     return path
 
 
+
+def readable_readiness(edition, edition_path=None):
+    """Compact CI report; full source evidence remains stored in the edition file.
+
+    Never dump large publisher bodies into Action logs, but identify which
+    original evidence was unavailable so maintainers can actually fix it.
+    """
+    candidates = edition.get('candidates', [])
+    unavailable = []
+    for row in candidates:
+        if (row.get('body_fetch_status') != 'FETCHED_FOR_REVIEW'
+                or row.get('source_text_truncated') is not False):
+            unavailable.append({
+                'candidate_id': row.get('id'),
+                'source': row.get('source'),
+                'official_url': row.get('article_url'),
+                'reason': row.get('body_fetch_error') or row.get('inspection_error')
+                          or row.get('body_fetch_status') or 'UNVERIFIED',
+            })
+    feeds_failed = [{
+        'feed_id': row.get('feed_id'),
+        'status': row.get('status'),
+        'reason': row.get('reason'),
+    } for row in edition.get('coverage', []) if row.get('status') != 'OK']
+    return {
+        'status': 'OFFICIAL_HOURLY_EDITION_READINESS',
+        'edition_status': edition.get('status'),
+        'edition_path': edition_path,
+        'edition_sha256': digest(edition),
+        'time_window': {'start': edition.get('window_start'),
+                        'end': edition.get('window_end')},
+        'configured_sources': len(edition.get('required_feed_ids', [])),
+        'sources_healthy': sum(row.get('status') == 'OK'
+                               for row in edition.get('coverage', [])),
+        'candidates_total': len(candidates),
+        'candidates_unverified': len(unavailable),
+        'unverified_details': unavailable,
+        'feed_failures': feeds_failed,
+        'truncated': edition.get('truncated'),
+        'assessments_status': edition.get('assessments_status'),
+        'telegram_publishable': False,
+        'messages_sent': 0,
+    }
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--mode', choices=('dry-run', 'queue'), required=True)
@@ -85,8 +130,7 @@ def main():
     try:
         edition = collect_hour()
         path = store_edition(edition, os.environ) if args.mode == 'queue' else None
-        print(json.dumps({'status': 'UNREVIEWED_HOURLY_EDITION', 'edition_path': path,
-            'edition_sha256': digest(edition), 'edition': edition}, ensure_ascii=False))
+        print(json.dumps(readable_readiness(edition, path), ensure_ascii=False))
         return 0 if edition['status'] == 'COMPLETE' else 2
     except radar.RadarError as exc:
         print(json.dumps({'status': 'HELD', 'reason': str(exc)}))
