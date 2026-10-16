@@ -7,7 +7,7 @@ from zoneinfo import ZoneInfo
 
 from bs4 import BeautifulSoup
 from dual_market import (PARIS, PROFILES, caption, due, host_allowed,
-                         materiality, official_image, pick, us_quote_snapshot)
+                         materiality, official_image, pick, us_quote_snapshot, feed_items)
 
 TZ = ZoneInfo("Europe/Bucharest")
 
@@ -80,6 +80,34 @@ class TwoCountryTests(unittest.TestCase):
         self.assertIn("🔵 România", result)
         self.assertIn("Impact condiționat pentru BET", result)
         self.assertLessEqual(len(result), 1024)
+
+
+    def test_bvb_issuer_feed_uses_original_time_and_prevents_unofficial_link(self):
+        fixture = """<rss version="2.0"><channel>
+        <item><title>Banca publica rezultate financiare</title>
+        <link>https://bvb.ro/FinancialInstruments/SelectedData/NewsItem/SNG-raport/ABCDE</link>
+        <pubDate>Fri, 16 Oct 2026 06:40:00 GMT</pubDate></item>
+        <item><title>Malicious entry</title>
+        <link>https://bvb.ro.attacker.test/notices</link>
+        <pubDate>Fri, 16 Oct 2026 06:42:00 GMT</pubDate></item>
+        <item><title>Missing date entry</title>
+        <link>https://bvb.ro/notice2</link></item></channel></rss>"""
+        response = Mock(status_code=200, content=fixture.encode("utf-8"))
+        response.raise_for_status.return_value = None
+        with patch("dual_market.SESSION.get", return_value=response):
+            items = feed_items("BVB_FIN", "https://www.bvb.ro/Rss2/LastFinancialData.ashx", TZ)
+        self.assertEqual(1, len(items))
+        self.assertEqual("BVB_FIN", items[0]["source"])
+        self.assertIn("2026-10-16T09:40", items[0]["published"])
+        self.assertTrue(items[0]["url"].endswith("/ABCDE"))
+
+    def test_local_relevance_rejects_nonfinancial_marketing(self):
+        now = datetime(2026, 10, 16, 11, 0, tzinfo=PARIS)
+        record = {"source": "FR_GOV", "title": "Journée du patrimoine: visite",
+                  "id": "visitor", "published": (now-timedelta(minutes=20)).isoformat()}
+        self.assertIsNone(materiality(record, "FR", now, "hourly", {}))
+        record["title"] = "Énergie: tarifs et financement du secteur"
+        self.assertIsNotNone(materiality(record, "FR", now, "hourly", {}))
 
 
 if __name__ == "__main__":
