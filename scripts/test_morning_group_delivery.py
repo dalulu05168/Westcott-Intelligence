@@ -13,14 +13,18 @@ NOW = datetime(2026, 10, 19, 7, 30, tzinfo=ZoneInfo('Europe/Bucharest'))
 def market():
     # Fixture-only numbers; never use as real market data.
     return dict(market='US', phase='REGULAR_CLOSE', session_date='2026-10-16',
-        source_url='https://example.org/official-close',
+        source_url='https://www.spglobal.com/spdji/en/indices/equity/sp-500/',
         source_checked_at='2026-10-19T07:10:00+03:00', review_status='REVIEWED',
         reviewed_by='fixture-editor', evidence_reference='fixture-only',
         source_body_sha256='0' * 64,
         indices=[dict(symbol=s, close=c, previous_close=p,
             change_pct=round((c / p - 1) * 100, 2),
             quote_as_of='2026-10-16T16:00:00-04:00', phase='REGULAR_CLOSE',
-            source_url='https://example.org/' + s, evidence_excerpt='fixture only')
+            source_url={
+                'DJIA': 'https://www.spglobal.com/spdji/en/indices/equity/dow-jones-industrial-average/',
+                'SPX': 'https://www.spglobal.com/spdji/en/indices/equity/sp-500/',
+                'IXIC': 'https://www.nasdaq.com/market-activity/index/comp',
+            }[s], evidence_excerpt='fixture only')
             for s, c, p in [('DJIA', 49000., 49100.), ('SPX', 6700., 6690.), ('IXIC', 23000., 23020.)]])
 
 
