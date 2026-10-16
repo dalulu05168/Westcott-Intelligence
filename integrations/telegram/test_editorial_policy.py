@@ -138,6 +138,14 @@ class EditorialPolicyTests(unittest.TestCase):
             with self.assertRaises(policy.PolicyError):
                 self.check(changed)
 
+    def test_existing_manual_release_cannot_impersonate_complete_hourly_comparison(self):
+        # Manual one-off delivery is tracked by audit; it must not be
+        # counted as a reviewed top-three hourly winning article.
+        changed = copy.deepcopy(self.prepared)
+        changed['hourly_selection'] = None
+        with self.assertRaisesRegex(policy.PolicyError, 'No reviewed hourly_selection'):
+            self.check(changed)
+
     def test_lower_rank_cannot_be_selected_even_with_photo(self):
         self.prepared['hourly_selection']['selected_candidate_id'] = 'b'
         self.prepared['media']['article_url'] = 'https://publisher.example/b'

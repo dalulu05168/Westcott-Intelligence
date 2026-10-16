@@ -1,15 +1,5 @@
-name: Dual Markets RO FR | Verified News
-
+name: Dual Markets RO FR | Editorial Preview Only
 on:
-  schedule:
-    - cron: '30 7 * * 1-5'
-      timezone: Europe/Bucharest
-    - cron: '30 7 * * 1-5'
-      timezone: Europe/Paris
-    - cron: '0 9-23 * * 1-5'
-      timezone: Europe/Paris
-    - cron: '0 0-2 * * 2-6'
-      timezone: Europe/Paris
   workflow_dispatch:
     inputs:
       slot:
@@ -21,18 +11,16 @@ on:
         type: boolean
         required: true
         default: true
-
 permissions:
-  contents: write
-
+  contents: read
 concurrency:
-  group: westcott-telegram-verified-delivery
+  group: westcott-dual-market-preview
   cancel-in-progress: false
-
 jobs:
-  dual-country:
-    # THIS PIPELINE IS OFF until expressly opted in; manual dry run is permitted.
-    if: ${{ (vars.TELEGRAM_DUAL_MARKET_ENABLED == 'true' && vars.TELEGRAM_DUAL_MARKET_LIVE_APPROVED == 'true' && vars.TELEGRAM_NEWS_ENABLED != 'true') || (github.event_name == 'workflow_dispatch' && inputs.dry_run == true) }}
+  preview-only:
+    # No independent live Telegram path. The existing publisher at :52 handles
+    # only reviewed news/approved/*.json after evidence and deduplication checks.
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run == true }}
     runs-on: ubuntu-latest
     timeout-minutes: 14
     steps:
@@ -41,26 +29,16 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install -r telegram_news/requirements.txt
-      - name: Preflight country-specific gating tests
+      - name: Offline country-specific editorial tests
         run: python -m unittest discover -s telegram_news -p 'test_*.py'
-      - name: Prepare and conditionally send one article per country
+      - name: Preview verified article candidates (NEVER send)
         env:
           DUAL_SLOT: '${{ inputs.slot }}'
-          DRY_RUN: '${{ inputs.dry_run }}'
-          TELEGRAM_DUAL_MARKET_ENABLED: '${{ vars.TELEGRAM_DUAL_MARKET_ENABLED }}'
-          TELEGRAM_DUAL_MARKET_LIVE_APPROVED: '${{ vars.TELEGRAM_DUAL_MARKET_LIVE_APPROVED }}'
-          LEGACY_TELEGRAM_NEWS_ENABLED: '${{ vars.TELEGRAM_NEWS_ENABLED }}'
-          OFFICIAL_IMAGE_REUSE_APPROVED: '${{ vars.OFFICIAL_IMAGE_REUSE_APPROVED }}'
-          TELEGRAM_BOT_TOKEN: '${{ secrets.TELEGRAM_BOT_TOKEN }}'
-          TELEGRAM_CHAT_ID: '${{ secrets.TELEGRAM_CHAT_ID }}'
-          TELEGRAM_EXPECTED_GROUP_TITLE: '🌐~~~资讯快报'
-          TELEGRAM_MESSAGE_THREAD_ID: '${{ vars.TELEGRAM_MESSAGE_THREAD_ID }}'
+          DRY_RUN: 'true'
           OPENAI_API_KEY: '${{ secrets.OPENAI_API_KEY }}'
           OPENAI_NEWS_MODEL: '${{ vars.OPENAI_NEWS_MODEL }}'
           TWELVE_DATA_API_KEY: '${{ secrets.TWELVE_DATA_API_KEY }}'
           US_INDEX_DOW_SYMBOL: '${{ vars.US_INDEX_DOW_SYMBOL }}'
           US_INDEX_SP500_SYMBOL: '${{ vars.US_INDEX_SP500_SYMBOL }}'
           US_INDEX_NASDAQ_SYMBOL: '${{ vars.US_INDEX_NASDAQ_SYMBOL }}'
-          GITHUB_TOKEN: '${{ github.token }}'
-          GITHUB_REPOSITORY: '${{ github.repository }}'
         run: python telegram_news/dual_market.py
