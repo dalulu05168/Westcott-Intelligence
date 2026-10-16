@@ -1,0 +1,113 @@
+{
+  "version": "editorial-execution-v1.8",
+  "base_source_commit": "45df64e7ceeacea5520d00822f814a362d9d4c14",
+  "date": "2026-10-16",
+  "status": "OFFLINE_VALIDATED_NOT_ONLINE_TASK_DEPLOYMENT",
+  "new_regression_tests": 20,
+  "total_test_count": 137,
+  "checks": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/validate_repository.py"
+      ],
+      "exit_code": 0,
+      "expected_tests": null,
+      "output": "PASS: 65 identities and profiles; 35 reviewed member memory files; 152 confirmed history events; exclusions remain isolated\n"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/sync_runtime_memory.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "expected_tests": null,
+      "output": "PASS: 65 canonical identities; 152 adopted member events; five synchronized prepared prompts; 0 stale files\n"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0,
+      "expected_tests": 60,
+      "output": "............................................................\n----------------------------------------------------------------------\nRan 60 tests in 0.112s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "integrations/telegram",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0,
+      "expected_tests": 65,
+      "output": ".................................................................\n----------------------------------------------------------------------\nRan 65 tests in 0.023s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "telegram_news",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0,
+      "expected_tests": 12,
+      "output": "............\n----------------------------------------------------------------------\nRan 12 tests in 0.002s\n\nOK\n"
+    }
+  ],
+  "changed_paths": [
+    "CHANGELOG.md",
+    "README.md",
+    "scripts/editorial_execution.py",
+    "scripts/test_editorial_execution.py",
+    "skills/p004-director/SKILL.md",
+    "skills/p004-assistant/SKILL.md",
+    "skills/p004-writer/SKILL.md",
+    "skills/p004-teacher/SKILL.md",
+    "skills/p004-members/SKILL.md",
+    "skills/p004-chat-suite/SKILL.md",
+    "skills/p004-chat-suite/references/editorial-execution-v1.8.md",
+    ".github/workflows/validate-member-memory.yml"
+  ],
+  "source_sha256": {
+    "CHANGELOG.md": "ce71c720305eee1068ac549a36cae8a5cbfc6757f03b43e8a750724afce37318",
+    "README.md": "2ce507051732deb0f2ee82866700ea0d91adbe311ec81b21486fd09221d0f3e1",
+    "scripts/editorial_execution.py": "67bcc4c272863be75e988312ee9c2fbfd1c1301607a2cff8d2bae7fb4a8fc330",
+    "scripts/test_editorial_execution.py": "950acdca2de2f7cb63e503c0a0b800e9ad9149d48f15a74df6208a4eab50a929",
+    "skills/p004-director/SKILL.md": "8cdf94725b817c5b0380e81a2237334e0d562dcb97a954c595a03eb3f21f2a71",
+    "skills/p004-assistant/SKILL.md": "bdf1193bde396241170cc127b943be1bf001d32a528d95a9bc8f790d702e4330",
+    "skills/p004-writer/SKILL.md": "ac635a4e06c8036c1bdce28ece3d87a0a56bcf1c7e7d7b5b5a7cdef963beba7c",
+    "skills/p004-teacher/SKILL.md": "1b56ff4fddbc877e3c27cbc4bed1d217995945ba17d595ef50c5e1b4c0d2e23c",
+    "skills/p004-members/SKILL.md": "f3e6a89a0ef522a115a52e8d372aba600ef308b01d8a9e9ba90b42dbc2d41cc2",
+    "skills/p004-chat-suite/SKILL.md": "2378b56a958480a70c159955788b577a5d49a53647243ae1047bfad358cf8aed",
+    "skills/p004-chat-suite/references/editorial-execution-v1.8.md": "58c17b304e35357ec4a2b1257f74ad2b45042c32e9475558081e984bdd512792",
+    ".github/workflows/validate-member-memory.yml": "c6aa56d0631495b8bca26e67e369a9fbb44bcf7b1e98c314c6a9dbc444947172"
+  },
+  "preserved": [
+    "65 identity records",
+    "65 existing profiles",
+    "daily source originals",
+    "35 independent long-term memory files / 152 adopted events",
+    "all five paused task bodies and schedules",
+    "Telegram publication code"
+  ],
+  "forward_test": "Independent local context/scene exercise completed; malformed text guard corrected and retested. Semantic truth, unrelated valid memory references, voice quality and cross-source novelty remain editorial review requirements.",
+  "online_delivery_test": "NOT_PERFORMED",
+  "tasks_reenabled": false
+}

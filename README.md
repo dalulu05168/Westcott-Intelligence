@@ -1,3 +1,7 @@
+# v1.8 写作前执行与审稿（2026-10-16）
+
+现行补充协议：`skills/p004-chat-suite/references/editorial-execution-v1.8.md`。使用`scripts/editorial_execution.py`生成实际读取凭据、人物证据及场景检查；必须传本轮Google Docs文本与页签快照。同日期旧稿不与新修订重复累计；候选口吻、关系、状态不提升为已采用历史。新闻继续通过既有事实检查，并按原文证据键排除重复。离线校验不代替原文事实/语义审稿，不批准发布。五项暂停任务、机器人部署及发送流程未由此次改动恢复或更新。
+
 # v1.6 最新执行入口（2026-10-14）
 
 从2026-10-15起最新用户规则见 `skills/p004-chat-suite/references/daily-editorial-and-memory-v1.6.md`；明日工作单见 `planning/2026-10-15-editorial-plan.md`。身份表仍保留65位，但当前实际发言只准01—40号。BVB与美股每天各安排一次研究发布，上午下午由用户提前指定；严格筛选重大新闻并核验发布时间和行情口径。每个候选成员必须读取对应profile、近期正式Google Doc / `memory/daily`与 `memory/long-term/members/NN.json`，不再只凭截至10月12日的v1.5.1内置旧快照。编剧取消固定助理→两成员格式，成员之间应有自然回应、分歧和个人记忆连续性。
