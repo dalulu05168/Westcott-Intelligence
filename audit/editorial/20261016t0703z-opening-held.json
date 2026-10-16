@@ -1,0 +1,71 @@
+{
+  "status": "HELD_NOT_PUBLISHED",
+  "recorded_at": "2026-10-16T07:05:27.152Z",
+  "edition_path": "news/editions/20261016t0703z.json",
+  "collection": {
+    "status": "COMPLETE",
+    "required_feed_count": 8,
+    "coverage": [
+      {
+        "feed_id": "fed_monetary",
+        "status": "OK",
+        "parsed_items": 0
+      },
+      {
+        "feed_id": "ecb_press",
+        "status": "OK",
+        "parsed_items": 0
+      },
+      {
+        "feed_id": "bvb_market",
+        "status": "OK",
+        "parsed_items": 13
+      },
+      {
+        "feed_id": "bvb_announcements",
+        "status": "OK",
+        "parsed_items": 1
+      },
+      {
+        "feed_id": "insee_conjuncture",
+        "status": "OK",
+        "parsed_items": 1
+      },
+      {
+        "feed_id": "bls_cpi",
+        "status": "OK",
+        "parsed_items": 0
+      },
+      {
+        "feed_id": "bls_employment",
+        "status": "OK",
+        "parsed_items": 0
+      },
+      {
+        "feed_id": "eurostat_releases",
+        "status": "OK",
+        "parsed_items": 0
+      }
+    ],
+    "candidate_count": 15,
+    "all_bodies_captured": true
+  },
+  "editorial": {
+    "status": "NOT_APPROVED",
+    "ranking_completed": false,
+    "reason": "No candidate has a verified story-specific original image. INSEE images are publisher logo, generic collection banner, social icon and loader, unsuitable as matched original news photo. No second-ranked replacement or fabricated image permitted.",
+    "independent_browser_recheck": "INSEE and BVB PDF could not be opened by independent web reader; original bodies were captured by GitHub collector only; not marked CONFIRMED."
+  },
+  "opening_report": {
+    "status": "NOT_OPERATIONAL_NOT_ACCEPTED",
+    "blockers": [
+      "A dedicated morning/opening editorial path has not been integrated into reviewed_publish; the hourly snapshot covers only60minutes, not an overnight US review.",
+      "Existing legacy readiness probe reports TWELVE_DATA_API_KEY absent; no verified last completed US-session index snapshot is available.",
+      "Legacy API-based editor has no OPENAI_API_KEY or OPENAI_NEWS_MODEL; the separate ChatGPT reviewer does not by itself implement the legacy morning path."
+    ],
+    "telegram_connection": "Authorized smoke receipt message_id33 and format preview35 are connectivity only, not opening-news acceptance.",
+    "do_not_enable_legacy_direct_sender": true
+  },
+  "original_five_tasks": "NOT_CALLED_NOT_RESUMED",
+  "formal_telegram_messages_sent": 0
+}
