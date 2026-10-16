@@ -51,10 +51,15 @@ def adapt_snapshot(snapshot, story_date):
     indexes = [p['paragraph_index'] for p in snapshot['paragraphs']]
     if indexes != list(range(indexes[0], indexes[0] + len(indexes))):
         raise ValueError('NONCONTIGUOUS_ARCHIVE_PARAGRAPHS')
+    # Archived paragraph tab identifiers may be from an earlier Docs extraction.
+    # One verified source tab is explicitly recorded in this immutable archive.
+    archived_tab_ids = {p.get('tab_id') for p in snapshot['paragraphs']}
+    if len(archived_tab_ids) != 1:
+        raise ValueError('MULTIPLE_ARCHIVE_TABS_REQUIRE_REVIEW')
     return {'documentId': snapshot['document_id'], 'revisionId': snapshot['revision_id'],
             'tabs': [{'tabId': snapshot.get('tab_id', 't.0'),
                       'title': snapshot.get('tab_title', '')}],
-            'paragraphs': [{'tabId': p.get('tab_id', snapshot.get('tab_id', 't.0')),
+            'paragraphs': [{'tabId': snapshot.get('tab_id', 't.0'),
                             'startIndex': p.get('start_index', p['paragraph_index']),
                             'text': p['text']} for p in snapshot['paragraphs']],
             '_verified_story_date': story_date,
