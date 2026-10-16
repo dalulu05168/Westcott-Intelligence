@@ -160,7 +160,14 @@ def fetch_original(record):
     title_tags = " ".join(
         el.get_text(" ", strip=True) for el in html.select("h1, title")
     ).lower()
-    if not (title[:36] in text.lower() or title[:36] in title_tags):
+    # Central-bank RSS may prepend a speaker's name to the article title.
+    candidates = [title[:36]]
+    if ":" in title:
+        detail = title.split(":", 1)[1].strip()
+        if len(detail) >= 18:
+            candidates.append(detail[:36])
+    if not any(needle in text.lower() or needle in title_tags
+               for needle in candidates if len(needle) >= 18):
         return None
     if record["source"] == "BVB":
         # An index page is not a BVB listed-company disclosure.
@@ -204,7 +211,7 @@ def download_image(image_url, record):
     try:
         with Image.open(BytesIO(content)) as img:
             width, height = img.size
-            if width < 480 or height < 240 or img.format not in {"JPEG", "PNG"}:
+            if width < 420 or height < 240 or img.format not in {"JPEG", "PNG"}:
                 return None
     except (ValueError, OSError):
         return None
@@ -494,9 +501,9 @@ def publish():
                     continue
                 text = caption(country, record, data, image_url, now, kind, quote)
                 if media_kind == "official_pdf_page1" and text:
-                    note = ("\\nImagine: prima pagină a documentului oficial PDF."
+                    note = ("\nImagine: prima pagină a documentului oficial PDF."
                             if country == "RO" else
-                            "\\nImage : première page du document PDF officiel.")
+                            "\nImage : première page du document PDF officiel.")
                     text = text + note if len(text) + len(note) <= 1024 else None
                 if not text:
                     continue
