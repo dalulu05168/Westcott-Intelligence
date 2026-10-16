@@ -245,6 +245,21 @@ class OriginalArticleTests(unittest.TestCase):
         self.assertEqual(receipt["image_delivery"], "article_link_preview")
 
 
+    def test_chinese_only_approved_country_news_before_any_send(self):
+        for country in ('RO', 'FR'):
+            with self.subTest(country=country):
+                ledger = self.ledger()
+                ledger['target_country'] = country
+                prepared = pub.prepare(ledger, "news/approved/reviewed.json")
+                self.assertIn("===== 资讯助理 =====", prepared['text'])
+                self.assertIn("已核实的财经事实", prepared['text'])
+                ledger['claims'][0]['text'] = (
+                    'Une décision officielle sur les marchés financiers.' if country == 'FR'
+                    else 'A avut loc un eveniment financiar oficial.')
+                with self.assertRaisesRegex(pub.PublicationError, 'must be Chinese'):
+                    pub.prepare(ledger, "news/approved/reviewed.json")
+
+
 if __name__ == "__main__":
     unittest.main()
 
