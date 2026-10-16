@@ -52,7 +52,7 @@ jobs:
         run: |
           if [ -f morning-review.txt ]; then
             echo '### 可复制的早间候选稿（未经发布批准）' >> "$GITHUB_STEP_SUMMARY"
-            echo '\`\`\`text' >> "$GITHUB_STEP_SUMMARY"
+            echo '~~~text' >> "$GITHUB_STEP_SUMMARY"
             cat morning-review.txt >> "$GITHUB_STEP_SUMMARY"
-            echo '\`\`\`' >> "$GITHUB_STEP_SUMMARY"
+            echo '~~~' >> "$GITHUB_STEP_SUMMARY"
           fi
