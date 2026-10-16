@@ -1,0 +1,26 @@
+name: Telegram One Time Private Opt In Connection Test
+on:
+  push:
+    branches:
+      - diagnostics/telegram-target-types-20261016
+    paths:
+      - '.github/workflows/telegram-onetime-private-test.yml'
+permissions:
+  contents: read
+concurrency:
+  group: telegram-one-time-private-validation
+  cancel-in-progress: false
+jobs:
+  private-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'requests>=2.32,<3'
+      - name: Send only to a verified unique recent opt-in private start; never to group
+        env:
+          TELEGRAM_BOT_TOKEN: '${{ secrets.TELEGRAM_BOT_TOKEN }}'
+        run: python telegram_news/one_time_private_optin_test.py
