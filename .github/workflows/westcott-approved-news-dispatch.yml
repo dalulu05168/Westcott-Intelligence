@@ -18,6 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Install original PDF text extractor
+        run: sudo apt-get update -qq && sudo apt-get install -y poppler-utils
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -45,6 +47,8 @@ jobs:
       PUBLISH_CONFIRMATION: PUBLISH_REVIEWED_NEWS
     steps:
       - uses: actions/checkout@v4
+      - name: Install original PDF text extractor
+        run: sudo apt-get update -qq && sudo apt-get install -y poppler-utils
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -64,6 +68,8 @@ jobs:
       TELEGRAM_MESSAGE_THREAD_ID: ${{ vars.TELEGRAM_MESSAGE_THREAD_ID }}
     steps:
       - uses: actions/checkout@v4
+      - name: Install original PDF text extractor
+        run: sudo apt-get update -qq && sudo apt-get install -y poppler-utils
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
