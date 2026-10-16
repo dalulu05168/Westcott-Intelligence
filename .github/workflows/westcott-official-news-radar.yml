@@ -49,6 +49,7 @@ jobs:
       - name: Run official intake and editorial gate unit tests
         run: python -m unittest discover -s integrations/telegram -p "test_*.py"
       - name: Collect candidate links for human review, no Telegram secrets
+        continue-on-error: true
         run: python integrations/telegram/hourly_radar.py --mode "$RADAR_MODE"
 
 
