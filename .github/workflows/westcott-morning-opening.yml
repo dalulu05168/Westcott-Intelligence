@@ -18,6 +18,9 @@ on:
       - 'scripts/morning_france_us.py'
       - 'scripts/test_morning_france_us.py'
       - 'scripts/morning_france_us_delivery.py'
+      - 'scripts/morning_romania_us.py'
+      - 'scripts/morning_source_intake.py'
+      - 'news/morning-intake/**'
 
 permissions:
   contents: read
@@ -43,6 +46,25 @@ jobs:
         run: python -m unittest discover -s scripts -p 'test_morning_group_delivery.py' -v
       - name: Test independent France plus US preparation and delivery safeguards
         run: python -m unittest discover -s scripts -p 'test_morning_france_us.py' -v
+      - name: Check today's shared official source-intake handoff
+        shell: python
+        run: |
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          from pathlib import Path
+          import json, os
+          day=datetime.now(ZoneInfo('Europe/Bucharest')).date().isoformat()
+          p=Path('news/morning-intake')/(day+'.json')
+          msg='HELD_NO_TODAY_OFFICIAL_INTAKE'
+          if p.exists():
+              d=json.loads(p.read_text(encoding='utf-8'))
+              if d.get('local_date')==day and d.get('review_status')=='UNREVIEWED':
+                  counts={x:sum(x in c.get('market_scopes',[]) and c.get('evidence_status')=='BODY_CAPTURED_UNREVIEWED'
+                    for c in d.get('candidates',[])) for x in ('RO','FR','US')}
+                  msg='OFFICIAL_CANDIDATES_UNREVIEWED_'+str(counts)
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as out:
+              out.write('### 原始官方来源交接（不等于事实审稿）\\n'+msg+'\\n')
+          print(msg)
       - name: Prepare morning opening and US previous close candidate
         run: |
           python scripts/morning_opening.py \
@@ -56,6 +78,13 @@ jobs:
             --fr-source news/verified-market/france-morning-latest.json \
             --output morning-france-review.json \
             --text-output morning-france-review.txt
+      - name: Prepare Romania + US morning candidate with separate local news
+        run: |
+          python scripts/morning_romania_us.py \
+            --us-source news/verified-market/us-close-latest.json \
+            --ro-source news/verified-market/romania-morning-latest.json \
+            --output morning-romania-review.json \
+            --text-output morning-romania-review.txt
       - name: France + US review-only summary
         if: always()
         run: |
