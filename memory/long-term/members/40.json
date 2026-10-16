@@ -10,26 +10,19 @@
       "source_date": "2026-10-13",
       "node": "EVENING",
       "kind": "message",
-      "text": "我也来了，先看看今晚出的是什么题目。",
-      "source_docx": "剧本.docx",
-      "extracted_source_line": 321,
-      "warnings": [],
-      "fictional_only": true,
-      "no_real_transaction_verified": true
+      "text": "我也来了，先看看今晚出的是什么题目。"
     },
     {
-      "message_id": "20261014-M072",
+      "message_id": "20261014-DOC-040",
       "source_date": "2026-10-14",
-      "node": "AFTERNOON",
+      "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
-      "text": "这个CPI比预期高了一点，市场反应还真挺快的。现在就看后面会不会出现反弹了。",
+      "text": "我也来了，先看看今晚出的是什么题目。",
       "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM/edit?tab=t.0",
-      "source_doc_revision": "AHj4eMRS4SLSXvqgAdUMG8LNztwDxKlskKeopED5zzPE-TDEq7BTY0vWsY_2ih_Hk1fv1R1BUtGzlhNUy9YSFjvECpUbF90ntTVl--YwVww",
-      "source_block_number": 143,
-      "warnings": [],
-      "fictional_only": true,
-      "no_real_transaction_verified": true
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
+      "source_block_number": 40,
+      "source_tab_id": "t.t7k4o87mkgzv"
     }
   ],
   "reaction_count": 0,

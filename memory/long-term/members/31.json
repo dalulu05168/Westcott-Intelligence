@@ -10,18 +10,25 @@
       "source_date": "2026-10-13",
       "node": "EVENING",
       "kind": "message",
+      "text": "高位接盘太要命，利润没跟上直接套牢好几年，极难回本。"
+    },
+    {
+      "message_id": "20261014-DOC-066",
+      "source_date": "2026-10-14",
+      "node": "UNSPECIFIED_IN_SOURCE",
+      "kind": "message",
       "text": "高位接盘太要命，利润没跟上直接套牢好几年，极难回本。",
-      "source_docx": "剧本.docx",
-      "extracted_source_line": 555,
-      "warnings": [],
-      "fictional_only": true,
-      "no_real_transaction_verified": true
+      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
+      "source_block_number": 66,
+      "source_tab_id": "t.t7k4o87mkgzv"
     }
   ],
   "reaction_count": 0,
   "no_unrecorded_history": true,
-  "message_count": 1,
-  "latest_source_date": "2026-10-13",
+  "message_count": 2,
+  "latest_source_date": "2026-10-14",
   "no_real_trading_inferred": true,
   "review_only_2026_10_13": []
 }

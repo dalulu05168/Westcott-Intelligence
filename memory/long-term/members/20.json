@@ -5,58 +5,64 @@
   "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
   "fictional_education_only": true,
   "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
-  "message_count": 4,
+  "message_count": 6,
   "reaction_count": 0,
   "observed_in_submitted_story": [
     {
       "message_id": "M007",
+      "source_date": "2026-10-12",
       "node": "AFTERNOON",
-      "topic": "MARKET_OR_SOCIAL",
       "kind": "message",
-      "text": "分化万岁！有分化才有波动的空间！👍",
-      "source_lines": [
-        19,
-        20
-      ]
+      "text": "分化万岁！有分化才有波动的空间！👍"
     },
     {
       "message_id": "M041",
+      "source_date": "2026-10-12",
       "node": "AFTERNOON",
-      "topic": "MARKET_OR_SOCIAL",
       "kind": "message",
-      "text": "欧洲银行股还是很争气的，那咱们这边其他的有没有掉队啊？",
-      "source_lines": [
-        120,
-        121
-      ]
+      "text": "欧洲银行股还是很争气的，那咱们这边其他的有没有掉队啊？"
     },
     {
       "message_id": "20261013-M003",
       "source_date": "2026-10-13",
       "node": "AFTERNOON",
       "kind": "message",
-      "text": "来得正好，下午有什么重点消息？先看看。",
-      "source_docx": "剧本.docx",
-      "extracted_source_line": 16,
-      "warnings": [],
-      "fictional_only": true,
-      "no_real_transaction_verified": true
+      "text": "来得正好，下午有什么重点消息？先看看。"
     },
     {
       "message_id": "20261013-M016",
       "source_date": "2026-10-13",
       "node": "AFTERNOON",
       "kind": "message",
+      "text": "明白了，不能只看哪个行业表现好，就觉得投资它一定更安全。"
+    },
+    {
+      "message_id": "20261014-DOC-003",
+      "source_date": "2026-10-14",
+      "node": "UNSPECIFIED_IN_SOURCE",
+      "kind": "message",
+      "text": "来得正好，下午有什么重点消息？先看看。",
+      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
+      "source_block_number": 3,
+      "source_tab_id": "t.t7k4o87mkgzv"
+    },
+    {
+      "message_id": "20261014-DOC-016",
+      "source_date": "2026-10-14",
+      "node": "UNSPECIFIED_IN_SOURCE",
+      "kind": "message",
       "text": "明白了，不能只看哪个行业表现好，就觉得投资它一定更安全。",
-      "source_docx": "剧本.docx",
-      "extracted_source_line": 119,
-      "warnings": [],
-      "fictional_only": true,
-      "no_real_transaction_verified": true
+      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
+      "source_block_number": 16,
+      "source_tab_id": "t.t7k4o87mkgzv"
     }
   ],
   "no_unrecorded_history": true,
   "no_real_trading_inferred": true,
-  "latest_source_date": "2026-10-13",
+  "latest_source_date": "2026-10-14",
   "review_only_2026_10_13": []
 }

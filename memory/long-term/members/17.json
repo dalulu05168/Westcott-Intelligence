@@ -10,38 +10,27 @@
   "observed_in_submitted_story": [
     {
       "message_id": "M035",
+      "source_date": "2026-10-12",
       "node": "AFTERNOON",
-      "topic": "MARKET_OR_SOCIAL",
       "kind": "message",
-      "text": "我也来！选上涨！",
-      "source_lines": [
-        102,
-        103
-      ]
+      "text": "我也来！选上涨！"
     },
     {
       "message_id": "M058",
+      "source_date": "2026-10-12",
       "node": "EVENING",
-      "topic": "BREAKOUT_LESSON",
       "kind": "message",
-      "text": "先生，那是不是说，股价盘中涨过阻力位还不够，最好等收盘确认站稳了再判断？",
-      "source_lines": [
-        170,
-        171
-      ]
+      "text": "先生，那是不是说，股价盘中涨过阻力位还不够，最好等收盘确认站稳了再判断？"
     },
     {
       "message_id": "M072",
+      "source_date": "2026-10-12",
       "node": "EVENING",
-      "topic": "BREAKOUT_LESSON",
       "kind": "message",
-      "text": "今晚这个10列伊的例子挺直观的，比单独记那些技术名词容易理解多了。😄",
-      "source_lines": [
-        209,
-        210
-      ]
+      "text": "今晚这个10列伊的例子挺直观的，比单独记那些技术名词容易理解多了。😄"
     }
   ],
   "no_unrecorded_history": true,
-  "no_real_trading_inferred": true
+  "no_real_trading_inferred": true,
+  "latest_source_date": "2026-10-12"
 }

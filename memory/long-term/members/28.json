@@ -6,37 +6,57 @@
   "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
   "observed_in_submitted_story": [
     {
-      "message_id": "20261014-M038",
-      "source_date": "2026-10-14",
-      "node": "AFTERNOON",
+      "message_id": "20261015-DOC-012",
+      "source_date": "2026-10-15",
+      "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
-      "text": "还在涨是好事，但银行股这次居然没跟上，看来现在主力资金精得很，挑挑拣拣的，不是什么票都愿意砸钱买。",
+      "text": "原来国债也不是买完就完全不用操心了。",
       "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM/edit?tab=t.0",
-      "source_doc_revision": "AHj4eMRS4SLSXvqgAdUMG8LNztwDxKlskKeopED5zzPE-TDEq7BTY0vWsY_2ih_Hk1fv1R1BUtGzlhNUy9YSFjvECpUbF90ntTVl--YwVww",
-      "source_block_number": 109,
-      "warnings": [],
-      "fictional_only": true,
-      "no_real_transaction_verified": true
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
+      "source_block_number": 12,
+      "source_tab_id": "t.huff85y7dlym"
     },
     {
-      "message_id": "20261014-M119",
-      "source_date": "2026-10-14",
-      "node": "EVENING",
+      "message_id": "20261015-DOC-018",
+      "source_date": "2026-10-15",
+      "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
-      "text": "这点最为重要也要分人而异，胆子小的加仓怕谨慎的很，有些人确实抓住眼前红利大口吃肉。哈哈",
+      "text": "哈哈，我一打开行情就看到指数是红的，还以为自己看错了。",
       "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM/edit?tab=t.0",
-      "source_doc_revision": "AHj4eMRS4SLSXvqgAdUMG8LNztwDxKlskKeopED5zzPE-TDEq7BTY0vWsY_2ih_Hk1fv1R1BUtGzlhNUy9YSFjvECpUbF90ntTVl--YwVww",
-      "source_block_number": 190,
-      "warnings": [],
-      "fictional_only": true,
-      "no_real_transaction_verified": true
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
+      "source_block_number": 18,
+      "source_tab_id": "t.huff85y7dlym"
+    },
+    {
+      "message_id": "20261015-DOC-021",
+      "source_date": "2026-10-15",
+      "node": "UNSPECIFIED_IN_SOURCE",
+      "kind": "message",
+      "text": "用电少了，水电发电量反而多了？我还以为这两个应该一起变呢。",
+      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
+      "source_block_number": 21,
+      "source_tab_id": "t.huff85y7dlym"
+    },
+    {
+      "message_id": "20261015-DOC-080",
+      "source_date": "2026-10-15",
+      "node": "UNSPECIFIED_IN_SOURCE",
+      "kind": "message",
+      "text": "更多的时候是一种感觉，但是又不能一直凭借感觉做事。",
+      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
+      "source_block_number": 80,
+      "source_tab_id": "t.huff85y7dlym"
     }
   ],
   "reaction_count": 0,
   "no_unrecorded_history": true,
-  "message_count": 2,
+  "message_count": 4,
   "no_real_trading_inferred": true,
-  "latest_source_date": "2026-10-14"
+  "latest_source_date": "2026-10-15"
 }

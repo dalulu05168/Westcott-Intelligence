@@ -23,7 +23,7 @@
 1. 继续使用你掌控的 [@NuvexaCheckBot](https://t.me/NuvexaCheckBot)（如果 Telegram BotFather 中该机器人仍归你管理）。先在 Telegram 打开机器人，点击 Start 或发送 `/start`。
 2. 在仓库 Settings → Secrets and variables → Actions → Repository secrets 中设置 `TELEGRAM_BOT_TOKEN`（从你自己的 BotFather 获取）。**不要把 Token 发到聊天、GitHub Issue、Commit 中。**
 3. 合并 PR 后，去 Actions → **Telegram Private Chat Connection** → Run workflow → `mode=discover`。运行日志会显示机器人身份和最近发送过 `/start` 的私人会话 ID；确认显示的账号确实是你本人。此操作只读取消息，不清除更新，也不会自动发送新闻。**如果机器人正在使用 webhook，getUpdates 会返回冲突：禁止未经许可删除现有 webhook。**
-4. 将核实过的个人数字 chat ID 保存为另一个 Actions Repository Secret：`TELEGRAM_CHAT_ID`。
+4. 将核实过的个人数字 chat ID 保存为另一个 Actions Repository Secret：`TELEGRAM_PRIVATE_CHAT_ID`。
 5. 在 **Telegram Private Chat Connection** 选择 `mode=test`。机器人将发送一条带当前时间的私人连接测试；务必到 Telegram 实际确认收到了这条测试消息。
 6. Actions → **Telegram Finance News | 12 Bucharest Nodes** → Run workflow，先选 `node=N06`、`dry_run=true` 检查新闻来源；再手动 `dry_run=false` 做一次新闻推送验收（如果有新消息；否则为午间无新增通知）。
 7. 只有上述步骤通过后，才在 Settings → Secrets and variables → Actions → **Variables** 新增 `TELEGRAM_NEWS_ENABLED=true`。**变量不存在或非 true 时，所有计划触发的新闻推送任务均跳过。**原5项ChatGPT任务的暂停/启用状态不变。
@@ -34,7 +34,7 @@
 1. 在 Telegram 打开 [官方 BotFather](https://t.me/BotFather)，创建机器人，取得 token。不要把 token 粘贴到聊天、Issue 或源代码。
 2. 私聊机器人并发送 `/start`；如使用群组先加机器人，如使用频道授予发布权限。
 3. 确认目标 `chat_id`：频道一般可用公开的 `@channelusername`；私聊或群组可通过 Telegram 官方 Bot API 的 `getUpdates`，在机器人收到消息后读取 `message.chat.id`。
-4. GitHub 仓库 Settings → Secrets and variables → Actions → New repository secret，分别添加：`TELEGRAM_BOT_TOKEN` 与 `TELEGRAM_CHAT_ID`。
+4. GitHub 仓库 Settings → Secrets and variables → Actions → New repository secret，分别添加：`TELEGRAM_BOT_TOKEN` 与 `TELEGRAM_PRIVATE_CHAT_ID`（现有 `TELEGRAM_CHAT_ID` 是旧群组推送目标，不得覆盖）。
 5. 审核并合并相关 PR 到默认 `main` 分支。分支草案创建成功**并不等于已经上线**。
 6. 进入 Actions → `Telegram Finance News | 12 Bucharest Nodes` → Run workflow，选择 `N06` + `dry_run=true` 预览；检查实际官方标题、日期和新闻链接。
 7. 然后选择 `dry_run=false` 手动试发，检查 Telegram 实际收到消息，再检查定时任务日志。
@@ -65,3 +65,7 @@
 编辑与核验标准：`skills/p004-chat-suite/references/news-release-gate-v1.4.md`、`skills/p004-chat-suite/references/daily-editorial-and-memory-v1.6.md`。
 
 **上线验收要求：** Secrets 已配置 → PR 已合并 → dry-run 预览通过 → Telegram 真正收到一次测试消息 → 次日核对每个任务的日志与去重记录。
+
+## 2026-10-16 连接失败诊断及隔离修复
+
+GitHub Actions `Telegram Private Chat Connection` run #38830022954 日志显示 `Connected Telegram bot username: @NuvexaCheckBot` 后出现 `PRIVATE_ONLY: a numeric private chat ID is required`。Token有效，失败源于此前把旧「资讯快报」群组专用 `TELEGRAM_CHAT_ID` 错误用于私人聊天校验。已将本模块所有新私人消息读取变量更名为 `TELEGRAM_PRIVATE_CHAT_ID`，**不能覆盖或删除现有 `TELEGRAM_CHAT_ID`**。新私人 Secret 必须是本人 Telegram 数字用户 ID（正整数），且 getChat 校验 type 为 private；若没有这个 Secret，将安全失败而不会误发群组。`discover` 如果当前 Bot 使用 webhook，可能无法通过 getUpdates 获取 ID；不要擅自删除 webhook。上线前仍需要私人真实收件确认。

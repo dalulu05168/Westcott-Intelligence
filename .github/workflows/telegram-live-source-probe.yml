@@ -1,0 +1,22 @@
+name: Telegram RO FR | Live Source Probe (No Send)
+on:
+  pull_request:
+    paths:
+      - 'telegram_news/**'
+      - '.github/workflows/telegram-dual-market.yml'
+      - '.github/workflows/telegram-live-source-probe.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-readiness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r telegram_news/requirements.txt
+      - name: Check official feeds, original articles and own-site images (no sends)
+        run: python telegram_news/source_probe.py
