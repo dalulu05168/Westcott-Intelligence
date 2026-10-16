@@ -1,0 +1,58 @@
+name: Westcott Morning Opening and Prior US Close (Review Only)
+
+on:
+  schedule:
+    - cron: '30 7 * * 1-5'
+      timezone: Europe/Bucharest
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/westcott-morning-opening.yml'
+      - 'scripts/morning_opening.py'
+      - 'scripts/test_morning_opening.py'
+      - 'news/verified-market/**'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: westcott-morning-opening-preparation
+  cancel-in-progress: false
+
+jobs:
+  morning-preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate official roster and runtime rules
+        run: python scripts/validate_repository.py
+      - name: Test morning evidence gating
+        run: python -m unittest discover -s scripts -p 'test_morning_opening.py' -v
+      - name: Prepare morning opening and US previous close candidate
+        run: |
+          python scripts/morning_opening.py \
+            --source news/verified-market/us-close-latest.json \
+            --output morning-review.json \
+            --text-output morning-review.txt
+      - name: Report real preparation status
+        if: always()
+        run: |
+          echo '## Westcott morning opening (review only)' >> "$GITHUB_STEP_SUMMARY"
+          if [ -f morning-review.json ]; then
+            python -c 'import json,os; d=json.load(open("morning-review.json")); f=open(os.environ["GITHUB_STEP_SUMMARY"],"a"); f.write("- 状态："+d["status"]+"\n- "+d["reason"]+"\n- 未发送 Telegram；未写入 Google Docs；未批准成员对白。\n")'
+          else
+            echo '- 未生成审核材料，见 Actions 日志。' >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Show the draft in GitHub Actions summary (no storage cost)
+        if: always()
+        run: |
+          if [ -f morning-review.txt ]; then
+            echo '### 可复制的早间候选稿（未经发布批准）' >> "$GITHUB_STEP_SUMMARY"
+            echo '~~~text' >> "$GITHUB_STEP_SUMMARY"
+            cat morning-review.txt >> "$GITHUB_STEP_SUMMARY"
+            echo '~~~' >> "$GITHUB_STEP_SUMMARY"
+          fi
