@@ -8,7 +8,7 @@
 - 审稿人如实标注为自动模型审稿（auto-llm:<model>），不冒充人工。
 发送仍只走 approved_queue.py。本程序不接触 Telegram 密钥。
 """
-import hashlib, json, os, re, sys, time, urllib.request
+import hashlib, json, os, re, sys, time
 from datetime import datetime, timedelta, timezone
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
@@ -47,17 +47,8 @@ def model_name():
 
 
 def call_llm(prompt):
-    key, model = os.environ.get("OPENAI_API_KEY"), model_name()
-    if not key or not model:
-        raise RuntimeError("reviewer_not_configured")
-    base = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1")
-    req = urllib.request.Request(base + "/chat/completions", json.dumps({
-        "model": model, "temperature": 0,
-        "messages": [{"role": "user", "content": prompt}]}).encode(),
-        {"Authorization": f"Bearer {key}", "Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=90) as r:
-        txt = json.load(r)["choices"][0]["message"]["content"]
-    return json.loads(re.search(r"\{.*\}", txt, re.S).group(0))
+    """Paid model calls are disabled under the user\'s free strategy."""
+    raise RuntimeError("FREE_STRATEGY_CHATGPT_REVIEW_REQUIRED")
 
 
 ASSESS_PROMPT = """你是严格的财经审稿人。只依据下面的官方原文，评估这条消息对【{country_name}】金融市场的重要性。
