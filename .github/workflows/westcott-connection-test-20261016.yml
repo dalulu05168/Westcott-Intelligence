@@ -7,7 +7,7 @@ permissions:
   contents: read
 jobs:
   connection-test:
-    if: github.event.head_commit.message == 'Run authorized Telegram connection test 20261016T0644Z' && github.run_attempt == 1
+    if: github.event.head_commit.message == 'Run authorized Telegram connection test 20261016T0713Z' && github.run_attempt == 1
     runs-on: ubuntu-latest
     timeout-minutes: 3
     env:
