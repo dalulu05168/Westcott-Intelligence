@@ -4,11 +4,35 @@ import hashlib
 from html.parser import HTMLParser
 import ipaddress
 import socket
+import subprocess
+import tempfile
+from pathlib import Path
 import urllib.error
 import urllib.parse
 import urllib.request
 
 MAX_HTML = 524_288
+MAX_PDF = 6_000_000
+
+
+def pdf_markup(content):
+    """Extract real PDF text for comparison; never turn a PDF page into a photo."""
+    if not content.startswith(b'%PDF-') or len(content) > MAX_PDF:
+        raise SourceMediaError('Invalid or oversized original PDF.')
+    try:
+        with tempfile.TemporaryDirectory(prefix='westcott-pdf-') as directory:
+            source, target = Path(directory) / 'source.pdf', Path(directory) / 'body.txt'
+            source.write_bytes(content)
+            subprocess.run(['pdftotext', '-enc', 'UTF-8', str(source), str(target)],
+                           check=True, timeout=15, capture_output=True)
+            if target.stat().st_size > MAX_HTML // 2:
+                raise SourceMediaError('Original PDF text exceeds review limit.')
+            text = ' '.join(target.read_text(encoding='utf-8').split())
+    except (OSError, subprocess.SubprocessError, UnicodeError):
+        raise SourceMediaError('Original PDF text unavailable; scanned/encrypted files require review.') from None
+    if len(text) < 80 or text.count('\ufffd') > len(text) // 100:
+        raise SourceMediaError('Original PDF has insufficient readable text.')
+    return '<html><head><title>Original official PDF</title></head><body><article>' + html.escape(text) + '</article></body></html>'
 
 
 class SourceMediaError(ValueError):
@@ -68,10 +92,12 @@ def fetch_original_article(url, opener=None):
     handler = opener or urllib.request.build_opener(NoRedirect())
     request = urllib.request.Request(
         url, headers={"User-Agent": "WestcottArticlePreview/1.0",
-                      "Accept": "text/html,application/xhtml+xml;q=0.9"}, method="GET")
+                      "Accept": "text/html,application/xhtml+xml,application/pdf;q=0.9"}, method="GET")
     try:
         with handler.open(request, timeout=12) as response:
             content_type = response.headers.get("Content-Type", "").lower()
+            if 'application/pdf' in content_type or urllib.parse.urlsplit(url).path.lower().endswith('.pdf'):
+                return pdf_markup(response.read(MAX_PDF + 1))
             if not ("text/html" in content_type or "application/xhtml+xml" in content_type):
                 raise SourceMediaError("Original article response is not HTML.")
             content = response.read(MAX_HTML + 1)
@@ -144,6 +170,44 @@ class VisibleBody(HTMLParser):
             self.parts.append(data)
 
 
+class ArticleImages(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.depth = 0
+        self.excluded = 0
+        self.images = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag in ('article', 'main'):
+            self.depth += 1
+        if tag in ('nav', 'header', 'footer', 'script', 'noscript'):
+            self.excluded += 1
+        if tag == 'img' and self.depth and not self.excluded:
+            data = dict(attrs)
+            src = data.get('src') or data.get('data-src')
+            if src:
+                self.images.append({'url': src, 'alt': data.get('alt', ''),
+                                    'origin': 'original_article_body'})
+
+    def handle_endtag(self, tag):
+        if tag in ('article', 'main'):
+            self.depth = max(0, self.depth - 1)
+        if tag in ('nav', 'header', 'footer', 'script', 'noscript'):
+            self.excluded = max(0, self.excluded - 1)
+
+
+class LinkedDocuments(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.urls = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag == 'a':
+            href = dict(attrs).get('href', '')
+            if urllib.parse.urlsplit(href).path.lower().endswith('.pdf'):
+                self.urls.append(href)
+
+
 def inspect_markup(article_url, markup):
     article_url = public_https(article_url)
     parser = HeadMetadata()
@@ -176,7 +240,32 @@ def inspect_markup(article_url, markup):
     body = VisibleBody()
     body.feed(markup[:MAX_HTML])
     source_text = ' '.join(''.join(body.parts).split())
+    images = ArticleImages()
+    images.feed(markup[:MAX_HTML])
+    body_images, seen_images = [], set()
+    for item in images.images:
+        try:
+            url = public_https(urllib.parse.urljoin(article_url, item['url']))
+        except SourceMediaError:
+            continue
+        if url not in seen_images:
+            body_images.append({**item, 'url': url})
+            seen_images.add(url)
+    documents = LinkedDocuments()
+    documents.feed(markup[:MAX_HTML])
+    linked_docs = []
+    for href in documents.urls:
+        try:
+            document_url = urllib.parse.urljoin(article_url, href).replace(' ', '%20')
+            parts = urllib.parse.urlsplit(document_url)
+            if parts.scheme in ('http', 'https') and parts.netloc in ('bvb.ro', 'www.bvb.ro'):
+                document_url = urllib.parse.urlunsplit(('https', 'bvb.ro', parts.path, parts.query, parts.fragment))
+            linked_docs.append(public_https(document_url))
+        except SourceMediaError:
+            continue
     return {
+        "linked_document_urls": sorted(set(linked_docs)),
+        "article_image_candidates": body_images,
         "source_text": source_text,
         "source_text_sha256": hashlib.sha256(source_text.encode('utf-8')).hexdigest(),
         "article_url": article_url,
@@ -245,4 +334,5 @@ def main():
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
 

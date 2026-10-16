@@ -9,6 +9,12 @@ import source_media as media
 
 
 class OriginalSourceImageTests(unittest.TestCase):
+    def test_article_body_images_found_without_using_navigation_logos(self):
+        found = media.inspect_markup('https://news.example.org/story', '''<head><title>Story</title></head>
+            <body><header><img src="/logo.png"></header><article><img src="/story.jpg" alt="Story chart"></article></body>''')
+        self.assertEqual([x['url'] for x in found.get('article_image_candidates', [])],
+                         ['https://news.example.org/story.jpg'])
+
     def test_publisher_og_image_and_canonical_detected(self):
         markup = """<html><head>
         <meta property="og:title" content="Original Company Earnings Report"/>
@@ -94,3 +100,4 @@ class OriginalSourceImageTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

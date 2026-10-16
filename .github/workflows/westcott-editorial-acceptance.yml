@@ -1,0 +1,26 @@
+name: Westcott Photo and Country Impact Acceptance
+on:
+  pull_request:
+    paths:
+      - 'integrations/telegram/**'
+      - '.github/workflows/westcott-editorial-acceptance.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  editorial_tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install original PDF text extractor
+        run: sudo apt-get update -qq && sudo apt-get install -y poppler-utils
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify mandatory photo, complete comparison and atomic country-hour slots
+        run: python -m unittest discover -s integrations/telegram -p 'test_*.py'
+      - name: Verify unchanged formal identity and prepared memory
+        run: python scripts/validate_repository.py && python scripts/sync_runtime_memory.py --check
+      - name: Live complete official feed intake, no Telegram token or send
+        run: python integrations/telegram/hourly_radar.py --mode dry-run

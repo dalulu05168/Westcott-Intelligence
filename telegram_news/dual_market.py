@@ -417,6 +417,7 @@ def caption(country, record, analysis, image_url, now, kind, quote=None):
 
 
 def send_photo(token, chat_id, image, mime, text):
+    raise RuntimeError("UNREVIEWED_ALTERNATE_DELIVERY_DISABLED: use integrations/telegram/reviewed_publish.py")
     ensure_private_destination(token, chat_id)
     image_name = "official-news.png" if mime == "image/png" else "official-news.jpg"
     result = requests.post("https://api.telegram.org/bot" + token + "/sendPhoto",

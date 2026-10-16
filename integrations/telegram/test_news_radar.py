@@ -12,6 +12,15 @@ import news_radar as radar
 
 
 class OfficialRadarTests(unittest.TestCase):
+    def test_official_relative_and_http_pdf_links_are_normalized_safely(self):
+        feed = next(f for f in radar.FEEDS if f['id'] == 'bvb_announcements')
+        for link in ('/info/Anunturi/Report name.pdf', 'http://www.bvb.ro/infocont/Report name.pdf'):
+            rss = ('<rss><channel><item><title>Official report</title><link>' + link
+                   + '</link><pubDate>Thu, 15 Oct 2026 09:00:00 GMT</pubDate></item></channel></rss>').encode()
+            row = radar.extract_items(rss, feed, strict=True)[0]
+            self.assertTrue(row['article_url'].startswith('https://'))
+            self.assertIn('Report%20name.pdf', row['article_url'])
+
     def setUp(self):
         self.now = datetime(2026, 10, 15, 10, 0, tzinfo=timezone.utc)
         self.fed = radar.FEEDS[0]
@@ -122,3 +131,4 @@ class OfficialRadarTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

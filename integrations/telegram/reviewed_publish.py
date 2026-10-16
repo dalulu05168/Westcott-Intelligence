@@ -18,6 +18,7 @@ sys.path.insert(0, str(BASE / "scripts"))
 import news_release_gate as gate
 from bridge import send_group_news_from_official_article
 from source_media import SourceMediaError, inspect_article
+from editorial_policy import PolicyError, validate_release, COUNTRIES
 
 EVENT_RE = re.compile(r"^[a-z0-9][a-z0-9_-]{5,71}$")
 FILE_RE = re.compile(r"^news/approved/[a-z0-9][a-z0-9_.-]{1,100}\.json$")
@@ -130,6 +131,10 @@ def prepare(ledger, filename, now=None):
     if not urls or len(urls) > 12:
         raise PublicationError("Source URLs missing or excessive.")
     text = "===== 资讯助理 =====\n\n" + "\n\n".join(facts)
+    country = ledger.get('target_country')
+    if country in COUNTRIES:
+        marker, name = COUNTRIES[country]
+        text = '===== 资讯助理 =====\n\n' + marker + ' ' + name + '\n\n' + '\n\n'.join(facts)
     text += "\n\n原始来源：\n" + "\n".join(urls)
     if len(text.encode("utf-8")) > 14000:
         raise PublicationError("News text is too long for concise Telegram release.")
@@ -142,7 +147,7 @@ def prepare(ledger, filename, now=None):
     media = select_original_image(ledger, selected_source_ids, default_source_id)
     ids = sorted(selected)
     fingerprint = hashlib.sha256(
-        json.dumps({"facts": sorted(set(" ".join(f.split()) for f in facts)),
+        json.dumps({"country": country, "facts": sorted(set(" ".join(f.split()) for f in facts)),
                     "sources": sorted(urls)}, ensure_ascii=False,
                    sort_keys=True).encode("utf-8")
     ).hexdigest()
@@ -156,6 +161,12 @@ def prepare(ledger, filename, now=None):
         claim_evidence_keys.append(hashlib.sha256(json.dumps(
             evidence_identity, ensure_ascii=False, sort_keys=True).encode('utf-8')).hexdigest())
     return {"event_id": event_id, "fingerprint": fingerprint,
+            "target_country": country,
+            "hourly_selection": ledger.get('hourly_selection'),
+            "local_impact_claim_id": ledger.get('local_impact_claim_id'),
+            "watch_next_claim_id": ledger.get('watch_next_claim_id'),
+            "claim_kinds": {c['id']: c['kind'] for c in ledger['claims'] if c['id'] in selected},
+            "claim_countries": {c['id']: c.get('target_country') for c in ledger['claims'] if c['id'] in selected},
             "claim_evidence_keys": sorted(set(claim_evidence_keys)),
             "ledger_digest": hashlib.sha256(json.dumps(ledger, ensure_ascii=False, sort_keys=True).encode('utf-8')).hexdigest(),
             "claim_ids": ids, "sources": urls, "media": media,
@@ -212,7 +223,9 @@ def confirm_original_photo_source(prepared):
         raise PublicationError(
             "Cannot inspect original article image; no Telegram send or audit reservation."
         ) from None
-    if metadata["image_candidate_url"] != photo:
+    matching = {item['url'] for item in metadata.get('article_image_candidates', [])}
+    matching.add(metadata.get('image_candidate_url'))
+    if photo not in matching:
         raise PublicationError("Selected image differs from original article image metadata.")
     if metadata["canonical_matches_article"] is False:
         raise PublicationError("Publisher canonical URL differs from reviewed article.")
@@ -262,7 +275,9 @@ def reserve(prepared, env, now=None):
     if not token or not repo or env.get("GITHUB_REF_NAME") != "main":
         raise PublicationError("Publishing requires main branch and GITHUB_TOKEN.")
     path = "audit/telegram-delivery/" + prepared["fingerprint"][:40] + ".json"
-    claim_paths = ['audit/telegram-claims/' + key + '.json' for key in prepared['claim_evidence_keys']]
+    country = prepared.get('target_country')
+    claim_prefix = 'audit/telegram-claims/' + (country + '/' if country in COUNTRIES else '')
+    claim_paths = [claim_prefix + key + '.json' for key in prepared['claim_evidence_keys']]
     record = {
         "state": "PENDING_DO_NOT_RETRY",
         "event_id": prepared["event_id"],
@@ -270,6 +285,7 @@ def reserve(prepared, env, now=None):
         "claim_ids": prepared["claim_ids"],
         "claim_evidence_keys": prepared['claim_evidence_keys'],
         "claim_reservation_paths": claim_paths,
+        "editorial_acceptance": prepared.get('editorial_acceptance'),
         "evidence_urls": prepared["sources"],
         "ledger": prepared["ledger"],
         "ledger_digest": prepared.get('ledger_digest'),
@@ -281,6 +297,13 @@ def reserve(prepared, env, now=None):
         "source_rechecks": prepared.get('source_rechecks', []),
     }
     sha = github_write(path, record, token, repo)
+    acceptance = prepared.get('editorial_acceptance')
+    if acceptance:
+        github_write('audit/telegram-slots/' + acceptance['slot_key'] + '.json', {
+            'event_id': prepared['event_id'], 'state': 'SLOT_RESERVED_DO_NOT_RETRY',
+            'delivery_audit': path, 'reserved_at': record['reserved_at'],
+            'target_country': country, 'window_end': acceptance['window_end'],
+        }, token, repo)
     # Create-only atomic claims prevent rewritten copy, renamed files/IDs and
     # mixed old/new claim sets from escaping an earlier ambiguous delivery.
     # If any claim already exists, leave this parent PENDING and send nothing.
@@ -347,6 +370,11 @@ def save_preview(prepared, env):
 def publish(prepared, env):
     if env.get("PUBLISH_CONFIRMATION") != CONFIRM:
         raise PublicationError("Explicit publish confirmation required.")
+    try:
+        acceptance = validate_release(prepared, BASE)
+    except PolicyError as exc:
+        raise PublicationError(str(exc)) from None
+    prepared = {**prepared, 'editorial_acceptance': acceptance}
     prepared = {**prepared, 'source_rechecks': confirm_original_evidence(prepared)}
     confirm_original_photo_source(prepared)
     path, record, sha = reserve(prepared, env)
@@ -398,4 +426,5 @@ def main():
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
 
