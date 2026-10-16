@@ -5,6 +5,7 @@ on:
     paths:
       - 'integrations/telegram/market_readiness.py'
       - 'integrations/telegram/test_market_readiness.py'
+      - 'integrations/telegram/test_dual_delivery_guard.py'
       - '.github/workflows/westcott-market-data-readiness.yml'
   workflow_dispatch:
 permissions:
@@ -21,6 +22,7 @@ jobs:
       - name: Test quote readiness boundaries
         run: python -m unittest discover -s integrations/telegram -p 'test_*.py'
       - name: Inspect official endpoints and configured licensed-feed key
+        if: always()
         env:
           TWELVE_DATA_API_KEY: ${{ secrets.TWELVE_DATA_API_KEY }}
         run: python integrations/telegram/market_readiness.py
