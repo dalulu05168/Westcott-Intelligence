@@ -24,12 +24,24 @@ def drain(root, env):
                 results.append({'ledger': relative, 'status': 'ALREADY_RESERVED'})
                 continue
             prepared = publisher.prepare(ledger, relative)
-            if any((root / 'audit/telegram-claims' / (key + '.json')).exists()
+            country = prepared.get('target_country')
+            claim_root = root / 'audit/telegram-claims'
+            if country in ('RO', 'FR'):
+                claim_root = claim_root / country
+            if any((claim_root / (key + '.json')).exists()
                    for key in prepared['claim_evidence_keys']):
                 results.append({'ledger': relative, 'status': 'ALREADY_RESERVED'})
                 continue
             audit = root / 'audit/telegram-delivery' / (prepared['fingerprint'][:40] + '.json')
             if audit.exists():
+                results.append({'ledger': relative, 'status': 'ALREADY_RESERVED'})
+                continue
+            try:
+                acceptance = publisher.validate_release(prepared, root)
+            except publisher.PolicyError as exc:
+                results.append({'ledger': relative, 'status': 'HELD', 'reason': str(exc)})
+                continue
+            if (root / 'audit/telegram-slots' / (acceptance['slot_key'] + '.json')).exists():
                 results.append({'ledger': relative, 'status': 'ALREADY_RESERVED'})
                 continue
             receipt = publisher.publish(prepared, env)

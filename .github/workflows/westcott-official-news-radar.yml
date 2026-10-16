@@ -1,4 +1,4 @@
-name: Westcott Official News Radar (Review Queue Only)
+name: Westcott Official Hourly News Radar (Unreviewed)
 on:
   schedule:
     # Runs hourly in UTC; collection only, never sends Telegram or ChatGPT notifications.
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "dry-run = list candidates only; queue = commit UNREVIEWED items, never send"
+        description: "dry-run = full 60-minute comparison snapshot; queue = save UNREVIEWED edition, never send"
         type: choice
         required: true
         default: dry-run
@@ -36,7 +36,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Run official-feed unit tests (offline)
-        run: python -m unittest discover -s integrations/telegram -p "test_news_radar.py"
+      - name: Run official intake and editorial gate unit tests
+        run: python -m unittest discover -s integrations/telegram -p "test_*.py"
       - name: Collect candidate links for human review, no Telegram secrets
-        run: python integrations/telegram/news_radar.py --mode "$RADAR_MODE"
+        run: python integrations/telegram/hourly_radar.py --mode "$RADAR_MODE"
+

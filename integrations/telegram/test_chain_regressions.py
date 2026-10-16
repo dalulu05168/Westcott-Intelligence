@@ -68,6 +68,32 @@ class ChainRegressions(unittest.TestCase):
                     with self.assertRaisesRegex(pub.PublicationError, 'reserved'):
                         pub.reserve(second, env)
 
+    def test_country_hour_slot_blocks_second_story_but_allows_other_country(self):
+        records = {}
+        def atomic_write(path, record, token, repo, sha=None):
+            if path in records and sha is None:
+                raise pub.PublicationError('Already reserved')
+            records[path] = copy.deepcopy(record)
+            return 'sha'
+        env = {'GITHUB_TOKEN': 'secret', 'GITHUB_REPOSITORY': 'owner/repo', 'GITHUB_REF_NAME': 'main'}
+        ledger = fixtures.OriginalArticleTests().ledger()
+        ledger['target_country'] = 'RO'
+        first = pub.prepare(ledger, 'news/approved/first.json')
+        first['editorial_acceptance'] = {'slot_key': 'RO-20261016T09', 'window_end': '2026-10-16T09:37:00+00:00'}
+        with patch.object(pub, 'github_write', side_effect=atomic_write):
+            pub.reserve(first, env)
+            other = copy.deepcopy(ledger)
+            other['claims'][0]['text'] = 'Different genuinely new story.'
+            other['claims'][0]['evidence'][0]['excerpt'] = 'New original evidence.'
+            second = pub.prepare(other, 'news/approved/second.json')
+            second['editorial_acceptance'] = first['editorial_acceptance']
+            with self.assertRaises(pub.PublicationError):
+                pub.reserve(second, env)
+            ledger['target_country'] = 'FR'
+            france = pub.prepare(ledger, 'news/approved/france.json')
+            france['editorial_acceptance'] = {'slot_key': 'FR-20261016T09', 'window_end': '2026-10-16T09:37:00+00:00'}
+            pub.reserve(france, env)
+
     def test_query_identifies_different_article(self):
         result = media.inspect_markup('https://news.example.org/story?id=1',
             '<head><link rel="canonical" href="https://news.example.org/story?id=2"></head>')
@@ -112,7 +138,8 @@ class ChainRegressions(unittest.TestCase):
         prepared = pub.prepare(fixtures.OriginalArticleTests().ledger(), 'news/approved/reviewed.json')
         with patch.object(pub, 'inspect_article', return_value={
             'source_text': 'Unrelated material', 'canonical_matches_article': True}), \
-                patch.object(pub, 'reserve') as reserve:
+                patch.object(pub, 'reserve') as reserve, \
+                patch.object(pub, 'validate_release', return_value={}):
             with self.assertRaisesRegex(pub.PublicationError, 'excerpt'):
                 pub.publish(prepared, {'PUBLISH_CONFIRMATION': pub.CONFIRM})
             reserve.assert_not_called()

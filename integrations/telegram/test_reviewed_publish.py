@@ -12,6 +12,12 @@ import reviewed_publish as pub
 
 class OriginalArticleTests(unittest.TestCase):
     def setUp(self):
+        # These are transport/evidence unit tests; full editorial acceptance has
+        # independent real-manifest tests in test_editorial_policy.py.
+        editorial = patch.object(pub, 'validate_release', return_value={
+            'slot_key': 'RO-unit-test', 'window_end': datetime.now(timezone.utc).isoformat()})
+        editorial.start()
+        self.addCleanup(editorial.stop)
         network = patch.object(pub, 'inspect_article', return_value={
             'source_text': '已核实的财经事实。', 'canonical_matches_article': True,
             'image_candidate_url': None})

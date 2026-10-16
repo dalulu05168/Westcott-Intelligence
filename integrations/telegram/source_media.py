@@ -144,6 +144,32 @@ class VisibleBody(HTMLParser):
             self.parts.append(data)
 
 
+class ArticleImages(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.depth = 0
+        self.excluded = 0
+        self.images = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag in ('article', 'main'):
+            self.depth += 1
+        if tag in ('nav', 'header', 'footer', 'script', 'noscript'):
+            self.excluded += 1
+        if tag == 'img' and self.depth and not self.excluded:
+            data = dict(attrs)
+            src = data.get('src') or data.get('data-src')
+            if src:
+                self.images.append({'url': src, 'alt': data.get('alt', ''),
+                                    'origin': 'original_article_body'})
+
+    def handle_endtag(self, tag):
+        if tag in ('article', 'main'):
+            self.depth = max(0, self.depth - 1)
+        if tag in ('nav', 'header', 'footer', 'script', 'noscript'):
+            self.excluded = max(0, self.excluded - 1)
+
+
 def inspect_markup(article_url, markup):
     article_url = public_https(article_url)
     parser = HeadMetadata()
@@ -176,7 +202,19 @@ def inspect_markup(article_url, markup):
     body = VisibleBody()
     body.feed(markup[:MAX_HTML])
     source_text = ' '.join(''.join(body.parts).split())
+    images = ArticleImages()
+    images.feed(markup[:MAX_HTML])
+    body_images, seen_images = [], set()
+    for item in images.images:
+        try:
+            url = public_https(urllib.parse.urljoin(article_url, item['url']))
+        except SourceMediaError:
+            continue
+        if url not in seen_images:
+            body_images.append({**item, 'url': url})
+            seen_images.add(url)
     return {
+        "article_image_candidates": body_images,
         "source_text": source_text,
         "source_text_sha256": hashlib.sha256(source_text.encode('utf-8')).hexdigest(),
         "article_url": article_url,
@@ -245,4 +283,5 @@ def main():
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
 

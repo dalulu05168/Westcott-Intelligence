@@ -30,6 +30,18 @@ FEEDS = (
     {"id": "bvb_announcements", "source": "Bucharest Stock Exchange",
      "url": "https://www.bvb.ro/Rss/OperatiuniSiComunicateBVB.ashx",
      "article_hosts": ("www.bvb.ro", "bvb.ro")},
+    {"id": "insee_conjuncture", "source": "INSEE France",
+     "url": "https://www.insee.fr/fr/flux/3",
+     "article_hosts": ("www.insee.fr", "insee.fr")},
+    {"id": "bls_cpi", "source": "US Bureau of Labor Statistics CPI",
+     "url": "https://www.bls.gov/feed/cpi.rss",
+     "article_hosts": ("www.bls.gov", "bls.gov")},
+    {"id": "bls_employment", "source": "US Bureau of Labor Statistics Employment",
+     "url": "https://www.bls.gov/feed/empsit.rss",
+     "article_hosts": ("www.bls.gov", "bls.gov")},
+    {"id": "eurostat_releases", "source": "Eurostat",
+     "url": "https://ec.europa.eu/eurostat/en/search?_estatsearchportlet_WAR_estatsearchportlet_collection=CAT_PREREL&p_p_id=estatsearchportlet_WAR_estatsearchportlet&p_p_lifecycle=2&p_p_mode=view&p_p_resource_id=atom&p_p_state=maximized",
+     "article_hosts": ("ec.europa.eu",)},
 )
 MAX_FEED_BYTES = 1_200_000
 MAX_PER_CYCLE = 12
@@ -86,7 +98,7 @@ def first_text(node, tags):
     return ""
 
 
-def extract_items(feed_xml, feed):
+def extract_items(feed_xml, feed, strict=False):
     if len(feed_xml) > MAX_FEED_BYTES or b"<!DOCTYPE" in feed_xml.upper() or b"<!ENTITY" in feed_xml.upper():
         raise RadarError("Oversized or potentially unsafe XML feed.")
     try:
@@ -104,7 +116,9 @@ def extract_items(feed_xml, feed):
     if not entries:
         raise RadarError("Official feed had no parseable entries.")
     result = []
-    for node in entries[:70]:
+    if len(entries) > 1000:
+        raise RadarError('Feed entry cap reached; cannot claim complete coverage.')
+    for node in entries:
         title = first_text(node, ["title", "{http://www.w3.org/2005/Atom}title"])
         if atom:
             href = ""
@@ -118,13 +132,17 @@ def extract_items(feed_xml, feed):
             href = first_text(node, ["link"])
             date = first_text(node, ["pubDate", "{http://purl.org/dc/elements/1.1/}date"])
         if not title or not href or not date:
-            continue
+            raise RadarError('Feed item lacks title/link/time; complete hourly comparison is unavailable.')
         try:
             article = check_url(href, feed["article_hosts"])
             timestamp = parse_time(date)
         except RadarError:
+            if strict:
+                raise
             continue
         if len(title) > 300:
+            if strict:
+                raise RadarError('Oversized headline prevents complete source capture.')
             continue
         result.append({"title": re.sub(r"\s+", " ", title),
                        "article_url": article, "published_at": timestamp.isoformat(),
@@ -132,7 +150,7 @@ def extract_items(feed_xml, feed):
     return result
 
 
-def pick_candidates(items, now=None, max_age_hours=MAX_AGE_HOURS):
+def pick_candidates(items, now=None, max_age_hours=MAX_AGE_HOURS, limit=MAX_PER_CYCLE, require_signal=True):
     now = now or datetime.now(timezone.utc)
     seen = set()
     choices = []
@@ -160,7 +178,7 @@ def pick_candidates(items, now=None, max_age_hours=MAX_AGE_HOURS):
         if age < timedelta(minutes=-2) or age > timedelta(hours=max_age_hours):
             continue
         score = sum(1 for signal in SIGNAL if signal in row["title"].lower())
-        if not score:
+        if require_signal and not score:
             continue
         # Do not strip potentially distinguishing URL paths or queries.
         uid = hashlib.sha256(row["article_url"].encode("utf-8")).hexdigest()
@@ -174,7 +192,7 @@ def pick_candidates(items, now=None, max_age_hours=MAX_AGE_HOURS):
                         "importance_confirmed": False,
                         "telegram_publishable": False})
     choices.sort(key=lambda x: (x["rank_signal_hits"], x["published_at"]), reverse=True)
-    return choices[:MAX_PER_CYCLE]
+    return choices if limit is None else choices[:limit]
 
 
 class NoRedirect(request.HTTPRedirectHandler):
@@ -209,6 +227,7 @@ def inspect_candidate_image(row, inspector=None):
         if page.get("canonical_matches_article") is False:
             raise SourceMediaError("Publisher canonical differs from feed story.")
         return {**row, "original_image_candidate_url": page.get("image_candidate_url"),
+                "article_image_candidates": page.get('article_image_candidates', []),
                 "source_text_snapshot": page.get('source_text', '')[:80000],
                 "source_text_sha256": page.get('source_text_sha256'),
                 "source_text_truncated": len(page.get('source_text', '')) > 80000,
