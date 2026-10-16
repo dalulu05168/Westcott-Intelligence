@@ -56,7 +56,7 @@ def audit():
                     errors.append(f"INVALID_OBSERVED_RECORDS:{pid}")
                     observed=[]
                 entry["evidence_count"]=len(observed)
-                if mem.get("message_count") is not None and mem["message_count"]!=len(observed):
+                if mem.get("message_count") is not None and mem["message_count"]!=sum(e.get("kind","message")=="message" for e in observed):
                     warnings.append(f"MEMORY_COUNT_DIFF:{pid}")
                 for i,evt in enumerate(observed):
                     mid=evt.get("message_id"); day=evt.get("source_date")
