@@ -1,0 +1,31 @@
+name: Authorized Telegram Format Preview 20261016
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/westcott-format-test-20261016.yml']
+permissions:
+  contents: read
+jobs:
+  format-preview:
+    if: github.event.head_commit.message == 'Send authorized format preview 20261016T0646Z' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TELEGRAM_EXPECTED_BOT_USERNAME: NuvexaCheckBot
+      TELEGRAM_EXPECTED_GROUP_TITLE: 资讯快报
+      TELEGRAM_MESSAGE_THREAD_ID: ${{ vars.TELEGRAM_MESSAGE_THREAD_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Send explicitly labeled format preview only
+        shell: python
+        run: |
+          import sys, json
+          sys.path.insert(0, 'integrations/telegram')
+          from bridge import send_group_news
+          message = "===== 资讯助理 =====\n【格式测试｜非正式新闻】\n\n🔵 罗马尼亚｜财经资讯快报\n\n【新闻标题】\n这里放已核验的重要事件标题。\n\n📰 发生了什么\n这里说明原文确认的事实、时间和关键数据。\n\n🇷🇴 对罗马尼亚市场的影响\n这里分析对BVB、相关行业或企业的影响，并说明成立条件。\n\n👀 后续关注\n这里列出下一项需要观察的数据、公告或事件。\n\n🔗 官方原文：[正式发布时附真实链接]\n🖼 官网原图：[正式发布时附对应图片]\n\n━━━━━━━━━━━━\n\n🔴 法国｜财经资讯快报\n\n【新闻标题】\n这里放已核验的重要事件标题。\n\n📰 发生了什么\n这里说明原文确认的事实、时间和关键数据。\n\n🇫🇷 对法国市场的影响\n这里分析对法国市场、相关行业或企业的影响，并说明成立条件。\n\n👀 后续关注\n这里列出下一项需要观察的数据、公告或事件。\n\n🔗 官方原文：[正式发布时附真实链接]\n🖼 官网原图：[正式发布时附对应图片]\n\n本条仅展示排版，没有正式新闻、行情数据或配图；正式推送时每国单独一条，图片使用已核验的官网原图。"
+          print(json.dumps(send_group_news(message), ensure_ascii=False))
