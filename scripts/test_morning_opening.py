@@ -78,5 +78,24 @@ class TestMorningOpening(unittest.TestCase):
         value["review_status"] = "UNREVIEWED"
         self.assertEqual(build(NOW, value)["status"], "HELD_INVALID_MARKET_EVIDENCE")
 
+    def test_official_index_links_in_recap(self):
+        result = build(NOW, valid_data())
+        body = result["us_recap_draft"]
+        self.assertIn("🔗 官方指数原始来源", body)
+        for index in valid_data()["indices"]:
+            self.assertIn(index["source_url"], body)
+
+    def test_rejects_fake_index_provider_domains(self):
+        for symbol, bad in [
+            ("DJIA", "https://spoof-spglobal.com/sp-500"),
+            ("SPX", "https://www.example.org/sp-500"),
+            ("IXIC", "https://fake-nasdaq.com/comp"),
+        ]:
+            with self.subTest(symbol=symbol):
+                doc = valid_data()
+                next(row for row in doc["indices"] if row["symbol"] == symbol)["source_url"] = bad
+                result = build(NOW, doc)
+                self.assertEqual(result["status"], "HELD_INVALID_MARKET_EVIDENCE")
+
 if __name__ == "__main__":
     unittest.main()
