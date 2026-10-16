@@ -32,7 +32,7 @@ concurrency:
 jobs:
   dual-country:
     # THIS PIPELINE IS OFF until expressly opted in; manual dry run is permitted.
-    if: ${{ (vars.TELEGRAM_DUAL_MARKET_ENABLED == 'true' && vars.TELEGRAM_NEWS_ENABLED != 'true') || (github.event_name == 'workflow_dispatch' && inputs.dry_run == true) }}
+    if: ${{ (vars.TELEGRAM_DUAL_MARKET_ENABLED == 'true' && vars.TELEGRAM_DUAL_MARKET_LIVE_APPROVED == 'true' && vars.TELEGRAM_NEWS_ENABLED != 'true') || (github.event_name == 'workflow_dispatch' && inputs.dry_run == true) }}
     runs-on: ubuntu-latest
     timeout-minutes: 14
     steps:
@@ -48,6 +48,7 @@ jobs:
           DUAL_SLOT: '${{ inputs.slot }}'
           DRY_RUN: '${{ inputs.dry_run }}'
           TELEGRAM_DUAL_MARKET_ENABLED: '${{ vars.TELEGRAM_DUAL_MARKET_ENABLED }}'
+          TELEGRAM_DUAL_MARKET_LIVE_APPROVED: '${{ vars.TELEGRAM_DUAL_MARKET_LIVE_APPROVED }}'
           LEGACY_TELEGRAM_NEWS_ENABLED: '${{ vars.TELEGRAM_NEWS_ENABLED }}'
           OFFICIAL_IMAGE_REUSE_APPROVED: '${{ vars.OFFICIAL_IMAGE_REUSE_APPROVED }}'
           TELEGRAM_BOT_TOKEN: '${{ secrets.TELEGRAM_BOT_TOKEN }}'
