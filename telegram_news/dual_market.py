@@ -45,7 +45,7 @@ IMPACT_TERMS = re.compile(r"\b(rate|rates|interest|inflation|cpi|monetary|"
                           r"dividend|merger|acquisition|capital|"
                           r"taux|inflation|banque|énergie|résultat|"
                           r"dobând|inflați|banc|profit|gaz|petrol)\w*", re.I)
-IMAGE_BAD = re.compile(r"(logo|default|placeholder|favicon|icon|avatar|banner[-_]?generic)", re.I)
+IMAGE_BAD = re.compile(r"(logo|placeholder|favicon|icon|avatar|banner[-_]?generic|default[-_]?image|social[-_]?default)", re.I)
 DIGITS = re.compile(r"\d+(?:[.,]\d+)*")
 
 
