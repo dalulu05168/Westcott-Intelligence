@@ -3,13 +3,14 @@ on:
   push:
     branches: [main]
     paths:
+      - 'news/intake-requests/*.json'
       - 'integrations/telegram/news_radar.py'
       - 'integrations/telegram/hourly_radar.py'
       - 'integrations/telegram/source_media.py'
       - '.github/workflows/westcott-official-news-radar.yml'
   schedule:
-    # Runs hourly in UTC; collection only, never sends Telegram or ChatGPT notifications.
-    - cron: "37 * * * *"
+    # Refresh rolling 60-minute snapshots every ten minutes; collection only.
+    - cron: "7,17,27,37,47,57 * * * *"
   workflow_dispatch:
     inputs:
       mode:
