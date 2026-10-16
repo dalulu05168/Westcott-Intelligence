@@ -1,3 +1,9 @@
+## 2026-10-16｜RO+US早报必须有罗马尼亚当地独立官方材料
+
+除了三个美国指数已核实收盘资料，早间正式发布还要求 `romania_evidence`，其中包含 `target_country=RO`、当天核验人/核验时间、至少一个BVB/BNR/INS等官方发布的重要新事件、原文URL、原文SHA256、发布时间、忠于原文的简体中文事实、对罗马尼亚市场的有条件影响和后续观察。发布前 `scripts/morning_group_delivery.py` 将 `scripts/morning_romania_us.py` 的独立审核内容与原美股回顾共同逐项核对。没有罗马尼亚来源的早报继续HELD，不能把只有美股指数的消息标为“罗马尼亚＋美国”。
+
+新的 `news/morning-intake/YYYY-MM-DD.json` 由工作日06:45官方RSS采集器提供候选来源；它仍是UNREVIEWED，不能自动标注REVIEWED。真实审稿和Google Docs当天修订必须单独完成；代码自动采集不等于已发送。
+
 ## 2026-10-16｜所有正式财经新闻必须附官网原始链接
 
 - Telegram「🌐~~~资讯快报」的每条正式新闻正文必须包含可见的、可直接点击的 `https://` **官方原文URL**（不能只有链接卡片、图片、来源名字或者媒体转载链接）；多条不同事件须分别对应来源，缺失即HELD不发送。
