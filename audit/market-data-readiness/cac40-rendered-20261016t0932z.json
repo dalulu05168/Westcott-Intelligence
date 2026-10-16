@@ -1,0 +1,31 @@
+{
+  "status": "RENDERED_REFERENCE_ONLY",
+  "publishable": false,
+  "source_url": "https://live.euronext.com/en/product/indices/FR0003500008-XPAR",
+  "instrument": "CAC40",
+  "isin": "FR0003500008",
+  "mic": "XPAR",
+  "recorded_at": "2026-10-16 09:37:09 UTC",
+  "retrieval_completed_before": "2026-10-16T09:34:07+00:00",
+  "retrieval_exact_timestamp_supplied": false,
+  "renderer": {
+    "provider": "Firecrawl",
+    "proxy": "basic",
+    "maxAge": 0,
+    "scrape_id": "01a1440f-5f7b-75fa-851b-aa0051d809df"
+  },
+  "source_excerpt": "# **CAC 40**\n\nEuronext Paris\n\n\nFR0003500008\n -\nIndex\n\n\nPX1\n\n**[CAC 40](https://live.euronext.com/en/product/index/FR0003500008-XPAR)**\n0.13%\n**[SBF 120](https://live.euronext.com/en/product/index/FR0003999481-XPAR)**\n0.24%\n**[EUR / USD](https://live.euronext.com/en/product/index/EURUSDFLIT-WFORX)**\n0.30%\n**[EUR / GBP](https://live.euronext.com/en/product/index/EURGBPFLIT-WFORX)**\n -0.16%\n\n\n7,945.11\n\nLast Level\n\n\n16/10/2026 - 11:32\nCET\n\n\nSince Open\n\n-15.50(-0.19%)\n\nSince Previous Close\n\n+10.41(+0.13%)\n\n![image](https://live.euronext.com/sites/default/files/company_logo/FR0003500008.jpg?itok=1738335580)\n\n|     |     |     |\n| --- | --- | --- |\n| Open | 7,960.61 |  |\n| High | 7,960.61 | \\[09:00\\] |\n| Low | 7,916.98 | \\[09:55\\] |\n| Previous Close | 7,934.70 | \\[15/10/2026\\] |\n| 52 Week | 7,505.27<br> <br> 8,755.03 |  |\n\nUpdated\n16/10/2026 11:32 CEST\n\n\n- Help\n\nSelect a timeframe to show chart data\n\nFrom:  to:\n\nJavaScript chart by amCharts 3.21.15PriceCAC 40\n\nJavaScript chart by amCharts 3.21.1512:0013:0014:0015:0016:0017:0018:0010:0011:007,8607,8807,9007,9207,940[JS chart by amCharts](http://www.amcharts.com/ \"JavaScript charts\")\n\nNo chart available\n\n- ![](https://live.euronext.com/themes/custom/euronext_base/images/watchlists/wdt.svg)\nWatchlist\n\n- Монтажная область 1Quote alert\n- Help\n- More Details\n\n- Download\n\n\n",
+  "observed_numbers": {
+    "level": "7945.11",
+    "previous_close": "7934.70",
+    "change_points": "10.41",
+    "change_percent": "0.13",
+    "unit": "index_points",
+    "source_updated_at": "2026-10-16T11:32:00+02:00"
+  },
+  "limitations": [
+    "Rendered snapshot only; not a verified continuous feed or approved publication ledger.",
+    "Exact scrape completion time not supplied; separately recorded timestamp is not quote as_of.",
+    "Live recheck through rendered original is not integrated into publisher."
+  ]
+}

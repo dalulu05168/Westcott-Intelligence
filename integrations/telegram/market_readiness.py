@@ -6,6 +6,7 @@ import json
 import os
 import re
 from decimal import Decimal, ROUND_HALF_UP
+from zoneinfo import ZoneInfo
 from urllib import error, parse, request
 from source_media import NoRedirect, public_https, public_dns, VisibleBody
 
@@ -13,6 +14,8 @@ SOURCES = (
     ('RO_BET_PAGE', 'https://www.bvb.ro/TradingAndStatistics/Trading/CurrentTradingDay'),
     ('RO_BET_SERVICE', 'https://ws.bvb.ro/BVBDelayedWS/Intraday.asmx/GetIndex?code=BET'),
     ('FR_CAC40_PAGE', 'https://live.euronext.com/en/product/indices/FR0003500008-XPAR'),
+    ('FR_CAC40_QUOTE', 'https://live.euronext.com/en/ajax/getDetailedQuote/FR0003500008-XPAR'),
+    ('US_NASDAQ_QUOTE', 'https://qcapi.nasdaq.com/api/quote/COMP/info?assetclass=INDEX'),
     ('US_NASDAQ_PAGE', 'https://www.nasdaq.com/market-activity/index/comp?as=json'),
 )
 MAX_RESPONSE = 800000
@@ -29,6 +32,13 @@ def assess_response(status, content_type, body):
         # Page title, generic quote widget and HTTP 200 are not authenticated
         # observations of instrument/value/as_of/session/delay/baseline.
         state = 'NO_VERIFIED_QUOTE'
+        if 'application/json' in content_type.lower() and len(body) <= MAX_RESPONSE:
+            try:
+                payload = json.loads(body)
+                if isinstance(payload, dict) and all(isinstance(payload.get(k), str) and payload[k] for k in ('ct', 'iv', 's')):
+                    state = 'RENDER_REQUIRED'
+            except (ValueError, UnicodeError):
+                pass
     return {'status': state, 'http_status': status, 'content_type': content_type,
             'response_bytes': len(body), 'response_sha256': hashlib.sha256(body).hexdigest(),
             'truncated': len(body) > MAX_RESPONSE, 'publishable': False}
@@ -54,6 +64,37 @@ def extract_bet_reference(text):
             'status': 'PAGE_REFERENCE_ONLY', 'publishable': False}
 
 
+def extract_cac40_reference(text, now):
+    if '# **CAC 40**' not in text:
+        raise ValueError('CAC40 rendered heading required.')
+    section = text.split('# **CAC 40**', 1)[1].split('### Historical Performance', 1)[0]
+    if 'FR0003500008' not in section or not re.search(r'\bPX1\b', section):
+        raise ValueError('CAC40 instrument identity required.')
+    last = re.search(r'([0-9,]+[.][0-9]{2})\s+Last Level', section)
+    previous = re.search(r'\| Previous Close \| ([0-9,]+[.][0-9]{2}) \|', section)
+    movement = re.search(r'Since Previous Close\s+([+-]?[0-9,.]+)\(([+-]?[0-9.]+)%\)', section)
+    updated = re.search(r'Updated\s+([0-9]{2}/[0-9]{2}/[0-9]{4} [0-9]{2}:[0-9]{2}) (CEST|CET)\b', section)
+    if not all((last, previous, movement, updated)) or now.tzinfo is None:
+        raise ValueError('Missing explicit quote, baseline, movement or timezone.')
+    level, baseline, change, percent = [Decimal(v.replace(',', '')) for v in
+        (last[1], previous[1], movement[1], movement[2])]
+    if (level <= 0 or baseline <= 0 or level - baseline != change
+            or ((change / baseline) * 100).quantize(Decimal('0.01'), rounding=ROUND_HALF_UP) != percent):
+        raise ValueError('CAC40 level/change/previous-close mismatch.')
+    stamp = datetime.strptime(updated[1], '%d/%m/%Y %H:%M').replace(tzinfo=ZoneInfo('Europe/Paris'))
+    if stamp.tzname() != updated[2]:
+        raise ValueError('Source timezone disagrees with exchange daylight saving time.')
+    age = (now.astimezone(timezone.utc) - stamp.astimezone(timezone.utc)).total_seconds()
+    if age < 0:
+        raise ValueError('Future CAC40 source timestamp.')
+    return {'instrument': 'CAC40', 'isin': 'FR0003500008', 'mic': 'XPAR', 'unit': 'index_points',
+        'level': str(level), 'previous_close': str(baseline), 'change_points': str(change),
+        'change_percent': str(percent), 'source_updated_at': stamp.isoformat(),
+        'source_time_basis': updated[0], 'recent_observation': age <= 180,
+        'age_seconds': age, 'status': 'RENDERED_REFERENCE_ONLY', 'publishable': False}
+
+
+
 def credential_status(env):
     return {'TWELVE_DATA_API_KEY': {
         'configured': bool(env.get('TWELVE_DATA_API_KEY', '').strip()),
@@ -72,6 +113,11 @@ def probe(item):
         with request.build_opener(NoRedirect()).open(req, timeout=18) as reply:
             body = reply.read(MAX_RESPONSE + 1)
             result.update(assess_response(reply.status, reply.headers.get('Content-Type', ''), body))
+            if name == 'US_NASDAQ_QUOTE' and reply.status == 200 and not result['truncated']:
+                try:
+                    result['source_json_snapshot'] = json.loads(body)
+                except (ValueError, UnicodeError):
+                    result['reference_error'] = 'Nasdaq quote response was not valid JSON'
             if name == 'RO_BET_PAGE' and reply.status == 200 and not result['truncated']:
                 parser = VisibleBody()
                 parser.feed(body.decode(reply.headers.get_content_charset() or 'utf-8', errors='replace'))

@@ -1,3 +1,10 @@
+## 2026-10-16 CAC40动态行情入口定位
+
+- 从Euronext官网实际公开脚本定位CAC40报价请求；加密JSON标为RENDER_REQUIRED，未尝试绕过访问限制或自行破解。
+- 通过Firecrawl普通basic页面渲染实际取得CAC40点位、前收、涨跌及明确CEST更新时间，新增渲染参考解析：核对ISIN/PX1、Decimal关系、Paris夏令时、未来/陈旧时间。
+- 解析结果只为RENDERED_REFERENCE_ONLY，publishable=false；动态渲染尚未并入发布前实时复核，不冒称行情自动推送已接通。
+- Nasdaq页面公开配置的qcapi报价入口本地实测403；加入云端只读诊断，出现拒绝不轮换身份或绕行。原五项暂停任务不变。
+
 ## 2026-10-16 BET网页参考数据核验
 
 - GitHub环境可读BVB当日交易页；与本地被拦截的访问结果分别记录，不误报所有环境均不可访问。

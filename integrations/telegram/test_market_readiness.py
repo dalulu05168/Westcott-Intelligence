@@ -35,6 +35,28 @@ class MarketReadinessTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 market.extract_bet_reference(text)
 
+    def test_rendered_cac40_normalizes_source_time_and_previous_close(self):
+        from datetime import datetime, timezone
+        text = '# **CAC 40**\nFR0003500008\nPX1\n7,945.11\nLast Level\n16/10/2026 - 11:32 CET\nSince Previous Close\n+10.41(+0.13%)\n| Previous Close | 7,934.70 | [15/10/2026] |\nUpdated\n16/10/2026 11:32 CEST'
+        row = market.extract_cac40_reference(text, datetime(2026,10,16,9,33,tzinfo=timezone.utc))
+        self.assertEqual(row['level'], '7945.11')
+        self.assertEqual(row['previous_close'], '7934.70')
+        self.assertEqual(row['source_updated_at'], '2026-10-16T11:32:00+02:00')
+        self.assertTrue(row['recent_observation'])
+        self.assertFalse(row['publishable'])
+        self.assertFalse(market.extract_cac40_reference(text, datetime(2026,10,16,9,36,tzinfo=timezone.utc))['recent_observation'])
+        for changed, now in ((text.replace('7,934.70','7,900.00'), datetime(2026,10,16,9,33,tzinfo=timezone.utc)),
+                (text.replace('11:32 CEST','11:32 CET'), datetime(2026,10,16,9,33,tzinfo=timezone.utc)),
+                (text.replace('FR0003500008','WRONG-ISIN'), datetime(2026,10,16,9,33,tzinfo=timezone.utc)),
+                (text, datetime(2026,10,16,9,31,tzinfo=timezone.utc))):
+            with self.assertRaises(ValueError):
+                market.extract_cac40_reference(changed, now)
+
+    def test_encrypted_json_quote_requires_normal_page_rendering(self):
+        result = market.assess_response(200, 'application/json', b'{"ct":"ciphertext","iv":"iv","s":"salt"}')
+        self.assertEqual(result['status'], 'RENDER_REQUIRED')
+        self.assertFalse(result['publishable'])
+
     def test_credentials_report_never_exposes_values(self):
         report = market.credential_status({'TWELVE_DATA_API_KEY': 'do-not-persist-this-secret'})
         self.assertNotIn('do-not-persist-this-secret', str(report))
