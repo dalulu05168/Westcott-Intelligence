@@ -28,24 +28,21 @@
 
 目前**还没有**实测美股盘前/盘后交易报价和美国企业最新公告的完整自动采集，这一项仍需要合规行情API（含延时声明）、上市公司投资者关系公告/财报源与独立事实审核。市场休市时不得标为当日正常交易。
 
-## 私人聊天与手动验收
+## 实际投递目标与审核机制（2026-10-16 修正）
 
-新工作流：`.github/workflows/telegram-dual-market.yml`
+经 GitHub Actions #38833123254 **只读验证**：已有 `TELEGRAM_CHAT_ID` 是有效的负整数群组 ID，机器人是 `@NuvexaCheckBot`；`TELEGRAM_PRIVATE_CHAT_ID` 是另一项可选私聊配置，不应被当作用户目标群组的前置条件。
 
-需要配置以下 GitHub **Actions Secrets**：
-- `TELEGRAM_BOT_TOKEN`：既有 @NuvexaCheckBot 的 BotFather Token，不得放入代码和聊天；
-- `TELEGRAM_PRIVATE_CHAT_ID`：已确认属于用户的 **private** 数字 Chat ID；旧群聊密钥 `TELEGRAM_CHAT_ID` 保持原样；每次图片发送前会再次验证 chat.type=private；
-- `OPENAI_API_KEY`：新闻分析生成专用 API Key；
-- `TWELVE_DATA_API_KEY`：需具有三大美国指数报价权限的行情 API Key。
+经 GitHub Actions [#38880198755](https://github.com/dalulu05168/Westcott-Intelligence/actions/runs/38880198755) **真实群组发信**：已复用 `integrations/telegram/bridge.py`、现有 GitHub Secrets 和精准群组名 `🌐~~~资讯快报`；Telegram 响应了连接测试消息 `message_id=41`。它是群组链路验收，**不是已推送财经新闻**。请用户在群内核实实际显示。
 
-GitHub **Actions Variables**：
-- `OPENAI_NEWS_MODEL`：项目账户可以访问且支持结构化 JSON 输出的模型；
-- `OFFICIAL_IMAGE_REUSE_APPROVED=true`：在核对图片使用授权后才能设置；
-- `TELEGRAM_DUAL_MARKET_ENABLED=true` 和 `TELEGRAM_DUAL_MARKET_LIVE_APPROVED=true`：两个独立开关，均须在全链路验收通过后才设置；
-- 保持旧 `TELEGRAM_NEWS_ENABLED` **不为 true**，以免单市场旧版与双市场新版重复发送；
-- 如三大指数在账户中采用不同代码，可配置 `US_INDEX_DOW_SYMBOL`、`US_INDEX_SP500_SYMBOL`、`US_INDEX_NASDAQ_SYMBOL`。
+双国家原始采集代码用于候选素材筛选、官方原文/图片检查与预览；它**不直接把未经审稿的AI输出发到群组**。真实新闻只能通过已有 `integrations/telegram/reviewed_publish.py`、`approved_queue.py` 及证据/重要性/图片权限/去重门禁，提交 `news/approved/*.json` 的已审核记录后发送。设置全部开关本身不等于获准绕过审核；新的原始 `send_photo` 始终拒绝发信，以免与旧工作流重复推送或谎称审核通过。
 
-默认**不开启任何新自动发送**：仅手动 `workflow_dispatch` 允许 `dry_run=true` 预览；所有真实发送必须先有明确启用变量、图片许可变量和机器人/行情/AI密钥。
+群组发送只使用现有 `TELEGRAM_BOT_TOKEN`、`TELEGRAM_CHAT_ID`、`TELEGRAM_EXPECTED_GROUP_TITLE=🌐~~~资讯快报` 和可选 `TELEGRAM_MESSAGE_THREAD_ID`。不需要覆盖旧 ID，也不必新建 `TELEGRAM_PRIVATE_CHAT_ID`。不修改签到功能、Webhook 或五项暂停任务。
+
+新闻候选的罗马尼亚/法国本国语言分析及美国指数数据仍需要合法可用的 AI/市场数据来源。未取得原图使用授权时，仅允许审核发布器使用官网原文链接预览（如支持且经核验），不能伪造原图或省略来源。
+
+GitHub 2026-10-16 两条已有审核发布任务真实阻塞：INSEE 法国纪录缺正式“完整小时候选比较”快照（`Invalid/missing hourly comparison: AttributeError`）；Raiffeisen 罗马尼亚纪录因未获原始图片许可被停止。这些不能靠更换 Chat ID 解决；需要修正相应审核材料，不应绕过事实门禁。
+
+旧版 `TELEGRAM_NEWS_ENABLED` 保持不为 true；双国家 `TELEGRAM_DUAL_MARKET_ENABLED` 与 `TELEGRAM_DUAL_MARKET_LIVE_APPROVED` 均保持关闭，直到审核队列和真正新闻抵达验收完成。
 
 ### 必须走通的验收
 
