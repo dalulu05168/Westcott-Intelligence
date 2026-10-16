@@ -19,6 +19,8 @@ jobs:
         run: python -m unittest discover -s scripts -p 'test_*.py' -v
       - name: Audit 65 profiles and long-term evidence
         run: python scripts/validate_member_p1.py
+      - name: Review P2 scene evidence without semantic auto-approval
+        run: python scripts/validate_scene_p2.py
       - name: Publish P1 audit summary
         if: always()
         run: |
