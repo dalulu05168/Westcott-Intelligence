@@ -150,7 +150,9 @@ def main():
         result=save_github(report,os.environ)
         summary.update(result)
     print(json.dumps(summary,ensure_ascii=False))
-    # A read-only PR diagnostic can complete while honestly reporting failures.\n    # Scheduled intake signals partial source coverage as an actionable failure.\n    return 0 if args.mode=="dry-run" else (0 if all(c["status"]=="OK" for c in report["coverage"]) else 2)
+    # A read-only PR diagnostic can complete while honestly reporting failures.
+    # Scheduled intake signals partial source coverage as an actionable failure.
+    return 0 if args.mode=="dry-run" else (0 if all(c["status"]=="OK" for c in report["coverage"]) else 2)
 
 
 if __name__=="__main__":
