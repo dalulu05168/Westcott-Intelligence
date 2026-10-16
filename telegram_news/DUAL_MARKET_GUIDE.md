@@ -34,7 +34,7 @@
 
 需要配置以下 GitHub **Actions Secrets**：
 - `TELEGRAM_BOT_TOKEN`：既有 @NuvexaCheckBot 的 BotFather Token，不得放入代码和聊天；
-- `TELEGRAM_CHAT_ID`：已确认属于用户的 **private** 数字 Chat ID；每次图片发送前会再次验证 chat.type=private；
+- `TELEGRAM_PRIVATE_CHAT_ID`：已确认属于用户的 **private** 数字 Chat ID；旧群聊密钥 `TELEGRAM_CHAT_ID` 保持原样；每次图片发送前会再次验证 chat.type=private；
 - `OPENAI_API_KEY`：新闻分析生成专用 API Key；
 - `TWELVE_DATA_API_KEY`：需具有三大美国指数报价权限的行情 API Key。
 
@@ -70,3 +70,7 @@ GitHub **Actions Variables**：
 - 法国：`https://www.amf-france.org/fr/flux-rss/display/23`（AMF官方公告）；`https://www.economie.gouv.fr/rss/toutesactualites`（法国经济财政部）；Euronext公司新闻页 `https://live.euronext.com/en/products/equities/company-news` 已确认，但在当前访问环境返回浏览器验证，**尚未自动纳入正式抓取**。
 - 欧洲央行/美联储：分别为其官网RSS。来源可靠不代表任意一则都与本国市场有重大相关性；每则仍需判断影响传导链、原文可访问性、事件重要性。
 - **可用性警告**：某些官网会限制自动读取、各交易所行情数据可能要许可。RSS可读取但原始文章图片缺少或版权不可再发布时，严格不发。禁止用任意图片替代。
+
+### 2026-10-16 私人与群组目标隔离
+
+之前失败的 `Telegram Private Chat Connection #1` (run `38830022954`) 显示 Token 识别 `@NuvexaCheckBot` 成功，但旧 `TELEGRAM_CHAT_ID` 不是私人数字 ID。该 Secret 在原 `Westcott Verified News Delivery` 用于「资讯快报」群组，因此本双市场私人推送只读独立 Secret `TELEGRAM_PRIVATE_CHAT_ID`，不覆盖群组原配置。没有私聊 ID 时停止发送。现有群聊链路保持原样。
