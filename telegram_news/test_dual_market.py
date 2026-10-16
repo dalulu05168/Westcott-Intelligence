@@ -130,7 +130,7 @@ class TwoCountryTests(unittest.TestCase):
         disclosure = ("SOCIETATEA ABC S.A. Raport financiar: venituri și profit. "
                       "Acest document descrie raportul aprobat și datele contabile, "
                       "fără a indica randamente de piață. " * 3)
-        page.insert_text((45, 90), disclosure, fontsize=8)
+        page.insert_textbox(fitz.Rect(45, 80, 560, 500), disclosure, fontsize=10)
         payload = pdf.tobytes()
         pdf.close()
         fake_response = Mock(content=payload, headers={"Content-Type": "application/pdf"})
@@ -145,7 +145,7 @@ class TwoCountryTests(unittest.TestCase):
         self.assertIsNotNone(verified)
         media, body = verified
         self.assertEqual("official_pdf_page1", media["kind"])
-        self.assertTrue(media["preview_png"].startswith(b"\\x89PNG"))
+        self.assertTrue(media["preview_png"].startswith(bytes([137, 80, 78, 71])))
         self.assertIn("Raport financiar", body)
 
     def test_unsupported_non_official_pdf_remains_blocked(self):
