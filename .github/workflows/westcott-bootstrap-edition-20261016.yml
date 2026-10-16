@@ -1,0 +1,30 @@
+name: Bootstrap Official Edition 20261016 (No Send)
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/westcott-bootstrap-edition-20261016.yml']
+permissions:
+  contents: write
+jobs:
+  collect:
+    if: github.event.head_commit.message == 'Capture first official edition for opening pipeline diagnosis 20261016T0702Z' && github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    concurrency:
+      group: westcott-official-radar-queue
+      cancel-in-progress: false
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
+      GITHUB_REF_NAME: ${{ github.ref_name }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install original PDF extractor
+        run: sudo apt-get update -qq && sudo apt-get install -y poppler-utils
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s integrations/telegram -p 'test_*.py'
+      - run: python scripts/validate_repository.py
+      - name: Commit unreviewed current-hour original bodies, never send
+        run: python integrations/telegram/hourly_radar.py --mode queue
