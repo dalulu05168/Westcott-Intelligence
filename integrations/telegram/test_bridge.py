@@ -40,7 +40,7 @@ class TelegramBridgeTests(unittest.TestCase):
             if method == "getMe":
                 return {"id": 99, "is_bot": True, "username": "NuvexaCheckBot"}
             if method == "getChat":
-                return {"id": -10012345, "type": "supergroup", "title": "资讯快报"}
+                return {"id": -10012345, "type": "supergroup", "title": "🌐~~~资讯快报"}
             if method == "sendMessage":
                 return {"message_id": 428, "chat": {"id": -10012345}}
             raise AssertionError(method)
@@ -74,7 +74,7 @@ class TelegramBridgeTests(unittest.TestCase):
     def test_discover_filters_private_chats(self):
         updates = [
             {"message": {"chat": {"id": 123, "type": "private"}}},
-            {"message": {"chat": {"id": -1007, "type": "supergroup", "title": "资讯快报"}}},
+            {"message": {"chat": {"id": -1007, "type": "supergroup", "title": "🌐~~~资讯快报"}}},
         ]
         def fake_api(token, method, body=None):
             if method == "getMe":

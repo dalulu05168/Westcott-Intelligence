@@ -58,7 +58,7 @@ def verify_bot_identity(token, env=None):
 def group_target(token, chat_id, env=None):
     """Verify Telegram's actual destination type and title before sending."""
     env = env if env is not None else os.environ
-    expected_title = env.get("TELEGRAM_EXPECTED_GROUP_TITLE", "资讯快报").strip()
+    expected_title = env.get("TELEGRAM_EXPECTED_GROUP_TITLE", "🌐~~~资讯快报").strip()
     if not expected_title:
         raise TelegramError("Missing TELEGRAM_EXPECTED_GROUP_TITLE.")
     chat = call_api(token, "getChat", {"chat_id": chat_id})
@@ -235,7 +235,7 @@ def discover_groups(env=None):
                or update.get("channel_post") or {})
         chat = obj.get("chat", {})
         if (chat.get("type") in ("group", "supergroup")
-                and chat.get("title", "").strip() == env.get("TELEGRAM_EXPECTED_GROUP_TITLE", "资讯快报").strip()):
+                and chat.get("title", "").strip() == env.get("TELEGRAM_EXPECTED_GROUP_TITLE", "🌐~~~资讯快报").strip()):
             groups[str(chat.get("id"))] = {
                 "chat_id": chat["id"], "title": chat.get("title", ""),
                 "type": chat["type"]

@@ -154,7 +154,7 @@ class OriginalArticleTests(unittest.TestCase):
         p = pub.prepare(ledger, "news/approved/reviewed.json")
         env = {"PUBLISH_CONFIRMATION": pub.CONFIRM,
                "GITHUB_TOKEN": "secret", "GITHUB_REPOSITORY": "owner/repo"}
-        r = {"group_title": "资讯快报", "photo_message_id": 41,
+        r = {"group_title": "🌐~~~资讯快报", "photo_message_id": 41,
              "message_ids": [42], "image_delivery": "source_photo"}
         with patch.object(pub, "reserve",
                           return_value=("audit/id.json", {"event_id": p["event_id"]}, "sha")):
@@ -208,7 +208,7 @@ class OriginalArticleTests(unittest.TestCase):
             if method == "getMe":
                 return {"id": 88, "is_bot": True, "username": "NuvexaCheckBot"}
             if method == "getChat":
-                return {"id": -1001, "type": "supergroup", "title": "资讯快报"}
+                return {"id": -1001, "type": "supergroup", "title": "🌐~~~资讯快报"}
             if method == "sendPhoto":
                 return {"message_id": 70}
             if method == "sendMessage":
@@ -230,7 +230,7 @@ class OriginalArticleTests(unittest.TestCase):
             if method == "getMe":
                 return {"id": 88, "is_bot": True, "username": "NuvexaCheckBot"}
             if method == "getChat":
-                return {"id": -1001, "type": "supergroup", "title": "资讯快报"}
+                return {"id": -1001, "type": "supergroup", "title": "🌐~~~资讯快报"}
             if method == "sendMessage":
                 return {"message_id": 72}
             raise AssertionError(method)

@@ -7,14 +7,14 @@ permissions:
   contents: read
 jobs:
   connection-test:
-    if: github.event.head_commit.message == 'Run authorized Telegram connection test 20261016T0713Z' && github.run_attempt == 1
+    if: github.event.head_commit.message == 'Confirm renamed Telegram destination 20261016T0717Z' && github.run_attempt == 1
     runs-on: ubuntu-latest
     timeout-minutes: 3
     env:
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       TELEGRAM_EXPECTED_BOT_USERNAME: NuvexaCheckBot
-      TELEGRAM_EXPECTED_GROUP_TITLE: 资讯快报
+      TELEGRAM_EXPECTED_GROUP_TITLE: 🌐~~~资讯快报
       TELEGRAM_MESSAGE_THREAD_ID: ${{ vars.TELEGRAM_MESSAGE_THREAD_ID }}
     steps:
       - uses: actions/checkout@v4
