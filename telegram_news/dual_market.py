@@ -20,7 +20,7 @@ from bs4 import BeautifulSoup
 from PIL import Image
 from pdf_official import verify_original_pdf
 
-from main import (TZ, BVB_URL, SESSION, ensure_private_destination,
+from main import (TZ, BVB_URL, SESSION,
                   fetch_bvb, fetch_feed, get_state, save_state)
 
 PARIS = ZoneInfo("Europe/Paris")
@@ -417,19 +417,14 @@ def caption(country, record, analysis, image_url, now, kind, quote=None):
 
 
 def send_photo(token, chat_id, image, mime, text):
-    raise RuntimeError("UNREVIEWED_ALTERNATE_DELIVERY_DISABLED: use integrations/telegram/reviewed_publish.py")
-    ensure_private_destination(token, chat_id)
-    image_name = "official-news.png" if mime == "image/png" else "official-news.jpg"
-    result = requests.post("https://api.telegram.org/bot" + token + "/sendPhoto",
-                           data={"chat_id": str(chat_id), "caption": text},
-                           files={"photo": (image_name, BytesIO(image), mime)},
-                           timeout=40)
-    if not result.ok:
-        raise RuntimeError("Telegram sendPhoto HTTP " + str(result.status_code))
-    info = result.json()
-    if not info.get("ok") or not info.get("result", {}).get("message_id"):
-        raise RuntimeError("Telegram photo delivery was not acknowledged")
-    return info["result"]["message_id"]
+    """Direct sending intentionally disabled: approved news has one audited publisher.
+
+    The existing Telegram group is checked and delivered by
+    integrations/telegram/reviewed_publish.py after explicit evidence review,
+    event de-duplication and photo-rights checks. A raw collector/LLM result
+    must not create a parallel unaudited live-delivery route.
+    """
+    raise RuntimeError("REVIEWED_QUEUE_ONLY: unapproved automated news cannot be sent")
 
 
 def due(now, override):
@@ -462,7 +457,11 @@ def publish():
         return
     dry = os.getenv("DRY_RUN", "true").lower() == "true"
     token = os.getenv("TELEGRAM_BOT_TOKEN", "")
-    chat = os.getenv("TELEGRAM_PRIVATE_CHAT_ID", "")
+    chat = os.getenv("TELEGRAM_CHAT_ID", "")
+    if not dry:
+        # Release approval, duplicate prevention and source/media rights are
+        # owned by the original audited publisher. Do not create a second lane.
+        raise RuntimeError("REVIEWED_QUEUE_ONLY: submit reviewed ledgers via integrations/telegram/approved_queue.py")
     if not dry and (os.getenv("TELEGRAM_DUAL_MARKET_ENABLED") != "true"
                    or os.getenv("TELEGRAM_DUAL_MARKET_LIVE_APPROVED") != "true"
                    or os.getenv("LEGACY_TELEGRAM_NEWS_ENABLED") == "true"
