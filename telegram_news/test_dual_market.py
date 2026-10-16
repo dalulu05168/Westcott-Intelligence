@@ -1,12 +1,13 @@
 """Offline regression tests for the independent Romania/France news streams."""
 import os
 import unittest
+import fitz
 from datetime import datetime, timedelta, timezone
 from unittest.mock import Mock, patch
 from zoneinfo import ZoneInfo
 
 from bs4 import BeautifulSoup
-from dual_market import (PARIS, PROFILES, caption, due, host_allowed,
+from dual_market import (PARIS, PROFILES, caption, due, host_allowed, fetch_original,
                          materiality, official_image, pick, us_quote_snapshot, feed_items)
 
 TZ = ZoneInfo("Europe/Bucharest")
@@ -121,6 +122,41 @@ class TwoCountryTests(unittest.TestCase):
         ]
         first = pick(items, "FR", now, "hourly", {"sent": {}})[0]
         self.assertEqual("ecb", first["id"])
+
+
+    def test_bvb_official_pdf_source_and_original_page_render(self):
+        pdf = fitz.open()
+        page = pdf.new_page()
+        disclosure = ("SOCIETATEA ABC S.A. Raport financiar: venituri și profit. "
+                      "Acest document descrie raportul aprobat și datele contabile, "
+                      "fără a indica randamente de piață. " * 3)
+        page.insert_text((45, 90), disclosure, fontsize=8)
+        payload = pdf.tobytes()
+        pdf.close()
+        fake_response = Mock(content=payload, headers={"Content-Type": "application/pdf"})
+        fake_response.raise_for_status.return_value = None
+        record = {
+            "source": "BVB_FIN",
+            "url": "https://bvb.ro/infocont/infocont26/ABC_document.pdf",
+            "title": "ABC S.A. - Raport financiar",
+        }
+        with patch("dual_market.SESSION.get", return_value=fake_response):
+            verified = fetch_original(record)
+        self.assertIsNotNone(verified)
+        media, body = verified
+        self.assertEqual("official_pdf_page1", media["kind"])
+        self.assertTrue(media["preview_png"].startswith(b"\\x89PNG"))
+        self.assertIn("Raport financiar", body)
+
+    def test_unsupported_non_official_pdf_remains_blocked(self):
+        record = {
+            "source": "BVB_FIN",
+            "url": "https://an-unofficial-site.example/foo.pdf",
+            "title": "Example",
+        }
+        with patch("dual_market.SESSION.get") as req:
+            self.assertIsNone(fetch_original(record))
+            req.assert_not_called()
 
 
 if __name__ == "__main__":
