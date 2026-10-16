@@ -1,0 +1,118 @@
+{
+  "status": "COMPLETE",
+  "window_start": "2026-10-16T11:42:00+00:00",
+  "window_end": "2026-10-16T12:42:00+00:00",
+  "captured_at": "2026-10-16T12:42:49.941733+00:00",
+  "required_feed_ids": [
+    "fed_monetary",
+    "ecb_press",
+    "bvb_market",
+    "bvb_announcements",
+    "insee_conjuncture",
+    "bls_cpi",
+    "bls_employment",
+    "eurostat_releases"
+  ],
+  "coverage": [
+    {
+      "feed_id": "fed_monetary",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "ecb_press",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "bvb_market",
+      "status": "OK",
+      "parsed_items": 2
+    },
+    {
+      "feed_id": "bvb_announcements",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "insee_conjuncture",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "bls_cpi",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "bls_employment",
+      "status": "OK",
+      "parsed_items": 0
+    },
+    {
+      "feed_id": "eurostat_releases",
+      "status": "OK",
+      "parsed_items": 0
+    }
+  ],
+  "truncated": false,
+  "candidates": [
+    {
+      "title": "PREFAB SA (PREH)",
+      "article_url": "https://bvb.ro/infocont/infocont26/PREH_20261016145157_raport-curent-litigiu-garda-forestiera.pdf",
+      "feed_article_url": "https://bvb.ro/infocont/infocont26/PREH_20261016145157_raport-curent-litigiu-garda-forestiera.pdf",
+      "published_at": "2026-10-16T12:04:38+00:00",
+      "source": "Bucharest Stock Exchange",
+      "feed_id": "bvb_market",
+      "id": "21e1fadf09c1b21662379a3e4ad3cf1c90366d00",
+      "rank_signal_hits": 0,
+      "intake_status": "UNREVIEWED",
+      "body_read": false,
+      "numbers_checked": false,
+      "image_reuse_permission_verified": false,
+      "importance_confirmed": false,
+      "telegram_publishable": false,
+      "original_image_candidate_url": null,
+      "article_image_candidates": [],
+      "linked_document_urls": [],
+      "source_text_snapshot": "Soseaua Industriala, nr.5, Constanta CUI:RO1916198, J2003009212407 Nr.4588/16.10.2026 RAPORT CURENT In conformitate cu Legea nr. 24/2017 și regulamentul A.S.F. nr. 5 / 2018 Data raportului: 16.10.2026 Denumirea societății comerciale - PREFAB S.A. Sediul Social – Constanța, Str. Industrială nr. 5, jud. Constanța Numărul de telefon 0241 636 711; Cod unic de înregistrare la Oficiul Registrului Comerțului – 1916198 Numărul de ordine în Registrul Comerțului – J2003009212407 Capitalul social subscris şi vărsat – 41.219.091 lei Piața reglementată pe care se tranzacționează valorile mobiliare emise – Bursa de Valori București Eveniment important de raportat: Modificari intervenite în legătura cu litigiile în care este implicat emitentul, conform art. 234 alin. (1) lit. l) din Regulamentul A.S.F. nr. 5/2018 privind emitenții de instrumente financiare și operațiuni de piață: 1 Nr.crt. Dosar nr. Instanta 1. JUDECĂTORIA PETENT: CĂLĂRAȘI PREFAB S.A. 9273/202/2025 Parti Obiectul litigiului Termen de Stadiul procesului/Solutia pe scurt judecata PLÂNGERE 04.09.2026 HOTĂRÂRE DIN 15.10.2026 CONTRAVENȚIONALĂ PV SERIA CCS NR. Admite plângerea contravenţională formulată de către INTIMAT: 0857189/25.09.2025. petenta PREFAB S.A. în contradictoriu cu intimata Garda GARDA Forestieră Bucureşti. Anulează procesul-verbal de constatare FORESTIERĂ şi sancţionare a contravenţiei silvice seria CCS, nr.0857189 BUCUREȘTI din data de 25.09.2025. Cu drept de apel în termen de 30 zile de la comunicare. Cererea de apel se va depune la Judecătoria Călăraşi. Pronunţată astăzi, 15.10.2026, prin punerea soluţiei la dispoziţia părţilor prin mijlocirea grefei instanţei. Consiliul de Administrație al PREFAB S.A. Președinte, dl. SECĂREANU ION Ion Secareanu Semnat digital de Ion Secareanu Data: 2026.10.16 14:48:23 +03'00' 2",
+      "source_text_sha256": "3516d40824bb18fe788869e8de443f590f63c09f08f303bbcafc8eeeeebf9bfd",
+      "source_text_truncated": false,
+      "body_fetch_status": "FETCHED_FOR_REVIEW",
+      "image_origin": "publisher_og_metadata",
+      "image_review_required": true
+    },
+    {
+      "title": "PREFAB SA (PREH)",
+      "article_url": "https://bvb.ro/FinancialInstruments/SelectedData/NewsItem/PREH-litigiu/A746F",
+      "feed_article_url": "https://bvb.ro/FinancialInstruments/SelectedData/NewsItem/PREH-litigiu/A746F",
+      "published_at": "2026-10-16T12:04:38+00:00",
+      "source": "Bucharest Stock Exchange",
+      "feed_id": "bvb_market",
+      "id": "353e03817ac3b4445f230b7c147c47c894628850",
+      "rank_signal_hits": 0,
+      "intake_status": "UNREVIEWED",
+      "body_read": false,
+      "numbers_checked": false,
+      "image_reuse_permission_verified": false,
+      "importance_confirmed": false,
+      "telegram_publishable": false,
+      "original_image_candidate_url": null,
+      "article_image_candidates": [],
+      "linked_document_urls": [
+        "https://bvb.ro/info/Rapoarte/Ghiduri/Ghid_privind_raportarea_ESG.pdf",
+        "https://bvb.ro/infocont/infocont26/PREH_20261016145157_raport-curent-litigiu-garda-forestiera.pdf",
+        "https://bvb.ro/juridic/files/RO%20CGC%20BVB%202025.pdf"
+      ],
+      "source_text_snapshot": "vineri | 16 octombrie, 2026 | Starea pietei: DESCHISA Despre noi si Guvernanta | Relatia cu Investitorii | Contact Login Inregistrare Cautare avansata Pentru Companii De ce Bursa de Valori Bucuresti? Prezentare generala Instrumente pentru finantare Beneficiile listarii Infografice Piata Principala Actiuni Obligatiuni Intermediari Intrebari frecvente Piata AeRO Actiuni Obligatiuni Consultanti Autorizati Intrebari frecvente Materiale utile Ghidul privind raportarea ESG Codul de Guvernanta Corporativa Instrumente Financiare Piete Actiuni Obligatiuni Unitati de fond Certificate Warrants Cautare avansata Indici Privire generala Profile indici Factsheets indici Performanta indici Informatii BMR Operatiuni corporative Info dividend Modificari capital social Societati provenite din divizari Informatii selective Rapoarte curente Rezultate financiare Indicatori Calendar Financiar Calendar Adunari Generale Operatiuni de piata Raportari actionari Lista monitorizare Tranzactionare si Statistici Tranzactionare Pietele astazi Ziua curenta Statistici toate pietele Sumare tranzactionare Oferte publice in derulare Vanzari speciale la ordin Date MiFiD II Statistici Statistici generale Evolutia pietei (actiuni) Top tranzactionare Publicatii Rapoarte zilnice Rapoarte lunare Program de tranzactionare Bursa in direct Intermediari Liste intermediari Toti intermediarii Top intermediari Lista Market Makeri Lista Furnizori Lichiditate Performanta MM si LP Lista Agenti Delegati Cum devin intermediar Servicii Vanzare date Pentru distribuitori de date Pentru profesionisti Pentru investitori Licentiere indici Cum licentiez un indice BVB? Conectivitate Sistemul de tranzactionare Arena Sistem de brokeraj Reglementari Legislatie Legi si regulamente Reglementari BVB Raportari MiFID II / MiFIR Camera Arbitrala Utile Link-uri utile Institutiile pietei de capital Stiri Piata PREFAB SA - PREH Litigiu Data Publicare: 16.10.2026 15:04:38 Cod IRIS: A746F Nr.4588/16.10.2026 RAPORT CURENT In conformitate cu Legea nr. 24/2017 si regulamentul A.S.F. nr. 5 / 2018 Data raportului: 16.10.2026 Denumirea societatii comerciale - PREFAB S.A. Sediul Social – Constanta, Str. Industriala nr. 5, jud. Constanta Numarul de telefon 0241 636 711; Cod unic de inregistrare la Oficiul Registrului Comertului – 1916198 Numarul de ordine in Registrul Comertului – J2003009212407 Capitalul social subscris si varsat – 41.219.091 lei Piata reglementata pe care se tranzactioneaza valorile mobiliare emise – Bursa de Valori Bucuresti Eveniment important de raportat : Modificari intervenite in legatura cu litigiile in care este implicat emitentul, conform art. 234 alin. (1) lit. l) din Regulamentul A.S.F. nr. 5/2018 privind emitentii de instrumente financiare si operatiuni de piata: Nr.crt. Dosar nr. Instanta Parti Obiectul litigiului Termen de judecata Stadiul procesului/Solutia pe scurt 1. 9273/202/2025 JUDECATORIA CALARASI PETENT: PREFAB S.A. INTIMAT: GARDA FORESTIERA BUCURESTI PLANGERE CONTRAVENTIONALA PV SERIA CCS NR. 0857189/25.09.2025. 04.09.2026 HOTARARE DIN 15.10.2026 Admite plangerea contraventionala formulata de catre petenta PREFAB S.A. in contradictoriu cu intimata Garda Forestiera Bucuresti. Anuleaza procesul-verbal de constatare si sanctionare a contraventiei silvice seria CCS, nr.0857189 din data de 25.09.2025. Cu drept de apel in termen de 30 zile de la comunicare. Cererea de apel se va depune la Judecatoria Calarasi. Pronuntata astazi, 15.10.2026, prin punerea solutiei la dispozitia partilor prin mijlocirea grefei instantei. Consiliul de Administratie al PREFAB S.A. Presedinte, dl. SECAREANU ION PREH_20261016145157_raport-curent-litigiu-garda-forestiera.pdf Print Informatii furnizate prin IRIS , platforma de stiri a Bursei de Valori Bucuresti. ______________________ Bursa de Valori Bucuresti (\"BVB\") nu este responsabila de continutul acestui Raport. Emitentii ale caror instrumente financiare sunt tranzactionate pe pietele administrate de catre BVB au obligatia de a intocmi Rapoarte in conformitate cu prevederile legale si regulamentare incidente. BVB publica aceste Rapoarte in calitate de administrator al acestor piete, desemnat de catre ASF. In situatia in care, pentru informarea corespunzatoare a investitorilor, sunt publicate Rapoarte semnate de persoane diferite, sau cu informatii divergente, responsabilitatea juridica revine in totalitate semnatarilor respectivelor Rapoarte. BVB isi declina orice obligatie sau raspundere fata de emitenti sau terte parti, cu privire la realitatea, integralitatea si exactitatea informatiilor furnizate de catre acestia si distribuite de catre BVB. Utilizatorii website-ului au responsabilitatea de a verifica continutul rapoartelor. Orice raport (inclusiv orice prospect) care se adreseaza exclusiv unor persoane/tari specificate in acesta nu trebuie luate in considerare de catre persoanele / in tarile excluse. Termenii si conditiile , inclusiv restrictiile de utilizare si redistributie se aplica. ©2026 Bursa de Valori Bucuresti. Toate drepturile rezervate. Pentru Companii Prezentare generala Instrumente pentru finantare Beneficiile listarii Pentru Investitori Pentru inceput Devino Investitor La Bursa Exchange Live 2.0 Tranzactionare si Statistici Pietele astazi Statistici generale Top tranzactionare Despre noi si Guvernanta Descriere generala Structura de conducere Comunicate de presa Cariere Relatia cu Investitorii Privire generala Adunari Generale ale Actionarilor Raportari financiare Site-uri din Grupul BVB Depozitarul Central Website mobile | Termeni de Utilizare | Contact | © 2026 Bursa de Valori Bucuresti Distribuie: asp:PlaceHolder runat=\"server\">",
+      "source_text_sha256": "1a359bb10be3eb3fb695f559e8a455762ef9eff796f71b97f5a3220653071984",
+      "source_text_truncated": false,
+      "body_fetch_status": "FETCHED_FOR_REVIEW",
+      "image_origin": "publisher_og_metadata",
+      "image_review_required": true
+    }
+  ],
+  "assessments_status": "UNREVIEWED",
+  "telegram_publishable": false,
+  "ranking_scope": "Configured official sources only; not a claim of global exhaustive coverage."
+}
