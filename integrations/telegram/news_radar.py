@@ -136,9 +136,9 @@ def extract_items(feed_xml, feed, strict=False):
         try:
             article = check_url(href, feed["article_hosts"])
             timestamp = parse_time(date)
-        except RadarError:
+        except RadarError as exc:
             if strict:
-                raise
+                raise RadarError(str(exc) + ' Public feed URL=' + repr(href)[:250]) from None
             continue
         if len(title) > 300:
             if strict:
