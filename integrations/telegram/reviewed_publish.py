@@ -269,11 +269,26 @@ def github_write(path, record, token, repo, sha=None):
     return sha_after
 
 
+def check_delivery_hour(acceptance, country, now=None):
+    if not acceptance.get('quota_hour_key'):
+        return
+    current = (now or datetime.now(timezone.utc)).astimezone(timezone.utc)
+    actual = country + '-' + current.strftime('%Y%m%dT%H')
+    # Leave headroom for target verification and the bounded Telegram request.
+    if acceptance['quota_hour_key'] != actual or current.minute >= 58:
+        raise PublicationError('Delivery hour changed or closing; leave PENDING and do not send.')
+
+
 def reserve(prepared, env, now=None):
     token = env.get("GITHUB_TOKEN", "").strip()
     repo = env.get("GITHUB_REPOSITORY", "").strip()
     if not token or not repo or env.get("GITHUB_REF_NAME") != "main":
         raise PublicationError("Publishing requires main branch and GITHUB_TOKEN.")
+    acceptance = prepared.get('editorial_acceptance')
+    if acceptance and acceptance.get('quota_hour_key'):
+        actual = prepared['target_country'] + '-' + (now or datetime.now(timezone.utc)).astimezone(timezone.utc).strftime('%Y%m%dT%H')
+        if acceptance['quota_hour_key'] != actual:
+            raise PublicationError('Delivery hour changed after acceptance; revalidate without sending.')
     path = "audit/telegram-delivery/" + prepared["fingerprint"][:40] + ".json"
     country = prepared.get('target_country')
     claim_prefix = 'audit/telegram-claims/' + (country + '/' if country in COUNTRIES else '')
@@ -299,6 +314,11 @@ def reserve(prepared, env, now=None):
     sha = github_write(path, record, token, repo)
     acceptance = prepared.get('editorial_acceptance')
     if acceptance:
+        if acceptance.get('event_lock_key'):
+            github_write('audit/telegram-events/' + country + '/' + acceptance['event_lock_key'] + '.json', {
+                'event_id': prepared['event_id'], 'state': 'EVENT_RESERVED_DO_NOT_RETRY',
+                'delivery_audit': path, 'reserved_at': record['reserved_at'],
+            }, token, repo)
         github_write('audit/telegram-slots/' + acceptance['slot_key'] + '.json', {
             'event_id': prepared['event_id'], 'state': 'SLOT_RESERVED_DO_NOT_RETRY',
             'delivery_audit': path, 'reserved_at': record['reserved_at'],
@@ -378,6 +398,7 @@ def publish(prepared, env):
     prepared = {**prepared, 'source_rechecks': confirm_original_evidence(prepared)}
     confirm_original_photo_source(prepared)
     path, record, sha = reserve(prepared, env)
+    check_delivery_hour(acceptance, prepared['target_country'])
     try:
         receipt = send_group_news_from_official_article(
             prepared["text"], prepared["media"]["article_url"],

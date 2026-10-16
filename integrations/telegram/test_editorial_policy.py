@@ -50,7 +50,7 @@ class EditorialPolicyTests(unittest.TestCase):
                 'source_text_truncated': False, 'body_fetch_status': 'FETCHED_FOR_REVIEW'}
 
     def review(self, ident, score):
-        return {'candidate_id': ident, 'relevant': True, 'reviewed_by': 'reviewer',
+        return {'candidate_id': ident, 'event_key': 'event-00' + ident, 'relevant': True, 'reviewed_by': 'reviewer',
                 'body_sha256': self.digest, 'support_excerpt': 'monetary policy announcement',
                 'rationale': '根据原文，比较当地市场覆盖、传导渠道、事件量级及即时影响。',
                 'scores': {key: score for key in policy.WEIGHTS}}
@@ -67,7 +67,59 @@ class EditorialPolicyTests(unittest.TestCase):
     def test_valid_top_one_returns_country_hour_slot(self):
         result = self.check()
         self.assertEqual(result['winner_id'], 'a')
-        self.assertEqual(result['slot_key'], 'RO-20261016T09')
+        self.assertEqual(result['slot_key'], 'RO-20261016T09-01')
+
+    def select(self, ident):
+        self.prepared['hourly_selection']['selected_candidate_id'] = ident
+        self.prepared['media']['article_url'] = 'https://publisher.example/' + ident
+
+    def test_three_distinct_important_events_allowed_but_fourth_blocked(self):
+        self.edition['candidates'] = [self.candidate(i) for i in 'abcd']
+        self.save()
+        self.prepared['hourly_selection'].update(edition_sha256=self.edition_digest,
+            assessments=[self.review('a', 5), self.review('b', 4), self.review('c', 4), self.review('d', 4)])
+        for ident, slot in [('a', '01'), ('d', '02'), ('c', '03')]:
+            self.select(ident)
+            self.assertEqual(self.check()['slot_key'], 'RO-20261016T09-' + slot)
+        self.select('b')
+        with self.assertRaises(policy.PolicyError):
+            self.check()
+
+    def test_html_and_pdf_same_event_cannot_fill_two_slots(self):
+        reviews = [self.review('a', 5), self.review('b', 4)]
+        reviews[1]['event_key'] = reviews[0]['event_key']
+        self.prepared['hourly_selection']['assessments'] = reviews
+        self.select('b')
+        with self.assertRaises(policy.PolicyError):
+            self.check()
+
+    def test_missing_event_identity_blocks_relevant_candidate(self):
+        del self.prepared['hourly_selection']['assessments'][0]['event_key']
+        with self.assertRaises(policy.PolicyError):
+            self.check()
+
+    def test_legacy_hour_reservation_blocks_expansion(self):
+        p = self.root / 'audit/telegram-slots/RO-20261016T09.json'
+        p.parent.mkdir(parents=True)
+        p.write_text('{}')
+        with self.assertRaises(policy.PolicyError):
+            self.check()
+
+    def test_quota_uses_delivery_hour_not_rolling_snapshot_hour(self):
+        self.edition.update(window_start='2026-10-16T08:55:00+00:00',
+                            window_end='2026-10-16T09:55:00+00:00')
+        self.now = datetime(2026, 10, 16, 10, 1, tzinfo=timezone.utc)
+        self.save()
+        self.prepared['hourly_selection']['edition_sha256'] = self.edition_digest
+        self.assertEqual(self.check()['slot_key'], 'RO-20261016T10-01')
+
+    def test_legacy_ambiguous_pending_blocks_even_different_url_next_hour(self):
+        p = self.root / 'audit/telegram-delivery/old.json'
+        p.parent.mkdir(parents=True)
+        p.write_text(json.dumps({'state': 'PENDING_DO_NOT_RETRY', 'message_ids': [],
+                                'event_id': 'legacy-event', 'evidence_urls': ['https://publisher.example/old.pdf']}))
+        with self.assertRaises(policy.PolicyError):
+            self.check()
 
     def test_missing_photo_cannot_use_link_preview(self):
         self.prepared['media']['image_url'] = None

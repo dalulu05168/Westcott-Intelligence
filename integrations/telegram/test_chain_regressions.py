@@ -17,6 +17,33 @@ import test_reviewed_publish as fixtures
 
 
 class ChainRegressions(unittest.TestCase):
+    def test_same_event_different_evidence_and_hour_is_atomically_blocked(self):
+        records = {}
+        def atomic(path, record, token, repo, sha=None):
+            if path in records:
+                raise pub.PublicationError('already reserved')
+            records[path] = record
+            return 'sha'
+        env = {'GITHUB_TOKEN': 'secret', 'GITHUB_REPOSITORY': 'owner/repo', 'GITHUB_REF_NAME': 'main'}
+        first = pub.prepare(fixtures.OriginalArticleTests().ledger(), 'news/approved/first-event.json')
+        first['target_country'] = 'RO'
+        first['editorial_acceptance'] = {'slot_key': 'RO-20261016T09-01',
+            'event_lock_key': 'a' * 64, 'window_end': '2026-10-16T09:37:00+00:00'}
+        second = copy.deepcopy(first)
+        second.update(fingerprint='b' * 64, claim_evidence_keys=['different-pdf-evidence'])
+        second['editorial_acceptance']['slot_key'] = 'RO-20261016T10-02'
+        with patch.object(pub, 'github_write', side_effect=atomic):
+            pub.reserve(first, env)
+            with self.assertRaises(pub.PublicationError):
+                pub.reserve(second, env)
+
+    def test_cross_hour_or_end_of_hour_cannot_begin_telegram_send(self):
+        acceptance = {'quota_hour_key': 'RO-20261016T09'}
+        for stamp in ('2026-10-16T10:00:01+00:00', '2026-10-16T09:59:50+00:00'):
+            with self.assertRaises(pub.PublicationError):
+                pub.check_delivery_hour(acceptance, 'RO', datetime.fromisoformat(stamp))
+        pub.check_delivery_hour(acceptance, 'RO', datetime.fromisoformat('2026-10-16T09:52:00+00:00'))
+
     def test_raw_send_cannot_bypass_evidence_ledger(self):
         with patch.object(bridge, 'send_group_news', return_value={}) as send, contextlib.redirect_stderr(io.StringIO()):
             with patch.dict(os.environ, {'WESTCOTT_APPROVED_NEWS_TEXT': '===== 资讯助理 =====\n未经核验'}, clear=True):

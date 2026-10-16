@@ -1,4 +1,4 @@
-"""Fail-closed editorial acceptance: original photo and country-specific top one.
+"""Fail-closed editorial acceptance: verified evidence and up to three distinct country-specific events.
 
 Scores are reviewed judgements grounded in the captured original bodies, not
 keyword counts or a claim to know every event in the world.
@@ -43,6 +43,16 @@ def _validate(prepared, root, now, expected_feed_ids):
     country = prepared.get('target_country')
     if country not in COUNTRIES:
         raise PolicyError('Explicit RO or FR target country required.')
+    # Legacy ambiguous sends have no semantic event lock. A changed PDF/HTML
+    # URL cannot establish that they are different events: hold until reconciled.
+    for audit_path in (root / 'audit/telegram-delivery').glob('*.json'):
+        audit = json.loads(audit_path.read_text(encoding='utf-8'))
+        prior = audit.get('editorial_acceptance') or {}
+        prior_country = prior.get('target_country') or audit.get('target_country')
+        if (audit.get('state') == 'PENDING_DO_NOT_RETRY'
+                and not prior.get('event_lock_key')
+                and prior_country in (None, country)):
+            raise PolicyError('Legacy ambiguous PENDING delivery needs reconciliation before new releases.')
     media = prepared['media']
     # User explicitly approved original article links when no approved original photo exists.
     if media.get('image_url'):
@@ -88,6 +98,7 @@ def _validate(prepared, root, now, expected_feed_ids):
     if len(reviews) != len(by_id) or {r['candidate_id'] for r in reviews} != set(by_id):
         raise PolicyError('All hourly candidates need exactly one country-specific assessment.')
     ranking = []
+    event_keys = {}
     for review in reviews:
         row = by_id[review['candidate_id']]
         stamp = instant(row['published_at'])
@@ -112,18 +123,39 @@ def _validate(prepared, root, now, expected_feed_ids):
             if any(scores.values()):
                 raise PolicyError('Irrelevant candidate must have zero impact scores.')
             continue
+        event_key = review.get('event_key', '')
+        if not isinstance(event_key, str) or not re.fullmatch(r'[a-z0-9][a-z0-9_-]{7,159}', event_key):
+            raise PolicyError('Relevant candidate requires a stable reviewed event_key.')
+        event_keys[row['id']] = event_key
         weighted = sum(scores[k] * WEIGHTS[k] for k in WEIGHTS) / 5
         ranking.append((weighted, stamp, row['id']))
     ranking.sort(reverse=True)
     if not ranking or ranking[0][0] < MIN_SCORE:
         raise PolicyError('No sufficiently important new event; stay silent.')
-    winner_score, _, winner_id = ranking[0]
-    if selection.get('selected_candidate_id') != winner_id:
-        raise PolicyError('Selected story is not the highest reviewed impact in this country/hour.')
+    # Keep the highest representative of each reviewed event (e.g. HTML/PDF).
+    distinct, seen = [], set()
+    for item in ranking:
+        key = event_keys[item[2]]
+        if key not in seen:
+            distinct.append(item)
+            seen.add(key)
+    eligible = [item for item in distinct if item[0] >= MIN_SCORE][:3]
+    selected = selection.get('selected_candidate_id')
+    if selected not in [item[2] for item in eligible]:
+        raise PolicyError('Selected story is not among the three highest distinct important events.')
+    rank = [item[2] for item in eligible].index(selected) + 1
+    winner_score, _, winner_id = eligible[rank - 1]
+    hour_key = country + '-' + now.astimezone(timezone.utc).strftime('%Y%m%dT%H')
+    if (root / 'audit/telegram-slots' / (hour_key + '.json')).exists():
+        raise PolicyError('Legacy country/hour slot already reserved; do not expand or retry.')
     if by_id[winner_id]['article_url'] != media['article_url']:
         raise PolicyError('Photo/article source is not the ranked winning story.')
     return {'target_country': country, 'winner_id': winner_id, 'winner_score': winner_score,
-            'slot_key': country + '-' + end.strftime('%Y%m%dT%H'),
+            'slot_key': hour_key + '-' + str(rank).zfill(2),
+            'quota_hour_key': hour_key,
+            'event_key': event_keys[winner_id],
+            'event_lock_key': hashlib.sha256(event_keys[winner_id].encode()).hexdigest(),
+            'selection_rank': rank,
             'edition_path': path, 'edition_sha256': digest(edition),
             'window_start': start.isoformat(), 'window_end': end.isoformat(),
             'ranked_candidate_count': len(candidates),

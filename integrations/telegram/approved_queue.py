@@ -41,6 +41,10 @@ def drain(root, env):
             except publisher.PolicyError as exc:
                 results.append({'ledger': relative, 'status': 'HELD', 'reason': str(exc)})
                 continue
+            event_key = acceptance.get('event_lock_key')
+            if event_key and (root / 'audit/telegram-events' / country / (event_key + '.json')).exists():
+                results.append({'ledger': relative, 'status': 'ALREADY_RESERVED'})
+                continue
             if (root / 'audit/telegram-slots' / (acceptance['slot_key'] + '.json')).exists():
                 results.append({'ledger': relative, 'status': 'ALREADY_RESERVED'})
                 continue
