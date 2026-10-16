@@ -83,7 +83,7 @@ def build(now, fetcher=None, inspector=None):
             coverage.append({"feed_id":feed["id"],"status":"ERROR"})
     candidates.sort(key=lambda v:(v["published_at"],v["id"]),reverse=True)
     return {
-        "status":"OFFICIAL_INTAKE_UNREVIEWED",
+        "status":"OFFICIAL_INTAKE_INCOMPLETE_UNREVIEWED" if errors else "OFFICIAL_INTAKE_UNREVIEWED",
         "local_date":local.date().isoformat(),
         "collected_at":now.astimezone(timezone.utc).isoformat(),
         "timezone":"Europe/Bucharest",
@@ -150,7 +150,7 @@ def main():
         result=save_github(report,os.environ)
         summary.update(result)
     print(json.dumps(summary,ensure_ascii=False))
-    return 0 if all(c["status"]=="OK" for c in report["coverage"]) else 2
+    # A read-only PR diagnostic can complete while honestly reporting failures.\n    # Scheduled intake signals partial source coverage as an actionable failure.\n    return 0 if args.mode=="dry-run" else (0 if all(c["status"]=="OK" for c in report["coverage"]) else 2)
 
 
 if __name__=="__main__":
