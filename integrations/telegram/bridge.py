@@ -189,6 +189,11 @@ def send_group_news_from_official_article(message, article_url, image_url=None, 
     token = _required(env, "TELEGRAM_BOT_TOKEN")
     chat_id = _required(env, "TELEGRAM_CHAT_ID")
     verified = validated_message(message)
+    # A link preview or uploaded image is not a substitute for an explicit
+    # clickable official original-article URL in the message itself.
+    if (not isinstance(article_url, str) or not article_url.startswith("https://")
+            or article_url not in verified):
+        raise TelegramError("Original official article URL must appear in the news text.")
     verify_bot_identity(token, env)
     group = group_target(token, chat_id, env)
     thread = env.get("TELEGRAM_MESSAGE_THREAD_ID", "").strip()
