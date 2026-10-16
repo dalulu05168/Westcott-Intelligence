@@ -1,0 +1,6 @@
+{
+  "event_id": "raiffeisen-rbro33-20261016-manual",
+  "state": "CLAIM_RESERVED_DO_NOT_RETRY",
+  "delivery_audit": "audit/telegram-delivery/f1bcd3d52d2f84049965b0f0b06ee29b892f1322.json",
+  "reserved_at": "2026-10-16T08:54:12.601910+00:00"
+}
