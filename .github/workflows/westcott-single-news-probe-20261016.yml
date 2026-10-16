@@ -7,7 +7,7 @@ permissions:
   contents: write
 jobs:
   inspect:
-    if: github.event.head_commit.message == 'Inspect publisher image markup for user requested news 20261016T0852Z' && github.run_attempt == 1
+    if: github.event.head_commit.message == 'Inspect official public press page with browser headers 20261016T0855Z' && github.run_attempt == 1
     runs-on: ubuntu-latest
     timeout-minutes: 4
     env:
@@ -27,14 +27,19 @@ jobs:
           import re
           from hourly_radar import store_edition
           from reviewed_publish import github_write
+          from urllib.request import Request, build_opener
+          from source_media import NoRedirect
+          def fetch_browser(url):
+              with build_opener(NoRedirect()).open(Request(url,headers={'User-Agent':'Mozilla/5.0','Accept':'text/html'}),timeout=15) as response:
+                  return response.read(524288).decode('utf-8',errors='replace')
           results=[]
           for u in ["https://bvb.ro/AboutUs/MediaCenter/PressItem/Raiffeisen-Bank-listeaza-o-noua-emisiune-de-obligatiuni-la-Bursa-de-Valori-Bucuresti-in-valoare-de-750-de-milioane-de-lei/6472","https://www.consilium.europa.eu/en/press/press-releases/2026/10/16/european-council-conclusions-on-competitiveness-the-next-multiannual-financial-framework-and-enlargement-and-reforms/","https://www.consilium.europa.eu/en/meetings/european-council/2026/10/15-16/"]:
               try:
-                  page=inspect_article(u)
-                  markup=fetch_original_article(u)
+                  page=inspect_article(u,fetcher=fetch_browser)
+                  markup=fetch_browser(u)
                   page['image_markup_contexts']=[markup[max(0,m.start()-180):m.end()+180] for m in re.finditer(r'<img[^>]*>',markup,re.I)]
                   results.append({'url':u,'status':'FETCHED','metadata':page})
               except Exception as exc:
                   results.append({'url':u,'status':'UNAVAILABLE','reason':str(exc)})
-          github_write('news/probes/single-news-images-20261016.json',{'event_id':'single-news-probe-20261016','sources':results},os.environ['GITHUB_TOKEN'],os.environ['GITHUB_REPOSITORY'])
+          github_write('news/probes/single-news-browser-20261016.json',{'event_id':'single-news-probe-20261016','sources':results},os.environ['GITHUB_TOKEN'],os.environ['GITHUB_REPOSITORY'])
           print(json.dumps([{'url':r['url'],'status':r['status'],'images':r.get('metadata',{}).get('article_image_candidates',[]),'og':r.get('metadata',{}).get('image_candidate_url'),'reason':r.get('reason')} for r in results],ensure_ascii=False))
