@@ -161,7 +161,7 @@ def download_image(image_url, record):
 def materiality(record, country, now, kind, used):
     published = datetime.fromisoformat(record["published"])
     age = (now - published).total_seconds() / 3600
-    if age < -0.5 or age > (76 if kind == "morning" else 1.5):
+    if age < -0.5 or age > (76 if kind == "morning" else 1.0):
         return None
     event_key = country + "|" + record["id"]
     if event_key in used:
@@ -192,37 +192,54 @@ def pick(records, country, now, kind, state):
 
 
 def us_quote_snapshot():
-    """Optional market-data input: absence must NEVER be filled with imagined figures.
+    """Validated latest *completed* US regular close from licensed market data.
 
-    Official exchange/licensed index API adapter is an explicit follow-on task. A
-    pre-verified JSON environment input allows integration testing without fiction.
+    An API key and three supported index symbols are required. Any failure yields
+    no numeric quote, never an invented or outdated close.
     """
-    raw = os.getenv("VERIFIED_US_CLOSE_JSON", "")
-    if not raw:
+    key = os.getenv("TWELVE_DATA_API_KEY", "").strip()
+    if not key:
+        print("US_CLOSE_FEED_UNCONFIGURED")
         return None
-    obj = json.loads(raw)
-    if obj.get("verification") != "confirmed" or not obj.get("source_url"):
-        return None
-    if not host_allowed(obj["source_url"], ("nyse.com", "nasdaq.com", "spglobal.com",
-                                           "djindexes.com", "finance.yahoo.com")):
-        return None
-    lines = []
-    asof = datetime.fromisoformat(obj["as_of"]).astimezone(ZoneInfo("America/New_York"))
-    if datetime.now(ZoneInfo("America/New_York")) - asof > timedelta(days=4):
-        return None
-    for key in ("dow", "sp500", "nasdaq_composite"):
-        entry = obj.get(key)
-        if not isinstance(entry, dict) or not all(k in entry for k in ("close", "change_percent")):
+    symbols = {
+        "DJIA": os.getenv("US_INDEX_DOW_SYMBOL", "DJI"),
+        "S&P 500": os.getenv("US_INDEX_SP500_SYMBOL", "SPX"),
+        "Nasdaq Composite": os.getenv("US_INDEX_NASDAQ_SYMBOL", "IXIC"),
+    }
+    lines, observations = [], []
+    ny_now = datetime.now(ZoneInfo("America/New_York"))
+    try:
+        for label, symbol in symbols.items():
+            response = SESSION.get(
+                "https://api.twelvedata.com/quote",
+                params={"symbol": symbol, "apikey": key, "interval": "1day"},
+                timeout=18)
+            response.raise_for_status()
+            data = response.json()
+            if data.get("status") == "error" or data.get("symbol") != symbol:
+                return None
+            observed = datetime.strptime(data["datetime"][:10], "%Y-%m-%d").date()
+            days_ago = (ny_now.date() - observed).days
+            if days_ago < 1 or days_ago > 4:
+                # This morning must refer to the PREVIOUS *finished* US session.
+                return None
+            close, previous = float(data["close"]), float(data["previous_close"])
+            if close <= 0 or previous <= 0:
+                return None
+            pct = (close / previous - 1) * 100
+            if "percent_change" in data and abs(float(data["percent_change"]) - pct) > 0.3:
+                return None
+            lines.append(f"{label}: {close:.2f} ({pct:+.2f}%)")
+            observations.append(observed)
+        if len(set(observations)) != 1:
             return None
-        # This is NOT an exchange-live price confirmation; the upstream provider
-        # still has to establish accuracy, license and market session.
-        if not isinstance(entry["close"], (int, float)) or not isinstance(
-                entry["change_percent"], (int, float)):
-            return None
-        label = {"dow": "DJIA", "sp500": "S&P 500", "nasdaq_composite": "Nasdaq Composite"}[key]
-        lines.append(f"{label}: {entry['close']} ({entry['change_percent']:+.2f}%)")
-    return {"lines": lines, "as_of": asof.isoformat(), "source": obj["source_url"]}
-
+        return {
+            "lines": lines, "as_of": observations[0].isoformat(),
+            "source": "Twelve Data /quote; symbols " + ", ".join(symbols.values()),
+        }
+    except (requests.RequestException, ValueError, TypeError, KeyError):
+        print("US_CLOSE_FEED_FAILED_OR_INCOMPLETE")
+        return None
 
 SCHEMA = {
     "type": "object", "additionalProperties": False,
@@ -361,8 +378,10 @@ def publish():
     token = os.getenv("TELEGRAM_BOT_TOKEN", "")
     chat = os.getenv("TELEGRAM_CHAT_ID", "")
     if not dry and (os.getenv("TELEGRAM_DUAL_MARKET_ENABLED") != "true"
+                   or os.getenv("LEGACY_TELEGRAM_NEWS_ENABLED") == "true"
+                   or os.getenv("OFFICIAL_IMAGE_REUSE_APPROVED") != "true"
                    or not token or not chat):
-        raise RuntimeError("LIVE_DELIVERY_NOT_ENABLED_OR_NOT_CONNECTED")
+        raise RuntimeError("LIVE_DELIVERY_NOT_ENABLED_IMAGE_RIGHTS_NOT_APPROVED_OR_LEGACY_ACTIVE")
     records, errors = source_records()
     print("Collected", len(records), "source errors", errors)
     if not records:
