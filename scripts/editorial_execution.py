@@ -96,7 +96,7 @@ def snapshot_messages(snapshot, story_date, roster):
         match = re.fullmatch(r'(\d{1,2})/(\d{1,2})', title)
         if match:
             key = date(story_date.year, int(match.group(1)), int(match.group(2))).isoformat()
-        elif snapshot.get('_verified_story_date') == story_date:
+        elif snapshot.get('_verified_story_date') == story_date.isoformat():
             key = story_date.isoformat()
             conflicts.append({'type': 'DATE_ATTRIBUTION_REQUIRES_REVIEW',
                               'evidence': snapshot.get('_date_attribution')})
