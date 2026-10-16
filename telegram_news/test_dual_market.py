@@ -1,6 +1,7 @@
 """Offline regression tests for the independent Romania/France news streams."""
 import os
 import unittest
+import json
 import fitz
 from datetime import datetime, timedelta, timezone
 from unittest.mock import Mock, patch
@@ -8,7 +9,7 @@ from zoneinfo import ZoneInfo
 
 from bs4 import BeautifulSoup
 from dual_market import (PARIS, PROFILES, caption, due, host_allowed, fetch_original,
-                         materiality, official_image, pick, us_quote_snapshot, feed_items)
+                         materiality, official_image, pick, us_quote_snapshot, feed_items, localize)
 
 TZ = ZoneInfo("Europe/Bucharest")
 
@@ -74,12 +75,13 @@ class TwoCountryTests(unittest.TestCase):
         now = datetime(2026, 10, 16, 11, 0, tzinfo=TZ)
         article = {"url": "https://www.bvb.ro/AboutUs/MediaCenter/PressItem/short/123",
                    "source": "BVB"}
-        text = {"headline": "Titlu", "verified_event": "Fapt verificat",
-                "local_market_path": "Impact condiționat pentru BET",
-                "next_watch": "Următorul raport"}
+        text = {"headline": "罗马尼亚金融公告", "verified_event": "官方披露已发布",
+                "local_market_path": "BET 指数相关板块影响仍待核实",
+                "next_watch": "关注下一份上市公司报告"}
         result = caption("RO", article, text, "", now, "hourly")
-        self.assertIn("🔵 România", result)
-        self.assertIn("Impact condiționat pentru BET", result)
+        self.assertIn("🔵 罗马尼亚｜财经资讯快报", result)
+        self.assertIn("BET 指数相关板块影响仍待核实", result)
+        self.assertNotIn("Impact condiționat", result)
         self.assertLessEqual(len(result), 1024)
 
 
@@ -171,12 +173,73 @@ class TwoCountryTests(unittest.TestCase):
     def test_morning_without_market_data_never_invents_index_values(self):
         now = datetime(2026, 10, 16, 7, 30, tzinfo=TZ)
         record = {"url": "https://bvb.ro/news", "source": "BVB"}
-        analysis = {"headline": "Raport financiar", "verified_event": "Comunicat verificat",
-                    "local_market_path": "Impact posibil asupra pieței BET",
-                    "next_watch": "Următoarea publicare"}
+        analysis = {"headline": "罗马尼亚财务报告", "verified_event": "官方公告已核实",
+                    "local_market_path": "可能影响相关板块，行情变化尚未确认",
+                    "next_watch": "关注下次官方披露"}
         text = caption("RO", record, analysis, "", now, "morning", None)
-        self.assertIn("nu sunt verificate", text)
+        self.assertIn("数据尚未核实", text)
         self.assertNotIn("Nasdaq Composite:", text)
+
+
+    def test_both_countries_publish_same_language_distinct_markets(self):
+        ro = {"source": "BVB", "url": "https://bvb.ro/official"}
+        fr = {"source": "AMF", "url": "https://www.amf-france.org/fr/official"}
+        ro_analysis = {"headline": "罗马尼亚企业公告", "verified_event": "银行债券公告已发布",
+                       "local_market_path": "对布加勒斯特市场的影响需结合流动性观察",
+                       "next_watch": "观察 BET 与成交量"}
+        fr_analysis = {"headline": "法国监管公告", "verified_event": "法国金融监管机构发布公告",
+                       "local_market_path": "对法国市场的影响需结合 CAC 40 相关板块",
+                       "next_watch": "观察后续正式公告"}
+        now = datetime(2026, 10, 16, 10, 0, tzinfo=timezone.utc)
+        ro_text = caption("RO", ro, ro_analysis, "", now, "hourly")
+        fr_text = caption("FR", fr, fr_analysis, "", now, "hourly")
+        self.assertIn("🔵 罗马尼亚｜财经资讯快报", ro_text)
+        self.assertIn("🔴 法国｜财经资讯快报", fr_text)
+        self.assertIn("对罗马尼亚市场的潜在影响", ro_text)
+        self.assertIn("对法国市场的潜在影响", fr_text)
+        self.assertIn("官方来源", fr_text)
+        self.assertNotIn("Actualité financière", fr_text)
+        self.assertNotIn("Știrea financiară", ro_text)
+
+    def test_ai_editor_chinese_output_from_foreign_official_original(self):
+        source = ("Communiqué officiel sur les banques et la politique monétaire, "
+                  "publié par une autorité financière européenne.")
+        record = {"source": "AMF", "title": "Communiqué officiel",
+                  "url": "https://www.amf-france.org/fr/test"}
+        valid = {"headline": "法国金融监管公告", "verified_event": "监管部门发布金融公告",
+                 "local_market_path": "法国银行股可能受到影响，实际反应尚待确认",
+                 "next_watch": "关注监管部门进一步披露",
+                 "evidence_excerpt": source[:65]}
+        response = Mock(ok=True)
+        response.json.return_value = {"output": [
+            {"content": [{"type": "output_text", "text": json.dumps(valid, ensure_ascii=False)}]}
+        ]}
+        with patch.dict(os.environ, {"OPENAI_API_KEY": "test-secret", "OPENAI_NEWS_MODEL": "test-model"}), \
+             patch("dual_market.requests.post", return_value=response) as post:
+            result = localize(record, source, "FR")
+        self.assertEqual(valid, result)
+        sent_prompt = post.call_args.kwargs["json"]["instructions"]
+        self.assertIn("Simplified Chinese ONLY", sent_prompt)
+        self.assertIn("Romania and France", sent_prompt)
+        self.assertIn("verbatim source-language quotation", sent_prompt)
+
+    def test_ai_editor_rejects_non_chinese_news_text(self):
+        source = ("Communiqué officiel sur les banques et la politique monétaire, "
+                  "publié par une autorité financière européenne.")
+        record = {"source": "AMF", "title": "Communiqué officiel",
+                  "url": "https://www.amf-france.org/fr/test"}
+        invalid = {"headline": "Actualité financière",
+                   "verified_event": "Décision officielle publiée",
+                   "local_market_path": "Impact possible sur CAC 40",
+                   "next_watch": "Surveiller l'annonce",
+                   "evidence_excerpt": source[:65]}
+        response = Mock(ok=True)
+        response.json.return_value = {"output": [
+            {"content": [{"type": "output_text", "text": json.dumps(invalid, ensure_ascii=False)}]}
+        ]}
+        with patch.dict(os.environ, {"OPENAI_API_KEY": "test-secret", "OPENAI_NEWS_MODEL": "test-model"}), \\
+             patch("dual_market.requests.post", return_value=response):
+            self.assertIsNone(localize(record, source, "FR"))
 
 
 if __name__ == "__main__":
