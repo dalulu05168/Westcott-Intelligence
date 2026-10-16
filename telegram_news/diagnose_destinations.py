@@ -64,6 +64,27 @@ def main():
             print(label + ": TELEGRAM_TYPE_CHANNEL")
         else:
             print(label + ": TELEGRAM_TYPE_UNKNOWN")
+    info, webhook_status = request("getWebhookInfo", {})
+    if webhook_status != "OK":
+        print("PRIVATE_DISCOVERY_WEBHOOK_CHECK: " + webhook_status)
+    elif isinstance(info, dict) and info.get("url"):
+        print("PRIVATE_DISCOVERY: BLOCKED_BY_EXISTING_WEBHOOK")
+        print("WEBHOOK_UNCHANGED: TRUE")
+    else:
+        print("PRIVATE_DISCOVERY: GET_UPDATES_POSSIBLE")
+        updates, status = request("getUpdates", {"limit": 100, "timeout": 0})
+        if status == "OK" and isinstance(updates, list):
+            candidates = {
+                m.get("chat", {}).get("id")
+                for event in updates
+                for m in [event.get("message", {})]
+                if m.get("chat", {}).get("type") == "private"
+                and str(m.get("text", "")).strip().startswith("/start")
+            }
+            print("PRIVATE_START_CANDIDATES_COUNT: " + str(len(candidates)))
+            print("NO_UPDATES_CONSUMED: TRUE")
+        else:
+            print("PRIVATE_DISCOVERY_GET_UPDATES: " + status)
     print("NO_MESSAGES_SENT: TRUE")
 
 if __name__ == "__main__":
