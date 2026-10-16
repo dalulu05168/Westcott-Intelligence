@@ -1,0 +1,6 @@
+{
+  "event_id": "insee-business-creations-20261016-manual",
+  "state": "CLAIM_RESERVED_DO_NOT_RETRY",
+  "delivery_audit": "audit/telegram-delivery/6c545626989ad34d354b416acd11744c5636531f.json",
+  "reserved_at": "2026-10-16T08:56:53.131592+00:00"
+}
