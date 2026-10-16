@@ -1,0 +1,20 @@
+{
+  "_schema": "westcott-runtime-checkpoint-v1",
+  "_description": "初始化占位文件。UNKNOWN/PENDING_VERIFY 不代表已读取Google Docs；每次新会话必须重新读取并核对，不能凭此文件声称实时同步。",
+  "rules_version": "V2.0 + editorial-execution-v1.8",
+  "official_document_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+  "document_revision_id": null,
+  "retrieved_at": null,
+  "story_date": null,
+  "story_tab": null,
+  "last_adopted_message_id": null,
+  "last_adopted_speaker": null,
+  "last_adopted_excerpt": null,
+  "story_phase": "PENDING_VERIFY",
+  "next_phase": "PENDING_VERIFY",
+  "active_member_range": "01-40",
+  "used_news_evidence_keys": [],
+  "unresolved_threads": [],
+  "status": "TEMPLATE_NOT_LIVE",
+  "notes": "不得自动把候选稿标为已采用；只有核验正式文档后才能更新。"
+}
