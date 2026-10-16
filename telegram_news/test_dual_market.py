@@ -35,8 +35,10 @@ class TwoCountryTests(unittest.TestCase):
         self.assertEqual(([], ""), due(weekend, ""))
 
     def test_country_labels_and_language(self):
-        self.assertEqual(("🔵", "ro"), (PROFILES["RO"]["marker"], PROFILES["RO"]["lang"]))
-        self.assertEqual(("🔴", "fr"), (PROFILES["FR"]["marker"], PROFILES["FR"]["lang"]))
+        self.assertEqual(("🔵", "zh-CN"), (PROFILES["RO"]["marker"], PROFILES["RO"]["lang"]))
+        self.assertEqual(("🔴", "zh-CN"), (PROFILES["FR"]["marker"], PROFILES["FR"]["lang"]))
+        self.assertEqual("罗马尼亚", PROFILES["RO"]["label"])
+        self.assertEqual("法国", PROFILES["FR"]["label"])
 
     def test_source_image_must_resolve_on_original_official_site(self):
         record = {"source": "AMF", "url": "https://www.amf-france.org/fr/actualites/story"}
