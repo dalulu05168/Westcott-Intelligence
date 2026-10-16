@@ -260,6 +260,21 @@ class OriginalArticleTests(unittest.TestCase):
                     pub.prepare(ledger, "news/approved/reviewed.json")
 
 
+    def test_nonofficial_evidence_source_never_publishes(self):
+        ledger = self.ledger()
+        ledger["sources"]["s1"]["source_type"] = "media_summary"
+        with self.assertRaisesRegex(pub.PublicationError, "official"):
+            pub.prepare(ledger, "news/approved/reviewed.json")
+
+    def test_news_without_official_link_is_blocked_before_reservation(self):
+        prepared = pub.prepare(self.ledger(), "news/approved/reviewed.json")
+        prepared["text"] = prepared["text"].replace(
+            "https://news.example.org/article-12", "")
+        with patch.object(pub, "reserve") as reservation:
+            with self.assertRaisesRegex(pub.PublicationError, "Official source URL"):
+                pub.publish(prepared, {"PUBLISH_CONFIRMATION": pub.CONFIRM})
+        reservation.assert_not_called()
+
 if __name__ == "__main__":
     unittest.main()
 
