@@ -148,6 +148,14 @@ def extract_items(feed_xml, feed, strict=False, window_start=None, window_end=No
             if parts.scheme in ('http', 'https') and parts.netloc in ('bvb.ro', 'www.bvb.ro'):
                 normalized = parse.urlunsplit(('https', 'bvb.ro', parts.path, parts.query, parts.fragment))
             article = check_url(normalized, feed["article_hosts"])
+            feed_article_url = article
+            # Official Eurostat /product resolver returned this same-host route
+            # in live HTTP diagnostics. Do not enable arbitrary redirect following.
+            if feed['id'] == 'eurostat_releases' and parts.hostname == 'ec.europa.eu' and parts.path == '/eurostat/product':
+                query = parse.parse_qs(parts.query, keep_blank_values=True)
+                codes = query.get('code', [])
+                if set(query) == {'code'} and len(codes) == 1 and re.fullmatch(r'[0-9]-[0-9]{8}-(?:ap|bp)', codes[0]):
+                    article = 'https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/' + codes[0]
             timestamp = parse_time(date)
         except RadarError as exc:
             if strict:
@@ -158,7 +166,7 @@ def extract_items(feed_xml, feed, strict=False, window_start=None, window_end=No
                 raise RadarError('Oversized headline prevents complete source capture.')
             continue
         result.append({"title": re.sub(r"\s+", " ", title),
-                       "article_url": article, "published_at": timestamp.isoformat(),
+                       "article_url": article, "feed_article_url": feed_article_url, "published_at": timestamp.isoformat(),
                        "source": feed["source"], "feed_id": feed["id"]})
     return result
 
@@ -223,8 +231,17 @@ def fetch_feed(feed):
             raise RadarError("Feed host resolved to nonpublic IP.")
         req = request.Request(feed["url"], headers={"User-Agent": "WestcottOfficialRadar/1.0",
                                                     "Accept": "application/rss+xml,application/xml,text/xml"})
-        with request.build_opener(NoRedirect()).open(req, timeout=15) as reply:
-            data = reply.read(MAX_FEED_BYTES + 1)
+        for attempt in range(3):
+            try:
+                with request.build_opener(NoRedirect()).open(req, timeout=15) as reply:
+                    data = reply.read(MAX_FEED_BYTES + 1)
+                break
+            except error.HTTPError as exc:
+                if exc.code not in (429, 500, 502, 503, 504) or attempt == 2:
+                    raise
+            except (error.URLError, TimeoutError, ConnectionError):
+                if attempt == 2:
+                    raise
         if len(data) > MAX_FEED_BYTES:
             raise RadarError("Oversized official feed.")
         return data
@@ -248,8 +265,8 @@ def inspect_candidate_image(row, inspector=None):
                 "body_fetch_status": 'FETCHED_FOR_REVIEW' if page.get('source_text') else 'UNAVAILABLE',
                 "image_origin": "publisher_og_metadata",
                 "image_review_required": True, "image_reuse_permission_verified": False}
-    except (SourceMediaError, ValueError):
-        return {**row, "original_image_candidate_url": None,
+    except (SourceMediaError, ValueError) as exc:
+        return {**row, 'body_fetch_error': str(exc)[:400], "original_image_candidate_url": None,
                 "body_fetch_status": 'UNAVAILABLE',
                 "image_origin": "metadata_unavailable",
                 "image_review_required": True, "image_reuse_permission_verified": False}

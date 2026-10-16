@@ -83,6 +83,30 @@ class OfficialRadarTests(unittest.TestCase):
         candidates = radar.pick_candidates(parsed + parsed, self.now)
         self.assertEqual(len(candidates), 1)
 
+    def test_eurostat_product_entry_uses_verified_official_body_route(self):
+        feed = next(f for f in radar.FEEDS if f['id'] == 'eurostat_releases')
+        atom = b'<feed xmlns="http://www.w3.org/2005/Atom"><entry><title>Annual inflation</title><link href="https://ec.europa.eu/eurostat/product?code=2-16102026-ap"/><published>2026-10-16T09:00:00Z</published></entry></feed>'
+        row = radar.extract_items(atom, feed, strict=True)[0]
+        self.assertEqual(row['article_url'], 'https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/2-16102026-ap')
+        self.assertEqual(row['feed_article_url'], 'https://ec.europa.eu/eurostat/product?code=2-16102026-ap')
+
+    def test_transient_feed_connection_failure_retries_read_only_get(self):
+        import io
+        from urllib.error import URLError
+        feed = radar.FEEDS[0]
+        reply = io.BytesIO(b'<rss/>')
+        with patch.object(radar.socket, 'getaddrinfo', return_value=[(2, 1, 6, '', ('8.8.8.8', 443))]), \
+             patch.object(radar.request, 'build_opener') as build:
+            build.return_value.open.side_effect = [URLError('temporary timeout'), reply]
+            self.assertEqual(radar.fetch_feed(feed), b'<rss/>')
+
+    def test_unreadable_body_keeps_actual_failure_reason(self):
+        from source_media import SourceMediaError
+        def fail(_):
+            raise SourceMediaError('Publisher redirected; verified final URL required.')
+        row = radar.inspect_candidate_image({'article_url': 'https://ec.europa.eu/eurostat/product?code=x'}, inspector=fail)
+        self.assertIn('redirected', row['body_fetch_error'])
+
     def test_doctype_danger_rejected(self):
         with self.assertRaises(radar.RadarError):
             radar.extract_items(b'<!DOCTYPE rss [<!ENTITY x SYSTEM "file:///etc/passwd">]><rss/>', self.fed)
