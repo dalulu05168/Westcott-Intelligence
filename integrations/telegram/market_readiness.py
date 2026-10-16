@@ -5,7 +5,7 @@ import hashlib
 import json
 import os
 from urllib import error, parse, request
-from source_media import NoRedirect, public_https, public_dns
+from source_media import NoRedirect, public_https, public_dns, VisibleBody
 
 SOURCES = (
     ('RO_BET_PAGE', 'https://www.bvb.ro/TradingAndStatistics/Trading/CurrentTradingDay'),
@@ -48,8 +48,14 @@ def probe(item):
         public_dns(parse.urlsplit(url).hostname)
         req = request.Request(url, headers={'User-Agent': 'WestcottMarketReadiness/1.0'})
         with request.build_opener(NoRedirect()).open(req, timeout=18) as reply:
-            result.update(assess_response(reply.status, reply.headers.get('Content-Type', ''),
-                                          reply.read(MAX_RESPONSE + 1)))
+            body = reply.read(MAX_RESPONSE + 1)
+            result.update(assess_response(reply.status, reply.headers.get('Content-Type', ''), body))
+            if name == 'RO_BET_PAGE' and reply.status == 200 and not result['truncated']:
+                parser = VisibleBody()
+                parser.feed(body.decode(reply.headers.get_content_charset() or 'utf-8', errors='replace'))
+                text = ' '.join(' '.join(parser.parts).split())
+                result.update(source_text_snapshot=text[:80000], source_text_truncated=len(text)>80000,
+                    server_date=reply.headers.get('Date'), cache_age=reply.headers.get('Age'))
     except error.HTTPError as exc:
         result.update(assess_response(exc.code, exc.headers.get('Content-Type', ''),
                                       exc.read(MAX_RESPONSE + 1)))
