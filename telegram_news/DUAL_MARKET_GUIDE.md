@@ -41,7 +41,7 @@
 GitHub **Actions Variables**：
 - `OPENAI_NEWS_MODEL`：项目账户可以访问且支持结构化 JSON 输出的模型；
 - `OFFICIAL_IMAGE_REUSE_APPROVED=true`：在核对图片使用授权后才能设置；
-- `TELEGRAM_DUAL_MARKET_ENABLED=true`：只有全链路测试通过后才设置；
+- `TELEGRAM_DUAL_MARKET_ENABLED=true` 和 `TELEGRAM_DUAL_MARKET_LIVE_APPROVED=true`：两个独立开关，均须在全链路验收通过后才设置；
 - 保持旧 `TELEGRAM_NEWS_ENABLED` **不为 true**，以免单市场旧版与双市场新版重复发送；
 - 如三大指数在账户中采用不同代码，可配置 `US_INDEX_DOW_SYMBOL`、`US_INDEX_SP500_SYMBOL`、`US_INDEX_NASDAQ_SYMBOL`。
 
