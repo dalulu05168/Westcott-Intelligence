@@ -1,0 +1,135 @@
+{
+  "identity": {
+    "id": "03",
+    "name": "Andrei Andrieș",
+    "active": true,
+    "profile_path": "skills/p004-chat-suite/characters/profiles/03.json",
+    "legacy_memory_path": "memory/long-term/members/03.json",
+    "derived_memory_path": "memory/derived/v2.1/members/03.json",
+    "history_status": "LOADED_ADOPTED_EVIDENCE",
+    "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+    "evidence_ids": [
+      "M002",
+      "M009",
+      "M011",
+      "20261016-t.gbfri5r8vs3o-B021-0"
+    ],
+    "state": {
+      "knowledge": "NOT_INFERRED",
+      "homework": "NOT_INFERRED"
+    }
+  },
+  "evidence_store": "memory/derived/v2.1/effective-history.json",
+  "evidence_ids": [
+    "M002",
+    "M009",
+    "M011",
+    "20261016-t.gbfri5r8vs3o-B021-0"
+  ],
+  "recent_examples": [
+    {
+      "speaker_id": "03",
+      "source_label": "03男",
+      "source_start_line": 7,
+      "source_end_line": 8,
+      "text": "下午好各位！回来看看今天还有什么值得关注的机会。🤔",
+      "id": "M002",
+      "role_gender_valid": true,
+      "person_name": "Andrei Andrieș",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "status": "ADOPTED_IN_SUBMITTED_TRANSCRIPT",
+      "warnings": [],
+      "identity_fields": {
+        "name": "Andrei Andrieș",
+        "gender": "男",
+        "age": 33,
+        "occupation": "中学教师",
+        "investment_years": 3,
+        "capital_scale": "普通投资",
+        "student_seniority": "新学员"
+      },
+      "canonical_label": "03男：",
+      "topic": "MARKET_OR_SOCIAL",
+      "source_hash_sha256": "1510d2c5304a3c8bad72518ea4e2b90c1988d05b3f54d2c438cf6c2e42374462",
+      "date": "2026-10-12"
+    },
+    {
+      "speaker_id": "03",
+      "source_label": "03男",
+      "source_start_line": 24,
+      "source_end_line": 25,
+      "text": "Sinsay我知道，没想到还能通过基金接触它背后的公司。",
+      "id": "M009",
+      "role_gender_valid": true,
+      "person_name": "Andrei Andrieș",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "status": "ADOPTED_IN_SUBMITTED_TRANSCRIPT",
+      "warnings": [],
+      "identity_fields": {
+        "name": "Andrei Andrieș",
+        "gender": "男",
+        "age": 33,
+        "occupation": "中学教师",
+        "investment_years": 3,
+        "capital_scale": "普通投资",
+        "student_seniority": "新学员"
+      },
+      "canonical_label": "03男：",
+      "topic": "ETF_WIG30",
+      "source_hash_sha256": "de6dbdaf4d8964ac7a6c0cda415bd5f491fee7f2937fc3364dff730335427c44",
+      "date": "2026-10-12"
+    },
+    {
+      "speaker_id": "03",
+      "source_label": "03男",
+      "source_start_line": 28,
+      "source_end_line": 29,
+      "text": "对，我刚才只注意到认识的名字了。",
+      "id": "M011",
+      "role_gender_valid": true,
+      "person_name": "Andrei Andrieș",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "status": "ADOPTED_IN_SUBMITTED_TRANSCRIPT",
+      "warnings": [],
+      "identity_fields": {
+        "name": "Andrei Andrieș",
+        "gender": "男",
+        "age": 33,
+        "occupation": "中学教师",
+        "investment_years": 3,
+        "capital_scale": "普通投资",
+        "student_seniority": "新学员"
+      },
+      "canonical_label": "03男：",
+      "topic": "MARKET_OR_SOCIAL",
+      "source_hash_sha256": "6df9acf7d1712083f13394a301eba5b3c1082b53267b2757ae9a15a077ff3044",
+      "date": "2026-10-12"
+    },
+    {
+      "id": "20261016-t.gbfri5r8vs3o-B021-0",
+      "speaker_id": "03",
+      "gender": "男",
+      "text": "我刚才还以为你准备第一次买呢，没想到你已经是老持有人了。😄",
+      "source_label": "03：",
+      "source_tab_id": "t.gbfri5r8vs3o",
+      "source_offset": 1708,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-16",
+      "node": "MORNING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [
+        "REVIEWED_LABEL_WITH_ORIGINAL_PRESERVED"
+      ],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    }
+  ],
+  "dynamic_records": [],
+  "real_trade_verified": false,
+  "source_snapshot": "memory/sources/google-doc-20261017.json"
+}

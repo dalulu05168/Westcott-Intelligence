@@ -1,0 +1,30 @@
+{
+  "snapshot_sha256": "3e28df95a55dad11e739f659287147b6a336075113f8f18bd1b8e98fbe72adf7",
+  "reviewer": "codex-editor-under-user-confirmed-2026-10-17-summary",
+  "scope": "Derived label attribution only. Original Google Docs text is unchanged.",
+  "blocks": {
+    "20261016-t.gbfri5r8vs3o-B021-0": {
+      "action": "CONFIRM_LABEL",
+      "speaker_id": "03",
+      "gender": "男",
+      "reason": "Source number 03; canonical identity male; user accepted summary of missing label."
+    },
+    "20261016-t.gbfri5r8vs3o-B053-0": {
+      "action": "CONFIRM_LABEL",
+      "speaker_id": "24",
+      "gender": "男",
+      "reason": "Source number 24; canonical identity male; user accepted summary of missing label."
+    },
+    "20261016-t.gbfri5r8vs3o-B078-0": {
+      "action": "CONFIRM_LABEL",
+      "speaker_id": "33",
+      "gender": "男",
+      "reason": "Source number 33; canonical identity male; user accepted summary of missing label."
+    },
+    "20261016-t.gbfri5r8vs3o-B111-1": {
+      "action": "CONFIRM_LABEL",
+      "speaker_id": "news_assistant",
+      "reason": "User explicitly identified this as the evening close; thanks Jonathan and closes community after course. Missing source label retained in raw snapshot."
+    }
+  }
+}

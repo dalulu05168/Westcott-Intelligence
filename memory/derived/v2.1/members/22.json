@@ -1,0 +1,100 @@
+{
+  "identity": {
+    "id": "22",
+    "name": "Ion Dorian Cozma",
+    "active": true,
+    "profile_path": "skills/p004-chat-suite/characters/profiles/22.json",
+    "legacy_memory_path": "memory/long-term/members/22.json",
+    "derived_memory_path": "memory/derived/v2.1/members/22.json",
+    "history_status": "LOADED_ADOPTED_EVIDENCE",
+    "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+    "evidence_ids": [
+      "20261013-M052",
+      "20261013-M070",
+      "20261014-t.t7k4o87mkgzv-B052-0",
+      "20261014-t.t7k4o87mkgzv-B070-0"
+    ],
+    "state": {
+      "knowledge": "NOT_INFERRED",
+      "homework": "NOT_INFERRED"
+    }
+  },
+  "evidence_store": "memory/derived/v2.1/effective-history.json",
+  "evidence_ids": [
+    "20261013-M052",
+    "20261013-M070",
+    "20261014-t.t7k4o87mkgzv-B052-0",
+    "20261014-t.t7k4o87mkgzv-B070-0"
+  ],
+  "recent_examples": [
+    {
+      "speaker_id": "22",
+      "source_label": "22男",
+      "gender": "男",
+      "node": "EVENING",
+      "extracted_line": 412,
+      "text": "有些公司利润看着不错，但经营现金流却不理想，这种情况应该特别留意吧？",
+      "id": "20261013-M052",
+      "status": "ADOPTED_IN_USER_SUBMITTED_STORY",
+      "warnings": [],
+      "fictional_only": true,
+      "market_news_not_independently_verified": true,
+      "real_trade_not_inferred": true,
+      "date": "2026-10-13"
+    },
+    {
+      "speaker_id": "22",
+      "source_label": "22男",
+      "gender": "男",
+      "node": "EVENING",
+      "extracted_line": 601,
+      "text": "先生晚安！",
+      "id": "20261013-M070",
+      "status": "ADOPTED_IN_USER_SUBMITTED_STORY",
+      "warnings": [],
+      "fictional_only": true,
+      "market_news_not_independently_verified": true,
+      "real_trade_not_inferred": true,
+      "date": "2026-10-13"
+    },
+    {
+      "id": "20261014-t.t7k4o87mkgzv-B052-0",
+      "speaker_id": "22",
+      "gender": "男",
+      "text": "有些公司利润看着不错，但经营现金流却不理想，这种情况应该特别留意吧？",
+      "source_label": "22男：",
+      "source_tab_id": "t.t7k4o87mkgzv",
+      "source_offset": 3901,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-14",
+      "node": "EVENING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261014-t.t7k4o87mkgzv-B070-0",
+      "speaker_id": "22",
+      "gender": "男",
+      "text": "先生晚安！",
+      "source_label": "22男：",
+      "source_tab_id": "t.t7k4o87mkgzv",
+      "source_offset": 5728,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-14",
+      "node": "EVENING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    }
+  ],
+  "dynamic_records": [],
+  "real_trade_verified": false,
+  "source_snapshot": "memory/sources/google-doc-20261017.json"
+}

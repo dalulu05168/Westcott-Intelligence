@@ -1,0 +1,158 @@
+{
+  "identity": {
+    "id": "40",
+    "name": "Radu Cozma",
+    "active": true,
+    "profile_path": "skills/p004-chat-suite/characters/profiles/40.json",
+    "legacy_memory_path": "memory/long-term/members/40.json",
+    "derived_memory_path": "memory/derived/v2.1/members/40.json",
+    "history_status": "LOADED_ADOPTED_EVIDENCE",
+    "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+    "evidence_ids": [
+      "20261013-M040",
+      "20261014-t.t7k4o87mkgzv-B040-0",
+      "20261016-t.gbfri5r8vs3o-B029-0",
+      "20261016-t.gbfri5r8vs3o-B041-0",
+      "20261016-t.gbfri5r8vs3o-B074-0",
+      "20261016-t.gbfri5r8vs3o-B080-0"
+    ],
+    "state": {
+      "knowledge": "NOT_INFERRED",
+      "homework": "NOT_INFERRED"
+    }
+  },
+  "evidence_store": "memory/derived/v2.1/effective-history.json",
+  "evidence_ids": [
+    "20261013-M040",
+    "20261014-t.t7k4o87mkgzv-B040-0",
+    "20261016-t.gbfri5r8vs3o-B029-0",
+    "20261016-t.gbfri5r8vs3o-B041-0",
+    "20261016-t.gbfri5r8vs3o-B074-0",
+    "20261016-t.gbfri5r8vs3o-B080-0"
+  ],
+  "recent_examples": [
+    {
+      "speaker_id": "40",
+      "source_label": "40男",
+      "gender": "男",
+      "node": "EVENING",
+      "extracted_line": 321,
+      "text": "我也来了，先看看今晚出的是什么题目。",
+      "id": "20261013-M040",
+      "status": "ADOPTED_IN_USER_SUBMITTED_STORY",
+      "warnings": [],
+      "fictional_only": true,
+      "market_news_not_independently_verified": true,
+      "real_trade_not_inferred": true,
+      "date": "2026-10-13"
+    },
+    {
+      "id": "20261014-t.t7k4o87mkgzv-B040-0",
+      "speaker_id": "40",
+      "gender": "男",
+      "text": "我也来了，先看看今晚出的是什么题目。",
+      "source_label": "40男：",
+      "source_tab_id": "t.t7k4o87mkgzv",
+      "source_offset": 3062,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-14",
+      "node": "EVENING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261016-t.gbfri5r8vs3o-B029-0",
+      "speaker_id": "40",
+      "gender": "男",
+      "text": "上午忙着处理工作，刚刚才有时间看看欧洲市场。还好赶上了。",
+      "source_label": "40男：",
+      "source_tab_id": "t.gbfri5r8vs3o",
+      "source_offset": 2091,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-16",
+      "node": "MORNING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261016-t.gbfri5r8vs3o-B041-0",
+      "speaker_id": "40",
+      "gender": "男",
+      "text": "这里的程序太多了，时间和汇率的影响都要考虑到。",
+      "source_label": "40男：",
+      "source_tab_id": "t.gbfri5r8vs3o",
+      "source_offset": 3054,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-16",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261016-t.gbfri5r8vs3o-B074-0",
+      "speaker_id": "40",
+      "gender": "男",
+      "text": "等放量突破压力位或回踩42美元站稳后，再考虑轻仓跟进。",
+      "source_label": "40男：",
+      "source_tab_id": "t.gbfri5r8vs3o",
+      "source_offset": 5231,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-16",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261016-t.gbfri5r8vs3o-B080-0",
+      "speaker_id": "40",
+      "gender": "男",
+      "text": "其实线路这个东西光指望自己去看去理解是很难能够通透的，需要有人能够指点一下就会通顺很多",
+      "source_label": "40男：",
+      "source_tab_id": "t.gbfri5r8vs3o",
+      "source_offset": 5635,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-16",
+      "node": "EVENING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    }
+  ],
+  "dynamic_records": [
+    {
+      "id": "40-AA-20261016",
+      "member_id": "40",
+      "symbol": "AA",
+      "action": "CONDITIONAL_PLAN_NOT_PURCHASE",
+      "quantity": null,
+      "summary": "放量突破或回踩42美元站稳后再考虑；没有自述成交。",
+      "evidence_ids": [
+        "20261016-t.gbfri5r8vs3o-B074-0"
+      ],
+      "reviewer": "codex-editor-source-read-20261017",
+      "evidence_support_reviewed": true,
+      "real_trade_verified": false
+    }
+  ],
+  "real_trade_verified": false,
+  "source_snapshot": "memory/sources/google-doc-20261017.json"
+}

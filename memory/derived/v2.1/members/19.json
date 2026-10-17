@@ -1,0 +1,66 @@
+{
+  "identity": {
+    "id": "19",
+    "name": "Matei Cocoș",
+    "active": true,
+    "profile_path": "skills/p004-chat-suite/characters/profiles/19.json",
+    "legacy_memory_path": null,
+    "derived_memory_path": "memory/derived/v2.1/members/19.json",
+    "history_status": "LOADED_ADOPTED_EVIDENCE",
+    "memory_access": "NO_SEPARATE_FILE",
+    "evidence_ids": [
+      "20261016-t.gbfri5r8vs3o-B014-0",
+      "20261016-t.gbfri5r8vs3o-B040-0"
+    ],
+    "state": {
+      "knowledge": "NOT_INFERRED",
+      "homework": "NOT_INFERRED"
+    }
+  },
+  "evidence_store": "memory/derived/v2.1/effective-history.json",
+  "evidence_ids": [
+    "20261016-t.gbfri5r8vs3o-B014-0",
+    "20261016-t.gbfri5r8vs3o-B040-0"
+  ],
+  "recent_examples": [
+    {
+      "id": "20261016-t.gbfri5r8vs3o-B014-0",
+      "speaker_id": "19",
+      "gender": "男",
+      "text": "今天的开盘信息怎么还没发布呢？",
+      "source_label": "19男：",
+      "source_tab_id": "t.gbfri5r8vs3o",
+      "source_offset": 1043,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-16",
+      "node": "MORNING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261016-t.gbfri5r8vs3o-B040-0",
+      "speaker_id": "19",
+      "gender": "男",
+      "text": "得看是进口还是出口。有些订单收入按欧元结算。",
+      "source_label": "19男：",
+      "source_tab_id": "t.gbfri5r8vs3o",
+      "source_offset": 3026,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-16",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    }
+  ],
+  "dynamic_records": [],
+  "real_trade_verified": false,
+  "source_snapshot": "memory/sources/google-doc-20261017.json"
+}

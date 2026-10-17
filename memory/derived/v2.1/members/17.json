@@ -1,0 +1,113 @@
+{
+  "identity": {
+    "id": "17",
+    "name": "Catalina Lăcătuș",
+    "active": true,
+    "profile_path": "skills/p004-chat-suite/characters/profiles/17.json",
+    "legacy_memory_path": "memory/long-term/members/17.json",
+    "derived_memory_path": "memory/derived/v2.1/members/17.json",
+    "history_status": "LOADED_ADOPTED_EVIDENCE",
+    "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+    "evidence_ids": [
+      "M035",
+      "M058",
+      "M072"
+    ],
+    "state": {
+      "knowledge": "NOT_INFERRED",
+      "homework": "NOT_INFERRED"
+    }
+  },
+  "evidence_store": "memory/derived/v2.1/effective-history.json",
+  "evidence_ids": [
+    "M035",
+    "M058",
+    "M072"
+  ],
+  "recent_examples": [
+    {
+      "speaker_id": "17",
+      "source_label": "17女",
+      "source_start_line": 102,
+      "source_end_line": 103,
+      "text": "我也来！选上涨！",
+      "id": "M035",
+      "role_gender_valid": true,
+      "person_name": "Catalina Lăcătuș",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "status": "ADOPTED_IN_SUBMITTED_TRANSCRIPT",
+      "warnings": [],
+      "identity_fields": {
+        "name": "Catalina Lăcătuș",
+        "gender": "女",
+        "age": 37,
+        "occupation": "建筑师",
+        "investment_years": 14,
+        "capital_scale": "普通投资",
+        "student_seniority": "新学员"
+      },
+      "canonical_label": "17女：",
+      "topic": "MARKET_OR_SOCIAL",
+      "source_hash_sha256": "eaef9afbed2d7d46c4b46763a30435b46c75a4bf12a182586b1757b80bc6a5e2",
+      "date": "2026-10-12"
+    },
+    {
+      "speaker_id": "17",
+      "source_label": "17女",
+      "source_start_line": 170,
+      "source_end_line": 171,
+      "text": "先生，那是不是说，股价盘中涨过阻力位还不够，最好等收盘确认站稳了再判断？",
+      "id": "M058",
+      "role_gender_valid": true,
+      "person_name": "Catalina Lăcătuș",
+      "node": "EVENING",
+      "kind": "message",
+      "status": "ADOPTED_IN_SUBMITTED_TRANSCRIPT",
+      "warnings": [],
+      "identity_fields": {
+        "name": "Catalina Lăcătuș",
+        "gender": "女",
+        "age": 37,
+        "occupation": "建筑师",
+        "investment_years": 14,
+        "capital_scale": "普通投资",
+        "student_seniority": "新学员"
+      },
+      "canonical_label": "17女：",
+      "topic": "BREAKOUT_LESSON",
+      "source_hash_sha256": "77c4c8159c1889dc4880b6e6f202a61b058b38266e9c068b62eed2944907d150",
+      "date": "2026-10-12"
+    },
+    {
+      "speaker_id": "17",
+      "source_label": "17女",
+      "source_start_line": 209,
+      "source_end_line": 210,
+      "text": "今晚这个10列伊的例子挺直观的，比单独记那些技术名词容易理解多了。😄",
+      "id": "M072",
+      "role_gender_valid": true,
+      "person_name": "Catalina Lăcătuș",
+      "node": "EVENING",
+      "kind": "message",
+      "status": "ADOPTED_IN_SUBMITTED_TRANSCRIPT",
+      "warnings": [],
+      "identity_fields": {
+        "name": "Catalina Lăcătuș",
+        "gender": "女",
+        "age": 37,
+        "occupation": "建筑师",
+        "investment_years": 14,
+        "capital_scale": "普通投资",
+        "student_seniority": "新学员"
+      },
+      "canonical_label": "17女：",
+      "topic": "BREAKOUT_LESSON",
+      "source_hash_sha256": "1f29ebb4873539c1fff2690c3530aba56871d3fb1d50a6b7cbad5c9f2ee1a494",
+      "date": "2026-10-12"
+    }
+  ],
+  "dynamic_records": [],
+  "real_trade_verified": false,
+  "source_snapshot": "memory/sources/google-doc-20261017.json"
+}

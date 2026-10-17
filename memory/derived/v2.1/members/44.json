@@ -1,0 +1,23 @@
+{
+  "identity": {
+    "id": "44",
+    "name": "Mihai Lăcătuș",
+    "active": false,
+    "profile_path": "skills/p004-chat-suite/characters/profiles/44.json",
+    "legacy_memory_path": null,
+    "derived_memory_path": "memory/derived/v2.1/members/44.json",
+    "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+    "memory_access": "NO_SEPARATE_FILE",
+    "evidence_ids": [],
+    "state": {
+      "knowledge": "NOT_INFERRED",
+      "homework": "NOT_INFERRED"
+    }
+  },
+  "evidence_store": "memory/derived/v2.1/effective-history.json",
+  "evidence_ids": [],
+  "recent_examples": [],
+  "dynamic_records": [],
+  "real_trade_verified": false,
+  "source_snapshot": "memory/sources/google-doc-20261017.json"
+}

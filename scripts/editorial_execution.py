@@ -305,7 +305,7 @@ def review_scene(scene, context, approved_claim_ids=()):
             'publication_allowed': False}
 
 
-def main():
+def legacy_archive_main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--date', required=True)
     parser.add_argument('--members', required=True, help='Comma-separated zero-padded IDs')
@@ -338,6 +338,14 @@ def main():
     blocked = blocked or ('news_novelty' in output and output['news_novelty']['status'] in ('HISTORY_NOT_LOADED', 'NO_NEW_EVIDENCE'))
     print('BLOCK' if blocked else 'CONTEXT_READY_FOR_EDITORIAL_REVIEW_NOT_PUBLICATION')
     return 2 if blocked else 0
+
+
+def main():
+    # Existing integrations use this filename. Route the CLI through v2.1 so
+    # old prepared commands fail closed on stale sources or absent rechecks.
+    # The v1.8 library functions remain available to archival regression tools.
+    from editorial_runtime_v21 import main as runtime_main
+    return runtime_main()
 
 
 if __name__ == '__main__':

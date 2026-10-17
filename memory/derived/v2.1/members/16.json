@@ -1,0 +1,23 @@
+{
+  "identity": {
+    "id": "16",
+    "name": "Emma Andreea Tănase",
+    "active": true,
+    "profile_path": "skills/p004-chat-suite/characters/profiles/16.json",
+    "legacy_memory_path": "memory/long-term/members/16.json",
+    "derived_memory_path": "memory/derived/v2.1/members/16.json",
+    "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+    "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+    "evidence_ids": [],
+    "state": {
+      "knowledge": "NOT_INFERRED",
+      "homework": "NOT_INFERRED"
+    }
+  },
+  "evidence_store": "memory/derived/v2.1/effective-history.json",
+  "evidence_ids": [],
+  "recent_examples": [],
+  "dynamic_records": [],
+  "real_trade_verified": false,
+  "source_snapshot": "memory/sources/google-doc-20261017.json"
+}

@@ -1,0 +1,106 @@
+{
+  "identity": {
+    "id": "28",
+    "name": "Daniel Ioan",
+    "active": true,
+    "profile_path": "skills/p004-chat-suite/characters/profiles/28.json",
+    "legacy_memory_path": "memory/long-term/members/28.json",
+    "derived_memory_path": "memory/derived/v2.1/members/28.json",
+    "history_status": "LOADED_ADOPTED_EVIDENCE",
+    "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+    "evidence_ids": [
+      "20261015-t.huff85y7dlym-B012-0",
+      "20261015-t.huff85y7dlym-B018-0",
+      "20261015-t.huff85y7dlym-B021-0",
+      "20261015-t.huff85y7dlym-B080-0"
+    ],
+    "state": {
+      "knowledge": "NOT_INFERRED",
+      "homework": "NOT_INFERRED"
+    }
+  },
+  "evidence_store": "memory/derived/v2.1/effective-history.json",
+  "evidence_ids": [
+    "20261015-t.huff85y7dlym-B012-0",
+    "20261015-t.huff85y7dlym-B018-0",
+    "20261015-t.huff85y7dlym-B021-0",
+    "20261015-t.huff85y7dlym-B080-0"
+  ],
+  "recent_examples": [
+    {
+      "id": "20261015-t.huff85y7dlym-B012-0",
+      "speaker_id": "28",
+      "gender": "男",
+      "text": "原来国债也不是买完就完全不用操心了。",
+      "source_label": "28男：",
+      "source_tab_id": "t.huff85y7dlym",
+      "source_offset": 857,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-15",
+      "node": "MORNING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261015-t.huff85y7dlym-B018-0",
+      "speaker_id": "28",
+      "gender": "男",
+      "text": "哈哈，我一打开行情就看到指数是红的，还以为自己看错了。",
+      "source_label": "28男：",
+      "source_tab_id": "t.huff85y7dlym",
+      "source_offset": 1239,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-15",
+      "node": "MORNING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261015-t.huff85y7dlym-B021-0",
+      "speaker_id": "28",
+      "gender": "男",
+      "text": "用电少了，水电发电量反而多了？我还以为这两个应该一起变呢。",
+      "source_label": "28男：",
+      "source_tab_id": "t.huff85y7dlym",
+      "source_offset": 1582,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-15",
+      "node": "MORNING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261015-t.huff85y7dlym-B080-0",
+      "speaker_id": "28",
+      "gender": "男",
+      "text": "更多的时候是一种感觉，但是又不能一直凭借感觉做事。",
+      "source_label": "28男：",
+      "source_tab_id": "t.huff85y7dlym",
+      "source_offset": 5706,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-15",
+      "node": "EVENING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    }
+  ],
+  "dynamic_records": [],
+  "real_trade_verified": false,
+  "source_snapshot": "memory/sources/google-doc-20261017.json"
+}

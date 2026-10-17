@@ -1,0 +1,125 @@
+{
+  "version": "2.1",
+  "base_commit": "5e3a50862941a942fc11730b4bf2e2ed85002d38",
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts",
+        "-p",
+        "test_*.py",
+        "-q"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "Failed to find real location of C:\\Users\\mrmal\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "----------------------------------------------------------------------",
+        "Ran 140 tests in 4.088s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "integrations/telegram",
+        "-p",
+        "test_*.py",
+        "-q"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "Failed to find real location of C:\\Users\\mrmal\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "----------------------------------------------------------------------",
+        "Ran 139 tests in 0.523s",
+        "",
+        "OK (skipped=2)"
+      ]
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "telegram_news",
+        "-p",
+        "test_*.py",
+        "-q"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "Failed to find real location of C:\\Users\\mrmal\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "----------------------------------------------------------------------",
+        "Ran 39 tests in 0.107s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "command": [
+        "python",
+        "scripts/validate_repository.py"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "PASS: 65 identities and profiles; 36 reviewed member memory files; 198 confirmed history events; exclusions remain isolated",
+        "Failed to find real location of C:\\Users\\mrmal\\AppData\\Local\\Programs\\Python\\Python313\\python.exe"
+      ]
+    },
+    {
+      "command": [
+        "python",
+        "scripts/rebuild_editorial_archive_v21.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "PASS:65 reproducible entrypoints; archive requires live refresh",
+        "Failed to find real location of C:\\Users\\mrmal\\AppData\\Local\\Programs\\Python\\Python313\\python.exe"
+      ]
+    },
+    {
+      "command": [
+        "python",
+        "scripts/sync_runtime_memory.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "summary": [
+        "PASS: 65 canonical identities; 198 adopted member events; five synchronized prepared prompts; 0 stale files",
+        "Failed to find real location of C:\\Users\\mrmal\\AppData\\Local\\Programs\\Python\\Python313\\python.exe"
+      ]
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "exit_code": 0,
+      "summary": []
+    }
+  ],
+  "offline_tests": {
+    "scripts": 140,
+    "telegram_integration": 139,
+    "telegram_news": 39,
+    "skipped": 2
+  },
+  "live_doc_read": "audit/v2.1-real-document-read.json",
+  "human_semantics": "PENDING_HUMAN_REVIEW",
+  "online_tasks_applied": false,
+  "senders_changed": false,
+  "existing_personas_and_legacy_history_changed": false
+}
