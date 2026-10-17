@@ -1,0 +1,50 @@
+{
+  "searches": [
+    {
+      "region": "RO",
+      "query": "Romania October 17 2026 central bank fiscal regulation company earnings energy latest official",
+      "searched_at": "2026-10-17T20:50:47.085Z",
+      "status": "OK"
+    },
+    {
+      "region": "FR",
+      "query": "France 17 octobre 2026 banque budget réglementation résultats entreprises énergie actualité officielle",
+      "searched_at": "2026-10-17T20:50:47.085Z",
+      "status": "OK"
+    },
+    {
+      "region": "US",
+      "query": "US October 17 2026 Federal Reserve Treasury SEC earnings energy latest official release",
+      "searched_at": "2026-10-17T20:50:47.085Z",
+      "status": "OK"
+    },
+    {
+      "region": "GLOBAL",
+      "query": "global October 17 2026 IMF World Bank energy geopolitics latest official statement",
+      "searched_at": "2026-10-17T20:50:47.085Z",
+      "status": "OK"
+    }
+  ],
+  "articles": [],
+  "leads": [
+    {
+      "article_url": "https://mediacenter.imf.org/news/imf-imfc-press-briefing/s/6c812df6-f0e8-4a3b-b663-22c9e888b440",
+      "published_date": "2026-10-17",
+      "published_at": null,
+      "access_status": "UNAVAILABLE",
+      "reason": "Original open returned Internal Error; date-only result cannot establish hourly inclusion."
+    },
+    {
+      "article_url": "https://www.imf.org/fr/home",
+      "reason": "Date-only IMFC statement listing; exact original publication time unverified."
+    }
+  ],
+  "limitations": [
+    "Search is not globally exhaustive. Search results are leads, not approved facts.",
+    "Latest edition news/editions/20261017t2028z.json is older than 20 minutes at review time.",
+    "Current-hour intake request already exists at 2026-10-17T20:28:07Z; no duplicate request or renamed request submitted.",
+    "No merged edition or release ledger created from stale comparison."
+  ],
+  "review_status": "HELD_STALE_EDITION_AND_UNRESOLVED_ORIGINAL",
+  "telegram_publishable": false
+}
