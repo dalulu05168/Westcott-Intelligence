@@ -19,11 +19,14 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install -r telegram_news/requirements.txt
+      - name: Validate Telegram identity probe without network
+        run: python -m unittest telegram_news.test_readiness_probe
       - name: Read-only bot identity, existing group target and editorial gating readiness
         env:
           TELEGRAM_BOT_TOKEN: '${{ secrets.TELEGRAM_BOT_TOKEN }}'
           TELEGRAM_PRIVATE_CHAT_ID: '${{ secrets.TELEGRAM_PRIVATE_CHAT_ID }}'
           TELEGRAM_CHAT_ID: '${{ secrets.TELEGRAM_CHAT_ID }}'
+          TELEGRAM_EXPECTED_BOT_USERNAME: 'ZhaoCai2026Bot'
           TELEGRAM_EXPECTED_GROUP_TITLE: '🌐~~~资讯快报'
           OPENAI_API_KEY: '${{ secrets.OPENAI_API_KEY }}'
           OPENAI_NEWS_MODEL: '${{ vars.OPENAI_NEWS_MODEL }}'
