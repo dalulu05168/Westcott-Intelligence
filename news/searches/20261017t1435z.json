@@ -1,0 +1,74 @@
+{
+  "schema_version": "free-search-handoff-v1",
+  "search_completed_at": "2026-10-17T14:35:33+00:00",
+  "edition_basis": "news/editions/20261017t1427z.json",
+  "searches": [
+    {
+      "region": "RO",
+      "query": "Romania BVB BNR government listed company earnings energy finance official news October 17 2026",
+      "searched_at": "2026-10-17T14:35:33+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.bvb.ro/financialinstruments/selecteddata/currentreports",
+        "https://bvb.ro/AboutUs/MediaCenter/PressReleases"
+      ],
+      "finding": "No item with a verifiable original publication time inside the 13:27-14:27 UTC comparison window."
+    },
+    {
+      "region": "FR",
+      "query": "France AMF Banque de France CAC 40 issuer earnings energy finance official news October 17 2026",
+      "searched_at": "2026-10-17T14:35:33+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.banque-france.fr/fr/actualites-et-evenements",
+        "https://www.amf-france.org/fr/actualites-publications/communiques/communiques-de-lamf"
+      ],
+      "finding": "No item with a verifiable original publication time inside the 13:27-14:27 UTC comparison window."
+    },
+    {
+      "region": "US",
+      "query": "United States Federal Reserve SEC Treasury listed company earnings technology energy official news October 17 2026",
+      "searched_at": "2026-10-17T14:35:33+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.federalreserve.gov/newsevents/pressreleases/2026-press.htm",
+        "https://www.federalreserve.gov/recentpostings.htm"
+      ],
+      "finding": "No item with a verifiable original publication time inside the 13:27-14:27 UTC comparison window."
+    },
+    {
+      "region": "GLOBAL",
+      "query": "global central bank interest rates energy commodities major financial markets official news October 17 2026",
+      "searched_at": "2026-10-17T14:35:33+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.reuters.com/world/americas/bank-canada-sees-sharply-higher-inflation-outlook-oil-surges-macklem-says-2026-10-17/",
+        "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261017~7015ea3099.bg.html"
+      ],
+      "finding": "One in-window Reuters report about remarks by the Bank of Canada Governor; no matching Bank of Canada transcript or release was located. The ECB item is official but outside the current comparison window."
+    }
+  ],
+  "articles": [
+    {
+      "article_url": "https://www.reuters.com/world/americas/bank-canada-sees-sharply-higher-inflation-outlook-oil-surges-macklem-says-2026-10-17/",
+      "publisher_basis_url": "https://www.bankofcanada.ca/profile/tiff-macklem/",
+      "published_at": "2026-10-17T14:01:35+00:00",
+      "source": "Reuters",
+      "title": "Bank of Canada sees sharply higher inflation outlook as oil surges, Macklem says",
+      "authority_note": "Publisher-basis URL confirms the speaker's Bank of Canada role only; it does not independently verify the quoted conference-call remarks or constitute an official transcript."
+    },
+    {
+      "article_url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261017~7015ea3099.bg.html",
+      "publisher_basis_url": "https://www.ecb.europa.eu/press/html/index.en.html",
+      "published_at": "2026-10-17T05:00:00+00:00",
+      "source": "European Central Bank",
+      "title": "IMFC Statement",
+      "authority_note": "Official original, but outside the current 13:27-14:27 UTC comparison window."
+    }
+  ],
+  "limitations": [
+    "Search results are not exhaustive worldwide coverage.",
+    "The in-window Bank of Canada-related item was found as a Reuters report; no official Bank of Canada transcript or release was located.",
+    "The local Python execution environment was offline during this run, so search_intake.py was not executed and no merged edition or approved ledger was produced."
+  ]
+}
