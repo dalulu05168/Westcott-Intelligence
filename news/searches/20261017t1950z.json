@@ -1,0 +1,48 @@
+{
+  "searches": [
+    {
+      "region": "RO",
+      "query": "Romania 17 October 2026 official central bank fiscal company earnings energy news",
+      "searched_at": "2026-10-17T19:50:31.047Z",
+      "status": "OK"
+    },
+    {
+      "region": "FR",
+      "query": "France 17 octobre 2026 communiqué finance banque résultats énergie",
+      "searched_at": "2026-10-17T19:50:31.047Z",
+      "status": "OK"
+    },
+    {
+      "region": "US",
+      "query": "US October 17 2026 Treasury Federal Reserve SEC company earnings official news",
+      "searched_at": "2026-10-17T19:50:31.047Z",
+      "status": "OK"
+    },
+    {
+      "region": "GLOBAL",
+      "query": "October 17 2026 IMF global central bank energy geopolitical official statement",
+      "searched_at": "2026-10-17T19:50:31.047Z",
+      "status": "OK"
+    }
+  ],
+  "articles": [],
+  "unresolved_leads": [
+    {
+      "article_url": "https://mediacenter.imf.org/news/imf-imfc-press-briefing/s/6c812df6-f0e8-4a3b-b663-22c9e888b440",
+      "published_date": "2026-10-17",
+      "published_at": null,
+      "reason": "Original inaccessible through web open; date-only search result cannot establish inclusion in strict hourly window."
+    },
+    {
+      "article_url": "https://www.imf.org/",
+      "reason": "Search lists October 17 IMFC transcript and chair statement; original open returned 404. Exact article URL and time unverified."
+    }
+  ],
+  "limitations": [
+    "Search not globally exhaustive; discovery results are not factual approval.",
+    "Unresolved potentially important IMF lead blocks semantic approval for both countries.",
+    "Additional official-domain queries returned older articles, listings, and unrelated date matches; none establishes an in-window original."
+  ],
+  "review_status": "HELD",
+  "telegram_publishable": false
+}
