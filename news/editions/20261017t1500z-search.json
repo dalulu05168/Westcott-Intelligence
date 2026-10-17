@@ -1,0 +1,249 @@
+{
+  "status": "INCOMPLETE",
+  "window_start": "2026-10-17T14:00:00+00:00",
+  "window_end": "2026-10-17T15:00:00+00:00",
+  "captured_at": "2026-10-17T15:00:54.719335+00:00",
+  "required_feed_ids": [
+    "fed_monetary",
+    "ecb_press",
+    "bvb_market",
+    "bvb_announcements",
+    "insee_conjuncture",
+    "bls_cpi",
+    "bls_employment",
+    "eurostat_releases"
+  ],
+  "coverage": [
+    {
+      "feed_id": "fed_monetary",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.federalreserve.gov/feeds/press_monetary.xml",
+      "retrieved_at": "2026-10-17T15:00:50.014228+00:00",
+      "feed_sha256": "69b638039ee490f01aea90ac4623d67f9041273322daa48a262c50fed94ca2b1",
+      "raw_entries": 15,
+      "latest_published_at": "2026-10-13T18:00:00+00:00",
+      "excluded_before_window": 15,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "ecb_press",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.ecb.europa.eu/rss/press.html",
+      "retrieved_at": "2026-10-17T15:00:50.507562+00:00",
+      "feed_sha256": "597b7a7ed2ccb5e550ed8041db61934d5c7cd2e8d6d8ffa80d10317197bdeca9",
+      "raw_entries": 15,
+      "latest_published_at": "2026-10-17T05:00:00+00:00",
+      "excluded_before_window": 15,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "bvb_market",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.bvb.ro/Rss/StiriBVB.ashx",
+      "retrieved_at": "2026-10-17T15:00:51.657922+00:00",
+      "feed_sha256": "41df76de77ad0b09668df50e826c0b8e3a12120758cd347e91a7ceb7a85fc4ac",
+      "raw_entries": 169,
+      "latest_published_at": "2026-10-16T15:21:08+00:00",
+      "excluded_before_window": 169,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "bvb_announcements",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.bvb.ro/Rss/OperatiuniSiComunicateBVB.ashx",
+      "retrieved_at": "2026-10-17T15:00:52.888768+00:00",
+      "feed_sha256": "491dc218915addd5a6b2a6e782af94e90c30878965efb86da8b01c10fdf8fafc",
+      "raw_entries": 14,
+      "latest_published_at": "2026-10-16T10:20:29+00:00",
+      "excluded_before_window": 14,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "insee_conjuncture",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.insee.fr/fr/flux/3",
+      "retrieved_at": "2026-10-17T15:00:53.853504+00:00",
+      "feed_sha256": "7d9746ebbc8b874a2768626199d3fa396c8c8fa9c55d789004b744b68e7f0d25",
+      "raw_entries": 110,
+      "latest_published_at": "2026-10-16T06:45:00+00:00",
+      "excluded_before_window": 110,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "bls_cpi",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.bls.gov/feed/cpi.rss",
+      "retrieved_at": "2026-10-17T15:00:54.046628+00:00",
+      "feed_sha256": "a5f2a686cebc14c09693431899d7e4ce56c15c752febbdba1156b30d33f1f387",
+      "raw_entries": 12,
+      "latest_published_at": "2026-10-14T11:50:31.200000+00:00",
+      "excluded_before_window": 12,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "bls_employment",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.bls.gov/feed/empsit.rss",
+      "retrieved_at": "2026-10-17T15:00:54.172237+00:00",
+      "feed_sha256": "aa1107f25de6cf39c9d192b3c20b9d59ca8c32444f660b7e8b462b80c6cc700e",
+      "raw_entries": 12,
+      "latest_published_at": "2026-10-02T11:51:08.289000+00:00",
+      "excluded_before_window": 12,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "eurostat_releases",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://ec.europa.eu/eurostat/en/search?_estatsearchportlet_WAR_estatsearchportlet_collection=CAT_PREREL&p_p_id=estatsearchportlet_WAR_estatsearchportlet&p_p_lifecycle=2&p_p_mode=view&p_p_resource_id=atom&p_p_state=maximized",
+      "retrieved_at": "2026-10-17T15:00:54.718915+00:00",
+      "feed_sha256": "082458178cc8de1f2c962d3db48bec96bf7cf5cc41b6a60b67a72f3e7ad0d97c",
+      "raw_entries": 11,
+      "latest_published_at": "2026-10-16T09:00:00+00:00",
+      "excluded_before_window": 11,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    }
+  ],
+  "truncated": false,
+  "candidates": [
+    {
+      "article_url": "https://www.reuters.com/world/americas/bank-canada-sees-sharply-higher-inflation-outlook-oil-surges-macklem-says-2026-10-17/",
+      "published_at": "2026-10-17T14:01:35+00:00",
+      "title": "Bank of Canada sees sharply higher inflation outlook as oil surges, Macklem says",
+      "source": "Reuters",
+      "feed_id": "web_discovery",
+      "publisher_basis_url": "https://www.bankofcanada.ca/2026/10/panel-tiff-macklem-governor-october-16-2026/",
+      "source_authority_status": "REQUIRES_INDEPENDENT_REVIEW",
+      "id": "13b7c8e7f31dbaa4d75b1f9a119dd8fb13612f3b",
+      "rank_signal_hits": 2,
+      "intake_status": "UNREVIEWED",
+      "body_read": false,
+      "numbers_checked": false,
+      "image_reuse_permission_verified": false,
+      "importance_confirmed": false,
+      "telegram_publishable": false,
+      "body_fetch_error": "Publisher hostname cannot be resolved.",
+      "original_image_candidate_url": null,
+      "body_fetch_status": "UNAVAILABLE",
+      "image_origin": "metadata_unavailable",
+      "image_review_required": true
+    }
+  ],
+  "assessments_status": "UNREVIEWED",
+  "telegram_publishable": false,
+  "ranking_scope": "Configured feeds plus explicitly recorded web-search discoveries; not exhaustive worldwide coverage; publisher authority unverified.",
+  "search_intake": {
+    "manifest": {
+      "schema_version": "free-search-handoff-v1",
+      "search_completed_at": "2026-10-17T14:52:39+00:00",
+      "searches": [
+        {
+          "region": "RO",
+          "query": "Romania BVB BNR government listed company earnings energy finance official news October 17 2026",
+          "searched_at": "2026-10-17T14:52:39+00:00",
+          "status": "OK",
+          "result_urls": [
+            "https://www.bvb.ro/financialinstruments/selecteddata/currentreports",
+            "https://www.bvb.ro/FinancialInstruments/SelectedData/FinancialCalendar"
+          ],
+          "finding": "No verifiable new original publication was found in the prospective current 60-minute window; returned BVB reports were dated October 16 or earlier."
+        },
+        {
+          "region": "FR",
+          "query": "France AMF Banque de France Euronext issuer earnings energy finance official news October 17 2026",
+          "searched_at": "2026-10-17T14:52:39+00:00",
+          "status": "OK",
+          "result_urls": [
+            "https://www.amf-france.org/en/news-publications/news-releases/amf-news-releases",
+            "https://www.banque-france.fr/fr/actualites-et-evenements",
+            "https://www.euronext.com/en/about-euronext/markets/paris"
+          ],
+          "finding": "No verifiable new original publication was found in the prospective current 60-minute window."
+        },
+        {
+          "region": "US",
+          "query": "United States Federal Reserve SEC Treasury issuer earnings technology energy official news October 17 2026",
+          "searched_at": "2026-10-17T14:52:39+00:00",
+          "status": "OK",
+          "result_urls": [
+            "https://www.federalreserve.gov/newsevents.htm",
+            "https://www.federalreserve.gov/newsevents/pressreleases/2026-press.htm"
+          ],
+          "finding": "No verifiable new official publication was found in the prospective current 60-minute window; the Federal Reserve pages were last updated October 16."
+        },
+        {
+          "region": "GLOBAL",
+          "query": "global central banks interest rates energy commodities major financial markets official news October 17 2026",
+          "searched_at": "2026-10-17T14:52:39+00:00",
+          "status": "OK",
+          "result_urls": [
+            "https://www.reuters.com/world/americas/bank-canada-sees-sharply-higher-inflation-outlook-oil-surges-macklem-says-2026-10-17/",
+            "https://www.reuters.com/markets/asia/imf-members-call-increased-support-countries-amid-negative-risks-war-spillovers-2026-10-17/",
+            "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261017~7015ea3099.fr.html",
+            "https://www.imf.org/en/meetings/2026/annual/statements-and-documents"
+          ],
+          "finding": "One likely in-window Reuters report about Bank of Canada Governor remarks; no matching Bank of Canada transcript or release was located. The IMF and ECB items found were outside the prospective current window or lacked a verified in-window publication time."
+        }
+      ],
+      "articles": [
+        {
+          "article_url": "https://www.reuters.com/world/americas/bank-canada-sees-sharply-higher-inflation-outlook-oil-surges-macklem-says-2026-10-17/",
+          "publisher_basis_url": "https://www.bankofcanada.ca/2026/10/panel-tiff-macklem-governor-october-16-2026/",
+          "published_at": "2026-10-17T14:01:35+00:00",
+          "source": "Reuters",
+          "title": "Bank of Canada sees sharply higher inflation outlook as oil surges, Macklem says",
+          "authority_note": "Bank of Canada URL verifies the governor's prior official panel participation but is not an official transcript of the October 17 conference-call remarks; requires independent review and cannot be treated as official corroboration."
+        },
+        {
+          "article_url": "https://www.reuters.com/markets/asia/imf-members-call-increased-support-countries-amid-negative-risks-war-spillovers-2026-10-17/",
+          "publisher_basis_url": "https://www.imf.org/en/meetings/2026/annual/statements-and-documents",
+          "published_at": "2026-10-17T06:19:00+00:00",
+          "source": "Reuters",
+          "title": "IMF members call for more support amid war shocks, 'advanced intelligence' risks",
+          "authority_note": "Outside the prospective current comparison window."
+        },
+        {
+          "article_url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261017~7015ea3099.fr.html",
+          "publisher_basis_url": "https://www.ecb.europa.eu/press/html/index.en.html",
+          "published_at": "2026-10-17T05:00:00+00:00",
+          "source": "European Central Bank",
+          "title": "IMFC Statement",
+          "authority_note": "Official original but outside the prospective current comparison window."
+        }
+      ],
+      "limitations": [
+        "Searches are not exhaustive worldwide coverage.",
+        "The in-window Bank of Canada-related report lacked a matching official transcript or release.",
+        "Publication time was not inferred from crawl time when an original timestamp could not be verified."
+      ]
+    },
+    "manifest_sha256": "5e53b7b8bdc338767e71aa67fd60acc7739fbd547d4e340ab2103ca29a711c97",
+    "excluded": [
+      {
+        "article_url": "https://www.reuters.com/markets/asia/imf-members-call-increased-support-countries-amid-negative-risks-war-spillovers-2026-10-17/",
+        "published_at": "2026-10-17T06:19:00+00:00",
+        "reason": "OUTSIDE_WINDOW"
+      },
+      {
+        "article_url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261017~7015ea3099.fr.html",
+        "published_at": "2026-10-17T05:00:00+00:00",
+        "reason": "OUTSIDE_WINDOW"
+      }
+    ]
+  }
+}
