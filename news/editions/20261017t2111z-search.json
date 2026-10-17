@@ -1,0 +1,265 @@
+{
+  "status": "COMPLETE",
+  "window_start": "2026-10-17T20:11:00+00:00",
+  "window_end": "2026-10-17T21:11:00+00:00",
+  "captured_at": "2026-10-17T21:11:43.845857+00:00",
+  "required_feed_ids": [
+    "fed_monetary",
+    "ecb_press",
+    "bvb_market",
+    "bvb_announcements",
+    "insee_conjuncture",
+    "bls_cpi",
+    "bls_employment",
+    "eurostat_releases"
+  ],
+  "coverage": [
+    {
+      "feed_id": "fed_monetary",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.federalreserve.gov/feeds/press_monetary.xml",
+      "retrieved_at": "2026-10-17T21:11:38.400108+00:00",
+      "feed_sha256": "69b638039ee490f01aea90ac4623d67f9041273322daa48a262c50fed94ca2b1",
+      "raw_entries": 15,
+      "latest_published_at": "2026-10-13T18:00:00+00:00",
+      "excluded_before_window": 15,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "ecb_press",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.ecb.europa.eu/rss/press.html",
+      "retrieved_at": "2026-10-17T21:11:39.339785+00:00",
+      "feed_sha256": "597b7a7ed2ccb5e550ed8041db61934d5c7cd2e8d6d8ffa80d10317197bdeca9",
+      "raw_entries": 15,
+      "latest_published_at": "2026-10-17T05:00:00+00:00",
+      "excluded_before_window": 15,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "bvb_market",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.bvb.ro/Rss/StiriBVB.ashx",
+      "retrieved_at": "2026-10-17T21:11:41.085458+00:00",
+      "feed_sha256": "41df76de77ad0b09668df50e826c0b8e3a12120758cd347e91a7ceb7a85fc4ac",
+      "raw_entries": 169,
+      "latest_published_at": "2026-10-16T15:21:08+00:00",
+      "excluded_before_window": 169,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "bvb_announcements",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.bvb.ro/Rss/OperatiuniSiComunicateBVB.ashx",
+      "retrieved_at": "2026-10-17T21:11:42.136983+00:00",
+      "feed_sha256": "491dc218915addd5a6b2a6e782af94e90c30878965efb86da8b01c10fdf8fafc",
+      "raw_entries": 14,
+      "latest_published_at": "2026-10-16T10:20:29+00:00",
+      "excluded_before_window": 14,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "insee_conjuncture",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.insee.fr/fr/flux/3",
+      "retrieved_at": "2026-10-17T21:11:43.055651+00:00",
+      "feed_sha256": "7d9746ebbc8b874a2768626199d3fa396c8c8fa9c55d789004b744b68e7f0d25",
+      "raw_entries": 110,
+      "latest_published_at": "2026-10-16T06:45:00+00:00",
+      "excluded_before_window": 110,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "bls_cpi",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.bls.gov/feed/cpi.rss",
+      "retrieved_at": "2026-10-17T21:11:43.219751+00:00",
+      "feed_sha256": "a5f2a686cebc14c09693431899d7e4ce56c15c752febbdba1156b30d33f1f387",
+      "raw_entries": 12,
+      "latest_published_at": "2026-10-14T11:50:31.200000+00:00",
+      "excluded_before_window": 12,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "bls_employment",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.bls.gov/feed/empsit.rss",
+      "retrieved_at": "2026-10-17T21:11:43.255411+00:00",
+      "feed_sha256": "aa1107f25de6cf39c9d192b3c20b9d59ca8c32444f660b7e8b462b80c6cc700e",
+      "raw_entries": 12,
+      "latest_published_at": "2026-10-02T11:51:08.289000+00:00",
+      "excluded_before_window": 12,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "eurostat_releases",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://ec.europa.eu/eurostat/en/search?_estatsearchportlet_WAR_estatsearchportlet_collection=CAT_PREREL&p_p_id=estatsearchportlet_WAR_estatsearchportlet&p_p_lifecycle=2&p_p_mode=view&p_p_resource_id=atom&p_p_state=maximized",
+      "retrieved_at": "2026-10-17T21:11:43.845125+00:00",
+      "feed_sha256": "082458178cc8de1f2c962d3db48bec96bf7cf5cc41b6a60b67a72f3e7ad0d97c",
+      "raw_entries": 11,
+      "latest_published_at": "2026-10-16T09:00:00+00:00",
+      "excluded_before_window": 11,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    }
+  ],
+  "truncated": false,
+  "candidates": [],
+  "assessments_status": "UNREVIEWED",
+  "telegram_publishable": false,
+  "ranking_scope": "Configured feeds plus explicitly recorded web-search discoveries; not exhaustive worldwide coverage; publisher authority unverified.",
+  "search_intake": {
+    "manifest": {
+      "schema_version": "free-search-handoff-v1",
+      "search_completed_at": "2026-10-17T21:11:32+00:00",
+      "searches": [
+        {
+          "region": "RO",
+          "query": "Romania BVB BNR government listed companies banking energy official financial news October 17 2026 latest",
+          "searched_at": "2026-10-17T21:11:32+00:00",
+          "status": "OK",
+          "result_urls": [
+            "https://www.bnr.ro/en/",
+            "https://bvb.ro/AboutUs/MediaCenter/PressReleases",
+            "https://bvb.ro/FinancialInstruments/SelectedData/CurrentReports"
+          ],
+          "finding": "No Romanian official publication with a verified timestamp inside the prospective 20:11-21:11 UTC window was found; surfaced BVB and BNR material was older."
+        },
+        {
+          "region": "RO",
+          "query": "site:bvb.ro OR site:bnr.ro October 17 2026 21:00 official market release",
+          "searched_at": "2026-10-17T21:11:32+00:00",
+          "status": "OK",
+          "result_urls": [
+            "https://bvb.ro/AboutUs/MediaCenter/PressReleases",
+            "https://www.bnr.ro/en/"
+          ],
+          "finding": "Official-domain search returned no verified in-window market-moving release."
+        },
+        {
+          "region": "FR",
+          "query": "France AMF Banque de France Euronext listed companies banking energy official financial news October 17 2026 latest",
+          "searched_at": "2026-10-17T21:11:32+00:00",
+          "status": "OK",
+          "result_urls": [
+            "https://www.amf-france.org/en",
+            "https://www.banque-france.fr/en/publications-and-statistics/publications",
+            "https://live.euronext.com/en/markets/paris/company-news"
+          ],
+          "finding": "No French official or issuer release with a verified timestamp inside the prospective current window was found."
+        },
+        {
+          "region": "FR",
+          "query": "site:amf-france.org OR site:banque-france.fr OR site:live.euronext.com October 17 2026 21:00 official finance release",
+          "searched_at": "2026-10-17T21:11:32+00:00",
+          "status": "OK",
+          "result_urls": [
+            "https://live.euronext.com/en/markets/paris/company-news",
+            "https://www.amf-france.org/en",
+            "https://www.banque-france.fr/en/publications-and-statistics/publications"
+          ],
+          "finding": "Official-domain search surfaced general, future-calendar, or prior-period material, not a new in-window major event."
+        },
+        {
+          "region": "US",
+          "query": "United States Federal Reserve SEC Treasury major corporate earnings technology energy official market news October 17 2026 latest",
+          "searched_at": "2026-10-17T21:11:32+00:00",
+          "status": "OK",
+          "result_urls": [
+            "https://www.federalreserve.gov/newsevents.htm",
+            "https://www.sec.gov/newsroom",
+            "https://home.treasury.gov/"
+          ],
+          "finding": "No verified new Federal Reserve, SEC, Treasury, or major listed-company official release was found inside the prospective current window."
+        },
+        {
+          "region": "US",
+          "query": "site:federalreserve.gov OR site:sec.gov OR site:home.treasury.gov October 17 2026 21:00 official release",
+          "searched_at": "2026-10-17T21:11:32+00:00",
+          "status": "OK",
+          "result_urls": [
+            "https://www.federalreserve.gov/recentpostings.htm",
+            "https://www.sec.gov/newsroom",
+            "https://home.treasury.gov/"
+          ],
+          "finding": "Official results were dated October 16 or earlier, were undated landing pages, or were routine filings without an in-window major market event."
+        },
+        {
+          "region": "GLOBAL",
+          "query": "global central banks fiscal policy bond markets oil commodities geopolitics financial news October 17 2026 latest",
+          "searched_at": "2026-10-17T21:11:32+00:00",
+          "status": "OK",
+          "result_urls": [
+            "https://www.reuters.com/business/finance/ecbs-lagarde-says-bond-selloff-will-slow-inflation-2026-10-17/",
+            "https://www.reuters.com/world/americas/bank-canada-sees-sharply-higher-inflation-outlook-oil-surges-macklem-says-2026-10-17/"
+          ],
+          "finding": "Potentially important central-bank reports were found, but their verified publication times were earlier than the prospective 20:11-21:11 UTC window."
+        },
+        {
+          "region": "GLOBAL",
+          "query": "October 17 2026 Reuters markets latest 21:00 UTC central bank oil bonds earnings",
+          "searched_at": "2026-10-17T21:11:32+00:00",
+          "status": "OK",
+          "result_urls": [
+            "https://www.reuters.com/business/finance/ecbs-lagarde-says-bond-selloff-will-slow-inflation-2026-10-17/",
+            "https://www.reuters.com/world/americas/bank-canada-sees-sharply-higher-inflation-outlook-oil-surges-macklem-says-2026-10-17/",
+            "https://www.reuters.com/world/india/yes-bank-q2-profit-rises-at1-ruling-not-booked-further-appeal-weighed-2026-10-17/"
+          ],
+          "finding": "No Reuters market, policy, energy, or earnings item with a verified publication time inside the prospective current window was found."
+        }
+      ],
+      "articles": [
+        {
+          "article_url": "https://www.reuters.com/business/finance/ecbs-lagarde-says-bond-selloff-will-slow-inflation-2026-10-17/",
+          "publisher_basis_url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261017~7015ea3099.en.html",
+          "published_at": "2026-10-17T08:01:16+00:00",
+          "source": "Reuters",
+          "title": "ECB's Lagarde says bond selloff will slow inflation",
+          "authority_note": "Reuters report and ECB original statement were located, but the publication precedes the current comparison window."
+        },
+        {
+          "article_url": "https://www.reuters.com/world/americas/bank-canada-sees-sharply-higher-inflation-outlook-oil-surges-macklem-says-2026-10-17/",
+          "publisher_basis_url": "https://www.bankofcanada.ca/2026/10/panel-tiff-macklem-governor-october-16-2026/",
+          "published_at": "2026-10-17T14:01:35+00:00",
+          "source": "Reuters",
+          "title": "Bank of Canada sees sharply higher inflation outlook as oil surges, Macklem says",
+          "authority_note": "Outside the current window; linked Bank of Canada page verifies prior panel participation, not the October 17 conference-call remarks."
+        }
+      ],
+      "limitations": [
+        "Searches are broad but not exhaustive worldwide coverage.",
+        "Search result crawl times were not treated as publication timestamps.",
+        "No prior event was moved into the current hour by replacing its original publication time."
+      ]
+    },
+    "manifest_sha256": "273c40963b728b7c1d3bea20437cbc78eb61d028fc560b792faeed50147ae407",
+    "excluded": [
+      {
+        "article_url": "https://www.reuters.com/business/finance/ecbs-lagarde-says-bond-selloff-will-slow-inflation-2026-10-17/",
+        "published_at": "2026-10-17T08:01:16+00:00",
+        "reason": "OUTSIDE_WINDOW"
+      },
+      {
+        "article_url": "https://www.reuters.com/world/americas/bank-canada-sees-sharply-higher-inflation-outlook-oil-surges-macklem-says-2026-10-17/",
+        "published_at": "2026-10-17T14:01:35+00:00",
+        "reason": "OUTSIDE_WINDOW"
+      }
+    ]
+  }
+}
