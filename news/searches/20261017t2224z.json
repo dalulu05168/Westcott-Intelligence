@@ -1,0 +1,124 @@
+{
+  "schema_version": "free-search-handoff-v1",
+  "search_completed_at": "2026-10-17T22:24:23+00:00",
+  "searches": [
+    {
+      "region": "RO",
+      "query": "Romania BVB BNR government listed companies banking energy official financial news October 17 2026 latest",
+      "searched_at": "2026-10-17T22:24:23+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.bnr.ro/en/",
+        "https://bvb.ro/AboutUs/MediaCenter/PressReleases",
+        "https://bvb.ro/FinancialInstruments/SelectedData/CurrentReports"
+      ],
+      "finding": "No Romanian official publication with a verified timestamp inside the prospective 21:24-22:24 UTC window was found; surfaced BVB and BNR material was older."
+    },
+    {
+      "region": "RO",
+      "query": "site:bvb.ro OR site:bnr.ro October 17 2026 22:00 official market release",
+      "searched_at": "2026-10-17T22:24:23+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://bvb.ro/AboutUs/MediaCenter/PressReleases",
+        "https://www.bnr.ro/en/"
+      ],
+      "finding": "Official-domain search returned no verified in-window market-moving release."
+    },
+    {
+      "region": "FR",
+      "query": "France AMF Banque de France Euronext listed companies banking energy official financial news October 17 2026 latest",
+      "searched_at": "2026-10-17T22:24:23+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.amf-france.org/en",
+        "https://www.banque-france.fr/en/publications-and-statistics/publications",
+        "https://live.euronext.com/en/markets/paris/company-news"
+      ],
+      "finding": "No French official or issuer release with a verified timestamp inside the prospective current window was found."
+    },
+    {
+      "region": "FR",
+      "query": "site:amf-france.org OR site:banque-france.fr OR site:live.euronext.com October 17 2026 22:00 official finance release",
+      "searched_at": "2026-10-17T22:24:23+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://live.euronext.com/en/markets/paris/company-news",
+        "https://www.amf-france.org/en",
+        "https://www.banque-france.fr/en/publications-and-statistics/publications"
+      ],
+      "finding": "Official-domain search surfaced undated list-page entries, future-calendar items, or prior-period material, not a verified new in-window major event."
+    },
+    {
+      "region": "US",
+      "query": "United States Federal Reserve SEC Treasury major corporate earnings technology energy official market news October 17 2026 latest",
+      "searched_at": "2026-10-17T22:24:23+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.federalreserve.gov/newsevents.htm",
+        "https://www.sec.gov/newsroom",
+        "https://home.treasury.gov/"
+      ],
+      "finding": "No verified new Federal Reserve, SEC, Treasury, or major listed-company official release was found inside the prospective current window."
+    },
+    {
+      "region": "US",
+      "query": "site:federalreserve.gov OR site:sec.gov OR site:home.treasury.gov October 17 2026 22:00 official release",
+      "searched_at": "2026-10-17T22:24:23+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.federalreserve.gov/recentpostings.htm",
+        "https://www.sec.gov/newsroom",
+        "https://home.treasury.gov/"
+      ],
+      "finding": "Official results were dated October 16 or earlier, were undated landing pages, or were routine filings without an in-window major market event."
+    },
+    {
+      "region": "GLOBAL",
+      "query": "global central banks fiscal policy bond markets oil commodities geopolitics financial news October 17 2026 latest",
+      "searched_at": "2026-10-17T22:24:23+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.reuters.com/business/finance/ecbs-lagarde-says-bond-selloff-will-slow-inflation-2026-10-17/",
+        "https://www.reuters.com/world/americas/bank-canada-sees-sharply-higher-inflation-outlook-oil-surges-macklem-says-2026-10-17/",
+        "https://www.reuters.com/world/asia-pacific/china-central-bank-chief-says-he-supports-closer-imf-surveillance-fiscal-risks-2026-10-17/"
+      ],
+      "finding": "Potentially important central-bank reports were found, but their verified publication times were earlier than the prospective 21:24-22:24 UTC window."
+    },
+    {
+      "region": "GLOBAL",
+      "query": "October 17 2026 Reuters markets latest 22:00 UTC central bank oil bonds earnings",
+      "searched_at": "2026-10-17T22:24:23+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.reuters.com/business/finance/ecbs-lagarde-says-bond-selloff-will-slow-inflation-2026-10-17/",
+        "https://www.reuters.com/world/americas/bank-canada-sees-sharply-higher-inflation-outlook-oil-surges-macklem-says-2026-10-17/",
+        "https://www.reuters.com/world/asia-pacific/china-central-bank-chief-says-he-supports-closer-imf-surveillance-fiscal-risks-2026-10-17/"
+      ],
+      "finding": "No Reuters market, policy, energy, or earnings item with a verified publication time inside the prospective current window was found."
+    }
+  ],
+  "articles": [
+    {
+      "article_url": "https://www.reuters.com/business/finance/ecbs-lagarde-says-bond-selloff-will-slow-inflation-2026-10-17/",
+      "publisher_basis_url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261017~7015ea3099.en.html",
+      "published_at": "2026-10-17T08:01:16+00:00",
+      "source": "Reuters",
+      "title": "ECB's Lagarde says bond selloff will slow inflation",
+      "authority_note": "Reuters report and ECB original statement were located, but the publication precedes the current comparison window."
+    },
+    {
+      "article_url": "https://www.reuters.com/world/americas/bank-canada-sees-sharply-higher-inflation-outlook-oil-surges-macklem-says-2026-10-17/",
+      "publisher_basis_url": "https://www.bankofcanada.ca/2026/10/panel-tiff-macklem-governor-october-16-2026/",
+      "published_at": "2026-10-17T14:01:35+00:00",
+      "source": "Reuters",
+      "title": "Bank of Canada sees sharply higher inflation outlook as oil surges, Macklem says",
+      "authority_note": "Outside the current window; linked Bank of Canada page verifies prior panel participation, not the October 17 conference-call remarks."
+    }
+  ],
+  "limitations": [
+    "Searches are broad but not exhaustive worldwide coverage.",
+    "Search result crawl times and undated exchange list-page times were not treated as publication timestamps.",
+    "No prior event was moved into the current hour by replacing its original publication time."
+  ]
+}
