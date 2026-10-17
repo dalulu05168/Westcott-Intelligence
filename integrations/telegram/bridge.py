@@ -43,7 +43,7 @@ def call_api(token, method, body=None):
 def verify_bot_identity(token, env=None):
     """Fail closed unless the token belongs to the user-selected Bot."""
     env = env if env is not None else os.environ
-    expected = env.get("TELEGRAM_EXPECTED_BOT_USERNAME", "NuvexaCheckBot").strip().lstrip("@")
+    expected = env.get("TELEGRAM_EXPECTED_BOT_USERNAME", "ZhaoCai2026Bot").strip().lstrip("@")
     if not expected:
         raise TelegramError("Missing TELEGRAM_EXPECTED_BOT_USERNAME.")
     account = call_api(token, "getMe")

@@ -9,6 +9,15 @@ import bridge
 
 
 class TelegramBridgeTests(unittest.TestCase):
+    def test_rejects_previous_bot_before_group_access_or_send(self):
+        env = {"TELEGRAM_BOT_TOKEN": "secret", "TELEGRAM_CHAT_ID": "-10012345"}
+        with patch.object(bridge, "call_api", return_value={
+            "id": 99, "is_bot": True, "username": "NuvexaCheckBot"
+        }) as api:
+            with self.assertRaisesRegex(bridge.TelegramError, "username mismatch"):
+                bridge.send_group_news("===== 资讯助理 =====\n连接测试。", env)
+        self.assertEqual([call.args[1] for call in api.call_args_list], ["getMe"])
+
     def test_rejects_non_group_destination(self):
         with patch.object(bridge, "call_api", return_value={"id": 3, "type": "private"}):
             with self.assertRaises(bridge.TelegramError):
@@ -38,7 +47,7 @@ class TelegramBridgeTests(unittest.TestCase):
         def fake_api(token, method, body=None):
             calls.append((token, method, body))
             if method == "getMe":
-                return {"id": 99, "is_bot": True, "username": "NuvexaCheckBot"}
+                return {"id": 99, "is_bot": True, "username": "ZhaoCai2026Bot"}
             if method == "getChat":
                 return {"id": -10012345, "type": "supergroup", "title": "🌐~~~资讯快报"}
             if method == "sendMessage":
@@ -62,10 +71,10 @@ class TelegramBridgeTests(unittest.TestCase):
 
     def test_accepts_selected_bot_username(self):
         with patch.object(bridge, "call_api", return_value={
-            "id": 100, "is_bot": True, "username": "NuvexaCheckBot"
+            "id": 100, "is_bot": True, "username": "ZhaoCai2026Bot"
         }):
             account = bridge.verify_bot_identity("secret")
-        self.assertEqual(account["username"], "NuvexaCheckBot")
+        self.assertEqual(account["username"], "ZhaoCai2026Bot")
 
     def test_missing_credentials(self):
         with self.assertRaises(bridge.TelegramError):
@@ -78,7 +87,7 @@ class TelegramBridgeTests(unittest.TestCase):
         ]
         def fake_api(token, method, body=None):
             if method == "getMe":
-                return {"id": 99, "is_bot": True, "username": "NuvexaCheckBot"}
+                return {"id": 99, "is_bot": True, "username": "ZhaoCai2026Bot"}
             if method == "getUpdates":
                 return updates
             raise AssertionError(method)

@@ -23,7 +23,7 @@ from morning_romania_us import build as build_romania_us
 
 TZ = ZoneInfo('Europe/Bucharest')
 DESTINATION = '🌐~~~资讯快报'
-BOT = 'NuvexaCheckBot'
+BOT = 'ZhaoCai2026Bot'
 DOC_ID = '1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM'
 SPEAKER = re.compile(r'(?m)^[ \t]*(\d{1,2})(男|女)[：:]')
 

@@ -1,3 +1,7 @@
+## 2026-10-17 用户指定群发送机器人
+
+用户指定改用 `@ZhaoCai2026Bot`，沿用现有 `TELEGRAM_CHAT_ID` 和「🌐~~~资讯快报」。群发送入口的身份校验已同步；Secret 必须属于新机器人。切换是否成功须以本次 getMe、getChat 及实际 message_id 为准。下方旧机器人及送达记录保留为历史，不代表新机器人已验收。私人测试工具不属于此次群发送切换范围。
+
 ## 2026-10-16 发布门禁修订
 
 本目录仅保留原标题采集预览。工作流只能dry_run运行，send_message与非dry_run直接拒绝发送，不能通过TELEGRAM_NEWS_ENABLED绕过原文核验。正式中文资讯助理消息统一由integrations/telegram的已审核账本发布链路处理，使用@NuvexaCheckBot及「资讯快报」。私人连接检测工具只作显式连接测试，不构成正式新闻发布入口。

@@ -130,7 +130,7 @@ jobs:
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       TELEGRAM_MESSAGE_THREAD_ID: ${{ vars.TELEGRAM_MESSAGE_THREAD_ID }}
-      TELEGRAM_EXPECTED_BOT_USERNAME: NuvexaCheckBot
+      TELEGRAM_EXPECTED_BOT_USERNAME: ZhaoCai2026Bot
       TELEGRAM_EXPECTED_GROUP_TITLE: 🌐~~~资讯快报
     steps:
       - uses: actions/checkout@v4
@@ -159,7 +159,7 @@ jobs:
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       TELEGRAM_MESSAGE_THREAD_ID: ${{ vars.TELEGRAM_MESSAGE_THREAD_ID }}
-      TELEGRAM_EXPECTED_BOT_USERNAME: NuvexaCheckBot
+      TELEGRAM_EXPECTED_BOT_USERNAME: ZhaoCai2026Bot
       TELEGRAM_EXPECTED_GROUP_TITLE: 🌐~~~资讯快报
     steps:
       - uses: actions/checkout@v4

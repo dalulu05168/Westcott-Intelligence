@@ -206,7 +206,7 @@ class OriginalArticleTests(unittest.TestCase):
         def call(token, method, body=None):
             calls.append((method, body))
             if method == "getMe":
-                return {"id": 88, "is_bot": True, "username": "NuvexaCheckBot"}
+                return {"id": 88, "is_bot": True, "username": "ZhaoCai2026Bot"}
             if method == "getChat":
                 return {"id": -1001, "type": "supergroup", "title": "🌐~~~资讯快报"}
             if method == "sendPhoto":
@@ -228,7 +228,7 @@ class OriginalArticleTests(unittest.TestCase):
         def call(token, method, body=None):
             calls.append((method, body))
             if method == "getMe":
-                return {"id": 88, "is_bot": True, "username": "NuvexaCheckBot"}
+                return {"id": 88, "is_bot": True, "username": "ZhaoCai2026Bot"}
             if method == "getChat":
                 return {"id": -1001, "type": "supergroup", "title": "🌐~~~资讯快报"}
             if method == "sendMessage":

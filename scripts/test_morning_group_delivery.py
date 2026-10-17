@@ -53,7 +53,7 @@ def approved():
     romania = valid_ro()
     result = build_ro(NOW, evidence, romania)
     return dict(status='APPROVED_FOR_MORNING_GROUP', local_date='2026-10-19',
-        target_group_title=DESTINATION, bot_username='NuvexaCheckBot',
+        target_group_title=DESTINATION, bot_username='ZhaoCai2026Bot',
         formal_story=dict(document_id=DOC_ID, revision_id='fixture-docs-revision',
                           retrieved_at='2026-10-19T07:12:00+03:00'),
         editorial_approval=dict(approved_by='fixture-editor',
