@@ -1,0 +1,104 @@
+{
+  "identity": {
+    "id": "26",
+    "name": "Daria Ana Palade",
+    "active": true,
+    "profile_path": "skills/p004-chat-suite/characters/profiles/26.json",
+    "legacy_memory_path": "memory/long-term/members/26.json",
+    "derived_memory_path": "memory/derived/v2.1/members/26.json",
+    "history_status": "LOADED_ADOPTED_EVIDENCE",
+    "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+    "evidence_ids": [
+      "M061",
+      "M069",
+      "20261015-t.huff85y7dlym-B016-0"
+    ],
+    "state": {
+      "knowledge": "NOT_INFERRED",
+      "homework": "NOT_INFERRED"
+    }
+  },
+  "evidence_store": "memory/derived/v2.1/effective-history.json",
+  "evidence_ids": [
+    "M061",
+    "M069",
+    "20261015-t.huff85y7dlym-B016-0"
+  ],
+  "recent_examples": [
+    {
+      "speaker_id": "26",
+      "source_label": "26女",
+      "source_start_line": 180,
+      "source_end_line": 181,
+      "text": "点赞👍 （给上句教授话点赞，不发信息表情）",
+      "id": "M061",
+      "role_gender_valid": true,
+      "person_name": "Daria Ana Palade",
+      "node": "EVENING",
+      "kind": "reaction",
+      "status": "ADOPTED_IN_SUBMITTED_TRANSCRIPT",
+      "warnings": [],
+      "identity_fields": {
+        "name": "Daria Ana Palade",
+        "gender": "女",
+        "age": 38,
+        "occupation": "房地产开发商",
+        "investment_years": 5,
+        "capital_scale": "大额投资",
+        "student_seniority": "新学员"
+      },
+      "canonical_label": "26女：",
+      "topic": "BREAKOUT_LESSON",
+      "source_hash_sha256": "722578f9804da6b0ee0003bf6b878c174beafb2f94b1c03c22405b9b1438cea8",
+      "date": "2026-10-12"
+    },
+    {
+      "speaker_id": "26",
+      "source_label": "26女",
+      "source_start_line": 203,
+      "source_end_line": 204,
+      "text": "我认为突破后的确认更关键。价格短暂突破阻力位，并不代表趋势已经形成，还要观察后续能否站稳关键区域，以及成交量和价格走势是否相互配合。",
+      "id": "M069",
+      "role_gender_valid": true,
+      "person_name": "Daria Ana Palade",
+      "node": "EVENING",
+      "kind": "message",
+      "status": "ADOPTED_IN_SUBMITTED_TRANSCRIPT",
+      "warnings": [],
+      "identity_fields": {
+        "name": "Daria Ana Palade",
+        "gender": "女",
+        "age": 38,
+        "occupation": "房地产开发商",
+        "investment_years": 5,
+        "capital_scale": "大额投资",
+        "student_seniority": "新学员"
+      },
+      "canonical_label": "26女：",
+      "topic": "BREAKOUT_LESSON",
+      "source_hash_sha256": "f1a007115f82c69d55f1bef24e3060fcad19ede690d17a8c08b92f77ff60062e",
+      "date": "2026-10-12"
+    },
+    {
+      "id": "20261015-t.huff85y7dlym-B016-0",
+      "speaker_id": "26",
+      "gender": "女",
+      "text": "能源这块确实没有叫人失望。",
+      "source_label": "26女：",
+      "source_tab_id": "t.huff85y7dlym",
+      "source_offset": 1188,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-15",
+      "node": "MORNING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    }
+  ],
+  "dynamic_records": [],
+  "real_trade_verified": false,
+  "source_snapshot": "memory/sources/google-doc-20261017.json"
+}

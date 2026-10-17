@@ -1,0 +1,63 @@
+[
+  {
+    "id": "25-FOJE-20261016",
+    "member_id": "25",
+    "symbol": "FOJE",
+    "action": "SELF_REPORTED_HOLD_AND_PARTIAL_SALE",
+    "quantity": null,
+    "summary": "自述32.3 RON附近买入、33附近卖部分，仍持有；卖早后悔、犹豫是否加仓；未确认再次加仓。B028另自述之前那笔赚到一点，金额未知，不等于核实真实收益。",
+    "unresolved": ["是否加仓", "剩余数量未知"],
+    "evidence_ids": ["20261016-t.gbfri5r8vs3o-B020-0", "20261016-t.gbfri5r8vs3o-B024-0", "20261016-t.gbfri5r8vs3o-B028-0", "20261016-t.gbfri5r8vs3o-B031-0"],
+    "reviewer": "codex-editor-source-read-20261017",
+    "evidence_support_reviewed": true,
+    "real_trade_verified": false
+  },
+  {
+    "id": "38-FOJE-20261016",
+    "member_id": "38",
+    "symbol": "FOJE",
+    "action": "SELF_REPORTED_BUY",
+    "quantity": null,
+    "summary": "上午称买进一些，下午明确FOJE；两次描述同一参与状态，不推断为两次买入。忙整理教学材料，有犹豫和不想错过的情绪。",
+    "evidence_ids": ["20261016-t.gbfri5r8vs3o-B025-0", "20261016-t.gbfri5r8vs3o-B046-0"],
+    "reviewer": "codex-editor-source-read-20261017",
+    "evidence_support_reviewed": true,
+    "real_trade_verified": false
+  },
+  {
+    "id": "34-AA-20261016",
+    "member_id": "34",
+    "symbol": "AA",
+    "action": "SELF_REPORTED_BUY",
+    "quantity": null,
+    "summary": "AA研究之后自述已买一点，晚间再次确认，担心错过；数量、盈利、后续卖出未知。标的关联由上下文审核。",
+    "evidence_ids": ["20261016-t.gbfri5r8vs3o-B073-0", "20261016-t.gbfri5r8vs3o-B079-0"],
+    "reviewer": "codex-editor-source-read-20261017",
+    "evidence_support_reviewed": true,
+    "real_trade_verified": false
+  },
+  {
+    "id": "40-AA-20261016",
+    "member_id": "40",
+    "symbol": "AA",
+    "action": "CONDITIONAL_PLAN_NOT_PURCHASE",
+    "quantity": null,
+    "summary": "放量突破或回踩42美元站稳后再考虑；没有自述成交。",
+    "evidence_ids": ["20261016-t.gbfri5r8vs3o-B074-0"],
+    "reviewer": "codex-editor-source-read-20261017",
+    "evidence_support_reviewed": true,
+    "real_trade_verified": false
+  },
+  {
+    "id": "MACD-20261016-completed",
+    "course_id": "MACD-20261016",
+    "course_status": "COMPLETED_IN_FORMAL_STORY",
+    "images": "THREE_REFERENCED_IN_TEXT_DELIVERY_NOT_VERIFIED",
+    "homework": "NO_SEPARATE_ASSIGNMENT_CONFIRMED_AT_CLOSE",
+    "summary": "DIF、DEA、柱状图、交叉、零轴、背离已讲，最后举例后告别；不把课程计划或图片台词当实际图片送达。",
+    "evidence_ids": ["20261016-t.gbfri5r8vs3o-B084-0", "20261016-t.gbfri5r8vs3o-B086-0", "20261016-t.gbfri5r8vs3o-B110-0", "20261016-t.gbfri5r8vs3o-B111-1"],
+    "reviewer": "codex-editor-source-read-20261017",
+    "evidence_support_reviewed": true,
+    "real_trade_verified": false
+  }
+]

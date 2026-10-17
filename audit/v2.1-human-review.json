@@ -1,0 +1,15 @@
+{
+  "version": "2.1",
+  "status": "PENDING_HUMAN_REVIEW",
+  "scope": "Current source interpretation and future candidate scenes; not a publication authorization",
+  "dimensions": {
+    "distinct_member_voices": null,
+    "natural_reply_motivation_and_order": null,
+    "emotional_and_learning_continuity": null,
+    "topic_progression_without_repetition": null,
+    "nonmechanical_names_and_gif_usage": null
+  },
+  "required_review_evidence": ["scene IDs", "reviewer", "observations per dimension", "source revision", "unresolved issues"],
+  "automatic_score_is_approval": false,
+  "note": "Heuristic cadence and similarity signals are prompts for editing, not grounds to invent conflict, force member replies or fill a GIF quota."
+}

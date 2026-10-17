@@ -1,0 +1,123 @@
+{
+  "identity": {
+    "id": "04",
+    "name": "Mihai Ion",
+    "active": true,
+    "profile_path": "skills/p004-chat-suite/characters/profiles/04.json",
+    "legacy_memory_path": "memory/long-term/members/04.json",
+    "derived_memory_path": "memory/derived/v2.1/members/04.json",
+    "history_status": "LOADED_ADOPTED_EVIDENCE",
+    "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+    "evidence_ids": [
+      "20261013-M012",
+      "20261013-M022",
+      "20261014-t.t7k4o87mkgzv-B012-0",
+      "20261014-t.t7k4o87mkgzv-B022-0",
+      "20261015-t.huff85y7dlym-B029-0"
+    ],
+    "state": {
+      "knowledge": "NOT_INFERRED",
+      "homework": "NOT_INFERRED"
+    }
+  },
+  "evidence_store": "memory/derived/v2.1/effective-history.json",
+  "evidence_ids": [
+    "20261013-M012",
+    "20261013-M022",
+    "20261014-t.t7k4o87mkgzv-B012-0",
+    "20261014-t.t7k4o87mkgzv-B022-0",
+    "20261015-t.huff85y7dlym-B029-0"
+  ],
+  "recent_examples": [
+    {
+      "speaker_id": "04",
+      "source_label": "04男",
+      "gender": "男",
+      "node": "AFTERNOON",
+      "extracted_line": 86,
+      "text": "我做外贸，比较在意汇率和采购成本。两边一起波动，利润空间就容易受到挤压。",
+      "id": "20261013-M012",
+      "status": "ADOPTED_IN_USER_SUBMITTED_STORY",
+      "warnings": [],
+      "fictional_only": true,
+      "market_news_not_independently_verified": true,
+      "real_trade_not_inferred": true,
+      "date": "2026-10-13"
+    },
+    {
+      "speaker_id": "04",
+      "source_label": "04男",
+      "gender": "男",
+      "node": "AFTERNOON",
+      "extracted_line": 187,
+      "text": "买到了，等待成交。",
+      "id": "20261013-M022",
+      "status": "ADOPTED_IN_USER_SUBMITTED_STORY",
+      "warnings": [
+        "“买到了／等待成交”交易状态含糊",
+        "仅虚构脚本中的交易陈述，不作为真实持仓"
+      ],
+      "fictional_only": true,
+      "market_news_not_independently_verified": true,
+      "real_trade_not_inferred": true,
+      "date": "2026-10-13"
+    },
+    {
+      "id": "20261014-t.t7k4o87mkgzv-B012-0",
+      "speaker_id": "04",
+      "gender": "男",
+      "text": "我做外贸，比较在意汇率和采购成本。两边一起波动，利润空间就容易受到挤压。",
+      "source_label": "04男：",
+      "source_tab_id": "t.t7k4o87mkgzv",
+      "source_offset": 836,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-14",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261014-t.t7k4o87mkgzv-B022-0",
+      "speaker_id": "04",
+      "gender": "男",
+      "text": "买到了，等待成交。",
+      "source_label": "04男：",
+      "source_tab_id": "t.t7k4o87mkgzv",
+      "source_offset": 1776,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-14",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261015-t.huff85y7dlym-B029-0",
+      "speaker_id": "04",
+      "gender": "男",
+      "text": "是啊。我们做外贸的，运输费用上涨一点，订单利润就可能少一点。",
+      "source_label": "04男：",
+      "source_tab_id": "t.huff85y7dlym",
+      "source_offset": 2124,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-15",
+      "node": "MORNING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    }
+  ],
+  "dynamic_records": [],
+  "real_trade_verified": false,
+  "source_snapshot": "memory/sources/google-doc-20261017.json"
+}

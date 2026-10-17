@@ -1,0 +1,1294 @@
+{
+  "schema": "65-member-entrypoints-v2.1",
+  "source_snapshot": "memory/sources/google-doc-20261017.json",
+  "source_sha256": "3e28df95a55dad11e739f659287147b6a336075113f8f18bd1b8e98fbe72adf7",
+  "members": {
+    "01": {
+      "id": "01",
+      "name": "Ion Dumitrescu",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/01.json",
+      "legacy_memory_path": "memory/long-term/members/01.json",
+      "derived_memory_path": "memory/derived/v2.1/members/01.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "20261013-M025",
+        "20261014-t.t7k4o87mkgzv-B025-0",
+        "20261016-t.gbfri5r8vs3o-B016-0",
+        "20261016-t.gbfri5r8vs3o-B081-0",
+        "20261016-t.gbfri5r8vs3o-B092-0",
+        "20261016-t.gbfri5r8vs3o-B111-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "02": {
+      "id": "02",
+      "name": "Rodica Gabriela Petrescu",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/02.json",
+      "legacy_memory_path": "memory/long-term/members/02.json",
+      "derived_memory_path": "memory/derived/v2.1/members/02.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "M006",
+        "20261013-M002",
+        "20261013-M013",
+        "20261014-t.t7k4o87mkgzv-B002-0",
+        "20261014-t.t7k4o87mkgzv-B013-0",
+        "20261015-t.huff85y7dlym-B002-0",
+        "20261015-t.huff85y7dlym-B022-0",
+        "20261015-t.huff85y7dlym-B055-0",
+        "20261016-t.gbfri5r8vs3o-B008-0",
+        "20261016-t.gbfri5r8vs3o-B036-0",
+        "20261016-t.gbfri5r8vs3o-B042-0",
+        "20261016-t.gbfri5r8vs3o-B061-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "03": {
+      "id": "03",
+      "name": "Andrei Andrieș",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/03.json",
+      "legacy_memory_path": "memory/long-term/members/03.json",
+      "derived_memory_path": "memory/derived/v2.1/members/03.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "M002",
+        "M009",
+        "M011",
+        "20261016-t.gbfri5r8vs3o-B021-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "04": {
+      "id": "04",
+      "name": "Mihai Ion",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/04.json",
+      "legacy_memory_path": "memory/long-term/members/04.json",
+      "derived_memory_path": "memory/derived/v2.1/members/04.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "20261013-M012",
+        "20261013-M022",
+        "20261014-t.t7k4o87mkgzv-B012-0",
+        "20261014-t.t7k4o87mkgzv-B022-0",
+        "20261015-t.huff85y7dlym-B029-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "05": {
+      "id": "05",
+      "name": "Vasile Anton Roșu",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/05.json",
+      "legacy_memory_path": "memory/long-term/members/05.json",
+      "derived_memory_path": "memory/derived/v2.1/members/05.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "20261013-M005",
+        "20261013-M068",
+        "20261014-t.t7k4o87mkgzv-B005-0",
+        "20261014-t.t7k4o87mkgzv-B068-0",
+        "20261015-t.huff85y7dlym-B037-0",
+        "20261015-t.huff85y7dlym-B045-0",
+        "20261015-t.huff85y7dlym-B050-0",
+        "20261015-t.huff85y7dlym-B058-0",
+        "20261015-t.huff85y7dlym-B064-0",
+        "20261015-t.huff85y7dlym-B077-0",
+        "20261015-t.huff85y7dlym-B098-0",
+        "20261016-t.gbfri5r8vs3o-B005-0",
+        "20261016-t.gbfri5r8vs3o-B013-0",
+        "20261016-t.gbfri5r8vs3o-B018-0",
+        "20261016-t.gbfri5r8vs3o-B023-0",
+        "20261016-t.gbfri5r8vs3o-B038-0",
+        "20261016-t.gbfri5r8vs3o-B052-0",
+        "20261016-t.gbfri5r8vs3o-B060-0",
+        "20261016-t.gbfri5r8vs3o-B097-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "06": {
+      "id": "06",
+      "name": "Andrei Iulian Popescu",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/06.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/06.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "07": {
+      "id": "07",
+      "name": "Elena Oancea",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/07.json",
+      "legacy_memory_path": "memory/long-term/members/07.json",
+      "derived_memory_path": "memory/derived/v2.1/members/07.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "M033",
+        "M048",
+        "20261013-M009",
+        "20261013-M014",
+        "20261013-M026",
+        "20261014-t.t7k4o87mkgzv-B009-0",
+        "20261014-t.t7k4o87mkgzv-B014-0",
+        "20261014-t.t7k4o87mkgzv-B026-0",
+        "20261015-t.huff85y7dlym-B014-0",
+        "20261016-t.gbfri5r8vs3o-B022-0",
+        "20261016-t.gbfri5r8vs3o-B059-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "08": {
+      "id": "08",
+      "name": "Daniel Paraschiv",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/08.json",
+      "legacy_memory_path": "memory/long-term/members/08.json",
+      "derived_memory_path": "memory/derived/v2.1/members/08.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "M003",
+        "20261013-M008",
+        "20261013-M017",
+        "20261014-t.t7k4o87mkgzv-B008-0",
+        "20261014-t.t7k4o87mkgzv-B017-0",
+        "20261015-t.huff85y7dlym-B009-0",
+        "20261015-t.huff85y7dlym-B040-0",
+        "20261016-t.gbfri5r8vs3o-B082-0",
+        "20261016-t.gbfri5r8vs3o-B093-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "09": {
+      "id": "09",
+      "name": "Gheorghe Mardare",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/09.json",
+      "legacy_memory_path": "memory/long-term/members/09.json",
+      "derived_memory_path": "memory/derived/v2.1/members/09.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "M024",
+        "20261013-M030",
+        "20261013-M053",
+        "20261014-t.t7k4o87mkgzv-B030-0",
+        "20261014-t.t7k4o87mkgzv-B053-0",
+        "20261015-t.huff85y7dlym-B003-0",
+        "20261015-t.huff85y7dlym-B007-0",
+        "20261015-t.huff85y7dlym-B020-0",
+        "20261015-t.huff85y7dlym-B047-0",
+        "20261015-t.huff85y7dlym-B053-0",
+        "20261015-t.huff85y7dlym-B057-0",
+        "20261015-t.huff85y7dlym-B068-0",
+        "20261015-t.huff85y7dlym-B076-0",
+        "20261015-t.huff85y7dlym-B086-0",
+        "20261015-t.huff85y7dlym-B102-0",
+        "20261016-t.gbfri5r8vs3o-B007-0",
+        "20261016-t.gbfri5r8vs3o-B011-0",
+        "20261016-t.gbfri5r8vs3o-B039-0",
+        "20261016-t.gbfri5r8vs3o-B043-0",
+        "20261016-t.gbfri5r8vs3o-B050-0",
+        "20261016-t.gbfri5r8vs3o-B064-0",
+        "20261016-t.gbfri5r8vs3o-B077-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "10": {
+      "id": "10",
+      "name": "Mirela Pană",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/10.json",
+      "legacy_memory_path": "memory/long-term/members/10.json",
+      "derived_memory_path": "memory/derived/v2.1/members/10.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "20261013-M029",
+        "20261013-M038",
+        "20261014-t.t7k4o87mkgzv-B029-0",
+        "20261014-t.t7k4o87mkgzv-B038-0",
+        "20261015-t.huff85y7dlym-B017-0",
+        "20261015-t.huff85y7dlym-B026-0",
+        "20261015-t.huff85y7dlym-B079-0",
+        "20261015-t.huff85y7dlym-B084-0",
+        "20261015-t.huff85y7dlym-B091-0",
+        "20261015-t.huff85y7dlym-B097-0",
+        "20261016-t.gbfri5r8vs3o-B048-0",
+        "20261016-t.gbfri5r8vs3o-B054-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "11": {
+      "id": "11",
+      "name": "Cristian Mitroi",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/11.json",
+      "legacy_memory_path": "memory/long-term/members/11.json",
+      "derived_memory_path": "memory/derived/v2.1/members/11.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "12": {
+      "id": "12",
+      "name": "Constantin Vlad",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/12.json",
+      "legacy_memory_path": "memory/long-term/members/12.json",
+      "derived_memory_path": "memory/derived/v2.1/members/12.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "20261013-M042",
+        "20261014-t.t7k4o87mkgzv-B042-0",
+        "20261015-t.huff85y7dlym-B072-0",
+        "20261016-t.gbfri5r8vs3o-B009-0",
+        "20261016-t.gbfri5r8vs3o-B019-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "13": {
+      "id": "13",
+      "name": "Catalin Cocoș",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/13.json",
+      "legacy_memory_path": "memory/long-term/members/13.json",
+      "derived_memory_path": "memory/derived/v2.1/members/13.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "M062",
+        "M070",
+        "M074",
+        "20261016-t.gbfri5r8vs3o-B026-0",
+        "20261016-t.gbfri5r8vs3o-B062-0",
+        "20261016-t.gbfri5r8vs3o-B066-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "14": {
+      "id": "14",
+      "name": "Daniel Badea",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/14.json",
+      "legacy_memory_path": "memory/long-term/members/14.json",
+      "derived_memory_path": "memory/derived/v2.1/members/14.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "20261013-M006",
+        "20261013-M010",
+        "20261013-M023",
+        "20261013-M045",
+        "20261013-M061",
+        "20261014-t.t7k4o87mkgzv-B006-0",
+        "20261014-t.t7k4o87mkgzv-B010-0",
+        "20261014-t.t7k4o87mkgzv-B023-0",
+        "20261014-t.t7k4o87mkgzv-B045-0",
+        "20261014-t.t7k4o87mkgzv-B061-0",
+        "20261014-t.t7k4o87mkgzv-B063-0",
+        "20261016-t.gbfri5r8vs3o-B085-0",
+        "20261016-t.gbfri5r8vs3o-B098-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "15": {
+      "id": "15",
+      "name": "Mihai Lipa",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/15.json",
+      "legacy_memory_path": "memory/long-term/members/15.json",
+      "derived_memory_path": "memory/derived/v2.1/members/15.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "20261014-t.t7k4o87mkgzv-B060-0",
+        "20261015-t.huff85y7dlym-B025-0",
+        "20261015-t.huff85y7dlym-B056-0",
+        "20261015-t.huff85y7dlym-B096-0",
+        "20261016-t.gbfri5r8vs3o-B105-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "16": {
+      "id": "16",
+      "name": "Emma Andreea Tănase",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/16.json",
+      "legacy_memory_path": "memory/long-term/members/16.json",
+      "derived_memory_path": "memory/derived/v2.1/members/16.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "17": {
+      "id": "17",
+      "name": "Catalina Lăcătuș",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/17.json",
+      "legacy_memory_path": "memory/long-term/members/17.json",
+      "derived_memory_path": "memory/derived/v2.1/members/17.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "M035",
+        "M058",
+        "M072"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "18": {
+      "id": "18",
+      "name": "Sergiu Manolache",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/18.json",
+      "legacy_memory_path": "memory/long-term/members/18.json",
+      "derived_memory_path": "memory/derived/v2.1/members/18.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "M016",
+        "20261013-M047",
+        "20261014-t.t7k4o87mkgzv-B047-0",
+        "20261015-t.huff85y7dlym-B094-0",
+        "20261016-t.gbfri5r8vs3o-B004-0",
+        "20261016-t.gbfri5r8vs3o-B012-0",
+        "20261016-t.gbfri5r8vs3o-B017-0",
+        "20261016-t.gbfri5r8vs3o-B034-0",
+        "20261016-t.gbfri5r8vs3o-B049-0",
+        "20261016-t.gbfri5r8vs3o-B055-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "19": {
+      "id": "19",
+      "name": "Matei Cocoș",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/19.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/19.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [
+        "20261016-t.gbfri5r8vs3o-B014-0",
+        "20261016-t.gbfri5r8vs3o-B040-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "20": {
+      "id": "20",
+      "name": "Andrei Trandafir",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/20.json",
+      "legacy_memory_path": "memory/long-term/members/20.json",
+      "derived_memory_path": "memory/derived/v2.1/members/20.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "M007",
+        "M041",
+        "20261013-M003",
+        "20261013-M016",
+        "20261014-t.t7k4o87mkgzv-B003-0",
+        "20261014-t.t7k4o87mkgzv-B016-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "21": {
+      "id": "21",
+      "name": "Ana-Maria Mitroi",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/21.json",
+      "legacy_memory_path": "memory/long-term/members/21.json",
+      "derived_memory_path": "memory/derived/v2.1/members/21.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "M020",
+        "M040",
+        "20261013-M057",
+        "20261013-M059",
+        "20261014-t.t7k4o87mkgzv-B057-0",
+        "20261014-t.t7k4o87mkgzv-B059-0",
+        "20261015-t.huff85y7dlym-B011-0",
+        "20261015-t.huff85y7dlym-B015-0",
+        "20261015-t.huff85y7dlym-B039-0",
+        "20261015-t.huff85y7dlym-B054-0",
+        "20261015-t.huff85y7dlym-B060-0",
+        "20261015-t.huff85y7dlym-B065-0",
+        "20261015-t.huff85y7dlym-B069-0",
+        "20261015-t.huff85y7dlym-B103-0",
+        "20261016-t.gbfri5r8vs3o-B002-0",
+        "20261016-t.gbfri5r8vs3o-B010-0",
+        "20261016-t.gbfri5r8vs3o-B035-0",
+        "20261016-t.gbfri5r8vs3o-B056-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "22": {
+      "id": "22",
+      "name": "Ion Dorian Cozma",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/22.json",
+      "legacy_memory_path": "memory/long-term/members/22.json",
+      "derived_memory_path": "memory/derived/v2.1/members/22.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "20261013-M052",
+        "20261013-M070",
+        "20261014-t.t7k4o87mkgzv-B052-0",
+        "20261014-t.t7k4o87mkgzv-B070-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "23": {
+      "id": "23",
+      "name": "Alin Gabriel Vasile",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/23.json",
+      "legacy_memory_path": "memory/long-term/members/23.json",
+      "derived_memory_path": "memory/derived/v2.1/members/23.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "20261013-M048",
+        "20261014-t.t7k4o87mkgzv-B048-0",
+        "20261015-t.huff85y7dlym-B005-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "24": {
+      "id": "24",
+      "name": "Gheorghe Badea",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/24.json",
+      "legacy_memory_path": "memory/long-term/members/24.json",
+      "derived_memory_path": "memory/derived/v2.1/members/24.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "20261013-M049",
+        "20261014-t.t7k4o87mkgzv-B049-0",
+        "20261015-t.huff85y7dlym-B033-0",
+        "20261015-t.huff85y7dlym-B038-0",
+        "20261015-t.huff85y7dlym-B048-0",
+        "20261016-t.gbfri5r8vs3o-B053-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "25": {
+      "id": "25",
+      "name": "Cristian Dragoș Necula",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/25.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/25.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [
+        "20261016-t.gbfri5r8vs3o-B020-0",
+        "20261016-t.gbfri5r8vs3o-B024-0",
+        "20261016-t.gbfri5r8vs3o-B028-0",
+        "20261016-t.gbfri5r8vs3o-B031-0",
+        "20261016-t.gbfri5r8vs3o-B045-0",
+        "20261016-t.gbfri5r8vs3o-B108-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "26": {
+      "id": "26",
+      "name": "Daria Ana Palade",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/26.json",
+      "legacy_memory_path": "memory/long-term/members/26.json",
+      "derived_memory_path": "memory/derived/v2.1/members/26.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "M061",
+        "M069",
+        "20261015-t.huff85y7dlym-B016-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "27": {
+      "id": "27",
+      "name": "Elena Oprea",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/27.json",
+      "legacy_memory_path": "memory/long-term/members/27.json",
+      "derived_memory_path": "memory/derived/v2.1/members/27.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "M015",
+        "M018",
+        "M036",
+        "M039",
+        "20261013-M065",
+        "20261014-t.t7k4o87mkgzv-B065-0",
+        "20261015-t.huff85y7dlym-B035-0",
+        "20261015-t.huff85y7dlym-B041-0",
+        "20261015-t.huff85y7dlym-B093-0",
+        "20261016-t.gbfri5r8vs3o-B087-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "28": {
+      "id": "28",
+      "name": "Daniel Ioan",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/28.json",
+      "legacy_memory_path": "memory/long-term/members/28.json",
+      "derived_memory_path": "memory/derived/v2.1/members/28.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "20261015-t.huff85y7dlym-B012-0",
+        "20261015-t.huff85y7dlym-B018-0",
+        "20261015-t.huff85y7dlym-B021-0",
+        "20261015-t.huff85y7dlym-B080-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "29": {
+      "id": "29",
+      "name": "Ion Tiberiu Pană",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/29.json",
+      "legacy_memory_path": "memory/long-term/members/29.json",
+      "derived_memory_path": "memory/derived/v2.1/members/29.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "20261013-M019",
+        "20261013-M021",
+        "20261014-t.t7k4o87mkgzv-B019-0",
+        "20261014-t.t7k4o87mkgzv-B021-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "30": {
+      "id": "30",
+      "name": "Victor Deliu",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/30.json",
+      "legacy_memory_path": "memory/long-term/members/30.json",
+      "derived_memory_path": "memory/derived/v2.1/members/30.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "M021",
+        "M023",
+        "M042",
+        "M050",
+        "20261013-M033",
+        "20261014-t.t7k4o87mkgzv-B033-0",
+        "20261016-t.gbfri5r8vs3o-B058-0",
+        "20261016-t.gbfri5r8vs3o-B063-0",
+        "20261016-t.gbfri5r8vs3o-B067-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "31": {
+      "id": "31",
+      "name": "Daniel Lipa",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/31.json",
+      "legacy_memory_path": "memory/long-term/members/31.json",
+      "derived_memory_path": "memory/derived/v2.1/members/31.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "20261013-M066",
+        "20261014-t.t7k4o87mkgzv-B066-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "32": {
+      "id": "32",
+      "name": "Victor Mateescu",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/32.json",
+      "legacy_memory_path": "memory/long-term/members/32.json",
+      "derived_memory_path": "memory/derived/v2.1/members/32.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "20261013-M039",
+        "20261014-t.t7k4o87mkgzv-B039-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "33": {
+      "id": "33",
+      "name": "Cristian Roșca",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/33.json",
+      "legacy_memory_path": "memory/long-term/members/33.json",
+      "derived_memory_path": "memory/derived/v2.1/members/33.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "M004",
+        "M010",
+        "M013",
+        "20261016-t.gbfri5r8vs3o-B078-0",
+        "20261016-t.gbfri5r8vs3o-B109-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "34": {
+      "id": "34",
+      "name": "Daniel Deliu",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/34.json",
+      "legacy_memory_path": "memory/long-term/members/34.json",
+      "derived_memory_path": "memory/derived/v2.1/members/34.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "20261015-t.huff85y7dlym-B024-0",
+        "20261015-t.huff85y7dlym-B052-0",
+        "20261015-t.huff85y7dlym-B059-0",
+        "20261015-t.huff85y7dlym-B062-0",
+        "20261015-t.huff85y7dlym-B066-0",
+        "20261015-t.huff85y7dlym-B078-0",
+        "20261015-t.huff85y7dlym-B090-0",
+        "20261016-t.gbfri5r8vs3o-B047-0",
+        "20261016-t.gbfri5r8vs3o-B073-0",
+        "20261016-t.gbfri5r8vs3o-B079-0",
+        "20261016-t.gbfri5r8vs3o-B088-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "35": {
+      "id": "35",
+      "name": "Daniel Cozma",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/35.json",
+      "legacy_memory_path": "memory/long-term/members/35.json",
+      "derived_memory_path": "memory/derived/v2.1/members/35.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "M049",
+        "M063",
+        "20261013-M034",
+        "20261013-M043",
+        "20261014-t.t7k4o87mkgzv-B034-0",
+        "20261014-t.t7k4o87mkgzv-B043-0",
+        "20261015-t.huff85y7dlym-B006-0",
+        "20261015-t.huff85y7dlym-B010-0",
+        "20261015-t.huff85y7dlym-B023-0",
+        "20261015-t.huff85y7dlym-B028-0",
+        "20261015-t.huff85y7dlym-B046-0",
+        "20261015-t.huff85y7dlym-B051-0",
+        "20261015-t.huff85y7dlym-B063-0",
+        "20261015-t.huff85y7dlym-B067-0",
+        "20261015-t.huff85y7dlym-B073-0",
+        "20261015-t.huff85y7dlym-B092-0",
+        "20261016-t.gbfri5r8vs3o-B103-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "36": {
+      "id": "36",
+      "name": "Andrei Calin Tolontan",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/36.json",
+      "legacy_memory_path": "memory/long-term/members/36.json",
+      "derived_memory_path": "memory/derived/v2.1/members/36.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "20261016-t.gbfri5r8vs3o-B072-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "37": {
+      "id": "37",
+      "name": "Mihaela Acatrinei",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/37.json",
+      "legacy_memory_path": "memory/long-term/members/37.json",
+      "derived_memory_path": "memory/derived/v2.1/members/37.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "M034",
+        "20261013-M044",
+        "20261014-t.t7k4o87mkgzv-B044-0",
+        "20261015-t.huff85y7dlym-B034-0",
+        "20261015-t.huff85y7dlym-B044-0",
+        "20261015-t.huff85y7dlym-B074-0",
+        "20261015-t.huff85y7dlym-B082-0",
+        "20261015-t.huff85y7dlym-B101-0",
+        "20261016-t.gbfri5r8vs3o-B102-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "38": {
+      "id": "38",
+      "name": "Victor Bădăuță",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/38.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/38.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [
+        "20261016-t.gbfri5r8vs3o-B025-0",
+        "20261016-t.gbfri5r8vs3o-B046-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "39": {
+      "id": "39",
+      "name": "Carmen Iulia Ioan",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/39.json",
+      "legacy_memory_path": "memory/long-term/members/39.json",
+      "derived_memory_path": "memory/derived/v2.1/members/39.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "20261013-M024",
+        "20261014-t.t7k4o87mkgzv-B024-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "40": {
+      "id": "40",
+      "name": "Radu Cozma",
+      "active": true,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/40.json",
+      "legacy_memory_path": "memory/long-term/members/40.json",
+      "derived_memory_path": "memory/derived/v2.1/members/40.json",
+      "history_status": "LOADED_ADOPTED_EVIDENCE",
+      "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+      "evidence_ids": [
+        "20261013-M040",
+        "20261014-t.t7k4o87mkgzv-B040-0",
+        "20261016-t.gbfri5r8vs3o-B029-0",
+        "20261016-t.gbfri5r8vs3o-B041-0",
+        "20261016-t.gbfri5r8vs3o-B074-0",
+        "20261016-t.gbfri5r8vs3o-B080-0"
+      ],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "41": {
+      "id": "41",
+      "name": "Matei Cojocaru",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/41.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/41.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "42": {
+      "id": "42",
+      "name": "Anca Alexandra Palade",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/42.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/42.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "43": {
+      "id": "43",
+      "name": "GEORGE AURELIAN Cotoi",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/43.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/43.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "44": {
+      "id": "44",
+      "name": "Mihai Lăcătuș",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/44.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/44.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "45": {
+      "id": "45",
+      "name": "Viorel oprea",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/45.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/45.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "46": {
+      "id": "46",
+      "name": "Andrei Petrescu",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/46.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/46.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "47": {
+      "id": "47",
+      "name": "Mariana Matei",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/47.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/47.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "48": {
+      "id": "48",
+      "name": "Benjamin-Emil stancu",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/48.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/48.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "49": {
+      "id": "49",
+      "name": "Ionuț Georgescu",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/49.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/49.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "50": {
+      "id": "50",
+      "name": "Cătălin Gabriel Vișan",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/50.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/50.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "51": {
+      "id": "51",
+      "name": "Cosmin-George Musteață",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/51.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/51.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "52": {
+      "id": "52",
+      "name": "Vasile Andrei Avădenei",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/52.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/52.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "53": {
+      "id": "53",
+      "name": "Alexandru Gabriel Chivu",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/53.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/53.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "54": {
+      "id": "54",
+      "name": "Teodor Lipai",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/54.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/54.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "55": {
+      "id": "55",
+      "name": "Cosmin-Tomel Marinca",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/55.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/55.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "56": {
+      "id": "56",
+      "name": "Mircea Alexandru Armegioiu",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/56.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/56.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "57": {
+      "id": "57",
+      "name": "Loredana Trandafir",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/57.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/57.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "58": {
+      "id": "58",
+      "name": "Ion Carp",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/58.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/58.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "59": {
+      "id": "59",
+      "name": "Corin Bejan",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/59.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/59.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "60": {
+      "id": "60",
+      "name": "Constantin Dumitrescu",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/60.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/60.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "61": {
+      "id": "61",
+      "name": "Daniel Stroe",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/61.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/61.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "62": {
+      "id": "62",
+      "name": "Matei Cojocaru",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/62.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/62.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "63": {
+      "id": "63",
+      "name": "Cristian Mihai Lanca",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/63.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/63.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "64": {
+      "id": "64",
+      "name": "Daniel Gheorghe Dinu",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/64.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/64.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    },
+    "65": {
+      "id": "65",
+      "name": "Sergiu Negru",
+      "active": false,
+      "profile_path": "skills/p004-chat-suite/characters/profiles/65.json",
+      "legacy_memory_path": null,
+      "derived_memory_path": "memory/derived/v2.1/members/65.json",
+      "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
+      "memory_access": "NO_SEPARATE_FILE",
+      "evidence_ids": [],
+      "state": {
+        "knowledge": "NOT_INFERRED",
+        "homework": "NOT_INFERRED"
+      }
+    }
+  },
+  "freshness": "ARCHIVE_REQUIRES_LIVE_REFRESH"
+}

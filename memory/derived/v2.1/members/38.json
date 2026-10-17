@@ -1,0 +1,82 @@
+{
+  "identity": {
+    "id": "38",
+    "name": "Victor Bădăuță",
+    "active": true,
+    "profile_path": "skills/p004-chat-suite/characters/profiles/38.json",
+    "legacy_memory_path": null,
+    "derived_memory_path": "memory/derived/v2.1/members/38.json",
+    "history_status": "LOADED_ADOPTED_EVIDENCE",
+    "memory_access": "NO_SEPARATE_FILE",
+    "evidence_ids": [
+      "20261016-t.gbfri5r8vs3o-B025-0",
+      "20261016-t.gbfri5r8vs3o-B046-0"
+    ],
+    "state": {
+      "knowledge": "NOT_INFERRED",
+      "homework": "NOT_INFERRED"
+    }
+  },
+  "evidence_store": "memory/derived/v2.1/effective-history.json",
+  "evidence_ids": [
+    "20261016-t.gbfri5r8vs3o-B025-0",
+    "20261016-t.gbfri5r8vs3o-B046-0"
+  ],
+  "recent_examples": [
+    {
+      "id": "20261016-t.gbfri5r8vs3o-B025-0",
+      "speaker_id": "38",
+      "gender": "男",
+      "text": "我也买进了一些，说实话，心里还是有些犹豫。不过之前已经跟过好几次推荐了，也不想再错过这次机会，整体来说还是有信心的。",
+      "source_label": "38男：",
+      "source_tab_id": "t.gbfri5r8vs3o",
+      "source_offset": 1902,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-16",
+      "node": "MORNING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261016-t.gbfri5r8vs3o-B046-0",
+      "speaker_id": "38",
+      "gender": "男",
+      "text": "其实我也买了一点FOJE。不过今天下午忙着整理下周的教学材料，刚才才想起来打开行情看看。",
+      "source_label": "38男：",
+      "source_tab_id": "t.gbfri5r8vs3o",
+      "source_offset": 3326,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-16",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    }
+  ],
+  "dynamic_records": [
+    {
+      "id": "38-FOJE-20261016",
+      "member_id": "38",
+      "symbol": "FOJE",
+      "action": "SELF_REPORTED_BUY",
+      "quantity": null,
+      "summary": "上午称买进一些，下午明确FOJE；两次描述同一参与状态，不推断为两次买入。忙整理教学材料，有犹豫和不想错过的情绪。",
+      "evidence_ids": [
+        "20261016-t.gbfri5r8vs3o-B025-0",
+        "20261016-t.gbfri5r8vs3o-B046-0"
+      ],
+      "reviewer": "codex-editor-source-read-20261017",
+      "evidence_support_reviewed": true,
+      "real_trade_verified": false
+    }
+  ],
+  "real_trade_verified": false,
+  "source_snapshot": "memory/sources/google-doc-20261017.json"
+}

@@ -1,0 +1,168 @@
+{
+  "identity": {
+    "id": "25",
+    "name": "Cristian Dragoș Necula",
+    "active": true,
+    "profile_path": "skills/p004-chat-suite/characters/profiles/25.json",
+    "legacy_memory_path": null,
+    "derived_memory_path": "memory/derived/v2.1/members/25.json",
+    "history_status": "LOADED_ADOPTED_EVIDENCE",
+    "memory_access": "NO_SEPARATE_FILE",
+    "evidence_ids": [
+      "20261016-t.gbfri5r8vs3o-B020-0",
+      "20261016-t.gbfri5r8vs3o-B024-0",
+      "20261016-t.gbfri5r8vs3o-B028-0",
+      "20261016-t.gbfri5r8vs3o-B031-0",
+      "20261016-t.gbfri5r8vs3o-B045-0",
+      "20261016-t.gbfri5r8vs3o-B108-0"
+    ],
+    "state": {
+      "knowledge": "NOT_INFERRED",
+      "homework": "NOT_INFERRED"
+    }
+  },
+  "evidence_store": "memory/derived/v2.1/effective-history.json",
+  "evidence_ids": [
+    "20261016-t.gbfri5r8vs3o-B020-0",
+    "20261016-t.gbfri5r8vs3o-B024-0",
+    "20261016-t.gbfri5r8vs3o-B028-0",
+    "20261016-t.gbfri5r8vs3o-B031-0",
+    "20261016-t.gbfri5r8vs3o-B045-0",
+    "20261016-t.gbfri5r8vs3o-B108-0"
+  ],
+  "recent_examples": [
+    {
+      "id": "20261016-t.gbfri5r8vs3o-B020-0",
+      "speaker_id": "25",
+      "gender": "男",
+      "text": "我之前买过FOJE，现在手里还持有一些。今天看到又选中了这只股票，有点心动。今天继续加仓吗？",
+      "source_label": "25男：",
+      "source_tab_id": "t.gbfri5r8vs3o",
+      "source_offset": 1656,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-16",
+      "node": "MORNING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261016-t.gbfri5r8vs3o-B024-0",
+      "speaker_id": "25",
+      "gender": "男",
+      "text": "我上周在32.3 RON附近买的，后来涨到33左右卖掉了一部分，今天看到已经涨到34.4了，确实有点后悔之前卖早了。😂 现在再加仓的话，成本就抬高了不少，所以还挺纠结的。",
+      "source_label": "25男：",
+      "source_tab_id": "t.gbfri5r8vs3o",
+      "source_offset": 1811,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-16",
+      "node": "MORNING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261016-t.gbfri5r8vs3o-B028-0",
+      "speaker_id": "25",
+      "gender": "男",
+      "text": "哈哈，之前那笔确实赚到了一点",
+      "source_label": "25男：",
+      "source_tab_id": "t.gbfri5r8vs3o",
+      "source_offset": 2071,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-16",
+      "node": "MORNING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261016-t.gbfri5r8vs3o-B031-0",
+      "speaker_id": "25",
+      "gender": "男",
+      "text": "这个我确实深有体会。之前还没收到卖出通知，就提前卖掉了一部分，结果后来看到股价继续上涨，心里真的挺后悔的。",
+      "source_label": "25男：",
+      "source_tab_id": "t.gbfri5r8vs3o",
+      "source_offset": 2310,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-16",
+      "node": "MORNING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261016-t.gbfri5r8vs3o-B045-0",
+      "speaker_id": "25",
+      "gender": "男",
+      "text": "我刚才把FOJE的页面关了，结果没过一会儿又打开。😂",
+      "source_label": "25男：",
+      "source_tab_id": "t.gbfri5r8vs3o",
+      "source_offset": 3294,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-16",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261016-t.gbfri5r8vs3o-B108-0",
+      "speaker_id": "25",
+      "gender": "男",
+      "text": "原来价格还在涨，动能也可能已经开始减弱了。😅",
+      "source_label": "25男：",
+      "source_tab_id": "t.gbfri5r8vs3o",
+      "source_offset": 8363,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-16",
+      "node": "EVENING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    }
+  ],
+  "dynamic_records": [
+    {
+      "id": "25-FOJE-20261016",
+      "member_id": "25",
+      "symbol": "FOJE",
+      "action": "SELF_REPORTED_HOLD_AND_PARTIAL_SALE",
+      "quantity": null,
+      "summary": "自述32.3 RON附近买入、33附近卖部分，仍持有；卖早后悔、犹豫是否加仓；未确认再次加仓。B028另自述之前那笔赚到一点，金额未知，不等于核实真实收益。",
+      "unresolved": [
+        "是否加仓",
+        "剩余数量未知"
+      ],
+      "evidence_ids": [
+        "20261016-t.gbfri5r8vs3o-B020-0",
+        "20261016-t.gbfri5r8vs3o-B024-0",
+        "20261016-t.gbfri5r8vs3o-B028-0",
+        "20261016-t.gbfri5r8vs3o-B031-0"
+      ],
+      "reviewer": "codex-editor-source-read-20261017",
+      "evidence_support_reviewed": true,
+      "real_trade_verified": false
+    }
+  ],
+  "real_trade_verified": false,
+  "source_snapshot": "memory/sources/google-doc-20261017.json"
+}

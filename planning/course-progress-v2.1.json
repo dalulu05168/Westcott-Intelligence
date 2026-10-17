@@ -1,0 +1,13 @@
+{
+  "schema": "course-plan-not-completion-v2.1",
+  "confirmed_by_user": "2026-10-17 current conversation",
+  "weekly_sunday": {"speakers": ["news_assistant", "teacher"], "time": null, "scope": ["本周市场复盘", "推荐股票回顾", "当前形势", "下周重点与深耕方向"], "status": "PLANNED_NOT_YET_OCCURRED"},
+  "2026-10-19": {
+    "title": "短期战术套利：K线动能、KDJ与0.382浅回调",
+    "source_local_path": "C:/Users/mrmal/Desktop/课件内容/23-30/短期战术套利：K线动能、KDJ与0.382浅回调.docx",
+    "status": "USER_SELECTED_MATERIAL_READ_NOT_TAUGHT",
+    "image_delivery": "NOT_VERIFIED",
+    "review_before_use": ["前课称谓需衔接周五MACD", "38条预案不是已采用历史", "晚间活动与作业交接核对正式规则"]
+  },
+  "remaining_week": {"status": "WAITING_USER_MATERIALS", "cashflow_teaser": "PREVIEW_ONLY_NOT_CONFIRMED_NEXT_CLASS"}
+}

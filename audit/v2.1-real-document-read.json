@@ -1,0 +1,27 @@
+{
+  "version": "2.1",
+  "source_mode": "ACTUAL_GOOGLE_DRIVE_CONNECTOR_READ_AND_REVISION_RECHECK",
+  "read_at": "2026-10-17T20:21:27+00:00",
+  "revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+  "source_content_sha256": "3e28df95a55dad11e739f659287147b6a336075113f8f18bd1b8e98fbe72adf7",
+  "story_phase": "EVENING_CLOSED",
+  "cast": [
+    "25",
+    "38"
+  ],
+  "member_history_counts": {
+    "25": 6,
+    "38": 2
+  },
+  "context_status": "CONTEXT_READY_FOR_HUMAN_REVIEW",
+  "errors": [],
+  "candidate_fixture": "Two unpublished continuity-only replies, stored in local ignored test directory",
+  "member_to_member_replies": 1,
+  "candidate_adopted": false,
+  "publication_allowed": false,
+  "online_tasks_applied": false,
+  "semantic_review": "PENDING_HUMAN_REVIEW",
+  "news_truth_accuracy": "NOT_MEASURED",
+  "google_docs_modified": false,
+  "telegram_or_whatsapp_sent": false
+}

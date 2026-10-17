@@ -1,0 +1,155 @@
+{
+  "identity": {
+    "id": "33",
+    "name": "Cristian Roșca",
+    "active": true,
+    "profile_path": "skills/p004-chat-suite/characters/profiles/33.json",
+    "legacy_memory_path": "memory/long-term/members/33.json",
+    "derived_memory_path": "memory/derived/v2.1/members/33.json",
+    "history_status": "LOADED_ADOPTED_EVIDENCE",
+    "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+    "evidence_ids": [
+      "M004",
+      "M010",
+      "M013",
+      "20261016-t.gbfri5r8vs3o-B078-0",
+      "20261016-t.gbfri5r8vs3o-B109-0"
+    ],
+    "state": {
+      "knowledge": "NOT_INFERRED",
+      "homework": "NOT_INFERRED"
+    }
+  },
+  "evidence_store": "memory/derived/v2.1/effective-history.json",
+  "evidence_ids": [
+    "M004",
+    "M010",
+    "M013",
+    "20261016-t.gbfri5r8vs3o-B078-0",
+    "20261016-t.gbfri5r8vs3o-B109-0"
+  ],
+  "recent_examples": [
+    {
+      "speaker_id": "33",
+      "source_label": "33男",
+      "source_start_line": 11,
+      "source_end_line": 12,
+      "text": "上午没怎么盯盘，刚回来。大家关注哪些股票？",
+      "id": "M004",
+      "role_gender_valid": true,
+      "person_name": "Cristian Roșca",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "status": "ADOPTED_IN_SUBMITTED_TRANSCRIPT",
+      "warnings": [],
+      "identity_fields": {
+        "name": "Cristian Roșca",
+        "gender": "男",
+        "age": 31,
+        "occupation": "自由职业者",
+        "investment_years": 8,
+        "capital_scale": "普通投资",
+        "student_seniority": "新学员"
+      },
+      "canonical_label": "33男：",
+      "topic": "MARKET_OR_SOCIAL",
+      "source_hash_sha256": "85dda347d78191065e5ad0854b4b0956931c2dc65c77a4a0da7c70a582249aa1",
+      "date": "2026-10-12"
+    },
+    {
+      "speaker_id": "33",
+      "source_label": "33男",
+      "source_start_line": 26,
+      "source_end_line": 27,
+      "text": "不过买一只基金，不只是买这个品牌吧。其他公司占多少，也得看。",
+      "id": "M010",
+      "role_gender_valid": true,
+      "person_name": "Cristian Roșca",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "status": "ADOPTED_IN_SUBMITTED_TRANSCRIPT",
+      "warnings": [],
+      "identity_fields": {
+        "name": "Cristian Roșca",
+        "gender": "男",
+        "age": 31,
+        "occupation": "自由职业者",
+        "investment_years": 8,
+        "capital_scale": "普通投资",
+        "student_seniority": "新学员"
+      },
+      "canonical_label": "33男：",
+      "topic": "MARKET_OR_SOCIAL",
+      "source_hash_sha256": "fb4a893d6b479b288704dde37189252df03c683e6d55f38e15c1ccfef2b0ab81",
+      "date": "2026-10-12"
+    },
+    {
+      "speaker_id": "33",
+      "source_label": "33男",
+      "source_start_line": 32,
+      "source_end_line": 33,
+      "text": "我先看它到底买了什么。有的基金名字挺直观，里面的比例却未必是自己想的那样。",
+      "id": "M013",
+      "role_gender_valid": true,
+      "person_name": "Cristian Roșca",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "status": "ADOPTED_IN_SUBMITTED_TRANSCRIPT",
+      "warnings": [],
+      "identity_fields": {
+        "name": "Cristian Roșca",
+        "gender": "男",
+        "age": 31,
+        "occupation": "自由职业者",
+        "investment_years": 8,
+        "capital_scale": "普通投资",
+        "student_seniority": "新学员"
+      },
+      "canonical_label": "33男：",
+      "topic": "MARKET_OR_SOCIAL",
+      "source_hash_sha256": "f4c629c22cc3bd76f8a7880472859b2d97a77e8d9e518b84fa637e7c5bc2ee68",
+      "date": "2026-10-12"
+    },
+    {
+      "id": "20261016-t.gbfri5r8vs3o-B078-0",
+      "speaker_id": "33",
+      "gender": "男",
+      "text": "天天观察能观察出来什么线路呢？跟上去不就知道了。",
+      "source_label": "33：",
+      "source_tab_id": "t.gbfri5r8vs3o",
+      "source_offset": 5555,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-16",
+      "node": "EVENING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [
+        "REVIEWED_LABEL_WITH_ORIGINAL_PRESERVED"
+      ],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261016-t.gbfri5r8vs3o-B109-0",
+      "speaker_id": "33",
+      "gender": "男",
+      "text": "那看到顶背离的时候，是不是应该先观察后面的走势有没有变化？",
+      "source_label": "33男：",
+      "source_tab_id": "t.gbfri5r8vs3o",
+      "source_offset": 8392,
+      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "date": "2026-10-16",
+      "node": "EVENING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    }
+  ],
+  "dynamic_records": [],
+  "real_trade_verified": false,
+  "source_snapshot": "memory/sources/google-doc-20261017.json"
+}

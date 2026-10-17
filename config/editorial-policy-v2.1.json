@@ -1,0 +1,26 @@
+{
+  "version": "2.1",
+  "document_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+  "timezone": "Europe/Bucharest",
+  "active_ids": [1, 40],
+  "snapshot_max_age_seconds": 300,
+  "roles": ["director", "writer", "teacher", "news_assistant", "members"],
+  "staff_ids": ["teacher", "news_assistant", "investment_advisor", "consultant"],
+  "weekly": {
+    "sunday": {"activity": "WEEKLY_REVIEW_AND_OUTLOOK", "time": "USER_SLOT_REQUIRED"},
+    "monday_wednesday_friday": {"quiz": "16:00", "course": "TECHNICAL"},
+    "tuesday_thursday": {"quiz": "19:30", "course": "INVESTMENT_PRINCIPLES"},
+    "weekday_class": "20:00",
+    "weekday_discussion": "21:00"
+  },
+  "research": {"markets": ["BVB", "US"], "slots": ["MORNING", "AFTERNOON"], "order": "PENDING_USER_SLOT"},
+  "rules": {
+    "bold_in_copy": false,
+    "fixed_member_reply_quota": false,
+    "gif_quota": false,
+    "name_address_quota": false,
+    "semantic_auto_approval": false,
+    "story_trade_is_real_trade": false
+  },
+  "delivery": {"enabled_by_upgrade": false, "authorization": "SEPARATE_PER_PUBLISHER", "telegram_message_id_means": "PLATFORM_ACCEPTED_NOT_READ_OR_DELIVERED"}
+}

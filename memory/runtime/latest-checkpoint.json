@@ -1,24 +1,39 @@
 {
-  "_schema": "westcott-runtime-checkpoint-v1",
-  "_description": "Verified Google Docs formal-story checkpoint; source snapshot preserved separately. Does not verify delivery.",
-  "rules_version": "V2.0 + editorial-execution-v1.8",
-  "official_document_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-  "document_revision_id": "AHj4eMRhrTY68cR6uMrZ0n3R35sp7ZZ656_aPJ7A5QXkKKWk2SGBI_7hx1Wc7kos_aF-AuCgg4YlDx0JLKYAlqq-5JY2kE7-DKWjzNzwrXo",
-  "retrieved_at": null,
+  "rules_version": "2.1",
   "story_date": "2026-10-16",
-  "story_tab": "⭕️🔟月汇总",
-  "last_adopted_message_id": "20261016-DOC-P585-588",
+  "story_tab_id": "t.gbfri5r8vs3o",
+  "story_phase": "EVENING_CLOSED",
+  "last_adopted_message_id": "20261016-t.gbfri5r8vs3o-B111-1",
   "last_adopted_speaker": "news_assistant",
-  "last_adopted_excerpt": "各位，今天上午的交流就先到这里啦！\n感谢大家积极参与讨论！今天是本周最后一个交易日，下午我们会继续关注BET指数及主要股票的市场变化，看看上午的行情能否延续。\n大家稍作休息，我们下午再见！😊",
-  "story_phase": "MORNING_CLOSED",
-  "next_phase": "AFTERNOON_OPEN_PENDING",
-  "active_member_range": "01-40",
-  "used_news_evidence_keys": [],
-  "unresolved_threads": [],
-  "status": "VERIFIED_SOURCE_SNAPSHOT",
-  "notes": "2026-10-16 morning close independently read in current Google Docs revision; 13 near-duplicate, 03 label anomaly and unfinished sentence preserved. Date inferred from order, explicit heading absent. Delivery not verified. Re-read before next writing.",
-  "story_tab_id": "t.0",
-  "source_snapshot_path": "memory/daily/2026-10-16/formal-google-doc-snapshot.json",
-  "source_date_attribution": "inferred_from_chronological_position_after_2026-10-15_evening_closure; explicit date header absent",
-  "source_paragraph_count": 589
+  "last_adopted_excerpt": "🌙 感谢Jonathan先生今晚的精彩讲解，也感谢各位成员的积极参与！\n今晚的MACD技术分析课程已经结束，大家可以利用周末时间整理笔记，慢慢消化今天学习的内容。\n今天的社群交流到这里正式结束。\n祝各位成员周末愉快，晚安！",
+  "document_revision_id": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+  "retrieved_at": "2026-10-17T19:21:22+00:00",
+  "source_sha256": "3e28df95a55dad11e739f659287147b6a336075113f8f18bd1b8e98fbe72adf7",
+  "counts": {
+    "MORNING": {
+      "labelled_raw": 32,
+      "unlabelled_fragments": 0,
+      "effective": 31,
+      "excluded": 1,
+      "review_required": 0
+    },
+    "AFTERNOON": {
+      "labelled_raw": 43,
+      "unlabelled_fragments": 0,
+      "effective": 41,
+      "excluded": 2,
+      "review_required": 0
+    },
+    "EVENING": {
+      "labelled_raw": 36,
+      "unlabelled_fragments": 1,
+      "effective": 35,
+      "excluded": 2,
+      "review_required": 0
+    }
+  },
+  "quarantined_blocks": [],
+  "freshness": "HISTORICAL_READ_REQUIRES_REFRESH_BEFORE_WRITING",
+  "delivery": "NOT_VERIFIED",
+  "source_snapshot_path": "memory/sources/google-doc-20261017.json"
 }
