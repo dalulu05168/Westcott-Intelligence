@@ -1,0 +1,48 @@
+{
+  "searches": [
+    {
+      "region": "RO",
+      "query": "Romania October 17 2026 latest central bank fiscal company earnings energy official news",
+      "searched_at": "2026-10-17T21:46:38.872Z",
+      "status": "OK"
+    },
+    {
+      "region": "FR",
+      "query": "France 17 octobre 2026 dernières communiqués banque budget résultats entreprises énergie",
+      "searched_at": "2026-10-17T21:46:38.872Z",
+      "status": "OK"
+    },
+    {
+      "region": "US",
+      "query": "US October 17 2026 latest official Treasury SEC Federal Reserve earnings releases",
+      "searched_at": "2026-10-17T21:46:38.872Z",
+      "status": "OK"
+    },
+    {
+      "region": "GLOBAL",
+      "query": "global October 17 2026 latest official IMF World Bank central bank energy geopolitical statements",
+      "searched_at": "2026-10-17T21:46:38.872Z",
+      "status": "OK"
+    }
+  ],
+  "articles": [],
+  "leads": [
+    {
+      "article_url": "https://mediacenter.imf.org/news/imf-imfc-press-briefing/s/6c812df6-f0e8-4a3b-b663-22c9e888b440",
+      "published_date": "2026-10-17",
+      "published_at": null,
+      "access_status": "UNAVAILABLE",
+      "reason": "Actual original web open returned Internal Error; strict hourly inclusion unverified."
+    }
+  ],
+  "edition_path": "news/editions/20261017t2146z.json",
+  "collector_run": 39072350505,
+  "collector_conclusion": "success",
+  "review_status": "HELD_UNRESOLVED_ORIGINAL",
+  "telegram_publishable": false,
+  "limitations": [
+    "No exhaustive global coverage claimed.",
+    "Eight feeds have zero in-window candidates; raw entries 358 all before window.",
+    "Potentially important date-only IMF lead not treated as irrelevant or approved. No release ledger."
+  ]
+}
