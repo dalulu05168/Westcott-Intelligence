@@ -280,33 +280,33 @@ def build_ledger(edition, edition_path, country, assessments, cid, event_key, ra
                 "premise_claim_ids": ["event"], "text": content,
                 "evidence": [ev(d["event_evidence"][0])]}
     event = fact("event", "event",
-        f"🌐 ELLERY WESTCOTT｜财经资讯快报\\n"
-        f"🌍 市场地区：{cname}\\n📰 新闻主题：{d['title_zh']}\\n"
-        f"🕒 事件时间：官方发布时间 {row['published_at']}（事件实际时间以原文为准）\\n"
-        f"📊 影响程度：{d['impact_level']}\\n📌 事件概述\\n{d['event_text']}")
+        f"🌐 ELLERY WESTCOTT｜财经资讯快报\n"
+        f"🌍 市场地区：{cname}\n📰 新闻主题：{d['title_zh']}\n"
+        f"🕒 事件时间：官方发布时间 {row['published_at']}（事件实际时间以原文为准）\n"
+        f"📊 影响程度：{d['impact_level']}\n📌 事件概述\n{d['event_text']}")
     if nums:
         event["is_numeric"] = True
         event["numbers"] = [dict(n, source_id=sid, normalization_reviewed=False) for n in nums]
     interpret = analysis("interpretation", "interpretation",
-        "🔍 核心解读\\n" + d["interpretation_text"],
+        "🔍 核心解读\n" + d["interpretation_text"],
         "仅依据已核实事实作条件性经济解读，不能据此断言市场已变化。")
     impact = analysis("impact", "impact",
-        "📈 市场影响\\n"
-        "已证实反应：" + d["confirmed_reaction_text"] + "\\n"
-        "潜在影响：" + d["potential_impact_text"] + "\\n"
-        "尚不确定：" + d["uncertain_impact_text"] + "\\n"
-        "影响理由：" + d["impact_reason"] + "\\n"
+        "📈 市场影响\n"
+        "已证实反应：" + d["confirmed_reaction_text"] + "\n"
+        "潜在影响：" + d["potential_impact_text"] + "\n"
+        "尚不确定：" + d["uncertain_impact_text"] + "\n"
+        "影响理由：" + d["impact_reason"] + "\n"
         "影响周期：" + d["impact_horizon"], d["impact_boundary"])
     numbered = ["①", "②", "③"]
     watch = analysis("watch", "watch",
-        "🎯 后续关注重点\\n" + "\\n".join(
+        "🎯 后续关注重点\n" + "\n".join(
             f"{numbered[i]} {p['focus']}｜观察时间/条件：{p['trigger']}"
             for i, p in enumerate(watch_points)),
         "上述节点属于未来验证方向，不代表数据已经公布或行情已变化。")
     change = analysis("change", "change",
-        "🔔 判断变化条件\\n"
-        "增强条件：" + d["change_strengthen"] + "\\n"
-        "减弱条件：" + d["change_weaken"] + "\\n"
+        "🔔 判断变化条件\n"
+        "增强条件：" + d["change_strengthen"] + "\n"
+        "减弱条件：" + d["change_weaken"] + "\n"
         "验证依据：" + d["change_verify"],
         "以上是假设检验路径，并非确定性价格预测。")
     claims = [event, interpret, impact, watch, change]
