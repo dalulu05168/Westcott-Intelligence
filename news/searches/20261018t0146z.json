@@ -1,0 +1,125 @@
+{
+  "schema_version": "free-search-handoff-v1",
+  "search_completed_at": "2026-10-18T01:46:23+00:00",
+  "searches": [
+    {
+      "region": "RO",
+      "query": "site:bvb.ro OR site:bnr.ro OR site:asfromania.ro OR site:mfinante.gov.ro Romania official release October 18 2026 market company energy banking",
+      "searched_at": "2026-10-18T01:46:23+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://bvb.ro/FinancialInstruments/SelectedData/CurrentReports",
+        "https://bvb.ro/AboutUs/MediaCenter/PressReleases",
+        "https://www.asfromania.ro/ro/a/3405/buletine-2026"
+      ],
+      "finding": "Official-domain search surfaced BVB and ASF pages, but no item with a verified publication timestamp inside the prospective 00:46-01:46 UTC comparison window."
+    },
+    {
+      "region": "RO",
+      "query": "Romania BVB BNR ASF company announcement market October 18 2026 latest",
+      "searched_at": "2026-10-18T01:46:23+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.bvb.ro/InvestorRelations/InvestorNews",
+        "https://bvb.ro/FinancialInstruments/SelectedData/CurrentReports",
+        "https://bvb.ro/AboutUs/MediaCenter/PressReleases"
+      ],
+      "finding": "The newest surfaced Romanian exchange material was prior-dated; no verified new in-window major event was found."
+    },
+    {
+      "region": "FR",
+      "query": "site:amf-france.org OR site:banque-france.fr OR site:euronext.com OR site:economie.gouv.fr France official release October 18 2026 market company finance",
+      "searched_at": "2026-10-18T01:46:23+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.amf-france.org/fr/espace-presse/les-derniers-communiques-de-presse",
+        "https://www.banque-france.fr/fr/communiques-de-presse",
+        "https://bdif.amf-france.org/en?typesInformation=DD"
+      ],
+      "finding": "No French regulator, central-bank, exchange, or issuer release with a verified timestamp inside the prospective current window was found."
+    },
+    {
+      "region": "FR",
+      "query": "France AMF Banque de France Euronext company announcement October 18 2026 latest",
+      "searched_at": "2026-10-18T01:46:23+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.amf-france.org/fr/espace-presse/les-derniers-communiques-de-presse",
+        "https://www.banque-france.fr/en/press-release",
+        "https://bdif.amf-france.org/fr?typesInformation=DD"
+      ],
+      "finding": "Search results were archive or list pages and prior-period releases, not a verified in-window market-moving event."
+    },
+    {
+      "region": "US",
+      "query": "site:federalreserve.gov OR site:sec.gov OR site:treasury.gov OR site:investor.* United States official release October 17 2026 earnings technology finance energy",
+      "searched_at": "2026-10-18T01:46:23+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.federalreserve.gov/newsevents/pressreleases/2026-press.htm",
+        "https://www.federalreserve.gov/recentpostings.htm",
+        "https://www.sec.gov/newsroom"
+      ],
+      "finding": "No verified new Federal Reserve, SEC, Treasury, or major listed-company official release was found inside the prospective current window."
+    },
+    {
+      "region": "US",
+      "query": "US Federal Reserve SEC Treasury earnings company announcement October 17 2026 latest market",
+      "searched_at": "2026-10-18T01:46:23+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.federalreserve.gov/newsevents/pressreleases/2026-press.htm",
+        "https://www.federalreserve.gov/recentpostings.htm",
+        "https://www.sec.gov/newsroom"
+      ],
+      "finding": "Current search returned prior-dated official material and commentary, with no verified in-window major US market event."
+    },
+    {
+      "region": "GLOBAL",
+      "query": "site:ecb.europa.eu OR site:ec.europa.eu OR site:imf.org OR site:worldbank.org OR site:iea.org OR site:opec.org October 18 2026 official release global economy central bank energy",
+      "searched_at": "2026-10-18T01:46:23+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261017~7015ea3099.en.html",
+        "https://data.ecb.europa.eu/",
+        "https://eur-lex.europa.eu/oj/daily-view/L-series/default.html"
+      ],
+      "finding": "Official results included ECB and EU material published before the prospective current window; no verified new in-window global event was found."
+    },
+    {
+      "region": "GLOBAL",
+      "query": "global central bank policy energy oil technology finance major market news October 18 2026 latest",
+      "searched_at": "2026-10-18T01:46:23+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.reuters.com/business/finance/ecbs-lagarde-says-bond-selloff-will-slow-inflation-2026-10-17/",
+        "https://www.reuters.com/markets/asia/imf-members-call-increased-support-countries-amid-negative-risks-war-spillovers-2026-10-17/",
+        "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261017~7015ea3099.en.html"
+      ],
+      "finding": "Potentially important central-bank and IMF stories were located, but their recorded publication times were many hours before the prospective 00:46-01:46 UTC window."
+    }
+  ],
+  "articles": [
+    {
+      "article_url": "https://www.reuters.com/business/finance/ecbs-lagarde-says-bond-selloff-will-slow-inflation-2026-10-17/",
+      "publisher_basis_url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261017~7015ea3099.en.html",
+      "published_at": "2026-10-17T08:01:16+00:00",
+      "source": "Reuters",
+      "title": "ECB's Lagarde says bond selloff will slow inflation",
+      "authority_note": "Reuters report and ECB original statement were located, but the publication precedes the current comparison window."
+    },
+    {
+      "article_url": "https://www.reuters.com/markets/asia/imf-members-call-increased-support-countries-amid-negative-risks-war-spillovers-2026-10-17/",
+      "publisher_basis_url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261017~7015ea3099.en.html",
+      "published_at": "2026-10-17T06:19:35+00:00",
+      "source": "Reuters",
+      "title": "IMF members call for more support amid war shocks, advanced intelligence risks",
+      "authority_note": "Outside the current window; the official ECB IMFC statement is supporting official context, not a replacement publication time for the Reuters report."
+    }
+  ],
+  "limitations": [
+    "Searches are broad but do not constitute exhaustive worldwide coverage.",
+    "Search-result crawl times and undated exchange or regulator list-page times were not treated as publication timestamps.",
+    "No prior event was moved into the current hour by replacing its original publication time."
+  ]
+}
