@@ -19,6 +19,7 @@ import news_release_gate as gate
 from bridge import send_group_news_from_official_article
 from source_media import SourceMediaError, inspect_article
 from editorial_policy import PolicyError, validate_release, COUNTRIES
+from news_analysis_v1 import NewsAnalysisError, validate_news_v1
 
 EVENT_RE = re.compile(r"^[a-z0-9][a-z0-9_-]{5,71}$")
 FILE_RE = re.compile(r"^news/approved/[a-z0-9][a-z0-9_.-]{1,100}\.json$")
@@ -119,6 +120,13 @@ def prepare(ledger, filename, now=None):
     if ledger.get("target_country") in COUNTRIES and any(
             len(re.findall(r"[\u3400-\u9fff]", fact)) < 2 for fact in facts):
         raise PublicationError("Country-specific Telegram news must be Chinese; no foreign-language story text.")
+    # Enforce V1 structure on production delivery only when explicitly enabled.
+    # The evidence gate above still determines what constitutes approved text.
+    if os.environ.get("NEWS_ANALYSIS_V1_REQUIRED") == "1":
+        try:
+            validate_news_v1(ledger, facts)
+        except NewsAnalysisError as exc:
+            raise PublicationError(str(exc)) from None
     # Derive URLs ONLY from the evidence for published claims.
     selected = set(ledger["publish_claim_ids"])
     urls = []
@@ -149,7 +157,8 @@ def prepare(ledger, filename, now=None):
     if country in COUNTRIES:
         marker, name = COUNTRIES[country]
         text = '===== 资讯助理 =====\n\n' + marker + ' ' + name + '\n\n' + '\n\n'.join(facts)
-    text += "\n\n原始来源：\n" + "\n".join(urls)
+    source_label = "🔗 官方来源：" if os.environ.get("NEWS_ANALYSIS_V1_REQUIRED") == "1" else "原始来源："
+    text += "\n\n" + source_label + "\n" + "\n".join(urls)
     if len(text.encode("utf-8")) > 14000:
         raise PublicationError("News text is too long for concise Telegram release.")
     # Source page is the canonical visual context. No generated artwork is used.
@@ -187,7 +196,8 @@ def prepare(ledger, filename, now=None):
             "source_evidence": {url: [e['excerpt'] for c in ledger['claims']
                 if c['id'] in selected for e in c['evidence']
                 if ledger['sources'][e['source_id']]['url'] == url] for url in urls},
-            "ledger": filename, "text": text}
+            "ledger": filename, "text": text,
+            "followup_watch_points": ledger.get("followup_watch_points", [])}
 
 
 def confirm_original_evidence(prepared):
@@ -324,6 +334,7 @@ def reserve(prepared, env, now=None):
         "reserved_at": (now or datetime.now(timezone.utc)).isoformat(),
         "message_ids": [],
         "source_rechecks": prepared.get('source_rechecks', []),
+        "followup_watch_points": prepared.get("followup_watch_points", []),
     }
     sha = github_write(path, record, token, repo)
     acceptance = prepared.get('editorial_acceptance')
