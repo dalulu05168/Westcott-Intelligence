@@ -157,7 +157,8 @@ def prepare(ledger, filename, now=None):
     if country in COUNTRIES:
         marker, name = COUNTRIES[country]
         text = '===== 资讯助理 =====\n\n' + marker + ' ' + name + '\n\n' + '\n\n'.join(facts)
-    text += "\n\n原始来源：\n" + "\n".join(urls)
+    source_label = "🔗 官方来源：" if os.environ.get("NEWS_ANALYSIS_V1_REQUIRED") == "1" else "原始来源："
+    text += "\n\n" + source_label + "\n" + "\n".join(urls)
     if len(text.encode("utf-8")) > 14000:
         raise PublicationError("News text is too long for concise Telegram release.")
     # Source page is the canonical visual context. No generated artwork is used.
