@@ -34,7 +34,13 @@ class NewsAnalysisV1Tests(unittest.TestCase):
             claims.append(claim)
         ledger = {"target_country": "RO", "content_standard": VERSION,
                   "local_impact_claim_id": "impact", "watch_next_claim_id": "watch",
-                  "publish_claim_ids": list(texts), "claims": claims}
+                  "publish_claim_ids": list(texts), "claims": claims,
+                  "followup_watch_points": [
+                      {"focus": "下一次央行决议公告", "trigger": "以央行公布的政策日程为准",
+                       "status": "AWAITING_VERIFIABLE_UPDATE"},
+                      {"focus": "下一次价格统计公告", "trigger": "以统计局公开数据发布日期为准",
+                       "status": "AWAITING_VERIFIABLE_UPDATE"},
+                  ]}
         return ledger, list(texts.values())
 
     def test_valid_structure_passes_without_claiming_source_truth(self):
