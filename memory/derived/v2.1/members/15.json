@@ -13,7 +13,7 @@
       "20261015-t.huff85y7dlym-B025-0",
       "20261015-t.huff85y7dlym-B056-0",
       "20261015-t.huff85y7dlym-B096-0",
-      "20261016-t.gbfri5r8vs3o-B105-0"
+      "20261016-t.gbfri5r8vs3o-B106-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -26,7 +26,7 @@
     "20261015-t.huff85y7dlym-B025-0",
     "20261015-t.huff85y7dlym-B056-0",
     "20261015-t.huff85y7dlym-B096-0",
-    "20261016-t.gbfri5r8vs3o-B105-0"
+    "20261016-t.gbfri5r8vs3o-B106-0"
   ],
   "recent_examples": [
     {
@@ -34,10 +34,12 @@
       "speaker_id": "15",
       "gender": "男",
       "text": "我觉得利率也同样重要。如果借钱的利息变了，企业能赚多少钱就得重新算账了。",
+      "evidence_fingerprint": "bfb1893f7b1c9888861e6fbe6a5d00ad772224841b0a1ba7661789ec93dedee8",
+      "label_fingerprint": "44d2d63273f7016669782499ce336a5b44685f73e48a5a1d3338b32b40dbd2db",
       "source_label": "15男：",
       "source_tab_id": "t.t7k4o87mkgzv",
       "source_offset": 4749,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-14",
       "node": "EVENING",
       "kind": "message",
@@ -52,10 +54,12 @@
       "speaker_id": "15",
       "gender": "男",
       "text": "不要慌，一条新闻也不能左右整个市场。",
+      "evidence_fingerprint": "2ec37e31da220e4d45dd19147d6983a32f7fece1c1abc04d27ec2e07a62f28dd",
+      "label_fingerprint": "284f5cc3ac564cf0eebd1dbb79b636d960a1bc98d1c0599f30d99634d3ab27ef",
       "source_label": "15男：",
       "source_tab_id": "t.huff85y7dlym",
       "source_offset": 1746,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-15",
       "node": "MORNING",
       "kind": "message",
@@ -70,10 +74,12 @@
       "speaker_id": "15",
       "gender": "男",
       "text": "不过这跟均线有没有应验是两回事吧？现在连具体的均线位置都没看，不能光凭股价跌了就说昨晚讲对了。",
+      "evidence_fingerprint": "6cce2273d67bbabe13b3c13c746bd29eb4d61e72d53589a8393e8921ffdf8ec6",
+      "label_fingerprint": "8d448ab80a0e4b36459b505292280ec477deeb04861467fd9d6d6f505fd77062",
       "source_label": "15男：",
       "source_tab_id": "t.huff85y7dlym",
       "source_offset": 4139,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-15",
       "node": "AFTERNOON",
       "kind": "message",
@@ -88,10 +94,12 @@
       "speaker_id": "15",
       "gender": "男",
       "text": "先生，如果股票下跌的时候，我们告诉自己要有耐心；后来继续下跌，又说需要坚持长期投资。\n那怎么判断自己究竟是在遵守纪律，还是不愿意承认判断错误？",
+      "evidence_fingerprint": "ee8117951b7ac76e2a27f601e5903097f65921fd07f88d97c9d85757aa4a2bb3",
+      "label_fingerprint": "dd011e92e2d400a3faa3f0acf82b1e755f4868a0970bc1468bb29c9a728c2f66",
       "source_label": "15男：",
       "source_tab_id": "t.huff85y7dlym",
       "source_offset": 7249,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-15",
       "node": "EVENING",
       "kind": "message",
@@ -102,14 +110,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B105-0",
+      "id": "20261016-t.gbfri5r8vs3o-B106-0",
       "speaker_id": "15",
       "gender": "男",
       "text": "那要是股票一直横盘，两条线反复交叉，不就会一会儿出现金叉，一会儿又出现死叉？这样岂不是很容易判断错？",
+      "evidence_fingerprint": "83c6e6f68340b96a7dde1d53d0d15515bfbed441fd9145cd92bc9a71c3ca3bd9",
+      "label_fingerprint": "9bf015dc745083e16bd896ca58f3cbc498affc2287a3e4c5857714b18a896295",
       "source_label": "15男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 7993,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 7997,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "EVENING",
       "kind": "message",
@@ -122,5 +132,5 @@
   ],
   "dynamic_records": [],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261017.json"
+  "source_snapshot": "memory/sources/google-doc-20261018.json"
 }

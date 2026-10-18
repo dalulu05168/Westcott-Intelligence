@@ -11,10 +11,10 @@
     "evidence_ids": [
       "20261013-M040",
       "20261014-t.t7k4o87mkgzv-B040-0",
-      "20261016-t.gbfri5r8vs3o-B029-0",
-      "20261016-t.gbfri5r8vs3o-B041-0",
-      "20261016-t.gbfri5r8vs3o-B074-0",
-      "20261016-t.gbfri5r8vs3o-B080-0"
+      "20261016-t.gbfri5r8vs3o-B030-0",
+      "20261016-t.gbfri5r8vs3o-B042-0",
+      "20261016-t.gbfri5r8vs3o-B075-0",
+      "20261016-t.gbfri5r8vs3o-B081-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -25,10 +25,10 @@
   "evidence_ids": [
     "20261013-M040",
     "20261014-t.t7k4o87mkgzv-B040-0",
-    "20261016-t.gbfri5r8vs3o-B029-0",
-    "20261016-t.gbfri5r8vs3o-B041-0",
-    "20261016-t.gbfri5r8vs3o-B074-0",
-    "20261016-t.gbfri5r8vs3o-B080-0"
+    "20261016-t.gbfri5r8vs3o-B030-0",
+    "20261016-t.gbfri5r8vs3o-B042-0",
+    "20261016-t.gbfri5r8vs3o-B075-0",
+    "20261016-t.gbfri5r8vs3o-B081-0"
   ],
   "recent_examples": [
     {
@@ -51,10 +51,12 @@
       "speaker_id": "40",
       "gender": "男",
       "text": "我也来了，先看看今晚出的是什么题目。",
+      "evidence_fingerprint": "c46effc295a904bc949794159c568688be38c84f943de09de6d47d2517afcceb",
+      "label_fingerprint": "6884092c65ef9cbbefb8abb9b08837e141d4c4a73aa248fb6f9667982d8884c1",
       "source_label": "40男：",
       "source_tab_id": "t.t7k4o87mkgzv",
       "source_offset": 3062,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-14",
       "node": "EVENING",
       "kind": "message",
@@ -65,14 +67,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B029-0",
+      "id": "20261016-t.gbfri5r8vs3o-B030-0",
       "speaker_id": "40",
       "gender": "男",
       "text": "上午忙着处理工作，刚刚才有时间看看欧洲市场。还好赶上了。",
+      "evidence_fingerprint": "4d2e8e1560d974d4979685acecf6eb8af9592e32447e9b82e4af12282c361313",
+      "label_fingerprint": "d62135d56fe69d694a79635bc36758eff2747c621ba6d3a937c3b81f75652eac",
       "source_label": "40男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 2091,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 2095,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "MORNING",
       "kind": "message",
@@ -83,14 +87,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B041-0",
+      "id": "20261016-t.gbfri5r8vs3o-B042-0",
       "speaker_id": "40",
       "gender": "男",
       "text": "这里的程序太多了，时间和汇率的影响都要考虑到。",
+      "evidence_fingerprint": "e20bc8354a3728459c417d339b9b177718d654a4eeb38ae69e222adf4b000bbc",
+      "label_fingerprint": "0bf42af37eb57f752db0590271fcabfffb65bc9caa74eec4cbebc910a3c830b0",
       "source_label": "40男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 3054,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 3058,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "AFTERNOON",
       "kind": "message",
@@ -101,14 +107,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B074-0",
+      "id": "20261016-t.gbfri5r8vs3o-B075-0",
       "speaker_id": "40",
       "gender": "男",
       "text": "等放量突破压力位或回踩42美元站稳后，再考虑轻仓跟进。",
+      "evidence_fingerprint": "c4c922731fe4716d4d267f99f6e94e37fd58bfffbae4e379baa1652e4f56b713",
+      "label_fingerprint": "bc3e15f53ea73d86c8a525967d5d3036acd95060340b6b4f2b82df923c58098c",
       "source_label": "40男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 5231,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 5235,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "AFTERNOON",
       "kind": "message",
@@ -119,14 +127,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B080-0",
+      "id": "20261016-t.gbfri5r8vs3o-B081-0",
       "speaker_id": "40",
       "gender": "男",
       "text": "其实线路这个东西光指望自己去看去理解是很难能够通透的，需要有人能够指点一下就会通顺很多",
+      "evidence_fingerprint": "5ebeb81602250bc47b12772ca5300b4b67951dd90424273fec8ca990f9a2abcd",
+      "label_fingerprint": "ce6647d6c0fe1c34710490367e7e2d3551f79af3faed68e7ec1b43fd2cd73013",
       "source_label": "40男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 5635,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 5639,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "EVENING",
       "kind": "message",
@@ -146,13 +156,20 @@
       "quantity": null,
       "summary": "放量突破或回踩42美元站稳后再考虑；没有自述成交。",
       "evidence_ids": [
-        "20261016-t.gbfri5r8vs3o-B074-0"
+        "20261016-t.gbfri5r8vs3o-B075-0"
       ],
       "reviewer": "codex-editor-source-read-20261017",
       "evidence_support_reviewed": true,
-      "real_trade_verified": false
+      "real_trade_verified": false,
+      "evidence_fingerprints": {
+        "20261016-t.gbfri5r8vs3o-B074-0": "c4c922731fe4716d4d267f99f6e94e37fd58bfffbae4e379baa1652e4f56b713"
+      },
+      "original_evidence_ids": [
+        "20261016-t.gbfri5r8vs3o-B074-0"
+      ],
+      "reference_status": "EXACT_CONTENT_RELINKED_AFTER_SOURCE_INSERTION"
     }
   ],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261017.json"
+  "source_snapshot": "memory/sources/google-doc-20261018.json"
 }

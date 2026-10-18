@@ -14,7 +14,7 @@
       "20261015-t.huff85y7dlym-B033-0",
       "20261015-t.huff85y7dlym-B038-0",
       "20261015-t.huff85y7dlym-B048-0",
-      "20261016-t.gbfri5r8vs3o-B053-0"
+      "20261016-t.gbfri5r8vs3o-B054-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -28,7 +28,7 @@
     "20261015-t.huff85y7dlym-B033-0",
     "20261015-t.huff85y7dlym-B038-0",
     "20261015-t.huff85y7dlym-B048-0",
-    "20261016-t.gbfri5r8vs3o-B053-0"
+    "20261016-t.gbfri5r8vs3o-B054-0"
   ],
   "recent_examples": [
     {
@@ -51,10 +51,12 @@
       "speaker_id": "24",
       "gender": "男",
       "text": "还有怎样判断一只股票当前的价格是否合理？",
+      "evidence_fingerprint": "db021c0e5ed31e0af207d1c8112cb23fba56338838bb3472a143ed95ecefd549",
+      "label_fingerprint": "a42fea1f7d9567fb846e750a2177a67bf8e4d2f5c3ad55da8ff3c052c7764a15",
       "source_label": "24男：",
       "source_tab_id": "t.t7k4o87mkgzv",
       "source_offset": 3558,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-14",
       "node": "EVENING",
       "kind": "message",
@@ -69,10 +71,12 @@
       "speaker_id": "24",
       "gender": "男",
       "text": "看看之前关注的那些消息，下午市场到底会怎么反应。",
+      "evidence_fingerprint": "263845a1e755181367c1c7df921ded581e0fa5dd7f147c626ee7c3bf6a9d0522",
+      "label_fingerprint": "80d8e18de1a2c31f0dcd76690ffe5959d83d24cfee44ac0b56152aaee7f8975b",
       "source_label": "24男：",
       "source_tab_id": "t.huff85y7dlym",
       "source_offset": 2368,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-15",
       "node": "AFTERNOON",
       "kind": "message",
@@ -87,10 +91,12 @@
       "speaker_id": "24",
       "gender": "男",
       "text": "我也在看这个。之前还在讨论能源和银行，现在BET涨幅又扩大了。",
+      "evidence_fingerprint": "87e686f8b0c9bb24eec797a197d1dd5b2654000f11d4cc275469d1c179df0e4c",
+      "label_fingerprint": "821934dccc1cd69700da32d0f52c73a1cfe8a38f93bd2e5fd21c9ada1c2e9e36",
       "source_label": "24男：",
       "source_tab_id": "t.huff85y7dlym",
       "source_offset": 2774,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-15",
       "node": "AFTERNOON",
       "kind": "message",
@@ -105,10 +111,12 @@
       "speaker_id": "24",
       "gender": "男",
       "text": "眼光很敏锐，那今晚看看纳斯达克开盘以后是什么反应。如果半导体公司也继续下跌，就得看看是不是整个板块都在承压了。",
+      "evidence_fingerprint": "8d7ca80d4dff1e227b2e25ab8f9889b546f07d6e0795243197fd25f6c7f175b3",
+      "label_fingerprint": "eae1b55b147efedda08571e0014ddade3d4efe9e72484a2b670daf045408eb4a",
       "source_label": "24男：",
       "source_tab_id": "t.huff85y7dlym",
       "source_offset": 3559,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-15",
       "node": "AFTERNOON",
       "kind": "message",
@@ -119,14 +127,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B053-0",
+      "id": "20261016-t.gbfri5r8vs3o-B054-0",
       "speaker_id": "24",
       "gender": "男",
       "text": "现在又看到特斯拉涨了。😂 今天的行情真是不给人休息的机会。",
+      "evidence_fingerprint": "046e1d6cad3346bce39f91c15ff7bdc5bb93981cc8a1901a1a235ed6cd08f3b2",
+      "label_fingerprint": "3a2a10f2d97f0739f6bccfe6ae17388030bc0edbb8feb0a49f2dd53bb9cd0ae9",
       "source_label": "24：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 3841,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 3845,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "AFTERNOON",
       "kind": "message",
@@ -141,5 +151,5 @@
   ],
   "dynamic_records": [],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261017.json"
+  "source_snapshot": "memory/sources/google-doc-20261018.json"
 }

@@ -9,8 +9,8 @@
     "history_status": "LOADED_ADOPTED_EVIDENCE",
     "memory_access": "NO_SEPARATE_FILE",
     "evidence_ids": [
-      "20261016-t.gbfri5r8vs3o-B025-0",
-      "20261016-t.gbfri5r8vs3o-B046-0"
+      "20261016-t.gbfri5r8vs3o-B026-0",
+      "20261016-t.gbfri5r8vs3o-B047-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -19,19 +19,21 @@
   },
   "evidence_store": "memory/derived/v2.1/effective-history.json",
   "evidence_ids": [
-    "20261016-t.gbfri5r8vs3o-B025-0",
-    "20261016-t.gbfri5r8vs3o-B046-0"
+    "20261016-t.gbfri5r8vs3o-B026-0",
+    "20261016-t.gbfri5r8vs3o-B047-0"
   ],
   "recent_examples": [
     {
-      "id": "20261016-t.gbfri5r8vs3o-B025-0",
+      "id": "20261016-t.gbfri5r8vs3o-B026-0",
       "speaker_id": "38",
       "gender": "男",
       "text": "我也买进了一些，说实话，心里还是有些犹豫。不过之前已经跟过好几次推荐了，也不想再错过这次机会，整体来说还是有信心的。",
+      "evidence_fingerprint": "998eee645832e18b91bc8c162175bbb7f07ae93850082b2dd3f487413dfabb82",
+      "label_fingerprint": "11c6831cfbc1d335b00e8c7aecfd5cd064ae4bd2b9f5fceb71e53d8377043c9d",
       "source_label": "38男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 1902,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 1906,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "MORNING",
       "kind": "message",
@@ -42,14 +44,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B046-0",
+      "id": "20261016-t.gbfri5r8vs3o-B047-0",
       "speaker_id": "38",
       "gender": "男",
       "text": "其实我也买了一点FOJE。不过今天下午忙着整理下周的教学材料，刚才才想起来打开行情看看。",
+      "evidence_fingerprint": "c0b770ff26ef3504c6f4f5da2466677b3ff1b7a490612a14db2d0f941478ed33",
+      "label_fingerprint": "e4ca507b49a5e5cc04a3910ef319f5cfa454ed4bd306faacbcd733e847fcb882",
       "source_label": "38男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 3326,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 3330,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "AFTERNOON",
       "kind": "message",
@@ -69,14 +73,23 @@
       "quantity": null,
       "summary": "上午称买进一些，下午明确FOJE；两次描述同一参与状态，不推断为两次买入。忙整理教学材料，有犹豫和不想错过的情绪。",
       "evidence_ids": [
-        "20261016-t.gbfri5r8vs3o-B025-0",
-        "20261016-t.gbfri5r8vs3o-B046-0"
+        "20261016-t.gbfri5r8vs3o-B026-0",
+        "20261016-t.gbfri5r8vs3o-B047-0"
       ],
       "reviewer": "codex-editor-source-read-20261017",
       "evidence_support_reviewed": true,
-      "real_trade_verified": false
+      "real_trade_verified": false,
+      "evidence_fingerprints": {
+        "20261016-t.gbfri5r8vs3o-B025-0": "998eee645832e18b91bc8c162175bbb7f07ae93850082b2dd3f487413dfabb82",
+        "20261016-t.gbfri5r8vs3o-B046-0": "c0b770ff26ef3504c6f4f5da2466677b3ff1b7a490612a14db2d0f941478ed33"
+      },
+      "original_evidence_ids": [
+        "20261016-t.gbfri5r8vs3o-B025-0",
+        "20261016-t.gbfri5r8vs3o-B046-0"
+      ],
+      "reference_status": "EXACT_CONTENT_RELINKED_AFTER_SOURCE_INSERTION"
     }
   ],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261017.json"
+  "source_snapshot": "memory/sources/google-doc-20261018.json"
 }

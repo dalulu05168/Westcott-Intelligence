@@ -18,7 +18,7 @@
       "20261015-t.huff85y7dlym-B035-0",
       "20261015-t.huff85y7dlym-B041-0",
       "20261015-t.huff85y7dlym-B093-0",
-      "20261016-t.gbfri5r8vs3o-B087-0"
+      "20261016-t.gbfri5r8vs3o-B088-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -36,7 +36,7 @@
     "20261015-t.huff85y7dlym-B035-0",
     "20261015-t.huff85y7dlym-B041-0",
     "20261015-t.huff85y7dlym-B093-0",
-    "20261016-t.gbfri5r8vs3o-B087-0"
+    "20261016-t.gbfri5r8vs3o-B088-0"
   ],
   "recent_examples": [
     {
@@ -167,10 +167,12 @@
       "speaker_id": "27",
       "gender": "女",
       "text": "但如果非要死等价格跌到最划算才出手，会不会有些大牛股一辈子都不降价，我们只能眼睁睁看它一直涨，最后啥也没买到？🤔",
+      "evidence_fingerprint": "26be96bd106cf595bf28b6c5aa90ec0fe252ade0c076cec9c5ce0a4b0a41daae",
+      "label_fingerprint": "77edcac10a25eaa3abe054052410015f14658f2fec7549131e94df0938b48d9f",
       "source_label": "27女：",
       "source_tab_id": "t.t7k4o87mkgzv",
       "source_offset": 5241,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-14",
       "node": "EVENING",
       "kind": "message",
@@ -185,10 +187,12 @@
       "speaker_id": "27",
       "gender": "女",
       "text": "每天都有新消息，总不能讨论完就过去了。🤔",
+      "evidence_fingerprint": "7fcbb44d918e331c9571772df335462eb92840c4a7fe69351499435ac848a1ad",
+      "label_fingerprint": "085e37b374186ac878f4d0a199240dca126712f1991236c4166127d0604cf32b",
       "source_label": "27女：",
       "source_tab_id": "t.huff85y7dlym",
       "source_offset": 2408,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-15",
       "node": "AFTERNOON",
       "kind": "message",
@@ -203,10 +207,12 @@
       "speaker_id": "27",
       "gender": "女",
       "text": "难怪之前一直提醒我们留意能源和银行板块的区别。现在再回头看，关注的方向还是挺有价值的。",
+      "evidence_fingerprint": "8bbc5ccfbbc1e1efffc94b58de73ab409ae08d26bff3c24d0e2e2be0be32d8f1",
+      "label_fingerprint": "c123490fc0773761e0a8e710edda639a062d98bb6b6ad2ba6458f699ebbae116",
       "source_label": "27女：",
       "source_tab_id": "t.huff85y7dlym",
       "source_offset": 2892,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-15",
       "node": "AFTERNOON",
       "kind": "message",
@@ -221,10 +227,12 @@
       "speaker_id": "27",
       "gender": "女",
       "text": "在这方面很多人都左右为难。",
+      "evidence_fingerprint": "f1a220167baa5d58384c9fc58d52f8e356c332446aaa79ea839161644a10a1bc",
+      "label_fingerprint": "a423ce940a4e7d33bab53542d914453fdade40300c654c8058365192c46f7f7c",
       "source_label": "27女：",
       "source_tab_id": "t.huff85y7dlym",
       "source_offset": 7008,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-15",
       "node": "EVENING",
       "kind": "message",
@@ -235,14 +243,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B087-0",
+      "id": "20261016-t.gbfri5r8vs3o-B088-0",
       "speaker_id": "27",
       "gender": "女",
       "text": "我也买了这支票，这需要发在社群里面吗？",
+      "evidence_fingerprint": "7638c0230568eb8e85453896112a5d5df01956a71f287733def34a299dfb263c",
+      "label_fingerprint": "f2db20f1045068c31c3f337d2a7451f8953da6f7f5060bc2aafc89ccbc650d45",
       "source_label": "27女：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 6305,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 6309,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "EVENING",
       "kind": "message",
@@ -255,5 +265,5 @@
   ],
   "dynamic_records": [],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261017.json"
+  "source_snapshot": "memory/sources/google-doc-20261018.json"
 }

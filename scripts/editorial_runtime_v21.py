@@ -6,6 +6,7 @@ GOOGLE_ACCESS_TOKEN, or supplied by the connected Drive reader. File receipts
 remain attributed to their supplied provenance; they are not proof of authenticity.
 """
 import argparse
+import copy
 from collections import Counter
 from datetime import date, datetime, timezone
 from difflib import SequenceMatcher
@@ -131,6 +132,14 @@ def compact(text):
     return ''.join(c for c in normalized(text) if c.isalnum())
 
 
+def evidence_fingerprint(day, speaker, text):
+    return sha(json.dumps([day, speaker, normalized(text)], ensure_ascii=False).encode())
+
+
+def label_fingerprint(day, speaker, gender, label, text):
+    return sha(json.dumps([day, speaker, gender, label, normalized(text)], ensure_ascii=False).encode())
+
+
 def parse_snapshot(snapshot, roster, year, decisions=None):
     """Date tabs or explicit date headings; empty parent/placeholders are ignored.
 
@@ -184,9 +193,12 @@ def parse_snapshot(snapshot, roster, year, decisions=None):
                     mid = f'{day.replace("-", "")}-{tab["tabId"]}-B{i+1:03}-{part}'
                     decision = overrides.get(mid, {})
                     warnings = []
+                    label_key = label_fingerprint(day, speaker, gender, label, content)
                     status = 'PRESENT_IN_FORMAL_DOCUMENT'
                     if not content:
                         status = 'EXCLUDED_EMPTY'
+                        if speaker in roster and gender != roster[speaker]['gender']:
+                            warnings.append('EMPTY_LABEL_IDENTITY_CONFLICT_NOT_A_MESSAGE')
                     elif speaker in roster and gender != roster[speaker]['gender']:
                         status = 'REVIEW_LABEL_REQUIRED'
                     elif speaker == 'unknown_staff':
@@ -207,6 +219,8 @@ def parse_snapshot(snapshot, roster, year, decisions=None):
                         elif '下午好' in content[:150]: phase = 'AFTERNOON'
                         elif '晚上好' in content[:150]: phase = 'EVENING'
                     rows.append({'id': mid, 'speaker_id': speaker, 'gender': gender, 'text': content,
+                        'evidence_fingerprint': evidence_fingerprint(day, speaker, content),
+                        'label_fingerprint': label_key,
                         'source_label': label, 'source_tab_id': tab['tabId'], 'source_offset': offset+m.start(),
                         'source_revision': snapshot['revisionId'], 'date': day, 'node': phase, 'kind': 'message',
                         'status': status, 'unlabelled_fragment': inferred, 'warnings': warnings,
@@ -248,6 +262,8 @@ def checkpoint(days, snapshot, digest):
         'last_adopted_excerpt': last['text'], 'document_revision_id': snapshot['revisionId'],
         'retrieved_at': snapshot['retrieved_at'], 'source_sha256': digest, 'counts': counts,
         'quarantined_blocks': [r['id'] for r in rows if r['status'].startswith('REVIEW')],
+        'source_anomalies': [{'id': r['id'], 'label': r['source_label'], 'warnings': r['warnings']}
+                             for r in rows if 'EMPTY_LABEL_IDENTITY_CONFLICT_NOT_A_MESSAGE' in r['warnings']],
         'freshness': 'HISTORICAL_READ_REQUIRES_REFRESH_BEFORE_WRITING', 'delivery': 'NOT_VERIFIED'}
 
 
@@ -296,9 +312,31 @@ def reviewed_states(records, sources, roster):
     """Validate evidence links, not their semantic truth. Reviewer stays explicit."""
     messages = {r['id']: r for rows in sources.values() for r in rows}
     accepted = []
-    for record in records or []:
+    for original in records or []:
+        record = copy.deepcopy(original)
         refs = record.get('evidence_ids', [])
         pid = record.get('member_id')
+        fingerprints = record.get('evidence_fingerprints', {})
+        rebound = []
+        for ref in refs:
+            expected = fingerprints.get(ref)
+            if not expected:
+                raise ValueError('STATE_EVIDENCE_MISSING_OR_WITHDRAWN:'+str(record.get('id')))
+            current = messages.get(ref)
+            actual = (current.get('evidence_fingerprint') or evidence_fingerprint(current['date'], current['speaker_id'], current['text'])) if current else None
+            if actual == expected:
+                rebound.append(ref)
+                continue
+            matches = [r['id'] for r in messages.values()
+                       if (r.get('evidence_fingerprint') or evidence_fingerprint(r['date'], r['speaker_id'], r['text'])) == expected]
+            if len(matches) != 1:
+                raise ValueError('STATE_EVIDENCE_MISSING_OR_WITHDRAWN:'+str(record.get('id')))
+            rebound.append(matches[0])
+        if rebound != refs:
+            record['original_evidence_ids'] = refs
+            record['evidence_ids'] = rebound
+            record['reference_status'] = 'EXACT_CONTENT_RELINKED_AFTER_SOURCE_INSERTION'
+        refs = rebound
         if (not record.get('reviewer') or record.get('evidence_support_reviewed') is not True
                 or not refs or any(ref not in messages for ref in refs)):
             raise ValueError('STATE_EVIDENCE_MISSING_OR_WITHDRAWN:'+str(record.get('id')))
@@ -354,7 +392,23 @@ def run(root, snapshot, cast, now, revision_check=None, decisions=None, scene=No
         for path in sorted((root/'memory/sources').glob('*-review.json')):
             raw = path.read_bytes(); hashes[path.relative_to(root).as_posix()] = sha(raw)
             candidates.append(json.loads(raw))
-        decisions = next((d for d in candidates if d.get('snapshot_sha256') == source_digest(snapshot)), {})
+        decisions = next((d for d in candidates if d.get('snapshot_sha256') == source_digest(snapshot)), None)
+        if decisions is None:
+            raw_days, _ = parse_snapshot(snapshot, roster, now.astimezone(ZoneInfo(policy['timezone'])).year)
+            by_fingerprint = {}
+            for candidate in candidates:
+                if not candidate.get('reviewer'): continue
+                for old in candidate.get('blocks', {}).values():
+                    key = old.get('label_fingerprint')
+                    if key: by_fingerprint.setdefault(key, []).append(old)
+            rebound = {}
+            for row in (r for rows in raw_days.values() for r in rows):
+                matches = by_fingerprint.get(row['label_fingerprint'], [])
+                targets = {(m.get('speaker_id'), m.get('gender')) for m in matches}
+                if len(targets) > 1: raise ValueError('AMBIGUOUS_PRIOR_LABEL_REVIEW')
+                if matches: rebound[row['id']] = matches[0]
+            decisions = {'snapshot_sha256': source_digest(snapshot),
+                'reviewer': 'REUSED_EXACT_UNCHANGED_LABEL_REVIEWS', 'blocks': rebound} if rebound else {}
     errors = validate_snapshot(snapshot, policy, now, revision_check)
     days, digest = parse_snapshot(snapshot, roster, now.astimezone(ZoneInfo(policy['timezone'])).year, decisions)
     if any(date.fromisoformat(day) > now.astimezone(ZoneInfo(policy['timezone'])).date() for day in days):

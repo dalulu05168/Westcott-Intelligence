@@ -9,8 +9,8 @@
     "history_status": "LOADED_ADOPTED_EVIDENCE",
     "memory_access": "NO_SEPARATE_FILE",
     "evidence_ids": [
-      "20261016-t.gbfri5r8vs3o-B014-0",
-      "20261016-t.gbfri5r8vs3o-B040-0"
+      "20261016-t.gbfri5r8vs3o-B015-0",
+      "20261016-t.gbfri5r8vs3o-B041-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -19,19 +19,21 @@
   },
   "evidence_store": "memory/derived/v2.1/effective-history.json",
   "evidence_ids": [
-    "20261016-t.gbfri5r8vs3o-B014-0",
-    "20261016-t.gbfri5r8vs3o-B040-0"
+    "20261016-t.gbfri5r8vs3o-B015-0",
+    "20261016-t.gbfri5r8vs3o-B041-0"
   ],
   "recent_examples": [
     {
-      "id": "20261016-t.gbfri5r8vs3o-B014-0",
+      "id": "20261016-t.gbfri5r8vs3o-B015-0",
       "speaker_id": "19",
       "gender": "男",
       "text": "今天的开盘信息怎么还没发布呢？",
+      "evidence_fingerprint": "6753b6a8609c7ad2bcedab72d002fea305710faffe52436e4d501e247c86b31d",
+      "label_fingerprint": "8514526165bebdc5852d7e319383789200dae42db6b80792f80269b2cdf4110a",
       "source_label": "19男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 1043,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 1047,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "MORNING",
       "kind": "message",
@@ -42,14 +44,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B040-0",
+      "id": "20261016-t.gbfri5r8vs3o-B041-0",
       "speaker_id": "19",
       "gender": "男",
       "text": "得看是进口还是出口。有些订单收入按欧元结算。",
+      "evidence_fingerprint": "7849dda50a175967ed4b9f518a9a92c62be3da1c7b2182cb4dec7c93511d7e8d",
+      "label_fingerprint": "105385d87859570552244b12744a6beeb1ec3a683a45db44f4deee3dd93f5156",
       "source_label": "19男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 3026,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 3030,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "AFTERNOON",
       "kind": "message",
@@ -62,5 +66,5 @@
   ],
   "dynamic_records": [],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261017.json"
+  "source_snapshot": "memory/sources/google-doc-20261018.json"
 }

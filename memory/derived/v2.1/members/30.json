@@ -15,9 +15,9 @@
       "M050",
       "20261013-M033",
       "20261014-t.t7k4o87mkgzv-B033-0",
-      "20261016-t.gbfri5r8vs3o-B058-0",
-      "20261016-t.gbfri5r8vs3o-B063-0",
-      "20261016-t.gbfri5r8vs3o-B067-0"
+      "20261016-t.gbfri5r8vs3o-B059-0",
+      "20261016-t.gbfri5r8vs3o-B064-0",
+      "20261016-t.gbfri5r8vs3o-B068-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -32,9 +32,9 @@
     "M050",
     "20261013-M033",
     "20261014-t.t7k4o87mkgzv-B033-0",
-    "20261016-t.gbfri5r8vs3o-B058-0",
-    "20261016-t.gbfri5r8vs3o-B063-0",
-    "20261016-t.gbfri5r8vs3o-B067-0"
+    "20261016-t.gbfri5r8vs3o-B059-0",
+    "20261016-t.gbfri5r8vs3o-B064-0",
+    "20261016-t.gbfri5r8vs3o-B068-0"
   ],
   "recent_examples": [
     {
@@ -165,10 +165,12 @@
       "speaker_id": "30",
       "gender": "男",
       "text": "40台设备，看来炼油厂的检测工作也挺复杂啊。我以前还以为主要就是生产和销售😂",
+      "evidence_fingerprint": "d4219b17b9c06d8c646bcccde7b7c24728610a1ad2a2d9506f80d2eb8f6c8762",
+      "label_fingerprint": "e1caa544c3efa4e71359987feee8d63a34453f011aeebe9c331669ac57b654a3",
       "source_label": "30男：",
       "source_tab_id": "t.t7k4o87mkgzv",
       "source_offset": 2585,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-14",
       "node": "AFTERNOON",
       "kind": "message",
@@ -179,14 +181,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B058-0",
+      "id": "20261016-t.gbfri5r8vs3o-B059-0",
       "speaker_id": "30",
       "gender": "男",
       "text": "这次有意思，终于不是简单猜涨跌了。😂 我先选A，看看科技股今晚能不能争口气。",
+      "evidence_fingerprint": "1499a811b1c0ed3cc5f7642ff383e62b7dc03310fa380faef5e02330510afc10",
+      "label_fingerprint": "289fbc026bef3d4f9aa5552f3809489784f58bd4e62f655a362ad12a5495ca40",
       "source_label": "30男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 4157,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 4161,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "AFTERNOON",
       "kind": "message",
@@ -197,14 +201,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B063-0",
+      "id": "20261016-t.gbfri5r8vs3o-B064-0",
       "speaker_id": "30",
       "gender": "男",
       "text": "哈哈，怎么选B的人越来越多了？05号，看来今晚咱俩压力不小。😂",
+      "evidence_fingerprint": "cd5ab074b605cb2d53bd6db21b11436ae6c6a73960ab4565add8cce72efc4853",
+      "label_fingerprint": "8206a8d4f09ace94cdf3c80152becadde527f86a9488a9f755f5dccfcc19abe5",
       "source_label": "30男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 4355,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 4359,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "AFTERNOON",
       "kind": "message",
@@ -215,14 +221,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B067-0",
+      "id": "20261016-t.gbfri5r8vs3o-B068-0",
       "speaker_id": "30",
       "gender": "男",
       "text": "刚才还在猜纳指和道指谁更强，现在标普也有点悬念了。🤔",
+      "evidence_fingerprint": "b76e84f4f2d116111f9ff8d63d966dcf32fef09df3c30a6fa57af06df723afbe",
+      "label_fingerprint": "cfe84027d893828e361ffc669916f810a716dddba18701a9eedfc1c63514b44e",
       "source_label": "30男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 4639,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 4643,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "AFTERNOON",
       "kind": "message",
@@ -235,5 +243,5 @@
   ],
   "dynamic_records": [],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261017.json"
+  "source_snapshot": "memory/sources/google-doc-20261018.json"
 }

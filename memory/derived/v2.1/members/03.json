@@ -12,7 +12,7 @@
       "M002",
       "M009",
       "M011",
-      "20261016-t.gbfri5r8vs3o-B021-0"
+      "20261016-t.gbfri5r8vs3o-B022-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -24,7 +24,7 @@
     "M002",
     "M009",
     "M011",
-    "20261016-t.gbfri5r8vs3o-B021-0"
+    "20261016-t.gbfri5r8vs3o-B022-0"
   ],
   "recent_examples": [
     {
@@ -109,14 +109,16 @@
       "date": "2026-10-12"
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B021-0",
+      "id": "20261016-t.gbfri5r8vs3o-B022-0",
       "speaker_id": "03",
       "gender": "男",
       "text": "我刚才还以为你准备第一次买呢，没想到你已经是老持有人了。😄",
+      "evidence_fingerprint": "74edc710c914ecbe2441d6f9378ece7a8571238cf7b6f39531a05d6de7794151",
+      "label_fingerprint": "24da52dd50a286e42a0133c6659f9c6964da8bc74d0f660d7b01ddee9c4e3355",
       "source_label": "03：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 1708,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 1712,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "MORNING",
       "kind": "message",
@@ -131,5 +133,5 @@
   ],
   "dynamic_records": [],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261017.json"
+  "source_snapshot": "memory/sources/google-doc-20261018.json"
 }

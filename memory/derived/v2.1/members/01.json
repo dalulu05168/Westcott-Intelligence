@@ -11,10 +11,10 @@
     "evidence_ids": [
       "20261013-M025",
       "20261014-t.t7k4o87mkgzv-B025-0",
-      "20261016-t.gbfri5r8vs3o-B016-0",
-      "20261016-t.gbfri5r8vs3o-B081-0",
-      "20261016-t.gbfri5r8vs3o-B092-0",
-      "20261016-t.gbfri5r8vs3o-B111-0"
+      "20261016-t.gbfri5r8vs3o-B017-0",
+      "20261016-t.gbfri5r8vs3o-B082-0",
+      "20261016-t.gbfri5r8vs3o-B093-0",
+      "20261016-t.gbfri5r8vs3o-B112-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -25,10 +25,10 @@
   "evidence_ids": [
     "20261013-M025",
     "20261014-t.t7k4o87mkgzv-B025-0",
-    "20261016-t.gbfri5r8vs3o-B016-0",
-    "20261016-t.gbfri5r8vs3o-B081-0",
-    "20261016-t.gbfri5r8vs3o-B092-0",
-    "20261016-t.gbfri5r8vs3o-B111-0"
+    "20261016-t.gbfri5r8vs3o-B017-0",
+    "20261016-t.gbfri5r8vs3o-B082-0",
+    "20261016-t.gbfri5r8vs3o-B093-0",
+    "20261016-t.gbfri5r8vs3o-B112-0"
   ],
   "recent_examples": [
     {
@@ -51,10 +51,12 @@
       "speaker_id": "01",
       "gender": "男",
       "text": "这次我就不跟了，先继续观望，看看后面怎么走。",
+      "evidence_fingerprint": "14216d505f6ea6ddbd94d64e3efb6307b66b753db949f05a2116839e98356532",
+      "label_fingerprint": "369cddebee730631cd95af7e1caa214ec1144c56edbb65546c73783bb161ca12",
       "source_label": "01男",
       "source_tab_id": "t.t7k4o87mkgzv",
       "source_offset": 1897,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-14",
       "node": "AFTERNOON",
       "kind": "message",
@@ -65,14 +67,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B016-0",
+      "id": "20261016-t.gbfri5r8vs3o-B017-0",
       "speaker_id": "01",
       "gender": "男",
       "text": "今天延时很久，我刚刚也没查到信息。😂",
+      "evidence_fingerprint": "3ab0bd72f08524ddd4e2024721da568278f733c57d555f29455aea742d53a7b7",
+      "label_fingerprint": "e24fda420e4a2438672acf449c0acb21ac99f9e29dd0cf628fdadfcf602fdc11",
       "source_label": "01男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 1500,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 1504,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "MORNING",
       "kind": "message",
@@ -83,14 +87,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B081-0",
+      "id": "20261016-t.gbfri5r8vs3o-B082-0",
       "speaker_id": "01",
       "gender": "男",
       "text": "有没有跟我一样的？先生的课基本每次都听，但听完没多久就忘了，感觉学了不少，真正记住的却没多少。",
+      "evidence_fingerprint": "e8e606b4e474209171c45bfcf60cf53155d26c29897e67619c43c9ae6ae967e8",
+      "label_fingerprint": "10ff8b432a5f2a322214ac76e9a1a2cfbe6a3bc25e37e4fbb2fe6a3060b1377e",
       "source_label": "1男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 5684,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 5688,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "EVENING",
       "kind": "message",
@@ -101,14 +107,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B092-0",
+      "id": "20261016-t.gbfri5r8vs3o-B093-0",
       "speaker_id": "01",
       "gender": "男",
       "text": "原来下面这些柱子不是成交量啊。😂 我以前打开图表，经常把下面几组指标混在一起看，难怪越看越乱。",
+      "evidence_fingerprint": "e0c5fd83dd08ce0cca79a52efaaabe6574d7eb6c16ac64cae967acc9c117a4be",
+      "label_fingerprint": "062349e38906f2ca752410ec232ed02b39349efaeaee45fd393a0be3a7a6e2cc",
       "source_label": "01男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 6752,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 6756,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "EVENING",
       "kind": "message",
@@ -119,14 +127,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B111-0",
+      "id": "20261016-t.gbfri5r8vs3o-B112-0",
       "speaker_id": "01",
       "gender": "男",
       "text": "今晚这三张图我得保存下来，周末再自己对照着看看。😂 这次至少知道该先找哪条线了。\n先生辛苦了，晚安！",
+      "evidence_fingerprint": "3b13cdc26e163d6d5e12a36fbd320f9d99f2c8907623899dca39e6ef5bb7593d",
+      "label_fingerprint": "7e30d7ad719039494a99ad6eca088766a27f993b95d13d1e4787dfd13effb6e3",
       "source_label": "01男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 8644,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 8648,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "EVENING",
       "kind": "message",
@@ -139,5 +149,5 @@
   ],
   "dynamic_records": [],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261017.json"
+  "source_snapshot": "memory/sources/google-doc-20261018.json"
 }

@@ -12,8 +12,8 @@
       "M004",
       "M010",
       "M013",
-      "20261016-t.gbfri5r8vs3o-B078-0",
-      "20261016-t.gbfri5r8vs3o-B109-0"
+      "20261016-t.gbfri5r8vs3o-B079-0",
+      "20261016-t.gbfri5r8vs3o-B110-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -25,8 +25,8 @@
     "M004",
     "M010",
     "M013",
-    "20261016-t.gbfri5r8vs3o-B078-0",
-    "20261016-t.gbfri5r8vs3o-B109-0"
+    "20261016-t.gbfri5r8vs3o-B079-0",
+    "20261016-t.gbfri5r8vs3o-B110-0"
   ],
   "recent_examples": [
     {
@@ -111,14 +111,16 @@
       "date": "2026-10-12"
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B078-0",
+      "id": "20261016-t.gbfri5r8vs3o-B079-0",
       "speaker_id": "33",
       "gender": "男",
       "text": "天天观察能观察出来什么线路呢？跟上去不就知道了。",
+      "evidence_fingerprint": "5031976b83462b6988b3476a942375b586f4266c65263de8f9a850c03514b161",
+      "label_fingerprint": "127ef76df0c69a231f93876da672cd9aea383d51af2ecfb25ea16bd3cf3d016b",
       "source_label": "33：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 5555,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 5559,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "EVENING",
       "kind": "message",
@@ -131,14 +133,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B109-0",
+      "id": "20261016-t.gbfri5r8vs3o-B110-0",
       "speaker_id": "33",
       "gender": "男",
       "text": "那看到顶背离的时候，是不是应该先观察后面的走势有没有变化？",
+      "evidence_fingerprint": "8ca4b4a344092075ba599bb1db27b73757227568443b2f6ae5093f18bfac4d4f",
+      "label_fingerprint": "e18249ae81307658b34b9079fee53ba0b64c39ef7f611fab64481bf0c219d25e",
       "source_label": "33男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 8392,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 8396,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "EVENING",
       "kind": "message",
@@ -151,5 +155,5 @@
   ],
   "dynamic_records": [],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261017.json"
+  "source_snapshot": "memory/sources/google-doc-20261018.json"
 }

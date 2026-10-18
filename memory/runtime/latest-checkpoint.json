@@ -3,18 +3,18 @@
   "story_date": "2026-10-16",
   "story_tab_id": "t.gbfri5r8vs3o",
   "story_phase": "EVENING_CLOSED",
-  "last_adopted_message_id": "20261016-t.gbfri5r8vs3o-B111-1",
+  "last_adopted_message_id": "20261016-t.gbfri5r8vs3o-B112-1",
   "last_adopted_speaker": "news_assistant",
   "last_adopted_excerpt": "🌙 感谢Jonathan先生今晚的精彩讲解，也感谢各位成员的积极参与！\n今晚的MACD技术分析课程已经结束，大家可以利用周末时间整理笔记，慢慢消化今天学习的内容。\n今天的社群交流到这里正式结束。\n祝各位成员周末愉快，晚安！",
-  "document_revision_id": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
-  "retrieved_at": "2026-10-17T19:21:22+00:00",
-  "source_sha256": "3e28df95a55dad11e739f659287147b6a336075113f8f18bd1b8e98fbe72adf7",
+  "document_revision_id": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+  "retrieved_at": "2026-10-18T02:17:09+00:00",
+  "source_sha256": "0df998050d2c1caad3616bfdf9519763a8ee2c8b73aea371e45098f908abedea",
   "counts": {
     "MORNING": {
-      "labelled_raw": 32,
+      "labelled_raw": 33,
       "unlabelled_fragments": 0,
       "effective": 31,
-      "excluded": 1,
+      "excluded": 2,
       "review_required": 0
     },
     "AFTERNOON": {
@@ -33,7 +33,16 @@
     }
   },
   "quarantined_blocks": [],
+  "source_anomalies": [
+    {
+      "id": "20261016-t.gbfri5r8vs3o-B003-0",
+      "label": "11女",
+      "warnings": [
+        "EMPTY_LABEL_IDENTITY_CONFLICT_NOT_A_MESSAGE"
+      ]
+    }
+  ],
   "freshness": "HISTORICAL_READ_REQUIRES_REFRESH_BEFORE_WRITING",
   "delivery": "NOT_VERIFIED",
-  "source_snapshot_path": "memory/sources/google-doc-20261017.json"
+  "source_snapshot_path": "memory/sources/google-doc-20261018.json"
 }
