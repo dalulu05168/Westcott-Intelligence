@@ -1,0 +1,45 @@
+{
+  "searches": [
+    {
+      "region": "RO",
+      "query": "Romania October 18 2026 official central bank fiscal regulation company earnings energy fintech latest news",
+      "searched_at": "2026-10-18T01:47:21.300Z",
+      "status": "OK"
+    },
+    {
+      "region": "FR",
+      "query": "France 18 octobre 2026 communiqués banque budget réglementation entreprises résultats énergie fintech dernières",
+      "searched_at": "2026-10-18T01:47:21.300Z",
+      "status": "OK"
+    },
+    {
+      "region": "US",
+      "query": "US October 17 18 2026 official Treasury Fed SEC earnings energy fintech latest news",
+      "searched_at": "2026-10-18T01:47:21.300Z",
+      "status": "OK"
+    },
+    {
+      "region": "GLOBAL",
+      "query": "global October 18 2026 official IMF World Bank energy geopolitical central bank latest news",
+      "searched_at": "2026-10-18T01:47:21.300Z",
+      "status": "OK"
+    }
+  ],
+  "articles": [],
+  "leads": [
+    {
+      "article_url": "https://www.federalreserve.gov/newsevents/pressreleases/2026-press.htm",
+      "reason": "Listing last update October 16; no in-window article established."
+    },
+    {
+      "article_url": "https://www.banque-france.fr/fr/actualites-et-evenements",
+      "reason": "Listing shows October 16 and older items; no in-window original established."
+    }
+  ],
+  "limitations": [
+    "Search is not globally exhaustive; snippets not factual approval.",
+    "No newly discovered original with verified publication time inside 00:46–01:46 UTC."
+  ],
+  "review_status": "HELD_NO_VERIFIED_IN_WINDOW_CANDIDATES",
+  "telegram_publishable": false
+}
