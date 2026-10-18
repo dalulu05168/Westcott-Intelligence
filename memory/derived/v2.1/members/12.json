@@ -12,8 +12,8 @@
       "20261013-M042",
       "20261014-t.t7k4o87mkgzv-B042-0",
       "20261015-t.huff85y7dlym-B072-0",
-      "20261016-t.gbfri5r8vs3o-B009-0",
-      "20261016-t.gbfri5r8vs3o-B019-0"
+      "20261016-t.gbfri5r8vs3o-B010-0",
+      "20261016-t.gbfri5r8vs3o-B020-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -25,8 +25,8 @@
     "20261013-M042",
     "20261014-t.t7k4o87mkgzv-B042-0",
     "20261015-t.huff85y7dlym-B072-0",
-    "20261016-t.gbfri5r8vs3o-B009-0",
-    "20261016-t.gbfri5r8vs3o-B019-0"
+    "20261016-t.gbfri5r8vs3o-B010-0",
+    "20261016-t.gbfri5r8vs3o-B020-0"
   ],
   "recent_examples": [
     {
@@ -49,10 +49,12 @@
       "speaker_id": "12",
       "gender": "男",
       "text": "我选正确，利润毕竟增长了10%。🤔",
+      "evidence_fingerprint": "c1b6529a1cbbc0b5200a7f303349c0f4a73a085acef4f0061e58464cbf07cca6",
+      "label_fingerprint": "ffa1ca1ec452d22ead7805fa12639d9a4cb24dba22d9c2c3b534751dcb664678",
       "source_label": "12男：",
       "source_tab_id": "t.t7k4o87mkgzv",
       "source_offset": 3222,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-14",
       "node": "EVENING",
       "kind": "message",
@@ -67,10 +69,12 @@
       "speaker_id": "12",
       "gender": "男",
       "text": "我记得自己上次选的是A。现在想想，我当时只注意利润增长了10%，完全忽略了预期是15%。😅",
+      "evidence_fingerprint": "56d1e903d50ca55348fa4f9e359d0c201cf33d0c2ca1d369307475b40c1bc02b",
+      "label_fingerprint": "ac345e17188b03647f2433f6748c1e569fe3cfceb059f9f502eacf1245176f72",
       "source_label": "12男：",
       "source_tab_id": "t.huff85y7dlym",
       "source_offset": 5310,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-15",
       "node": "EVENING",
       "kind": "message",
@@ -81,14 +85,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B009-0",
+      "id": "20261016-t.gbfri5r8vs3o-B010-0",
       "speaker_id": "12",
       "gender": "男",
       "text": "别太着急，先看看市场怎么走。",
+      "evidence_fingerprint": "2f4d237346175c5ebc533f11a7b220183d21ed0686135591e6ff0cfc9100571c",
+      "label_fingerprint": "600ce9a4337e09c278a59b22e4949c641e25b6a1bc25c0c1c444f592509df9cf",
       "source_label": "12男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 801,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 805,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "MORNING",
       "kind": "message",
@@ -99,14 +105,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B019-0",
+      "id": "20261016-t.gbfri5r8vs3o-B020-0",
       "speaker_id": "12",
       "gender": "男",
       "text": "我第一眼看到还以为是石油公司的代码。罗马尼亚市场确实还有不少我不熟悉的企业。😂",
+      "evidence_fingerprint": "69f14709ae897cfaeab8431902a7402989c8a5d721e281d9229dc914abff8fe8",
+      "label_fingerprint": "3c883b0fc3ffcdc0e71b5d2455a3dbda29e9b63c45576975b15e216614e01034",
       "source_label": "12男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 1611,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 1615,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "MORNING",
       "kind": "message",
@@ -119,5 +127,5 @@
   ],
   "dynamic_records": [],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261017.json"
+  "source_snapshot": "memory/sources/google-doc-20261018.json"
 }

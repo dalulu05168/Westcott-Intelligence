@@ -12,9 +12,9 @@
       "M062",
       "M070",
       "M074",
-      "20261016-t.gbfri5r8vs3o-B026-0",
-      "20261016-t.gbfri5r8vs3o-B062-0",
-      "20261016-t.gbfri5r8vs3o-B066-0"
+      "20261016-t.gbfri5r8vs3o-B027-0",
+      "20261016-t.gbfri5r8vs3o-B063-0",
+      "20261016-t.gbfri5r8vs3o-B067-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -26,9 +26,9 @@
     "M062",
     "M070",
     "M074",
-    "20261016-t.gbfri5r8vs3o-B026-0",
-    "20261016-t.gbfri5r8vs3o-B062-0",
-    "20261016-t.gbfri5r8vs3o-B066-0"
+    "20261016-t.gbfri5r8vs3o-B027-0",
+    "20261016-t.gbfri5r8vs3o-B063-0",
+    "20261016-t.gbfri5r8vs3o-B067-0"
   ],
   "recent_examples": [
     {
@@ -113,14 +113,16 @@
       "date": "2026-10-12"
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B026-0",
+      "id": "20261016-t.gbfri5r8vs3o-B027-0",
       "speaker_id": "13",
       "gender": "男",
       "text": "能看得出来，你们之前跟着推荐应该是有一定盈利的，不然也不会在现在这个相对高位还愿意继续买入。",
+      "evidence_fingerprint": "a00bdf4401da04893324ad31672cac8c548e539313ba6a9932221f309f2ad87c",
+      "label_fingerprint": "a426c43859bdd01a489499dbfa037cc4275dab349b85621ad4e7f0c964be026d",
       "source_label": "13男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 1966,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 1970,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "MORNING",
       "kind": "message",
@@ -131,14 +133,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B062-0",
+      "id": "20261016-t.gbfri5r8vs3o-B063-0",
       "speaker_id": "13",
       "gender": "男",
       "text": "等等，两个指数都跌的话，也能分胜负对吧？",
+      "evidence_fingerprint": "c89ad21c077c375c25084a260ea963bcd27b9a27037eca93817fe72554b88ba8",
+      "label_fingerprint": "b22600fd50345b3a3a92fa913ac3c69b80799e5bdc3a7e97a0740730818b2a5f",
       "source_label": "13男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 4329,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 4333,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "AFTERNOON",
       "kind": "message",
@@ -149,14 +153,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B066-0",
+      "id": "20261016-t.gbfri5r8vs3o-B067-0",
       "speaker_id": "13",
       "gender": "男",
       "text": "这距离现在的点位也不算远啊，看来今晚还有得看。😂",
+      "evidence_fingerprint": "eadc932c127e01d0d55ca8413ae9532c7f24940aad88ea807ffcea80c9eb1e5c",
+      "label_fingerprint": "18c444233686c1cf6efd4c458a9db9cb83e6bf895e8ef5f45de0377accb8b34b",
       "source_label": "13男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 4609,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 4613,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "AFTERNOON",
       "kind": "message",
@@ -169,5 +175,5 @@
   ],
   "dynamic_records": [],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261017.json"
+  "source_snapshot": "memory/sources/google-doc-20261018.json"
 }

@@ -7,24 +7,28 @@
       "action": "CONFIRM_LABEL",
       "speaker_id": "03",
       "gender": "男",
-      "reason": "Source number 03; canonical identity male; user accepted summary of missing label."
+      "reason": "Source number 03; canonical identity male; user accepted summary of missing label.",
+      "label_fingerprint": "24da52dd50a286e42a0133c6659f9c6964da8bc74d0f660d7b01ddee9c4e3355"
     },
     "20261016-t.gbfri5r8vs3o-B053-0": {
       "action": "CONFIRM_LABEL",
       "speaker_id": "24",
       "gender": "男",
-      "reason": "Source number 24; canonical identity male; user accepted summary of missing label."
+      "reason": "Source number 24; canonical identity male; user accepted summary of missing label.",
+      "label_fingerprint": "3a2a10f2d97f0739f6bccfe6ae17388030bc0edbb8feb0a49f2dd53bb9cd0ae9"
     },
     "20261016-t.gbfri5r8vs3o-B078-0": {
       "action": "CONFIRM_LABEL",
       "speaker_id": "33",
       "gender": "男",
-      "reason": "Source number 33; canonical identity male; user accepted summary of missing label."
+      "reason": "Source number 33; canonical identity male; user accepted summary of missing label.",
+      "label_fingerprint": "127ef76df0c69a231f93876da672cd9aea383d51af2ecfb25ea16bd3cf3d016b"
     },
     "20261016-t.gbfri5r8vs3o-B111-1": {
       "action": "CONFIRM_LABEL",
       "speaker_id": "news_assistant",
-      "reason": "User explicitly identified this as the evening close; thanks Jonathan and closes community after course. Missing source label retained in raw snapshot."
+      "reason": "User explicitly identified this as the evening close; thanks Jonathan and closes community after course. Missing source label retained in raw snapshot.",
+      "label_fingerprint": "d2b5f1969dbefcaefe69a39340f04be6e3c5db1be2acd8ccf5d69d8bf9c5dfdf"
     }
   }
 }

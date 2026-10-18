@@ -161,5 +161,48 @@ class Runtime21Test(unittest.TestCase):
         self.assertIn('skills/p004-chat-suite/references/runtime-v2.1.md', hashes)
         self.assertIn('memory/long-term/relationship-seeds.json', hashes)
 
+    def inserted_source(self):
+        snapshot=copy.deepcopy(self.snapshot)
+        snapshot['revisionId']='INSERTION_REGRESSION_FIXTURE_NOT_LIVE'
+        for p in snapshot['paragraphs']:
+            if p['tabId']=='t.gbfri5r8vs3o' and '早上好！昨晚有什么大事件吗？' in p['text']:
+                p['text']+='11女\n'
+                return snapshot
+        self.fail('Expected source line missing')
+
+    def test_insertion_relinks_unchanged_evidence_by_content(self):
+        snapshot=self.inserted_source()
+        check={'documentId':snapshot['documentId'],'revisionId':snapshot['revisionId'],'retrieved_at':self.now.isoformat()}
+        result=self.execute(('25','38','34','40'),snapshot=snapshot,revision_check=check,decisions=None)
+        self.assertEqual(result['errors'], [])
+        self.assertEqual(result['context']['checkpoint']['story_phase'],'EVENING_CLOSED')
+        record=next(r for r in result['reviewed_dynamic_records'] if r.get('member_id')=='25')
+        self.assertEqual(record['reference_status'],'EXACT_CONTENT_RELINKED_AFTER_SOURCE_INSERTION')
+        self.assertNotEqual(record['original_evidence_ids'],record['evidence_ids'])
+
+    def test_empty_wrong_gender_remains_visible_not_person_history(self):
+        snapshot=self.inserted_source()
+        check={'documentId':snapshot['documentId'],'revisionId':snapshot['revisionId'],'retrieved_at':self.now.isoformat()}
+        result=self.execute(('11',),snapshot=snapshot,revision_check=check,decisions=None)
+        self.assertTrue(result['context']['checkpoint']['source_anomalies'])
+        self.assertFalse(result['context']['members']['11']['history'])
+
+    def test_same_number_and_member_with_changed_text_cannot_reuse_state(self):
+        snapshot=copy.deepcopy(self.snapshot);snapshot['revisionId']='CHANGED_TEXT_REGRESSION_FIXTURE'
+        for p in snapshot['paragraphs']:
+            if '我上周在32.3 RON附近买的' in p['text']:
+                p['text']=p['text'].replace('卖掉了一部分','没有卖过')
+        check={'documentId':snapshot['documentId'],'revisionId':snapshot['revisionId'],'retrieved_at':self.now.isoformat()}
+        with self.assertRaisesRegex(ValueError,'MISSING_OR_WITHDRAWN'):
+            self.execute(('25',),snapshot=snapshot,revision_check=check,decisions=None)
+
+    def test_removed_evidence_blocks_prior_state(self):
+        snapshot=copy.deepcopy(self.snapshot);snapshot['revisionId']='DELETION_REGRESSION_FIXTURE'
+        for p in snapshot['paragraphs']:
+            if '我上周在32.3 RON附近买的' in p['text']:p['text']='\n'
+        check={'documentId':snapshot['documentId'],'revisionId':snapshot['revisionId'],'retrieved_at':self.now.isoformat()}
+        with self.assertRaisesRegex(ValueError,'MISSING_OR_WITHDRAWN'):
+            self.execute(('25',),snapshot=snapshot,revision_check=check,decisions=None)
+
 
 if __name__=='__main__':unittest.main()

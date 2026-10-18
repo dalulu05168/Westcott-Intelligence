@@ -9,12 +9,12 @@
     "history_status": "LOADED_ADOPTED_EVIDENCE",
     "memory_access": "NO_SEPARATE_FILE",
     "evidence_ids": [
-      "20261016-t.gbfri5r8vs3o-B020-0",
-      "20261016-t.gbfri5r8vs3o-B024-0",
-      "20261016-t.gbfri5r8vs3o-B028-0",
-      "20261016-t.gbfri5r8vs3o-B031-0",
-      "20261016-t.gbfri5r8vs3o-B045-0",
-      "20261016-t.gbfri5r8vs3o-B108-0"
+      "20261016-t.gbfri5r8vs3o-B021-0",
+      "20261016-t.gbfri5r8vs3o-B025-0",
+      "20261016-t.gbfri5r8vs3o-B029-0",
+      "20261016-t.gbfri5r8vs3o-B032-0",
+      "20261016-t.gbfri5r8vs3o-B046-0",
+      "20261016-t.gbfri5r8vs3o-B109-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -23,23 +23,25 @@
   },
   "evidence_store": "memory/derived/v2.1/effective-history.json",
   "evidence_ids": [
-    "20261016-t.gbfri5r8vs3o-B020-0",
-    "20261016-t.gbfri5r8vs3o-B024-0",
-    "20261016-t.gbfri5r8vs3o-B028-0",
-    "20261016-t.gbfri5r8vs3o-B031-0",
-    "20261016-t.gbfri5r8vs3o-B045-0",
-    "20261016-t.gbfri5r8vs3o-B108-0"
+    "20261016-t.gbfri5r8vs3o-B021-0",
+    "20261016-t.gbfri5r8vs3o-B025-0",
+    "20261016-t.gbfri5r8vs3o-B029-0",
+    "20261016-t.gbfri5r8vs3o-B032-0",
+    "20261016-t.gbfri5r8vs3o-B046-0",
+    "20261016-t.gbfri5r8vs3o-B109-0"
   ],
   "recent_examples": [
     {
-      "id": "20261016-t.gbfri5r8vs3o-B020-0",
+      "id": "20261016-t.gbfri5r8vs3o-B021-0",
       "speaker_id": "25",
       "gender": "男",
       "text": "我之前买过FOJE，现在手里还持有一些。今天看到又选中了这只股票，有点心动。今天继续加仓吗？",
+      "evidence_fingerprint": "e522b0b847e3aa5df868dcf3c2556a8bbd79031f77b10f60332dc58c2d2eafbf",
+      "label_fingerprint": "a6c8f190464885445462d293eee4dda0ab981173c8193d4d4b7ee87ad65e900c",
       "source_label": "25男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 1656,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 1660,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "MORNING",
       "kind": "message",
@@ -50,14 +52,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B024-0",
+      "id": "20261016-t.gbfri5r8vs3o-B025-0",
       "speaker_id": "25",
       "gender": "男",
       "text": "我上周在32.3 RON附近买的，后来涨到33左右卖掉了一部分，今天看到已经涨到34.4了，确实有点后悔之前卖早了。😂 现在再加仓的话，成本就抬高了不少，所以还挺纠结的。",
+      "evidence_fingerprint": "c3d80d274dc018a5c79532aef9be5f39ba1389b66267d3c932c7bcca2f7d1b9d",
+      "label_fingerprint": "6b8b6ef81b3febb35faa7e22c3893b46dea0bb69e0baff9e749bf8fe9f0a7fc3",
       "source_label": "25男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 1811,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 1815,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "MORNING",
       "kind": "message",
@@ -68,14 +72,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B028-0",
+      "id": "20261016-t.gbfri5r8vs3o-B029-0",
       "speaker_id": "25",
       "gender": "男",
       "text": "哈哈，之前那笔确实赚到了一点",
+      "evidence_fingerprint": "f0d96882d8ed400a89a77ebfa33bbc814560054ece08361b8448a9608a5b1807",
+      "label_fingerprint": "580fb082ead152a466f6708a24d74910f40ffd3c10947b5913a393308553cad5",
       "source_label": "25男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 2071,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 2075,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "MORNING",
       "kind": "message",
@@ -86,14 +92,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B031-0",
+      "id": "20261016-t.gbfri5r8vs3o-B032-0",
       "speaker_id": "25",
       "gender": "男",
       "text": "这个我确实深有体会。之前还没收到卖出通知，就提前卖掉了一部分，结果后来看到股价继续上涨，心里真的挺后悔的。",
+      "evidence_fingerprint": "758232d784d711183d353886738a45372fb8bd9b3ab5606f22c95f8a358c4655",
+      "label_fingerprint": "9c77ad2642afcf3dfe9625e42fb46e94cdc5c34c54f381c723e4043431831939",
       "source_label": "25男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 2310,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 2314,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "MORNING",
       "kind": "message",
@@ -104,14 +112,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B045-0",
+      "id": "20261016-t.gbfri5r8vs3o-B046-0",
       "speaker_id": "25",
       "gender": "男",
       "text": "我刚才把FOJE的页面关了，结果没过一会儿又打开。😂",
+      "evidence_fingerprint": "083670ab2740dc9981f39021662eda18580fd71ebc9a3a1306c8f36c104ee408",
+      "label_fingerprint": "68df89e717fc7867a8baa6ff1dbb6a956d2e5d6ac64927756e0efa13a156b029",
       "source_label": "25男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 3294,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 3298,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "AFTERNOON",
       "kind": "message",
@@ -122,14 +132,16 @@
       "real_trade_not_inferred": true
     },
     {
-      "id": "20261016-t.gbfri5r8vs3o-B108-0",
+      "id": "20261016-t.gbfri5r8vs3o-B109-0",
       "speaker_id": "25",
       "gender": "男",
       "text": "原来价格还在涨，动能也可能已经开始减弱了。😅",
+      "evidence_fingerprint": "bae345b42974e1d73abaab519ebe6a7f378e648f4dc6dca68a7f47b4992bc247",
+      "label_fingerprint": "d380bb1712c5775f35e130be26bb5142b3ae653e3855ffca9c200fe7a5916c6f",
       "source_label": "25男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 8363,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 8367,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "EVENING",
       "kind": "message",
@@ -153,16 +165,29 @@
         "剩余数量未知"
       ],
       "evidence_ids": [
+        "20261016-t.gbfri5r8vs3o-B021-0",
+        "20261016-t.gbfri5r8vs3o-B025-0",
+        "20261016-t.gbfri5r8vs3o-B029-0",
+        "20261016-t.gbfri5r8vs3o-B032-0"
+      ],
+      "reviewer": "codex-editor-source-read-20261017",
+      "evidence_support_reviewed": true,
+      "real_trade_verified": false,
+      "evidence_fingerprints": {
+        "20261016-t.gbfri5r8vs3o-B020-0": "e522b0b847e3aa5df868dcf3c2556a8bbd79031f77b10f60332dc58c2d2eafbf",
+        "20261016-t.gbfri5r8vs3o-B024-0": "c3d80d274dc018a5c79532aef9be5f39ba1389b66267d3c932c7bcca2f7d1b9d",
+        "20261016-t.gbfri5r8vs3o-B028-0": "f0d96882d8ed400a89a77ebfa33bbc814560054ece08361b8448a9608a5b1807",
+        "20261016-t.gbfri5r8vs3o-B031-0": "758232d784d711183d353886738a45372fb8bd9b3ab5606f22c95f8a358c4655"
+      },
+      "original_evidence_ids": [
         "20261016-t.gbfri5r8vs3o-B020-0",
         "20261016-t.gbfri5r8vs3o-B024-0",
         "20261016-t.gbfri5r8vs3o-B028-0",
         "20261016-t.gbfri5r8vs3o-B031-0"
       ],
-      "reviewer": "codex-editor-source-read-20261017",
-      "evidence_support_reviewed": true,
-      "real_trade_verified": false
+      "reference_status": "EXACT_CONTENT_RELINKED_AFTER_SOURCE_INSERTION"
     }
   ],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261017.json"
+  "source_snapshot": "memory/sources/google-doc-20261018.json"
 }

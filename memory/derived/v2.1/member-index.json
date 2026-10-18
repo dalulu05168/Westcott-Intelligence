@@ -1,7 +1,7 @@
 {
   "schema": "65-member-entrypoints-v2.1",
-  "source_snapshot": "memory/sources/google-doc-20261017.json",
-  "source_sha256": "3e28df95a55dad11e739f659287147b6a336075113f8f18bd1b8e98fbe72adf7",
+  "source_snapshot": "memory/sources/google-doc-20261018.json",
+  "source_sha256": "0df998050d2c1caad3616bfdf9519763a8ee2c8b73aea371e45098f908abedea",
   "members": {
     "01": {
       "id": "01",
@@ -15,10 +15,10 @@
       "evidence_ids": [
         "20261013-M025",
         "20261014-t.t7k4o87mkgzv-B025-0",
-        "20261016-t.gbfri5r8vs3o-B016-0",
-        "20261016-t.gbfri5r8vs3o-B081-0",
-        "20261016-t.gbfri5r8vs3o-B092-0",
-        "20261016-t.gbfri5r8vs3o-B111-0"
+        "20261016-t.gbfri5r8vs3o-B017-0",
+        "20261016-t.gbfri5r8vs3o-B082-0",
+        "20261016-t.gbfri5r8vs3o-B093-0",
+        "20261016-t.gbfri5r8vs3o-B112-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -43,10 +43,10 @@
         "20261015-t.huff85y7dlym-B002-0",
         "20261015-t.huff85y7dlym-B022-0",
         "20261015-t.huff85y7dlym-B055-0",
-        "20261016-t.gbfri5r8vs3o-B008-0",
-        "20261016-t.gbfri5r8vs3o-B036-0",
-        "20261016-t.gbfri5r8vs3o-B042-0",
-        "20261016-t.gbfri5r8vs3o-B061-0"
+        "20261016-t.gbfri5r8vs3o-B009-0",
+        "20261016-t.gbfri5r8vs3o-B037-0",
+        "20261016-t.gbfri5r8vs3o-B043-0",
+        "20261016-t.gbfri5r8vs3o-B062-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -66,7 +66,7 @@
         "M002",
         "M009",
         "M011",
-        "20261016-t.gbfri5r8vs3o-B021-0"
+        "20261016-t.gbfri5r8vs3o-B022-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -115,14 +115,14 @@
         "20261015-t.huff85y7dlym-B064-0",
         "20261015-t.huff85y7dlym-B077-0",
         "20261015-t.huff85y7dlym-B098-0",
-        "20261016-t.gbfri5r8vs3o-B005-0",
-        "20261016-t.gbfri5r8vs3o-B013-0",
-        "20261016-t.gbfri5r8vs3o-B018-0",
-        "20261016-t.gbfri5r8vs3o-B023-0",
-        "20261016-t.gbfri5r8vs3o-B038-0",
-        "20261016-t.gbfri5r8vs3o-B052-0",
-        "20261016-t.gbfri5r8vs3o-B060-0",
-        "20261016-t.gbfri5r8vs3o-B097-0"
+        "20261016-t.gbfri5r8vs3o-B006-0",
+        "20261016-t.gbfri5r8vs3o-B014-0",
+        "20261016-t.gbfri5r8vs3o-B019-0",
+        "20261016-t.gbfri5r8vs3o-B024-0",
+        "20261016-t.gbfri5r8vs3o-B039-0",
+        "20261016-t.gbfri5r8vs3o-B053-0",
+        "20261016-t.gbfri5r8vs3o-B061-0",
+        "20261016-t.gbfri5r8vs3o-B098-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -163,8 +163,8 @@
         "20261014-t.t7k4o87mkgzv-B014-0",
         "20261014-t.t7k4o87mkgzv-B026-0",
         "20261015-t.huff85y7dlym-B014-0",
-        "20261016-t.gbfri5r8vs3o-B022-0",
-        "20261016-t.gbfri5r8vs3o-B059-0"
+        "20261016-t.gbfri5r8vs3o-B023-0",
+        "20261016-t.gbfri5r8vs3o-B060-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -188,8 +188,8 @@
         "20261014-t.t7k4o87mkgzv-B017-0",
         "20261015-t.huff85y7dlym-B009-0",
         "20261015-t.huff85y7dlym-B040-0",
-        "20261016-t.gbfri5r8vs3o-B082-0",
-        "20261016-t.gbfri5r8vs3o-B093-0"
+        "20261016-t.gbfri5r8vs3o-B083-0",
+        "20261016-t.gbfri5r8vs3o-B094-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -221,13 +221,13 @@
         "20261015-t.huff85y7dlym-B076-0",
         "20261015-t.huff85y7dlym-B086-0",
         "20261015-t.huff85y7dlym-B102-0",
-        "20261016-t.gbfri5r8vs3o-B007-0",
-        "20261016-t.gbfri5r8vs3o-B011-0",
-        "20261016-t.gbfri5r8vs3o-B039-0",
-        "20261016-t.gbfri5r8vs3o-B043-0",
-        "20261016-t.gbfri5r8vs3o-B050-0",
-        "20261016-t.gbfri5r8vs3o-B064-0",
-        "20261016-t.gbfri5r8vs3o-B077-0"
+        "20261016-t.gbfri5r8vs3o-B008-0",
+        "20261016-t.gbfri5r8vs3o-B012-0",
+        "20261016-t.gbfri5r8vs3o-B040-0",
+        "20261016-t.gbfri5r8vs3o-B044-0",
+        "20261016-t.gbfri5r8vs3o-B051-0",
+        "20261016-t.gbfri5r8vs3o-B065-0",
+        "20261016-t.gbfri5r8vs3o-B078-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -254,8 +254,8 @@
         "20261015-t.huff85y7dlym-B084-0",
         "20261015-t.huff85y7dlym-B091-0",
         "20261015-t.huff85y7dlym-B097-0",
-        "20261016-t.gbfri5r8vs3o-B048-0",
-        "20261016-t.gbfri5r8vs3o-B054-0"
+        "20261016-t.gbfri5r8vs3o-B049-0",
+        "20261016-t.gbfri5r8vs3o-B055-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -290,8 +290,8 @@
         "20261013-M042",
         "20261014-t.t7k4o87mkgzv-B042-0",
         "20261015-t.huff85y7dlym-B072-0",
-        "20261016-t.gbfri5r8vs3o-B009-0",
-        "20261016-t.gbfri5r8vs3o-B019-0"
+        "20261016-t.gbfri5r8vs3o-B010-0",
+        "20261016-t.gbfri5r8vs3o-B020-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -311,9 +311,9 @@
         "M062",
         "M070",
         "M074",
-        "20261016-t.gbfri5r8vs3o-B026-0",
-        "20261016-t.gbfri5r8vs3o-B062-0",
-        "20261016-t.gbfri5r8vs3o-B066-0"
+        "20261016-t.gbfri5r8vs3o-B027-0",
+        "20261016-t.gbfri5r8vs3o-B063-0",
+        "20261016-t.gbfri5r8vs3o-B067-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -341,8 +341,8 @@
         "20261014-t.t7k4o87mkgzv-B045-0",
         "20261014-t.t7k4o87mkgzv-B061-0",
         "20261014-t.t7k4o87mkgzv-B063-0",
-        "20261016-t.gbfri5r8vs3o-B085-0",
-        "20261016-t.gbfri5r8vs3o-B098-0"
+        "20261016-t.gbfri5r8vs3o-B086-0",
+        "20261016-t.gbfri5r8vs3o-B099-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -363,7 +363,7 @@
         "20261015-t.huff85y7dlym-B025-0",
         "20261015-t.huff85y7dlym-B056-0",
         "20261015-t.huff85y7dlym-B096-0",
-        "20261016-t.gbfri5r8vs3o-B105-0"
+        "20261016-t.gbfri5r8vs3o-B106-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -418,12 +418,12 @@
         "20261013-M047",
         "20261014-t.t7k4o87mkgzv-B047-0",
         "20261015-t.huff85y7dlym-B094-0",
-        "20261016-t.gbfri5r8vs3o-B004-0",
-        "20261016-t.gbfri5r8vs3o-B012-0",
-        "20261016-t.gbfri5r8vs3o-B017-0",
-        "20261016-t.gbfri5r8vs3o-B034-0",
-        "20261016-t.gbfri5r8vs3o-B049-0",
-        "20261016-t.gbfri5r8vs3o-B055-0"
+        "20261016-t.gbfri5r8vs3o-B005-0",
+        "20261016-t.gbfri5r8vs3o-B013-0",
+        "20261016-t.gbfri5r8vs3o-B018-0",
+        "20261016-t.gbfri5r8vs3o-B035-0",
+        "20261016-t.gbfri5r8vs3o-B050-0",
+        "20261016-t.gbfri5r8vs3o-B056-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -440,8 +440,8 @@
       "history_status": "LOADED_ADOPTED_EVIDENCE",
       "memory_access": "NO_SEPARATE_FILE",
       "evidence_ids": [
-        "20261016-t.gbfri5r8vs3o-B014-0",
-        "20261016-t.gbfri5r8vs3o-B040-0"
+        "20261016-t.gbfri5r8vs3o-B015-0",
+        "20261016-t.gbfri5r8vs3o-B041-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -495,9 +495,9 @@
         "20261015-t.huff85y7dlym-B069-0",
         "20261015-t.huff85y7dlym-B103-0",
         "20261016-t.gbfri5r8vs3o-B002-0",
-        "20261016-t.gbfri5r8vs3o-B010-0",
-        "20261016-t.gbfri5r8vs3o-B035-0",
-        "20261016-t.gbfri5r8vs3o-B056-0"
+        "20261016-t.gbfri5r8vs3o-B011-0",
+        "20261016-t.gbfri5r8vs3o-B036-0",
+        "20261016-t.gbfri5r8vs3o-B057-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -558,7 +558,7 @@
         "20261015-t.huff85y7dlym-B033-0",
         "20261015-t.huff85y7dlym-B038-0",
         "20261015-t.huff85y7dlym-B048-0",
-        "20261016-t.gbfri5r8vs3o-B053-0"
+        "20261016-t.gbfri5r8vs3o-B054-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -575,12 +575,12 @@
       "history_status": "LOADED_ADOPTED_EVIDENCE",
       "memory_access": "NO_SEPARATE_FILE",
       "evidence_ids": [
-        "20261016-t.gbfri5r8vs3o-B020-0",
-        "20261016-t.gbfri5r8vs3o-B024-0",
-        "20261016-t.gbfri5r8vs3o-B028-0",
-        "20261016-t.gbfri5r8vs3o-B031-0",
-        "20261016-t.gbfri5r8vs3o-B045-0",
-        "20261016-t.gbfri5r8vs3o-B108-0"
+        "20261016-t.gbfri5r8vs3o-B021-0",
+        "20261016-t.gbfri5r8vs3o-B025-0",
+        "20261016-t.gbfri5r8vs3o-B029-0",
+        "20261016-t.gbfri5r8vs3o-B032-0",
+        "20261016-t.gbfri5r8vs3o-B046-0",
+        "20261016-t.gbfri5r8vs3o-B109-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -625,7 +625,7 @@
         "20261015-t.huff85y7dlym-B035-0",
         "20261015-t.huff85y7dlym-B041-0",
         "20261015-t.huff85y7dlym-B093-0",
-        "20261016-t.gbfri5r8vs3o-B087-0"
+        "20261016-t.gbfri5r8vs3o-B088-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -688,9 +688,9 @@
         "M050",
         "20261013-M033",
         "20261014-t.t7k4o87mkgzv-B033-0",
-        "20261016-t.gbfri5r8vs3o-B058-0",
-        "20261016-t.gbfri5r8vs3o-B063-0",
-        "20261016-t.gbfri5r8vs3o-B067-0"
+        "20261016-t.gbfri5r8vs3o-B059-0",
+        "20261016-t.gbfri5r8vs3o-B064-0",
+        "20261016-t.gbfri5r8vs3o-B068-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -746,8 +746,8 @@
         "M004",
         "M010",
         "M013",
-        "20261016-t.gbfri5r8vs3o-B078-0",
-        "20261016-t.gbfri5r8vs3o-B109-0"
+        "20261016-t.gbfri5r8vs3o-B079-0",
+        "20261016-t.gbfri5r8vs3o-B110-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -771,10 +771,10 @@
         "20261015-t.huff85y7dlym-B066-0",
         "20261015-t.huff85y7dlym-B078-0",
         "20261015-t.huff85y7dlym-B090-0",
-        "20261016-t.gbfri5r8vs3o-B047-0",
-        "20261016-t.gbfri5r8vs3o-B073-0",
-        "20261016-t.gbfri5r8vs3o-B079-0",
-        "20261016-t.gbfri5r8vs3o-B088-0"
+        "20261016-t.gbfri5r8vs3o-B048-0",
+        "20261016-t.gbfri5r8vs3o-B074-0",
+        "20261016-t.gbfri5r8vs3o-B080-0",
+        "20261016-t.gbfri5r8vs3o-B089-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -807,7 +807,7 @@
         "20261015-t.huff85y7dlym-B067-0",
         "20261015-t.huff85y7dlym-B073-0",
         "20261015-t.huff85y7dlym-B092-0",
-        "20261016-t.gbfri5r8vs3o-B103-0"
+        "20261016-t.gbfri5r8vs3o-B104-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -824,7 +824,7 @@
       "history_status": "LOADED_ADOPTED_EVIDENCE",
       "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
       "evidence_ids": [
-        "20261016-t.gbfri5r8vs3o-B072-0"
+        "20261016-t.gbfri5r8vs3o-B073-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -849,7 +849,7 @@
         "20261015-t.huff85y7dlym-B074-0",
         "20261015-t.huff85y7dlym-B082-0",
         "20261015-t.huff85y7dlym-B101-0",
-        "20261016-t.gbfri5r8vs3o-B102-0"
+        "20261016-t.gbfri5r8vs3o-B103-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -866,8 +866,8 @@
       "history_status": "LOADED_ADOPTED_EVIDENCE",
       "memory_access": "NO_SEPARATE_FILE",
       "evidence_ids": [
-        "20261016-t.gbfri5r8vs3o-B025-0",
-        "20261016-t.gbfri5r8vs3o-B046-0"
+        "20261016-t.gbfri5r8vs3o-B026-0",
+        "20261016-t.gbfri5r8vs3o-B047-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",
@@ -904,10 +904,10 @@
       "evidence_ids": [
         "20261013-M040",
         "20261014-t.t7k4o87mkgzv-B040-0",
-        "20261016-t.gbfri5r8vs3o-B029-0",
-        "20261016-t.gbfri5r8vs3o-B041-0",
-        "20261016-t.gbfri5r8vs3o-B074-0",
-        "20261016-t.gbfri5r8vs3o-B080-0"
+        "20261016-t.gbfri5r8vs3o-B030-0",
+        "20261016-t.gbfri5r8vs3o-B042-0",
+        "20261016-t.gbfri5r8vs3o-B075-0",
+        "20261016-t.gbfri5r8vs3o-B081-0"
       ],
       "state": {
         "knowledge": "NOT_INFERRED",

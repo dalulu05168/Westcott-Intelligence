@@ -84,10 +84,12 @@
       "speaker_id": "26",
       "gender": "女",
       "text": "能源这块确实没有叫人失望。",
+      "evidence_fingerprint": "8750c5810b4616202571587dfd7092f4270a98d456223c9ea591b062e154fa20",
+      "label_fingerprint": "59cd5931641e10c0591b93d990a0af94d08019697fd45f9073e4e5b8b351761d",
       "source_label": "26女：",
       "source_tab_id": "t.huff85y7dlym",
       "source_offset": 1188,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-15",
       "node": "MORNING",
       "kind": "message",
@@ -100,5 +102,5 @@
   ],
   "dynamic_records": [],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261017.json"
+  "source_snapshot": "memory/sources/google-doc-20261018.json"
 }

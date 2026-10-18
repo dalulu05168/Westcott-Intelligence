@@ -43,10 +43,12 @@
       "speaker_id": "31",
       "gender": "男",
       "text": "高位接盘太要命，利润没跟上直接套牢好几年，极难回本。",
+      "evidence_fingerprint": "c05cc3a949673447789e7a3e58fd849cd1ec6227dd93e34d3569893e869667ce",
+      "label_fingerprint": "893ccf9a964c15e73ef410c477a4861d878daa6980bdc0e5c020974260de14d8",
       "source_label": "31男：",
       "source_tab_id": "t.t7k4o87mkgzv",
       "source_offset": 5307,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-14",
       "node": "EVENING",
       "kind": "message",
@@ -59,5 +61,5 @@
   ],
   "dynamic_records": [],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261017.json"
+  "source_snapshot": "memory/sources/google-doc-20261018.json"
 }

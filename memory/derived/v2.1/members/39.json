@@ -45,10 +45,12 @@
       "speaker_id": "39",
       "gender": "女",
       "text": "订单已经挂好了，刚刚显示成交了。",
+      "evidence_fingerprint": "4f2efc8cad3725d763ddd2c3530b9652170a2363bfad837ac11219b661b404ae",
+      "label_fingerprint": "40f22404d1a453344cb3c21ee5965dde3773bd8ac813840ad06e7516f300b458",
       "source_label": "39女",
       "source_tab_id": "t.t7k4o87mkgzv",
       "source_offset": 1874,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-14",
       "node": "AFTERNOON",
       "kind": "message",
@@ -61,5 +63,5 @@
   ],
   "dynamic_records": [],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261017.json"
+  "source_snapshot": "memory/sources/google-doc-20261018.json"
 }

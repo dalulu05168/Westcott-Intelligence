@@ -1,0 +1,138 @@
+{
+  "schema": "continuity-acceptance-v2.1",
+  "overall_status": "PARTIAL_PASS_REAL_LIFECYCLE_PENDING",
+  "execution_date": "2026-10-18",
+  "live_document_read": {
+    "method": "GOOGLE_DRIVE_CONNECTOR_FULL_READ_THEN_REVISION_READ",
+    "document_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+    "revision_id": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+    "retrieved_at": "2026-10-18T02:22:59+00:00",
+    "revision_check": {
+      "documentId": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "title": "===== 资讯助理 =====",
+      "revisionId": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "suggestionsViewMode": null,
+      "url": null,
+      "body": null,
+      "tabs": null,
+      "document_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "retrieved_at": "2026-10-18T02:23:09+00:00",
+      "source_kind": "GOOGLE_DRIVE_CONNECTOR_LIVE"
+    },
+    "snapshot_sha256": "0df998050d2c1caad3616bfdf9519763a8ee2c8b73aea371e45098f908abedea",
+    "controller_status": "CONTEXT_READY_FOR_HUMAN_REVIEW",
+    "errors": [],
+    "source_anomalies": [
+      {
+        "id": "20261016-t.gbfri5r8vs3o-B003-0",
+        "label": "11女",
+        "warnings": [
+          "EMPTY_LABEL_IDENTITY_CONFLICT_NOT_A_MESSAGE"
+        ]
+      }
+    ],
+    "story_date": "2026-10-16",
+    "story_phase": "EVENING_CLOSED",
+    "counts": {
+      "MORNING": {
+        "labelled_raw": 33,
+        "unlabelled_fragments": 0,
+        "effective": 31,
+        "excluded": 2,
+        "review_required": 0
+      },
+      "AFTERNOON": {
+        "labelled_raw": 43,
+        "unlabelled_fragments": 0,
+        "effective": 41,
+        "excluded": 2,
+        "review_required": 0
+      },
+      "EVENING": {
+        "labelled_raw": 36,
+        "unlabelled_fragments": 1,
+        "effective": 35,
+        "excluded": 2,
+        "review_required": 0
+      }
+    }
+  },
+  "candidate": {
+    "path": "planning/acceptance-20261018/bridge-candidate.json",
+    "scope": "PREPARATORY_BRIDGE_NOT_FULL_WEEKLY_REVIEW",
+    "status": "CANDIDATE_NOT_ADOPTED",
+    "review": {
+      "status": "EDITORIAL_REVIEW_REQUIRED",
+      "errors": [],
+      "warnings": [],
+      "member_to_member_replies": 0,
+      "semantic_checks_required": [
+        "numeric and causal claim coverage",
+        "voice and knowledge consistency",
+        "course progress and homework support",
+        "news novelty across different sources"
+      ],
+      "publication_allowed": false,
+      "quality": {
+        "warnings": [],
+        "semantic_status": "PENDING_HUMAN_REVIEW",
+        "rubric": [
+          "distinct voices",
+          "reply motivation and target",
+          "emotion and knowledge continuity",
+          "topic progression",
+          "name and GIF use without quotas"
+        ],
+        "automatically_approved": false
+      }
+    },
+    "fact_gate": "NOT_REQUESTED_NO_MARKET_FACTS_IN_BRIDGE",
+    "publication_allowed": false
+  },
+  "local_checks": {
+    "scripts": {
+      "run": 152,
+      "passed": 152
+    },
+    "integrations/telegram": {
+      "run": 139,
+      "passed": 137,
+      "skipped": 2
+    },
+    "telegram_news": {
+      "run": 39,
+      "passed": 39
+    },
+    "total": {
+      "run": 330,
+      "passed": 328,
+      "skipped": 2
+    },
+    "archive_rebuild": "PASS",
+    "repository_validator": "PASS",
+    "fallback_snapshot_sync": "PASS",
+    "mock_transport_output": "OFFLINE_ONLY_NOT_A_REAL_SEND"
+  },
+  "isolated_checks": {
+    "source_insertion_relink": "PASS",
+    "changed_or_withdrawn_evidence_rejected": "PASS",
+    "candidate_absent_from_formal_document_rejected": "PASS",
+    "prior_day_same_text_rejected": "PASS",
+    "idempotent_event_proposal": "PASS",
+    "new_python_process_disk_recovery": "PASS_NOT_NEW_CHAT",
+    "sunday_to_monday_three_sessions": "PLAN_AND_SIMULATION_ONLY"
+  },
+  "pending": [
+    "ACTUAL_SUNDAY_WEEKLY_REVIEW_WITH_REFRESHED_FACTS",
+    "ACTUAL_MONDAY_MORNING_AFTERNOON_CLASS",
+    "SPECIFIC_CANDIDATE_USER_ADOPTION",
+    "PRODUCTION_MEMORY_COMMIT_AFTER_ADOPTION",
+    "ACTUAL_NEW_CHAT_RECOVERY",
+    "HUMAN_NATURALNESS_REVIEW",
+    "ONLINE_TASK_APPLICATION_AND_REAL_RECEIPTS"
+  ],
+  "production_memory_adoption_performed": false,
+  "google_doc_modified": false,
+  "online_tasks_updated": false,
+  "sending_enabled": false
+}

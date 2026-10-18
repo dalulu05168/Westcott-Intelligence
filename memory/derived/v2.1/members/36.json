@@ -9,7 +9,7 @@
     "history_status": "LOADED_ADOPTED_EVIDENCE",
     "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
     "evidence_ids": [
-      "20261016-t.gbfri5r8vs3o-B072-0"
+      "20261016-t.gbfri5r8vs3o-B073-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -18,18 +18,20 @@
   },
   "evidence_store": "memory/derived/v2.1/effective-history.json",
   "evidence_ids": [
-    "20261016-t.gbfri5r8vs3o-B072-0"
+    "20261016-t.gbfri5r8vs3o-B073-0"
   ],
   "recent_examples": [
     {
-      "id": "20261016-t.gbfri5r8vs3o-B072-0",
+      "id": "20261016-t.gbfri5r8vs3o-B073-0",
       "speaker_id": "36",
       "gender": "男",
       "text": "前几天跌到38美元附近就跌不动了，今天又放量上涨，重新站回布林带下轨上方，这只票可以继续关注一下👍",
+      "evidence_fingerprint": "7e71c5b0c4725f267ffb8327dd12309b068afb8cdd7d5cff01cdf5dc828eef20",
+      "label_fingerprint": "03f343fe7c6db570edce58e4f1b86698c48f649c5e5e5a1ea7ab8f24df35e51a",
       "source_label": "36男：",
       "source_tab_id": "t.gbfri5r8vs3o",
-      "source_offset": 5121,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_offset": 5125,
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-16",
       "node": "AFTERNOON",
       "kind": "message",
@@ -42,5 +44,5 @@
   ],
   "dynamic_records": [],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261017.json"
+  "source_snapshot": "memory/sources/google-doc-20261018.json"
 }

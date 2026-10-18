@@ -43,10 +43,12 @@
       "speaker_id": "32",
       "gender": "男",
       "text": "晚上好，今天准备认真参加，希望别把题目想得太复杂了😂",
+      "evidence_fingerprint": "6c3d300a83121cf5cd3215b6718f974abc4f71bb2204f01aeeffdc8b51408f3e",
+      "label_fingerprint": "8f81074e6b1f88e5bbf951e5b334387c75236395a710f879d4973407474e20d6",
       "source_label": "32男：",
       "source_tab_id": "t.t7k4o87mkgzv",
       "source_offset": 3028,
-      "source_revision": "AHj4eMRTCSigGAgbf0WSOia21RhxplsCSc6mog_hthRQdmOOsL_XQFu5615dotNZGzNSjDlmV8Do-MrWlawzqIxPjg9aGOnXgpw0XiC0e4Q",
+      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
       "date": "2026-10-14",
       "node": "EVENING",
       "kind": "message",
@@ -59,5 +61,5 @@
   ],
   "dynamic_records": [],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261017.json"
+  "source_snapshot": "memory/sources/google-doc-20261018.json"
 }
