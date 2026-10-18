@@ -195,7 +195,8 @@ def prepare(ledger, filename, now=None):
             "source_evidence": {url: [e['excerpt'] for c in ledger['claims']
                 if c['id'] in selected for e in c['evidence']
                 if ledger['sources'][e['source_id']]['url'] == url] for url in urls},
-            "ledger": filename, "text": text}
+            "ledger": filename, "text": text,
+            "followup_watch_points": ledger.get("followup_watch_points", [])}
 
 
 def confirm_original_evidence(prepared):
@@ -332,6 +333,7 @@ def reserve(prepared, env, now=None):
         "reserved_at": (now or datetime.now(timezone.utc)).isoformat(),
         "message_ids": [],
         "source_rechecks": prepared.get('source_rechecks', []),
+        "followup_watch_points": prepared.get("followup_watch_points", []),
     }
     sha = github_write(path, record, token, repo)
     acceptance = prepared.get('editorial_acceptance')
