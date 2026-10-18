@@ -1,0 +1,233 @@
+{
+  "status": "COMPLETE",
+  "window_start": "2026-10-18T02:46:00+00:00",
+  "window_end": "2026-10-18T03:46:00+00:00",
+  "captured_at": "2026-10-18T03:46:38.326152+00:00",
+  "required_feed_ids": [
+    "fed_monetary",
+    "ecb_press",
+    "bvb_market",
+    "bvb_announcements",
+    "insee_conjuncture",
+    "bls_cpi",
+    "bls_employment",
+    "eurostat_releases"
+  ],
+  "coverage": [
+    {
+      "feed_id": "fed_monetary",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.federalreserve.gov/feeds/press_monetary.xml",
+      "retrieved_at": "2026-10-18T03:46:33.102958+00:00",
+      "feed_sha256": "69b638039ee490f01aea90ac4623d67f9041273322daa48a262c50fed94ca2b1",
+      "raw_entries": 15,
+      "latest_published_at": "2026-10-13T18:00:00+00:00",
+      "excluded_before_window": 15,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "ecb_press",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.ecb.europa.eu/rss/press.html",
+      "retrieved_at": "2026-10-18T03:46:33.916059+00:00",
+      "feed_sha256": "597b7a7ed2ccb5e550ed8041db61934d5c7cd2e8d6d8ffa80d10317197bdeca9",
+      "raw_entries": 15,
+      "latest_published_at": "2026-10-17T05:00:00+00:00",
+      "excluded_before_window": 15,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "bvb_market",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.bvb.ro/Rss/StiriBVB.ashx",
+      "retrieved_at": "2026-10-18T03:46:35.139849+00:00",
+      "feed_sha256": "41df76de77ad0b09668df50e826c0b8e3a12120758cd347e91a7ceb7a85fc4ac",
+      "raw_entries": 169,
+      "latest_published_at": "2026-10-16T15:21:08+00:00",
+      "excluded_before_window": 169,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "bvb_announcements",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.bvb.ro/Rss/OperatiuniSiComunicateBVB.ashx",
+      "retrieved_at": "2026-10-18T03:46:36.454026+00:00",
+      "feed_sha256": "491dc218915addd5a6b2a6e782af94e90c30878965efb86da8b01c10fdf8fafc",
+      "raw_entries": 14,
+      "latest_published_at": "2026-10-16T10:20:29+00:00",
+      "excluded_before_window": 14,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "insee_conjuncture",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.insee.fr/fr/flux/3",
+      "retrieved_at": "2026-10-18T03:46:37.318136+00:00",
+      "feed_sha256": "7d9746ebbc8b874a2768626199d3fa396c8c8fa9c55d789004b744b68e7f0d25",
+      "raw_entries": 110,
+      "latest_published_at": "2026-10-16T06:45:00+00:00",
+      "excluded_before_window": 110,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "bls_cpi",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.bls.gov/feed/cpi.rss",
+      "retrieved_at": "2026-10-18T03:46:37.499967+00:00",
+      "feed_sha256": "a5f2a686cebc14c09693431899d7e4ce56c15c752febbdba1156b30d33f1f387",
+      "raw_entries": 12,
+      "latest_published_at": "2026-10-14T11:50:31.200000+00:00",
+      "excluded_before_window": 12,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "bls_employment",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.bls.gov/feed/empsit.rss",
+      "retrieved_at": "2026-10-18T03:46:37.581970+00:00",
+      "feed_sha256": "aa1107f25de6cf39c9d192b3c20b9d59ca8c32444f660b7e8b462b80c6cc700e",
+      "raw_entries": 12,
+      "latest_published_at": "2026-10-02T11:51:08.289000+00:00",
+      "excluded_before_window": 12,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "eurostat_releases",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://ec.europa.eu/eurostat/en/search?_estatsearchportlet_WAR_estatsearchportlet_collection=CAT_PREREL&p_p_id=estatsearchportlet_WAR_estatsearchportlet&p_p_lifecycle=2&p_p_mode=view&p_p_resource_id=atom&p_p_state=maximized",
+      "retrieved_at": "2026-10-18T03:46:38.325706+00:00",
+      "feed_sha256": "082458178cc8de1f2c962d3db48bec96bf7cf5cc41b6a60b67a72f3e7ad0d97c",
+      "raw_entries": 11,
+      "latest_published_at": "2026-10-16T09:00:00+00:00",
+      "excluded_before_window": 11,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    }
+  ],
+  "truncated": false,
+  "candidates": [],
+  "assessments_status": "UNREVIEWED",
+  "telegram_publishable": false,
+  "ranking_scope": "Configured feeds plus explicitly recorded web-search discoveries; not exhaustive worldwide coverage; publisher authority unverified.",
+  "search_intake": {
+    "manifest": {
+      "schema_version": "free-search-handoff-v1",
+      "search_completed_at": "2026-10-18T04:02:08+00:00",
+      "edition_path": "news/editions/20261018t0346z.json",
+      "searches": [
+        {
+          "region": "RO",
+          "query": "Romania BVB BNR ASF Ministry Finance official release October 18 2026 03:00 04:00 UTC company earnings energy banking fintech",
+          "searched_at": "2026-10-18T04:02:08+00:00",
+          "status": "OK",
+          "result_urls": [
+            "https://www.bnr.ro/en/",
+            "https://bvb.ro/FinancialInstruments/SelectedData/CurrentReports",
+            "https://www.asfromania.ro/ro/a/3405/buletine-2026"
+          ],
+          "finding": "No Romanian official item with a verified original publication timestamp inside the 02:46-03:46 UTC comparison window was found."
+        },
+        {
+          "region": "RO",
+          "query": "site:bvb.ro OR site:bnr.ro OR site:asfromania.ro \"18 octombrie 2026\" OR \"18 October 2026\"",
+          "searched_at": "2026-10-18T04:02:08+00:00",
+          "status": "OK",
+          "result_urls": [
+            "https://mfinante.gov.ro/en/web/trezor/piata-primara/anunturi-emisiuni"
+          ],
+          "finding": "Returned an October issuance page and older material, not a new in-window event."
+        },
+        {
+          "region": "FR",
+          "query": "France AMF Banque de France Euronext government official release October 18 2026 03:00 04:00 UTC company results energy finance technology",
+          "searched_at": "2026-10-18T04:02:08+00:00",
+          "status": "OK",
+          "result_urls": [
+            "https://www.banque-france.fr/fr/actualites-et-evenements",
+            "https://bdif.amf-france.org/en?typesDocument=DocumentEnregistrementUniversel&typesInformation=VISA",
+            "https://www.euronext.com/en/about-euronext/markets/paris"
+          ],
+          "finding": "Results were older publications or directory pages; no verified in-window major French event was found."
+        },
+        {
+          "region": "FR",
+          "query": "site:amf-france.org OR site:banque-france.fr OR site:euronext.com \"18 octobre 2026\" OR \"18 October 2026\"",
+          "searched_at": "2026-10-18T04:02:08+00:00",
+          "status": "OK",
+          "result_urls": [
+            "https://www.banque-france.fr/system/files/2026-10/826008_BDF266-4_Places_boursi%C3%A8res_EN.pdf"
+          ],
+          "finding": "The surfaced Banque de France bulletin predated the window; no current-window release was verified."
+        },
+        {
+          "region": "US",
+          "query": "United States Federal Reserve SEC Treasury official corporate release October 17 2026 23:00 ET October 18 03:00 04:00 UTC markets technology energy earnings",
+          "searched_at": "2026-10-18T04:02:08+00:00",
+          "status": "OK",
+          "result_urls": [
+            "https://www.federalreserve.gov/",
+            "https://www.sec.gov/newsroom",
+            "https://home.treasury.gov/news/press-releases"
+          ],
+          "finding": "Latest official releases found were dated October 16 or earlier; no verified in-window major US event was found."
+        },
+        {
+          "region": "US",
+          "query": "site:federalreserve.gov OR site:sec.gov OR site:treasury.gov \"October 18, 2026\"",
+          "searched_at": "2026-10-18T04:02:08+00:00",
+          "status": "OK",
+          "result_urls": [
+            "https://www.sec.gov/Archives/edgar/data/1884021/000121390026101197/ea0305729-25_485bxt.htm"
+          ],
+          "finding": "The SEC result was an older filing designating an October 18 effective date, not a new publication in the comparison window."
+        },
+        {
+          "region": "GLOBAL",
+          "query": "global official central bank IMF World Bank IEA OPEC major market release October 18 2026 03:00 04:00 UTC geopolitics energy currencies commodities",
+          "searched_at": "2026-10-18T04:02:08+00:00",
+          "status": "OK",
+          "result_urls": [
+            "https://www.imf.org/en/home",
+            "https://dsbb.imf.org/sdds/week-ahead",
+            "https://www.iea.org/news/new-joint-statement-by-the-heads-of-the-international-energy-agency-international-monetary-fund-world-bank-group-and-world-trade-organization"
+          ],
+          "finding": "Searches returned calendars and prior releases; no verified in-window official global market event was found."
+        },
+        {
+          "region": "GLOBAL",
+          "query": "site:imf.org OR site:worldbank.org OR site:iea.org OR site:opec.org \"October 18, 2026\"",
+          "searched_at": "2026-10-18T04:02:08+00:00",
+          "status": "OK",
+          "result_urls": [
+            "https://www.imf.org/en/news/seminars/campaigns/2026/10/thailand-2026",
+            "https://meetingslogin.worldbank.org/en/asmeeting/faqs"
+          ],
+          "finding": "Results described the scheduled Annual Meetings dates but did not establish a new in-window market-moving event."
+        }
+      ],
+      "articles": [],
+      "limitations": [
+        "Broad free searches are not exhaustive worldwide coverage.",
+        "Search crawl times and undated list pages were not treated as original publication timestamps.",
+        "No older event was moved into the comparison window by substituting retrieval time."
+      ]
+    },
+    "manifest_sha256": "b47e6273fdc1d92b1ae4f8ebe71164054e60a68d02339428abe9793b5c0c35b3",
+    "excluded": []
+  }
+}
