@@ -322,6 +322,10 @@ def build_ledger(edition, edition_path, country, assessments, cid, event_key, ra
                           "retrieved_at": edition["captured_at"],
                           "source_text_sha256": row["source_text_sha256"]}},
         "claims": claims,
+        "followup_watch_points": [
+            {"focus": p["focus"], "trigger": p["trigger"],
+             "status": "AWAITING_VERIFIABLE_UPDATE"} for p in watch_points
+        ],
         "publish_claim_ids": ["event", "interpretation", "impact", "watch", "change"],
         "hourly_selection": {"edition_path": edition_path, "edition_sha256": digest(edition),
                              "selected_candidate_id": cid, "assessments": assessments},
