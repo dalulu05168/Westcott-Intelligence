@@ -53,7 +53,7 @@ def validate_news_v1(ledger, approved_facts):
         section_claims[role] = claim
     if set(section_claims) != set(ROLES):
         raise NewsAnalysisError("NEWS_V1_MISSING_SECTION:" + ",".join(sorted(set(ROLES) - set(section_claims))))
-    if len(approved_facts) != len(published):
+    if len(published) != len(ROLES) or len(approved_facts) != len(published):
         raise NewsAnalysisError("NEWS_V1_PUBLISH_IDS_MISMATCH")
     for role in ROLES:
         claim = section_claims[role]
@@ -109,6 +109,14 @@ def validate_news_v1(ledger, approved_facts):
         focus, trigger = entry.split("｜观察时间/条件：", 1)
         if len(focus.strip()) < 5 or len(trigger.strip()) < 5:
             raise NewsAnalysisError("NEWS_V1_WATCH_NOT_ACTIONABLE")
+    recorded = ledger.get("followup_watch_points")
+    if not isinstance(recorded, list) or len(recorded) != len(points):
+        raise NewsAnalysisError("NEWS_V1_STRUCTURED_WATCH_NOT_RECORDED")
+    for (_, rendered), saved in zip(points, recorded):
+        if not isinstance(saved, dict) or saved.get("status") != "AWAITING_VERIFIABLE_UPDATE":
+            raise NewsAnalysisError("NEWS_V1_WATCH_STATUS_INVALID")
+        if (saved.get("focus", "") + "｜观察时间/条件：" + saved.get("trigger", "")) != rendered.strip():
+            raise NewsAnalysisError("NEWS_V1_WATCH_TEXT_MISMATCH")
     change = section_claims["change"]["text"]
     for label in ("增强条件：", "减弱条件：", "验证依据："):
         _meaningful(change, label)
