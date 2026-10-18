@@ -25,9 +25,9 @@ class NewsAnalysisError(ValueError):
     pass
 
 
-def _meaningful(text, label):
+def _meaningful(text, label, min_chars=3):
     segment = text.split(label, 1)[1].split("\n", 1)[0].strip() if label in text else ""
-    if len(segment) < 3 or segment in ("待定", "未知", "无", "N/A", "暂无"):
+    if len(segment) < min_chars or segment in ("待定", "未知", "无", "N/A", "暂无"):
         raise NewsAnalysisError("NEWS_V1_EMPTY_FIELD:" + label)
     return segment
 
@@ -79,7 +79,7 @@ def validate_news_v1(ledger, approved_facts):
     if ledger.get("watch_next_claim_id") != section_claims["watch"]["id"]:
         raise NewsAnalysisError("NEWS_V1_WATCH_ID_MISMATCH")
     event = section_claims["event"]["text"]
-    level = _meaningful(event, "📊 影响程度：")
+    level = _meaningful(event, "📊 影响程度：", min_chars=1)
     if level not in ("高", "中", "低"):
         raise NewsAnalysisError("NEWS_V1_BAD_IMPACT_LEVEL")
     locality = _meaningful(event, "🌍 市场地区：")
