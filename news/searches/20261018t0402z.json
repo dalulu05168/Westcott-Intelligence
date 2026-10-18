@@ -1,0 +1,102 @@
+{
+  "schema_version": "free-search-handoff-v1",
+  "search_completed_at": "2026-10-18T04:02:08+00:00",
+  "edition_path": "news/editions/20261018t0346z.json",
+  "searches": [
+    {
+      "region": "RO",
+      "query": "Romania BVB BNR ASF Ministry Finance official release October 18 2026 03:00 04:00 UTC company earnings energy banking fintech",
+      "searched_at": "2026-10-18T04:02:08+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.bnr.ro/en/",
+        "https://bvb.ro/FinancialInstruments/SelectedData/CurrentReports",
+        "https://www.asfromania.ro/ro/a/3405/buletine-2026"
+      ],
+      "finding": "No Romanian official item with a verified original publication timestamp inside the 02:46-03:46 UTC comparison window was found."
+    },
+    {
+      "region": "RO",
+      "query": "site:bvb.ro OR site:bnr.ro OR site:asfromania.ro \"18 octombrie 2026\" OR \"18 October 2026\"",
+      "searched_at": "2026-10-18T04:02:08+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://mfinante.gov.ro/en/web/trezor/piata-primara/anunturi-emisiuni"
+      ],
+      "finding": "Returned an October issuance page and older material, not a new in-window event."
+    },
+    {
+      "region": "FR",
+      "query": "France AMF Banque de France Euronext government official release October 18 2026 03:00 04:00 UTC company results energy finance technology",
+      "searched_at": "2026-10-18T04:02:08+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.banque-france.fr/fr/actualites-et-evenements",
+        "https://bdif.amf-france.org/en?typesDocument=DocumentEnregistrementUniversel&typesInformation=VISA",
+        "https://www.euronext.com/en/about-euronext/markets/paris"
+      ],
+      "finding": "Results were older publications or directory pages; no verified in-window major French event was found."
+    },
+    {
+      "region": "FR",
+      "query": "site:amf-france.org OR site:banque-france.fr OR site:euronext.com \"18 octobre 2026\" OR \"18 October 2026\"",
+      "searched_at": "2026-10-18T04:02:08+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.banque-france.fr/system/files/2026-10/826008_BDF266-4_Places_boursi%C3%A8res_EN.pdf"
+      ],
+      "finding": "The surfaced Banque de France bulletin predated the window; no current-window release was verified."
+    },
+    {
+      "region": "US",
+      "query": "United States Federal Reserve SEC Treasury official corporate release October 17 2026 23:00 ET October 18 03:00 04:00 UTC markets technology energy earnings",
+      "searched_at": "2026-10-18T04:02:08+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.federalreserve.gov/",
+        "https://www.sec.gov/newsroom",
+        "https://home.treasury.gov/news/press-releases"
+      ],
+      "finding": "Latest official releases found were dated October 16 or earlier; no verified in-window major US event was found."
+    },
+    {
+      "region": "US",
+      "query": "site:federalreserve.gov OR site:sec.gov OR site:treasury.gov \"October 18, 2026\"",
+      "searched_at": "2026-10-18T04:02:08+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1884021/000121390026101197/ea0305729-25_485bxt.htm"
+      ],
+      "finding": "The SEC result was an older filing designating an October 18 effective date, not a new publication in the comparison window."
+    },
+    {
+      "region": "GLOBAL",
+      "query": "global official central bank IMF World Bank IEA OPEC major market release October 18 2026 03:00 04:00 UTC geopolitics energy currencies commodities",
+      "searched_at": "2026-10-18T04:02:08+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.imf.org/en/home",
+        "https://dsbb.imf.org/sdds/week-ahead",
+        "https://www.iea.org/news/new-joint-statement-by-the-heads-of-the-international-energy-agency-international-monetary-fund-world-bank-group-and-world-trade-organization"
+      ],
+      "finding": "Searches returned calendars and prior releases; no verified in-window official global market event was found."
+    },
+    {
+      "region": "GLOBAL",
+      "query": "site:imf.org OR site:worldbank.org OR site:iea.org OR site:opec.org \"October 18, 2026\"",
+      "searched_at": "2026-10-18T04:02:08+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.imf.org/en/news/seminars/campaigns/2026/10/thailand-2026",
+        "https://meetingslogin.worldbank.org/en/asmeeting/faqs"
+      ],
+      "finding": "Results described the scheduled Annual Meetings dates but did not establish a new in-window market-moving event."
+    }
+  ],
+  "articles": [],
+  "limitations": [
+    "Broad free searches are not exhaustive worldwide coverage.",
+    "Search crawl times and undated list pages were not treated as original publication timestamps.",
+    "No older event was moved into the comparison window by substituting retrieval time."
+  ]
+}
