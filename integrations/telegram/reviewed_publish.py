@@ -19,6 +19,7 @@ import news_release_gate as gate
 from bridge import send_group_news_from_official_article
 from source_media import SourceMediaError, inspect_article
 from editorial_policy import PolicyError, validate_release, COUNTRIES
+from news_analysis_v1 import NewsAnalysisError, validate_news_v1
 
 EVENT_RE = re.compile(r"^[a-z0-9][a-z0-9_-]{5,71}$")
 FILE_RE = re.compile(r"^news/approved/[a-z0-9][a-z0-9_.-]{1,100}\.json$")
@@ -119,6 +120,13 @@ def prepare(ledger, filename, now=None):
     if ledger.get("target_country") in COUNTRIES and any(
             len(re.findall(r"[\u3400-\u9fff]", fact)) < 2 for fact in facts):
         raise PublicationError("Country-specific Telegram news must be Chinese; no foreign-language story text.")
+    # Enforce V1 structure on production delivery only when explicitly enabled.
+    # The evidence gate above still determines what constitutes approved text.
+    if os.environ.get("NEWS_ANALYSIS_V1_REQUIRED") == "1":
+        try:
+            validate_news_v1(ledger, facts)
+        except NewsAnalysisError as exc:
+            raise PublicationError(str(exc)) from None
     # Derive URLs ONLY from the evidence for published claims.
     selected = set(ledger["publish_claim_ids"])
     urls = []
