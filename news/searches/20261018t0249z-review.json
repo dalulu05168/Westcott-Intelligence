@@ -1,0 +1,148 @@
+{
+  "schema_version": "free-search-review-v1",
+  "search_started_at": "2026-10-18T02:48:00+00:00",
+  "search_completed_at": "2026-10-18T02:49:41+00:00",
+  "review_window": {
+    "start": "2026-10-18T01:49:41+00:00",
+    "end": "2026-10-18T02:49:41+00:00",
+    "max_age_minutes": 20
+  },
+  "snapshot_review": {
+    "path": "news/editions/20261018t0211z-search.json",
+    "window_start": "2026-10-18T01:11:00+00:00",
+    "window_end": "2026-10-18T02:11:00+00:00",
+    "age_minutes_at_search_completion": 38.68,
+    "freshness_status": "STALE",
+    "same_utc_hour_request_path": "news/intake-requests/20261018t02z.json",
+    "request_already_used": true,
+    "merge_performed": false,
+    "merge_reason": "The latest complete snapshot exceeded the 20-minute freshness gate, and the single intake request for UTC hour 02 had already been used. A second request was not created and stale data was not merged."
+  },
+  "searches": [
+    {
+      "region": "RO",
+      "query": "Romania BVB BNR ASF official company disclosure October 18 2026 latest 02 UTC energy finance",
+      "searched_at": "2026-10-18T02:48:00+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://bvb.ro/FinancialInstruments/SelectedData/CurrentReports",
+        "https://www.bnr.ro/Noutati-2014-Mobile.aspx",
+        "https://www.asfromania.ro/ro/a/3405/buletine-2026"
+      ],
+      "finding": "Results were BVB or Romanian official materials dated October 16 or earlier, or undated list pages. No item had a verified original timestamp inside the review window."
+    },
+    {
+      "region": "RO",
+      "query": "Romania BVB BNR latest October 18 2026 official announcement",
+      "searched_at": "2026-10-18T02:48:00+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://iris.bvb.ro/PublicReports/Reports",
+        "https://bvb.ro/AboutUs/MediaCenter/PressReleases"
+      ],
+      "finding": "No verified current-window Romanian market, regulator, central-bank, or issuer event was found."
+    },
+    {
+      "region": "FR",
+      "query": "France AMF Banque de France Euronext official company disclosure October 18 2026 latest 02 UTC finance",
+      "searched_at": "2026-10-18T02:48:00+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.amf-france.org/fr/espace-presse/les-derniers-communiques-de-presse",
+        "https://www.banque-france.fr/fr/communiques-de-presse",
+        "https://live.euronext.com/en/products/equities/company-news"
+      ],
+      "finding": "Surfaced French official material predated the review window; no verified in-window major event was found."
+    },
+    {
+      "region": "FR",
+      "query": "France AMF Euronext Banque de France latest October 18 2026 official announcement",
+      "searched_at": "2026-10-18T02:48:00+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://bdif.amf-france.org/en?typesInformation=DD",
+        "https://www.amf-france.org/fr/actualites-publications/communiques/communiques-de-lamf"
+      ],
+      "finding": "No current-window regulator, central-bank, exchange, or issuer publication with a verified original timestamp was located."
+    },
+    {
+      "region": "US",
+      "query": "United States Federal Reserve SEC Treasury official corporate release October 17 2026 latest 22 ET finance technology energy",
+      "searched_at": "2026-10-18T02:48:00+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.federalreserve.gov/newsevents/pressreleases/2026-press.htm",
+        "https://www.sec.gov/newsroom",
+        "https://home.treasury.gov/news/press-releases"
+      ],
+      "finding": "Latest official results surfaced October 16 or earlier material; no verified in-window major US event was found."
+    },
+    {
+      "region": "US",
+      "query": "US SEC Federal Reserve Treasury latest October 17 2026 official announcement",
+      "searched_at": "2026-10-18T02:48:00+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.federalreserve.gov/recentpostings.htm",
+        "https://www.sec.gov/newsroom/press-releases"
+      ],
+      "finding": "No Federal Reserve, SEC, Treasury, or listed-company release with a verified timestamp inside the review window was found."
+    },
+    {
+      "region": "GLOBAL",
+      "query": "global official central bank IMF oil energy technology major market update October 18 2026 latest",
+      "searched_at": "2026-10-18T02:48:00+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.imf.org/",
+        "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261017~7015ea3099.en.html",
+        "https://www.reuters.com/world/china/delegates-walked-out-imf-steering-committee-meeting-when-russian-official-spoke-2026-10-17/"
+      ],
+      "finding": "Potentially important IMF/IMFC material was located, but the Reuters story's recorded publication time was 2026-10-17T05:19:18Z, well outside the review window."
+    },
+    {
+      "region": "GLOBAL",
+      "query": "Reuters IMFC chair global economy resilient delegates walked out Russian official exact publication time October 17 2026",
+      "searched_at": "2026-10-18T02:48:00+00:00",
+      "status": "OK",
+      "result_urls": [
+        "https://www.reuters.com/world/china/delegates-walked-out-imf-steering-committee-meeting-when-russian-official-spoke-2026-10-17/",
+        "https://www.reuters.com/markets/asia/imf-members-call-increased-support-countries-amid-negative-risks-war-spillovers-2026-10-17/"
+      ],
+      "finding": "Verified Reuters publication times were 2026-10-17T05:19:18Z and 2026-10-17T06:19:35Z. Both were excluded as stale."
+    }
+  ],
+  "articles": [
+    {
+      "article_url": "https://www.reuters.com/world/china/delegates-walked-out-imf-steering-committee-meeting-when-russian-official-spoke-2026-10-17/",
+      "publisher_basis_url": "https://www.imf.org/",
+      "published_at": "2026-10-17T05:19:18+00:00",
+      "source": "Reuters",
+      "title": "IMFC chair says global economy resilient; delegates walk out on Russian official",
+      "disposition": "EXCLUDED_OUTSIDE_60_MINUTE_WINDOW"
+    },
+    {
+      "article_url": "https://www.reuters.com/markets/asia/imf-members-call-increased-support-countries-amid-negative-risks-war-spillovers-2026-10-17/",
+      "publisher_basis_url": "https://www.imf.org/",
+      "published_at": "2026-10-17T06:19:35+00:00",
+      "source": "Reuters",
+      "title": "IMF members call for increased support amid negative risks and war spillovers",
+      "disposition": "EXCLUDED_OUTSIDE_60_MINUTE_WINDOW"
+    }
+  ],
+  "decision": {
+    "status": "HELD",
+    "gate": "SNAPSHOT_FRESHNESS",
+    "qualified_candidates": 0,
+    "approved_ledger_created": false,
+    "telegram_handoff_created": false,
+    "telegram_message_id": null,
+    "whatsapp_sent": false
+  },
+  "limitations": [
+    "Broad free searches are not exhaustive worldwide coverage.",
+    "Search-result crawl times and undated list-page times were not treated as publication timestamps.",
+    "No earlier story was moved into the current hour by substituting a search crawl time.",
+    "Because the latest complete snapshot was stale, this run did not claim a complete current-hour intake review."
+  ]
+}
