@@ -63,3 +63,8 @@ description: ELLERY WESTCOTT 虚构财经教学会话五合一入口，统一调
 ## 跨页面统一启动（2026-10-16，V2.0）
 
 每次新页面/新会话启动前，先读取 `references/cross-page-unified-v2.0.md`，并继续执行现行 `references/editorial-execution-v1.8.md` 的实际读取凭据与审稿步骤。`memory/runtime/latest-checkpoint.json` 当前仅为占位模板，不能作为已核验剧情或实时同步证据。新会话必须重新读取正式Google Doc并核对页签、修订号、最后有效发言；读取失败时说明限制，不可声称已加载。不得因此恢复暂停任务或自动发送。
+
+## 2026-10-20｜罗马尼亚优先的美国/国际新闻联动 v2.3
+
+**必须读取** [罗马尼亚与美股/国际金融新闻联动采编规则](references/romania-us-global-market-linkage-v2.3.md)。每日以罗马尼亚市场为主，同时筛查美国三大指数、宏观/美联储、能源、科技财报以及欧盟/国际重大事件；仅当具备已证实的本地反馈或可信、具体的潜在传导渠道时进入罗马尼亚主要资讯。后台区分 `ROMANIA_VERIFIED_RESPONSE` 与 `ROMANIA_POTENTIAL_CHANNEL`，写明事件时点、数据基准、关联 BVB 行业或企业、中间环节及下一观察条件。早间用上次美股收盘与盘后线索连接本地盘前，下午对照 BVB 盘中、美国盘前和正式开盘变化。不可把美股涨跌等同罗马尼亚股价因果，不编造行情。其余1—2条新闻主线、BVB/美国双市场股票研究、活动授课、人设01—42、停用发送与DRY_RUN规则均不变。
+
