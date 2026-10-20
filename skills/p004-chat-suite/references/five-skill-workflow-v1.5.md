@@ -75,3 +75,8 @@ v1.5.1修正：有已确认身份即可创作待选对白，缺失已采用历�
 ## v1.6 每日内容与记忆执行优先级（2026-10-14）
 
 2026-10-15起每次作稿必须先读取 [最新每日运营门禁](daily-editorial-and-memory-v1.6.md)，其关于当前仅01—42号允许出场、每日日间BVB/美股各一次且上午下午由用户指定、新闻严格筛选、读取对应真实已采用人物记忆、禁止机械轮流发言及核验后才能宣称推送的要求，**覆盖本文件任何矛盾的旧说明**。 源码文件更新不表示Scheduled任务、Telegram/WhatsApp或交易自动执行。
+
+## v2.3 美国及国际新闻影响罗马尼亚的五Skill交接（2026-10-20）
+
+每次采编另读 [罗马尼亚与美股/国际市场联动规则](romania-us-global-market-linkage-v2.3.md)。总导演定罗马尼亚市场主线，资讯助理优先核实美国/国际事件是否具备罗马尼亚已证实的反馈或可信的潜在渠道；事实交接补充 `origin_market`、`romania_relevance`、`transmission_chain`、`romania_targets`、`evidence_for_romania_response`、`impact_conditions`、`counter_conditions`、`next_check`。编剧和成员不得把海外指数同向变动写成BVB因果；先生仅在已确认课程语境下解释跨市场机制。早报先隔夜美股及其对本地的关联，再核查BVB盘前，下午用实际证据验证或修订判断。已证实/潜在状态必须显式区分；不改变旧1—2条重点新闻数量或暂停自动发布规定。
+
