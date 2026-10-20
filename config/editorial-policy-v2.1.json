@@ -59,5 +59,47 @@
     "enabled_by_upgrade": false,
     "authorization": "SEPARATE_PER_PUBLISHER",
     "telegram_message_id_means": "PLATFORM_ACCEPTED_NOT_READ_OR_DELIVERED"
+  },
+  "news_linkage": {
+    "priority_market": "RO",
+    "related_markets_to_check": [
+      "US",
+      "EU",
+      "GLOBAL"
+    ],
+    "romania_relevance_states": [
+      "ROMANIA_VERIFIED_RESPONSE",
+      "ROMANIA_POTENTIAL_CHANNEL",
+      "NO_DEMONSTRABLE_LINK"
+    ],
+    "eligible_romania_relevance": [
+      "ROMANIA_VERIFIED_RESPONSE",
+      "ROMANIA_POTENTIAL_CHANNEL"
+    ],
+    "requires_specific_transmission_chain": true,
+    "requires_separate_evidence_for_causation": true,
+    "requires_data_time_and_market_phase": true,
+    "morning_news_sequence": [
+      "US_PREVIOUS_SESSION_AND_AFTER_HOURS",
+      "ROMANIA_TRANSMISSION_ASSESSMENT",
+      "BVB_PREMARKET"
+    ],
+    "afternoon_news_sequence": [
+      "BVB_INTRADAY_AND_EVIDENCE",
+      "US_PREMARKET_AND_VERIFIED_REGULAR_SESSION",
+      "INTERNATIONAL_UPDATES"
+    ],
+    "required_internal_fields": [
+      "origin_market",
+      "romania_relevance",
+      "transmission_chain",
+      "romania_targets",
+      "evidence_for_romania_response",
+      "impact_conditions",
+      "counter_conditions",
+      "next_check"
+    ],
+    "guidance_document": "skills/p004-chat-suite/references/romania-us-global-market-linkage-v2.3.md",
+    "editorial_guidance_only": true
   }
 }
