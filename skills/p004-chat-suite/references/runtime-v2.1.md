@@ -49,7 +49,6 @@ Windows临时目录受限时，将TEMP和TMP设为本仓库 .test-tmp。rebuild�
 
 `scripts/continuity_acceptance.py`提供采用核对与阶段计划函数。verify_adoption必须传入story_date，逐条匹配目标日期的正式原文，同时验证用户确认凭据、候选摘要与修订号；project_events只做幂等提案视图。二者均不写正式记忆，调用者仍须真实读取来源和取得具体采用确认；字符串凭据本身不证明人类授权。独立进程恢复测试不等同新聊天验证。验收记录见audit/continuity-acceptance-20261018.json，候选见planning/acceptance-20261018/。
 
-## v2.4｜最新上午时段配置检查（2026-10-20）
+## v2.5｜最新晨间运行配置（2026-10-20）
 
-运行前读取 [上午08:00—11:00/罗马尼亚夏冬令时规则](romania-morning-session-v2.4.md)及`config/editorial-policy-v2.1.json`的`group_sessions`：上午08:00开、11:00闭，N06 10:45—11:00；11:00—14:00不创建上午成员群聊。依Europe/Bucharest本地日期自动切换UTC+3/EEST（2026-10-20）→UTC+2/EET（2026-10-25起）。N01及07:30属于后台，不代表群聊开始。此处只是规则配置，不等于已更新任何原定时任务、实际接入生成器的时段拦截或发送器。
-
+读取 [上午09:00—12:00及时区](romania-morning-session-v2.5.md)及`config/editorial-policy-v2.1.json.group_sessions`；上午09:00开群、11:00仍开放、11:45—12:00 N06结尾、12:00闭群，12:00—14:00不生成上午成员对白。早报07:30/N01仍是后台。使用Europe/Bucharest自动处理2026-10-20 EEST/UTC+3 与2026-10-25之后EET/UTC+2。配置及离线测试不等于实际发送器已经部署了这些执行时间。

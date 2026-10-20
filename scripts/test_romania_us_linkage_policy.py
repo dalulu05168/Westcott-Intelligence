@@ -51,7 +51,7 @@ class RomaniaGlobalNewsLinkagePolicyTest(unittest.TestCase):
         self.assertTrue(self.policy["news_linkage"]["requires_data_time_and_market_phase"])
 
     def test_romanian_daily_news_windows_and_existing_limits(self):
-        for time in ("07:30", "08:00", "14:00", "16:00", "20:00"):
+        for time in ("07:30", "09:00", "14:00", "16:00", "20:00"):
             self.assertIn(time, self.rule)
         self.assertIn("1—2条", self.rule)
         self.assertEqual(self.policy["active_ids"], [1, 42])

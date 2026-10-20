@@ -9,7 +9,7 @@ import unittest
 from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
-MASTER = "skills/p004-chat-suite/references/romania-morning-session-v2.4.md"
+MASTER = "skills/p004-chat-suite/references/romania-morning-session-v2.5.md"
 RULES = (
     "skills/p004-chat-suite/SKILL.md",
     "skills/p004-director/SKILL.md",
@@ -37,10 +37,10 @@ class MorningWindowTest(unittest.TestCase):
 
     def test_local_morning_and_midday_break(self):
         self.assertEqual(self.policy["timezone"], "Europe/Bucharest")
-        self.assertEqual((self.morning["open"], self.morning["close"]), ("08:00", "11:00"))
-        self.assertEqual((self.morning["summary_prep_start"], self.morning["summary_prep_end"]), ("10:45", "11:00"))
+        self.assertEqual((self.morning["open"], self.morning["close"]), ("09:00", "12:00"))
+        self.assertEqual((self.morning["summary_prep_start"], self.morning["summary_prep_end"]), ("11:45", "12:00"))
         self.assertEqual(self.policy["group_sessions"]["midday"], {
-            "start": "11:00", "end": "14:00", "group_status": "CLOSED",
+            "start": "12:00", "end": "14:00", "group_status": "CLOSED",
         })
 
     def test_prep_is_not_early_group_opening(self):
@@ -52,14 +52,14 @@ class MorningWindowTest(unittest.TestCase):
     def test_2026_october_dst_transition(self):
         tz = ZoneInfo("Europe/Bucharest")
         for year, month, day, expected_open_utc, expected_close_utc in (
-            (2026, 10, 20, 5, 8),
-            (2026, 10, 24, 5, 8),
-            (2026, 10, 25, 6, 9),
-            (2026, 10, 26, 6, 9),
+            (2026, 10, 20, 6, 9),
+            (2026, 10, 24, 6, 9),
+            (2026, 10, 25, 7, 10),
+            (2026, 10, 26, 7, 10),
         ):
             with self.subTest(day=day):
-                open_utc = datetime(year, month, day, 8, tzinfo=tz).astimezone(timezone.utc)
-                close_utc = datetime(year, month, day, 11, tzinfo=tz).astimezone(timezone.utc)
+                open_utc = datetime(year, month, day, 9, tzinfo=tz).astimezone(timezone.utc)
+                close_utc = datetime(year, month, day, 12, tzinfo=tz).astimezone(timezone.utc)
                 self.assertEqual((open_utc.hour, close_utc.hour),
                                  (expected_open_utc, expected_close_utc))
 
@@ -77,9 +77,9 @@ class MorningWindowTest(unittest.TestCase):
         for path in RULES:
             with self.subTest(path=path):
                 text = (ROOT / path).read_text(encoding="utf-8")
-                self.assertIn("romania-morning-session-v2.4.md", text)
+                self.assertIn("romania-morning-session-v2.5.md", text)
         sop = (ROOT / "skills/p004-chat-suite/references/sop.md").read_text(encoding="utf-8")
-        self.assertIn("|10:45|", sop)
+        self.assertIn("|11:45|", sop)
 
 
 if __name__ == "__main__":
