@@ -129,5 +129,26 @@
     "2026_dst_end_date": "2026-10-25",
     "delivery_schedules_unchanged": true,
     "guidance_document": "skills/p004-chat-suite/references/romania-morning-session-v2.5.md"
+  },
+  "member_stock_ledger": {
+    "enabled": true,
+    "scene_only": true,
+    "real_trade_verified_by_story": false,
+    "registry_path": "memory/member-stock/ledger-v1.json",
+    "source_curated_path": "memory/curated/2026-10-16-dynamic-state.json",
+    "coverage": "PARTIAL_VERIFIED_INITIAL_IMPORT_NOT_FULL_HISTORY",
+    "all_identity_ids": [
+      1,
+      65
+    ],
+    "allow_new_story_entries_for": [
+      1,
+      42
+    ],
+    "event_history_append_only": true,
+    "require_adopted_story_evidence": true,
+    "require_recommendation_link_evidence": true,
+    "no_numeric_inference": true,
+    "guidance_document": "skills/p004-chat-suite/references/member-stock-participation-v2.6.md"
   }
 }

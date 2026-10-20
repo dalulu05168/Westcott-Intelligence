@@ -52,3 +52,7 @@ Windows临时目录受限时，将TEMP和TMP设为本仓库 .test-tmp。rebuild�
 ## v2.5｜最新晨间运行配置（2026-10-20）
 
 读取 [上午09:00—12:00及时区](romania-morning-session-v2.5.md)及`config/editorial-policy-v2.1.json.group_sessions`；上午09:00开群、11:00仍开放、11:45—12:00 N06结尾、12:00闭群，12:00—14:00不生成上午成员对白。早报07:30/N01仍是后台。使用Europe/Bucharest自动处理2026-10-20 EEST/UTC+3 与2026-10-25之后EET/UTC+2。配置及离线测试不等于实际发送器已经部署了这些执行时间。
+
+## v2.6｜成员股票参与的独立索引与核验（2026-10-20）
+
+加载 [股票推荐参与个人账本规则](member-stock-participation-v2.6.md)和`memory/member-stock/ledger-v1.json`，以`scripts/member_stock_ledger.py --check`核对65个人索引及初始10月16日已审原文证据；`--member NN`、`--symbol TICKER`仅做只读查询，不能改动正式成员记忆或Google Doc。25/38的FOJE、34/40的AA必须区分已自述买卖和条件计划，数量缺失保持null。10月17—20日最新群聊并未全部入此初始账本；生成新稿仍先读实时Google Doc，以正式已采用/审核消息逐条补录。场景自述不等于实际成交。

@@ -55,3 +55,6 @@
 
 每轮读取 [罗马尼亚与美股/国际联动v2.3](romania-us-global-market-linkage-v2.3.md)。对进入罗马尼亚资讯主线的美国/国际事件，须在后台核对 origin_market、romania_relevance、transmission_chain、romania_targets、evidence_for_romania_response、impact_conditions、counter_conditions、next_check；其中 `ROMANIA_VERIFIED_RESPONSE` 只证明经核实的当地反应，**不自动证明跨市场因果**；`ROMANIA_POTENTIAL_CHANNEL` 只能作为条件性的未来影响。没有渠道时为 `NO_DEMONSTRABLE_LINK`，不硬塞。人工审核与原有来源/行情/重复检查共同生效，脚本静态字段PASS不能当自动化新闻验收或实际发布。
 
+## v2.6｜角色股票买卖的出处门禁（2026-10-20）
+
+读取 [成员股票参与逐人追踪v2.6](member-stock-participation-v2.6.md)。成员一旦谈及推荐股票的计划、下单、买入、卖出，应关联成员ID、交易所/代码、日期、原话和审阅证据；不能只靠股价或推荐发布时间推断其持仓与因果。参考`scripts/member_stock_ledger.py --check`验证初始索引及老审核来源，新增历史须另走采用/审阅程序。旧行动断言必须与个人已审状态一致，数量和盈亏不受推断。初始静态检查不能代替最新Google Doc完整同步或实际证券交易核实。
