@@ -3,6 +3,10 @@ name: p004-chat-suite
 description: ELLERY WESTCOTT 虚构财经教学会话五合一入口，统一调度总导演、编剧、先生、资讯助理和65位成员。
 ---
 
+## 2026-10-20 现行出场授权更新（优先于旧v1.6/v2.1范围）
+
+用户已明确开放41号与42号参与群聊：当前合法成员编号为01—42，43—65仍不得出场。65人身份档案及已确认历史原样保留；41号为Matei Cojocaru（41男，老学员），42号为Anca Alexandra Palade（42女，新学员）。新增出场资格不代表已有发言/关系/持仓/积分，首次及后续台词仍需对照最新Google Doc、对应档案和有证据记忆，按话题自然选角，不强迫两人出场。机器执行范围以config/editorial-policy-v2.1.json的active_ids=[1,42]为准。其他规则、DRY_RUN和发布限制不变。
+
 ## V2.1 执行入口（2026-10-17）
 
 每次生成候选前读取[连续记忆与真实执行](references/runtime-v2.1.md)，通过统一控制器检查最新Doc修订、时段、人物记忆及事实引用；CLI已接入V2.1，旧归档函数不代表新运行验收。机器规则以config/editorial-policy-v2.1.json为准。历史协议保留，冲突以本轮用户指令及本节明确的新执行门禁为准；自然度、新闻因果和采用仍须审稿，不自动发送。
@@ -16,7 +20,7 @@ description: ELLERY WESTCOTT 虚构财经教学会话五合一入口，统一调
 
 本仓库是该项目唯一的Skill规则源，不依赖旧 `dalulu05168/-Skill` 仓库。Google Docs自动归档暂停，不自动发送WhatsApp/Telegram。当前无自动群发功能，只有经用户最终确认的文本才加入有效剧情记忆。
 
-必须先读`references/daily-editorial-and-memory-v1.6.md`（2026-10-14最新用户指令，当前只允许01—40号出场、每天BVB/美股各一次、角色记忆强制读取），再读`references/five-skill-workflow-v1.5.md`，核对实际输入、无新闻分支和事实交接；再按任务读取：
+必须先读`references/daily-editorial-and-memory-v1.6.md`（2026-10-14最新用户指令，当前只允许01—42号出场、每天BVB/美股各一次、角色记忆强制读取），再读`references/five-skill-workflow-v1.5.md`，核对实际输入、无新闻分支和事实交接；再按任务读取：
 - `references/staff-and-role-identity-20261012.md`（最新：先生 Jonathan Richard Hayes）
 - `characters/final-identity-65.json`（用户确认的65人、11项身份字段）
 - `references/session-rules.md`、`references/final-transcript-memory-and-format-20261012.md`
@@ -52,7 +56,7 @@ description: ELLERY WESTCOTT 虚构财经教学会话五合一入口，统一调
 
 ## 2026-10-14 最新用户执行修订 v1.6（优先于本文件旧描述）
 
-**必须先读取** `references/daily-editorial-and-memory-v1.6.md`，根据每日最新正式Google Doc、独立长期记忆和近期已采用剧情选角。身份仍为65人锁定，但**当前仅01—40号允许在剧情中发言**；41—65号保留档案但不出场。每天准备一只BVB与一只美国市场股票研究，上午下午各一次、具体先后由用户提前确定；未确定时记PENDING_USER_SLOT，不自行安排或声称实际发送。资讯主线最多1—2条重大、有实质新增的事件，避免重复和无意义热度；助理自然讲事实、变化、条件与可讨论方向。**禁止“助理1条→成员2条”机械循环**，必须体现成员彼此接话与个人记忆，允许连续互答、少人回应或沉默。若本文旧规则与v1.6不符，优先v1.6。GitHub规则同步不是线上自动任务或真实群发送。
+**必须先读取** `references/daily-editorial-and-memory-v1.6.md`，根据每日最新正式Google Doc、独立长期记忆和近期已采用剧情选角。身份仍为65人锁定，但**当前仅01—42号允许在剧情中发言**；43—65号保留档案但不出场。每天准备一只BVB与一只美国市场股票研究，上午下午各一次、具体先后由用户提前确定；未确定时记PENDING_USER_SLOT，不自行安排或声称实际发送。资讯主线最多1—2条重大、有实质新增的事件，避免重复和无意义热度；助理自然讲事实、变化、条件与可讨论方向。**禁止“助理1条→成员2条”机械循环**，必须体现成员彼此接话与个人记忆，允许连续互答、少人回应或沉默。若本文旧规则与v1.6不符，优先v1.6。GitHub规则同步不是线上自动任务或真实群发送。
 
 ## 跨页面统一启动（2026-10-16，V2.0）
 
