@@ -142,8 +142,8 @@ def build_context(root, story_date, member_ids, snapshot=None):
     root, day = Path(root), date.fromisoformat(story_date)
     if len(set(member_ids)) != len(member_ids):
         raise ValueError('DUPLICATE_CAST_ID')
-    if any(not re.fullmatch(r'\d{2}', pid) or not 1 <= int(pid) <= 40 for pid in member_ids):
-        raise ValueError('OUTSIDE_ACTIVE_RANGE:01-40')
+    if any(not re.fullmatch(r'\d{2}', pid) or not 1 <= int(pid) <= 42 for pid in member_ids):
+        raise ValueError('OUTSIDE_ACTIVE_RANGE:01-42')
     hashes = {}
     roster = {p['id']: p for p in read_json(root, 'skills/p004-chat-suite/characters/final-identity-65.json', hashes)['people']}
     days = {}
@@ -194,7 +194,7 @@ def build_context(root, story_date, member_ids, snapshot=None):
         elif not refs:
             candidates.append(seed)
     return {'schema_version': 'editorial-execution-1.8', 'story_date': story_date,
-            'active_member_range': '01-40', 'members': members,
+            'active_member_range': '01-42', 'members': members,
             'documented_interactions': documented, 'candidate_pairings': candidates,
             'freshness': ('CURRENT_DOCUMENT_LOADED' if snapshot is not None and live_source else
                           'ARCHIVE_SNAPSHOT_REQUIRES_DOCUMENT_REFRESH' if snapshot is not None else
