@@ -1,0 +1,191 @@
+{
+  "status": "OFFICIAL_INTAKE_UNREVIEWED",
+  "local_date": "2026-10-20",
+  "collected_at": "2026-10-20T08:52:22.776357+00:00",
+  "timezone": "Europe/Bucharest",
+  "source_window_hours": 48,
+  "market_scopes": [
+    "RO",
+    "FR",
+    "US"
+  ],
+  "coverage": [
+    {
+      "feed_id": "fed_monetary",
+      "status": "OK",
+      "recent_entries": 0
+    },
+    {
+      "feed_id": "ecb_press",
+      "status": "OK",
+      "recent_entries": 2
+    },
+    {
+      "feed_id": "bvb_market",
+      "status": "OK",
+      "recent_entries": 117
+    },
+    {
+      "feed_id": "bvb_announcements",
+      "status": "OK",
+      "recent_entries": 0
+    },
+    {
+      "feed_id": "insee_conjuncture",
+      "status": "OK",
+      "recent_entries": 0
+    },
+    {
+      "feed_id": "bls_cpi",
+      "status": "OK",
+      "recent_entries": 0
+    },
+    {
+      "feed_id": "bls_employment",
+      "status": "OK",
+      "recent_entries": 0
+    },
+    {
+      "feed_id": "eurostat_releases",
+      "status": "OK",
+      "recent_entries": 0
+    }
+  ],
+  "feed_errors": [],
+  "candidates": [
+    {
+      "id": "dbf2f7bd90ad2e9666a09b53ff750637ba00d338",
+      "source_id": "bvb_market",
+      "market_scopes": [
+        "RO"
+      ],
+      "headline_original": "Erste Group Bank AG (EBS)",
+      "published_at": "2026-10-20T08:41:00+00:00",
+      "official_article_url": "https://bvb.ro/infocont/infocont26/EBS_Cal_Fin_2027_en.pdf",
+      "origin": "Bucharest Stock Exchange",
+      "source_body_sha256": null,
+      "source_excerpt_original": null,
+      "evidence_status": "SOURCE_BODY_UNAVAILABLE",
+      "source_body_error": "Original PDF text unavailable; scanned/encrypted files require review.",
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "b1ee190cb3c8d3711594097442e078bd56b2ff15",
+      "source_id": "bvb_market",
+      "market_scopes": [
+        "RO"
+      ],
+      "headline_original": "Erste Group Bank AG (EBS)",
+      "published_at": "2026-10-20T08:41:00+00:00",
+      "official_article_url": "https://bvb.ro/infocont/infocont26/EBS_Cal_Fin_2027_de.pdf",
+      "origin": "Bucharest Stock Exchange",
+      "source_body_sha256": null,
+      "source_excerpt_original": null,
+      "evidence_status": "SOURCE_BODY_UNAVAILABLE",
+      "source_body_error": "Original PDF text unavailable; scanned/encrypted files require review.",
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "cb460773ffd8036387a5bf33cf7c5250c9f6f0d6",
+      "source_id": "bvb_market",
+      "market_scopes": [
+        "RO"
+      ],
+      "headline_original": "INTERCAPITAL POLAND WIG30TR UCITS ETF (ICWIGETF)",
+      "published_at": "2026-10-20T08:26:48+00:00",
+      "official_article_url": "https://bvb.ro/FinancialInstruments/SelectedData/NewsItem/ICWIGETF-van-la-data-19-10-2026/6BC02",
+      "origin": "Bucharest Stock Exchange",
+      "source_body_sha256": "7fc0b8162ca270425ff027b6c9aff73b5e0e8a6ea8ec4a75a84dc8f0375736b2",
+      "source_excerpt_original": "marți | 20 octombrie, 2026 | Starea pietei: DESCHISA Despre noi si Guvernanta | Relatia cu Investitorii | Contact Login Inregistrare Cautare avansata Pentru Companii De ce Bursa de Valori Bucuresti? Prezentare generala Instrumente pentru finantare Beneficiile listarii Infografice Piata Principala Actiuni Obligatiuni Intermediari Intrebari frecvente Piata AeRO Actiuni Obligatiuni Consultanti Autorizati Intrebari frecvente Materiale utile Ghidul privind raportarea ESG Codul de Guvernanta Corporativa Instrumente Financiare Piete Actiuni Obligatiuni Unitati de fond Certificate Warrants Cautare avansata Indici Privire generala Profile indici Factsheets indici Performanta indici Informatii BMR Operatiuni corporative Info dividend Modificari capital social Societati provenite din divizari Informatii selective Rapoarte curente Rezultate financiare Indicatori Calendar Financiar Calendar Adunari Generale Operatiuni de piata Raportari actionari Lista monitorizare Tranzactionare si Statistici Tranzactionare Pietele astazi Ziua curenta Statistici toate pietele Sumare tranzactionare Oferte publice in derulare Vanzari speciale la ordin Date MiFiD II Statistici Statistici generale Evolutia pietei (actiuni) Top tranzactionare Publicatii Rapoarte zilnice Rapoarte lunare Program de tranzactionare Bursa in direct Intermediari Liste intermediari Toti intermediarii Top intermediari Lista Market Makeri Lista Furnizori Lichiditate Performanta MM si LP Lista Agenti Delegati Cum devin intermediar Servicii Vanzare date Pentru distribuitori de date Pentru profesionisti Pentru investitori Licentiere indici Cum licentiez un indice BVB? Conectivitate Sistemul de tranzactionare Arena Sistem de brokeraj Reglementari Legislatie Legi si regulamente Reglementari BVB Raportari MiFID II / MiFIR Camera Arbitrala Utile Link-uri utile Institutiile pietei de capital Stiri Piata INTERCAPITAL POLAND WIG30TR UCITS ETF - ICWIGETF VAN la data 19.10.2026 Data Publicare: 20.10.2026 11:26:48 Cod IRIS: 6BC02 Valoarea certificata a Activului Net per unitate (VUAN) pentru clasa de Unitati InterCapital Poland WIG30TR UCITS ETF tranzactionata la Bursa de Valori Bucuresti este de 62,4857 lei , la data de 19. octombrie 2026. Pentru mai multe informatii, va rugam sa consultati fisierul atasat. ICWIGETF_20261020112213_2026-10-19-POLAND-ETF-Official-NAV.pdf Print Informatii furnizate prin IRIS , platforma de stiri a Bursei de Valori Bucuresti. ______________________ Bursa de Valori Bucuresti (\"BVB\") nu este responsabila de continutul acestui Raport. Emitentii ale caror instrumente financiare sunt tranzactionate pe pietele administrate de catre BVB au obligatia de a intocmi Rapoarte in conformitate cu prevederile legale si regulamentare incidente. BVB publica aceste Rapoarte in calitate de administrator al acestor piete, desemnat de catre ASF. In situatia in care, pentru informarea corespunzatoare a investitorilor, sunt publicate Rapoarte semnate de persoane diferite, sau cu informatii divergente, responsabilitatea juridica revine in totalitate semnatarilor respectivelor Rapoarte. BVB isi declina orice obligatie sau raspundere fata de emitenti sau terte parti, cu privire la realitatea, integralitatea si exactitatea informatiilor furnizate de catre acestia si distribuite de catre BVB. Utilizatorii website-ului au responsabilitatea de a verifica continutul rapoartelor. Orice raport (inclusiv orice prospect) care se adreseaza exclusiv unor persoane/tari specificate in acesta nu trebuie luate in considerare de catre persoanele / in tarile excluse. Termenii si conditiile , inclusiv restrictiile de utilizare si redistributie se aplica. ©2026 Bursa de Valori Bucuresti. Toate drepturile rezervate. Pentru Companii Prezentare generala Instrumente pentru finantare Beneficiile listarii Pentru Investitori Pentru inceput Devino Investitor La Bursa Exchange Live 2.0 Tranzactionare si Statistici Pietele astazi Statistici generale Top tranzactionare Despre noi si Guvernanta Descriere generala Structura de conducere Comunicate de presa Cariere Relatia cu Investitorii Privire generala Adunari Generale ale Actionarilor Raportari financiare Site-uri din Grupul BVB Depozitarul Central Website mobile | Termeni de Utilizare | Contact | © 2026 Bursa de Valori Bucuresti Distribuie:",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "42f6badc42fff5f70181a60de8d9501f85d13d4b",
+      "source_id": "bvb_market",
+      "market_scopes": [
+        "RO"
+      ],
+      "headline_original": "INTERCAPITAL POLAND WIG30TR UCITS ETF (ICWIGETF)",
+      "published_at": "2026-10-20T08:26:48+00:00",
+      "official_article_url": "https://bvb.ro/infocont/infocont26/ICWIGETF_20261020112213_2026-10-19-POLAND-ETF-Official-NAV.pdf",
+      "origin": "Bucharest Stock Exchange",
+      "source_body_sha256": null,
+      "source_excerpt_original": null,
+      "evidence_status": "SOURCE_BODY_UNAVAILABLE",
+      "source_body_error": "Original PDF text unavailable; scanned/encrypted files require review.",
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "ef1de191adfaa1e29aa0b40889e23a70221918c5",
+      "source_id": "bvb_market",
+      "market_scopes": [
+        "RO"
+      ],
+      "headline_original": "INTERCAPITAL EUR ROMANIA GOVT BOND 5-10YR UCITS ETF (ICGROETF)",
+      "published_at": "2026-10-20T08:21:13+00:00",
+      "official_article_url": "https://bvb.ro/infocont/infocont26/ICGROETF_20261020111735_2026-10-19-ROFI-ETF-Official-NAV.pdf",
+      "origin": "Bucharest Stock Exchange",
+      "source_body_sha256": null,
+      "source_excerpt_original": null,
+      "evidence_status": "SOURCE_BODY_UNAVAILABLE",
+      "source_body_error": "Original PDF text unavailable; scanned/encrypted files require review.",
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "0de9b4c1021a7c35a896c6b7292563e25fd2105d",
+      "source_id": "ecb_press",
+      "market_scopes": [
+        "RO",
+        "FR"
+      ],
+      "headline_original": "Frank Elderson: Interview with Die Presse",
+      "published_at": "2026-10-20T07:00:00+00:00",
+      "official_article_url": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261020~97e2e4bc38.en.html",
+      "origin": "European Central Bank",
+      "source_body_sha256": "3913bc01773df2f7fa3e170582f40d276150725fa5e61eb88ee5604a0e0d955b",
+      "source_excerpt_original": "Skip to: Skip to navigation Skip to content Skip to footer EN Български Čeština Dansk Deutsch Eλληνικά English Español Eesti keel Suomi Français Gaeilge Hrvatski Magyar Italiano Lietuvių Latviešu Malti Nederlands Polski Português Română Slovenčina Slovenščina Svenska Menu Monetary policy & markets Monetary policy & markets Our monetary policy strategy, the tools we use and the impact they have Overview of monetary policy and markets Quick links What is monetary policy? Strategy review Asset purchase programmes Latest monetary policy press conference 10 September 2026 Introduction Benefits of price stability Scope of monetary policy Transmission mechanism Decisions, statements & accounts Monetary policy strategy Strategy review Medium-term orientation Two per cent inflation target Economic, monetary and financial analysis Economic analysis Monetary and financial analysis Monetary policy operations Open market operations TLTROs Asset purchase programmes Securities lending Pandemic emergency purchase programme Standing facilities Minimum reserves Two-tier system Euro central bank liquidity lines Swap lines EUREP Chronology of Eurosystem liquidity lines Emergency liquidity assistance (ELA) Liquidity analysis Collateral Eligibility criteria and assessment Marketable assets Non-marketable assets List of eligible marketable assets User guide Collateral management Eligible SSSs Eligible links Eligible triparty agents Risk mitigation ECAF Risk control Haircut categories Valuation Loan-level requirements Contacts Structure of the euro area economy Economic policy Fiscal policies External trade Effective exchange rates Financial structure Financial markets Financial intermediaries Economic diversity Labour market Market contact groups Bond market (BMCG) Money market (MMCG) Debt Issuance Market Contact Group (DIMCG) ECB Operations managers group (ECB OMG) Foreign exchange (FXCG) Institutional Investor Dialogue (IID) Monetary Analysis Contact Group (MACG) Payments & financial stability Payments & financial stability Insights into our work on financial stability and payments and market infrastructures Overview of payments and financial stability Quick links Digital euro Payments news & events Market contact groups TARGET professional use documents and links Latest Financial Stability Review 5 June 2025 Payments TARGET Services Shared features T2 Facts and figures Governance T2S Governance Facts and figures Pricing TIPS Cross-border payments Governance Facts and figures Onboarding ECMS Governance Pontes Governance TARGET professional use documents & links Shared features documents & links T2 documents & links T2S documents & links TIPS documents & links ECMS documents & links Pontes documents & links Tokenisation and DLT Appia Governance Exploratory work Retail payments Retail payments strategy ECB as a catalyst SEPA Instant payments Market contact groups Collateral management harmonisation SCoRE Implementation FAQ AMI-SeCo Cyber resilience Financial market infrastructures TIBER-EU Euro Cyber Resilience Board Oversight Payment systems TARGET2-Securities Electronic payments Securities settlement systems and central counterparties Critical service providers Correspondent and custodian banks SecuRe Pay forum Reserve management services Key aspects Range of services Cash professionals Cash handling Authentication devices Recirculation of banknotes Common detector interface specifications Banknote manufacturer accreditation Financial stability Introduction to financial stability Macroprudential Measures Financial stability contact groups Statistics Statistics Access to all ECB statistics and background information Overview of ECB statistics Quick links Key figures ECB Data Portal Statistical releases PRESS RELEASE - ECB launches pilot project for research access to confidential statistical data 13 March 2025 Frequently accessed Euro exchange rates Key ECB interest rates Euro short-term rate (€STR) Interest rate benchmarks Working group on euro risk-free rates Inflation Euro area yield curves All statistics & background All key statistics All data services Data reporting & standards Governance and quality framework Co-operation and standards Banks’ data reporting DPM Alliance IReF JBRC BIRD AnaCredit AnaCredit Q&A Public consultations Banking industry dialogue on ESCB statistics and integrated reporting SDMX – statistical data exchange model INEXDA - granular data network The euro The euro All you need to know about our common currency O",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "6dad08c6a40d3fdea5243f4787e8463b755a89bb",
+      "source_id": "ecb_press",
+      "market_scopes": [
+        "RO",
+        "FR"
+      ],
+      "headline_original": "Frank Elderson: From climate and nature risks to economic resilience and competitiveness",
+      "published_at": "2026-10-19T06:00:00+00:00",
+      "official_article_url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261019~f0a3e053de.en.html",
+      "origin": "European Central Bank",
+      "source_body_sha256": null,
+      "source_excerpt_original": null,
+      "evidence_status": "SOURCE_BODY_UNAVAILABLE",
+      "source_body_error": "Publisher canonical differs from feed story.",
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    }
+  ],
+  "us_index_close_snapshot_ready": false,
+  "google_docs_current_revision_loaded": false,
+  "review_status": "UNREVIEWED",
+  "delivery_allowed": false,
+  "telegram_sent": false,
+  "purpose": "Material for human/ChatGPT source-based editorial review, not market quote certification."
+}
