@@ -1,3 +1,8 @@
+## 2026-10-20｜新增每日晚间五Skill自我检讨 v2.8
+
+- 用户要求每晚固定执行自我检讨并整理次日注意事项。新增`skills/p004-chat-suite/references/nightly-writing-review-v2.8.md`，定义夜间读取当天正式Google Docs及前日历史、核对修订号/发言轮次/最后节点，逐项自查人物、新闻行情、股票推荐/参与、活动、课程、图片和闭群；用P0/P1/P2区分严重程度，输出次日待核项，不编造事实。
+- 已同步五Skill统一入口、跨页执行规则、写作协议、总导演/编剧入口。每晚ChatGPT复盘任务独立创建，按Europe/Bucharest约22:00弹性安排；GitHub更新不证明其已准时执行或送达。正式剧情不被自动修改，Telegram/WhatsApp暂停/发送配置保持不变。
+
 ## 2026-10-20｜成员表情与情绪表达管理 v2.7
 
 - 用户指出成员发言重复使用🚀、😂等表情，要求纳入正式五Skill执行规则；新增 `skills/p004-chat-suite/references/member-emoji-guidelines-v2.7.md`。
