@@ -50,3 +50,8 @@
 ## 采用后与版本更新
 
 仅将用户采用或写入正式文档的内容提出为记忆更新；保留原句、消息ID、日期、源文修订号与撤销/更正状态。重新运行既有仓库校验与运行快照同步校验；未执行线上任务更新就报告“源码已更新，线上未应用”。所有审核字段保持后台，复制稿使用现有角色标签，不加粗。
+
+## v2.3｜国际事件与罗马尼亚影响的审稿补充（2026-10-20）
+
+每轮读取 [罗马尼亚与美股/国际联动v2.3](romania-us-global-market-linkage-v2.3.md)。对进入罗马尼亚资讯主线的美国/国际事件，须在后台核对 origin_market、romania_relevance、transmission_chain、romania_targets、evidence_for_romania_response、impact_conditions、counter_conditions、next_check；其中 `ROMANIA_VERIFIED_RESPONSE` 只证明经核实的当地反应，**不自动证明跨市场因果**；`ROMANIA_POTENTIAL_CHANNEL` 只能作为条件性的未来影响。没有渠道时为 `NO_DEMONSTRABLE_LINK`，不硬塞。人工审核与原有来源/行情/重复检查共同生效，脚本静态字段PASS不能当自动化新闻验收或实际发布。
+
