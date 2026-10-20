@@ -86,7 +86,8 @@ class Runtime21Test(unittest.TestCase):
         self.assertIn('UNSUPPORTED_STORY_ACTION:s1', self.execute(('40',), scene=[turn])['errors'])
 
     def test_outside_active_range(self):
-        for pid in ('41','65'):
+        # 41 and 42 were authorized on 2026-10-20; 43-65 remain disallowed.
+        for pid in ('43','65'):
             with self.assertRaisesRegex(ValueError,'OUTSIDE_ACTIVE_CAST'): self.execute((pid,))
 
     def test_completed_macd_cannot_restart(self):
