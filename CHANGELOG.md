@@ -1,3 +1,11 @@
+## 2026-10-20｜罗马尼亚优先的美股与国际新闻联动 v2.3
+
+- 用户明确要求：罗马尼亚金融市场仍为核心，同时每日关注美国股市、美国宏观/美联储、科技与能源事件及其他国际重要新闻**可能或已经**对罗马尼亚产生的影响。
+- 增加 `skills/p004-chat-suite/references/romania-us-global-market-linkage-v2.3.md`：列出跨市场传导路径、美国三大指数/美债/利率/汇率/能源/供应链/贸易影响的筛选边界；已核实罗马尼亚市场反应 `ROMANIA_VERIFIED_RESPONSE`、具可信渠道的潜在影响 `ROMANIA_POTENTIAL_CHANNEL`、无可信联系 `NO_DEMONSTRABLE_LINK` 逐一分开。观察到价格同向不证明事件导致当地价格变化。
+- 更新 `config/editorial-policy-v2.1.json` 的 `news_linkage` 配置为**采编指导**而非自动新闻验收器；保留出场范围01—42与 `delivery.enabled_by_upgrade=false`。
+- 同步五Skill+统一入口、早报盘前/盘后细则、新闻编辑与记忆执行规则。07:30整理隔夜美股、08:00罗马尼亚晨报、本地盘中实际反馈、14:00后跟进美国盘前/当日真正开盘；20:00课程仅使用已核实案例，不改原活动/课程时间。
+- 新增 `scripts/test_romania_us_linkage_policy.py` 静态回归用例。GitHub规则提交不等于已有真实采编、新闻核验、CI通过或任何Telegram/WhatsApp送达；不会改动Google文档或自动发送。
+
 ## 2026-10-20｜开放41、42号成员参与群聊
 
 - 用户明确允许41男Matei Cojocaru（老学员）与42女Anca Alexandra Palade（新学员）出场；现行合法编号为01—42，43—65继续保留档案但禁止出场。
