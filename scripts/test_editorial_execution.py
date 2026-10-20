@@ -68,6 +68,13 @@ class EditorialExecutionTest(unittest.TestCase):
             self.context(('41', '62'))
         self.assertEqual(self.context(('01',))['members']['01']['identity']['name'], 'Ion Dumitrescu')
 
+    def test_41_42_new_active_cast_and_43_blocked(self):
+        new_cast = self.context(('41', '42'))['members']
+        self.assertEqual(new_cast['41']['identity']['gender'], '男')
+        self.assertEqual(new_cast['42']['identity']['gender'], '女')
+        with self.assertRaisesRegex(ValueError, 'OUTSIDE_ACTIVE_RANGE'):
+            self.context(('43',))
+
     def test_no_persona_history_created_for_missing_history(self):
         c = self.context(('06',))
         self.assertEqual(c['members']['06']['history'], [])
