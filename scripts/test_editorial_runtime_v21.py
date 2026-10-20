@@ -27,6 +27,15 @@ class Runtime21Test(unittest.TestCase):
                       revision_check=kwargs.pop('revision_check', check), decisions=kwargs.pop('decisions', self.decisions),
                       state_records=kwargs.pop('state_records', self.states), **kwargs)
 
+    def test_active_roster_includes_41_42_but_not_43(self):
+        policy = rt.load(ROOT/'config/editorial-policy-v2.1.json')
+        self.assertEqual(policy['active_ids'], [1, 42])
+        result = self.execute(('41', '42'))
+        self.assertEqual(result['context']['members']['41']['identity']['gender'], '男')
+        self.assertEqual(result['context']['members']['42']['identity']['gender'], '女')
+        with self.assertRaisesRegex(ValueError, 'INVALID_OR_OUTSIDE_ACTIVE_CAST'):
+            self.execute(('43',))
+
     def test_actual_native_tabs_empty_parent_and_future_placeholders(self):
         days, _ = rt.parse_snapshot(self.snapshot, self.roster, 2026, self.decisions)
         self.assertEqual(sorted(days), ['2026-10-14', '2026-10-15', '2026-10-16'])
