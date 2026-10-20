@@ -101,5 +101,33 @@
     ],
     "guidance_document": "skills/p004-chat-suite/references/romania-us-global-market-linkage-v2.3.md",
     "editorial_guidance_only": true
+  },
+  "group_sessions": {
+    "timezone": "Europe/Bucharest",
+    "uses_iana_timezone": true,
+    "seasonal_utc_offset": "AUTO_BY_LOCAL_DATE",
+    "morning": {
+      "open": "08:00",
+      "close": "11:00",
+      "summary_prep_start": "10:45",
+      "summary_prep_end": "11:00"
+    },
+    "preparation": {
+      "daily_brief": "07:30",
+      "n01_review_start": "07:35",
+      "n01_review_end": "07:50",
+      "outside_group_session": true
+    },
+    "midday": {
+      "start": "11:00",
+      "end": "14:00",
+      "group_status": "CLOSED"
+    },
+    "afternoon": {
+      "open": "14:00"
+    },
+    "2026_dst_end_date": "2026-10-25",
+    "delivery_schedules_unchanged": true,
+    "guidance_document": "skills/p004-chat-suite/references/romania-morning-session-v2.4.md"
   }
 }
