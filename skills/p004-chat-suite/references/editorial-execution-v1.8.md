@@ -1,13 +1,13 @@
 # 五Skill执行协议 v1.8（2026-10-16）
 
-以本轮用户确认的改进范围补充v1.6、v1.7；保留65人身份、当前01—40号出场限制、用户指定股票研究时段及既有活动。不得恢复暂停任务。新协议不覆盖后续明确用户指令，不把GitHub提交当作线上任务已更新。
+以本轮用户确认的改进范围补充v1.6、v1.7；保留65人身份、当前01—42号出场限制、用户指定股票研究时段及既有活动。不得恢复暂停任务。新协议不覆盖后续明确用户指令，不把GitHub提交当作线上任务已更新。
 
 ## 每次执行都要形成实际读取凭据
 
 1. 使用Google Drive读取当前正式文档`1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM`的文本和页签标题。保存`documentId`、`revisionId`、带时区`retrieved_at`、`tabs`及`paragraphs`为本轮快照。无法读取时只准备明确标为未刷新资料的草稿，不能交付为已完成连续性审稿的正式稿。
 2. 在项目根目录运行：
    `python scripts/editorial_execution.py --date YYYY-MM-DD --members 02,10,15 --snapshot /absolute/current-snapshot.json --output /absolute/context.json`
-   `--members`只列本轮拟出场的01—40号。不要为了凑人数选角。
+   `--members`只列本轮拟出场的01—42号。不要为了凑人数选角。
 3. 阅读输出中的身份、`history`、`recent_examples`、候选口吻、已记录互动及候选关系。内部核对`source_hashes`和当前文档修订号。凭据只证明本地文件实际读取，不能证明远端永远没有变化；下一轮必须重新读取。
 4. 同一日期的新正式文档快照替换旧日稿的有效视图，不能与旧稿重复相加。原始文件保留；删除或更正台词不再作为有效往事。无该编号记录表示所读材料中无记录，不等于角色从未有过历史。
 
