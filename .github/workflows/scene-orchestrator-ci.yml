@@ -5,6 +5,8 @@ on:
       - "AGENTS.md"
       - "skills/p004-*/SKILL.md"
       - "skills/p004-chat-suite/scene-orchestrator/**"
+      - "skills/p004-chat-suite/voice-management/**"
+      - "skills/p004-chat-suite/characters/**"
       - ".agents/skills/ellery-westcott-scene/**"
       - ".github/workflows/scene-orchestrator-ci.yml"
   pull_request:
@@ -12,6 +14,8 @@ on:
       - "AGENTS.md"
       - "skills/p004-*/SKILL.md"
       - "skills/p004-chat-suite/scene-orchestrator/**"
+      - "skills/p004-chat-suite/voice-management/**"
+      - "skills/p004-chat-suite/characters/**"
       - ".agents/skills/ellery-westcott-scene/**"
   workflow_dispatch:
 
@@ -32,6 +36,8 @@ jobs:
         run: python scripts/validate_repository.py
       - name: Run scene static gate regression tests
         run: python -m unittest discover -s skills/p004-chat-suite/scene-orchestrator/tests -v
+      - name: Run 65-character voice context loader regression tests
+        run: python -m unittest discover -s skills/p004-chat-suite/voice-management/tests -v
       - name: Confirm routing from all five components
         run: |
           python - <<'PY'
