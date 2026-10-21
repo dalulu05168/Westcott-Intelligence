@@ -90,3 +90,6 @@ GitHub规则快照：references/notion-approved-corrections.json
 5. 未经用户明确同意，不将候选稿写成已采用剧情；Notion与Docs具有不同职责。
 
 **重要**：连接器读取必须每次实际调用，仓库修改不等于ChatGPT自动执行。若需要无人值守实时同步，仍需另设已授权Notion API/受托运行环境，现阶段没有部署。
+
+## 自动化任务挂接（2026-10-22）
+从ChatGPT自动化/Project入口进入本总Skill时，先读取仓库根 `AUTOMATION-CONTROL-CENTER.md` 的来源门禁与出稿验收规则；不得仅凭任务提示词就宣称已读取GitHub、Google Docs和Notion，也不能把其它GPT窗口视为受此文件约束。任务完成后依本文件的交付协议输出。
