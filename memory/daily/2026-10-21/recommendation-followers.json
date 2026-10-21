@@ -1,0 +1,149 @@
+{
+  "date": "2026-10-21",
+  "symbol": "SNN",
+  "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+  "records": [
+    {
+      "id": "24-SNN-20261021",
+      "member_id": "24",
+      "symbol": "SNN",
+      "action": "AUTHOR_MARKED_FOLLOW_RECOMMENDATION",
+      "annotation": "跟推荐买票",
+      "summary": "我对这家公司了解还真不多，虽然说对这家公司没信心，但是对社群的眼光还是有信心的👍（跟推荐买票）",
+      "attitude": "不了解公司且表达没信心，但信任社群，作者标注跟票",
+      "quantity": null,
+      "execution_price": null,
+      "fill_time": null,
+      "profit_loss": null,
+      "holding_verified": false,
+      "evidence_ids": [
+        "20261021-t.toc19bjz91ue-B024-0"
+      ],
+      "evidence_fingerprints": {
+        "20261021-t.toc19bjz91ue-B024-0": "c098b9ea76abbb14b13b5000c10c5755b10165c45764edf98d0d29127b6bc3d3"
+      },
+      "reviewer": "codex-user-authorized-20261021",
+      "evidence_support_reviewed": true,
+      "real_trade_verified": false
+    },
+    {
+      "id": "14-SNN-20261021",
+      "member_id": "14",
+      "symbol": "SNN",
+      "action": "AUTHOR_MARKED_FOLLOW_RECOMMENDATION",
+      "annotation": "跟推荐买票",
+      "summary": "说到底还是那句话，看什么图、什么线都不重要，关键还是怎么选。（跟推荐买票）",
+      "attitude": "强调选股而非图线，作者标注跟票",
+      "quantity": null,
+      "execution_price": null,
+      "fill_time": null,
+      "profit_loss": null,
+      "holding_verified": false,
+      "evidence_ids": [
+        "20261021-t.toc19bjz91ue-B026-0"
+      ],
+      "evidence_fingerprints": {
+        "20261021-t.toc19bjz91ue-B026-0": "b779cf1a55c1f334db0678edd08159add1b41f1d13bc157f1b3d7b62ce0c024f"
+      },
+      "reviewer": "codex-user-authorized-20261021",
+      "evidence_support_reviewed": true,
+      "real_trade_verified": false
+    },
+    {
+      "id": "01-SNN-20261021",
+      "member_id": "01",
+      "symbol": "SNN",
+      "action": "AUTHOR_MARKED_FOLLOW_RECOMMENDATION",
+      "annotation": "跟推荐买票",
+      "summary": "老伙计，咱们一直都是一个步调，谁也不掉队👍（跟推荐买票）",
+      "attitude": "此前自述买过该公司，本次作者标注跟票",
+      "quantity": null,
+      "execution_price": null,
+      "fill_time": null,
+      "profit_loss": null,
+      "holding_verified": false,
+      "evidence_ids": [
+        "20261021-t.toc19bjz91ue-B028-0"
+      ],
+      "evidence_fingerprints": {
+        "20261021-t.toc19bjz91ue-B028-0": "6791f0cfd99ae50dfe11776c4542215867f02f61d0d51761776bf7f7bc1095de"
+      },
+      "reviewer": "codex-user-authorized-20261021",
+      "evidence_support_reviewed": true,
+      "real_trade_verified": false
+    },
+    {
+      "id": "25-SNN-20261021",
+      "member_id": "25",
+      "symbol": "SNN",
+      "action": "AUTHOR_MARKED_FOLLOW_RECOMMENDATION",
+      "annotation": "跟推荐买票",
+      "summary": "有点犹豫，不过还是想试试看。 （跟推荐买票）",
+      "attitude": "犹豫但想试，作者标注跟票",
+      "quantity": null,
+      "execution_price": null,
+      "fill_time": null,
+      "profit_loss": null,
+      "holding_verified": false,
+      "evidence_ids": [
+        "20261021-t.toc19bjz91ue-B029-0"
+      ],
+      "evidence_fingerprints": {
+        "20261021-t.toc19bjz91ue-B029-0": "c01b5fec741e1c1833487edc301f119970b55c078d605d7f232a26bc93fc5ec2"
+      },
+      "reviewer": "codex-user-authorized-20261021",
+      "evidence_support_reviewed": true,
+      "real_trade_verified": false
+    },
+    {
+      "id": "28-SNN-20261021",
+      "member_id": "28",
+      "symbol": "SNN",
+      "action": "AUTHOR_MARKED_FOLLOW_RECOMMENDATION",
+      "annotation": "跟推荐买票",
+      "summary": "我也来了 （跟推荐买票）",
+      "attitude": "简短加入，作者标注跟票",
+      "quantity": null,
+      "execution_price": null,
+      "fill_time": null,
+      "profit_loss": null,
+      "holding_verified": false,
+      "evidence_ids": [
+        "20261021-t.toc19bjz91ue-B030-0"
+      ],
+      "evidence_fingerprints": {
+        "20261021-t.toc19bjz91ue-B030-0": "8494e92856fdac184142907cdb6de39ec89d8eff971835f9cdc29c31fa73c487"
+      },
+      "reviewer": "codex-user-authorized-20261021",
+      "evidence_support_reviewed": true,
+      "real_trade_verified": false
+    },
+    {
+      "id": "27-SNN-20261021",
+      "member_id": "27",
+      "symbol": "SNN",
+      "action": "AUTHOR_MARKED_FOLLOW_RECOMMENDATION",
+      "annotation": "跟推荐买票",
+      "summary": "这一只感觉要比昨天的靠谱很多。（跟推荐买票）",
+      "attitude": "主观比较昨天标的更靠谱，作者标注跟票",
+      "quantity": null,
+      "execution_price": null,
+      "fill_time": null,
+      "profit_loss": null,
+      "holding_verified": false,
+      "evidence_ids": [
+        "20261021-t.toc19bjz91ue-B032-0"
+      ],
+      "evidence_fingerprints": {
+        "20261021-t.toc19bjz91ue-B032-0": "85a5f76638ea327d4c5626a537a4ce16bed3335950a5413adeea90795b550a19"
+      },
+      "reviewer": "codex-user-authorized-20261021",
+      "evidence_support_reviewed": true,
+      "real_trade_verified": false
+    }
+  ],
+  "observing_member": "17",
+  "BRD_member_12": "我的BRD是原文关注表述，持仓及成交未知",
+  "historical_company_claim_member_01": "之前有买过；不能据此推断仍持仓、股数或将当次关注升级为成交",
+  "real_execution_verified": false
+}

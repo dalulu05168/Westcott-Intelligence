@@ -1,0 +1,23 @@
+{
+  "id": "38",
+  "name": "Victor Bădăuță",
+  "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
+  "observed_in_submitted_story": [
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B036-0",
+      "source_date": "2026-10-19",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "我当时确实犹豫，最后也只买了一点。现在看着上涨，难免想“要是多买些就好了”，可当时怕跌的也是我。",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    }
+  ],
+  "message_count": 1,
+  "reaction_count": 0,
+  "latest_source_date": "2026-10-19",
+  "fictional_education_only": true,
+  "no_real_trading_inferred": true,
+  "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS"
+}

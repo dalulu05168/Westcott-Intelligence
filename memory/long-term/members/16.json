@@ -4,10 +4,21 @@
   "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
   "fictional_education_only": true,
   "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
-  "observed_in_submitted_story": [],
+  "observed_in_submitted_story": [
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B008-0",
+      "source_date": "2026-10-19",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "其中大约只有四分之三是股票交易的钱，剩下的不能算在里面。",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    }
+  ],
   "reaction_count": 0,
   "no_unrecorded_history": true,
-  "message_count": 0,
+  "message_count": 1,
   "no_real_trading_inferred": true,
-  "latest_source_date": null
+  "latest_source_date": "2026-10-19"
 }

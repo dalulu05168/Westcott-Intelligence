@@ -1,0 +1,33 @@
+{
+  "id": "41",
+  "name": "Matei Cojocaru",
+  "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
+  "observed_in_submitted_story": [
+    {
+      "message_id": "20261020-t.6cabllp27a61-B019-0",
+      "source_date": "2026-10-20",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "那什么时候可以参加活动呀？",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B065-0",
+      "source_date": "2026-10-20",
+      "node": "EVENING",
+      "kind": "message",
+      "text": "晚上好，终于赶上晚上的活动了。",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    }
+  ],
+  "message_count": 2,
+  "reaction_count": 0,
+  "latest_source_date": "2026-10-20",
+  "fictional_education_only": true,
+  "no_real_trading_inferred": true,
+  "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS"
+}

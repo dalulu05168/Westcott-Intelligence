@@ -59,3 +59,7 @@ description: 先生 David Miller（Ellery Westcott Head of Equity Execution）�
 ## v2.6｜课堂引用股票参与历史的限制（2026-10-20）
 
 依据 [成员股票参与与买卖记录规则](../p004-chat-suite/references/member-stock-participation-v2.6.md)，课堂可以从有证据的成员问题引出参考区间、买入成本、失效条件、分批买卖及风险，不能虚构任何成员已买、已卖或当前总仓位。旧记录只为角色剧情自述，不是券商成交凭证；真实投资结果不作承诺。先生20:00晚课与原角色分工不变。
+
+## 2026-10-21 上午正式稿记忆与整改
+
+本轮续写读取[上午具体整改与参与边界](../p004-chat-suite/references/writing-review-20261021.md)，与既有v2.6参与记录、v2.7表情、v2.8复盘共同执行。最新来源memory/sources/google-doc-20261021-native.json；SNN作者标注跟票见memory/member-stock/ledger-v1.json，未知成交信息不补造。

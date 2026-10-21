@@ -12,7 +12,9 @@
       "M002",
       "M009",
       "M011",
-      "20261016-t.gbfri5r8vs3o-B022-0"
+      "20261016-t.gbfri5r8vs3o-B022-0",
+      "20261020-t.6cabllp27a61-B005-0",
+      "20261020-t.6cabllp27a61-B067-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -24,6 +26,8 @@
     "M002",
     "M009",
     "M011",
+    "20261020-t.6cabllp27a61-B005-0",
+    "20261020-t.6cabllp27a61-B067-0",
     "20261016-t.gbfri5r8vs3o-B022-0"
   ],
   "recent_examples": [
@@ -109,6 +113,46 @@
       "date": "2026-10-12"
     },
     {
+      "id": "20261020-t.6cabllp27a61-B005-0",
+      "speaker_id": "03",
+      "gender": "男",
+      "text": "那昨天选B的也没猜中啊。市场还真不按大家希望的方向走。😂",
+      "evidence_fingerprint": "7f3655384ad75dc2d5938bb34fa387050ed7b508492ba566c03ce6fa72872100",
+      "label_fingerprint": "df24a677cfce510396a199ae6231bf05032f3bc5be711d4b1de2edd18a6694d5",
+      "source_label": "03男：",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_offset": 400,
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "date": "2026-10-20",
+      "node": "MORNING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261020-t.6cabllp27a61-B067-0",
+      "speaker_id": "03",
+      "gender": "男",
+      "text": "每天的活动时间不止会在晚间，有的时候下午也会进行。",
+      "evidence_fingerprint": "47ecf43a12ad29d85f36cc162d3198dd4fe1f3ba6cf3805ac7ab14662b0eb110",
+      "label_fingerprint": "caf0a775d553cf9df25af82203d673dfb0f10160e82e1093ed07a14fb473f49a",
+      "source_label": "03男：",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_offset": 4344,
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "date": "2026-10-20",
+      "node": "EVENING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
       "id": "20261016-t.gbfri5r8vs3o-B022-0",
       "speaker_id": "03",
       "gender": "男",
@@ -118,7 +162,7 @@
       "source_label": "03：",
       "source_tab_id": "t.gbfri5r8vs3o",
       "source_offset": 1712,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-16",
       "node": "MORNING",
       "kind": "message",
@@ -133,5 +177,5 @@
   ],
   "dynamic_records": [],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261018.json"
+  "source_snapshot": "memory/sources/google-doc-20261021.json"
 }

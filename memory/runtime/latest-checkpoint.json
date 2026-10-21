@@ -1,48 +1,26 @@
 {
   "rules_version": "2.1",
-  "story_date": "2026-10-16",
-  "story_tab_id": "t.gbfri5r8vs3o",
-  "story_phase": "EVENING_CLOSED",
-  "last_adopted_message_id": "20261016-t.gbfri5r8vs3o-B112-1",
-  "last_adopted_speaker": "news_assistant",
-  "last_adopted_excerpt": "🌙 感谢Jonathan先生今晚的精彩讲解，也感谢各位成员的积极参与！\n今晚的MACD技术分析课程已经结束，大家可以利用周末时间整理笔记，慢慢消化今天学习的内容。\n今天的社群交流到这里正式结束。\n祝各位成员周末愉快，晚安！",
-  "document_revision_id": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
-  "retrieved_at": "2026-10-18T02:17:09+00:00",
-  "source_sha256": "0df998050d2c1caad3616bfdf9519763a8ee2c8b73aea371e45098f908abedea",
+  "story_date": "2026-10-21",
+  "story_tab_id": "t.toc19bjz91ue",
+  "story_phase": "MORNING_OPEN",
+  "last_adopted_message_id": "20261021-t.toc19bjz91ue-B032-0",
+  "last_adopted_speaker": "27",
+  "last_adopted_excerpt": "这一只感觉要比昨天的靠谱很多。（跟推荐买票）",
+  "document_revision_id": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+  "retrieved_at": "2026-10-21T08:19:33.938Z",
+  "source_sha256": "5064ad9c3a07d1d1b2b20885c2e8fd13a037c970ef01dac901791cb45ac477e9",
   "counts": {
     "MORNING": {
-      "labelled_raw": 33,
+      "labelled_raw": 32,
       "unlabelled_fragments": 0,
-      "effective": 31,
-      "excluded": 2,
-      "review_required": 0
-    },
-    "AFTERNOON": {
-      "labelled_raw": 43,
-      "unlabelled_fragments": 0,
-      "effective": 41,
-      "excluded": 2,
-      "review_required": 0
-    },
-    "EVENING": {
-      "labelled_raw": 36,
-      "unlabelled_fragments": 1,
-      "effective": 35,
-      "excluded": 2,
+      "effective": 32,
+      "excluded": 0,
       "review_required": 0
     }
   },
   "quarantined_blocks": [],
-  "source_anomalies": [
-    {
-      "id": "20261016-t.gbfri5r8vs3o-B003-0",
-      "label": "11女",
-      "warnings": [
-        "EMPTY_LABEL_IDENTITY_CONFLICT_NOT_A_MESSAGE"
-      ]
-    }
-  ],
+  "source_anomalies": [],
   "freshness": "HISTORICAL_READ_REQUIRES_REFRESH_BEFORE_WRITING",
   "delivery": "NOT_VERIFIED",
-  "source_snapshot_path": "memory/sources/google-doc-20261018.json"
+  "source_snapshot_path": "memory/sources/google-doc-20261021.json"
 }

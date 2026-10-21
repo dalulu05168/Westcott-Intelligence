@@ -56,7 +56,7 @@
       "source_label": "40男：",
       "source_tab_id": "t.t7k4o87mkgzv",
       "source_offset": 3062,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-14",
       "node": "EVENING",
       "kind": "message",
@@ -76,7 +76,7 @@
       "source_label": "40男：",
       "source_tab_id": "t.gbfri5r8vs3o",
       "source_offset": 2095,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-16",
       "node": "MORNING",
       "kind": "message",
@@ -96,7 +96,7 @@
       "source_label": "40男：",
       "source_tab_id": "t.gbfri5r8vs3o",
       "source_offset": 3058,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-16",
       "node": "AFTERNOON",
       "kind": "message",
@@ -116,7 +116,7 @@
       "source_label": "40男：",
       "source_tab_id": "t.gbfri5r8vs3o",
       "source_offset": 5235,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-16",
       "node": "AFTERNOON",
       "kind": "message",
@@ -136,7 +136,7 @@
       "source_label": "40男：",
       "source_tab_id": "t.gbfri5r8vs3o",
       "source_offset": 5639,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-16",
       "node": "EVENING",
       "kind": "message",
@@ -162,7 +162,7 @@
       "evidence_support_reviewed": true,
       "real_trade_verified": false,
       "evidence_fingerprints": {
-        "20261016-t.gbfri5r8vs3o-B074-0": "c4c922731fe4716d4d267f99f6e94e37fd58bfffbae4e379baa1652e4f56b713"
+        "20261016-t.gbfri5r8vs3o-B075-0": "c4c922731fe4716d4d267f99f6e94e37fd58bfffbae4e379baa1652e4f56b713"
       },
       "original_evidence_ids": [
         "20261016-t.gbfri5r8vs3o-B074-0"
@@ -171,5 +171,5 @@
     }
   ],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261018.json"
+  "source_snapshot": "memory/sources/google-doc-20261021.json"
 }

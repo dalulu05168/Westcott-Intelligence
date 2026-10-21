@@ -12,7 +12,9 @@
       "20261015-t.huff85y7dlym-B012-0",
       "20261015-t.huff85y7dlym-B018-0",
       "20261015-t.huff85y7dlym-B021-0",
-      "20261015-t.huff85y7dlym-B080-0"
+      "20261015-t.huff85y7dlym-B080-0",
+      "20261020-t.6cabllp27a61-B048-0",
+      "20261021-t.toc19bjz91ue-B030-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -24,7 +26,9 @@
     "20261015-t.huff85y7dlym-B012-0",
     "20261015-t.huff85y7dlym-B018-0",
     "20261015-t.huff85y7dlym-B021-0",
-    "20261015-t.huff85y7dlym-B080-0"
+    "20261015-t.huff85y7dlym-B080-0",
+    "20261020-t.6cabllp27a61-B048-0",
+    "20261021-t.toc19bjz91ue-B030-0"
   ],
   "recent_examples": [
     {
@@ -37,7 +41,7 @@
       "source_label": "28男：",
       "source_tab_id": "t.huff85y7dlym",
       "source_offset": 857,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-15",
       "node": "MORNING",
       "kind": "message",
@@ -57,7 +61,7 @@
       "source_label": "28男：",
       "source_tab_id": "t.huff85y7dlym",
       "source_offset": 1239,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-15",
       "node": "MORNING",
       "kind": "message",
@@ -77,7 +81,7 @@
       "source_label": "28男：",
       "source_tab_id": "t.huff85y7dlym",
       "source_offset": 1582,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-15",
       "node": "MORNING",
       "kind": "message",
@@ -97,7 +101,7 @@
       "source_label": "28男：",
       "source_tab_id": "t.huff85y7dlym",
       "source_offset": 5706,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-15",
       "node": "EVENING",
       "kind": "message",
@@ -106,9 +110,73 @@
       "warnings": [],
       "fictional_only": true,
       "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261020-t.6cabllp27a61-B048-0",
+      "speaker_id": "28",
+      "gender": "男",
+      "text": "确实挺能折腾的。",
+      "evidence_fingerprint": "8fd28c65a57f22a41b7f73916252928f24ad3ca320b3d29b529d4788dfa8a54a",
+      "label_fingerprint": "ce302b704250eca74335fd6401af4a1e93327cf6fba9d1aa5b633cc5c4b97b39",
+      "source_label": "28男：",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_offset": 3142,
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "date": "2026-10-20",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261021-t.toc19bjz91ue-B030-0",
+      "speaker_id": "28",
+      "gender": "男",
+      "text": "我也来了 （跟推荐买票）",
+      "evidence_fingerprint": "8494e92856fdac184142907cdb6de39ec89d8eff971835f9cdc29c31fa73c487",
+      "label_fingerprint": "51067f7756983e27abc355ad1671ce7dbf69c9c047f3b851f2eca7d173815378",
+      "source_label": "28男：",
+      "source_tab_id": "t.toc19bjz91ue",
+      "source_offset": 1876,
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "date": "2026-10-21",
+      "node": "MORNING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
     }
   ],
-  "dynamic_records": [],
+  "dynamic_records": [
+    {
+      "id": "28-SNN-20261021",
+      "member_id": "28",
+      "symbol": "SNN",
+      "action": "AUTHOR_MARKED_FOLLOW_RECOMMENDATION",
+      "annotation": "跟推荐买票",
+      "summary": "我也来了 （跟推荐买票）",
+      "attitude": "简短加入，作者标注跟票",
+      "quantity": null,
+      "execution_price": null,
+      "fill_time": null,
+      "profit_loss": null,
+      "holding_verified": false,
+      "evidence_ids": [
+        "20261021-t.toc19bjz91ue-B030-0"
+      ],
+      "evidence_fingerprints": {
+        "20261021-t.toc19bjz91ue-B030-0": "8494e92856fdac184142907cdb6de39ec89d8eff971835f9cdc29c31fa73c487"
+      },
+      "reviewer": "codex-user-authorized-20261021",
+      "evidence_support_reviewed": true,
+      "real_trade_verified": false
+    }
+  ],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261018.json"
+  "source_snapshot": "memory/sources/google-doc-20261021.json"
 }

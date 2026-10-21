@@ -66,3 +66,7 @@ description: 五合一总导演，保证节点、角色、剧情连续性、采�
 ## v2.8｜总导演每日收盘检讨（2026-10-20）
 
 晚间必须参考 [每日正式剧情自检v2.8](../p004-chat-suite/references/nightly-writing-review-v2.8.md)，核对当日实际完成节点、新闻事件是否有后续、角色及课程逻辑、闭群/未闭群状态，按证据优先级整理今日失误和下一日衔接线索。外部定时复盘另行执行；此处仅定义审稿责任，不自行发送消息或修改Google Docs。
+
+## 2026-10-21 上午正式稿记忆与整改
+
+本轮续写读取[上午具体整改与参与边界](../p004-chat-suite/references/writing-review-20261021.md)，与既有v2.6参与记录、v2.7表情、v2.8复盘共同执行。最新来源memory/sources/google-doc-20261021-native.json；SNN作者标注跟票见memory/member-stock/ledger-v1.json，未知成交信息不补造。

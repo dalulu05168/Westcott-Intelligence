@@ -11,7 +11,7 @@ import tempfile
 import sys
 from editorial_runtime_v21 import ROOT, load, run, save_projection, timestamp
 
-SOURCE = 'memory/sources/google-doc-20261018.json'
+SOURCE = 'memory/sources/google-doc-20261021.json'
 
 
 def build(root):

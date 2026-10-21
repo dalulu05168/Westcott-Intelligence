@@ -18,7 +18,8 @@
       "20261015-t.huff85y7dlym-B035-0",
       "20261015-t.huff85y7dlym-B041-0",
       "20261015-t.huff85y7dlym-B093-0",
-      "20261016-t.gbfri5r8vs3o-B088-0"
+      "20261016-t.gbfri5r8vs3o-B088-0",
+      "20261021-t.toc19bjz91ue-B032-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -36,6 +37,7 @@
     "20261015-t.huff85y7dlym-B035-0",
     "20261015-t.huff85y7dlym-B041-0",
     "20261015-t.huff85y7dlym-B093-0",
+    "20261021-t.toc19bjz91ue-B032-0",
     "20261016-t.gbfri5r8vs3o-B088-0"
   ],
   "recent_examples": [
@@ -172,7 +174,7 @@
       "source_label": "27女：",
       "source_tab_id": "t.t7k4o87mkgzv",
       "source_offset": 5241,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-14",
       "node": "EVENING",
       "kind": "message",
@@ -192,7 +194,7 @@
       "source_label": "27女：",
       "source_tab_id": "t.huff85y7dlym",
       "source_offset": 2408,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-15",
       "node": "AFTERNOON",
       "kind": "message",
@@ -212,7 +214,7 @@
       "source_label": "27女：",
       "source_tab_id": "t.huff85y7dlym",
       "source_offset": 2892,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-15",
       "node": "AFTERNOON",
       "kind": "message",
@@ -232,9 +234,29 @@
       "source_label": "27女：",
       "source_tab_id": "t.huff85y7dlym",
       "source_offset": 7008,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-15",
       "node": "EVENING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261021-t.toc19bjz91ue-B032-0",
+      "speaker_id": "27",
+      "gender": "女",
+      "text": "这一只感觉要比昨天的靠谱很多。（跟推荐买票）",
+      "evidence_fingerprint": "85a5f76638ea327d4c5626a537a4ce16bed3335950a5413adeea90795b550a19",
+      "label_fingerprint": "315302a7d2deb7cf87b5a293d2fe304237763664f92e79b03eeca8a2a670379e",
+      "source_label": "27女：",
+      "source_tab_id": "t.toc19bjz91ue",
+      "source_offset": 1984,
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "date": "2026-10-21",
+      "node": "MORNING",
       "kind": "message",
       "status": "PRESENT_IN_FORMAL_DOCUMENT",
       "unlabelled_fragment": false,
@@ -252,7 +274,7 @@
       "source_label": "27女：",
       "source_tab_id": "t.gbfri5r8vs3o",
       "source_offset": 6309,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-16",
       "node": "EVENING",
       "kind": "message",
@@ -263,7 +285,31 @@
       "real_trade_not_inferred": true
     }
   ],
-  "dynamic_records": [],
+  "dynamic_records": [
+    {
+      "id": "27-SNN-20261021",
+      "member_id": "27",
+      "symbol": "SNN",
+      "action": "AUTHOR_MARKED_FOLLOW_RECOMMENDATION",
+      "annotation": "跟推荐买票",
+      "summary": "这一只感觉要比昨天的靠谱很多。（跟推荐买票）",
+      "attitude": "主观比较昨天标的更靠谱，作者标注跟票",
+      "quantity": null,
+      "execution_price": null,
+      "fill_time": null,
+      "profit_loss": null,
+      "holding_verified": false,
+      "evidence_ids": [
+        "20261021-t.toc19bjz91ue-B032-0"
+      ],
+      "evidence_fingerprints": {
+        "20261021-t.toc19bjz91ue-B032-0": "85a5f76638ea327d4c5626a537a4ce16bed3335950a5413adeea90795b550a19"
+      },
+      "reviewer": "codex-user-authorized-20261021",
+      "evidence_support_reviewed": true,
+      "real_trade_verified": false
+    }
+  ],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261018.json"
+  "source_snapshot": "memory/sources/google-doc-20261021.json"
 }

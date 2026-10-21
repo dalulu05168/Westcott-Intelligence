@@ -61,3 +61,7 @@ description: 65位身份锁定的虚构成员，按职业、经验、个性和�
 ## v2.7｜成员表情管理强制引用（2026-10-20）
 
 每次生成成员台词必须读取 [成员表情与情绪表达v2.7](../p004-chat-suite/references/member-emoji-guidelines-v2.7.md)。逐人检查已采用原话、voice.emoji_style候选状态、本次语气与当前群聊整体节奏。没有表情完全允许；🚀、😂等不可成机械模板，不以更换表情替代口吻差异，也不得增造人物持仓或过往经历。
+
+## 2026-10-21 上午正式稿记忆与整改
+
+本轮续写读取[上午具体整改与参与边界](../p004-chat-suite/references/writing-review-20261021.md)，与既有v2.6参与记录、v2.7表情、v2.8复盘共同执行。最新来源memory/sources/google-doc-20261021-native.json；SNN作者标注跟票见memory/member-stock/ledger-v1.json，未知成交信息不补造。

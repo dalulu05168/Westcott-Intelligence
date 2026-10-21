@@ -10,35 +10,52 @@
       "source_date": "2026-10-13",
       "node": "AFTERNOON",
       "kind": "message",
-      "text": "BRD 也不错。先看看收盘表现，再判断这波上涨有没有持续性。"
+      "text": "BRD 也不错。先看看收盘表现，再判断这波上涨有没有持续性。",
+      "source_tab_id": null,
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261013-M010",
       "source_date": "2026-10-13",
       "node": "AFTERNOON",
       "kind": "message",
-      "text": "对，还是看自己的业务数据更实际。"
+      "text": "对，还是看自己的业务数据更实际。",
+      "source_tab_id": null,
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261013-M023",
       "source_date": "2026-10-13",
       "node": "AFTERNOON",
       "kind": "message",
-      "text": "运气真的不错，刚好赶上欧美股市开盘前的短暂波动。他挂在 2.02 RON 的低价买单已经\n成交了一部分，剩下的数量还在订单簿里排队，继续等成交。"
+      "text": "运气真的不错，刚好赶上欧美股市开盘前的短暂波动。他挂在 2.02 RON 的低价买单已经\n成交了一部分，剩下的数量还在订单簿里排队，继续等成交。",
+      "source_tab_id": null,
+      "source_doc_revision": null,
+      "warnings": [
+        "“他挂单”指代不明"
+      ]
     },
     {
       "message_id": "20261013-M045",
       "source_date": "2026-10-13",
       "node": "EVENING",
       "kind": "message",
-      "text": "❌"
+      "text": "❌",
+      "source_tab_id": null,
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261013-M061",
       "source_date": "2026-10-13",
       "node": "EVENING",
       "kind": "message",
-      "text": "先生这句话很深奥，可以让人举一反三"
+      "text": "先生这句话很深奥，可以让人举一反三",
+      "source_tab_id": null,
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261014-DOC-006",
@@ -46,11 +63,9 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "BRD 也不错。先看看收盘表现，再判断这波上涨有没有持续性。",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 6,
-      "source_tab_id": "t.t7k4o87mkgzv"
+      "source_tab_id": "t.t7k4o87mkgzv",
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261014-DOC-010",
@@ -58,11 +73,9 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "对，还是看自己的业务数据更实际。",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 10,
-      "source_tab_id": "t.t7k4o87mkgzv"
+      "source_tab_id": "t.t7k4o87mkgzv",
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261014-DOC-023",
@@ -70,11 +83,9 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "运气真的不错，刚好赶上欧美股市开盘前的短暂波动。他挂在 2.02 RON 的低价买单已经成交了一部分，剩下的数量还在订单簿里排队，继续等成交。",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 23,
-      "source_tab_id": "t.t7k4o87mkgzv"
+      "source_tab_id": "t.t7k4o87mkgzv",
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261014-DOC-045",
@@ -82,11 +93,9 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "❌",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 45,
-      "source_tab_id": "t.t7k4o87mkgzv"
+      "source_tab_id": "t.t7k4o87mkgzv",
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261014-DOC-061",
@@ -94,11 +103,9 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "先生这句话很深奥，可以让人举一反三",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 61,
-      "source_tab_id": "t.t7k4o87mkgzv"
+      "source_tab_id": "t.t7k4o87mkgzv",
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261014-DOC-063",
@@ -106,17 +113,225 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "先生这句话很深奥，简直可以举一反三",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 63,
-      "source_tab_id": "t.t7k4o87mkgzv"
+      "source_tab_id": "t.t7k4o87mkgzv",
+      "source_doc_revision": null,
+      "warnings": []
+    },
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B010-0",
+      "source_date": "2026-10-19",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "原油降了，加油站方面从来不会在意这个的。一切照旧😂",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B014-0",
+      "source_date": "2026-10-19",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "先不研究油价了，周一早上脑子还没开机。",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B026-0",
+      "source_date": "2026-10-19",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "平时潜水的人今天全冒出来了，看来大家虽然不说话，但群里的推荐都有在默默跟紧😂",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B044-0",
+      "source_date": "2026-10-19",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "听着就头疼。还好我不用天天和这些数字打交道。😬",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B047-0",
+      "source_date": "2026-10-19",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "157,617股？😂 我还以为银行一回购，都是几百万股起步呢。",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B052-0",
+      "source_date": "2026-10-19",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "我选D！周一上班已经够难受了，晚上总得有点好消息吧。",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B064-0",
+      "source_date": "2026-10-19",
+      "node": "EVENING",
+      "kind": "message",
+      "text": "你起码还知道自己认错了。我以前看到线多的图，直接就不想看了。",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B069-0",
+      "source_date": "2026-10-19",
+      "node": "EVENING",
+      "kind": "message",
+      "text": "全是线，图形走势不是很好😁",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B083-0",
+      "source_date": "2026-10-19",
+      "node": "EVENING",
+      "kind": "message",
+      "text": "先生！我急也不是，不急也不是。你就告诉我什么时候买什么票就好了。",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B091-0",
+      "source_date": "2026-10-19",
+      "node": "EVENING",
+      "kind": "message",
+      "text": "要我说你们这样累不累，先看这里在看那里。等你准备好，买票的入口都不见了。",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B007-0",
+      "source_date": "2026-10-20",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "竞猜结束了，辩论赛紧接开始了😁",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B010-0",
+      "source_date": "2026-10-20",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "这么早就研究起来了😂 昨晚刚学完一堆线，今天又得继续画。",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B015-0",
+      "source_date": "2026-10-20",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "我记得兑换奖品不扣除积分，但是每样奖品只能兑换一次。",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B070-0",
+      "source_date": "2026-10-20",
+      "node": "EVENING",
+      "kind": "message",
+      "text": "我想选B，不过真看到价格一直涨，估计又会忍不住犹豫。如果能选择两个答案就好了😅",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B081-0",
+      "source_date": "2026-10-20",
+      "node": "EVENING",
+      "kind": "message",
+      "text": "这个我看懂了！我就是经常看着一只涨了，又想换另一只😅",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B099-0",
+      "source_date": "2026-10-20",
+      "node": "EVENING",
+      "kind": "message",
+      "text": "今晚这课真是说到我心里去了。道理我都懂了，届时就看手还听不听使唤。",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261021-t.toc19bjz91ue-B002-0",
+      "source_date": "2026-10-21",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "早啊！我又是第一名😄",
+      "source_tab_id": "t.toc19bjz91ue",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261021-t.toc19bjz91ue-B008-0",
+      "source_date": "2026-10-21",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "幸亏昨天没急着下结论，不然又得让你们拿出来笑话了😏",
+      "source_tab_id": "t.toc19bjz91ue",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261021-t.toc19bjz91ue-B011-0",
+      "source_date": "2026-10-21",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "我算是看明白了，笑到最后才是真本事！",
+      "source_tab_id": "t.toc19bjz91ue",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261021-t.toc19bjz91ue-B019-0",
+      "source_date": "2026-10-21",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "今天一开盘又是一片大好。看来想管住手还真没那么容易😅",
+      "source_tab_id": "t.toc19bjz91ue",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261021-t.toc19bjz91ue-B026-0",
+      "source_date": "2026-10-21",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "说到底还是那句话，看什么图、什么线都不重要，关键还是怎么选。（跟推荐买票）",
+      "source_tab_id": "t.toc19bjz91ue",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
     }
   ],
   "reaction_count": 0,
   "no_unrecorded_history": true,
-  "message_count": 11,
-  "latest_source_date": "2026-10-14",
+  "message_count": 32,
+  "latest_source_date": "2026-10-21",
   "no_real_trading_inferred": true,
   "review_only_2026_10_13": [
     {

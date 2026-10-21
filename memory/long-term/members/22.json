@@ -10,14 +10,20 @@
       "source_date": "2026-10-13",
       "node": "EVENING",
       "kind": "message",
-      "text": "有些公司利润看着不错，但经营现金流却不理想，这种情况应该特别留意吧？"
+      "text": "有些公司利润看着不错，但经营现金流却不理想，这种情况应该特别留意吧？",
+      "source_tab_id": null,
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261013-M070",
       "source_date": "2026-10-13",
       "node": "EVENING",
       "kind": "message",
-      "text": "先生晚安！"
+      "text": "先生晚安！",
+      "source_tab_id": null,
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261014-DOC-052",
@@ -25,11 +31,9 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "有些公司利润看着不错，但经营现金流却不理想，这种情况应该特别留意吧？",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 52,
-      "source_tab_id": "t.t7k4o87mkgzv"
+      "source_tab_id": "t.t7k4o87mkgzv",
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261014-DOC-070",
@@ -37,17 +41,25 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "先生晚安！",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 70,
-      "source_tab_id": "t.t7k4o87mkgzv"
+      "source_tab_id": "t.t7k4o87mkgzv",
+      "source_doc_revision": null,
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B024-0",
+      "source_date": "2026-10-20",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "看来先生的眼光确实很准，我到现在还记得先生周日晚上说过的话呢。",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
     }
   ],
   "reaction_count": 0,
   "no_unrecorded_history": true,
-  "message_count": 4,
-  "latest_source_date": "2026-10-14",
+  "message_count": 5,
+  "latest_source_date": "2026-10-20",
   "no_real_trading_inferred": true,
   "review_only_2026_10_13": []
 }

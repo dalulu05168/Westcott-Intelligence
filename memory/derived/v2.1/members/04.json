@@ -13,7 +13,9 @@
       "20261013-M022",
       "20261014-t.t7k4o87mkgzv-B012-0",
       "20261014-t.t7k4o87mkgzv-B022-0",
-      "20261015-t.huff85y7dlym-B029-0"
+      "20261015-t.huff85y7dlym-B029-0",
+      "20261019-t.2dp2catgrjty-B042-0",
+      "20261020-t.6cabllp27a61-B037-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -26,7 +28,9 @@
     "20261013-M022",
     "20261014-t.t7k4o87mkgzv-B012-0",
     "20261014-t.t7k4o87mkgzv-B022-0",
-    "20261015-t.huff85y7dlym-B029-0"
+    "20261015-t.huff85y7dlym-B029-0",
+    "20261019-t.2dp2catgrjty-B042-0",
+    "20261020-t.6cabllp27a61-B037-0"
   ],
   "recent_examples": [
     {
@@ -72,7 +76,7 @@
       "source_label": "04男：",
       "source_tab_id": "t.t7k4o87mkgzv",
       "source_offset": 836,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-14",
       "node": "AFTERNOON",
       "kind": "message",
@@ -92,7 +96,7 @@
       "source_label": "04男：",
       "source_tab_id": "t.t7k4o87mkgzv",
       "source_offset": 1776,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-14",
       "node": "AFTERNOON",
       "kind": "message",
@@ -112,9 +116,49 @@
       "source_label": "04男：",
       "source_tab_id": "t.huff85y7dlym",
       "source_offset": 2124,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-15",
       "node": "MORNING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261019-t.2dp2catgrjty-B042-0",
+      "speaker_id": "04",
+      "gender": "男",
+      "text": "Rodica说得对。有时候汇率只变一点，报过价的订单就得重新核对。",
+      "evidence_fingerprint": "9b62ab4cf2e82963e961d78aa5e4782d91415a52196ae6727553544e45c5fb7a",
+      "label_fingerprint": "2e1349c3b5a534a873a188c72fe5c8986c6a28be76645124c7efc572a18c3d11",
+      "source_label": "04男：",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_offset": 3183,
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "date": "2026-10-19",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261020-t.6cabllp27a61-B037-0",
+      "speaker_id": "04",
+      "gender": "男",
+      "text": "这两天光是汇率消息就够我们做外贸的留意了。",
+      "evidence_fingerprint": "85073517d60d98f2c554764dd17b29e3a2529e0ec9f58e2fd72aba8d07318e96",
+      "label_fingerprint": "d387f1be430a8b1eef1b87b0813f64070afd60d3808a491f6b3235d265010570",
+      "source_label": "04男：",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_offset": 2513,
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "date": "2026-10-20",
+      "node": "AFTERNOON",
       "kind": "message",
       "status": "PRESENT_IN_FORMAL_DOCUMENT",
       "unlabelled_fragment": false,
@@ -125,5 +169,5 @@
   ],
   "dynamic_records": [],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261018.json"
+  "source_snapshot": "memory/sources/google-doc-20261021.json"
 }

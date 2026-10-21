@@ -11,7 +11,8 @@
     "evidence_ids": [
       "M061",
       "M069",
-      "20261015-t.huff85y7dlym-B016-0"
+      "20261015-t.huff85y7dlym-B016-0",
+      "20261019-t.2dp2catgrjty-B025-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -22,7 +23,8 @@
   "evidence_ids": [
     "M061",
     "M069",
-    "20261015-t.huff85y7dlym-B016-0"
+    "20261015-t.huff85y7dlym-B016-0",
+    "20261019-t.2dp2catgrjty-B025-0"
   ],
   "recent_examples": [
     {
@@ -89,8 +91,28 @@
       "source_label": "26女：",
       "source_tab_id": "t.huff85y7dlym",
       "source_offset": 1188,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-15",
+      "node": "MORNING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261019-t.2dp2catgrjty-B025-0",
+      "speaker_id": "26",
+      "gender": "女",
+      "text": "这段时间社群推荐的方向，感觉跟我自己之前的判断还挺一致的。",
+      "evidence_fingerprint": "e36ec2ab4e0f5bed9aea82b13e02edfa62f84ba8b97b4884b20bde46948d7472",
+      "label_fingerprint": "a21855e549dca6c927011f2f6adf0d9903b8b0f428226bbf99dc714c285a4000",
+      "source_label": "26女：",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_offset": 1929,
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "date": "2026-10-19",
       "node": "MORNING",
       "kind": "message",
       "status": "PRESENT_IN_FORMAL_DOCUMENT",
@@ -102,5 +124,5 @@
   ],
   "dynamic_records": [],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261018.json"
+  "source_snapshot": "memory/sources/google-doc-20261021.json"
 }

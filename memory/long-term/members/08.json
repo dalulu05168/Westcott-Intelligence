@@ -5,7 +5,7 @@
   "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
   "fictional_education_only": true,
   "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
-  "message_count": 7,
+  "message_count": 10,
   "reaction_count": 0,
   "observed_in_submitted_story": [
     {
@@ -13,21 +13,30 @@
       "source_date": "2026-10-12",
       "node": "AFTERNOON",
       "kind": "message",
-      "text": "社群好像加入新的小伙伴了呀，欢迎~👏"
+      "text": "社群好像加入新的小伙伴了呀，欢迎~👏",
+      "source_tab_id": null,
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261013-M008",
       "source_date": "2026-10-13",
       "node": "AFTERNOON",
       "kind": "message",
-      "text": "股票交易收入增长 49%，这个数字确实挺惊人。不过，其他业务没有一起增长吗？ 😮"
+      "text": "股票交易收入增长 49%，这个数字确实挺惊人。不过，其他业务没有一起增长吗？ 😮",
+      "source_tab_id": null,
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261013-M017",
       "source_date": "2026-10-13",
       "node": "AFTERNOON",
       "kind": "message",
-      "text": "对，还得看公司本身经营得怎么样，以及现在的股价是不是已经太高了。"
+      "text": "对，还得看公司本身经营得怎么样，以及现在的股价是不是已经太高了。",
+      "source_tab_id": null,
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261014-DOC-008",
@@ -35,11 +44,9 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "股票交易收入增长 49%，这个数字确实挺惊人。不过，其他业务没有一起增长吗？😮",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 8,
-      "source_tab_id": "t.t7k4o87mkgzv"
+      "source_tab_id": "t.t7k4o87mkgzv",
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261014-DOC-017",
@@ -47,11 +54,9 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "对，还得看公司本身经营得怎么样，以及现在的股价是不是已经太高了。",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 17,
-      "source_tab_id": "t.t7k4o87mkgzv"
+      "source_tab_id": "t.t7k4o87mkgzv",
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261015-DOC-009",
@@ -59,11 +64,9 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "昨天能源股表现还不错，就看今天能不能继续了。别又是开盘挺热闹，下午没动静了。😂",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 9,
-      "source_tab_id": "t.huff85y7dlym"
+      "source_tab_id": "t.huff85y7dlym",
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261015-DOC-040",
@@ -71,15 +74,43 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "确实。我刚翻了一下昨天咨询顾问Ana播报的数据，四项中只有一项下跌的。",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 40,
-      "source_tab_id": "t.huff85y7dlym"
+      "source_tab_id": "t.huff85y7dlym",
+      "source_doc_revision": null,
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B031-0",
+      "source_date": "2026-10-20",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "我刚看了下新闻，怎么都在说新政府？上午不是说两点才投票吗？",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B036-0",
+      "source_date": "2026-10-20",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "我还以为新政府已经定下来了。原来还有最后一道程序😂",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B100-0",
+      "source_date": "2026-10-20",
+      "node": "EVENING",
+      "kind": "message",
+      "text": "你要控制你自己😂",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
     }
   ],
   "no_unrecorded_history": true,
   "no_real_trading_inferred": true,
-  "latest_source_date": "2026-10-15",
+  "latest_source_date": "2026-10-20",
   "review_only_2026_10_13": []
 }

@@ -72,3 +72,7 @@ description: 五合一编剧，编排自然有记忆的虚构财经教育群聊�
 ## v2.8｜编剧每晚自我检讨（2026-10-20）
 
 晚课/闭群后必须按 [每日晚间复盘v2.8](../p004-chat-suite/references/nightly-writing-review-v2.8.md) 审查当天真实正式稿：人物历史、谁对谁说、是否雷同/机械表情、股票观察与实际参与状态、是否隔段跟进新闻、课程及活动是否自然承接。写出最具体的不足及证据和次日可执行注意事项；不能把未被用户采用的候选台词作为历史。
+
+## 2026-10-21 上午正式稿记忆与整改
+
+本轮续写读取[上午具体整改与参与边界](../p004-chat-suite/references/writing-review-20261021.md)，与既有v2.6参与记录、v2.7表情、v2.8复盘共同执行。最新来源memory/sources/google-doc-20261021-native.json；SNN作者标注跟票见memory/member-stock/ledger-v1.json，未知成交信息不补造。

@@ -4,10 +4,31 @@
   "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
   "fictional_education_only": true,
   "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS",
-  "observed_in_submitted_story": [],
+  "observed_in_submitted_story": [
+    {
+      "message_id": "20261020-t.6cabllp27a61-B002-0",
+      "source_date": "2026-10-20",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "早上好。昨晚纳指涨得还不错啊，我还以为三大指数会一起涨呢。",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261021-t.toc19bjz91ue-B010-0",
+      "source_date": "2026-10-21",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "美股真是个善变的家伙，折腾死我了😮‍💨",
+      "source_tab_id": "t.toc19bjz91ue",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    }
+  ],
   "reaction_count": 0,
   "no_unrecorded_history": true,
-  "message_count": 0,
+  "message_count": 2,
   "no_real_trading_inferred": true,
-  "latest_source_date": null
+  "latest_source_date": "2026-10-21"
 }

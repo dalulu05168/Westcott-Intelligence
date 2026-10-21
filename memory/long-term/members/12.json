@@ -10,7 +10,10 @@
       "source_date": "2026-10-13",
       "node": "EVENING",
       "kind": "message",
-      "text": "我选正确，利润毕竟增长了 10%。   🤔"
+      "text": "我选正确，利润毕竟增长了 10%。   🤔",
+      "source_tab_id": null,
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261014-DOC-042",
@@ -18,11 +21,9 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "我选正确，利润毕竟增长了10%。🤔",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 42,
-      "source_tab_id": "t.t7k4o87mkgzv"
+      "source_tab_id": "t.t7k4o87mkgzv",
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261015-DOC-072",
@@ -30,17 +31,155 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "我记得自己上次选的是A。现在想想，我当时只注意利润增长了10%，完全忽略了预期是15%。😅",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 72,
-      "source_tab_id": "t.huff85y7dlym"
+      "source_tab_id": "t.huff85y7dlym",
+      "source_doc_revision": null,
+      "warnings": []
+    },
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B002-0",
+      "source_date": "2026-10-19",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "早！怀念周末。怎么过的这么快😢",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B021-0",
+      "source_date": "2026-10-19",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "太及时了，可以结合开盘数据一起看看。",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B023-0",
+      "source_date": "2026-10-19",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "BRD回到31.45了，在刚才给的参考区间里。给我一种稳稳的感觉。",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B031-0",
+      "source_date": "2026-10-19",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "午好！简单打个卡就要去忙了。唉，真讨厌星期一！",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B022-0",
+      "source_date": "2026-10-20",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "BRD都涨到33.10了？昨天31点多的时候我还盯着看呢。今天这走势真有点让人心动。😂",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B039-0",
+      "source_date": "2026-10-20",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "我现在非常担心BRD，任何事不能影响它的攀升😄",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B050-0",
+      "source_date": "2026-10-20",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "我就是想看看BRD后面怎么走，又没说现在一定要买。",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B053-0",
+      "source_date": "2026-10-20",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "33.45了？😳",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B060-0",
+      "source_date": "2026-10-20",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "你们那边刚开始，我这边BRD都热闹一天了。",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B068-0",
+      "source_date": "2026-10-20",
+      "node": "EVENING",
+      "kind": "message",
+      "text": "我选A吧。毕竟股票涨起来了，谁也不想错过。",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B072-0",
+      "source_date": "2026-10-20",
+      "node": "EVENING",
+      "kind": "message",
+      "text": "Henry先生晚上好！今天BRD的行情真让我有点坐不住了。",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B076-0",
+      "source_date": "2026-10-20",
+      "node": "EVENING",
+      "kind": "message",
+      "text": "先生，我今天看BRD的时候，就有这种感觉。上午看着它涨，越看越想参与。😅",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261021-t.toc19bjz91ue-B004-0",
+      "source_date": "2026-10-21",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "我应该早早的来，看看我的BRD怎么样了",
+      "source_tab_id": "t.toc19bjz91ue",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261021-t.toc19bjz91ue-B014-0",
+      "source_date": "2026-10-21",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "我当时选了A，今天再想想，好像是有点冲动了😅",
+      "source_tab_id": "t.toc19bjz91ue",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
     }
   ],
   "reaction_count": 0,
   "no_unrecorded_history": true,
-  "message_count": 3,
-  "latest_source_date": "2026-10-15",
+  "message_count": 17,
+  "latest_source_date": "2026-10-21",
   "no_real_trading_inferred": true,
   "review_only_2026_10_13": []
 }

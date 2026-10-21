@@ -10,7 +10,9 @@
     "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
     "evidence_ids": [
       "20261013-M039",
-      "20261014-t.t7k4o87mkgzv-B039-0"
+      "20261014-t.t7k4o87mkgzv-B039-0",
+      "20261020-t.6cabllp27a61-B003-0",
+      "20261020-t.6cabllp27a61-B080-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -20,7 +22,9 @@
   "evidence_store": "memory/derived/v2.1/effective-history.json",
   "evidence_ids": [
     "20261013-M039",
-    "20261014-t.t7k4o87mkgzv-B039-0"
+    "20261014-t.t7k4o87mkgzv-B039-0",
+    "20261020-t.6cabllp27a61-B003-0",
+    "20261020-t.6cabllp27a61-B080-0"
   ],
   "recent_examples": [
     {
@@ -48,8 +52,48 @@
       "source_label": "32男：",
       "source_tab_id": "t.t7k4o87mkgzv",
       "source_offset": 3028,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-14",
+      "node": "EVENING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261020-t.6cabllp27a61-B003-0",
+      "speaker_id": "32",
+      "gender": "男",
+      "text": "偏偏道指没跟上。昨天选D的那几位，今天估计要失望了。😂",
+      "evidence_fingerprint": "c81b136759026318864ea26214e03e1bf297088e1bde3928db95df4f188fe752",
+      "label_fingerprint": "7c80b037a09eb64b0c9df60c252c5a57293431efe4eace701ad6d1b8ad197517",
+      "source_label": "32男：",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_offset": 118,
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "date": "2026-10-20",
+      "node": "MORNING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261020-t.6cabllp27a61-B080-0",
+      "speaker_id": "32",
+      "gender": "男",
+      "text": "刚才还觉得一次300 RON不算多，没想到几次下来就有1,200了。",
+      "evidence_fingerprint": "9cc558320160fb4ad35895d094e04cf609ee1d7a4fd7e5bfa1179a5892f12d79",
+      "label_fingerprint": "3bb8eed8dd6098ed778c93a7c17a62cbe454360344ad6f18e200d98f3ca044d0",
+      "source_label": "32男：",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_offset": 5447,
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "date": "2026-10-20",
       "node": "EVENING",
       "kind": "message",
       "status": "PRESENT_IN_FORMAL_DOCUMENT",
@@ -61,5 +105,5 @@
   ],
   "dynamic_records": [],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261018.json"
+  "source_snapshot": "memory/sources/google-doc-20261021.json"
 }

@@ -66,9 +66,11 @@ class Runtime21Test(unittest.TestCase):
         result = self.execute(('25','38'))
         for pid in ('25','38'):
             self.assertTrue(any('FOJE' in r['text'] for r in result['context']['members'][pid]['history']))
-            self.assertEqual(result['context']['members'][pid]['memory_access'], 'NO_SEPARATE_FILE')
+            expected_access = ('READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW'
+                               if (ROOT/f'memory/long-term/members/{pid}.json').exists() else 'NO_SEPARATE_FILE')
+            self.assertEqual(result['context']['members'][pid]['memory_access'], expected_access)
         self.assertEqual(len(result['member_index']), 65)
-        self.assertEqual(result['member_index']['06']['history_status'], 'NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES')
+        self.assertEqual(result['member_index']['65']['history_status'], 'NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES')
 
     def test_quantity_cannot_be_invented(self):
         state = next(s for s in self.states if s.get('member_id')=='25')
@@ -228,7 +230,8 @@ class Runtime21Test(unittest.TestCase):
         check={'documentId':snapshot['documentId'],'revisionId':snapshot['revisionId'],'retrieved_at':self.now.isoformat()}
         result=self.execute(('11',),snapshot=snapshot,revision_check=check,decisions=None)
         self.assertTrue(result['context']['checkpoint']['source_anomalies'])
-        self.assertFalse(result['context']['members']['11']['history'])
+        self.assertFalse([r for r in result['context']['members']['11']['history']
+                          if r['date'] == '2026-10-16'])
 
     def test_same_number_and_member_with_changed_text_cannot_reuse_state(self):
         snapshot=copy.deepcopy(self.snapshot);snapshot['revisionId']='CHANGED_TEXT_REGRESSION_FIXTURE'

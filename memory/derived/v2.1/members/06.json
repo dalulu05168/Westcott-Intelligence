@@ -4,20 +4,45 @@
     "name": "Andrei Iulian Popescu",
     "active": true,
     "profile_path": "skills/p004-chat-suite/characters/profiles/06.json",
-    "legacy_memory_path": null,
+    "legacy_memory_path": "memory/long-term/members/06.json",
     "derived_memory_path": "memory/derived/v2.1/members/06.json",
-    "history_status": "NO_CONFIRMED_HISTORY_IN_LOADED_SOURCES",
-    "memory_access": "NO_SEPARATE_FILE",
-    "evidence_ids": [],
+    "history_status": "LOADED_ADOPTED_EVIDENCE",
+    "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
+    "evidence_ids": [
+      "20261019-t.2dp2catgrjty-B087-0"
+    ],
     "state": {
       "knowledge": "NOT_INFERRED",
       "homework": "NOT_INFERRED"
     }
   },
   "evidence_store": "memory/derived/v2.1/effective-history.json",
-  "evidence_ids": [],
-  "recent_examples": [],
+  "evidence_ids": [
+    "20261019-t.2dp2catgrjty-B087-0"
+  ],
+  "recent_examples": [
+    {
+      "id": "20261019-t.2dp2catgrjty-B087-0",
+      "speaker_id": "06",
+      "gender": "男",
+      "text": "如果实际成交价格不同，最后算出来的结果也会变。",
+      "evidence_fingerprint": "6617527683974ea5208f44648a853462291418d85cbe3928c0210a83ae7c3d85",
+      "label_fingerprint": "e3859d2b2803611129e4ab8709c40c77329e8374a1587a6012d3b37eb3cd0906",
+      "source_label": "06男：",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_offset": 7171,
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "date": "2026-10-19",
+      "node": "EVENING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    }
+  ],
   "dynamic_records": [],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261018.json"
+  "source_snapshot": "memory/sources/google-doc-20261021.json"
 }

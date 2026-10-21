@@ -88,3 +88,7 @@ description: ELLERY WESTCOTT 虚构财经教学会话五合一入口，统一调
 ## v2.8｜每晚正式剧情自检与次日注意事项（2026-10-20）
 
 每天晚课/闭群之后须执行 [每晚写作自我检讨v2.8](references/nightly-writing-review-v2.8.md)：重新读取当天最新正式Google Doc与前日必要历史，核实剧情末尾、人物发言轮次、行情/新闻闭环、推荐跟踪、人物语气及表情、活动/授课/作业顺序，按严重程度报告真实写作不足并列出明日注意事项。晚间任务另由ChatGPT独立调度（Europe/Bucharest晚间约22:00，弹性），本仓库引用不等于任务已送达；不得私改Doc或自动群发。
+
+## 2026-10-21 上午正式稿记忆与整改
+
+本轮续写读取[上午具体整改与参与边界](references/writing-review-20261021.md)，与既有v2.6参与记录、v2.7表情、v2.8复盘共同执行。最新来源memory/sources/google-doc-20261021-native.json；SNN作者标注跟票见memory/member-stock/ledger-v1.json，未知成交信息不补造。

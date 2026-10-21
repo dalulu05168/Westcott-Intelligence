@@ -10,7 +10,10 @@
       "source_date": "2026-10-13",
       "node": "EVENING",
       "kind": "message",
-      "text": "先生晚上好！我有个疑问，公司经营得不错，为什么有时候股价还是会下跌呢？    🤔"
+      "text": "先生晚上好！我有个疑问，公司经营得不错，为什么有时候股价还是会下跌呢？    🤔",
+      "source_tab_id": null,
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261014-DOC-048",
@@ -18,11 +21,9 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "先生晚上好！我有个疑问，公司经营得不错，为什么有时候股价还是会下跌呢？🤔",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 48,
-      "source_tab_id": "t.t7k4o87mkgzv"
+      "source_tab_id": "t.t7k4o87mkgzv",
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261015-DOC-005",
@@ -30,17 +31,85 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "纳斯达克跌得比道琼斯多这么多，看来昨晚压力主要还是集中在科技股那边。",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 5,
-      "source_tab_id": "t.huff85y7dlym"
+      "source_tab_id": "t.huff85y7dlym",
+      "source_doc_revision": null,
+      "warnings": []
+    },
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B050-0",
+      "source_date": "2026-10-19",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "😂 我选B，上周科技股的表现让我有点没底。",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B056-0",
+      "source_date": "2026-10-19",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "纳指开盘就涨起来了？昨晚先生还特意说，这周要重点盯着科技股能不能止跌。我刚才可是选了B啊😂",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B006-0",
+      "source_date": "2026-10-20",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "收盘也没给我翻身的机会。昨天还觉得自己选得挺有根据。",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B017-0",
+      "source_date": "2026-10-20",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "昨天那道题猜错了，看来巴菲特也有失手之时啊😅",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B057-0",
+      "source_date": "2026-10-20",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "昨天纳指还涨得挺漂亮，今天开盘又变脸了。",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261021-t.toc19bjz91ue-B007-0",
+      "source_date": "2026-10-21",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "昨天开盘那会儿我还想着纳指能不能涨回来。结果道指反倒表现最好。",
+      "source_tab_id": "t.toc19bjz91ue",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261021-t.toc19bjz91ue-B012-0",
+      "source_date": "2026-10-21",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "昨天美股开盘三只都跌，最后却是两涨一跌。光看开头，确实容易判断错。",
+      "source_tab_id": "t.toc19bjz91ue",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
     }
   ],
   "reaction_count": 0,
   "no_unrecorded_history": true,
-  "message_count": 3,
-  "latest_source_date": "2026-10-15",
+  "message_count": 10,
+  "latest_source_date": "2026-10-21",
   "no_real_trading_inferred": true,
   "review_only_2026_10_13": []
 }

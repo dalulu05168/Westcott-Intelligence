@@ -1,0 +1,53 @@
+{
+  "id": "25",
+  "name": "Cristian Dragoș Necula",
+  "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
+  "observed_in_submitted_story": [
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B035-0",
+      "source_date": "2026-10-19",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "FOJE这价格，又让我想起33附近卖掉的那部分了。😂 后续加仓的勇气还是社群的推荐。",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B089-0",
+      "source_date": "2026-10-19",
+      "node": "EVENING",
+      "kind": "message",
+      "text": "只能自己劝自己了😮‍💨",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B094-0",
+      "source_date": "2026-10-20",
+      "node": "EVENING",
+      "kind": "message",
+      "text": "我以前就这样。当时群里还没发卖出通知呢，我自己就先卖了。后来看着它一直涨😡",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261021-t.toc19bjz91ue-B029-0",
+      "source_date": "2026-10-21",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "有点犹豫，不过还是想试试看。 （跟推荐买票）",
+      "source_tab_id": "t.toc19bjz91ue",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    }
+  ],
+  "message_count": 4,
+  "reaction_count": 0,
+  "latest_source_date": "2026-10-21",
+  "fictional_education_only": true,
+  "no_real_trading_inferred": true,
+  "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS"
+}

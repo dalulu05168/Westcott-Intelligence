@@ -14,7 +14,8 @@
       "20261013-M003",
       "20261013-M016",
       "20261014-t.t7k4o87mkgzv-B003-0",
-      "20261014-t.t7k4o87mkgzv-B016-0"
+      "20261014-t.t7k4o87mkgzv-B016-0",
+      "20261019-t.2dp2catgrjty-B051-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -28,7 +29,8 @@
     "20261013-M003",
     "20261013-M016",
     "20261014-t.t7k4o87mkgzv-B003-0",
-    "20261014-t.t7k4o87mkgzv-B016-0"
+    "20261014-t.t7k4o87mkgzv-B016-0",
+    "20261019-t.2dp2catgrjty-B051-0"
   ],
   "recent_examples": [
     {
@@ -125,7 +127,7 @@
       "source_label": "20男：",
       "source_tab_id": "t.t7k4o87mkgzv",
       "source_offset": 129,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-14",
       "node": "AFTERNOON",
       "kind": "message",
@@ -145,8 +147,28 @@
       "source_label": "20男：",
       "source_tab_id": "t.t7k4o87mkgzv",
       "source_offset": 1132,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-14",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261019-t.2dp2catgrjty-B051-0",
+      "speaker_id": "20",
+      "gender": "男",
+      "text": "正好一人选一个😄",
+      "evidence_fingerprint": "7c342fa9e773e8267fd609507d27044b784bc75c469d3ce13c16dee7ce0283f7",
+      "label_fingerprint": "753c466a3a77c842d1d648cf08e2ec2574e58d602bdbc327515be12612479d3d",
+      "source_label": "20男：",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_offset": 3768,
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "date": "2026-10-19",
       "node": "AFTERNOON",
       "kind": "message",
       "status": "PRESENT_IN_FORMAL_DOCUMENT",
@@ -158,5 +180,5 @@
   ],
   "dynamic_records": [],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261018.json"
+  "source_snapshot": "memory/sources/google-doc-20261021.json"
 }

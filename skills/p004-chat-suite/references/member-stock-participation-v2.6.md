@@ -24,3 +24,7 @@
 
 ## 使用与验收
 `python scripts/member_stock_ledger.py --check`静态核对索引、成员、原有人工审阅状态和消息证据链接；`--member 25`查成员，`--symbol FOJE`按股票查，命令均只读。没有审核过的来源记录不能自动生成正式交易。现有DRY_RUN、消息推送、01—42出场、09:00—12:00及Europe/Bucharest夏冬令时规则全部保留。
+
+## 2026-10-21当次复盘
+
+具体原句与整改见[上午复盘](writing-review-20261021.md)。作者标注“跟推荐买票”单独记AUTHOR_MARKED_FOLLOW_RECOMMENDATION；不是券商成交。表情适度结合罗马尼亚聊天语境，通用emoji不能冒称当地频率排名。

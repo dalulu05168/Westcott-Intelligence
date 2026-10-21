@@ -4,13 +4,15 @@
     "name": "Victor Bădăuță",
     "active": true,
     "profile_path": "skills/p004-chat-suite/characters/profiles/38.json",
-    "legacy_memory_path": null,
+    "legacy_memory_path": "memory/long-term/members/38.json",
     "derived_memory_path": "memory/derived/v2.1/members/38.json",
     "history_status": "LOADED_ADOPTED_EVIDENCE",
-    "memory_access": "NO_SEPARATE_FILE",
+    "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
     "evidence_ids": [
       "20261016-t.gbfri5r8vs3o-B026-0",
-      "20261016-t.gbfri5r8vs3o-B047-0"
+      "20261016-t.gbfri5r8vs3o-B047-0",
+      "20261018-t.ep3ybjh47ci6-B007-0",
+      "20261019-t.2dp2catgrjty-B036-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -19,10 +21,32 @@
   },
   "evidence_store": "memory/derived/v2.1/effective-history.json",
   "evidence_ids": [
+    "20261019-t.2dp2catgrjty-B036-0",
     "20261016-t.gbfri5r8vs3o-B026-0",
-    "20261016-t.gbfri5r8vs3o-B047-0"
+    "20261016-t.gbfri5r8vs3o-B047-0",
+    "20261018-t.ep3ybjh47ci6-B007-0"
   ],
   "recent_examples": [
+    {
+      "id": "20261019-t.2dp2catgrjty-B036-0",
+      "speaker_id": "38",
+      "gender": "男",
+      "text": "我当时确实犹豫，最后也只买了一点。现在看着上涨，难免想“要是多买些就好了”，可当时怕跌的也是我。",
+      "evidence_fingerprint": "38424583c391980688d3e571968c27fb0fec6a83ca0c5cbfe5c8d6acb64bb650",
+      "label_fingerprint": "91968a7176da6f8e998ddfe07397e6be24827070bf497afe5fe1491e2fd0b8ac",
+      "source_label": "38男：",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_offset": 2804,
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "date": "2026-10-19",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
     {
       "id": "20261016-t.gbfri5r8vs3o-B026-0",
       "speaker_id": "38",
@@ -33,7 +57,7 @@
       "source_label": "38男：",
       "source_tab_id": "t.gbfri5r8vs3o",
       "source_offset": 1906,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-16",
       "node": "MORNING",
       "kind": "message",
@@ -53,9 +77,29 @@
       "source_label": "38男：",
       "source_tab_id": "t.gbfri5r8vs3o",
       "source_offset": 3330,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-16",
       "node": "AFTERNOON",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261018-t.ep3ybjh47ci6-B007-0",
+      "speaker_id": "38",
+      "gender": "男",
+      "text": "Cristian，我倒庆幸周五还是参与了一点。不过看到收盘，又觉得自己怎么只买了这么一点。",
+      "evidence_fingerprint": "45000fd588f0240c71e398088848e935e853a647c5cfd26431bf18e815e696f4",
+      "label_fingerprint": "2fced7492f8094c6b13ffff0542cfec58d0128a01bdd761b647636cd45d26de9",
+      "source_label": "38男：",
+      "source_tab_id": "t.ep3ybjh47ci6",
+      "source_offset": 672,
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "date": "2026-10-18",
+      "node": "EVENING",
       "kind": "message",
       "status": "PRESENT_IN_FORMAL_DOCUMENT",
       "unlabelled_fragment": false,
@@ -80,8 +124,8 @@
       "evidence_support_reviewed": true,
       "real_trade_verified": false,
       "evidence_fingerprints": {
-        "20261016-t.gbfri5r8vs3o-B025-0": "998eee645832e18b91bc8c162175bbb7f07ae93850082b2dd3f487413dfabb82",
-        "20261016-t.gbfri5r8vs3o-B046-0": "c0b770ff26ef3504c6f4f5da2466677b3ff1b7a490612a14db2d0f941478ed33"
+        "20261016-t.gbfri5r8vs3o-B026-0": "998eee645832e18b91bc8c162175bbb7f07ae93850082b2dd3f487413dfabb82",
+        "20261016-t.gbfri5r8vs3o-B047-0": "c0b770ff26ef3504c6f4f5da2466677b3ff1b7a490612a14db2d0f941478ed33"
       },
       "original_evidence_ids": [
         "20261016-t.gbfri5r8vs3o-B025-0",
@@ -91,5 +135,5 @@
     }
   ],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261018.json"
+  "source_snapshot": "memory/sources/google-doc-20261021.json"
 }

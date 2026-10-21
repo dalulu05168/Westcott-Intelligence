@@ -10,7 +10,11 @@
     "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
     "evidence_ids": [
       "20261013-M024",
-      "20261014-t.t7k4o87mkgzv-B024-0"
+      "20261014-t.t7k4o87mkgzv-B024-0",
+      "20261019-t.2dp2catgrjty-B049-0",
+      "20261019-t.2dp2catgrjty-B057-0",
+      "20261019-t.2dp2catgrjty-B090-0",
+      "20261020-t.6cabllp27a61-B059-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -20,7 +24,11 @@
   "evidence_store": "memory/derived/v2.1/effective-history.json",
   "evidence_ids": [
     "20261013-M024",
-    "20261014-t.t7k4o87mkgzv-B024-0"
+    "20261014-t.t7k4o87mkgzv-B024-0",
+    "20261019-t.2dp2catgrjty-B049-0",
+    "20261019-t.2dp2catgrjty-B057-0",
+    "20261019-t.2dp2catgrjty-B090-0",
+    "20261020-t.6cabllp27a61-B059-0"
   ],
   "recent_examples": [
     {
@@ -50,8 +58,88 @@
       "source_label": "39女",
       "source_tab_id": "t.t7k4o87mkgzv",
       "source_offset": 1874,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-14",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261019-t.2dp2catgrjty-B049-0",
+      "speaker_id": "39",
+      "gender": "女",
+      "text": "我选D！反正是竞猜，又不是真下单，胆子大一点有什么关系？😂",
+      "evidence_fingerprint": "7df1035fbf670304bba9f74df38a13cd92226d6fc0963e689421bf6588b15e42",
+      "label_fingerprint": "d4edb584479f76f7512fb00db657558e84f91b8a4455683f2257691e49912b53",
+      "source_label": "39女：",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_offset": 3706,
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "date": "2026-10-19",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261019-t.2dp2catgrjty-B057-0",
+      "speaker_id": "39",
+      "gender": "女",
+      "text": "道指现在还没跟上呢。今晚才刚开始，等收盘再说吧。\n📊 精选股票｜NEM\n发布日期： 2026 年 10 月 19 日\n股票名称（代码）： Newmont Corporation（NEM）\n所属市场： 纽约证券交易所（NYSE）\n参考买入区间：116.00–120.00 USD\n目标价位： 130.00–135.00 USD\n止损区间： 110.00–113.00 USD\n投资理由\n纽蒙特是全球黄金矿业龙头，金价上行带动企业盈利弹性充足，具备良好的抗通胀避险属性。股价前期大幅反弹后高位回落，回踩布林中轨获得支撑，MACD 空头动能逐步收敛，量能企稳。在地缘冲突、美元波动背景下，黄金资产的避险需求提供支撑，后续估值修复行情可期。",
+      "evidence_fingerprint": "5ba544e31ee193504ada69c8f692d4277c9f9007af2a0b8265486216968d457a",
+      "label_fingerprint": "bfc4867680956d55014104940e2aebcec3a9fb4928020ea742892d0881526256",
+      "source_label": "39女：",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_offset": 4155,
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "date": "2026-10-19",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261019-t.2dp2catgrjty-B090-0",
+      "speaker_id": "39",
+      "gender": "女",
+      "text": "先看价格在哪个范围运行，什么变化说明突破可能成立，又有什么变化说明原来的判断需要改。",
+      "evidence_fingerprint": "a5ec7a347af5399f23ec8d56c765b0a9bde3df3859248ae676a70c3bee3b0787",
+      "label_fingerprint": "838391f514a006e0306fbe2b70726f2dff9adef42dcde9a08e5968fdf3298c24",
+      "source_label": "39女：",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_offset": 7401,
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "date": "2026-10-19",
+      "node": "EVENING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261020-t.6cabllp27a61-B059-0",
+      "speaker_id": "39",
+      "gender": "女",
+      "text": "昨晚先生说的那些还真能用上。先看价格能不能稳住，再考虑下一步，确实比一看到涨跌就着急强。",
+      "evidence_fingerprint": "1ee546a86dd6b7ca947f9fa3564aa54077bbd06ddd7e05f8b8db5aa874763beb",
+      "label_fingerprint": "b03d7ccc2e480f9bb241fb7c2fbab36907b0c508e7cc3ab13a1a6d7b3be94608",
+      "source_label": "39女：",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_offset": 3821,
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "date": "2026-10-20",
       "node": "AFTERNOON",
       "kind": "message",
       "status": "PRESENT_IN_FORMAL_DOCUMENT",
@@ -63,5 +151,5 @@
   ],
   "dynamic_records": [],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261018.json"
+  "source_snapshot": "memory/sources/google-doc-20261021.json"
 }

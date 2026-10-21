@@ -10,14 +10,23 @@
       "source_date": "2026-10-13",
       "node": "AFTERNOON",
       "kind": "message",
-      "text": "我做外贸，比较在意汇率和采购成本。两边一起波动，利润空间就容易受到挤压。"
+      "text": "我做外贸，比较在意汇率和采购成本。两边一起波动，利润空间就容易受到挤压。",
+      "source_tab_id": null,
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261013-M022",
       "source_date": "2026-10-13",
       "node": "AFTERNOON",
       "kind": "message",
-      "text": "买到了，等待成交。"
+      "text": "买到了，等待成交。",
+      "source_tab_id": null,
+      "source_doc_revision": null,
+      "warnings": [
+        "“买到了／等待成交”交易状态含糊",
+        "仅虚构脚本中的交易陈述，不作为真实持仓"
+      ]
     },
     {
       "message_id": "20261014-DOC-012",
@@ -25,11 +34,9 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "我做外贸，比较在意汇率和采购成本。两边一起波动，利润空间就容易受到挤压。",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 12,
-      "source_tab_id": "t.t7k4o87mkgzv"
+      "source_tab_id": "t.t7k4o87mkgzv",
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261014-DOC-022",
@@ -37,11 +44,9 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "买到了，等待成交。",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 22,
-      "source_tab_id": "t.t7k4o87mkgzv"
+      "source_tab_id": "t.t7k4o87mkgzv",
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261015-DOC-029",
@@ -49,17 +54,35 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "是啊。我们做外贸的，运输费用上涨一点，订单利润就可能少一点。",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 29,
-      "source_tab_id": "t.huff85y7dlym"
+      "source_tab_id": "t.huff85y7dlym",
+      "source_doc_revision": null,
+      "warnings": []
+    },
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B042-0",
+      "source_date": "2026-10-19",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "Rodica说得对。有时候汇率只变一点，报过价的订单就得重新核对。",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B037-0",
+      "source_date": "2026-10-20",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "这两天光是汇率消息就够我们做外贸的留意了。",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
     }
   ],
   "reaction_count": 0,
   "no_unrecorded_history": true,
-  "message_count": 5,
-  "latest_source_date": "2026-10-15",
+  "message_count": 7,
+  "latest_source_date": "2026-10-20",
   "no_real_trading_inferred": true,
   "review_only_2026_10_13": []
 }

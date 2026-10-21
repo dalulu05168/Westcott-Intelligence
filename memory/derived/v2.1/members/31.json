@@ -10,7 +10,8 @@
     "memory_access": "READ_AND_CROSSCHECKED_AGAINST_EFFECTIVE_DAILY_VIEW",
     "evidence_ids": [
       "20261013-M066",
-      "20261014-t.t7k4o87mkgzv-B066-0"
+      "20261014-t.t7k4o87mkgzv-B066-0",
+      "20261020-t.6cabllp27a61-B043-0"
     ],
     "state": {
       "knowledge": "NOT_INFERRED",
@@ -20,7 +21,8 @@
   "evidence_store": "memory/derived/v2.1/effective-history.json",
   "evidence_ids": [
     "20261013-M066",
-    "20261014-t.t7k4o87mkgzv-B066-0"
+    "20261014-t.t7k4o87mkgzv-B066-0",
+    "20261020-t.6cabllp27a61-B043-0"
   ],
   "recent_examples": [
     {
@@ -48,9 +50,29 @@
       "source_label": "31男：",
       "source_tab_id": "t.t7k4o87mkgzv",
       "source_offset": 5307,
-      "source_revision": "AHj4eMSpBnyXFSgniz8dtQxI-c7O2fcRYzVWZm4ZJWAvBQuqii5YQ4mJtCQpiSl-7nuuH9jXb7mUYTBCy-VrSUb_BSCoo7LfE9exAA7vgyQ",
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
       "date": "2026-10-14",
       "node": "EVENING",
+      "kind": "message",
+      "status": "PRESENT_IN_FORMAL_DOCUMENT",
+      "unlabelled_fragment": false,
+      "warnings": [],
+      "fictional_only": true,
+      "real_trade_not_inferred": true
+    },
+    {
+      "id": "20261020-t.6cabllp27a61-B043-0",
+      "speaker_id": "31",
+      "gender": "男",
+      "text": "看归看，真买又是另一回事。BRD这两天涨得不错，我反倒不想着急了。",
+      "evidence_fingerprint": "5e1e7e15ca15dd4559baed1c0b6e9f7d4c27bbbbb299febcf181d92904d80dc2",
+      "label_fingerprint": "607955c117485c4d0c90bed599600e353b43645d444d9545853237d148d213e2",
+      "source_label": "31男：",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_offset": 2798,
+      "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "date": "2026-10-20",
+      "node": "AFTERNOON",
       "kind": "message",
       "status": "PRESENT_IN_FORMAL_DOCUMENT",
       "unlabelled_fragment": false,
@@ -61,5 +83,5 @@
   ],
   "dynamic_records": [],
   "real_trade_verified": false,
-  "source_snapshot": "memory/sources/google-doc-20261018.json"
+  "source_snapshot": "memory/sources/google-doc-20261021.json"
 }

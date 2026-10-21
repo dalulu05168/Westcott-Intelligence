@@ -10,14 +10,20 @@
       "source_date": "2026-10-13",
       "node": "AFTERNOON",
       "kind": "message",
-      "text": "这几年买房的压力确实不小。光是考虑首付和每个月的还款，就够让人头疼的了                      😅"
+      "text": "这几年买房的压力确实不小。光是考虑首付和每个月的还款，就够让人头疼的了                      😅",
+      "source_tab_id": null,
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261013-M038",
       "source_date": "2026-10-13",
       "node": "EVENING",
       "kind": "message",
-      "text": "刚吃完饭，今天来得还挺准时      😊"
+      "text": "刚吃完饭，今天来得还挺准时      😊",
+      "source_tab_id": null,
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261014-DOC-029",
@@ -25,11 +31,9 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "这几年买房的压力确实不小。光是考虑首付和每个月的还款，就够让人头疼的了😅",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 29,
-      "source_tab_id": "t.t7k4o87mkgzv"
+      "source_tab_id": "t.t7k4o87mkgzv",
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261014-DOC-038",
@@ -37,11 +41,9 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "刚吃完饭，今天来得还挺准时😊",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 38,
-      "source_tab_id": "t.t7k4o87mkgzv"
+      "source_tab_id": "t.t7k4o87mkgzv",
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261015-DOC-017",
@@ -49,11 +51,9 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "刚才看BET涨了0.75%，今天开头还不错啊。😄",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 17,
-      "source_tab_id": "t.huff85y7dlym"
+      "source_tab_id": "t.huff85y7dlym",
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261015-DOC-026",
@@ -61,11 +61,9 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "哈哈，这不是昨晚还觉得课程太简单的那位学者吗？😄 正好，今天行情有点意思，能不能跟我们聊聊你怎么看现在的市场？",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 26,
-      "source_tab_id": "t.huff85y7dlym"
+      "source_tab_id": "t.huff85y7dlym",
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261015-DOC-079",
@@ -73,11 +71,9 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "😤",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 79,
-      "source_tab_id": "t.huff85y7dlym"
+      "source_tab_id": "t.huff85y7dlym",
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261015-DOC-084",
@@ -85,11 +81,9 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "先生晚上好！",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 84,
-      "source_tab_id": "t.huff85y7dlym"
+      "source_tab_id": "t.huff85y7dlym",
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261015-DOC-091",
@@ -97,11 +91,9 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "我也是。尤其是原本就在关注的股票，一涨起来就容易着急，总觉得机会已经从眼前溜走了。😅",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 91,
-      "source_tab_id": "t.huff85y7dlym"
+      "source_tab_id": "t.huff85y7dlym",
+      "source_doc_revision": null,
+      "warnings": []
     },
     {
       "message_id": "20261015-DOC-097",
@@ -109,17 +101,85 @@
       "node": "UNSPECIFIED_IN_SOURCE",
       "kind": "message",
       "text": "这么简单的入门题目你怎么还不会呢？昨晚还在说先生讲的题目简单，需要加速课程进度。",
-      "source_google_doc_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_google_doc_url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
-      "source_doc_revision": "AHj4eMTjLBMOUx0Bx8NCU1466TU2ZMZkpzYUO9N5gIGeGo_cym8NEEUFRtDbJ0uWjz05l80XmUlQb0ZF1LN3GUMy-CPTUQ-k-IpkqhOF6Co",
-      "source_block_number": 97,
-      "source_tab_id": "t.huff85y7dlym"
+      "source_tab_id": "t.huff85y7dlym",
+      "source_doc_revision": null,
+      "warnings": []
+    },
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B003-0",
+      "source_date": "2026-10-19",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "新的一周开始，希望工作和行情都能顺利。😊",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B018-0",
+      "source_date": "2026-10-19",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "先记着吧，等开盘有了变化再对。现在猜来猜去，也猜不出成交来。",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B065-0",
+      "source_date": "2026-10-19",
+      "node": "EVENING",
+      "kind": "message",
+      "text": "股价到了我们关注的价位，就代表有支撑了吗？还是说，还得再观察一下？",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261019-t.2dp2catgrjty-B074-0",
+      "source_date": "2026-10-19",
+      "node": "EVENING",
+      "kind": "message",
+      "text": "所以，今天上午 BRD 只是刚跌到那个参考范围，确实不能直接判定箱体支撑就成立了。",
+      "source_tab_id": "t.2dp2catgrjty",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B013-0",
+      "source_date": "2026-10-20",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "算了算今天晚上我的积分应该能达到21分，一会要联系Ion确认一下。",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B042-0",
+      "source_date": "2026-10-20",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "涨成这样谁不想多看两眼。",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B063-0",
+      "source_date": "2026-10-20",
+      "node": "EVENING",
+      "kind": "message",
+      "text": "晚上好！今天应该没迟到吧。😊",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
     }
   ],
   "reaction_count": 0,
   "no_unrecorded_history": true,
-  "message_count": 10,
-  "latest_source_date": "2026-10-15",
+  "message_count": 17,
+  "latest_source_date": "2026-10-20",
   "no_real_trading_inferred": true,
   "review_only_2026_10_13": []
 }

@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -15,6 +16,7 @@ CURATED = ROOT / "memory/curated/2026-10-16-dynamic-state.json"
 
 ACTIONS = {
     "WATCH_ONLY", "CONDITIONAL_PLAN_NOT_PURCHASE", "ORDER_REPORTED_UNFILLED",
+    "AUTHOR_MARKED_FOLLOW_RECOMMENDATION",
     "SELF_REPORTED_BUY", "SELF_REPORTED_ADD", "SELF_REPORTED_PARTIAL_SALE",
     "SELF_REPORTED_FULL_SALE", "SELF_REPORTED_HOLD_AND_PARTIAL_SALE",
 }
@@ -27,9 +29,13 @@ def _valid(condition: bool, reason: str) -> None:
 
 
 def load() -> tuple[dict, list]:
-    return json.loads(LEDGER.read_text(encoding="utf-8")), json.loads(
-        CURATED.read_text(encoding="utf-8")
-    )
+    data = json.loads(LEDGER.read_text(encoding="utf-8"))
+    paths = data.get("source_curated_paths", [data["source_curated_path"]])
+    approved = {"memory/curated/2026-10-16-dynamic-state.json", "memory/curated/2026-10-21-dynamic-state.json"}
+    _valid(isinstance(paths, list) and bool(paths) and len(paths) == len(set(paths)), "INVALID_SOURCE_PATHS")
+    _valid(all(p in approved for p in paths), "UNAPPROVED_CURATED_SOURCE")
+    curated = [r for path in paths for r in json.loads((ROOT/path).read_text(encoding="utf-8"))]
+    return data, curated
 
 
 def validate_ledger(ledger: dict, curated: list) -> dict:
@@ -38,8 +44,8 @@ def validate_ledger(ledger: dict, curated: list) -> dict:
     _valid(ledger.get("schema") == "westcott-member-stock-participation-ledger-v1", "SCHEMA")
     _valid(ledger.get("timezone") == "Europe/Bucharest", "TIMEZONE")
     _valid(ledger.get("allowed_member_ids") == [1, 42], "ACTIVE_RANGE")
-    _valid(ledger.get("completeness") == "PARTIAL_VERIFIED_INITIAL_IMPORT_NOT_FULL_HISTORY", "FALSE_COMPLETENESS")
-    _valid(ledger.get("latest_google_doc_coverage") == "NOT_SYNCED", "FALSE_DOC_SYNC")
+    _valid(ledger.get("completeness") in {"PARTIAL_VERIFIED_INITIAL_IMPORT_NOT_FULL_HISTORY", "PARTIAL_REVIEWED_FORMAL_IMPORT_NOT_FULL_HISTORY"}, "FALSE_COMPLETENESS")
+    _valid(ledger.get("latest_google_doc_coverage") in {"NOT_SYNCED", "REVIEWED_THROUGH_2026_10_21_MORNING"}, "FALSE_DOC_SYNC")
     _valid(ledger.get("source_curated_path") == "memory/curated/2026-10-16-dynamic-state.json", "SOURCE_PATH")
     _valid(isinstance(curated, list), "INVALID_CURATED_SOURCE")
     source = {x["id"]: x for x in curated if isinstance(x, dict) and isinstance(x.get("id"), str)}
@@ -59,7 +65,12 @@ def validate_ledger(ledger: dict, curated: list) -> dict:
         pid = event.get("member_id")
         _valid(isinstance(pid, str) and pid in derived, "UNKNOWN_MEMBER:" + str(pid))
         _valid(1 <= int(pid) <= 42, "INACTIVE_MEMBER_CANNOT_PARTICIPATE:" + pid)
-        _valid(event.get("story_date") == "2026-10-16", "INITIAL_SOURCE_DATE_MISMATCH:" + eid)
+        try:
+            event_date = date.fromisoformat(event.get("story_date", ""))
+            cutoff = date.fromisoformat(ledger["source_cutoff"])
+        except (TypeError, ValueError, KeyError):
+            raise ValueError("INVALID_STORY_DATE:" + eid)
+        _valid(event_date <= cutoff, "SOURCE_DATE_AFTER_CUTOFF:" + eid)
         _valid(event.get("action") in ACTIONS, "INVALID_ACTION:" + eid)
         _valid(isinstance(event.get("symbol"), str) and bool(event["symbol"]), "MISSING_SYMBOL:" + eid)
         _valid(event.get("source_class") == "REVIEWED_ADOPTED_STORY_SPEECH", "UNREVIEWED_SOURCE:" + eid)
@@ -96,6 +107,15 @@ def validate_ledger(ledger: dict, curated: list) -> dict:
                "UNREVIEWED_OR_STALE_EVIDENCE:" + eid)
         if event.get("numeric_evidence_ids"):
             _valid(set(event["numeric_evidence_ids"]).issubset(set(refs)), "NUMBER_MISSING_SUPPORT:" + eid)
+        _valid(all(x.startswith(event["story_date"].replace("-", "")) for x in refs), "SOURCE_DATE_MISMATCH:" + eid)
+        if event["action"] == "AUTHOR_MARKED_FOLLOW_RECOMMENDATION":
+            _valid(event.get("author_annotation") == "跟推荐买票", "MISSING_AUTHOR_ANNOTATION:" + eid)
+            _valid(all(event.get(k) is None for k in ("reported_quantity", "reported_price", "reported_currency")), "ANNOTATION_NOT_FILL_PROOF:" + eid)
+            day_path = ROOT / "memory/daily" / event["story_date"] / "day-memory.json"
+            day = json.loads(day_path.read_text(encoding="utf-8"))
+            messages = {r["id"]:r for r in day["messages"] if r["status"] == "ADOPTED_IN_USER_SUBMITTED_STORY"}
+            _valid(all(ref in messages and messages[ref]["speaker_id"] == pid and "跟推荐买票" in messages[ref]["text"] for ref in refs), "ANNOTATION_SOURCE_MISSING:" + eid)
+            _valid(all(ref in messages and messages[ref]["speaker_id"] == "news_assistant" and event["symbol"] in messages[ref]["text"] for ref in event.get("recommendation_evidence_ids", [])), "RECOMMENDATION_SOURCE_MISMATCH:" + eid)
         derived[pid].append(eid)
     _valid(by_member == derived, "MEMBER_INDEX_NOT_RECONCILED")
     return {"status": "PASS_STATIC_PROVENANCE_ONLY", "indexed_identities": len(ids),

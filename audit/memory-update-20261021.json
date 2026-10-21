@@ -1,0 +1,47 @@
+{
+  "source_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+  "source_digest": "5064ad9c3a07d1d1b2b20885c2e8fd13a037c970ef01dac901791cb45ac477e9",
+  "user_authorized": true,
+  "scope": "Formal story, per-member memory, 5Skill writing fixes and current teacher; no delivery",
+  "counts": {
+    "2026-10-19": 96,
+    "2026-10-20": 101,
+    "2026-10-21": 32
+  },
+  "SNN_followers": [
+    "24",
+    "14",
+    "01",
+    "25",
+    "28",
+    "27"
+  ],
+  "pending": [
+    "09 addressee",
+    "quote timestamps and market truth",
+    "real executions",
+    "remote sync until verified"
+  ],
+  "normalizations": [
+    {
+      "tabId": "t.6cabllp27a61",
+      "before": "= = = = = 资讯助理 = = = = =",
+      "after": "===== 资讯助理 =====",
+      "reason": "Only explicit staff-label spacing normalized; raw native snapshot preserved"
+    }
+  ],
+  "nonformal_tab_excluded": true,
+  "current_allowed_member_ids": [
+    1,
+    42
+  ],
+  "base_remote_commit": "840d90c277e2b93a9bad686c886fbe9656da1120",
+  "content_review": "COMPLETED_WITH_EXPLICIT_SOURCE_UNCERTAINTIES",
+  "repository_validation": "PASS",
+  "ledger_tests": "13_PASS",
+  "continuity_tests": "31_PASS",
+  "archive_reproducibility": "PASS",
+  "prepared_prompts": "SYNCHRONIZED_NOT_APPLIED_ONLINE",
+  "remote_sync": "VERIFY_COMMIT_SEPARATELY",
+  "global_codex_memory_updated": false
+}

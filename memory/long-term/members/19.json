@@ -1,0 +1,43 @@
+{
+  "id": "19",
+  "name": "Matei Cocoș",
+  "identity_source": "skills/p004-chat-suite/characters/final-identity-65.json",
+  "observed_in_submitted_story": [
+    {
+      "message_id": "20261020-t.6cabllp27a61-B028-0",
+      "source_date": "2026-10-20",
+      "node": "MORNING",
+      "kind": "message",
+      "text": "也可能是几件事赶到一起了，下午结果出来再看吧。",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B032-0",
+      "source_date": "2026-10-20",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "那是部长听证通过了，议会还没正式表决呢。😂 你这消息看一半就下结论了。",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    },
+    {
+      "message_id": "20261020-t.6cabllp27a61-B038-0",
+      "source_date": "2026-10-20",
+      "node": "AFTERNOON",
+      "kind": "message",
+      "text": "Daniel，之前就跟你说过看新闻别只看标题嘛😂",
+      "source_tab_id": "t.6cabllp27a61",
+      "source_doc_revision": "AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU",
+      "warnings": []
+    }
+  ],
+  "message_count": 3,
+  "reaction_count": 0,
+  "latest_source_date": "2026-10-20",
+  "fictional_education_only": true,
+  "no_real_trading_inferred": true,
+  "status": "USER_SUBMITTED_ADOPTED_WITH_AUDIT_FLAGS"
+}

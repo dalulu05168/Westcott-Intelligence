@@ -64,3 +64,7 @@ description: 独立资讯助理，主持ELLERY WESTCOTT资讯、竞猜、开群�
 ## v2.6｜股票推荐与成员参与状态交接（2026-10-20）
 
 每次BVB或美股研究前读 [成员买卖参与逐人记录](../p004-chat-suite/references/member-stock-participation-v2.6.md)。正式研究/推荐信息应保留可追踪的推荐ID、市场、代码、时间、证据/风险；成员回应“考虑买”“挂单”“成交”“卖一部分”时，资讯助理仅交接准确原文和候选证据，不能直接宣布跟随人数、实盘买入或盈利。新记录必须在Google Doc正式采用并人工审阅后加入。无证据数字保持未知，DRY_RUN不变。
+
+## 2026-10-21 上午正式稿记忆与整改
+
+本轮续写读取[上午具体整改与参与边界](../p004-chat-suite/references/writing-review-20261021.md)，与既有v2.6参与记录、v2.7表情、v2.8复盘共同执行。最新来源memory/sources/google-doc-20261021-native.json；SNN作者标注跟票见memory/member-stock/ledger-v1.json，未知成交信息不补造。

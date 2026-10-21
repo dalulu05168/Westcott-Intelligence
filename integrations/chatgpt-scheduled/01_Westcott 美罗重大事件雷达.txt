@@ -186,6 +186,13 @@ id,name,nick,gender,age,occupation,investment_years,capital_scale,student_senior
 [ADOPTED_MEMORY_CONFIRMED]
 {"id":"01","message_id":"20261013-M025","node":"AFTERNOON","kind":"message","text":"这次我就不跟了，先继续观望，看看后面怎么走。"}
 {"id":"01","message_id":"20261014-DOC-025","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"这次我就不跟了，先继续观望，看看后面怎么走。"}
+{"id":"01","message_id":"20261019-t.2dp2catgrjty-B063-0","node":"EVENING","kind":"message","text":"那我先认真看看。上周五学MACD的时候，我连下面的柱子都认错了。😂"}
+{"id":"01","message_id":"20261019-t.2dp2catgrjty-B085-0","node":"EVENING","kind":"message","text":"Daniel，说的通透。该拿下的时候就不能犹豫！"}
+{"id":"01","message_id":"20261019-t.2dp2catgrjty-B093-0","node":"EVENING","kind":"message","text":"Daniel，说得对！我觉得我们之前商量的办法还是挺可行的。"}
+{"id":"01","message_id":"20261020-t.6cabllp27a61-B033-0","node":"AFTERNOON","kind":"message","text":"这等大事还是算了吧，没时间参与了😂"}
+{"id":"01","message_id":"20261020-t.6cabllp27a61-B087-0","node":"EVENING","kind":"message","text":"先生好！这些大道理我很清楚，但是人性里面天生就具备。"}
+{"id":"01","message_id":"20261021-t.toc19bjz91ue-B022-0","node":"MORNING","kind":"message","text":"这个公司我记得之前有买过。"}
+{"id":"01","message_id":"20261021-t.toc19bjz91ue-B028-0","node":"MORNING","kind":"message","text":"老伙计，咱们一直都是一个步调，谁也不掉队👍（跟推荐买票）"}
 {"id":"02","message_id":"M006","node":"AFTERNOON","kind":"message","text":"今天这线条还挺正常的嘛，"}
 {"id":"02","message_id":"20261013-M002","node":"AFTERNOON","kind":"message","text":"下午好，刚忙完手头的事情，终于有空看看今天的市场了。"}
 {"id":"02","message_id":"20261013-M013","node":"AFTERNOON","kind":"message","text":"确实，还要看合同的结算时间。成本发生变化，不一定马上反映在账面上。"}
@@ -194,14 +201,23 @@ id,name,nick,gender,age,occupation,investment_years,capital_scale,student_senior
 {"id":"02","message_id":"20261015-DOC-002","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"早上好！昨晚听完课，本来想把作业做了，结果看着图表研究了半天，还是决定今天再整理一下。😂"}
 {"id":"02","message_id":"20261015-DOC-022","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"如果家庭和企业都在减少用电，那么能源企业还指望着什么收入啊？"}
 {"id":"02","message_id":"20261015-DOC-055","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"你这么一说，我倒想起昨晚先生讲的均线了。我那份作业研究了半天还没做完，今天看这些行情，又觉得自己之前想得太简单了。😂"}
+{"id":"02","message_id":"20261019-t.2dp2catgrjty-B041-0","node":"AFTERNOON","kind":"message","text":"这就是做账麻烦的地方。一边成本少了一点，另一边又多了，最后利润到底变多少，还得把整笔业务算完。"}
+{"id":"02","message_id":"20261019-t.2dp2catgrjty-B072-0","node":"EVENING","kind":"message","text":"不是价格一靠近箱子底部就闭着眼睛买，第一步得先看看。"}
+{"id":"02","message_id":"20261020-t.6cabllp27a61-B016-0","node":"MORNING","kind":"message","text":"我没有记录自己的累计积分，也不知道Ion会不会记错"}
+{"id":"02","message_id":"20261020-t.6cabllp27a61-B020-0","node":"MORNING","kind":"message","text":"每天都会有不同的活动，Ana会在群里通知。"}
+{"id":"02","message_id":"20261021-t.toc19bjz91ue-B003-0","node":"MORNING","kind":"message","text":"还是你每天最有精神"}
 {"id":"03","message_id":"M002","node":"AFTERNOON","kind":"message","text":"下午好各位！回来看看今天还有什么值得关注的机会。🤔"}
 {"id":"03","message_id":"M009","node":"AFTERNOON","kind":"message","text":"Sinsay我知道，没想到还能通过基金接触它背后的公司。"}
 {"id":"03","message_id":"M011","node":"AFTERNOON","kind":"message","text":"对，我刚才只注意到认识的名字了。"}
+{"id":"03","message_id":"20261020-t.6cabllp27a61-B005-0","node":"MORNING","kind":"message","text":"那昨天选B的也没猜中啊。市场还真不按大家希望的方向走。😂"}
+{"id":"03","message_id":"20261020-t.6cabllp27a61-B067-0","node":"EVENING","kind":"message","text":"每天的活动时间不止会在晚间，有的时候下午也会进行。"}
 {"id":"04","message_id":"20261013-M012","node":"AFTERNOON","kind":"message","text":"我做外贸，比较在意汇率和采购成本。两边一起波动，利润空间就容易受到挤压。"}
 {"id":"04","message_id":"20261013-M022","node":"AFTERNOON","kind":"message","text":"买到了，等待成交。"}
 {"id":"04","message_id":"20261014-DOC-012","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"我做外贸，比较在意汇率和采购成本。两边一起波动，利润空间就容易受到挤压。"}
 {"id":"04","message_id":"20261014-DOC-022","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"买到了，等待成交。"}
 {"id":"04","message_id":"20261015-DOC-029","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"是啊。我们做外贸的，运输费用上涨一点，订单利润就可能少一点。"}
+{"id":"04","message_id":"20261019-t.2dp2catgrjty-B042-0","node":"AFTERNOON","kind":"message","text":"Rodica说得对。有时候汇率只变一点，报过价的订单就得重新核对。"}
+{"id":"04","message_id":"20261020-t.6cabllp27a61-B037-0","node":"AFTERNOON","kind":"message","text":"这两天光是汇率消息就够我们做外贸的留意了。"}
 {"id":"05","message_id":"20261013-M005","node":"AFTERNOON","kind":"message","text":"H2O 今天确实比较强，涨幅明显高于指数。我想看看后面还能不能保持这个势头。"}
 {"id":"05","message_id":"20261013-M068","node":"EVENING","kind":"message","text":"我也这么觉得。有时候好消息还没公布，股价就已经提前涨了。财报不错是一回事，现在\n买入的价格合不合理，又是另一回事。  🙂"}
 {"id":"05","message_id":"20261014-DOC-005","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"H2O 今天确实比较强，涨幅明显高于指数。我想看看后面还能不能保持这个势头。"}
@@ -213,6 +229,17 @@ id,name,nick,gender,age,occupation,investment_years,capital_scale,student_senior
 {"id":"05","message_id":"20261015-DOC-064","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"这倒不一定。不过你们注意到没有，有些银行股票交易业务表现不错，其他业务却不怎么样。"}
 {"id":"05","message_id":"20261015-DOC-077","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"我觉得不能一看到价格有变化，就急着做决定，还是得先看清楚再说。"}
 {"id":"05","message_id":"20261015-DOC-098","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"这确实不好区分。"}
+{"id":"05","message_id":"20261019-t.2dp2catgrjty-B005-0","node":"MORNING","kind":"message","text":"成交少了……这里说的是整个市场，不是光算股票吧？"}
+{"id":"05","message_id":"20261019-t.2dp2catgrjty-B013-0","node":"MORNING","kind":"message","text":"油价下来了，它跟SNG会不会还是各走各的。"}
+{"id":"05","message_id":"20261019-t.2dp2catgrjty-B017-0","node":"MORNING","kind":"message","text":"我刚问的就是这个，SNP和SNG都没走一边，今天还得分开看。"}
+{"id":"05","message_id":"20261019-t.2dp2catgrjty-B024-0","node":"MORNING","kind":"message","text":"看这走势，再加上社群的推荐和我自己的判断，这次感觉可以考虑进场了😁"}
+{"id":"05","message_id":"20261020-t.6cabllp27a61-B046-0","node":"AFTERNOON","kind":"message","text":"科技股也是一样，看来先生说的观察能不能企稳，确实不是看一天就够的。"}
+{"id":"05","message_id":"20261020-t.6cabllp27a61-B058-0","node":"AFTERNOON","kind":"message","text":"标普低开0.15%，道指只跌了0.01%。目前还是纳指弱一些，不过这才刚开盘。"}
+{"id":"05","message_id":"20261020-t.6cabllp27a61-B091-0","node":"EVENING","kind":"message","text":"我觉得这才是最难的地方。卖了怕它涨，不卖又怕继续跌，真遇到了很难决定。"}
+{"id":"05","message_id":"20261021-t.toc19bjz91ue-B006-0","node":"MORNING","kind":"message","text":"昨天开盘的时候三只都是跌的，最后变成两涨一跌。只看开盘和看完整一天，差别还真不小。"}
+{"id":"05","message_id":"20261021-t.toc19bjz91ue-B016-0","node":"MORNING","kind":"message","text":"昨天先生讲的东西，今天正好用得上。市场还没给出新的结果，就先别急着替它下结论。"}
+{"id":"05","message_id":"20261021-t.toc19bjz91ue-B018-0","node":"MORNING","kind":"message","text":"今天能源板块确实比大盘强一些，SNP也涨了0.82%。"}
+{"id":"06","message_id":"20261019-t.2dp2catgrjty-B087-0","node":"EVENING","kind":"message","text":"如果实际成交价格不同，最后算出来的结果也会变。"}
 {"id":"07","message_id":"M033","node":"AFTERNOON","kind":"message","text":"哈哈，这个有意思！我先选上涨，今天就让我乐观一回！"}
 {"id":"07","message_id":"M048","node":"EVENING","kind":"message","text":"晚上好呀！每晚这个时间都是准时参加。"}
 {"id":"07","message_id":"20261013-M009","node":"AFTERNOON","kind":"message","text":"美国银行的表现可以参考，但不能直接拿来判断 BRD 和 TLV。还是得看本地的贷款质量、\n资金成本和客户情况。"}
@@ -222,6 +249,8 @@ id,name,nick,gender,age,occupation,investment_years,capital_scale,student_senior
 {"id":"07","message_id":"20261014-DOC-014","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"如果企业减少投资，贷款需求也可能跟着变化。银行后面的信贷数据值得留意。"}
 {"id":"07","message_id":"20261014-DOC-026","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"我没有提交委托，继续看资料。参与讨论也不一定要交易。"}
 {"id":"07","message_id":"20261015-DOC-014","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"开盘就涨了不少啊，今天感觉比昨天还热闹。😂"}
+{"id":"07","message_id":"20261019-t.2dp2catgrjty-B095-0","node":"EVENING","kind":"message","text":"辛苦先生，晚安！"}
+{"id":"07","message_id":"20261020-t.6cabllp27a61-B027-0","node":"MORNING","kind":"message","text":"原来下午还有这么重要的事。我刚才看BRD涨得不错，还以为今天就是银行股自己表现强呢。😅"}
 {"id":"08","message_id":"M003","node":"AFTERNOON","kind":"message","text":"社群好像加入新的小伙伴了呀，欢迎~👏"}
 {"id":"08","message_id":"20261013-M008","node":"AFTERNOON","kind":"message","text":"股票交易收入增长 49%，这个数字确实挺惊人。不过，其他业务没有一起增长吗？ 😮"}
 {"id":"08","message_id":"20261013-M017","node":"AFTERNOON","kind":"message","text":"对，还得看公司本身经营得怎么样，以及现在的股价是不是已经太高了。"}
@@ -229,6 +258,9 @@ id,name,nick,gender,age,occupation,investment_years,capital_scale,student_senior
 {"id":"08","message_id":"20261014-DOC-017","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"对，还得看公司本身经营得怎么样，以及现在的股价是不是已经太高了。"}
 {"id":"08","message_id":"20261015-DOC-009","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"昨天能源股表现还不错，就看今天能不能继续了。别又是开盘挺热闹，下午没动静了。😂"}
 {"id":"08","message_id":"20261015-DOC-040","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"确实。我刚翻了一下昨天咨询顾问Ana播报的数据，四项中只有一项下跌的。"}
+{"id":"08","message_id":"20261020-t.6cabllp27a61-B031-0","node":"AFTERNOON","kind":"message","text":"我刚看了下新闻，怎么都在说新政府？上午不是说两点才投票吗？"}
+{"id":"08","message_id":"20261020-t.6cabllp27a61-B036-0","node":"AFTERNOON","kind":"message","text":"我还以为新政府已经定下来了。原来还有最后一道程序😂"}
+{"id":"08","message_id":"20261020-t.6cabllp27a61-B100-0","node":"EVENING","kind":"message","text":"你要控制你自己😂"}
 {"id":"09","message_id":"M024","node":"AFTERNOON","kind":"message","text":"那几张纸就是个摆设，关键得看谁来踩油门、谁来带飞！"}
 {"id":"09","message_id":"20261013-M030","node":"AFTERNOON","kind":"message","text":"我倒想知道，是开发商建得少了，还是现在买房的人更谨慎了？"}
 {"id":"09","message_id":"20261013-M053","node":"EVENING","kind":"message","text":"那分析现金流时，是不是还要看企业有没有持续投入设备和研发？"}
@@ -244,6 +276,17 @@ id,name,nick,gender,age,occupation,investment_years,capital_scale,student_senior
 {"id":"09","message_id":"20261015-DOC-076","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"晚上好！我有个问题。例如近期美股忽上忽下的这种情况，应该在什么时候进场才算合适的机会？"}
 {"id":"09","message_id":"20261015-DOC-086","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"先生，那如果错过一只上涨很多的股票，真的不需要觉得可惜吗？"}
 {"id":"09","message_id":"20261015-DOC-102","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"说到底就是不能只听自己想听的消息，不过让自己主动找反对意见，也不是件容易的事。"}
+{"id":"09","message_id":"20261019-t.2dp2catgrjty-B012-0","node":"MORNING","kind":"message","text":"Daniel，你这是已经替加油站把价格定好了。😂"}
+{"id":"09","message_id":"20261019-t.2dp2catgrjty-B040-0","node":"AFTERNOON","kind":"message","text":"刚才你们还在聊FOJE、BRD涨了多少，转头又说到汇率了。😂 我这边有些客户按欧元结算，采购却涉及美元，真得两边一起算。"}
+{"id":"09","message_id":"20261019-t.2dp2catgrjty-B081-0","node":"EVENING","kind":"message","text":"跟谈订单一样，有些聊得热闹却不签，有些拖几天反而真下单。😂"}
+{"id":"09","message_id":"20261020-t.6cabllp27a61-B012-0","node":"MORNING","kind":"message","text":"Daniel，你昨晚不是还让先生直接告诉你买什么吗？怎么今天又嫌研究麻烦了？😂"}
+{"id":"09","message_id":"20261020-t.6cabllp27a61-B045-0","node":"AFTERNOON","kind":"message","text":"他们说涨价就涨价，说降价就降价。"}
+{"id":"09","message_id":"20261020-t.6cabllp27a61-B049-0","node":"AFTERNOON","kind":"message","text":"Constantin现在估计最不想听的，就是“再等等”这三个字😂"}
+{"id":"09","message_id":"20261020-t.6cabllp27a61-B074-0","node":"EVENING","kind":"message","text":"Constantin，你这都惦记一天了。正好听听先生今晚怎么讲。🤭"}
+{"id":"09","message_id":"20261020-t.6cabllp27a61-B083-0","node":"EVENING","kind":"message","text":"涨的时候怕买不上，跌的时候又怕亏更多。反正怎么弄心里都不踏实。"}
+{"id":"09","message_id":"20261020-t.6cabllp27a61-B095-0","node":"EVENING","kind":"message","text":"你是卖早了后悔，我是没买的时候后悔。感觉不管怎么操作，总能找到让自己遗憾的地方。😂"}
+{"id":"09","message_id":"20261021-t.toc19bjz91ue-B013-0","node":"MORNING","kind":"message","text":"Daniel，你这回倒是不着急了？昨天还说管不住自己的手呢😂"}
+{"id":"09","message_id":"20261021-t.toc19bjz91ue-B027-0","node":"MORNING","kind":"message","text":"Gheorghe，你这话说得有意思啊，公司还没看明白，倒是先把信心交给社群了😂"}
 {"id":"10","message_id":"20261013-M029","node":"AFTERNOON","kind":"message","text":"这几年买房的压力确实不小。光是考虑首付和每个月的还款，就够让人头疼的了                      😅"}
 {"id":"10","message_id":"20261013-M038","node":"EVENING","kind":"message","text":"刚吃完饭，今天来得还挺准时      😊"}
 {"id":"10","message_id":"20261014-DOC-029","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"这几年买房的压力确实不小。光是考虑首付和每个月的还款，就够让人头疼的了😅"}
@@ -254,12 +297,41 @@ id,name,nick,gender,age,occupation,investment_years,capital_scale,student_senior
 {"id":"10","message_id":"20261015-DOC-084","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"先生晚上好！"}
 {"id":"10","message_id":"20261015-DOC-091","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"我也是。尤其是原本就在关注的股票，一涨起来就容易着急，总觉得机会已经从眼前溜走了。😅"}
 {"id":"10","message_id":"20261015-DOC-097","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"这么简单的入门题目你怎么还不会呢？昨晚还在说先生讲的题目简单，需要加速课程进度。"}
+{"id":"10","message_id":"20261019-t.2dp2catgrjty-B003-0","node":"MORNING","kind":"message","text":"新的一周开始，希望工作和行情都能顺利。😊"}
+{"id":"10","message_id":"20261019-t.2dp2catgrjty-B018-0","node":"MORNING","kind":"message","text":"先记着吧，等开盘有了变化再对。现在猜来猜去，也猜不出成交来。"}
+{"id":"10","message_id":"20261019-t.2dp2catgrjty-B065-0","node":"EVENING","kind":"message","text":"股价到了我们关注的价位，就代表有支撑了吗？还是说，还得再观察一下？"}
+{"id":"10","message_id":"20261019-t.2dp2catgrjty-B074-0","node":"EVENING","kind":"message","text":"所以，今天上午 BRD 只是刚跌到那个参考范围，确实不能直接判定箱体支撑就成立了。"}
+{"id":"10","message_id":"20261020-t.6cabllp27a61-B013-0","node":"MORNING","kind":"message","text":"算了算今天晚上我的积分应该能达到21分，一会要联系Ion确认一下。"}
+{"id":"10","message_id":"20261020-t.6cabllp27a61-B042-0","node":"AFTERNOON","kind":"message","text":"涨成这样谁不想多看两眼。"}
+{"id":"10","message_id":"20261020-t.6cabllp27a61-B063-0","node":"EVENING","kind":"message","text":"晚上好！今天应该没迟到吧。😊"}
+{"id":"11","message_id":"20261020-t.6cabllp27a61-B002-0","node":"MORNING","kind":"message","text":"早上好。昨晚纳指涨得还不错啊，我还以为三大指数会一起涨呢。"}
+{"id":"11","message_id":"20261021-t.toc19bjz91ue-B010-0","node":"MORNING","kind":"message","text":"美股真是个善变的家伙，折腾死我了😮‍💨"}
 {"id":"12","message_id":"20261013-M042","node":"EVENING","kind":"message","text":"我选正确，利润毕竟增长了 10%。   🤔"}
 {"id":"12","message_id":"20261014-DOC-042","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"我选正确，利润毕竟增长了10%。🤔"}
 {"id":"12","message_id":"20261015-DOC-072","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"我记得自己上次选的是A。现在想想，我当时只注意利润增长了10%，完全忽略了预期是15%。😅"}
+{"id":"12","message_id":"20261019-t.2dp2catgrjty-B002-0","node":"MORNING","kind":"message","text":"早！怀念周末。怎么过的这么快😢"}
+{"id":"12","message_id":"20261019-t.2dp2catgrjty-B021-0","node":"MORNING","kind":"message","text":"太及时了，可以结合开盘数据一起看看。"}
+{"id":"12","message_id":"20261019-t.2dp2catgrjty-B023-0","node":"MORNING","kind":"message","text":"BRD回到31.45了，在刚才给的参考区间里。给我一种稳稳的感觉。"}
+{"id":"12","message_id":"20261019-t.2dp2catgrjty-B031-0","node":"AFTERNOON","kind":"message","text":"午好！简单打个卡就要去忙了。唉，真讨厌星期一！"}
+{"id":"12","message_id":"20261020-t.6cabllp27a61-B022-0","node":"MORNING","kind":"message","text":"BRD都涨到33.10了？昨天31点多的时候我还盯着看呢。今天这走势真有点让人心动。😂"}
+{"id":"12","message_id":"20261020-t.6cabllp27a61-B039-0","node":"AFTERNOON","kind":"message","text":"我现在非常担心BRD，任何事不能影响它的攀升😄"}
+{"id":"12","message_id":"20261020-t.6cabllp27a61-B050-0","node":"AFTERNOON","kind":"message","text":"我就是想看看BRD后面怎么走，又没说现在一定要买。"}
+{"id":"12","message_id":"20261020-t.6cabllp27a61-B053-0","node":"AFTERNOON","kind":"message","text":"33.45了？😳"}
+{"id":"12","message_id":"20261020-t.6cabllp27a61-B060-0","node":"AFTERNOON","kind":"message","text":"你们那边刚开始，我这边BRD都热闹一天了。"}
+{"id":"12","message_id":"20261020-t.6cabllp27a61-B068-0","node":"EVENING","kind":"message","text":"我选A吧。毕竟股票涨起来了，谁也不想错过。"}
+{"id":"12","message_id":"20261020-t.6cabllp27a61-B072-0","node":"EVENING","kind":"message","text":"Henry先生晚上好！今天BRD的行情真让我有点坐不住了。"}
+{"id":"12","message_id":"20261020-t.6cabllp27a61-B076-0","node":"EVENING","kind":"message","text":"先生，我今天看BRD的时候，就有这种感觉。上午看着它涨，越看越想参与。😅"}
+{"id":"12","message_id":"20261021-t.toc19bjz91ue-B004-0","node":"MORNING","kind":"message","text":"我应该早早的来，看看我的BRD怎么样了"}
+{"id":"12","message_id":"20261021-t.toc19bjz91ue-B014-0","node":"MORNING","kind":"message","text":"我当时选了A，今天再想想，好像是有点冲动了😅"}
 {"id":"13","message_id":"M062","node":"EVENING","kind":"message","text":"原来对比成交量得跟昨天同时段比啊。那今天资金明明多砸了一半，股价却没冲过去，这算怎么回事？"}
 {"id":"13","message_id":"M070","node":"EVENING","kind":"message","text":"那我明天准备找一只BVB股票，对照今天讲的三个要点自己分析一下。"}
 {"id":"13","message_id":"M074","node":"EVENING","kind":"message","text":"感谢先生辛苦授课，受益匪浅，祝先生晚安！"}
+{"id":"13","message_id":"20261019-t.2dp2catgrjty-B007-0","node":"MORNING","kind":"message","text":"是整个市场的总交易额，并不全是股票买卖。"}
+{"id":"13","message_id":"20261019-t.2dp2catgrjty-B015-0","node":"MORNING","kind":"message","text":"脑子没开机，抱怨倒是挺流畅😄"}
+{"id":"13","message_id":"20261019-t.2dp2catgrjty-B062-0","node":"EVENING","kind":"message","text":"昨天我还说想先自己看图，再听先生讲。没想到今天就落实了😅"}
+{"id":"13","message_id":"20261019-t.2dp2catgrjty-B068-0","node":"EVENING","kind":"message","text":"我感觉有点像一个范围。上面总是过不去，下面又经常有人接住。"}
+{"id":"13","message_id":"20261019-t.2dp2catgrjty-B094-0","node":"EVENING","kind":"message","text":"我准备先拿第一张图试试。昨天说想自己看图，今天总不能又只听不练了。😅"}
+{"id":"13","message_id":"20261020-t.6cabllp27a61-B035-0","node":"AFTERNOON","kind":"message","text":"上午就提到这件事了。后面财政会怎么安排呢？🤔"}
 {"id":"14","message_id":"20261013-M006","node":"AFTERNOON","kind":"message","text":"BRD 也不错。先看看收盘表现，再判断这波上涨有没有持续性。"}
 {"id":"14","message_id":"20261013-M010","node":"AFTERNOON","kind":"message","text":"对，还是看自己的业务数据更实际。"}
 {"id":"14","message_id":"20261013-M023","node":"AFTERNOON","kind":"message","text":"运气真的不错，刚好赶上欧美股市开盘前的短暂波动。他挂在 2.02 RON 的低价买单已经\n成交了一部分，剩下的数量还在订单簿里排队，继续等成交。"}
@@ -271,23 +343,66 @@ id,name,nick,gender,age,occupation,investment_years,capital_scale,student_senior
 {"id":"14","message_id":"20261014-DOC-045","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"❌"}
 {"id":"14","message_id":"20261014-DOC-061","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"先生这句话很深奥，可以让人举一反三"}
 {"id":"14","message_id":"20261014-DOC-063","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"先生这句话很深奥，简直可以举一反三"}
+{"id":"14","message_id":"20261019-t.2dp2catgrjty-B010-0","node":"MORNING","kind":"message","text":"原油降了，加油站方面从来不会在意这个的。一切照旧😂"}
+{"id":"14","message_id":"20261019-t.2dp2catgrjty-B014-0","node":"MORNING","kind":"message","text":"先不研究油价了，周一早上脑子还没开机。"}
+{"id":"14","message_id":"20261019-t.2dp2catgrjty-B026-0","node":"MORNING","kind":"message","text":"平时潜水的人今天全冒出来了，看来大家虽然不说话，但群里的推荐都有在默默跟紧😂"}
+{"id":"14","message_id":"20261019-t.2dp2catgrjty-B044-0","node":"AFTERNOON","kind":"message","text":"听着就头疼。还好我不用天天和这些数字打交道。😬"}
+{"id":"14","message_id":"20261019-t.2dp2catgrjty-B047-0","node":"AFTERNOON","kind":"message","text":"157,617股？😂 我还以为银行一回购，都是几百万股起步呢。"}
+{"id":"14","message_id":"20261019-t.2dp2catgrjty-B052-0","node":"AFTERNOON","kind":"message","text":"我选D！周一上班已经够难受了，晚上总得有点好消息吧。"}
+{"id":"14","message_id":"20261019-t.2dp2catgrjty-B064-0","node":"EVENING","kind":"message","text":"你起码还知道自己认错了。我以前看到线多的图，直接就不想看了。"}
+{"id":"14","message_id":"20261019-t.2dp2catgrjty-B069-0","node":"EVENING","kind":"message","text":"全是线，图形走势不是很好😁"}
+{"id":"14","message_id":"20261019-t.2dp2catgrjty-B083-0","node":"EVENING","kind":"message","text":"先生！我急也不是，不急也不是。你就告诉我什么时候买什么票就好了。"}
+{"id":"14","message_id":"20261019-t.2dp2catgrjty-B091-0","node":"EVENING","kind":"message","text":"要我说你们这样累不累，先看这里在看那里。等你准备好，买票的入口都不见了。"}
+{"id":"14","message_id":"20261020-t.6cabllp27a61-B007-0","node":"MORNING","kind":"message","text":"竞猜结束了，辩论赛紧接开始了😁"}
+{"id":"14","message_id":"20261020-t.6cabllp27a61-B010-0","node":"MORNING","kind":"message","text":"这么早就研究起来了😂 昨晚刚学完一堆线，今天又得继续画。"}
+{"id":"14","message_id":"20261020-t.6cabllp27a61-B015-0","node":"MORNING","kind":"message","text":"我记得兑换奖品不扣除积分，但是每样奖品只能兑换一次。"}
+{"id":"14","message_id":"20261020-t.6cabllp27a61-B070-0","node":"EVENING","kind":"message","text":"我想选B，不过真看到价格一直涨，估计又会忍不住犹豫。如果能选择两个答案就好了😅"}
+{"id":"14","message_id":"20261020-t.6cabllp27a61-B081-0","node":"EVENING","kind":"message","text":"这个我看懂了！我就是经常看着一只涨了，又想换另一只😅"}
+{"id":"14","message_id":"20261020-t.6cabllp27a61-B099-0","node":"EVENING","kind":"message","text":"今晚这课真是说到我心里去了。道理我都懂了，届时就看手还听不听使唤。"}
+{"id":"14","message_id":"20261021-t.toc19bjz91ue-B002-0","node":"MORNING","kind":"message","text":"早啊！我又是第一名😄"}
+{"id":"14","message_id":"20261021-t.toc19bjz91ue-B008-0","node":"MORNING","kind":"message","text":"幸亏昨天没急着下结论，不然又得让你们拿出来笑话了😏"}
+{"id":"14","message_id":"20261021-t.toc19bjz91ue-B011-0","node":"MORNING","kind":"message","text":"我算是看明白了，笑到最后才是真本事！"}
+{"id":"14","message_id":"20261021-t.toc19bjz91ue-B019-0","node":"MORNING","kind":"message","text":"今天一开盘又是一片大好。看来想管住手还真没那么容易😅"}
+{"id":"14","message_id":"20261021-t.toc19bjz91ue-B026-0","node":"MORNING","kind":"message","text":"说到底还是那句话，看什么图、什么线都不重要，关键还是怎么选。（跟推荐买票）"}
 {"id":"15","message_id":"20261014-DOC-060","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"我觉得利率也同样重要。如果借钱的利息变了，企业能赚多少钱就得重新算账了。"}
 {"id":"15","message_id":"20261015-DOC-025","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"不要慌，一条新闻也不能左右整个市场。"}
 {"id":"15","message_id":"20261015-DOC-056","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"不过这跟均线有没有应验是两回事吧？现在连具体的均线位置都没看，不能光凭股价跌了就说昨晚讲对了。"}
 {"id":"15","message_id":"20261015-DOC-096","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"先生，如果股票下跌的时候，我们告诉自己要有耐心；后来继续下跌，又说需要坚持长期投资。\n那怎么判断自己究竟是在遵守纪律，还是不愿意承认判断错误？"}
+{"id":"15","message_id":"20261019-t.2dp2catgrjty-B073-0","node":"EVENING","kind":"message","text":"而且还得考虑成本吧？如果区间本来就很窄，来回交易也不一定划算。"}
+{"id":"15","message_id":"20261019-t.2dp2catgrjty-B080-0","node":"EVENING","kind":"message","text":"回到阻力位附近，和直接跌回箱体里，是两回事。"}
+{"id":"15","message_id":"20261020-t.6cabllp27a61-B025-0","node":"MORNING","kind":"message","text":"先生周日不是说科技股还得继续观察吗？昨晚虽然反弹了，可也不能说后面就稳了吧。"}
+{"id":"15","message_id":"20261020-t.6cabllp27a61-B084-0","node":"EVENING","kind":"message","text":"但如果企业真的出了问题，也不能只告诉自己要有耐心吧？"}
+{"id":"16","message_id":"20261019-t.2dp2catgrjty-B008-0","node":"MORNING","kind":"message","text":"其中大约只有四分之三是股票交易的钱，剩下的不能算在里面。"}
 {"id":"17","message_id":"M035","node":"AFTERNOON","kind":"message","text":"我也来！选上涨！"}
 {"id":"17","message_id":"M058","node":"EVENING","kind":"message","text":"先生，那是不是说，股价盘中涨过阻力位还不够，最好等收盘确认站稳了再判断？"}
 {"id":"17","message_id":"M072","node":"EVENING","kind":"message","text":"今晚这个10列伊的例子挺直观的，比单独记那些技术名词容易理解多了。😄"}
+{"id":"17","message_id":"20261019-t.2dp2catgrjty-B027-0","node":"MORNING","kind":"message","text":"我也一直在看，就是有些地方还没弄明白，所以没怎么说话😂 想问一下，到了参考区间就可以考虑了吗？还是得再看看其他条件？"}
+{"id":"17","message_id":"20261019-t.2dp2catgrjty-B032-0","node":"AFTERNOON","kind":"message","text":"上午提的问题还没得到回复呢，不过我自己也跟进了解了一些情况。"}
+{"id":"17","message_id":"20261019-t.2dp2catgrjty-B067-0","node":"EVENING","kind":"message","text":"也就是说，不是价格碰到某一个数字就算支撑，还得看之前是不是在这个位置反复有过反应？"}
+{"id":"17","message_id":"20261019-t.2dp2catgrjty-B086-0","node":"EVENING","kind":"message","text":"要是只为了把风险控制得很小，随便画一个位置，那可能价格正常波动一下就到了。"}
+{"id":"17","message_id":"20261020-t.6cabllp27a61-B023-0","node":"MORNING","kind":"message","text":"你昨天还说它给你一种稳稳的感觉呢。😄 不过今天涨这么快，我反而不敢随便追了。"}
+{"id":"17","message_id":"20261020-t.6cabllp27a61-B069-0","node":"EVENING","kind":"message","text":"我觉得B更合适。总得知道自己为什么改变主意吧。"}
+{"id":"17","message_id":"20261020-t.6cabllp27a61-B077-0","node":"EVENING","kind":"message","text":"我倒是相反。涨得越快，我越心慌，生怕自己买在最高点，成了‘买贵了’的倒霉蛋。"}
+{"id":"17","message_id":"20261021-t.toc19bjz91ue-B015-0","node":"MORNING","kind":"message","text":"我昨天选B，就是觉得改变决定，总得有个理由。不然今天追这个，明天又想换那个。"}
+{"id":"17","message_id":"20261021-t.toc19bjz91ue-B025-0","node":"MORNING","kind":"message","text":"核电企业后续的维护和项目投入都需要不少资金，还是再观察看看吧！"}
 {"id":"18","message_id":"M016","node":"AFTERNOON","kind":"message","text":"对……不过不签也有风险。以后电价涨了，成本还是得自己承担。"}
 {"id":"18","message_id":"20261013-M047","node":"EVENING","kind":"message","text":"Jonathan 先生晚上好！今天看了不少财经新闻，正好想学学怎么从这些消息里判断一家公\n司的价值。"}
 {"id":"18","message_id":"20261014-DOC-047","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"Jonathan先生晚上好！今天看了不少财经新闻，正好想学学怎么从这些消息里判断一家公司的价值。"}
 {"id":"18","message_id":"20261015-DOC-094","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"是这样的，怎么会有风险退去之后或者我们想清楚这种事情发生。"}
+{"id":"18","message_id":"20261019-t.2dp2catgrjty-B030-0","node":"AFTERNOON","kind":"message","text":"回来了。上午说了不少银行？不看内容看方向。说到最后还是一个目的😁"}
+{"id":"18","message_id":"20261019-t.2dp2catgrjty-B038-0","node":"AFTERNOON","kind":"message","text":"哈哈，开个玩笑。这几天出差，群里的消息没怎么看，刚才才补上😁"}
+{"id":"18","message_id":"20261019-t.2dp2catgrjty-B053-0","node":"AFTERNOON","kind":"message","text":"我补上了，之前的话真是玩笑😂"}
+{"id":"18","message_id":"20261019-t.2dp2catgrjty-B054-0","node":"AFTERNOON","kind":"message","text":"我选A，积分+3😄"}
+{"id":"19","message_id":"20261020-t.6cabllp27a61-B028-0","node":"MORNING","kind":"message","text":"也可能是几件事赶到一起了，下午结果出来再看吧。"}
+{"id":"19","message_id":"20261020-t.6cabllp27a61-B032-0","node":"AFTERNOON","kind":"message","text":"那是部长听证通过了，议会还没正式表决呢。😂 你这消息看一半就下结论了。"}
+{"id":"19","message_id":"20261020-t.6cabllp27a61-B038-0","node":"AFTERNOON","kind":"message","text":"Daniel，之前就跟你说过看新闻别只看标题嘛😂"}
 {"id":"20","message_id":"M007","node":"AFTERNOON","kind":"message","text":"分化万岁！有分化才有波动的空间！👍"}
 {"id":"20","message_id":"M041","node":"AFTERNOON","kind":"message","text":"欧洲银行股还是很争气的，那咱们这边其他的有没有掉队啊？"}
 {"id":"20","message_id":"20261013-M003","node":"AFTERNOON","kind":"message","text":"来得正好，下午有什么重点消息？先看看。"}
 {"id":"20","message_id":"20261013-M016","node":"AFTERNOON","kind":"message","text":"明白了，不能只看哪个行业表现好，就觉得投资它一定更安全。"}
 {"id":"20","message_id":"20261014-DOC-003","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"来得正好，下午有什么重点消息？先看看。"}
 {"id":"20","message_id":"20261014-DOC-016","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"明白了，不能只看哪个行业表现好，就觉得投资它一定更安全。"}
+{"id":"20","message_id":"20261019-t.2dp2catgrjty-B051-0","node":"AFTERNOON","kind":"message","text":"正好一人选一个😄"}
 {"id":"21","message_id":"M020","node":"AFTERNOON","kind":"message","text":"原来船停在港口也得一直用电。我还以为停下来就不用烧油了。"}
 {"id":"21","message_id":"M040","node":"AFTERNOON","kind":"message","text":"我选持平✊"}
 {"id":"21","message_id":"20261013-M057","node":"EVENING","kind":"message","text":"我觉得利率也同样重要。如果借钱的利息变了，企业能赚多少钱就得重新算账了。"}
@@ -302,21 +417,41 @@ id,name,nick,gender,age,occupation,investment_years,capital_scale,student_senior
 {"id":"21","message_id":"20261015-DOC-065","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"那这样看TLV是不是也一样？不能只看银行赚了多少钱，还得看利润到底从哪里来的。"}
 {"id":"21","message_id":"20261015-DOC-069","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"那当然了，我一直在关注这只股票，总不能研究到一半就不管了吧。再说昨晚的作业还没做完呢。"}
 {"id":"21","message_id":"20261015-DOC-103","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"今晚这样讲，我觉得更清楚了。\n我之前研究一只股票，总想尽快判断它会不会上涨。现在看来，还是应该先弄清楚自己为什么关注它，以及哪些情况会改变原来的想法。"}
+{"id":"21","message_id":"20261019-t.2dp2catgrjty-B046-0","node":"AFTERNOON","kind":"message","text":"上午才研究了BRD，现在TLV又公布回购消息了。这两家银行今天还真有得比较。"}
+{"id":"21","message_id":"20261020-t.6cabllp27a61-B009-0","node":"MORNING","kind":"message","text":"BET涨了，BET-FI却跌了。也不知道TLV和BRD今天能不能跟上。"}
+{"id":"21","message_id":"20261021-t.toc19bjz91ue-B020-0","node":"MORNING","kind":"message","text":"上涨当然是好事，但还是得看看背后有没有新的支撑因素。"}
 {"id":"22","message_id":"20261013-M052","node":"EVENING","kind":"message","text":"有些公司利润看着不错，但经营现金流却不理想，这种情况应该特别留意吧？"}
 {"id":"22","message_id":"20261013-M070","node":"EVENING","kind":"message","text":"先生晚安！"}
 {"id":"22","message_id":"20261014-DOC-052","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"有些公司利润看着不错，但经营现金流却不理想，这种情况应该特别留意吧？"}
 {"id":"22","message_id":"20261014-DOC-070","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"先生晚安！"}
+{"id":"22","message_id":"20261020-t.6cabllp27a61-B024-0","node":"MORNING","kind":"message","text":"看来先生的眼光确实很准，我到现在还记得先生周日晚上说过的话呢。"}
 {"id":"23","message_id":"20261013-M048","node":"EVENING","kind":"message","text":"先生晚上好！我有个疑问，公司经营得不错，为什么有时候股价还是会下跌呢？    🤔"}
 {"id":"23","message_id":"20261014-DOC-048","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"先生晚上好！我有个疑问，公司经营得不错，为什么有时候股价还是会下跌呢？🤔"}
 {"id":"23","message_id":"20261015-DOC-005","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"纳斯达克跌得比道琼斯多这么多，看来昨晚压力主要还是集中在科技股那边。"}
+{"id":"23","message_id":"20261019-t.2dp2catgrjty-B050-0","node":"AFTERNOON","kind":"message","text":"😂 我选B，上周科技股的表现让我有点没底。"}
+{"id":"23","message_id":"20261019-t.2dp2catgrjty-B056-0","node":"AFTERNOON","kind":"message","text":"纳指开盘就涨起来了？昨晚先生还特意说，这周要重点盯着科技股能不能止跌。我刚才可是选了B啊😂"}
+{"id":"23","message_id":"20261020-t.6cabllp27a61-B006-0","node":"MORNING","kind":"message","text":"收盘也没给我翻身的机会。昨天还觉得自己选得挺有根据。"}
+{"id":"23","message_id":"20261020-t.6cabllp27a61-B017-0","node":"MORNING","kind":"message","text":"昨天那道题猜错了，看来巴菲特也有失手之时啊😅"}
+{"id":"23","message_id":"20261020-t.6cabllp27a61-B057-0","node":"AFTERNOON","kind":"message","text":"昨天纳指还涨得挺漂亮，今天开盘又变脸了。"}
+{"id":"23","message_id":"20261021-t.toc19bjz91ue-B007-0","node":"MORNING","kind":"message","text":"昨天开盘那会儿我还想着纳指能不能涨回来。结果道指反倒表现最好。"}
+{"id":"23","message_id":"20261021-t.toc19bjz91ue-B012-0","node":"MORNING","kind":"message","text":"昨天美股开盘三只都跌，最后却是两涨一跌。光看开头，确实容易判断错。"}
 {"id":"24","message_id":"20261013-M049","node":"EVENING","kind":"message","text":"还有怎样判断一只股票当前的价格是否合理？"}
 {"id":"24","message_id":"20261014-DOC-049","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"还有怎样判断一只股票当前的价格是否合理？"}
 {"id":"24","message_id":"20261015-DOC-033","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"看看之前关注的那些消息，下午市场到底会怎么反应。"}
 {"id":"24","message_id":"20261015-DOC-038","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"我也在看这个。之前还在讨论能源和银行，现在BET涨幅又扩大了。"}
 {"id":"24","message_id":"20261015-DOC-048","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"眼光很敏锐，那今晚看看纳斯达克开盘以后是什么反应。如果半导体公司也继续下跌，就得看看是不是整个板块都在承压了。"}
+{"id":"24","message_id":"20261019-t.2dp2catgrjty-B059-0","node":"AFTERNOON","kind":"message","text":"黄金股啊，跟之前推荐的方向不太一样。"}
+{"id":"24","message_id":"20261020-t.6cabllp27a61-B040-0","node":"AFTERNOON","kind":"message","text":"你从昨天就盯着BRD，今天还放不下啊？😂"}
+{"id":"24","message_id":"20261020-t.6cabllp27a61-B051-0","node":"AFTERNOON","kind":"message","text":"你等BRD，我等NEM。看看咱们谁先等出点结果"}
+{"id":"24","message_id":"20261021-t.toc19bjz91ue-B024-0","node":"MORNING","kind":"message","text":"我对这家公司了解还真不多，虽然说对这家公司没信心，但是对社群的眼光还是有信心的👍（跟推荐买票）"}
+{"id":"25","message_id":"20261019-t.2dp2catgrjty-B035-0","node":"AFTERNOON","kind":"message","text":"FOJE这价格，又让我想起33附近卖掉的那部分了。😂 后续加仓的勇气还是社群的推荐。"}
+{"id":"25","message_id":"20261019-t.2dp2catgrjty-B089-0","node":"EVENING","kind":"message","text":"只能自己劝自己了😮‍💨"}
+{"id":"25","message_id":"20261020-t.6cabllp27a61-B094-0","node":"EVENING","kind":"message","text":"我以前就这样。当时群里还没发卖出通知呢，我自己就先卖了。后来看着它一直涨😡"}
+{"id":"25","message_id":"20261021-t.toc19bjz91ue-B029-0","node":"MORNING","kind":"message","text":"有点犹豫，不过还是想试试看。 （跟推荐买票）"}
 {"id":"26","message_id":"M061","node":"EVENING","kind":"reaction","text":"点赞👍 （给上句教授话点赞，不发信息表情）"}
 {"id":"26","message_id":"M069","node":"EVENING","kind":"message","text":"我认为突破后的确认更关键。价格短暂突破阻力位，并不代表趋势已经形成，还要观察后续能否站稳关键区域，以及成交量和价格走势是否相互配合。"}
 {"id":"26","message_id":"20261015-DOC-016","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"能源这块确实没有叫人失望。"}
+{"id":"26","message_id":"20261019-t.2dp2catgrjty-B025-0","node":"MORNING","kind":"message","text":"这段时间社群推荐的方向，感觉跟我自己之前的判断还挺一致的。"}
 {"id":"27","message_id":"M015","node":"AFTERNOON","kind":"message","text":"买东西也是这样，提前订能省心，但价格不合适，订两年反而把自己绑住了。"}
 {"id":"27","message_id":"M018","node":"AFTERNOON","kind":"message","text":"原来这中间还隔着不少事儿。"}
 {"id":"27","message_id":"M036","node":"AFTERNOON","kind":"message","text":"这个挺好玩呀😂 ，选上涨！看看今晚谁能猜对。"}
@@ -326,10 +461,13 @@ id,name,nick,gender,age,occupation,investment_years,capital_scale,student_senior
 {"id":"27","message_id":"20261015-DOC-035","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"每天都有新消息，总不能讨论完就过去了。🤔"}
 {"id":"27","message_id":"20261015-DOC-041","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"难怪之前一直提醒我们留意能源和银行板块的区别。现在再回头看，关注的方向还是挺有价值的。"}
 {"id":"27","message_id":"20261015-DOC-093","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"在这方面很多人都左右为难。"}
+{"id":"27","message_id":"20261021-t.toc19bjz91ue-B032-0","node":"MORNING","kind":"message","text":"这一只感觉要比昨天的靠谱很多。（跟推荐买票）"}
 {"id":"28","message_id":"20261015-DOC-012","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"原来国债也不是买完就完全不用操心了。"}
 {"id":"28","message_id":"20261015-DOC-018","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"哈哈，我一打开行情就看到指数是红的，还以为自己看错了。"}
 {"id":"28","message_id":"20261015-DOC-021","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"用电少了，水电发电量反而多了？我还以为这两个应该一起变呢。"}
 {"id":"28","message_id":"20261015-DOC-080","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"更多的时候是一种感觉，但是又不能一直凭借感觉做事。"}
+{"id":"28","message_id":"20261020-t.6cabllp27a61-B048-0","node":"AFTERNOON","kind":"message","text":"确实挺能折腾的。"}
+{"id":"28","message_id":"20261021-t.toc19bjz91ue-B030-0","node":"MORNING","kind":"message","text":"我也来了 （跟推荐买票）"}
 {"id":"29","message_id":"20261013-M019","node":"AFTERNOON","kind":"message","text":"太巧了！我刚好有关注这家公司"}
 {"id":"29","message_id":"20261013-M021","node":"AFTERNOON","kind":"message","text":"已经挂单了，现在排队等成交。我挂在 2.05 的价格，就等着成交了。"}
 {"id":"29","message_id":"20261014-DOC-019","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"太巧了！我刚好有关注这家公司"}
@@ -340,13 +478,22 @@ id,name,nick,gender,age,occupation,investment_years,capital_scale,student_senior
 {"id":"30","message_id":"M050","node":"EVENING","kind":"message","text":"我也来了！😄"}
 {"id":"30","message_id":"20261013-M033","node":"AFTERNOON","kind":"message","text":"40 台设备，看来炼油厂的检测工作也挺复杂啊。我以前还以为主要就是生产和销售               😂"}
 {"id":"30","message_id":"20261014-DOC-033","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"40台设备，看来炼油厂的检测工作也挺复杂啊。我以前还以为主要就是生产和销售😂"}
+{"id":"30","message_id":"20261020-t.6cabllp27a61-B014-0","node":"MORNING","kind":"message","text":"21分？你这是准备冲着奖品去了吧？😂 我还没认真算过自己有多少呢。"}
+{"id":"30","message_id":"20261020-t.6cabllp27a61-B064-0","node":"EVENING","kind":"message","text":"我来了！今天的题目可别太难啊。😂"}
 {"id":"31","message_id":"20261013-M066","node":"EVENING","kind":"message","text":"高位接盘太要命，利润没跟上直接套牢好几年，极难回本。"}
 {"id":"31","message_id":"20261014-DOC-066","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"高位接盘太要命，利润没跟上直接套牢好几年，极难回本。"}
+{"id":"31","message_id":"20261020-t.6cabllp27a61-B043-0","node":"AFTERNOON","kind":"message","text":"看归看，真买又是另一回事。BRD这两天涨得不错，我反倒不想着急了。"}
 {"id":"32","message_id":"20261013-M039","node":"EVENING","kind":"message","text":"晚上好，今天准备认真参加，希望别把题目想得太复杂了          😂"}
 {"id":"32","message_id":"20261014-DOC-039","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"晚上好，今天准备认真参加，希望别把题目想得太复杂了😂"}
+{"id":"32","message_id":"20261020-t.6cabllp27a61-B003-0","node":"MORNING","kind":"message","text":"偏偏道指没跟上。昨天选D的那几位，今天估计要失望了。😂"}
+{"id":"32","message_id":"20261020-t.6cabllp27a61-B080-0","node":"EVENING","kind":"message","text":"刚才还觉得一次300 RON不算多，没想到几次下来就有1,200了。"}
 {"id":"33","message_id":"M004","node":"AFTERNOON","kind":"message","text":"上午没怎么盯盘，刚回来。大家关注哪些股票？"}
 {"id":"33","message_id":"M010","node":"AFTERNOON","kind":"message","text":"不过买一只基金，不只是买这个品牌吧。其他公司占多少，也得看。"}
 {"id":"33","message_id":"M013","node":"AFTERNOON","kind":"message","text":"我先看它到底买了什么。有的基金名字挺直观，里面的比例却未必是自己想的那样。"}
+{"id":"33","message_id":"20261019-t.2dp2catgrjty-B058-0","node":"AFTERNOON","kind":"message","text":"NEM这只我准备跟一下。之前错过几次机会，这次先看能不能在参考区间内参与。"}
+{"id":"33","message_id":"20261019-t.2dp2catgrjty-B077-0","node":"EVENING","kind":"message","text":"那我今天关注的NEM也是这个道理吧？先看价格结构，不能到了参考区间就直接认定有机会。"}
+{"id":"33","message_id":"20261020-t.6cabllp27a61-B011-0","node":"MORNING","kind":"message","text":"想赚钱和想省事又不冲突。主要是线画了一堆，最后还不知道该不该动。"}
+{"id":"33","message_id":"20261020-t.6cabllp27a61-B056-0","node":"AFTERNOON","kind":"message","text":"终于开盘了！👀 不过纳指一开场就跌了0.37%，我关注的NEM现在是什么情况？"}
 {"id":"34","message_id":"20261015-DOC-024","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"我以前觉得能源股比较稳定，现在看来，即使是水电和核电企业，也有很多需要关注的经营因素。"}
 {"id":"34","message_id":"20261015-DOC-052","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"等等，利润增长这么多，股票反而还跌？😂 我以前一直觉得财报好，股价就应该涨。"}
 {"id":"34","message_id":"20261015-DOC-059","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"那我有个问题。如果想看看TLV现在有没有企稳，是先看5日、20日均线，还是直接看长期均线？"}
@@ -354,6 +501,8 @@ id,name,nick,gender,age,occupation,investment_years,capital_scale,student_senior
 {"id":"34","message_id":"20261015-DOC-066","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"我的意思是，规模这么大，应该更能扛住市场波动吧？"}
 {"id":"34","message_id":"20261015-DOC-078","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"话是这么说，可有时候研究了半天，股票已经涨上去了。你还在看呢"}
 {"id":"34","message_id":"20261015-DOC-090","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"听先生这么讲，我觉得自己以前确实有这个问题。看到一只股票不断上涨，就总想着是不是该先买一点，其他的以后再研究。"}
+{"id":"34","message_id":"20261019-t.2dp2catgrjty-B037-0","node":"AFTERNOON","kind":"message","text":"AA，冲啊！我可是一直看好你的！💪"}
+{"id":"34","message_id":"20261020-t.6cabllp27a61-B047-0","node":"AFTERNOON","kind":"message","text":"一天一个样😂"}
 {"id":"35","message_id":"M049","node":"EVENING","kind":"message","text":"晚上好！我已经准备好了，今晚认真听听先生怎么讲。"}
 {"id":"35","message_id":"M063","node":"EVENING","kind":"message","text":"对啊！这样的话，股价却死活冲不上去，是不是说明上面埋伏着一大堆人在拼命倒货抛售？"}
 {"id":"35","message_id":"20261013-M034","node":"AFTERNOON","kind":"message","text":"设备升级应该也要花不少钱吧？我比较想知道投入之后能提高多少效率。"}
@@ -370,6 +519,11 @@ id,name,nick,gender,age,occupation,investment_years,capital_scale,student_senior
 {"id":"35","message_id":"20261015-DOC-067","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"当然啊。不过美国银行和TLV又不是同一种经营结构，还是得看本地的情况。"}
 {"id":"35","message_id":"20261015-DOC-073","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"我还是坚持选B。"}
 {"id":"35","message_id":"20261015-DOC-092","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"也不能因为怕做错过就一直等？研究也不是越久越好，最后总得有个判断。"}
+{"id":"35","message_id":"20261019-t.2dp2catgrjty-B011-0","node":"MORNING","kind":"message","text":"涨价的时候倒是挺快，降价就得慢慢等。"}
+{"id":"35","message_id":"20261019-t.2dp2catgrjty-B043-0","node":"AFTERNOON","kind":"message","text":"可汇率天天变，难道你们每次报价都得重新算？"}
+{"id":"35","message_id":"20261019-t.2dp2catgrjty-B079-0","node":"EVENING","kind":"message","text":"先生！那如果价格突破箱顶又跌回附近，但没掉下去，而是一直横盘，是不是也得继续观察？"}
+{"id":"35","message_id":"20261020-t.6cabllp27a61-B054-0","node":"AFTERNOON","kind":"message","text":"收盘能不能保持住也得看。"}
+{"id":"35","message_id":"20261020-t.6cabllp27a61-B090-0","node":"EVENING","kind":"message","text":"可是先生，如果跌破99之后又涨回去了呢？那提前卖掉，不就白白错过后面的机会了吗？"}
 {"id":"37","message_id":"M034","node":"AFTERNOON","kind":"message","text":"我偏选下跌！虽然心里也希望它涨😂"}
 {"id":"37","message_id":"20261013-M044","node":"EVENING","kind":"message","text":"哈哈，我也选错误！不过先不说原因，等明天公布答案    😂"}
 {"id":"37","message_id":"20261014-DOC-044","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"哈哈，我也选错误！不过先不说原因，等明天公布答案😂"}
@@ -378,10 +532,17 @@ id,name,nick,gender,age,occupation,investment_years,capital_scale,student_senior
 {"id":"37","message_id":"20261015-DOC-074","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"哈哈，我上次也选了B。不过当时没你分析得这么清楚，就是觉得题目里有个陷阱。😂"}
 {"id":"37","message_id":"20261015-DOC-082","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"我先选我选B。不过说真的，如果身边的人都在讨论它，我可能还是会有点着急。😂"}
 {"id":"37","message_id":"20261015-DOC-101","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"我觉得这个方法挺适合我。因为有时候一旦觉得某只股票不错，看到不好的消息，就会下意识觉得应该没那么严重。😅"}
+{"id":"38","message_id":"20261019-t.2dp2catgrjty-B036-0","node":"AFTERNOON","kind":"message","text":"我当时确实犹豫，最后也只买了一点。现在看着上涨，难免想“要是多买些就好了”，可当时怕跌的也是我。"}
 {"id":"39","message_id":"20261013-M024","node":"AFTERNOON","kind":"message","text":"订单已经挂好了，刚刚显示成交了。"}
 {"id":"39","message_id":"20261014-DOC-024","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"订单已经挂好了，刚刚显示成交了。"}
+{"id":"39","message_id":"20261019-t.2dp2catgrjty-B049-0","node":"AFTERNOON","kind":"message","text":"我选D！反正是竞猜，又不是真下单，胆子大一点有什么关系？😂"}
+{"id":"39","message_id":"20261019-t.2dp2catgrjty-B057-0","node":"AFTERNOON","kind":"message","text":"道指现在还没跟上呢。今晚才刚开始，等收盘再说吧。\n📊 精选股票｜NEM\n发布日期： 2026 年 10 月 19 日\n股票名称（代码）： Newmont Corporation（NEM）\n所属市场： 纽约证券交易所（NYSE）\n参考买入区间：116.00–120.00 USD\n目标价位： 130.00–135.00 USD\n止损区间： 110.00–113.00 USD\n投资理由\n纽蒙特是全球黄金矿业龙头，金价上行带动企业盈利弹性充足，具备良好的抗通胀避险属性。股价前期大幅反弹后高位回落，回踩布林中轨获得支撑，MACD 空头动能逐步收敛，量能企稳。在地缘冲突、美元波动背景下，黄金资产的避险需求提供支撑，后续估值修复行情可期。"}
+{"id":"39","message_id":"20261019-t.2dp2catgrjty-B090-0","node":"EVENING","kind":"message","text":"先看价格在哪个范围运行，什么变化说明突破可能成立，又有什么变化说明原来的判断需要改。"}
+{"id":"39","message_id":"20261020-t.6cabllp27a61-B059-0","node":"AFTERNOON","kind":"message","text":"昨晚先生说的那些还真能用上。先看价格能不能稳住，再考虑下一步，确实比一看到涨跌就着急强。"}
 {"id":"40","message_id":"20261013-M040","node":"EVENING","kind":"message","text":"我也来了，先看看今晚出的是什么题目。"}
 {"id":"40","message_id":"20261014-DOC-040","node":"UNSPECIFIED_IN_SOURCE","kind":"message","text":"我也来了，先看看今晚出的是什么题目。"}
+{"id":"41","message_id":"20261020-t.6cabllp27a61-B019-0","node":"MORNING","kind":"message","text":"那什么时候可以参加活动呀？"}
+{"id":"41","message_id":"20261020-t.6cabllp27a61-B065-0","node":"EVENING","kind":"message","text":"晚上好，终于赶上晚上的活动了。"}
 [/ADOPTED_MEMORY_CONFIRMED]
 【WESTCOTT_RUNTIME_CONTEXT_V1.5.2_END】
 
