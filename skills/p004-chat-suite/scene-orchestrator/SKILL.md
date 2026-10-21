@@ -71,3 +71,17 @@ metadata:
 
 ## 8. ChatGPT新对话的能力边界
 当前会话可以依据本Skill工作；**仅在GitHub更新SKILL.md不会让任意新的ChatGPT对话自动加载私有代码。** 如需该触发词在ChatGPT常用项目长期可用，将 [CHATGPT-PROJECT-INSTRUCTIONS.md](CHATGPT-PROJECT-INSTRUCTIONS.md) 加到对应ChatGPT Project的项目说明，并确保GitHub和Google Docs连接可用。Codex可通过仓库 `.agents/skills/ellery-westcott-scene/SKILL.md` 发现入口。不要声称GitHub同步等于ChatGPT产品全局安装。
+
+## 9. Notion 已批准纠错实时对照｜强制前置
+Notion页面：https://app.notion.com/p/400fd480b91e816cbb9be0b315d2b976
+GitHub规则快照：references/notion-approved-corrections.json
+本项是**出稿时连接器读取与比对**，不是后台常驻同步。不得声称已安装Notion自动同步或GitHub CI已通过，除非实际获得结果。
+
+每次完整场次创作前：
+1. 通过已连接Notion读取页面中「机器可读的已确认纠错规则」JSON代码块；仅采用record_type=EW-CORRECTION且status=approved的规则。
+2. 读取仓库JSON快照并按id逐项比较状态、场次、禁用短语、必需主题；若Notion有新增或更新，必须先将已确认规则同步到仓库快照，或标记CORRECTION_DRIFT并阻断正式出稿，不得悄悄继续沿用旧快照。
+3. Notion不可访问则标记NOTION_SOURCE_BLOCKED；允许做清楚标为“未完成Notion实时核验”的草案，但不能宣称全部通过。
+4. 每次上午稿实际使用 --scene morning 和最新快照运行validate_scene.py；其结果只有“静态检查”，不能代替五Skill语义验收、真实财经新闻与Google Docs校验。
+5. 未经用户明确同意，不将候选稿写成已采用剧情；Notion与Docs具有不同职责。
+
+**重要**：连接器读取必须每次实际调用，仓库修改不等于ChatGPT自动执行。若需要无人值守实时同步，仍需另设已授权Notion API/受托运行环境，现阶段没有部署。
