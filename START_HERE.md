@@ -1,3 +1,7 @@
+## 自动化总控提示（2026-10-22）
+
+如果本轮来自ChatGPT自动化、Project或Codex任务，先读取仓库根 `AUTOMATION-CONTROL-CENTER.md`，再读取本入口和场景总Skill；明确每个关键来源本轮是否确实读取成功，没有阅读证据不能声称五Skill已强制执行。本总控与跨窗口启动属于共享入口，而不是对其他聊天窗口的系统级管理权限。
+
 ## 2026-10-21 上午最新SNN剧情（v2.9）
 - 必须重新读取正式Google Docs 10/21日期页签，不能把历史快照称为实时最新。审读当时85段，结尾27女在助理“下午见”后继续回复。
 - [上午实际剧情与整改](skills/p004-chat-suite/references/20261021-am-snn-audit-v2.9.md)；`memory/member-stock/ledger-v2.json`优先于旧v1查询新SNN状态；新增验证`python scripts/member_stock_ledger_v2.py`。
