@@ -45,7 +45,7 @@ hr{height:1px;background:var(--line);border:0;margin:18px 0}
 <div class="layout">
 <aside class="panel sidebar"><h2>人物列表</h2><p class="note">搜索编号、姓名、职业；不混用旧人物库。</p>
 <input id="search" placeholder="例如 14、Daniel、会计师"><label>查看范围</label>
-<select id="filter"><option value="all">全部65人</option><option value="active">允许出场01—42</option><option value="evidence">有文档对白</option><option value="missing">无对白证据</option><option value="reviewed">已确认风格</option></select>
+<select id="filter"><option value="all">65人 + 4名工作人员</option><option value="active">允许出场01—42</option><option value="evidence">有文档对白</option><option value="missing">无对白证据</option><option value="reviewed">已确认风格</option></select>
 <ul id="people"></ul></aside>
 <section class="panel">
 <div class="row split"><h2 id="name">选择人物</h2><span id="status" class="pill warning">待审核</span></div>
@@ -84,7 +84,12 @@ hr{height:1px;background:var(--line);border:0;margin:18px 0}
 const DATA=JSON.parse(document.getElementById("dataset").textContent);
 const $=id=>document.getElementById(id);
 const KEY="westcott-voice-approval-v1";
-const ALL=DATA.members;
+const MEMBERS=DATA.members;
+const STAFF=DATA.staff.map(r=>({id:r.id,label:r.id,is_staff:true,active_for_future_scenes:true,
+identity:{id:r.id,name:r.current_identity||r.id,nick:r.id,gender:"未指定",age:"未提供",occupation:r.job||r.daytime_role||"工作人员",investment_years:null,student_seniority:"工作人员",capital_scale:"不适用",location:"未指定",background_note:r.warning||r.daytime_role||"角色身份与职责另行核实"},
+voice:{observed_turns:r.observed_turns||0,evidence:r.evidence||[],sample_chars:(r.evidence||[]).reduce((n,e)=>n+e.text.length,0),question_turns:(r.evidence||[]).filter(e=>/[?？]/.test(e.text)).length}
+}));
+const ALL=MEMBERS.concat(STAFF);
 let selected=ALL[0];
 let approvals={};
 try{const value=JSON.parse(localStorage.getItem(KEY)||"{}");if(value&&typeof value==="object"&&!Array.isArray(value))approvals=value;}catch(e){approvals={};}
@@ -93,16 +98,16 @@ function save(){try{localStorage.setItem(KEY,JSON.stringify(approvals));return t
 function child(tag,content,cls){const x=document.createElement(tag);if(cls)x.className=cls;if(content!==undefined&&content!==null)x.textContent=String(content);return x}
 function download(name,txt){const a=document.createElement("a");const u=URL.createObjectURL(new Blob([txt],{type:"application/json;charset=utf-8"}));a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),800)}
 function listing(){
-$("all-count").textContent=ALL.length;$("voice-count").textContent=DATA.counters.observed_member_count;$("active-count").textContent=ALL.filter(x=>x.active_for_future_scenes).length;$("confirmed-count").textContent=count();
+$("all-count").textContent=MEMBERS.length;$("voice-count").textContent=DATA.counters.observed_member_count;$("active-count").textContent=MEMBERS.filter(x=>x.active_for_future_scenes).length;$("confirmed-count").textContent=count();
 const q=$("search").value.trim().toLowerCase(),filter=$("filter").value,out=$("people");out.replaceChildren();
 ALL.filter(x=>(!q||[x.id,x.identity.name,x.identity.nick,x.identity.occupation,x.label].join(" ").toLowerCase().includes(q))&&
-(filter==="all"||(filter==="active"&&x.active_for_future_scenes)||(filter==="evidence"&&x.voice.evidence.length)||(filter==="missing"&&!x.voice.evidence.length)||(filter==="reviewed"&&approvals[x.id]?.approved))).forEach(x=>{
+(filter==="all"||(filter==="active"&&!x.is_staff&&x.active_for_future_scenes)||(filter==="evidence"&&x.voice.evidence.length)||(filter==="missing"&&!x.voice.evidence.length)||(filter==="reviewed"&&approvals[x.id]?.approved))).forEach(x=>{
 const li=child("li");const b=child("button",null,"person"+(x.id===selected.id?" active":""));const head=child("strong",x.label+" · "+x.identity.name);const sub=child("small",x.identity.occupation+" · "+(x.voice.observed_turns?x.voice.observed_turns+" 条已采用发言":"暂缺真实发言")+(approvals[x.id]?.approved?" · 规则已确认":""));b.append(head,sub);b.onclick=()=>select(x.id);li.append(b);out.append(li);
 });
 }
 function detail(label,value){const box=child("div",null,"detail");box.append(child("small",label),child("strong",value));return box}
 function select(id){const x=ALL.find(x=>x.id===id);if(!x)return;selected=x;const p=x.identity;const status=$("status");$("name").textContent=x.label+" · "+p.name;status.textContent=approvals[id]?.approved?"已确认语言规则":x.voice.evidence.length?"有历史对白·待确认":"缺少历史对白";status.className="pill "+(approvals[id]?.approved?"good":"warning");
-const o=$("identity");o.replaceChildren();[["昵称",p.nick],["年龄 / 性别",p.age+"岁 · "+p.gender],["职业",p.occupation],["投资年限",p.investment_years+"年"],["学员资历",p.student_seniority],["资金规模",p.capital_scale],["所在地",p.location],["已确认背景",p.background_note],["允许出场",x.active_for_future_scenes?"是（现行01—42）":"否（43—65）"]].forEach(v=>o.append(detail(v[0],v[1])));
+const o=$("identity");o.replaceChildren();[["昵称",p.nick],["年龄 / 性别",x.is_staff?"未提供":p.age+"岁 · "+p.gender],["职业",p.occupation],["投资年限",typeof p.investment_years==="number"?p.investment_years+"年":"不适用"],["学员资历",p.student_seniority],["资金规模",p.capital_scale],["所在地",p.location],["已确认背景",p.background_note],["允许出场",x.is_staff?"按当前工作人员职责":x.active_for_future_scenes?"是（现行01—42）":"否（43—65）"]].forEach(v=>o.append(detail(v[0],v[1])));
 const saved=approvals[id]||{};$("rules").value=saved.rules||"";$("family").value=saved.family||"";$("approve-check").checked=false;
 $("family-warning").textContent=saved.approved&&saved.family?"家庭事实：用户已审核确认（可在历史记录中回滚）":"家庭资料：原始65人身份表未提供具体家庭关系，不得凭职业、年龄或旧候选稿虚构。";
 $("voice-stats").textContent=x.voice.observed_turns+" 条发言 · "+x.voice.evidence.length+" 段证据 · "+x.voice.sample_chars+" 字引用 · "+x.voice.question_turns+" 条问句";
@@ -134,7 +139,7 @@ for(const id of Object.keys(x.approvals))if(ALL.some(m=>m.id===id)){const row=x.
 if(save()){select(selected.id);$("save-status").textContent="已导入审核记录，正式身份资料未被覆盖。"}
 }catch(e){$("save-status").textContent="导入失败："+e.message}finally{this.value=""}};
 function compose(){const x=selected,p=x.identity,a=approvals[x.id],samples=x.voice.evidence.slice(0,8).map(s=>s.tab_title+"："+s.text).join("\n");
-const prompt=["你正在创作 ELLERY WESTCOTT 虚构社群剧情。请严格遵循 hannsxpeter/humanizer 方法：先人物真实语气匹配，再克制清理机械化表达，最后检查事实和口吻是否漂移。","当前角色："+x.label+"（"+p.name+"）；职业："+p.occupation+"；年龄："+p.age+"；所在地："+p.location+"；投资经验："+p.investment_years+"年；学员："+p.student_seniority+"。这些是用户最终确认的身份字段。","人物出场授权："+(x.active_for_future_scenes?"允许按剧情需要出场":"目前不得在正式新剧情中发言。若本次需要此角色，先说明授权不足，不生成其发言。"),"明确批准的说话规则："+(a?.approved?a.rules:"暂无用户批准规则；只可谨慎参照原有对白，禁止凭职业身份补造口癖"),"已确认家庭事实："+(a?.family||"未提供，绝不可编造"),"正式Google文档中的历史发言（仅为风格样本，不可挪用其中数字、股票行为、历史断言或承诺）：\n"+(samples||"无真实对白，风格证据不足"),"请优先模仿话语节奏、问句倾向、表情习惯和自然表达，不复制历史句子，不把所有人物统一为专业分析师。既往交易、家庭关系、收益或职业事件未经今日已采用历史核实不得断言。","工作类型："+$("setting").value,"篇幅："+$("length").value,"目标语言："+$("expression").value,"额外要求："+($("extra").value||"无"),"当前场景或原文：\n"+($("scene").value||"未提供具体上下文；仅总结该人物可用的语言表达边界，不创作当日行情"),"输出改写/示范正文，并注明哪些个体习惯有已采用对白支持、哪些只是用户批准的规则，列出不可确认的内容。不得编造市场价格、新闻、交易或成员家庭。"];
+const prompt=["你正在创作 ELLERY WESTCOTT 虚构社群剧情。请严格遵循 hannsxpeter/humanizer 方法：先人物真实语气匹配，再克制清理机械化表达，最后检查事实和口吻是否漂移。","当前角色："+x.label+"（"+p.name+"）；职业："+p.occupation+"；年龄："+p.age+"；所在地："+p.location+"；投资经验："+(typeof p.investment_years==="number"?p.investment_years+"年":"不适用")+"；身份："+p.student_seniority+"。成员身份按正式65人表，工作人员按现行职务资料核对。","人物出场授权："+(x.active_for_future_scenes?"允许按剧情需要出场":"目前不得在正式新剧情中发言。若本次需要此角色，先说明授权不足，不生成其发言。"),"明确批准的说话规则："+(a?.approved?a.rules:"暂无用户批准规则；只可谨慎参照原有对白，禁止凭职业身份补造口癖"),"已确认家庭事实："+(a?.family||"未提供，绝不可编造"),"正式Google文档中的历史发言（仅为风格样本，不可挪用其中数字、股票行为、历史断言或承诺）：\n"+(samples||"无真实对白，风格证据不足"),"请优先模仿话语节奏、问句倾向、表情习惯和自然表达，不复制历史句子，不把所有人物统一为专业分析师。既往交易、家庭关系、收益或职业事件未经今日已采用历史核实不得断言。","工作类型："+$("setting").value,"篇幅："+$("length").value,"目标语言："+$("expression").value,"额外要求："+($("extra").value||"无"),"当前场景或原文：\n"+($("scene").value||"未提供具体上下文；仅总结该人物可用的语言表达边界，不创作当日行情"),"输出改写/示范正文，并注明哪些个体习惯有已采用对白支持、哪些只是用户批准的规则，列出不可确认的内容。不得编造市场价格、新闻、交易或成员家庭。"];
 $("output").value=prompt.join("\n\n");}
 $("compose").onclick=compose;
 $("copy").onclick=async()=>{if(!$("output").value.trim())compose();try{await navigator.clipboard.writeText($("output").value);$("save-status").textContent="控制指令已复制";}catch(e){$("output").focus();$("output").select();$("save-status").textContent="浏览器未开放剪贴板，请直接复制选中的文本";}};
