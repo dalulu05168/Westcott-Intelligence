@@ -108,7 +108,7 @@ def load_context(text: str, root: Path = ROOT, *, evidence_limit: int = 9) -> di
 
 def build_catalog(root: Path = ROOT) -> dict:
     """Enumerate and identity-check all 65 profiles and evidence statuses."""
-    sample = "\\n".join(f"{n:02d}：编号检查" for n in range(1, 66))
+    sample = "\n".join(f"{n:02d}：编号检查" for n in range(1, 66))
     result = load_context(sample, root=root, evidence_limit=0)
     members = []
     for item in result["people"].values():
