@@ -11,27 +11,20 @@
       "剩余数量未知"
     ],
     "evidence_ids": [
-      "20261016-t.gbfri5r8vs3o-B021-0",
-      "20261016-t.gbfri5r8vs3o-B025-0",
-      "20261016-t.gbfri5r8vs3o-B029-0",
-      "20261016-t.gbfri5r8vs3o-B032-0"
-    ],
-    "reviewer": "codex-editor-source-read-20261017",
-    "evidence_support_reviewed": true,
-    "real_trade_verified": false,
-    "evidence_fingerprints": {
-      "20261016-t.gbfri5r8vs3o-B021-0": "e522b0b847e3aa5df868dcf3c2556a8bbd79031f77b10f60332dc58c2d2eafbf",
-      "20261016-t.gbfri5r8vs3o-B025-0": "c3d80d274dc018a5c79532aef9be5f39ba1389b66267d3c932c7bcca2f7d1b9d",
-      "20261016-t.gbfri5r8vs3o-B029-0": "f0d96882d8ed400a89a77ebfa33bbc814560054ece08361b8448a9608a5b1807",
-      "20261016-t.gbfri5r8vs3o-B032-0": "758232d784d711183d353886738a45372fb8bd9b3ab5606f22c95f8a358c4655"
-    },
-    "original_evidence_ids": [
       "20261016-t.gbfri5r8vs3o-B020-0",
       "20261016-t.gbfri5r8vs3o-B024-0",
       "20261016-t.gbfri5r8vs3o-B028-0",
       "20261016-t.gbfri5r8vs3o-B031-0"
     ],
-    "reference_status": "EXACT_CONTENT_RELINKED_AFTER_SOURCE_INSERTION"
+    "reviewer": "codex-editor-source-read-20261017",
+    "evidence_support_reviewed": true,
+    "real_trade_verified": false,
+    "evidence_fingerprints": {
+      "20261016-t.gbfri5r8vs3o-B020-0": "e522b0b847e3aa5df868dcf3c2556a8bbd79031f77b10f60332dc58c2d2eafbf",
+      "20261016-t.gbfri5r8vs3o-B024-0": "c3d80d274dc018a5c79532aef9be5f39ba1389b66267d3c932c7bcca2f7d1b9d",
+      "20261016-t.gbfri5r8vs3o-B028-0": "f0d96882d8ed400a89a77ebfa33bbc814560054ece08361b8448a9608a5b1807",
+      "20261016-t.gbfri5r8vs3o-B031-0": "758232d784d711183d353886738a45372fb8bd9b3ab5606f22c95f8a358c4655"
+    }
   },
   {
     "id": "38-FOJE-20261016",
@@ -41,21 +34,16 @@
     "quantity": null,
     "summary": "上午称买进一些，下午明确FOJE；两次描述同一参与状态，不推断为两次买入。忙整理教学材料，有犹豫和不想错过的情绪。",
     "evidence_ids": [
-      "20261016-t.gbfri5r8vs3o-B026-0",
-      "20261016-t.gbfri5r8vs3o-B047-0"
+      "20261016-t.gbfri5r8vs3o-B025-0",
+      "20261016-t.gbfri5r8vs3o-B046-0"
     ],
     "reviewer": "codex-editor-source-read-20261017",
     "evidence_support_reviewed": true,
     "real_trade_verified": false,
     "evidence_fingerprints": {
-      "20261016-t.gbfri5r8vs3o-B026-0": "998eee645832e18b91bc8c162175bbb7f07ae93850082b2dd3f487413dfabb82",
-      "20261016-t.gbfri5r8vs3o-B047-0": "c0b770ff26ef3504c6f4f5da2466677b3ff1b7a490612a14db2d0f941478ed33"
-    },
-    "original_evidence_ids": [
-      "20261016-t.gbfri5r8vs3o-B025-0",
-      "20261016-t.gbfri5r8vs3o-B046-0"
-    ],
-    "reference_status": "EXACT_CONTENT_RELINKED_AFTER_SOURCE_INSERTION"
+      "20261016-t.gbfri5r8vs3o-B025-0": "998eee645832e18b91bc8c162175bbb7f07ae93850082b2dd3f487413dfabb82",
+      "20261016-t.gbfri5r8vs3o-B046-0": "c0b770ff26ef3504c6f4f5da2466677b3ff1b7a490612a14db2d0f941478ed33"
+    }
   },
   {
     "id": "34-AA-20261016",
@@ -65,21 +53,16 @@
     "quantity": null,
     "summary": "AA研究之后自述已买一点，晚间再次确认，担心错过；数量、盈利、后续卖出未知。标的关联由上下文审核。",
     "evidence_ids": [
-      "20261016-t.gbfri5r8vs3o-B074-0",
-      "20261016-t.gbfri5r8vs3o-B080-0"
+      "20261016-t.gbfri5r8vs3o-B073-0",
+      "20261016-t.gbfri5r8vs3o-B079-0"
     ],
     "reviewer": "codex-editor-source-read-20261017",
     "evidence_support_reviewed": true,
     "real_trade_verified": false,
     "evidence_fingerprints": {
-      "20261016-t.gbfri5r8vs3o-B074-0": "66de89628b5a190dca4f99a8e537751012350e4368bb064a646ab6bdf385092e",
-      "20261016-t.gbfri5r8vs3o-B080-0": "27a90b97490cc85f39c33be0777ebec58570536456a5900cb0c1ef3595319e76"
-    },
-    "original_evidence_ids": [
-      "20261016-t.gbfri5r8vs3o-B073-0",
-      "20261016-t.gbfri5r8vs3o-B079-0"
-    ],
-    "reference_status": "EXACT_CONTENT_RELINKED_AFTER_SOURCE_INSERTION"
+      "20261016-t.gbfri5r8vs3o-B073-0": "66de89628b5a190dca4f99a8e537751012350e4368bb064a646ab6bdf385092e",
+      "20261016-t.gbfri5r8vs3o-B079-0": "27a90b97490cc85f39c33be0777ebec58570536456a5900cb0c1ef3595319e76"
+    }
   },
   {
     "id": "40-AA-20261016",
@@ -89,18 +72,14 @@
     "quantity": null,
     "summary": "放量突破或回踩42美元站稳后再考虑；没有自述成交。",
     "evidence_ids": [
-      "20261016-t.gbfri5r8vs3o-B075-0"
+      "20261016-t.gbfri5r8vs3o-B074-0"
     ],
     "reviewer": "codex-editor-source-read-20261017",
     "evidence_support_reviewed": true,
     "real_trade_verified": false,
     "evidence_fingerprints": {
-      "20261016-t.gbfri5r8vs3o-B075-0": "c4c922731fe4716d4d267f99f6e94e37fd58bfffbae4e379baa1652e4f56b713"
-    },
-    "original_evidence_ids": [
-      "20261016-t.gbfri5r8vs3o-B074-0"
-    ],
-    "reference_status": "EXACT_CONTENT_RELINKED_AFTER_SOURCE_INSERTION"
+      "20261016-t.gbfri5r8vs3o-B074-0": "c4c922731fe4716d4d267f99f6e94e37fd58bfffbae4e379baa1652e4f56b713"
+    }
   },
   {
     "id": "MACD-20261016-completed",
@@ -110,26 +89,19 @@
     "homework": "NO_SEPARATE_ASSIGNMENT_CONFIRMED_AT_CLOSE",
     "summary": "DIF、DEA、柱状图、交叉、零轴、背离已讲，最后举例后告别；不把课程计划或图片台词当实际图片送达。",
     "evidence_ids": [
-      "20261016-t.gbfri5r8vs3o-B085-0",
-      "20261016-t.gbfri5r8vs3o-B087-0",
-      "20261016-t.gbfri5r8vs3o-B111-0",
-      "20261016-t.gbfri5r8vs3o-B112-1"
-    ],
-    "reviewer": "codex-editor-source-read-20261017",
-    "evidence_support_reviewed": true,
-    "real_trade_verified": false,
-    "evidence_fingerprints": {
-      "20261016-t.gbfri5r8vs3o-B085-0": "872ba02a47cc68cdd9fe8de3a14d667a9644d4dfcbaa8db797561105af702f97",
-      "20261016-t.gbfri5r8vs3o-B087-0": "7abfefd2cf92de5566fd82352f4b8c8fdb37cb093309054d1ca0e3bf02d527bc",
-      "20261016-t.gbfri5r8vs3o-B111-0": "a8e53ac6afd6a7792f5434fbf0f95d280f5bdff60cc2034f8b45784cf68ba90d",
-      "20261016-t.gbfri5r8vs3o-B112-1": "8eb67a420f11cfb6f3ad352c7e16f8bd043257cc1e31b9ac68d128fb7c9eaae9"
-    },
-    "original_evidence_ids": [
       "20261016-t.gbfri5r8vs3o-B084-0",
       "20261016-t.gbfri5r8vs3o-B086-0",
       "20261016-t.gbfri5r8vs3o-B110-0",
       "20261016-t.gbfri5r8vs3o-B111-1"
     ],
-    "reference_status": "EXACT_CONTENT_RELINKED_AFTER_SOURCE_INSERTION"
+    "reviewer": "codex-editor-source-read-20261017",
+    "evidence_support_reviewed": true,
+    "real_trade_verified": false,
+    "evidence_fingerprints": {
+      "20261016-t.gbfri5r8vs3o-B084-0": "872ba02a47cc68cdd9fe8de3a14d667a9644d4dfcbaa8db797561105af702f97",
+      "20261016-t.gbfri5r8vs3o-B086-0": "7abfefd2cf92de5566fd82352f4b8c8fdb37cb093309054d1ca0e3bf02d527bc",
+      "20261016-t.gbfri5r8vs3o-B110-0": "a8e53ac6afd6a7792f5434fbf0f95d280f5bdff60cc2034f8b45784cf68ba90d",
+      "20261016-t.gbfri5r8vs3o-B111-1": "8eb67a420f11cfb6f3ad352c7e16f8bd043257cc1e31b9ac68d128fb7c9eaae9"
+    }
   }
 ]

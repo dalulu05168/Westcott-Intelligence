@@ -38,10 +38,14 @@
   "base_remote_commit": "840d90c277e2b93a9bad686c886fbe9656da1120",
   "content_review": "COMPLETED_WITH_EXPLICIT_SOURCE_UNCERTAINTIES",
   "repository_validation": "PASS",
-  "ledger_tests": "13_PASS",
+  "ledger_tests": "11_PASS_AFTER_V2_PRIORITY_MERGE",
   "continuity_tests": "31_PASS",
   "archive_reproducibility": "PASS",
   "prepared_prompts": "SYNCHRONIZED_NOT_APPLIED_ONLINE",
   "remote_sync": "VERIFY_COMMIT_SEPARATELY",
-  "global_codex_memory_updated": false
+  "global_codex_memory_updated": false,
+  "merged_remote_base": "f9300e9",
+  "v2_ledger_validation": "PASS_SIX_FOLLOW_ONE_WATCH",
+  "authoritative_SNN_ledger": "memory/member-stock/ledger-v2.json",
+  "v1_policy": "PRESERVE_ORIGINAL_FOUR_RECORDS_NO_DOUBLE_COUNT"
 }

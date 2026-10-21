@@ -306,10 +306,10 @@
       "evidence_support_reviewed": true,
       "real_trade_verified": false,
       "evidence_fingerprints": {
-        "20261016-t.gbfri5r8vs3o-B021-0": "e522b0b847e3aa5df868dcf3c2556a8bbd79031f77b10f60332dc58c2d2eafbf",
-        "20261016-t.gbfri5r8vs3o-B025-0": "c3d80d274dc018a5c79532aef9be5f39ba1389b66267d3c932c7bcca2f7d1b9d",
-        "20261016-t.gbfri5r8vs3o-B029-0": "f0d96882d8ed400a89a77ebfa33bbc814560054ece08361b8448a9608a5b1807",
-        "20261016-t.gbfri5r8vs3o-B032-0": "758232d784d711183d353886738a45372fb8bd9b3ab5606f22c95f8a358c4655"
+        "20261016-t.gbfri5r8vs3o-B020-0": "e522b0b847e3aa5df868dcf3c2556a8bbd79031f77b10f60332dc58c2d2eafbf",
+        "20261016-t.gbfri5r8vs3o-B024-0": "c3d80d274dc018a5c79532aef9be5f39ba1389b66267d3c932c7bcca2f7d1b9d",
+        "20261016-t.gbfri5r8vs3o-B028-0": "f0d96882d8ed400a89a77ebfa33bbc814560054ece08361b8448a9608a5b1807",
+        "20261016-t.gbfri5r8vs3o-B031-0": "758232d784d711183d353886738a45372fb8bd9b3ab5606f22c95f8a358c4655"
       },
       "original_evidence_ids": [
         "20261016-t.gbfri5r8vs3o-B020-0",

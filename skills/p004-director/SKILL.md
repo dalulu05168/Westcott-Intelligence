@@ -3,6 +3,15 @@ name: p004-director
 description: 五合一总导演，保证节点、角色、剧情连续性、采用来源与信息审稿。
 ---
 
+## v2.9｜2026-10-21 上午正式剧情与SNN参与整改（优先执行）
+
+每轮续写必须重新读取最新Google Docs日期页签，再读 `skills/p004-chat-suite/references/20261021-am-snn-audit-v2.9.md` 与 `memory/member-stock/ledger-v2.json`。10月21日上午SNN**用户在正式剧情中编辑标注**跟推荐的成员是01、14、24、25、27、28；17女明确观望、09男仅调侃。编辑标注**不是证券成交或积分已入账证据**；不得虚构买入价、股数、盈亏、订单时间。旧FOJE、AA记录保留，新增记录不得覆盖旧状态。
+
+人物原话优先：24男对公司没信心但信社群、25男犹豫、28男短句参与、17女观望；不得把所有角色写成专业分析师。两名Gheorghe是09/24，两名Daniel是14/28；编号只用作发言标签，称呼应自然、不混淆同名。Gabriela Ion（顾问，未来核对积分）不同于01男Ion Dumitrescu。27女的跟推荐发言出现在资讯助理“上午到这里、下午见”之后；不能私改顺序或宣布已发积分。正式稿截至85段未采用10/21新新闻，昨天竞猜也尚未正式公布答案，不能将候选草稿写成已经播报。现任先生仍为David Miller。禁止自动群发与实盘成交虚报。
+
+
+
+
 ## 2026-10-21｜先生出场新身份
 
 导演将今后「先生」固定为 David Miller，晚间出场仍按原时段。需先读 [2026-10-21先生身份](../p004-chat-suite/references/staff-and-role-identity-20261021.md)；不回写旧剧情。
@@ -69,4 +78,4 @@ description: 五合一总导演，保证节点、角色、剧情连续性、采�
 
 ## 2026-10-21 上午正式稿记忆与整改
 
-本轮续写读取[上午具体整改与参与边界](../p004-chat-suite/references/writing-review-20261021.md)，与既有v2.6参与记录、v2.7表情、v2.8复盘共同执行。最新来源memory/sources/google-doc-20261021-native.json；SNN作者标注跟票见memory/member-stock/ledger-v1.json，未知成交信息不补造。
+本轮续写读取[上午具体整改与参与边界](../p004-chat-suite/references/writing-review-20261021.md)，与既有v2.6参与记录、v2.7表情、v2.8复盘共同执行。最新来源memory/sources/google-doc-20261021-native.json；SNN作者标注跟票见memory/member-stock/ledger-v2.json（当日优先），未知成交信息不补造。

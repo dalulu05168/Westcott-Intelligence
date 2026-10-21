@@ -4,6 +4,12 @@
 - SNN六位作者标注跟票成员按原句入现有台账，成交信息未知；不冒充实盘。
 - 原五Skill接入具体写作整改，保留远端David身份、01—42出场与09:00早间规则。
 - 保留原生快照、非正式页签和称呼异常；未启用发送或修改线上定时任务。
+## 2026-10-21｜五Skill SNN上午参与状态及写作整改 v2.9
+
+- 实际核对正式Docs t.toc19bjz91ue 修订`AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU`，85段；对前85段单独存档问题及剧情来源（`skills/p004-chat-suite/references/20261021-am-snn-audit-v2.9.md`）。
+- 新建`memory/member-stock/ledger-v2.json`，原样保留v1旧FOJE/AA四条，逐人记录SNN编辑标注跟推荐01、14、24、25、27、28及17女观望；未经验证交易不写已成交或积分。
+- 五Skill及启动规则核查Ion顾问/01号身份和Gheorghe、Daniel同名，保留27女闭群后的发言原顺序，旧稿未完成新闻/竞猜不能伪称已发，继续按David Miller先生执行。
+- 没有修改Google Docs、实际群发送、积分发放、交易执行；未来必须重读文档修订，旧账本v1与其他日未完整导入历史保留。
 
 ## 2026-10-21｜更换现任先生为 David Miller
 
