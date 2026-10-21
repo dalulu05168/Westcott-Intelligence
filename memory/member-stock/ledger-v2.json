@@ -327,6 +327,21 @@
       "outcome_or_position_estimate": null,
       "reviewer": "assistant-20261021-direct-official-doc-read",
       "notes": "助理第83段已说上午结束后，27女才追加回复"
+    },
+    {
+      "id": "18-SNN-20261021-FOLLOW",
+      "member_id": "18",
+      "story_date": "2026-10-21",
+      "symbol": "SNN",
+      "exchange": "BVB",
+      "action": "FOLLOW_RECOMMENDATION_EDITOR_ANNOTATED_UNVERIFIED_EXECUTION",
+      "source_class": "USER_ANNOTATED_ADOPTED_STORY_MEMBER_STATEMENT",
+      "story_participation_confirmed": true,
+      "real_trade_verified": false,
+      "reported_quantity": null,
+      "reported_price": null,
+      "source_document_id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
+      "notes": "10月21日正式剧情第91段标注跟推荐买票；按用户确认记录剧情参与，不推断真实成交、数量或价格。"
     }
   ],
   "by_member": {
@@ -342,7 +357,9 @@
     "17": [
       "17-SNN-20261021-AM-WATCH"
     ],
-    "18": [],
+    "18": [
+      "18-SNN-20261021-FOLLOW"
+    ],
     "19": [],
     "20": [],
     "21": [],
