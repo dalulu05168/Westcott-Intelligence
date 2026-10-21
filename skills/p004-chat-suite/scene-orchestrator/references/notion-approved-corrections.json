@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "source": {
+    "provider": "Notion",
+    "page_id": "400fd480-b91e-816c-bb9b-e0b315d2b976",
+    "url": "https://app.notion.com/p/400fd480b91e816cbb9be0b315d2b976"
+  },
+  "sync_mode": "manual_snapshot",
+  "synced_at": "2026-10-22",
+  "rules": [
+    {
+      "id": "EW-MORNING-001",
+      "status": "approved",
+      "scene": "morning",
+      "severity": "blocker",
+      "title": "上午开群不得以昨晚课程复盘为主线",
+      "forbidden_lead_terms": [
+        "昨晚的学习收获",
+        "昨晚课程的收获",
+        "先聊聊昨晚",
+        "回顾昨晚的课程",
+        "复盘昨晚的课程",
+        "昨天晚上.*课程"
+      ],
+      "required_lead_terms": [
+        "美股",
+        "罗马尼亚",
+        "盘前",
+        "市场",
+        "财经",
+        "隔夜"
+      ],
+      "notes": "静态关键词仅初筛，不能证明财经事实或场次质量；人工复核仍必需。"
+    }
+  ]
+}
