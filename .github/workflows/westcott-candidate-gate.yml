@@ -1,0 +1,33 @@
+name: Westcott Candidate Static Gate
+
+on:
+  push:
+    paths:
+      - "automation/submissions/**"
+      - "scripts/gate_candidate.py"
+      - "scripts/tests/test_gate_candidate.py"
+      - ".github/workflows/westcott-candidate-gate.yml"
+  pull_request:
+    paths:
+      - "automation/submissions/**"
+      - "scripts/gate_candidate.py"
+      - "scripts/tests/test_gate_candidate.py"
+      - ".github/workflows/westcott-candidate-gate.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-candidate:
+    name: Validate candidate bundles (static only)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Test fail-closed receipt gate
+        run: python -m unittest discover -s scripts/tests -p "test_gate_candidate.py" -v
+      - name: Block invalid bundled candidate drafts
+        run: python scripts/gate_candidate.py --check-all
