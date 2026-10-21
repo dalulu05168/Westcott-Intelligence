@@ -1,0 +1,265 @@
+{
+  "status": "OFFICIAL_INTAKE_UNREVIEWED",
+  "local_date": "2026-10-21",
+  "collected_at": "2026-10-21T08:52:38.911520+00:00",
+  "timezone": "Europe/Bucharest",
+  "source_window_hours": 48,
+  "market_scopes": [
+    "RO",
+    "FR",
+    "US"
+  ],
+  "coverage": [
+    {
+      "feed_id": "fed_monetary",
+      "status": "OK",
+      "recent_entries": 0
+    },
+    {
+      "feed_id": "ecb_press",
+      "status": "OK",
+      "recent_entries": 3
+    },
+    {
+      "feed_id": "bvb_market",
+      "status": "OK",
+      "recent_entries": 91
+    },
+    {
+      "feed_id": "bvb_announcements",
+      "status": "OK",
+      "recent_entries": 0
+    },
+    {
+      "feed_id": "insee_conjuncture",
+      "status": "OK",
+      "recent_entries": 2
+    },
+    {
+      "feed_id": "bls_cpi",
+      "status": "OK",
+      "recent_entries": 0
+    },
+    {
+      "feed_id": "bls_employment",
+      "status": "OK",
+      "recent_entries": 0
+    },
+    {
+      "feed_id": "eurostat_releases",
+      "status": "OK",
+      "recent_entries": 1
+    }
+  ],
+  "feed_errors": [],
+  "candidates": [
+    {
+      "id": "7b9f99899dc6807d88d597c08ed71c1baaee2543",
+      "source_id": "bvb_market",
+      "market_scopes": [
+        "RO"
+      ],
+      "headline_original": "INTERCAPITAL POLAND WIG30TR UCITS ETF (ICWIGETF)",
+      "published_at": "2026-10-21T08:35:23+00:00",
+      "official_article_url": "https://bvb.ro/FinancialInstruments/SelectedData/NewsItem/ICWIGETF-van-la-data-20-10-2026/3AECA",
+      "origin": "Bucharest Stock Exchange",
+      "source_body_sha256": "b946859702ef98c59f20e421246a5ed8a60316eee534ef8e3141ad4b72d72700",
+      "source_excerpt_original": "miercuri | 21 octombrie, 2026 | Starea pietei: DESCHISA Despre noi si Guvernanta | Relatia cu Investitorii | Contact Login Inregistrare Cautare avansata Pentru Companii De ce Bursa de Valori Bucuresti? Prezentare generala Instrumente pentru finantare Beneficiile listarii Infografice Piata Principala Actiuni Obligatiuni Intermediari Intrebari frecvente Piata AeRO Actiuni Obligatiuni Consultanti Autorizati Intrebari frecvente Materiale utile Ghidul privind raportarea ESG Codul de Guvernanta Corporativa Instrumente Financiare Piete Actiuni Obligatiuni Unitati de fond Certificate Warrants Cautare avansata Indici Privire generala Profile indici Factsheets indici Performanta indici Informatii BMR Operatiuni corporative Info dividend Modificari capital social Societati provenite din divizari Informatii selective Rapoarte curente Rezultate financiare Indicatori Calendar Financiar Calendar Adunari Generale Operatiuni de piata Raportari actionari Lista monitorizare Tranzactionare si Statistici Tranzactionare Pietele astazi Ziua curenta Statistici toate pietele Sumare tranzactionare Oferte publice in derulare Vanzari speciale la ordin Date MiFiD II Statistici Statistici generale Evolutia pietei (actiuni) Top tranzactionare Publicatii Rapoarte zilnice Rapoarte lunare Program de tranzactionare Bursa in direct Intermediari Liste intermediari Toti intermediarii Top intermediari Lista Market Makeri Lista Furnizori Lichiditate Performanta MM si LP Lista Agenti Delegati Cum devin intermediar Servicii Vanzare date Pentru distribuitori de date Pentru profesionisti Pentru investitori Licentiere indici Cum licentiez un indice BVB? Conectivitate Sistemul de tranzactionare Arena Sistem de brokeraj Reglementari Legislatie Legi si regulamente Reglementari BVB Raportari MiFID II / MiFIR Camera Arbitrala Utile Link-uri utile Institutiile pietei de capital Stiri Piata INTERCAPITAL POLAND WIG30TR UCITS ETF - ICWIGETF VAN la data 20.10.2026 Data Publicare: 21.10.2026 11:35:23 Cod IRIS: 3AECA Valoarea certificata a Activului Net per unitate (VUAN) pentru clasa de Unitati InterCapital Poland WIG30TR UCITS ETF tranzactionata la Bursa de Valori Bucuresti este de 62,3313 lei , la data de 20. octombrie 2026. Pentru mai multe informatii, va rugam sa consultati fisierul atasat. ICWIGETF_20261021113334_2026-10-20-POLAND-ETF-Official-NAV.pdf Print Informatii furnizate prin IRIS , platforma de stiri a Bursei de Valori Bucuresti. ______________________ Bursa de Valori Bucuresti (\"BVB\") nu este responsabila de continutul acestui Raport. Emitentii ale caror instrumente financiare sunt tranzactionate pe pietele administrate de catre BVB au obligatia de a intocmi Rapoarte in conformitate cu prevederile legale si regulamentare incidente. BVB publica aceste Rapoarte in calitate de administrator al acestor piete, desemnat de catre ASF. In situatia in care, pentru informarea corespunzatoare a investitorilor, sunt publicate Rapoarte semnate de persoane diferite, sau cu informatii divergente, responsabilitatea juridica revine in totalitate semnatarilor respectivelor Rapoarte. BVB isi declina orice obligatie sau raspundere fata de emitenti sau terte parti, cu privire la realitatea, integralitatea si exactitatea informatiilor furnizate de catre acestia si distribuite de catre BVB. Utilizatorii website-ului au responsabilitatea de a verifica continutul rapoartelor. Orice raport (inclusiv orice prospect) care se adreseaza exclusiv unor persoane/tari specificate in acesta nu trebuie luate in considerare de catre persoanele / in tarile excluse. Termenii si conditiile , inclusiv restrictiile de utilizare si redistributie se aplica. ©2026 Bursa de Valori Bucuresti. Toate drepturile rezervate. Pentru Companii Prezentare generala Instrumente pentru finantare Beneficiile listarii Pentru Investitori Pentru inceput Devino Investitor La Bursa Exchange Live 2.0 Tranzactionare si Statistici Pietele astazi Statistici generale Top tranzactionare Despre noi si Guvernanta Descriere generala Structura de conducere Comunicate de presa Cariere Relatia cu Investitorii Privire generala Adunari Generale ale Actionarilor Raportari financiare Site-uri din Grupul BVB Depozitarul Central Website mobile | Termeni de Utilizare | Contact | © 2026 Bursa de Valori Bucuresti Distribuie:",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "1f147a211575efeb80f7da44e6ecbf00326db08d",
+      "source_id": "bvb_market",
+      "market_scopes": [
+        "RO"
+      ],
+      "headline_original": "INTERCAPITAL POLAND WIG30TR UCITS ETF (ICWIGETF)",
+      "published_at": "2026-10-21T08:35:23+00:00",
+      "official_article_url": "https://bvb.ro/infocont/infocont26/ICWIGETF_20261021113334_2026-10-20-POLAND-ETF-Official-NAV.pdf",
+      "origin": "Bucharest Stock Exchange",
+      "source_body_sha256": null,
+      "source_excerpt_original": null,
+      "evidence_status": "SOURCE_BODY_UNAVAILABLE",
+      "source_body_error": "Original PDF text unavailable; scanned/encrypted files require review.",
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "c7378dfab28fcf467291655d7c4d8c429cdd3648",
+      "source_id": "bvb_market",
+      "market_scopes": [
+        "RO"
+      ],
+      "headline_original": "INTERCAPITAL EUR ROMANIA GOVT BOND 5-10YR UCITS ETF (ICGROETF)",
+      "published_at": "2026-10-21T08:21:24+00:00",
+      "official_article_url": "https://bvb.ro/FinancialInstruments/SelectedData/NewsItem/ICGROETF-van-la-data-20-10-2026/BC858",
+      "origin": "Bucharest Stock Exchange",
+      "source_body_sha256": "35f05db7ed828fcfc405b5251d01213ec1a9b6566d682eb938fb245a80569f1e",
+      "source_excerpt_original": "miercuri | 21 octombrie, 2026 | Starea pietei: DESCHISA Despre noi si Guvernanta | Relatia cu Investitorii | Contact Login Inregistrare Cautare avansata Pentru Companii De ce Bursa de Valori Bucuresti? Prezentare generala Instrumente pentru finantare Beneficiile listarii Infografice Piata Principala Actiuni Obligatiuni Intermediari Intrebari frecvente Piata AeRO Actiuni Obligatiuni Consultanti Autorizati Intrebari frecvente Materiale utile Ghidul privind raportarea ESG Codul de Guvernanta Corporativa Instrumente Financiare Piete Actiuni Obligatiuni Unitati de fond Certificate Warrants Cautare avansata Indici Privire generala Profile indici Factsheets indici Performanta indici Informatii BMR Operatiuni corporative Info dividend Modificari capital social Societati provenite din divizari Informatii selective Rapoarte curente Rezultate financiare Indicatori Calendar Financiar Calendar Adunari Generale Operatiuni de piata Raportari actionari Lista monitorizare Tranzactionare si Statistici Tranzactionare Pietele astazi Ziua curenta Statistici toate pietele Sumare tranzactionare Oferte publice in derulare Vanzari speciale la ordin Date MiFiD II Statistici Statistici generale Evolutia pietei (actiuni) Top tranzactionare Publicatii Rapoarte zilnice Rapoarte lunare Program de tranzactionare Bursa in direct Intermediari Liste intermediari Toti intermediarii Top intermediari Lista Market Makeri Lista Furnizori Lichiditate Performanta MM si LP Lista Agenti Delegati Cum devin intermediar Servicii Vanzare date Pentru distribuitori de date Pentru profesionisti Pentru investitori Licentiere indici Cum licentiez un indice BVB? Conectivitate Sistemul de tranzactionare Arena Sistem de brokeraj Reglementari Legislatie Legi si regulamente Reglementari BVB Raportari MiFID II / MiFIR Camera Arbitrala Utile Link-uri utile Institutiile pietei de capital Stiri Piata INTERCAPITAL EUR ROMANIA GOVT BOND 5-10YR UCITS ETF - ICGROETF VAN la data 20.10.2026 Data Publicare: 21.10.2026 11:21:24 Cod IRIS: BC858 Valoarea certificata a Activului Net per unitate (VUAN) pentru clasa de Unitati InterCapital EUR Romania Govt Bond 5-10yr UCITS ETF tranzactionata la Bursa de Valori Bucuresti este de 58,8354 lei , la data de 20. octombrie 2026. Pentru mai multe informatii, va rugam sa consultati fisierul atasat. ICGROETF_20261021111617_2026-10-20-ROFI-ETF-Official-NAV.pdf Print Informatii furnizate prin IRIS , platforma de stiri a Bursei de Valori Bucuresti. ______________________ Bursa de Valori Bucuresti (\"BVB\") nu este responsabila de continutul acestui Raport. Emitentii ale caror instrumente financiare sunt tranzactionate pe pietele administrate de catre BVB au obligatia de a intocmi Rapoarte in conformitate cu prevederile legale si regulamentare incidente. BVB publica aceste Rapoarte in calitate de administrator al acestor piete, desemnat de catre ASF. In situatia in care, pentru informarea corespunzatoare a investitorilor, sunt publicate Rapoarte semnate de persoane diferite, sau cu informatii divergente, responsabilitatea juridica revine in totalitate semnatarilor respectivelor Rapoarte. BVB isi declina orice obligatie sau raspundere fata de emitenti sau terte parti, cu privire la realitatea, integralitatea si exactitatea informatiilor furnizate de catre acestia si distribuite de catre BVB. Utilizatorii website-ului au responsabilitatea de a verifica continutul rapoartelor. Orice raport (inclusiv orice prospect) care se adreseaza exclusiv unor persoane/tari specificate in acesta nu trebuie luate in considerare de catre persoanele / in tarile excluse. Termenii si conditiile , inclusiv restrictiile de utilizare si redistributie se aplica. ©2026 Bursa de Valori Bucuresti. Toate drepturile rezervate. Pentru Companii Prezentare generala Instrumente pentru finantare Beneficiile listarii Pentru Investitori Pentru inceput Devino Investitor La Bursa Exchange Live 2.0 Tranzactionare si Statistici Pietele astazi Statistici generale Top tranzactionare Despre noi si Guvernanta Descriere generala Structura de conducere Comunicate de presa Cariere Relatia cu Investitorii Privire generala Adunari Generale ale Actionarilor Raportari financiare Site-uri din Grupul BVB Depozitarul Central Website mobile | Termeni de Utilizare | Contact | © 2026 Bursa de Valori Bucuresti Distribuie:",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "30ebd9c2c46000cab4c2970f4c8fa15c8acc49c1",
+      "source_id": "bvb_market",
+      "market_scopes": [
+        "RO"
+      ],
+      "headline_original": "INTERCAPITAL EUR ROMANIA GOVT BOND 5-10YR UCITS ETF (ICGROETF)",
+      "published_at": "2026-10-21T08:21:24+00:00",
+      "official_article_url": "https://bvb.ro/infocont/infocont26/ICGROETF_20261021111617_2026-10-20-ROFI-ETF-Official-NAV.pdf",
+      "origin": "Bucharest Stock Exchange",
+      "source_body_sha256": null,
+      "source_excerpt_original": null,
+      "evidence_status": "SOURCE_BODY_UNAVAILABLE",
+      "source_body_error": "Original PDF text unavailable; scanned/encrypted files require review.",
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "92b2ac1252c87c60505b478ba8f4e96d7347726d",
+      "source_id": "bvb_market",
+      "market_scopes": [
+        "RO"
+      ],
+      "headline_original": "INTERCAPITAL CROBEX10TR UCITS ETF (ICCROETF)",
+      "published_at": "2026-10-21T08:20:39+00:00",
+      "official_article_url": "https://bvb.ro/infocont/infocont26/ICCROETF_20261021111206_2026-10-20-CROBEX-ETF-Official-NAV.pdf",
+      "origin": "Bucharest Stock Exchange",
+      "source_body_sha256": null,
+      "source_excerpt_original": null,
+      "evidence_status": "SOURCE_BODY_UNAVAILABLE",
+      "source_body_error": "Original PDF text unavailable; scanned/encrypted files require review.",
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "072d53504945317d1e6e7596c4a063be8f4e2ce5",
+      "source_id": "ecb_press",
+      "market_scopes": [
+        "RO",
+        "FR"
+      ],
+      "headline_original": "Piero Cipollone: Pontes and Appia: unlocking opportunities for banks",
+      "published_at": "2026-10-21T08:00:00+00:00",
+      "official_article_url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261021_1~d190f2c349.en.pdf",
+      "origin": "European Central Bank",
+      "source_body_sha256": null,
+      "source_excerpt_original": null,
+      "evidence_status": "SOURCE_BODY_UNAVAILABLE",
+      "source_body_error": "Original PDF text unavailable; scanned/encrypted files require review.",
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "e911340b322730403ee8fa120fbb5b85400df78b",
+      "source_id": "insee_conjuncture",
+      "market_scopes": [
+        "FR"
+      ],
+      "headline_original": "En août 2026, la production dans les services est quasi stable (‑0,1 %)",
+      "published_at": "2026-10-21T06:45:00+00:00",
+      "official_article_url": "https://www.insee.fr/fr/statistiques/9094265",
+      "origin": "INSEE France",
+      "source_body_sha256": "d14c9bd22b3c18b938320eacaeb32c88ea7bf1b0082c5245f787c6167995cdc3",
+      "source_excerpt_original": "false Aller au contenu Aide Thèmes Recherche English Presse Menu Menu Blog Presse Aide English Lancer la recherche sur le site Thèmes Statistiques et études Cherchez vos statistiques par… Thèmes Économie - conjoncture - comptes nationaux Démographie Entreprises Plus de thèmes… Niveaux géographiques France Toutes les régions ou tous les départements Toutes les communes Plus de niveaux géographiques… Catégories Données Publications Plus de catégories… Collections Insee Première Notes et points de conjoncture Plus de collections… Définitions, méthodes et qualité Définitions Sources statistiques et indicateurs Liste des sources statistiques Liste des indicateurs Documentation complémentaire sur le recensement La qualité dans le Service statistique public (SSP) Le cadre de référence La gouvernance La politique et la stratégie qualité du SSP Les engagements européens Nomenclatures Nomenclature d’activités française Nomenclature agrégée - NA, 2008 Classification des produits française Classification des fonctions de consommation des ménages Catégories juridiques Nomenclatures des professions et catégories socioprofessionnelles Géographie administrative et d'étude Recherche sur une zone géographique Téléchargement de fichiers Historique des communes Modèles, méthodes et outils statistiques Les modèles statistiques Les outils statistiques Méthodologie statistique Courrier des statistiques Offre de données ouvertes Le catalogue des données de l'Insee Le catalogue des API de l'Insee L'offre de données au travers de nos produits de diffusion Les formats de mise à disposition des données Nos données disponibles sur d'autres plateformes Services Réviser une pension, un loyer, bail ou contrat Réviser une pension alimentaire Réviser un loyer d'habitation Réviser un bail commercial ou professionnel Indexer un contrat Convertisseur franc-euro : pouvoir d'achat de l'euro et du franc Consulter les indices et séries chronologiques Actualités des indices et séries chronologiques Accès des séries et indices chronologiques par thème Recherche par identifiant ou par mot-clé Service web SDMX Tables de passage Sirene Obtenir un avis de situation au répertoire Sirene Demander la modification de son statut de diffusion Demander la modification du code APE Immatriculation, cessation ou modification des données au répertoire Sirene Obtenir sa catégorie d'entreprise Consulter et télécharger la base Sirene Identifiant unique des intervenants sur les marchés financiers (LEI) Réponses à vos questions sur le répertoire Sirene Découvrir, apprendre, enseigner Pour commencer... Visualiser les données La Compétition européenne de statistiques Pour approfondir... Répondre à une enquête de l'Insee Enquêtes auprès des particuliers Enquêtes auprès des entreprises Vrai ou faux enquêteur de l’Insee, fraude, malveillance : comment vérifier ? S’informer sur l’actualité de notre diffusion Agenda de diffusion des indicateurs économiques Dernières publications de l’Insee Dernières publications des Services statistiques ministériels Évènements annoncés à la Une du site Thèmes d'actualité Gérer les répertoires des personnes physiques Recueil des données d'état civil Le Répertoire électoral unique Dématérialisation des échanges de données Nombre de décès quotidiens par département Fichiers des personnes décédées depuis 1970 Bibliothèque de l’Insee Alain Desrosières Portail documentaire et catalogue La Bibliothèque numérique de la statistique publique Commander une prestation, acheter une publication Diffusion sur mesure Acheter nos publications Nous suivre Lettres d'information Abonnements aux lettres d'information et aux avis de parution Abonnement aux flux RSS L'Insee sur les médias sociaux Insee Mobile Aide et contacts Réponses à vos questions Obtenir des informations par téléphone Espace presse Événements presse Calendrier des publications Communiqués de presse nationaux Communiqués de presse régionaux Nominations L'Insee et la statistique publique L'Insee Connaître l'Insee L’Insee en toute confiance Travailler à l'Insee Événements et colloques Un peu d'histoire Rapports d'activité Les activités de l'Insee Suivre l’économie française Connaître les entreprises Observer l'évolution de la société Réaliser le recensement de la population Décrire et analyser les régions et les territoires Gérer des grands répertoires Diffuser et valoriser ses productions Perfectionner ses méthodes et évaluer la qualité Contribuer à la construction de la statistique européenne et internat",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "d27c81499e1dffca3bc42cb0b6ee7c53d8ddcc52",
+      "source_id": "insee_conjuncture",
+      "market_scopes": [
+        "FR"
+      ],
+      "headline_original": "En août 2026, le volume des ventes dans le commerce est quasi stable (‑0,1 %)",
+      "published_at": "2026-10-21T06:45:00+00:00",
+      "official_article_url": "https://www.insee.fr/fr/statistiques/9091152",
+      "origin": "INSEE France",
+      "source_body_sha256": "66447cac41cfdf4dd3c198f114b222fd06b00e20e36015832a8184e60b3af297",
+      "source_excerpt_original": "false Aller au contenu Aide Thèmes Recherche English Presse Menu Menu Blog Presse Aide English Lancer la recherche sur le site Thèmes Statistiques et études Cherchez vos statistiques par… Thèmes Économie - conjoncture - comptes nationaux Démographie Entreprises Plus de thèmes… Niveaux géographiques France Toutes les régions ou tous les départements Toutes les communes Plus de niveaux géographiques… Catégories Données Publications Plus de catégories… Collections Insee Première Notes et points de conjoncture Plus de collections… Définitions, méthodes et qualité Définitions Sources statistiques et indicateurs Liste des sources statistiques Liste des indicateurs Documentation complémentaire sur le recensement La qualité dans le Service statistique public (SSP) Le cadre de référence La gouvernance La politique et la stratégie qualité du SSP Les engagements européens Nomenclatures Nomenclature d’activités française Nomenclature agrégée - NA, 2008 Classification des produits française Classification des fonctions de consommation des ménages Catégories juridiques Nomenclatures des professions et catégories socioprofessionnelles Géographie administrative et d'étude Recherche sur une zone géographique Téléchargement de fichiers Historique des communes Modèles, méthodes et outils statistiques Les modèles statistiques Les outils statistiques Méthodologie statistique Courrier des statistiques Offre de données ouvertes Le catalogue des données de l'Insee Le catalogue des API de l'Insee L'offre de données au travers de nos produits de diffusion Les formats de mise à disposition des données Nos données disponibles sur d'autres plateformes Services Réviser une pension, un loyer, bail ou contrat Réviser une pension alimentaire Réviser un loyer d'habitation Réviser un bail commercial ou professionnel Indexer un contrat Convertisseur franc-euro : pouvoir d'achat de l'euro et du franc Consulter les indices et séries chronologiques Actualités des indices et séries chronologiques Accès des séries et indices chronologiques par thème Recherche par identifiant ou par mot-clé Service web SDMX Tables de passage Sirene Obtenir un avis de situation au répertoire Sirene Demander la modification de son statut de diffusion Demander la modification du code APE Immatriculation, cessation ou modification des données au répertoire Sirene Obtenir sa catégorie d'entreprise Consulter et télécharger la base Sirene Identifiant unique des intervenants sur les marchés financiers (LEI) Réponses à vos questions sur le répertoire Sirene Découvrir, apprendre, enseigner Pour commencer... Visualiser les données La Compétition européenne de statistiques Pour approfondir... Répondre à une enquête de l'Insee Enquêtes auprès des particuliers Enquêtes auprès des entreprises Vrai ou faux enquêteur de l’Insee, fraude, malveillance : comment vérifier ? S’informer sur l’actualité de notre diffusion Agenda de diffusion des indicateurs économiques Dernières publications de l’Insee Dernières publications des Services statistiques ministériels Évènements annoncés à la Une du site Thèmes d'actualité Gérer les répertoires des personnes physiques Recueil des données d'état civil Le Répertoire électoral unique Dématérialisation des échanges de données Nombre de décès quotidiens par département Fichiers des personnes décédées depuis 1970 Bibliothèque de l’Insee Alain Desrosières Portail documentaire et catalogue La Bibliothèque numérique de la statistique publique Commander une prestation, acheter une publication Diffusion sur mesure Acheter nos publications Nous suivre Lettres d'information Abonnements aux lettres d'information et aux avis de parution Abonnement aux flux RSS L'Insee sur les médias sociaux Insee Mobile Aide et contacts Réponses à vos questions Obtenir des informations par téléphone Espace presse Événements presse Calendrier des publications Communiqués de presse nationaux Communiqués de presse régionaux Nominations L'Insee et la statistique publique L'Insee Connaître l'Insee L’Insee en toute confiance Travailler à l'Insee Événements et colloques Un peu d'histoire Rapports d'activité Les activités de l'Insee Suivre l’économie française Connaître les entreprises Observer l'évolution de la société Réaliser le recensement de la population Décrire et analyser les régions et les territoires Gérer des grands répertoires Diffuser et valoriser ses productions Perfectionner ses méthodes et évaluer la qualité Contribuer à la construction de la statistique européenne et internat",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "9d0c3f7fb6db288c84ffab33675fc669c86e74f0",
+      "source_id": "ecb_press",
+      "market_scopes": [
+        "RO",
+        "FR"
+      ],
+      "headline_original": "Philip R. Lane: Euro liquidity lines and the international monetary system",
+      "published_at": "2026-10-21T04:15:00+00:00",
+      "official_article_url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261021~401d6c4b70.en.html",
+      "origin": "European Central Bank",
+      "source_body_sha256": null,
+      "source_excerpt_original": null,
+      "evidence_status": "SOURCE_BODY_UNAVAILABLE",
+      "source_body_error": "Publisher canonical differs from feed story.",
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "df7a1d81a41c55addfcb65db4208132cdc631992",
+      "source_id": "eurostat_releases",
+      "market_scopes": [
+        "RO",
+        "FR"
+      ],
+      "headline_original": "Production in construction up by 1.8% in the euro area and by 2.0% in the EU",
+      "published_at": "2026-10-20T09:00:00+00:00",
+      "official_article_url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/4-20102026-ap",
+      "origin": "Eurostat",
+      "source_body_sha256": "65c93c73c0b4935a8ceec47d2848a6c5513da3038694b63cf76b2b8f6ec542ee",
+      "source_excerpt_original": "Skip to Main Content Log in English English Select your language Close bg български es español cs čeština da dansk de Deutsch et eesti el ελληνικά fr français ga Gaeilge hr hrvatski it italiano lv latviešu lt lietuvių hu magyar mt Malti nl Nederlands pl polski pt português ru pусский ro română sk slovenčina sl slovenščina fi suomi sv svenska uk Українська Search Search Search by keyword Search Search How many women work in science? How many young people are unemployed? How many hours do people work in the EU? In which EU countries did poverty decrease? How much have fuel prices increased? When do young people move out from home? Where is GDP the highest? Menu Close Menu Back Previous items Next items Home Data Explore data Database Statistical themes Stats finder A-Z Experimental statistics Data visualisations European statistics learning hub Advanced tools and services Web services Bulk download GISCO:Geographical Information and maps Microdata Quality and European statistics Quality Metadata Data validation Data revision policy SDMX InfoSpace Research and methodology (CROS) Evaluations News News articles Euro indicators Podcasts Events and webinars Release calendar Publications Collections Flagship publications Interactive publications Key figures Online reads Manuals and guidelines Statistical working papers Statistical reports Leaflets Statistics Explained Release calendar About us Who we are Our mission and values Our organisation Our history Contact us Our work Producing statistics Communicating and disseminating statistics Innovating statistics Our policies Our partners European Statistical System EU institutions and bodies International cooperation Working with us Job opportunities Calls for tenders Grants Public consultations Events and webinars Visits Contact us User support Media and fact-checkers Institutional services Visit us Help Website guide Products and tools Services User guides Copyright notice and free re-use of data Alert Frequently asked questions Accessibility Maintenance information Home … News Euro indicators Euro indicators 20 October 2026 Next release: 19 November 2026 August 2026 compared with July 2026 Production in construction up by 1.8% in the euro area and by 2.0% in the EU Skip to the content Contents Loading Toggle page contents Print page Information Before printing Close Printing can have negative environmental impacts due to paper waste. We encourage you to explore eco-friendly alternatives. Bookmarking this page in your browser allows you to access it anytime. This publication can also be converted to PDF, if you have a PDF printer installed on your computer. PDF printers function as virtual printers, enabling you to create digital copies of web pages and access the content offline. Don't show this message again Close Print Up by 1.4% in the euro area and by 2.6% in the EU compared with August 2025 Overview In August 2026, compared with July 2026, seasonally adjusted production in construction increased by 1.8% in the euro area and by 2.0% in the EU , according to first estimates from Eurostat, the statistical office of the European Union . In July 2026, production in construction grew by 0.2% in the euro area and fell by 0.1% in the EU . In August 2026, compared with August 2025, production in construction increased by 1.4% in the euro area and by 2.6% in the EU . Monthly comparison by construction sector and by Member State In the euro area in August 2026, compared with July 2026, production in construction decreased by 0.4% for construction of buildings, decreased by 2.1% for civil engineering, increased by 2.5% for specialised construction activities. In the EU , production in construction decreased by 1.0% for construction of buildings, decreased by 0.2% for civil engineering, increased by 2.3% for specialised construction activities. Among Member States for which data are available, the highest monthly increases in production in construction were recorded in Hungary (+14.0%), Germany (+9.3%) and Romania (+7.2%). The largest decreases were observed in Slovenia (-5.1%), Slovakia (-4.9%) and Italy (-2.9%). Annual comparison by construction sector and by Member State In the euro area in August 2026, compared with August 2025, production in construction decreased by 3.7% for construction of buildings, remained stable for civil engineering, increased by 3.1% for specialised construction activities. In the EU , production in construction decreased by 4.1% for construction of bui",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "0de9b4c1021a7c35a896c6b7292563e25fd2105d",
+      "source_id": "ecb_press",
+      "market_scopes": [
+        "RO",
+        "FR"
+      ],
+      "headline_original": "Frank Elderson: Interview with Die Presse",
+      "published_at": "2026-10-20T07:00:00+00:00",
+      "official_article_url": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261020~97e2e4bc38.en.html",
+      "origin": "European Central Bank",
+      "source_body_sha256": "3913bc01773df2f7fa3e170582f40d276150725fa5e61eb88ee5604a0e0d955b",
+      "source_excerpt_original": "Skip to: Skip to navigation Skip to content Skip to footer EN Български Čeština Dansk Deutsch Eλληνικά English Español Eesti keel Suomi Français Gaeilge Hrvatski Magyar Italiano Lietuvių Latviešu Malti Nederlands Polski Português Română Slovenčina Slovenščina Svenska Menu Monetary policy & markets Monetary policy & markets Our monetary policy strategy, the tools we use and the impact they have Overview of monetary policy and markets Quick links What is monetary policy? Strategy review Asset purchase programmes Latest monetary policy press conference 10 September 2026 Introduction Benefits of price stability Scope of monetary policy Transmission mechanism Decisions, statements & accounts Monetary policy strategy Strategy review Medium-term orientation Two per cent inflation target Economic, monetary and financial analysis Economic analysis Monetary and financial analysis Monetary policy operations Open market operations TLTROs Asset purchase programmes Securities lending Pandemic emergency purchase programme Standing facilities Minimum reserves Two-tier system Euro central bank liquidity lines Swap lines EUREP Chronology of Eurosystem liquidity lines Emergency liquidity assistance (ELA) Liquidity analysis Collateral Eligibility criteria and assessment Marketable assets Non-marketable assets List of eligible marketable assets User guide Collateral management Eligible SSSs Eligible links Eligible triparty agents Risk mitigation ECAF Risk control Haircut categories Valuation Loan-level requirements Contacts Structure of the euro area economy Economic policy Fiscal policies External trade Effective exchange rates Financial structure Financial markets Financial intermediaries Economic diversity Labour market Market contact groups Bond market (BMCG) Money market (MMCG) Debt Issuance Market Contact Group (DIMCG) ECB Operations managers group (ECB OMG) Foreign exchange (FXCG) Institutional Investor Dialogue (IID) Monetary Analysis Contact Group (MACG) Payments & financial stability Payments & financial stability Insights into our work on financial stability and payments and market infrastructures Overview of payments and financial stability Quick links Digital euro Payments news & events Market contact groups TARGET professional use documents and links Latest Financial Stability Review 5 June 2025 Payments TARGET Services Shared features T2 Facts and figures Governance T2S Governance Facts and figures Pricing TIPS Cross-border payments Governance Facts and figures Onboarding ECMS Governance Pontes Governance TARGET professional use documents & links Shared features documents & links T2 documents & links T2S documents & links TIPS documents & links ECMS documents & links Pontes documents & links Tokenisation and DLT Appia Governance Exploratory work Retail payments Retail payments strategy ECB as a catalyst SEPA Instant payments Market contact groups Collateral management harmonisation SCoRE Implementation FAQ AMI-SeCo Cyber resilience Financial market infrastructures TIBER-EU Euro Cyber Resilience Board Oversight Payment systems TARGET2-Securities Electronic payments Securities settlement systems and central counterparties Critical service providers Correspondent and custodian banks SecuRe Pay forum Reserve management services Key aspects Range of services Cash professionals Cash handling Authentication devices Recirculation of banknotes Common detector interface specifications Banknote manufacturer accreditation Financial stability Introduction to financial stability Macroprudential Measures Financial stability contact groups Statistics Statistics Access to all ECB statistics and background information Overview of ECB statistics Quick links Key figures ECB Data Portal Statistical releases PRESS RELEASE - ECB launches pilot project for research access to confidential statistical data 13 March 2025 Frequently accessed Euro exchange rates Key ECB interest rates Euro short-term rate (€STR) Interest rate benchmarks Working group on euro risk-free rates Inflation Euro area yield curves All statistics & background All key statistics All data services Data reporting & standards Governance and quality framework Co-operation and standards Banks’ data reporting DPM Alliance IReF JBRC BIRD AnaCredit AnaCredit Q&A Public consultations Banking industry dialogue on ESCB statistics and integrated reporting SDMX – statistical data exchange model INEXDA - granular data network The euro The euro All you need to know about our common currency O",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    }
+  ],
+  "us_index_close_snapshot_ready": false,
+  "google_docs_current_revision_loaded": false,
+  "review_status": "UNREVIEWED",
+  "delivery_allowed": false,
+  "telegram_sent": false,
+  "purpose": "Material for human/ChatGPT source-based editorial review, not market quote certification."
+}
