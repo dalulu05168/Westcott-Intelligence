@@ -8,3 +8,6 @@
 用户直接输入 `14男：原句`、`02女：原句`、`按14号口吻改：原句` 或多行不同成员时，**不要进行整场剧本创作**，先通过已连接GitHub读取 `skills/p004-chat-suite/voice-management/NUMBERED-VOICE-REWRITE.md` 与目标人物的 `characters/profiles/NN.json`、正式65人身份表及 `voice-index-2026-10-21.json` 的本人历史对白证据；结合职业与候选性格做辅助调整，真人对白证据优先，严格保留原意、数字和事实，直接返回逐行改写文本。职业/性格草案未获得用户批准，不能当固定口吻。43—65只能应要求编辑文本，不代表正式社群出场授权。最新Google Docs有新的已采用对白时应优先参考。若没实际读取来源，不能假称已匹配该人的真实口吻。
 
 **说明**：这是项目级指令，不是ChatGPT全局系统Skill；仅将SKILL.md提交GitHub并不会让所有新对话自动加载。用户仍需在Project中设置一次，并使GitHub和Google Docs连接可用。当前对话可直接按其运行，不需要重复粘贴。
+
+## 与ChatGPT自动化共用的唯一入口（2026-10-22）
+在本Project中做剧情、课程或口吻改写前，先通过已连接的GitHub**实际读取最新** `dalulu05168/Westcott-Intelligence/AUTOMATION-CONTROL-CENTER.md`，按该文件分流任务及检查来源，之后执行总Skill。原项目说明保持有效；自动化任务和GitHub并不会自动修改本Project设置，因此必须在Project里实际采用这些说明。无法读取任一关键源时明确标记该源阻塞，不能声称已全验收。
