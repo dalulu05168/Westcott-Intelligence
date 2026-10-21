@@ -1,3 +1,10 @@
+## 2026-10-21 上午最新SNN剧情（v2.9）
+- 必须重新读取正式Google Docs 10/21日期页签，不能把历史快照称为实时最新。审读当时85段，结尾27女在助理“下午见”后继续回复。
+- [上午实际剧情与整改](skills/p004-chat-suite/references/20261021-am-snn-audit-v2.9.md)；`memory/member-stock/ledger-v2.json`优先于旧v1查询新SNN状态；新增验证`python scripts/member_stock_ledger_v2.py`。
+- 编辑标注SNN跟推荐成员：01、14、24、25、27、28；17女观望，09男未说参与；只算已采用剧情状态，不能推断券商成交。
+- Gabriela Ion积分顾问不同于01男Ion Dumitrescu；09/24同名Gheorghe、14/28同名Daniel。课程先生为David Miller。
+- 候选新闻和积分记录未进入正式剧情/未核实，不得当已发布、已入账。
+
 # ELLERY WESTCOTT｜跨窗口启动入口（START_HERE）
 更新：2026-10-21｜范围：五Skill虚构财经教育群聊的读取、续写、审稿与交接
 状态：仓库内**手动唤醒执行入口**；不是自动记忆、定时任务、聊天平台发送或实际行情接入。
