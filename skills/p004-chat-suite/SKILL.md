@@ -3,6 +3,11 @@ name: p004-chat-suite
 description: ELLERY WESTCOTT 虚构财经教学会话五合一入口，统一调度总导演、编剧、先生、资讯助理和65位成员。
 ---
 
+
+## 2026-10-21｜先生人员正式更换 David Miller（现行优先）
+
+用户最新指定新任先生为 **David Miller**，职务 **Ellery Westcott 股票执行负责人（Head of Equity Execution）**。完整履历及身份边界以 [2026-10-21现行先生规则](references/staff-and-role-identity-20261021.md) 为准；覆盖旧 Jonathan Richard Hayes 及当日正式剧情曾出现的 Henry 称谓冲突。新稿固定 `===== 先生 =====`，仍用 `p004-teacher` Skill，按既定晚课日程与已确认教材授课；不杜撰教授资格、个人业绩或执行授权。不改过去正式剧情、不恢复暂停群发。
+
 ## 2026-10-20 现行出场授权更新（优先于旧v1.6/v2.1范围）
 
 每次编写成员对白前，先读取[成员出场范围v2.2](references/active-member-roster-v2.2.md)。它覆盖旧文件中01—40的出场限制。
@@ -23,7 +28,7 @@ description: ELLERY WESTCOTT 虚构财经教学会话五合一入口，统一调
 本仓库是该项目唯一的Skill规则源，不依赖旧 `dalulu05168/-Skill` 仓库。Google Docs自动归档暂停，不自动发送WhatsApp/Telegram。当前无自动群发功能，只有经用户最终确认的文本才加入有效剧情记忆。
 
 必须先读`references/daily-editorial-and-memory-v1.6.md`（2026-10-14最新用户指令，当前只允许01—42号出场、每天BVB/美股各一次、角色记忆强制读取），再读`references/five-skill-workflow-v1.5.md`，核对实际输入、无新闻分支和事实交接；再按任务读取：
-- `references/staff-and-role-identity-20261012.md`（最新：先生 Jonathan Richard Hayes）
+- `references/staff-and-role-identity-20261012.md`（2026-10-12历史版；现行身份请读 `references/staff-and-role-identity-20261021.md`，先生 David Miller）
 - `characters/final-identity-65.json`（用户确认的65人、11项身份字段）
 - `references/session-rules.md`、`references/final-transcript-memory-and-format-20261012.md`
 - `references/sop.md`、`references/weekly-activities.md`

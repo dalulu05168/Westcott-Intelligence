@@ -55,7 +55,7 @@
 
 ## 2026-10-12 归档、显示及口吻补丁（高优先级）
 
-必须加载 [先生与三种支持角色](staff-and-role-identity-20261012.md)、[定稿记忆与格式控制](final-transcript-memory-and-format-20261012.md)。2026-10-12用户最终稿有10/13日期题头、重复SNO及竞猜、资讯/成员错位、10男身份冲突；在memory中保留来源并标记审稿，只有去重且身份有效的消息写入独立记忆。新稿人物主讲显示先生Jonathan，资讯助理不是投资顾问Gabriela Ion（Ion）或咨询顾问Ana Maria（Ana）。所有后续复制剧本文案禁Markdown加粗。
+必须加载 [2026-10-21现任先生与三种支持角色](staff-and-role-identity-20261021.md)、[定稿记忆与格式控制](final-transcript-memory-and-format-20261012.md)。2026-10-12用户最终稿有10/13日期题头、重复SNO及竞猜、资讯/成员错位、10男身份冲突；在memory中保留来源并标记审稿，只有去重且身份有效的消息写入独立记忆。新稿人物主讲显示先生David Miller（见2026-10-21新身份规则），资讯助理不是投资顾问Gabriela Ion（Ion）或咨询顾问Ana Maria（Ana）。所有后续复制剧本文案禁Markdown加粗。
 
 
 

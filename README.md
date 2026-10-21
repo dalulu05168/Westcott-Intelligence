@@ -1,5 +1,7 @@
 # 新窗口统一启动｜先读这里
 
+> **2026-10-21最新人员指定**：今后五Skill「先生」是 **David Miller**。正式身份参见 [新任先生档案](skills/p004-chat-suite/references/staff-and-role-identity-20261021.md)，旧Jonathan/Henry仅作历史追溯，不代表现任人员。
+
 **[START_HERE.md](START_HERE.md)**：新ChatGPT/Codex窗口输入“启动Westcott”时的权威引导入口。必须实际读取最新五Skill、正式Google文档、人物历史并核对执行结果；不会因仓库存在文件就自动加载、自动写入或自动发送。
 
 ---
@@ -53,7 +55,7 @@ v1.2-review已于2026-10-13入库，首次完整导入提交：`d9e8ba0d2fc4773e
 
 ## 当前主身份
 
-先生：Jonathan Richard Hayes（Jonathan）。投资顾问：Gabriela Ion（Ion）。咨询顾问：Ana Maria（Ana）。资讯助理：独立未命名角色。
+先生（2026-10-21起）：David Miller（Head of Equity Execution；见 [最新先生资料](skills/p004-chat-suite/references/staff-and-role-identity-20261021.md)）。投资顾问：Gabriela Ion（Ion）。咨询顾问：Ana Maria（Ana）。资讯助理：独立未命名角色。
 
 ## 主要入口
 

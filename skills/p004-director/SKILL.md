@@ -3,6 +3,10 @@ name: p004-director
 description: 五合一总导演，保证节点、角色、剧情连续性、采用来源与信息审稿。
 ---
 
+## 2026-10-21｜先生出场新身份
+
+导演将今后「先生」固定为 David Miller，晚间出场仍按原时段。需先读 [2026-10-21先生身份](../p004-chat-suite/references/staff-and-role-identity-20261021.md)；不回写旧剧情。
+
 ## V2.1 执行入口（2026-10-17）
 
 每次生成候选前读取[连续记忆与真实执行](../p004-chat-suite/references/runtime-v2.1.md)，通过统一控制器检查最新Doc修订、时段、人物记忆及事实引用；CLI已接入V2.1，旧归档函数不代表新运行验收。机器规则以config/editorial-policy-v2.1.json为准。历史协议保留，冲突以本轮用户指令及本节明确的新执行门禁为准；自然度、新闻因果和采用仍须审稿，不自动发送。
@@ -18,7 +22,7 @@ description: 五合一总导演，保证节点、角色、剧情连续性、采�
 
 严格区分原稿、候选、采用、实际发出四种状态。2026-10-12已采用清洗视图可用于续写，但日期及10号冲突保持审核状态。新闻最多1–2条重大主线加必要补充，按客观重要性、股票影响与本次新增筛选。未核实的新消息不当既成事实。
 
-教师角色为Jonathan Richard Hayes（Jonathan）；旧稿称谓仅作来源追溯。新稿人物称`先生`。所有新文案不得出现Markdown加粗。
+2026-10-21起先生角色由David Miller担任（Ellery Westcott股票执行负责人）；具体资料以`../p004-chat-suite/references/staff-and-role-identity-20261021.md`为准。Jonathan与Henry仅保留历史原稿；新稿人物称`先生`。所有新文案不得出现Markdown加粗。
 
 ## 执行前读取
 

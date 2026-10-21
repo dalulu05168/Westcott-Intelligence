@@ -8,13 +8,17 @@
 
 如果已经明确任务，可直接说：**“启动Westcott，写10月21日上午候选稿。”** 等效于要求按本文件先核对再动笔；不等于新聊天窗口已自动挂载仓库或自动拥有Google Docs权限。无法访问必须如实说明具体未读资料，不能用旧聊天印象代替真实读取。
 
+## 2026-10-21｜先生换任（当前指令优先）
+
+用户已指定David Miller为新任先生；最先读取 [现行人员与职业资料](skills/p004-chat-suite/references/staff-and-role-identity-20261021.md)。保留旧剧情原话，不能将过去Henry/ Jonathan历史默认为David本人讲过；其余五Skill职责、课表及消息发布门禁不变。
+
 ## 1. 实际读取顺序（每次新窗口都要重新做）
 
 1. **统一入口与机器规则**：`START_HERE.md` → `skills/p004-chat-suite/SKILL.md` → `config/editorial-policy-v2.1.json` → `skills/p004-chat-suite/references/cross-page-unified-v2.0.md`。依任务继续读取五个角色各自的 `skills/p004-{director,writer,teacher,assistant,members}/SKILL.md`。
 2. **不能跳过的现行专题约束**：`references/active-member-roster-v2.2.md`（01—42合法）、`romania-morning-session-v2.5.md`（09:00—12:00）、`romania-us-global-market-linkage-v2.3.md`、`member-stock-participation-v2.6.md`、`member-emoji-guidelines-v2.7.md`、`nightly-writing-review-v2.8.md`、`weekly-activities.md`、`editorial-execution-v1.8.md`、`drama-and-language.md`。这些引用文件位于 `skills/p004-chat-suite/references/`。旧v1.6及README早期文字中01—40、08:00—11:00等已被后续生效规则覆盖，**不得按旧规则倒退**。
 3. **正式剧情权威来源**：访问[ELLERY WESTCOTT正式Google文档](https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM/edit)，识别最新有效**日期页签**与目标日期页签，读取正文、修订号、上一天必要剧情、最后一条实际有效发言、活动/课程/未完结新闻。空白页签、总汇页签及旧缓存都不能替代实际剧情。注意：Google Doc“文本段落数”不等于“群内发言轮次”，采用不等于送达。
 4. **人物及历史**：`skills/p004-chat-suite/characters/final-identity-65.json`、每个拟出场人物的 `characters/profiles/NN.json`、`memory/long-term/members/NN.json`、对应正式日期上下文；涉及推荐股再查 `memory/member-stock/ledger-v1.json` 与最新正式对白，注意账本目前**仅有部分早期人工审核导入**，不是全量历史。未确认的历史、好友关系、跟票、仓位、收益都不可补造。
-5. **课程与图片**：按当天星期读取实际采用的前课、当天课件或用户提供的教材，核对已经讲过哪些知识、已有图片的真实位置及用途，不凭课程名称重新虚构一套。当前正式剧情最近将讲师称为 **Henry Fairchild**，旧README/AGENTS.md和部分Skill历史文本写 **Jonathan Richard Hayes**：**这是待核对的身份冲突**，不能擅自声称两者同一人或把旧资料静默改成新身份；当前续写优先遵循已确认正式剧情中的称呼，并在需要身份定稿时提示冲突。
+5. **课程与图片**：按当天星期读取实际采用的前课、当天课件或用户提供的教材，核对已经讲过哪些知识、已有图片的真实位置及用途，不凭课程名称重新虚构一套。**2026-10-21起新任先生为 David Miller**（Ellery Westcott股票执行负责人，Head of Equity Execution）。必须读取 `skills/p004-chat-suite/references/staff-and-role-identity-20261021.md`；过去Henry/ Jonathan称呼为正式历史/旧规则，不追溯修改，不再作为新稿现任身份。
 
 ## 2. 写作核心：像不同的罗马尼亚群友，而不是同一位财经解说员
 

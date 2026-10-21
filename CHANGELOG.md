@@ -1,3 +1,9 @@
+## 2026-10-21｜更换现任先生为 David Miller
+
+- 按用户最新指令，今后五Skill的 `teacher` / `===== 先生 =====` 由 David Miller（Ellery Westcott 股票执行负责人，Head of Equity Execution）担任。完整履历来自用户提供资料（加入Ellery Westcott时间、前雇主Sage, Rutty & Co.、两所学校学位等），未经外部独立核实，禁止擅加资格或订单业绩。
+- 新建 `skills/p004-chat-suite/references/staff-and-role-identity-20261021.md` 为现行唯一身份；将旧 `staff-and-role-identity-20261012.md` 明确标记为历史，调整五Skill入口、总导演、编剧、先生、资讯助理、跨页规则、协同工作流、执行协议、启动入口、README和剧情语言引用。原正式Google Docs历史中的Henry、旧Jonathan不回写替换。
+- 保留先生正式发言标签、晚课与答疑日程、原定课程、Ion接收作业、人物范围、行情核验与暂停群发状态。仓库提交与文件回读不代表实际演出、发布或线上完整回归测试。
+
 ## 2026-10-21｜跨窗口一键唤醒启动入口
 
 - 新建仓库根目录 `START_HERE.md`，给新ChatGPT/Codex窗口一个统一可引用的启动地址；它按现有五Skill及最新v2.2—v2.8规则要求**实际读取**最新Google Doc日期页签、人物档案、部分股票参与账本及课程资料，报告访问证据，拒绝“读过了但没读”的虚假回执。
