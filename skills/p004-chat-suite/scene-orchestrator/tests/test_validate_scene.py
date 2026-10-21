@@ -38,4 +38,13 @@ class TestSceneStaticGate(unittest.TestCase):
     def test_morning_missing_snapshot_blocked(self):
         self.assertIn('MISSING_CORRECTIONS',self.codes('===== 资讯助理 =====\n美股市场资讯。',scene='morning'))
 
+    def test_morning_snapshot_has_no_approved_rule(self):
+        result=self.check('===== 资讯助理 =====\\n美股市场资讯。',scene='morning',corrections={'rules':[{'status':'draft','scene':'morning'}]})
+        self.assertFalse(result['pass'])
+
+    def test_morning_wrong_lead_with_market_keyword(self):
+        rules={'rules':[{'status':'approved','scene':'morning','forbidden_lead_terms':['昨晚的学习收获'],'required_lead_terms':['美股']}]}
+        result=self.check('===== 资讯助理 =====\\n先说昨晚的学习收获，然后再看美股。',scene='morning',corrections=rules)
+        self.assertIn('MORNING_LESSON_LEAD',{x['code'] for x in result['issues']})
+
 if __name__=='__main__': unittest.main()
