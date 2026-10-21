@@ -134,6 +134,39 @@ class Runtime21Test(unittest.TestCase):
         states=copy.deepcopy(self.states);states[0]['evidence_ids']=['withdrawn']
         with self.assertRaisesRegex(ValueError,'MISSING_OR_WITHDRAWN'):self.execute(state_records=states)
 
+    def test_repeated_emoji_is_detected_and_blocks_candidate(self):
+        scene = [
+            {'id':'e1','speaker_id':'12','gender':'男','text':'我先看看。😂'},
+            {'id':'e2','speaker_id':'17','gender':'女','text':'我不太确定。'},
+            {'id':'e3','speaker_id':'12','gender':'男','text':'那就继续观察。😂'},
+            {'id':'e4','speaker_id':'03','gender':'男','text':'结果还没有出来。'},
+            {'id':'e5','speaker_id':'12','gender':'男','text':'等一会再说。😂'}]
+        findings = rt.emoji_findings(scene)
+        self.assertEqual(findings[0]['code'], 'REPEATED_SPEAKER_EMOJI_ENDING')
+        self.assertEqual(findings[0]['turn_ids'], ['e1','e3','e5'])
+        result = self.execute(('12','17','03'), scene=scene)
+        self.assertIn('EMOJI_PATTERN_REVIEW_REQUIRED', result['errors'])
+        self.assertEqual(result['status'], 'BLOCK')
+
+    def test_cross_speaker_emoji_chain_is_detected(self):
+        scene = [
+            {'id':'e1','speaker_id':'03','gender':'男','text':'我看到了。😂'},
+            {'id':'e2','speaker_id':'12','gender':'男','text':'你说得对。😂'},
+            {'id':'e3','speaker_id':'17','gender':'女','text':'再看看吧。😂'}]
+        issues = rt.emoji_findings(scene)
+        self.assertEqual([f['code'] for f in issues], ['CROSS_SPEAKER_EMOJI_CHAIN'])
+        self.assertEqual(issues[0]['turn_ids'], ['e1','e2','e3'])
+
+    def test_mixed_and_emoji_free_scenes_do_not_trigger_pattern_gate(self):
+        scene = [
+            {'id':'e1','speaker_id':'12','gender':'男','text':'今天有点意外。😳'},
+            {'id':'e2','speaker_id':'17','gender':'女','text':'先别急。'},
+            {'id':'e3','speaker_id':'12','gender':'男','text':'我再看看。😂'},
+            {'id':'e4','speaker_id':'03','gender':'男','text':'数据得核实一下。'},
+            {'id':'e5','speaker_id':'12','gender':'男','text':'想明白了。'}]
+        self.assertEqual(rt.emoji_findings(scene), [])
+        self.assertEqual(rt.quality_signals(scene)['emoji_review'], [])
+
     def test_three_member_pattern_warns_without_rejecting(self):
         scene=[]
         for n in range(3):

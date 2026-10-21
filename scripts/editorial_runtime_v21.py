@@ -348,6 +348,48 @@ def reviewed_states(records, sources, roster):
     return accepted
 
 
+def emoji_findings(scene):
+    """Flag repetitive final emoji patterns in candidate member dialogue."""
+    suffix = re.compile(r'([\U0001F300-\U0001FAFF\u2600-\u27BF])\ufe0f?$')
+
+    def ending(turn):
+        match = suffix.search(turn.get('text', '').strip())
+        return match.group(1) if match else None
+
+    def member(turn):
+        return isinstance(turn, dict) and str(turn.get('speaker_id', '')).isdigit()
+
+    findings = []
+    speakers = sorted({str(t['speaker_id']) for t in scene if member(t)})
+    for speaker in speakers:
+        own = [t for t in scene if member(t) and str(t['speaker_id']) == speaker]
+        for i in range(2, len(own)):
+            window = own[max(0, i-3):i+1]
+            suffixes = [(t['id'], ending(t)) for t in window]
+            repeated = None
+            for value in sorted({v for _, v in suffixes if v}):
+                ids = [tid for tid, e in suffixes if e == value]
+                if len(ids) >= 3:
+                    repeated = {'code': 'REPEATED_SPEAKER_EMOJI_ENDING',
+                                'member_ids': [speaker], 'turn_ids': ids,
+                                'emoji': value, 'severity': 'REVIEW'}
+                    break
+            if repeated:
+                findings.append(repeated)
+                break
+    for i in range(2, len(scene)):
+        window = scene[i-2:i+1]
+        if not all(member(t) for t in window):
+            continue
+        endings = [ending(t) for t in window]
+        if endings[0] and len(set(endings)) == 1 and len({str(t['speaker_id']) for t in window}) >= 2:
+            findings.append({'code': 'CROSS_SPEAKER_EMOJI_CHAIN',
+                             'member_ids': [str(t['speaker_id']) for t in window],
+                             'turn_ids': [t['id'] for t in window],
+                             'emoji': endings[0], 'severity': 'REVIEW'})
+    return findings
+
+
 def quality_signals(scene):
     warnings = []
     member_run_lengths = []; run = 0
@@ -364,7 +406,10 @@ def quality_signals(scene):
             a, b = compact(turn['text']), compact(earlier['text'])
             if min(len(a), len(b)) >= 20 and SequenceMatcher(None, a, b).ratio() > .90:
                 warnings.append('SIMILAR_WORDING:'+turn['id'])
-    return {'warnings': sorted(set(warnings)), 'semantic_status': 'PENDING_HUMAN_REVIEW',
+    emoji_review = emoji_findings(scene)
+    warnings.extend('EMOJI_PATTERN_REVIEW:' + issue['code'] + ':' + ','.join(issue['turn_ids']) for issue in emoji_review)
+    return {'warnings': sorted(set(warnings)), 'emoji_review': emoji_review,
+        'semantic_status': 'PENDING_HUMAN_REVIEW',
         'rubric': ['distinct voices', 'reply motivation and target', 'emotion and knowledge continuity',
                    'topic progression', 'name and GIF use without quotas'], 'automatically_approved': False}
 
@@ -453,7 +498,10 @@ def run(root, snapshot, cast, now, revision_check=None, decisions=None, scene=No
     if scene is not None:
         review = review_scene(scene, context, claims)
         errors.extend(review['errors'])
-        if not review['errors']: review['quality'] = quality_signals(scene)
+        if not review['errors']:
+            review['quality'] = quality_signals(scene)
+            if review['quality']['emoji_review']:
+                errors.append('EMOJI_PATTERN_REVIEW_REQUIRED')
         for turn in scene if isinstance(scene, list) and all(isinstance(t, dict) and 'speaker_id' in t and 'text' in t and 'id' in t for t in scene) else []:
             assertion = turn.get('action_assertion')
             if assertion:
