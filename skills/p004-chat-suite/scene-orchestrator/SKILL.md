@@ -22,6 +22,8 @@ metadata:
 4. 人物口吻证据：`skills/p004-chat-suite/voice-management/voice-index-2026-10-21.json` 的 `members[].voice.evidence` 与最新Docs已采用原话；实际存在经用户批准的口吻文件才读取为确定风格，网页本机保存不等于已同步。无样本则如实标低置信度，不臆造固定口癖。
 5. 剧情事实：必要时读 `memory/daily/YYYY-MM-DD/`、`memory/long-term/members/NN.json`、`memory/curated/`、`memory/member-stock/ledger-v2.json`；跟推荐买票按已确认**小说剧情参与状态**记录，不反复索要成交证明，但不造价格、股数、盈亏或真实交易回执。
 6. 新闻、指数、股票价格、日期、活动结果：必须另外核对对应有效资讯源与时点。BVB盘中/收盘、美股盘前/盘后/收盘不可混淆；缺可靠来源宁可少说，不编数字。
+7. **Notion纠错实时核对**：在写上午/下午/晚间场次或做质量巡检时，使用已连接的Notion读取 [ELLERY WESTCOTT剧情控制中心](https://app.notion.com/p/400fd480b91e816cbb9be0b315d2b976)；读取“机器可读的已确认纠错规则”下 `EW-CORRECTION`、`status=approved` 的JSON，并与 `references/notion-approved-corrections.json` 按规则id、status、scene、severity、title及关键词字段逐项比对。不能仅凭GitHub旧快照说已经读取了Notion。若两边不一致，标记 `RULE_DRIFT`，不得报告“五Skill全验收通过”；只有核实属于用户正式批准修订后才用GitHub连接器更新快照，并复读验证。Notion不可用时标 `SOURCE_BLOCKED`；这条是**写稿时的连接器核验流程**，不是无人值守Notion→GitHub实时同步。
+8. **上午场次硬门禁**：生成前先由导演按Europe/Bucharest时钟写内部节点规划：09:00开群→隔夜美股与罗马尼亚盘前资讯→成员围绕新闻自然互动→11:45后收尾→12:00闭群。发现把昨晚课程收获、课后作业、技术复盘写成上午主线，必须重写，不得用财经关键词掩盖主线错位；参见 `references/QA-GATES.md` 的P0规则。
 
 **触发后是实际连接器读取，不是“假装我记住了”。** 缺权限或查不到相关日期时标 SOURCE_BLOCKED，不能声称全面核验。纯粹对用户粘贴的单句做语气编辑，且不依赖当日历史时，可只读取该人物必要样本，避免无谓大范围检索。
 
@@ -62,7 +64,7 @@ metadata:
 - P0阻断：身份/性别/出场权限错误、主讲/顾问混淆、虚构活动答案、未经核实行情、擅称送达/真实获利。
 - P1重大：剧情最后节点未接上、人物已采用经历矛盾、课程/活动顺序错误、封群时点与当日场次矛盾、多人对白模板化严重。
 - P2语言：AI空话、重复emoji、太长、人物声音被抹平、图片位置不相关。
-- 在可运行Python环境执行 `python skills/p004-chat-suite/scene-orchestrator/tools/validate_scene.py draft.txt --roster skills/p004-chat-suite/characters/final-identity-65.json --json`；写活动时加 `--activity`。脚本仅能检身份标签/准入/重复/加粗/旧先生/活动顺序；不能验证行情真实性或人设自然度。若没运行不可谎称机器通过。
+- 在可运行Python环境执行 `python skills/p004-chat-suite/scene-orchestrator/tools/validate_scene.py draft.txt --roster skills/p004-chat-suite/characters/final-identity-65.json --scene morning --json`（上午稿；下午/晚间分别使用 `--scene afternoon`/`--scene evening`）；写活动时加 `--activity`。**不得省略场次参数**，否则无法触发上午P0静态初筛。脚本仅能检身份标签/准入/重复/加粗/旧先生/活动顺序；不能验证行情真实性或人设自然度。若没运行不可谎称机器通过。
 - 用户曾明确取消的旧异常（例如之前某次闭群发言、旧报价提醒）不继续反复提示；重心是新稿的真实重大问题。
 
 ## 7. 交付协议
