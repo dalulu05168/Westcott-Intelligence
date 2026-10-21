@@ -1,0 +1,44 @@
+name: Westcott Scene Skill Checks
+on:
+  push:
+    paths:
+      - "AGENTS.md"
+      - "skills/p004-*/SKILL.md"
+      - "skills/p004-chat-suite/scene-orchestrator/**"
+      - ".agents/skills/ellery-westcott-scene/**"
+      - ".github/workflows/scene-orchestrator-ci.yml"
+  pull_request:
+    paths:
+      - "AGENTS.md"
+      - "skills/p004-*/SKILL.md"
+      - "skills/p004-chat-suite/scene-orchestrator/**"
+      - ".agents/skills/ellery-westcott-scene/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  scene-skill:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate canonical 65-member identities and repository rules
+        run: python scripts/validate_repository.py
+      - name: Run scene static gate regression tests
+        run: python -m unittest discover -s skills/p004-chat-suite/scene-orchestrator/tests -v
+      - name: Confirm routing from all five components
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          paths = [Path('AGENTS.md'), Path('skills/p004-chat-suite/SKILL.md')]
+          paths += [Path(f'skills/p004-{role}/SKILL.md') for role in ('director','writer','teacher','assistant','members')]
+          for p in paths:
+              assert 'scene-orchestrator/SKILL.md' in p.read_text(encoding='utf-8'), p
+          print('PASS: unified scene skill referenced by all seven entry points')
+          PY
