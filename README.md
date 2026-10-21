@@ -1,3 +1,9 @@
+# 新窗口统一启动｜先读这里
+
+**[START_HERE.md](START_HERE.md)**：新ChatGPT/Codex窗口输入“启动Westcott”时的权威引导入口。必须实际读取最新五Skill、正式Google文档、人物历史并核对执行结果；不会因仓库存在文件就自动加载、自动写入或自动发送。
+
+---
+
 ## 五Skill V2.1 连续记忆与真实执行
 
 执行入口与命令见 [runtime-v2.1.md](skills/p004-chat-suite/references/runtime-v2.1.md)。源码升级覆盖统一控制器、65人派生记忆、修订复查、课程/事实/发送状态隔离及回归测试；线上任务未应用，人工语义验收待完成。原备用上下文继续保留。
