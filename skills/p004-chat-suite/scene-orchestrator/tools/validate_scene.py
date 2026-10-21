@@ -51,7 +51,7 @@ def analyze(text: str, people: list[dict], *, max_active: int = 42, activity: bo
             if seen[normalized]: add('DUPLICATE_TURN','blocker',f'与先前台词完全重复：{label}',line_no)
             seen[normalized].append(label)
     if scene == 'morning':
-        active_rules = (corrections or {}).get('rules', [])
+        active_rules = [r for r in (corrections or {}).get('rules', []) if r.get('status') == 'approved' and r.get('scene') == 'morning']
         if corrections is None:
             add('MISSING_CORRECTIONS','blocker','上午稿缺少Notion已批准纠错快照')
         if not active_rules:
