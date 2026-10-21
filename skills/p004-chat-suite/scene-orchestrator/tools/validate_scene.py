@@ -88,7 +88,7 @@ def main(argv=None):
     parser.add_argument('--roster',type=Path,default=Path(__file__).resolve().parents[2]/'characters/final-identity-65.json')
     parser.add_argument('--max-active',type=int,default=42)
     parser.add_argument('--activity',action='store_true')
-    parser.add_argument('--scene',choices=['morning','afternoon','evening','unspecified'],default='unspecified')
+    parser.add_argument('--scene',choices=['morning','afternoon','evening','general'],required=True,help='Required so morning-specific correction gates cannot be silently bypassed')
     parser.add_argument('--corrections',type=Path,default=Path(__file__).resolve().parents[1]/'references/notion-approved-corrections.json')
     parser.add_argument('--json',action='store_true')
     args=parser.parse_args(argv)
