@@ -1,5 +1,9 @@
 # 五合一Skill规范
 
+## 2026-10-22｜65人编号口吻改写直达入口
+当用户粘贴 `14男：原话`、`02女：原话`、`按14号口吻改：原话`，或一次粘贴多行编号发言，直接进入 `VOICE_REWRITE`，而不是整天的剧情写稿流程。先读取 `skills/p004-chat-suite/voice-management/NUMBERED-VOICE-REWRITE.md`，按 `final-identity-65.json` 核对编号与性别、`characters/profiles/NN.json` 读取职业/行为/性格草案、`voice-index-2026-10-21.json` 核对该人的历史已采用对白；必要时刷新最新Docs。以本人历史句式优先，职业性格仅作为辅助，保留原意数字，不杜撰经历。默认只给逐行可复制的改写结果。输入编号不符时明确提示，不要猜人物。43—65仅能按用户明确要求做文本改写，不得作为正式群聊新出场。
+程序入口 `skills/p004-chat-suite/voice-management/tools/prepare_numbered_rewrite.py` 负责加载65人身份/职业/候选性格/口吻证据，为语言模型准备上下文；模型实际负责语言转换，不能将该Python工具说成可脱离模型独立改写。
+
 ## 2026-10-21｜统一剧情总Skill v1.0 · 自动入口
 
 当用户在ChatGPT/Codex请求“写/续写/修改/检查ELLERY WESTCOTT 上午、下午、晚上、活动、晚课、人物口吻”时，**第一步读取并执行** `skills/p004-chat-suite/scene-orchestrator/SKILL.md`，在同一生成中强制完成五Skill分工、Google Docs最新已采用剧情、65人锁定身份/口吻、今日事实、人物Emoji、活动上一期答案衔接与出稿QA。用户无需打开语言管理器或复制人物提示词。此入口是仓库级代理规则，不能假装GitHub提交已成为任意ChatGPT新对话的全局配置；新ChatGPT Project需要按 `skills/p004-chat-suite/scene-orchestrator/CHATGPT-PROJECT-INSTRUCTIONS.md` 配置一次。
