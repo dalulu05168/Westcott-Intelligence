@@ -4,7 +4,7 @@
   "source_doc": {
     "id": "1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM",
     "url": "https://docs.google.com/document/d/1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM/edit",
-    "revision_id": "AHj4eMRvxRUq_oCR-y0ntB5NGCjfBFjXI5KgF9LTdIiaXx3r-kW1nbx21CQ1Q-EQh24fkf_wIUDzK9jQ1sGXx6mlzaLCCW3Gqq-JZaQqE3k",
+    "revision_id": "AHj4eMQcENGvCnCNbqJ_Wcuyj3BfVdUJfdlIJCPyO_lKtK9mSPT5WUplBOF0HKiVHDuVo5nRm1Vx8PtrnemGfi9CJBEhyrpskkYQe9-Zq2A",
     "reviewed_tabs": [
       {
         "id": "t.t7k4o87mkgzv",
@@ -37,7 +37,9 @@
     ],
     "excluded_tabs": [
       "AI写入测试（非正式剧情）"
-    ]
+    ],
+    "revision_previous": "AHj4eMRvxRUq_oCR-y0ntB5NGCjfBFjXI5KgF9LTdIiaXx3r-kW1nbx21CQ1Q-EQh24fkf_wIUDzK9jQ1sGXx6mlzaLCCW3Gqq-JZaQqE3k",
+    "last_refresh_reason": "Google Doc revision changed during index generation; refreshed same-day sample source and dropped quotes no longer present"
   },
   "official_roster": {
     "repository": "dalulu05168/Westcott-Intelligence",
@@ -148,8 +150,8 @@
     "identity_total": 65,
     "observed_member_count": 42,
     "inactive_without_evidence": 23,
-    "parsed_total_turns": 643,
-    "direct_samples": 261
+    "parsed_total_turns": 644,
+    "direct_samples": 263
   },
   "identity_guard": "只将身份表中11项字段作为用户确认事实；职业、所在地不自动确定性格。家庭关系统一为未提供。过去话题或发言中的亲属提及应独立核对后确认。",
   "financial_fiction_guard": "仅用于虚构剧情和写作；人物既往交易、持仓、盈利只能来自已经采用的剧情记录，不能凭语言样本或人设增加。不可用虚构人物伪装成真实客户投资见证。",
@@ -277,8 +279,8 @@
       "voice": {
         "evidence_status": "DIRECT_GOOGLE_DOC_UNREVIEWED",
         "approved_style": false,
-        "observed_turns": 16,
-        "distinct_usable_turns": 16,
+        "observed_turns": 17,
+        "distinct_usable_turns": 17,
         "question_turns": 3,
         "emoji_marks": 5,
         "sample_chars": 342,
@@ -433,11 +435,11 @@
       "voice": {
         "evidence_status": "DIRECT_GOOGLE_DOC_UNREVIEWED",
         "approved_style": false,
-        "observed_turns": 8,
-        "distinct_usable_turns": 8,
+        "observed_turns": 9,
+        "distinct_usable_turns": 9,
         "question_turns": 0,
         "emoji_marks": 0,
-        "sample_chars": 226,
+        "sample_chars": 270,
         "evidence": [
           {
             "date": "2026-10-14",
@@ -494,6 +496,13 @@
             "tab_id": "t.toc19bjz91ue",
             "paragraph_index": 3051,
             "text": "说到底，生意还是得看利润。订单再多成本太高，那还怎么赚钱。"
+          },
+          {
+            "date": "2026-10-21",
+            "tab_title": "10/21",
+            "tab_id": "t.toc19bjz91ue",
+            "paragraph_index": 7090,
+            "text": "听起来有点像做生意时的报价。原来觉得能接受的价格，情况变了以后，大家的想法也可能跟着变。"
           }
         ],
         "approved_rules": [],
@@ -525,9 +534,9 @@
       "voice": {
         "evidence_status": "DIRECT_GOOGLE_DOC_UNREVIEWED",
         "approved_style": false,
-        "observed_turns": 35,
-        "distinct_usable_turns": 35,
-        "question_turns": 5,
+        "observed_turns": 36,
+        "distinct_usable_turns": 36,
+        "question_turns": 6,
         "emoji_marks": 2,
         "sample_chars": 369,
         "evidence": [
@@ -874,8 +883,8 @@
         "approved_style": false,
         "observed_turns": 37,
         "distinct_usable_turns": 37,
-        "question_turns": 9,
-        "emoji_marks": 20,
+        "question_turns": 10,
+        "emoji_marks": 21,
         "sample_chars": 279,
         "evidence": [
           {
@@ -971,10 +980,10 @@
       "voice": {
         "evidence_status": "DIRECT_GOOGLE_DOC_UNREVIEWED",
         "approved_style": false,
-        "observed_turns": 20,
-        "distinct_usable_turns": 19,
+        "observed_turns": 21,
+        "distinct_usable_turns": 20,
         "question_turns": 4,
-        "emoji_marks": 10,
+        "emoji_marks": 12,
         "sample_chars": 298,
         "evidence": [
           {
@@ -1219,8 +1228,8 @@
       "voice": {
         "evidence_status": "DIRECT_GOOGLE_DOC_UNREVIEWED",
         "approved_style": false,
-        "observed_turns": 17,
-        "distinct_usable_turns": 16,
+        "observed_turns": 16,
+        "distinct_usable_turns": 15,
         "question_turns": 5,
         "emoji_marks": 8,
         "sample_chars": 277,
@@ -1321,7 +1330,7 @@
         "observed_turns": 36,
         "distinct_usable_turns": 35,
         "question_turns": 3,
-        "emoji_marks": 17,
+        "emoji_marks": 18,
         "sample_chars": 334,
         "evidence": [
           {
@@ -1417,9 +1426,9 @@
       "voice": {
         "evidence_status": "DIRECT_GOOGLE_DOC_UNREVIEWED",
         "approved_style": false,
-        "observed_turns": 11,
-        "distinct_usable_turns": 11,
-        "question_turns": 7,
+        "observed_turns": 10,
+        "distinct_usable_turns": 10,
+        "question_turns": 6,
         "emoji_marks": 0,
         "sample_chars": 339,
         "evidence": [
@@ -1559,8 +1568,8 @@
       "voice": {
         "evidence_status": "DIRECT_GOOGLE_DOC_UNREVIEWED",
         "approved_style": false,
-        "observed_turns": 12,
-        "distinct_usable_turns": 11,
+        "observed_turns": 11,
+        "distinct_usable_turns": 10,
         "question_turns": 2,
         "emoji_marks": 2,
         "sample_chars": 336,
@@ -2041,9 +2050,9 @@
       "voice": {
         "evidence_status": "DIRECT_GOOGLE_DOC_UNREVIEWED",
         "approved_style": false,
-        "observed_turns": 14,
-        "distinct_usable_turns": 14,
-        "question_turns": 3,
+        "observed_turns": 13,
+        "distinct_usable_turns": 13,
+        "question_turns": 4,
         "emoji_marks": 4,
         "sample_chars": 272,
         "evidence": [
@@ -2140,8 +2149,8 @@
       "voice": {
         "evidence_status": "DIRECT_GOOGLE_DOC_UNREVIEWED",
         "approved_style": false,
-        "observed_turns": 10,
-        "distinct_usable_turns": 10,
+        "observed_turns": 11,
+        "distinct_usable_turns": 11,
         "question_turns": 2,
         "emoji_marks": 4,
         "sample_chars": 270,
@@ -2242,7 +2251,7 @@
         "observed_turns": 14,
         "distinct_usable_turns": 14,
         "question_turns": 1,
-        "emoji_marks": 10,
+        "emoji_marks": 11,
         "sample_chars": 360,
         "evidence": [
           {
@@ -2388,11 +2397,11 @@
       "voice": {
         "evidence_status": "DIRECT_GOOGLE_DOC_UNREVIEWED",
         "approved_style": false,
-        "observed_turns": 7,
-        "distinct_usable_turns": 7,
+        "observed_turns": 6,
+        "distinct_usable_turns": 6,
         "question_turns": 2,
         "emoji_marks": 2,
-        "sample_chars": 196,
+        "sample_chars": 175,
         "evidence": [
           {
             "date": "2026-10-14",
@@ -2435,13 +2444,6 @@
             "tab_id": "t.huff85y7dlym",
             "paragraph_index": 7050,
             "text": "在这方面很多人都左右为难。"
-          },
-          {
-            "date": "2026-10-21",
-            "tab_title": "10/21",
-            "tab_id": "t.toc19bjz91ue",
-            "paragraph_index": 5524,
-            "text": "原来是60个交易日，不是直接往前数60天。"
           }
         ],
         "approved_rules": [],
@@ -2878,8 +2880,8 @@
       "voice": {
         "evidence_status": "DIRECT_GOOGLE_DOC_UNREVIEWED",
         "approved_style": false,
-        "observed_turns": 20,
-        "distinct_usable_turns": 20,
+        "observed_turns": 19,
+        "distinct_usable_turns": 19,
         "question_turns": 3,
         "emoji_marks": 6,
         "sample_chars": 327,
@@ -2977,9 +2979,9 @@
       "voice": {
         "evidence_status": "DIRECT_GOOGLE_DOC_UNREVIEWED",
         "approved_style": false,
-        "observed_turns": 22,
-        "distinct_usable_turns": 21,
-        "question_turns": 11,
+        "observed_turns": 23,
+        "distinct_usable_turns": 22,
+        "question_turns": 12,
         "emoji_marks": 2,
         "sample_chars": 277,
         "evidence": [
@@ -3197,11 +3199,11 @@
       "voice": {
         "evidence_status": "DIRECT_GOOGLE_DOC_UNREVIEWED",
         "approved_style": false,
-        "observed_turns": 4,
-        "distinct_usable_turns": 4,
+        "observed_turns": 5,
+        "distinct_usable_turns": 5,
         "question_turns": 0,
         "emoji_marks": 0,
-        "sample_chars": 195,
+        "sample_chars": 230,
         "evidence": [
           {
             "date": "2026-10-16",
@@ -3223,6 +3225,13 @@
             "tab_id": "t.2dp2catgrjty",
             "paragraph_index": 2824,
             "text": "我当时确实犹豫，最后也只买了一点。现在看着上涨，难免想“要是多买些就好了”，可当时怕跌的也是我。"
+          },
+          {
+            "date": "2026-10-21",
+            "tab_title": "10/21",
+            "tab_id": "t.toc19bjz91ue",
+            "paragraph_index": 7591,
+            "text": "这事我倒能理解。有时候价格往回走一点，就容易担心后面是不是又要涨起来。"
           },
           {
             "date": "2026-10-16",
@@ -3261,11 +3270,11 @@
       "voice": {
         "evidence_status": "DIRECT_GOOGLE_DOC_UNREVIEWED",
         "approved_style": false,
-        "observed_turns": 6,
-        "distinct_usable_turns": 5,
+        "observed_turns": 7,
+        "distinct_usable_turns": 6,
         "question_turns": 2,
         "emoji_marks": 2,
-        "sample_chars": 148,
+        "sample_chars": 186,
         "evidence": [
           {
             "date": "2026-10-14",
@@ -3301,6 +3310,13 @@
             "tab_id": "t.2dp2catgrjty",
             "paragraph_index": 7454,
             "text": "先看价格在哪个范围运行，什么变化说明突破可能成立，又有什么变化说明原来的判断需要改。"
+          },
+          {
+            "date": "2026-10-21",
+            "tab_title": "10/21",
+            "tab_id": "t.toc19bjz91ue",
+            "paragraph_index": 7992,
+            "text": "我觉得最容易弄混的，就是同一个价格区域，过一段时间以后，作用可能完全不一样。"
           }
         ],
         "approved_rules": [],
@@ -3455,9 +3471,9 @@
         "approved_style": false,
         "observed_turns": 4,
         "distinct_usable_turns": 4,
-        "question_turns": 1,
-        "emoji_marks": 0,
-        "sample_chars": 90,
+        "question_turns": 2,
+        "emoji_marks": 1,
+        "sample_chars": 107,
         "evidence": [
           {
             "date": "2026-10-21",
@@ -3477,15 +3493,15 @@
             "date": "2026-10-21",
             "tab_title": "10/21",
             "tab_id": "t.toc19bjz91ue",
-            "paragraph_index": 5290,
-            "text": "晚上好，先生！我是新加入社群的。"
+            "paragraph_index": 5810,
+            "text": "原来不是画上一条线，价格碰到那里就一定得掉头啊。我之前还真是这么理解的。😅"
           },
           {
             "date": "2026-10-21",
             "tab_title": "10/21",
             "tab_id": "t.toc19bjz91ue",
-            "paragraph_index": 7523,
-            "text": "我会继续观察。两个位置接近，只是让我多看一眼，还没有证明价格能站稳。"
+            "paragraph_index": 8478,
+            "text": "我也正想问这个。难道一定要重新碰到那条线，才算突破成功吗？"
           }
         ],
         "approved_rules": [],
