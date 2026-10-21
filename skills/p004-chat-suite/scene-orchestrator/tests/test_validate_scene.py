@@ -26,4 +26,16 @@ class TestSceneStaticGate(unittest.TestCase):
     def test_invalid_label(self): self.assertIn('INVALID_LABEL',self.codes('2女 我也是'))
     def test_pending_result(self): self.assertIn('PENDING_PREVIOUS_RESULT',self.codes('上一期活动结果待核实。今天的活动题目先拟定。',activity=True))
 
+    def test_morning_lesson_lead_blocked(self):
+        rules={'rules':[{'status':'approved','scene':'morning','forbidden_lead_terms':['昨晚的学习收获'],'required_lead_terms':['美股','罗马尼亚','盘前','市场']}]}
+        result=self.check('===== 资讯助理 =====\\n今天先聊聊昨晚的学习收获。',scene='morning',corrections=rules)
+        self.assertIn('MORNING_LESSON_LEAD',{x['code'] for x in result['issues']})
+        self.assertFalse(result['pass'])
+    def test_morning_market_lead_allowed_static(self):
+        rules={'rules':[{'status':'approved','scene':'morning','forbidden_lead_terms':['昨晚的学习收获'],'required_lead_terms':['美股','罗马尼亚','盘前','市场']}]}
+        result=self.check('===== 资讯助理 =====\\n早上好，先看隔夜美股市场资讯。',scene='morning',corrections=rules)
+        self.assertNotIn('MORNING_NO_MARKET_LEAD',{x['code'] for x in result['issues']})
+    def test_morning_missing_snapshot_blocked(self):
+        self.assertIn('MISSING_CORRECTIONS',self.codes('===== 资讯助理 =====\\n美股市场资讯。',scene='morning'))
+
 if __name__=='__main__': unittest.main()
