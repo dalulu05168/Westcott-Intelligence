@@ -1,5 +1,9 @@
 # 五合一Skill规范
 
+## 2026-10-21｜统一剧情总Skill v1.0 · 自动入口
+
+当用户在ChatGPT/Codex请求“写/续写/修改/检查ELLERY WESTCOTT 上午、下午、晚上、活动、晚课、人物口吻”时，**第一步读取并执行** `skills/p004-chat-suite/scene-orchestrator/SKILL.md`，在同一生成中强制完成五Skill分工、Google Docs最新已采用剧情、65人锁定身份/口吻、今日事实、人物Emoji、活动上一期答案衔接与出稿QA。用户无需打开语言管理器或复制人物提示词。此入口是仓库级代理规则，不能假装GitHub提交已成为任意ChatGPT新对话的全局配置；新ChatGPT Project需要按 `skills/p004-chat-suite/scene-orchestrator/CHATGPT-PROJECT-INSTRUCTIONS.md` 配置一次。
+
 ## 2026-10-21 人物说话能力管理强制入口
 
 凡涉及成员对白、口吻优化或人物家庭/职业表达，除原有五Skill流程外，必须额外读取 `skills/p004-chat-suite/voice-management/SKILL.md` 与 `voice-index-2026-10-21.json`，并在生成正式新稿前刷新最新 Google Docs 及对应人物已采用历史。65人身份以 `characters/final-identity-65.json` 最终版为唯一权威；新语言库样本未自动批准为口吻规则，家庭关系未给则空，旧 `dalulu05168/-Skill` 不参与同编号身份合并。新稿只有01—42可出场，43—65不得擅自添加。管理页用户确认的本机规则未导出并正式审定前，禁止声称仓库已同步。
