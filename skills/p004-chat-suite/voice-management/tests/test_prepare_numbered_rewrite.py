@@ -10,7 +10,7 @@ spec.loader.exec_module(module)
 
 class TestNumberedVoiceRewrite(unittest.TestCase):
     def test_parse_multi_person(self):
-        result = module.load_context("14男：我还想看看BRD是否能站稳2.02 RON。\\n02女：我得再算算。")
+        result = module.load_context("14男：我还想看看BRD是否能站稳2.02 RON。\n02女：我得再算算。")
         self.assertEqual([x["label"] for x in result["turns"]], ["14男", "02女"])
         self.assertIn("2.02 RON", result["turns"][0]["original"])
 
@@ -35,7 +35,7 @@ class TestNumberedVoiceRewrite(unittest.TestCase):
             module.load_context("66男：我想再看看。")
 
     def test_profiles_02_14_differ_despite_same_job(self):
-        result = module.load_context("02女：我先看看。\\n14男：我先看看。")
+        result = module.load_context("02女：我先看看。\n14男：我先看看。")
         people = result["people"]
         self.assertEqual(people["02"]["identity"]["occupation"], "会计师")
         self.assertEqual(people["14"]["identity"]["occupation"], "会计师")
