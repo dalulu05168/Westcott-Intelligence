@@ -22,6 +22,18 @@ class TestNumberedVoiceRewrite(unittest.TestCase):
         result = module.load_context("2女：数字还需要确认。")
         self.assertEqual(result["turns"][0]["label"], "02女")
 
+    def test_number_word_command(self):
+        result = module.load_context("按14号口吻改：我想再看看。")
+        self.assertEqual(result["turns"][0]["label"], "14男")
+
+    def test_catalog_covers_all_personas(self):
+        catalog = module.build_catalog()
+        self.assertEqual(catalog["count"], 65)
+        self.assertEqual(catalog["members"][0]["label"], "01男")
+        self.assertEqual(catalog["members"][-1]["label"], "65男")
+        self.assertEqual(sum(row["evidence_status"] == "DIRECT_GOOGLE_DOC_UNREVIEWED" for row in catalog["members"]), 42)
+        self.assertEqual(sum(row["evidence_status"] == "NO_ADOPTED_DOC_DIALOGUE_FOUND" for row in catalog["members"]), 23)
+
     def test_gender_conflict_rejected(self):
         with self.assertRaises(module.VoiceInputError):
             module.load_context("02男：明天再看看。")
