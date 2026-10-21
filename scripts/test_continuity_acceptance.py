@@ -87,10 +87,27 @@ class ContinuityAcceptanceTest(unittest.TestCase):
         self.assertTrue(recovered['has_foje'])
         self.assertIsNone(recovered['quantity'])
 
-    def test_no_simulated_sunday_in_production_projection(self):
+    def test_formal_sunday_in_production_projection_without_simulation_data(self):
+        # A date is not a simulation marker: 2026-10-18 now has formal Google Doc history.
         history=rt.load(ROOT/'memory/derived/v2.1/effective-history.json')
-        self.assertNotIn('2026-10-18',history)
-        self.assertFalse(any('SIMULATION_ONLY' in str(row) for rows in history.values() for row in rows))
+        sunday=history.get('2026-10-18',[])
+        self.assertTrue(sunday, 'Formal 2026-10-18 history must not be discarded')
+        formal_tab=next(t['tabId'] for t in self.snapshot['tabs'] if t['title']=='10/18')
+        for row in sunday:
+            with self.subTest(formal_sunday_row=row.get('id')):
+                self.assertEqual(row.get('date'),'2026-10-18')
+                self.assertEqual(row.get('status'),'PRESENT_IN_FORMAL_DOCUMENT')
+                self.assertEqual(row.get('source_tab_id'),formal_tab)
+                self.assertTrue(row.get('source_revision'))
+
+        # Reject test-fixture provenance/markers on any date, without excluding real dates.
+        for date,rows in history.items():
+            for row in rows:
+                with self.subTest(date=date,record=row.get('id')):
+                    data=json.dumps(row,ensure_ascii=False,sort_keys=True)
+                    self.assertNotIn('SIMULATION_ONLY',data)
+                    self.assertNotIn('ACCEPTANCE_FIXTURE_NOT_LIVE',data)
+                    self.assertNotIn('以下仅为隔离验收场景',data)
 
 
 if __name__=='__main__':unittest.main()
