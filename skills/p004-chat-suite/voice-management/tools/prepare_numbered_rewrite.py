@@ -17,8 +17,8 @@ ROSTER = ROOT / "characters/final-identity-65.json"
 VOICE_INDEX = ROOT / "voice-management/voice-index-2026-10-21.json"
 PROFILES = ROOT / "characters/profiles"
 
-LINE = re.compile(r"^\s*(?P<id>\d{1,2})\s*(?P<gender>[男女])?\s*[：:]\s*(?P<body>.+?)\s*$")
-VERB = re.compile(r"^\s*按\s*(?P<id>\d{1,2})\s*(?P<gender>[男女])?\s*口吻(?:改写|修改|改)?\s*[：:]\s*(?P<body>.+?)\s*$")
+LINE = re.compile(r"^\s*(?P<id>\d{1,2})\s*(?:号)?\s*(?P<gender>[男女])?\s*[：:]\s*(?P<body>.+?)\s*$")
+VERB = re.compile(r"^\s*按\s*(?P<id>\d{1,2})\s*(?:号)?\s*(?P<gender>[男女])?\s*口吻(?:改写|修改|改)?\s*[：:]\s*(?P<body>.+?)\s*$")
 SPACE = re.compile(r"^\s*(?P<id>\d{1,2})\s*(?P<gender>[男女])\s+(?P<body>.+?)\s*$")
 
 class VoiceInputError(ValueError):
@@ -106,16 +106,39 @@ def load_context(text: str, root: Path = ROOT, *, evidence_limit: int = 9) -> di
         "turns": turns,
     }
 
+def build_catalog(root: Path = ROOT) -> dict:
+    """Enumerate and identity-check all 65 profiles and evidence statuses."""
+    sample = "\\n".join(f"{n:02d}：编号检查" for n in range(1, 66))
+    result = load_context(sample, root=root, evidence_limit=0)
+    members = []
+    for item in result["people"].values():
+        ident = item["identity"]
+        hints = item["creative_personality_not_approved"]
+        evidence = item["historic_speech"]
+        members.append({
+            "label": ident["id"] + ident["gender"],
+            "name": ident["name"],
+            "occupation": ident["occupation"],
+            "main_behavior_draft": hints["main_behavior"],
+            "secondary_behavior_draft": hints["secondary_behavior"],
+            "evidence_status": evidence["evidence_status"],
+            "observed_turns": evidence["observed_turns"],
+            "approved_style": evidence["approved_style"],
+            "participation": item["participation"],
+        })
+    return {"count": len(members), "members": members}
+
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--text", help="Labeled dialogue; when absent, read from stdin")
     parser.add_argument("--evidence-limit", type=int, default=9)
+    parser.add_argument("--catalog", action="store_true", help="Report all 65 profile and evidence coverage statuses")
     args = parser.parse_args(argv)
     if args.evidence_limit < 0:
         parser.error("--evidence-limit must be >= 0")
-    original = args.text if args.text is not None else sys.stdin.read()
+    original = None if args.catalog else (args.text if args.text is not None else sys.stdin.read())
     try:
-        result = load_context(original, evidence_limit=args.evidence_limit)
+        result = build_catalog() if args.catalog else load_context(original, evidence_limit=args.evidence_limit)
     except (VoiceInputError, FileNotFoundError, json.JSONDecodeError) as error:
         print(json.dumps({"error": str(error)}, ensure_ascii=False), file=sys.stderr)
         return 2
