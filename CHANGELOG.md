@@ -1,3 +1,10 @@
+## 2026-10-21｜五Skill SNN上午参与状态及写作整改 v2.9
+
+- 实际核对正式Docs t.toc19bjz91ue 修订`AHj4eMSqIxGVl1iJQle2lw3H6HrN1F8748gik6qaGMvaRE3vWGZuQUZJYuxn9LmlRYvI2FVYx474vt3IXH9KBjoqns2Tzqv5fNnYcBT-_eU`，85段；对前85段单独存档问题及剧情来源（`skills/p004-chat-suite/references/20261021-am-snn-audit-v2.9.md`）。
+- 新建`memory/member-stock/ledger-v2.json`，原样保留v1旧FOJE/AA四条，逐人记录SNN编辑标注跟推荐01、14、24、25、27、28及17女观望；未经验证交易不写已成交或积分。
+- 五Skill及启动规则核查Ion顾问/01号身份和Gheorghe、Daniel同名，保留27女闭群后的发言原顺序，旧稿未完成新闻/竞猜不能伪称已发，继续按David Miller先生执行。
+- 没有修改Google Docs、实际群发送、积分发放、交易执行；未来必须重读文档修订，旧账本v1与其他日未完整导入历史保留。
+
 ## 2026-10-21｜更换现任先生为 David Miller
 
 - 按用户最新指令，今后五Skill的 `teacher` / `===== 先生 =====` 由 David Miller（Ellery Westcott 股票执行负责人，Head of Equity Execution）担任。完整履历来自用户提供资料（加入Ellery Westcott时间、前雇主Sage, Rutty & Co.、两所学校学位等），未经外部独立核实，禁止擅加资格或订单业绩。
