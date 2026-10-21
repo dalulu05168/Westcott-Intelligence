@@ -16,9 +16,9 @@
 ## 运行静态测试（只有实际运行后才能声称通过）
 在仓库根运行：
 ```bash
-python skills/p004-chat-suite/scene-orchestrator/tools/validate_scene.py draft.txt --roster skills/p004-chat-suite/characters/final-identity-65.json --json
+python skills/p004-chat-suite/scene-orchestrator/tools/validate_scene.py draft.txt --roster skills/p004-chat-suite/characters/final-identity-65.json --scene morning --json
 ```
-活动稿加 `--activity`；自动检查成员标签/性别/出场范围、过往先生称谓、Markdown加粗、明显重复对白、活动先后顺序。它**不**校验真实财经数据、Google Doc是否最新、人物语言是否自然或交易真实性。使用 `python -m unittest discover -s skills/p004-chat-suite/scene-orchestrator/tests -v` 测试程序。
+上午稿必须传 `--scene morning`，下午/晚间改为 `--scene afternoon` / `--scene evening`，仅通用格式校验传 `--scene general`，省略参数会直接报错；活动稿加 `--activity`；自动检查成员标签/性别/出场范围、过往先生称谓、Markdown加粗、明显重复对白、活动先后顺序。它**不**校验真实财经数据、Google Doc是否最新、人物语言是否自然或交易真实性。使用 `python -m unittest discover -s skills/p004-chat-suite/scene-orchestrator/tests -v` 测试程序。
 失去任一关键来源时，不能输出“全部已验证”，需要以事实限制说明。正文供用户直接复制，不堆测试日志。
 
 ## Notion 已确认纠错接入门禁｜2026-10-22
@@ -36,4 +36,4 @@ Notion保存已确认纠错、剧情进度和验收状态，不替代Google Docs
 
 ### 验收与能力边界
 导演审场次；助理审财经资讯时点；编剧和成员审对白；最终QA分别报告场次、连续性、身份、新闻和口吻。
-当前validate_scene.py不能读取Notion，也不能语义判定上午主线；本规则由写稿流程审查执行，不可宣称静态程序已自动部署。只有真正运行脚本后才能声称脚本通过。
+当前validate_scene.py只读取已核准的GitHub纠错快照、执行上午关键词初筛；它不能调用Notion、不能语义判定整篇上午主线。由已连接Notion和GitHub的写稿代理在每次任务前实时比对规则，发现漂移标记RULE_DRIFT并阻断全验收通过；无人值守同步未部署。只有真正运行测试或脚本后才能声称相应检查通过。
