@@ -4,6 +4,13 @@ description: 用用户最终确认的65人身份与Google文档已采用发言�
 ---
 # Westcott Voice Management
 
+## 编号识别→一键人物口吻转换（优先入口）
+当用户粘贴 `NN男：原句` / `NN女：原句` 或 `按NN号口吻改：原句`，直接转入 [NUMBERED-VOICE-REWRITE.md](NUMBERED-VOICE-REWRITE.md) 的 `VOICE_REWRITE` 轻量流程；不要求再次说明姓名或职业。
+- 自动按编号读取65人最终身份，以及对应 `characters/profiles/NN.json` 的职业、主行为、次行为、兴趣和候选语言字段；**人物职业性格只作辅助，不能压过本人已采用对白**。
+- 使用 `voice-index-2026-10-21.json` 的该人 `voice.evidence`，必要时刷新最新已采用Google Docs；同职业成员也必须分开匹配。没证据不能假称匹配历史语气。
+- 可用 `tools/prepare_numbered_rewrite.py` 整理输入、身份、职业、性格、历史样本给模型，随后**由语言模型改写**；脚本仅准备资料，不会独立写出自然语言改写。
+- 多行多编号逐条对应输出；保持原意、数字、股票代码和不确定性；禁止编造经历、持仓、家庭或语气审批状态。43—65只按明确请求编辑，不获得剧情出场资格。
+
 ## 必须执行的前置读取
 1. 先读取 `../characters/final-identity-65.json` 或逐人的 `../characters/profiles/NN.json` 的**身份锁定字段**。不可读取旧 `romania-market-director` 同编号的人名来覆盖。
 2. 读取 `../references/active-member-roster-v2.2.md` 的现行授权，且在每个新日期检查有无更高优先级更新。当前仅01-42可能出场。
