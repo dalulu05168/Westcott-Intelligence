@@ -348,6 +348,247 @@ def reviewed_states(records, sources, roster):
     return accepted
 
 
+def emoji_findings(scene):
+    """Review obvious repeated final emojis. Never infer a person's emotions."""
+    suffix = re.compile(r'([\U0001F300-\U0001FAFF\u2600-\u27BF])\ufe0f?
+    warnings = []
+    member_run_lengths = []; run = 0
+    for turn in scene:
+        if turn['speaker_id'] == 'news_assistant':
+            if run: member_run_lengths.append(run)
+            run = 0
+        elif turn['speaker_id'].isdigit(): run += 1
+    if run: member_run_lengths.append(run)
+    if len(member_run_lengths) >= 3 and len(set(member_run_lengths[-3:])) == 1:
+        warnings.append('REPEATED_HOST_MEMBER_CADENCE_REVIEW_NOT_AUTOMATIC_REJECTION')
+    for i, turn in enumerate(scene):
+        for earlier in scene[:i]:
+            a, b = compact(turn['text']), compact(earlier['text'])
+            if min(len(a), len(b)) >= 20 and SequenceMatcher(None, a, b).ratio() > .90:
+                warnings.append('SIMILAR_WORDING:'+turn['id'])
+    emoji_review = emoji_findings(scene)
+    warnings.extend('EMOJI_PATTERN_REVIEW:' + issue['code'] + ':' + ','.join(issue['turn_ids']) for issue in emoji_review)
+    return {'warnings': sorted(set(warnings)), 'emoji_review': emoji_review,
+        'semantic_status': 'PENDING_HUMAN_REVIEW',
+        'rubric': ['distinct voices', 'reply motivation and target', 'emotion and knowledge continuity',
+                   'topic progression', 'name and GIF use without quotas'], 'automatically_approved': False}
+
+
+def delivery_status(receipt=None):
+    if not receipt: return 'NO_RECEIPT'
+    if receipt.get('platform') == 'telegram' and receipt.get('message_id'):
+        return 'PLATFORM_ACCEPTED_DELIVERY_AND_READ_UNKNOWN'
+    return 'UNVERIFIED_RECEIPT'
+
+
+def run(root, snapshot, cast, now, revision_check=None, decisions=None, scene=None, ledger=None, event_history=None, state_records=None):
+    root = Path(root); policy = load(root/POLICY)
+    hashes = {POLICY: sha((root/POLICY).read_bytes())}
+    roster_path = 'skills/p004-chat-suite/characters/final-identity-65.json'
+    raw = (root/roster_path).read_bytes(); hashes[roster_path] = sha(raw)
+    roster = {p['id']: p for p in json.loads(raw)['people']}
+    lo, hi = policy['active_ids']
+    if len(cast) != len(set(cast)) or any(pid not in roster or not lo <= int(pid) <= hi for pid in cast):
+        raise ValueError('INVALID_OR_OUTSIDE_ACTIVE_CAST')
+    snapshot = normalize_document(snapshot)
+    if decisions is None:
+        # Reuse reviewed label attribution only for the exact unchanged source.
+        candidates = []
+        for path in sorted((root/'memory/sources').glob('*-review.json')):
+            raw = path.read_bytes(); hashes[path.relative_to(root).as_posix()] = sha(raw)
+            candidates.append(json.loads(raw))
+        decisions = next((d for d in candidates if d.get('snapshot_sha256') == source_digest(snapshot)), None)
+        if decisions is None:
+            raw_days, _ = parse_snapshot(snapshot, roster, now.astimezone(ZoneInfo(policy['timezone'])).year)
+            by_fingerprint = {}
+            for candidate in candidates:
+                if not candidate.get('reviewer'): continue
+                for old in candidate.get('blocks', {}).values():
+                    key = old.get('label_fingerprint')
+                    if key: by_fingerprint.setdefault(key, []).append(old)
+            rebound = {}
+            for row in (r for rows in raw_days.values() for r in rows):
+                matches = by_fingerprint.get(row['label_fingerprint'], [])
+                targets = {(m.get('speaker_id'), m.get('gender')) for m in matches}
+                if len(targets) > 1: raise ValueError('AMBIGUOUS_PRIOR_LABEL_REVIEW')
+                if matches: rebound[row['id']] = matches[0]
+            decisions = {'snapshot_sha256': source_digest(snapshot),
+                'reviewer': 'REUSED_EXACT_UNCHANGED_LABEL_REVIEWS', 'blocks': rebound} if rebound else {}
+    errors = validate_snapshot(snapshot, policy, now, revision_check)
+    days, digest = parse_snapshot(snapshot, roster, now.astimezone(ZoneInfo(policy['timezone'])).year, decisions)
+    if any(date.fromisoformat(day) > now.astimezone(ZoneInfo(policy['timezone'])).date() for day in days):
+        errors.append('FUTURE_STORY_CONTENT')
+    current = checkpoint(days, snapshot, digest)
+    if current['quarantined_blocks']: errors.append('LATEST_DAY_HAS_UNREVIEWED_LABELS')
+    members, index, sources = member_context(root, roster, days, cast, hashes)
+    if state_records is None:
+        state_records = []
+        for path in sorted((root/'memory/curated').glob('*-dynamic-state.json')):
+            raw = path.read_bytes(); hashes[path.relative_to(root).as_posix()] = sha(raw)
+            state_records.extend(json.loads(raw))
+    states = reviewed_states(state_records, sources, roster)
+    for pid, member in members.items():
+        member['reviewed_dynamic_records'] = [r for r in states if r.get('member_id') == pid]
+    context = {'schema_version': 'editorial-runtime-2.1', 'members': members, 'source_hashes': hashes,
+        'freshness': 'CURRENT_DOCUMENT_LOADED' if not errors else 'REQUIRES_REFRESH_OR_REVIEW',
+        'source_conflicts': current['quarantined_blocks'], 'checkpoint': current,
+        'snapshot_revision': snapshot['revisionId'], 'snapshot_sha256': digest}
+    for role in ('chat-suite', 'director', 'writer', 'teacher', 'assistant', 'members'):
+        path = f'skills/p004-{role}/SKILL.md'
+        hashes[path] = sha((root/path).read_bytes())
+    guide = 'skills/p004-chat-suite/references/runtime-v2.1.md'
+    raw = (root/guide).read_bytes(); hashes[guide] = sha(raw)
+    context['execution_rules'] = raw.decode('utf-8')
+    relation_path = root/'memory/long-term/relationship-seeds.json'
+    if relation_path.exists():
+        raw = relation_path.read_bytes(); hashes[relation_path.relative_to(root).as_posix()] = sha(raw)
+        context['relationship_records'] = json.loads(raw)
+        context['relationship_note'] = 'Source IDs must be relinked before treating a candidate or old exchange as a current established relationship.'
+    fact = {'status': 'NOT_REQUESTED', 'truth_certified': False}; claims = []
+    if ledger is not None:
+        from news_release_gate import evaluate
+        fact = evaluate(ledger); fact['truth_certified'] = False
+        if fact['status'] != 'PASS': errors.append('FACT_GATE_BLOCKED')
+        else:
+            keys = evidence_keys(ledger)
+            if event_history is None: errors.append('NEWS_HISTORY_NOT_LOADED')
+            elif not new_evidence_keys(keys, event_history): errors.append('NO_NEW_NEWS_EVIDENCE')
+            claims = ledger['publish_claim_ids']
+    review = None
+    if scene is not None:
+        review = review_scene(scene, context, claims)
+        errors.extend(review['errors'])
+        if not review['errors']:
+            review['quality'] = quality_signals(scene)
+            if review['quality']['emoji_review']:
+                errors.append('EMOJI_PATTERN_REVIEW_REQUIRED')
+        for turn in scene if isinstance(scene, list) and all(isinstance(t, dict) and 'speaker_id' in t and 'text' in t and 'id' in t for t in scene) else []:
+            assertion = turn.get('action_assertion')
+            if assertion:
+                matching = [r for r in states if r.get('member_id') == turn['speaker_id']
+                            and r.get('symbol') == assertion.get('symbol')
+                            and r.get('action') == assertion.get('action')
+                            and set(r['evidence_ids']).issubset(turn.get('memory_refs', []))]
+                if not matching: errors.append('UNSUPPORTED_STORY_ACTION:'+turn['id'])
+                if assertion.get('quantity') is not None and not any(r.get('quantity') == assertion['quantity'] for r in matching):
+                    errors.append('UNSUPPORTED_QUANTITY:'+turn['id'])
+            if turn.get('kind') == 'financial_fact' and not turn.get('claim_ids'):
+                errors.append('FINANCIAL_FACT_WITHOUT_CLAIM:'+turn['id'])
+            if turn.get('kind') == 'quote':
+                quote = turn.get('quote', {})
+                price = quote.get('price')
+                import math
+                if (isinstance(price, bool) or not isinstance(price, (int, float)) or not math.isfinite(price)
+                        or not quote.get('as_of') or not quote.get('source_url') or not turn.get('claim_ids')):
+                    errors.append('INVALID_OR_MISSING_QUOTE:'+turn['id'])
+            if turn.get('kind') == 'course_start' and any(r.get('course_id') == turn.get('course_id')
+                    and r.get('course_status') == 'COMPLETED_IN_FORMAL_STORY' for r in states):
+                errors.append('COMPLETED_COURSE_RESTART_REQUIRES_EXPLICIT_REVIEW')
+    return {'version': '2.1', 'status': 'BLOCK' if errors else 'CONTEXT_READY_FOR_HUMAN_REVIEW',
+        'errors': sorted(set(errors)), 'context': context, 'member_index': index, 'scene_review': review,
+        'states': {'facts': fact, 'story': 'CANDIDATE_NOT_ADOPTED', 'delivery': delivery_status()},
+        'effective_history': sources, 'reviewed_dynamic_records': states,
+        'runtime': {'online_tasks_updated': False, 'sending_enabled': False}, 'publication_allowed': False}
+
+
+def save_projection(root, result, source_path):
+    """Explicit archival projection only; readiness is never persisted as live."""
+    root = Path(root)
+    archive_only_errors = {'SNAPSHOT_STALE_OR_FUTURE', 'LATEST_REVISION_NOT_RECHECKED', 'REVISION_CHECK_STALE_OR_FUTURE'}
+    if set(result['errors']) - archive_only_errors:
+        raise ValueError('UNREVIEWED_OR_INVALID_SOURCE_CANNOT_UPDATE_PROJECTION')
+    folder = root/'memory/derived/v2.1'
+    write(folder/'member-index.json', {'schema': '65-member-entrypoints-v2.1',
+        'source_snapshot': source_path, 'source_sha256': result['context']['snapshot_sha256'],
+        'members': result['member_index'], 'freshness': 'ARCHIVE_REQUIRES_LIVE_REFRESH'})
+    write(folder/'effective-history.json', result['effective_history'])
+    for pid, entry in result['member_index'].items():
+        records = [r for rows in result['effective_history'].values() for r in rows if r.get('speaker_id') == pid]
+        write(folder/f'members/{pid}.json', {'identity': entry,
+            'evidence_store': 'memory/derived/v2.1/effective-history.json',
+            'evidence_ids': [r['id'] for r in records], 'recent_examples': records[-12:],
+            'dynamic_records': [r for r in result['reviewed_dynamic_records'] if r.get('member_id') == pid],
+            'real_trade_verified': False, 'source_snapshot': source_path})
+    check = dict(result['context']['checkpoint'], source_snapshot_path=source_path)
+    write(root/'memory/runtime/latest-checkpoint.json', check)
+
+
+def main():
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument('--snapshot'); p.add_argument('--fetch-google-docs', action='store_true')
+    p.add_argument('--revision-check'); p.add_argument('--decisions'); p.add_argument('--members', default='')
+    p.add_argument('--scene'); p.add_argument('--ledger'); p.add_argument('--event-history')
+    p.add_argument('--curated-state')
+    p.add_argument('--output', required=True)
+    p.add_argument('--date', help='Planned story date; does not change retrieval freshness')
+    args = p.parse_args()
+    if bool(args.snapshot) == args.fetch_google_docs: p.error('Choose exactly one source mode')
+    policy = load(ROOT/POLICY)
+    native = fetch_document(policy) if args.fetch_google_docs else load(args.snapshot)
+    check = fetch_document(policy) if args.fetch_google_docs else load(args.revision_check) if args.revision_check else None
+    def optional(path): return load(path) if path else None
+    try:
+        result = run(ROOT, native, args.members.split(',') if args.members else [], datetime.now(timezone.utc), check,
+                     optional(args.decisions), optional(args.scene), optional(args.ledger), optional(args.event_history), optional(args.curated_state))
+    except (ValueError, KeyError, TypeError) as error:
+        write(args.output, {'version':'2.1', 'status':'BLOCK', 'errors':[str(error)], 'publication_allowed':False})
+        print('BLOCK'); return 2
+    if args.date:
+        planned = date.fromisoformat(args.date)
+        result['planned_story_date'] = args.date
+        result['planned_activity'] = ('WEEKLY_REVIEW_AND_OUTLOOK' if planned.weekday() == 6 else
+            'TECHNICAL_CLASS_AND_US_QUIZ' if planned.weekday() in (0, 2, 4) else
+            'PRINCIPLES_CLASS_AND_KNOWLEDGE_QUIZ' if planned.weekday() in (1, 3) else 'NO_FIXED_ACTIVITY')
+    result['input_file_receipts'] = {path: sha(Path(path).read_bytes()) for path in
+        (args.snapshot, args.revision_check, args.decisions, args.curated_state, args.scene, args.ledger, args.event_history) if path}
+    write(args.output, result)
+    print(result['status'])
+    return 2 if result['errors'] else 0
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())
+)
+
+    def ending(turn):
+        match = suffix.search(turn.get('text', '').strip())
+        return match.group(1) if match else None
+
+    def member(turn):
+        return isinstance(turn, dict) and str(turn.get('speaker_id', '')).isdigit()
+
+    findings = []
+    # Repeated ending by the same speaker in three of their last four turns.
+    speakers = sorted({str(t['speaker_id']) for t in scene if member(t)})
+    for speaker in speakers:
+        own = [t for t in scene if member(t) and str(t['speaker_id']) == speaker]
+        for i in range(2, len(own)):
+            window = own[max(0, i - 3):i + 1]
+            suffixes = [(t['id'], ending(t)) for t in window]
+            for value in sorted({v for _, v in suffixes if v}):
+                repeated = [tid for tid, e in suffixes if e == value]
+                if len(repeated) >= 3:
+                    findings.append({'code': 'REPEATED_SPEAKER_EMOJI_ENDING',
+                                     'member_ids': [speaker], 'turn_ids': repeated,
+                                     'emoji': value, 'severity': 'REVIEW'})
+                    break
+            if any(f['code'] == 'REPEATED_SPEAKER_EMOJI_ENDING' and
+                   f['member_ids'] == [speaker] for f in findings):
+                break
+    # Identical endings passed across at least two speakers in three adjacent turns.
+    for i in range(2, len(scene)):
+        window = scene[i-2:i+1]
+        if not all(member(t) for t in window):
+            continue
+        endings = [ending(t) for t in window]
+        if endings[0] and len(set(endings)) == 1 and len({str(t['speaker_id']) for t in window}) >= 2:
+            findings.append({'code': 'CROSS_SPEAKER_EMOJI_CHAIN',
+                             'member_ids': [str(t['speaker_id']) for t in window],
+                             'turn_ids': [t['id'] for t in window],
+                             'emoji': endings[0], 'severity': 'REVIEW'})
+    return findings
+
+
 def quality_signals(scene):
     warnings = []
     member_run_lengths = []; run = 0
