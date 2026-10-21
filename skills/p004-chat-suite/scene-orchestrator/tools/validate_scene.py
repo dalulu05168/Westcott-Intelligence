@@ -58,7 +58,7 @@ def analyze(text: str, people: list[dict], *, max_active: int = 42, activity: bo
             add('NO_APPROVED_RULES','blocker','上午稿无可用的已批准纠错规则')
         # Only check the opening lead, not incidental later mentions of last night's lesson.
         lines = text.splitlines()
-        lead = '\\n'.join(lines[:min(14, len(lines))])
+        lead = '\n'.join(lines[:min(14, len(lines))])
         for rule in active_rules:
             if rule.get('status') != 'approved' or rule.get('scene') != 'morning':
                 continue
