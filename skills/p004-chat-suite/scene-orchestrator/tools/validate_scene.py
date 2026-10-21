@@ -13,7 +13,7 @@ OLD_TEACHER = re.compile(r'(?<![A-Za-z])(Henry(?:\s+Fairchild)?|Jonathan(?:\s+Ri
 PREVIOUS = re.compile(r'(上一期|上期|昨天(?:的)?活动|昨日(?:的)?活动|上次(?:的)?活动|上一道题)')
 CURRENT = re.compile(r'(今天(?:的)?活动|今日(?:的)?活动|本期(?:的)?活动|今天(?:的)?(?:题目|判断题|竞猜)|今日(?:的)?(?:题目|判断题|竞猜))')
 
-def analyze(text: str, people: list[dict], *, max_active: int = 42, activity: bool = False) -> dict:
+def analyze(text: str, people: list[dict], *, max_active: int = 42, activity: bool = False, scene: str = 'unspecified', corrections: dict | None = None) -> dict:
     issues = []
     def add(code, severity, detail, line=None):
         issue = {'code':code,'severity':severity,'detail':detail}
@@ -50,6 +50,25 @@ def analyze(text: str, people: list[dict], *, max_active: int = 42, activity: bo
         if len(normalized)>=10:
             if seen[normalized]: add('DUPLICATE_TURN','blocker',f'与先前台词完全重复：{label}',line_no)
             seen[normalized].append(label)
+    if scene == 'morning':
+        active_rules = (corrections or {}).get('rules', [])
+        if corrections is None:
+            add('MISSING_CORRECTIONS','blocker','上午稿缺少Notion已批准纠错快照')
+        if not active_rules:
+            add('NO_APPROVED_RULES','blocker','上午稿无可用的已批准纠错规则')
+        # Only check the opening lead, not incidental later mentions of last night's lesson.
+        lines = text.splitlines()
+        lead = '\\n'.join(lines[:min(14, len(lines))])
+        for rule in active_rules:
+            if rule.get('status') != 'approved' or rule.get('scene') != 'morning':
+                continue
+            for term in rule.get('forbidden_lead_terms', []):
+                if re.search(term, lead):
+                    add('MORNING_LESSON_LEAD','blocker','上午开场不应以昨晚课程复盘为主线：'+term)
+                    break
+            if not any(re.search(term, lead) for term in rule.get('required_lead_terms', [])):
+                add('MORNING_NO_MARKET_LEAD','blocker','上午开场缺少财经资讯主线')
+        add('MORNING_SEMANTIC_MANUAL','manual','关键词仅做初筛，仍需导演审核节点、资讯时点和主线')
     if activity:
         prev=PREVIOUS.search(text)
         today=CURRENT.search(text)
@@ -69,12 +88,15 @@ def main(argv=None):
     parser.add_argument('--roster',type=Path,default=Path(__file__).resolve().parents[2]/'characters/final-identity-65.json')
     parser.add_argument('--max-active',type=int,default=42)
     parser.add_argument('--activity',action='store_true')
+    parser.add_argument('--scene',choices=['morning','afternoon','evening','unspecified'],default='unspecified')
+    parser.add_argument('--corrections',type=Path,default=Path(__file__).resolve().parents[1]/'references/notion-approved-corrections.json')
     parser.add_argument('--json',action='store_true')
     args=parser.parse_args(argv)
     if not args.roster.is_file():parser.error('缺少65人最终身份表：'+str(args.roster))
     if not args.draft.is_file():parser.error('缺少输入稿：'+str(args.draft))
     people=json.loads(args.roster.read_text(encoding='utf-8-sig'))['people']
-    result=analyze(args.draft.read_text(encoding='utf-8-sig'),people,max_active=args.max_active,activity=args.activity)
+    corrections=json.loads(args.corrections.read_text(encoding='utf-8-sig')) if args.corrections.is_file() else None
+    result=analyze(args.draft.read_text(encoding='utf-8-sig'),people,max_active=args.max_active,activity=args.activity,scene=args.scene,corrections=corrections)
     if args.json:print(json.dumps(result,ensure_ascii=False,indent=2))
     else:
         print('PASS (static only)' if result['pass'] else 'BLOCKED')
