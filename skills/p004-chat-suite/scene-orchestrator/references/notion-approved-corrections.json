@@ -5,7 +5,7 @@
     "page_id": "400fd480-b91e-816c-bb9b-e0b315d2b976",
     "url": "https://app.notion.com/p/400fd480b91e816cbb9be0b315d2b976"
   },
-  "sync_mode": "manual_snapshot",
+  "sync_mode": "connector_verified_snapshot",
   "synced_at": "2026-10-22",
   "rules": [
     {
@@ -30,7 +30,7 @@
         "财经",
         "隔夜"
       ],
-      "notes": "静态关键词仅初筛，不能证明财经事实或场次质量；人工复核仍必需。"
+      "notes": "关键词初筛，不代表财经事实及剧情语义审核通过"
     }
   ]
 }
