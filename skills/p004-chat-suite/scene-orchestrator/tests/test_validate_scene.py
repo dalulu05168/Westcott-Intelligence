@@ -18,13 +18,14 @@ class TestSceneStaticGate(unittest.TestCase):
     def test_markdown(self): self.assertIn('MARKDOWN_BOLD',self.codes('01男：**非常同意**'))
     def test_teacher(self): self.assertIn('OLD_TEACHER',self.codes('===== 先生 =====\nHenry先生晚上好。'))
     def test_duplicate(self): self.assertIn('DUPLICATE_TURN',self.codes('01男：我还是想确认一下是不是这样。\n02女：我还是想确认一下是不是这样。'))
-    def test_activity_bad(self): self.assertIn('ACTIVITY_ORDER',self.codes('今天的活动开始。上期结果是B。',activity=True))
-    def test_activity_good(self): self.assertTrue(self.check('上一期活动结果已核实：B。今天的活动题目来了。',activity=True)['pass'])
-    def test_activity_missing_result(self): self.assertIn('MISSING_PREVIOUS_RESULT',self.codes('今天的活动题目来了。',activity=True))
+    def test_activity_missing_today(self): self.assertIn('MISSING_CURRENT_ACTIVITY',self.codes('上一期活动结果已核实：B。',activity=True))
+    def test_activity_good(self): self.assertTrue(self.check('今天的活动题目来了。',activity=True)['pass'])
+    def test_activity_without_previous_result_allowed(self): self.assertNotIn('MISSING_PREVIOUS_RESULT',self.codes('今天的活动题目来了。',activity=True))
+    def test_activity_without_prior_settlement(self): self.assertTrue(self.check('今日的判断题：A还是B？',activity=True)['pass'])
     def test_empty(self): self.assertIn('EMPTY',self.codes(''))
     def test_unpadded_warning(self): self.assertIn('NON_PADDED_LABEL',self.codes('1男：我觉得还需要继续观察。'))
     def test_invalid_label(self): self.assertIn('INVALID_LABEL',self.codes('2女 我也是'))
-    def test_pending_result(self): self.assertIn('PENDING_PREVIOUS_RESULT',self.codes('上一期活动结果待核实。今天的活动题目先拟定。',activity=True))
+    def test_pending_result_not_blocking(self): self.assertTrue(self.check('上一期活动结果待核实。今天的活动题目先拟定。',activity=True)['pass'])
 
     def test_morning_lesson_lead_blocked(self):
         rules={'rules':[{'status':'approved','scene':'morning','forbidden_lead_terms':['昨晚的学习收获'],'required_lead_terms':['美股','罗马尼亚','盘前','市场']}]}

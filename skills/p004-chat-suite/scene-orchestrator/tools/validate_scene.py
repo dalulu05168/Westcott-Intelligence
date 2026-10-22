@@ -10,7 +10,6 @@ import sys
 
 SPEAKER = re.compile(r'^\s*(?:(?:={3,}\s*(资讯助理|先生)\s*={3,})|(?:(\d{1,2})(男|女)\s*[：:]))\s*(.*)$')
 OLD_TEACHER = re.compile(r'(?<![A-Za-z])(Henry(?:\s+Fairchild)?|Jonathan(?:\s+Richard\s+Hayes)?)(?:先生|\s+先生)', re.I)
-PREVIOUS = re.compile(r'(上一期|上期|昨天(?:的)?活动|昨日(?:的)?活动|上次(?:的)?活动|上一道题)')
 CURRENT = re.compile(r'(今天(?:的)?活动|今日(?:的)?活动|本期(?:的)?活动|今天(?:的)?(?:题目|判断题|竞猜)|今日(?:的)?(?:题目|判断题|竞猜))')
 
 def analyze(text: str, people: list[dict], *, max_active: int = 42, activity: bool = False, scene: str = 'unspecified', corrections: dict | None = None) -> dict:
@@ -70,13 +69,9 @@ def analyze(text: str, people: list[dict], *, max_active: int = 42, activity: bo
                 add('MORNING_NO_MARKET_LEAD','blocker','上午开场缺少财经资讯主线')
         add('MORNING_SEMANTIC_MANUAL','manual','关键词仅做初筛，仍需导演审核节点、资讯时点和主线')
     if activity:
-        prev=PREVIOUS.search(text)
+        # 2026-10-22: no prior-answer/result precondition for new activities.
         today=CURRENT.search(text)
-        if not prev: add('MISSING_PREVIOUS_RESULT','blocker','未说明上一期结果/状态')
         if not today: add('MISSING_CURRENT_ACTIVITY','blocker','未发现今日活动题')
-        if prev and today and prev.start()>=today.start(): add('ACTIVITY_ORDER','blocker','必须先上一期再本期')
-        if prev and re.search(r'(待核实|尚未核实|暂未结算|等待核验)',text[prev.start():today.start() if today else len(text)]):
-            add('PENDING_PREVIOUS_RESULT','warning','上一期未核实，只能输出待核草案')
     add('REAL_FACTS_MANUAL','manual','真实市场数据、活动结果、来源时点需单独核验')
     add('VOICE_MANUAL','manual','人物自然度及剧情连续性需要本人历史对白人工复核')
     return {'pass':not any(x['severity']=='blocker' for x in issues),'speakers':speakers,'issues':issues,
