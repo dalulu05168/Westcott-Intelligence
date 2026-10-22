@@ -10,7 +10,7 @@
 
 ## 2026-10-21｜统一剧情总Skill v1.0 · 自动入口
 
-当用户在ChatGPT/Codex请求“写/续写/修改/检查ELLERY WESTCOTT 上午、下午、晚上、活动、晚课、人物口吻”时，**第一步读取并执行** `skills/p004-chat-suite/scene-orchestrator/SKILL.md`，在同一生成中强制完成五Skill分工、Google Docs最新已采用剧情、65人锁定身份/口吻、今日事实、人物Emoji、活动上一期答案衔接与出稿QA。用户无需打开语言管理器或复制人物提示词。此入口是仓库级代理规则，不能假装GitHub提交已成为任意ChatGPT新对话的全局配置；新ChatGPT Project需要按 `skills/p004-chat-suite/scene-orchestrator/CHATGPT-PROJECT-INSTRUCTIONS.md` 配置一次。
+当用户在ChatGPT/Codex请求“写/续写/修改/检查ELLERY WESTCOTT 上午、下午、晚上、活动、晚课、人物口吻”时，**第一步读取并执行** `skills/p004-chat-suite/scene-orchestrator/SKILL.md`，在同一生成中强制完成五Skill分工、Google Docs最新已采用剧情、65人锁定身份/口吻、今日事实、人物Emoji、活动直接发布当期题目（不强制公布上期答案或结果）与出稿QA。用户无需打开语言管理器或复制人物提示词。此入口是仓库级代理规则，不能假装GitHub提交已成为任意ChatGPT新对话的全局配置；新ChatGPT Project需要按 `skills/p004-chat-suite/scene-orchestrator/CHATGPT-PROJECT-INSTRUCTIONS.md` 配置一次。
 
 ## 2026-10-21 人物说话能力管理强制入口
 
