@@ -93,3 +93,14 @@ GitHub规则快照：references/notion-approved-corrections.json
 
 ## 自动化任务挂接（2026-10-22）
 从ChatGPT自动化/Project入口进入本总Skill时，先读取仓库根 `AUTOMATION-CONTROL-CENTER.md` 的来源门禁与出稿验收规则；不得仅凭任务提示词就宣称已读取GitHub、Google Docs和Notion，也不能把其它GPT窗口视为受此文件约束。任务完成后依本文件的交付协议输出。
+
+
+## 2026-10-23｜Airtable正式对白辅助记忆读取与增量冲突门（V3候选）
+
+本门仅增强检索与质检；**Google Docs仍为已采用剧情权威、`characters/final-identity-65.json`仍为65人身份权威**。Airtable不是第二份正式剧情，更不能用于直接修改Google Docs、实盘交易、领奖状态或发布。
+- 辅助记忆库：Airtable base `apptVGZxcEdZkdN5a`（「ELLERY WESTCOTT｜剧情与65人记忆辅助索引」）；成员索引、正式对白证据、剧情事件、人物关系、学习进度，以及「增量同步检查点」「同步冲突待审」七张表。连接不保证每个ChatGPT窗口都具有授权；需在**本轮**实际成功读取才标记 `AIRTABLE_READ`。
+- **写稿前强制读取**：先执行GitHub入口、Notion批准纠错、当前正式Docs最新日期页签与修订号、65人身份和各人已采用口吻，再通过已连接Airtable按拟出场编号查询「02_正式对白证据」最近有效原话，并参考「03_剧情事件」「04_人物关系」「05_学习进度」。若Airtable不可用则标 `AIRTABLE_SOURCE_BLOCKED`；允许凭可核对的Google Docs和GitHub继续给出受限候选稿，**不准声称已使用Airtable记忆**。返回的口吻索引和观察记录不等于新批准的人设规则。
+- 每一人物至少保留来源日期、正式页签、原话、证据ID、文档修订号；不得依姓名/昵称合并重复姓名角色，不把候选/试听/AI写入测试和虚构跟票台词升级为真实成交证据。
+- **增量对照**：可使用 `tools/airtable_memory_gate.py`，传入本次连接器实际读到的官方Doc原始段落、65人身份和Airtable证据快照；对**同一日期/页签的成员编号+原话全文**进行逐条多重匹配。原文未变但段落前移/后移时保留原证据ID、只标记位置变化；原话修改或消失、性别冲突、非授权43—65号、重复证据ID或来源错误都进入待审，不删除、不覆盖、不凭位置当作新人物发言。不确定的新增在冲突处理前暂停。纯比对脚本不联网、不写入任何应用、不证明行情事实或发布状态。
+- 已审核的人物上下文应展示来源引文，而不是直接把职业偏好推广为稳定说话口癖。若发现同一日有效原话与Airtable引文不符，以实时Docs为准，记录 `MEMORY_CONFLICT_REVIEW`，阻断“全量记忆验收通过”，相关记录先审核。
+- 同步操作必须明确区分 `MATCHED`、`MOVE_REVIEW`、`NEW_PROPOSED`、`EDIT_OR_DELETE_REVIEW`、`SOURCE_BLOCKED`；只有逐项验证的正式引用才允许写入Airtable辅助表。写完重新读取核对唯一主键、日期、身份、来源，**GitHub文件或Airtable表建立不等于定时任务已开启**；任何自动触发和写回需要另行部署并验证。
