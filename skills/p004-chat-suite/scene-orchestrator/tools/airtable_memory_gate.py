@@ -123,6 +123,7 @@ def reconcile(document, roster, records):
     reused, moved, new, counts = [], [], [], defaultdict(int)
     for turn in observed:
         key = (turn["member_id"], turn["text"])
+        counts[key] += 1  # Include reused copies: a later duplicate gets a distinct ID.
         if old_by_key[key]:
             # Prefer identical offset when multiple identical lines exist.
             candidates = old_by_key[key]
@@ -137,7 +138,6 @@ def reconcile(document, roster, records):
                               "old_position":prior_position,
                               "new_position":turn["position"]})
         else:
-            counts[key] += 1
             new.append({**turn, "date":date, "tab_id":tab_id,
                         "evidence_id":new_evidence_id(
                             date, tab_id, turn["member_id"], turn["text"], counts[key])})
