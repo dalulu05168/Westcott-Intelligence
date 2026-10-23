@@ -93,6 +93,14 @@ class AirtableMemoryGateTests(unittest.TestCase):
         self.assertEqual(out[0]["证据ID"],"EW-old-02")
         self.assertEqual(gate.member_context(self.saved, "03"), [])
 
+    def test_repeated_identical_quote_does_not_reuse_new_id(self):
+        self.doc["paragraphs"].extend([
+            {"text":"02女：这个地方我没明白。"}])
+        out = gate.reconcile(self.doc, self.roster, self.saved)
+        self.assertEqual(len(out["reused_ids"]), 1)
+        self.assertEqual(len(out["ready_to_create"]), 2)
+        self.assertTrue(out["ready_to_create"][1]["evidence_id"].endswith("-02"))
+
     def test_duplicate_stored_id_is_blocked(self):
         out = gate.reconcile(self.doc, self.roster, [self.saved[0],self.saved[0]])
         self.assertEqual(out["status"],"REVIEW_REQUIRED")
