@@ -1,0 +1,119 @@
+{
+  "status": "INCOMPLETE",
+  "window_start": "2026-10-23T22:34:00+00:00",
+  "window_end": "2026-10-23T23:34:00+00:00",
+  "captured_at": "2026-10-23T23:34:12.906126+00:00",
+  "required_feed_ids": [
+    "fed_monetary",
+    "ecb_press",
+    "bvb_market",
+    "bvb_announcements",
+    "insee_conjuncture",
+    "bls_cpi",
+    "bls_employment",
+    "eurostat_releases"
+  ],
+  "coverage": [
+    {
+      "feed_id": "fed_monetary",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.federalreserve.gov/feeds/press_monetary.xml",
+      "retrieved_at": "2026-10-23T23:34:07.410152+00:00",
+      "feed_sha256": "69b638039ee490f01aea90ac4623d67f9041273322daa48a262c50fed94ca2b1",
+      "raw_entries": 15,
+      "latest_published_at": "2026-10-13T18:00:00+00:00",
+      "excluded_before_window": 15,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "ecb_press",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.ecb.europa.eu/rss/press.html",
+      "retrieved_at": "2026-10-23T23:34:08.260961+00:00",
+      "feed_sha256": "d8ec0c09abdaa11f5272c0835f0bd6cbaaa4be67198aa86ef9ce816086ba2272",
+      "raw_entries": 15,
+      "latest_published_at": "2026-10-23T08:00:00+00:00",
+      "excluded_before_window": 15,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "bvb_market",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.bvb.ro/Rss/StiriBVB.ashx",
+      "retrieved_at": "2026-10-23T23:34:09.821820+00:00",
+      "feed_sha256": "67dfd8f1c3d0fac8eb1ac76ea07a2d8417d271e3b5308901d7574df1264c93dc",
+      "raw_entries": 131,
+      "latest_published_at": "2026-10-23T15:00:20+00:00",
+      "excluded_before_window": 131,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "bvb_announcements",
+      "status": "ERROR",
+      "reason": "Official feed had no parseable entries."
+    },
+    {
+      "feed_id": "insee_conjuncture",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.insee.fr/fr/flux/3",
+      "retrieved_at": "2026-10-23T23:34:12.212300+00:00",
+      "feed_sha256": "d8a70a9ec06fffe4d39b7e67dc8d328b3223c02fb819d041854f4812b4ddc552",
+      "raw_entries": 114,
+      "latest_published_at": "2026-10-23T10:00:00+00:00",
+      "excluded_before_window": 114,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "bls_cpi",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.bls.gov/feed/cpi.rss",
+      "retrieved_at": "2026-10-23T23:34:12.341661+00:00",
+      "feed_sha256": "a5f2a686cebc14c09693431899d7e4ce56c15c752febbdba1156b30d33f1f387",
+      "raw_entries": 12,
+      "latest_published_at": "2026-10-14T11:50:31.200000+00:00",
+      "excluded_before_window": 12,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "bls_employment",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://www.bls.gov/feed/empsit.rss",
+      "retrieved_at": "2026-10-23T23:34:12.431897+00:00",
+      "feed_sha256": "aa1107f25de6cf39c9d192b3c20b9d59ca8c32444f660b7e8b462b80c6cc700e",
+      "raw_entries": 12,
+      "latest_published_at": "2026-10-02T11:51:08.289000+00:00",
+      "excluded_before_window": 12,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    },
+    {
+      "feed_id": "eurostat_releases",
+      "status": "OK",
+      "parsed_items": 0,
+      "feed_url": "https://ec.europa.eu/eurostat/en/search?_estatsearchportlet_WAR_estatsearchportlet_collection=CAT_PREREL&p_p_id=estatsearchportlet_WAR_estatsearchportlet&p_p_lifecycle=2&p_p_mode=view&p_p_resource_id=atom&p_p_state=maximized",
+      "retrieved_at": "2026-10-23T23:34:12.905697+00:00",
+      "feed_sha256": "d05c6c8899094e1791b7259a5705025253b841939dad7c4f4026454fef094888",
+      "raw_entries": 11,
+      "latest_published_at": "2026-10-21T09:00:00+00:00",
+      "excluded_before_window": 11,
+      "excluded_at_or_after_end": 0,
+      "in_window_entries": 0
+    }
+  ],
+  "truncated": false,
+  "candidates": [],
+  "assessments_status": "UNREVIEWED",
+  "telegram_publishable": false,
+  "ranking_scope": "Configured official sources only; not a claim of global exhaustive coverage."
+}
