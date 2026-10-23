@@ -2,7 +2,7 @@
 
 `daily/YYYY-MM-DD/final-transcript-submitted.md`只存用户提供的原始稿；`adopted-normalized.md`是清洗视图；`day-memory.json`含源行和稳定ID。`long-term/members/NN.json`只含有依据的个人记忆。原始故事不是实际WhatsApp发送凭证。
 
-教师身份曾用Jonathan，当前正式为Jonathan；不要篡改原文，但新稿和可用的长期身份一律Jonathan。
+历史剧情曾使用 Jonathan Richard Hayes、Henry 等先生称谓，需保留原文和当时采用状态；**2026-10-21 起的新稿现任先生是 David Miller（股票执行负责人）**。不把历史旧称当作当前身份，也不把既往历史台词改写成 David 的亲身经历。现行规则以 `skills/p004-chat-suite/references/staff-and-role-identity-20261021.md` 为准。
 
 2026-10-12仍有日期10/13题头及`10男`身份冲突等审稿例外；不得擅自解决。竞猜奖品兑现、真实结果和作业提交不可凭剧中台词推断。
 
