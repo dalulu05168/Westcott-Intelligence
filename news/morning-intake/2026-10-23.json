@@ -1,0 +1,319 @@
+{
+  "status": "OFFICIAL_INTAKE_UNREVIEWED",
+  "local_date": "2026-10-23",
+  "collected_at": "2026-10-23T08:50:05.019018+00:00",
+  "timezone": "Europe/Bucharest",
+  "source_window_hours": 48,
+  "market_scopes": [
+    "RO",
+    "FR",
+    "US"
+  ],
+  "coverage": [
+    {
+      "feed_id": "fed_monetary",
+      "status": "OK",
+      "recent_entries": 0
+    },
+    {
+      "feed_id": "ecb_press",
+      "status": "OK",
+      "recent_entries": 1
+    },
+    {
+      "feed_id": "bvb_market",
+      "status": "OK",
+      "recent_entries": 96
+    },
+    {
+      "feed_id": "bvb_announcements",
+      "status": "OK",
+      "recent_entries": 0
+    },
+    {
+      "feed_id": "insee_conjuncture",
+      "status": "OK",
+      "recent_entries": 6
+    },
+    {
+      "feed_id": "bls_cpi",
+      "status": "OK",
+      "recent_entries": 0
+    },
+    {
+      "feed_id": "bls_employment",
+      "status": "OK",
+      "recent_entries": 0
+    },
+    {
+      "feed_id": "eurostat_releases",
+      "status": "OK",
+      "recent_entries": 3
+    }
+  ],
+  "feed_errors": [],
+  "candidates": [
+    {
+      "id": "de7524cfba63754a28ba1611031fe214950b818c",
+      "source_id": "bvb_market",
+      "market_scopes": [
+        "RO"
+      ],
+      "headline_original": "BANCA TRANSILVANIA S.A. (TLV)",
+      "published_at": "2026-10-23T08:43:45+00:00",
+      "official_article_url": "https://bvb.ro/infocont/infocont26/TLV_20261023105437_Ziua-Investitorului-2027.pdf",
+      "origin": "Bucharest Stock Exchange",
+      "source_body_sha256": null,
+      "source_excerpt_original": null,
+      "evidence_status": "SOURCE_BODY_UNAVAILABLE",
+      "source_body_error": "Original PDF text unavailable; scanned/encrypted files require review.",
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "dac9de2596453141381be9e0fe027504a84a01c7",
+      "source_id": "bvb_market",
+      "market_scopes": [
+        "RO"
+      ],
+      "headline_original": "BANCA TRANSILVANIA S.A. (TLV)",
+      "published_at": "2026-10-23T08:43:45+00:00",
+      "official_article_url": "https://bvb.ro/infocont/infocont26/TLV_20261023105430_Investor-s-Day-2027.pdf",
+      "origin": "Bucharest Stock Exchange",
+      "source_body_sha256": null,
+      "source_excerpt_original": null,
+      "evidence_status": "SOURCE_BODY_UNAVAILABLE",
+      "source_body_error": "Original PDF text unavailable; scanned/encrypted files require review.",
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "1b2cf46712447f8a2552bfbcc32632eda464e7e1",
+      "source_id": "bvb_market",
+      "market_scopes": [
+        "RO"
+      ],
+      "headline_original": "BANCA TRANSILVANIA S.A. (TLV)",
+      "published_at": "2026-10-23T08:43:45+00:00",
+      "official_article_url": "https://bvb.ro/FinancialInstruments/SelectedData/NewsItem/TLV-ziua-investitorului-2027/7BF8A",
+      "origin": "Bucharest Stock Exchange",
+      "source_body_sha256": "17c5f88b73b21bf98040910553278d213c22576a9dd5abda264dba9055e09779",
+      "source_excerpt_original": "vineri | 23 octombrie, 2026 | Starea pietei: DESCHISA Despre noi si Guvernanta | Relatia cu Investitorii | Contact Login Inregistrare Cautare avansata Pentru Companii De ce Bursa de Valori Bucuresti? Prezentare generala Instrumente pentru finantare Beneficiile listarii Infografice Piata Principala Actiuni Obligatiuni Intermediari Intrebari frecvente Piata AeRO Actiuni Obligatiuni Consultanti Autorizati Intrebari frecvente Materiale utile Ghidul privind raportarea ESG Codul de Guvernanta Corporativa Instrumente Financiare Piete Actiuni Obligatiuni Unitati de fond Certificate Warrants Cautare avansata Indici Privire generala Profile indici Factsheets indici Performanta indici Informatii BMR Operatiuni corporative Info dividend Modificari capital social Societati provenite din divizari Informatii selective Rapoarte curente Rezultate financiare Indicatori Calendar Financiar Calendar Adunari Generale Operatiuni de piata Raportari actionari Lista monitorizare Tranzactionare si Statistici Tranzactionare Pietele astazi Ziua curenta Statistici toate pietele Sumare tranzactionare Oferte publice in derulare Vanzari speciale la ordin Date MiFiD II Statistici Statistici generale Evolutia pietei (actiuni) Top tranzactionare Publicatii Rapoarte zilnice Rapoarte lunare Program de tranzactionare Bursa in direct Intermediari Liste intermediari Toti intermediarii Top intermediari Lista Market Makeri Lista Furnizori Lichiditate Performanta MM si LP Lista Agenti Delegati Cum devin intermediar Servicii Vanzare date Pentru distribuitori de date Pentru profesionisti Pentru investitori Licentiere indici Cum licentiez un indice BVB? Conectivitate Sistemul de tranzactionare Arena Sistem de brokeraj Reglementari Legislatie Legi si regulamente Reglementari BVB Raportari MiFID II / MiFIR Camera Arbitrala Utile Link-uri utile Institutiile pietei de capital Stiri Piata BANCA TRANSILVANIA S.A. - TLV Ziua Investitorului 2027 Data Publicare: 23.10.2026 11:43:45 Cod IRIS: 7BF8A BANCA TRANSILVANIA INVESTOR DAY 2027 23.10.2026 Banca Transilvania va organiza Investor Day , mercuri, 22 septembrie 2027 , incepand cu ora 10:00. Evenimentul va fi sustinut de reprezentanti ai echipei de conducere a Bancii Transilvania si va include prezentari privind traiectoria de crestere a bancii, strategia de afaceri si obiectivele viitoare, incluzand doar informatii publice ale bancii. BT Investor Day este un eveniment distinct de videoconferinta destinata prezentarii rezultelor financiare din primul semestru al anului 2027. Banca Transilvania va pune la dispozitie evenimentul live in intervalul 10:00 si 17:00. Va rugam sa completati acest formular de inregistrare pana la data de 1 septembrie 2027 pentru a participa la evenimentul online. Evenimentul va fi inregistrat si disponibil ulterior si pe site-ul de Relatii cu investitorii al Bancii Transilvania . Va invitam sa contactati echipa noastra pentru orice informatii suplimentare. Contact Echipa Banca Transilvania InvestorDay@btrl.ro TLV_20261023105437_Ziua-Investitorului-2027.pdf TLV_20261023105430_Investor-s-Day-2027.pdf Print Informatii furnizate prin IRIS , platforma de stiri a Bursei de Valori Bucuresti. ______________________ Bursa de Valori Bucuresti (\"BVB\") nu este responsabila de continutul acestui Raport. Emitentii ale caror instrumente financiare sunt tranzactionate pe pietele administrate de catre BVB au obligatia de a intocmi Rapoarte in conformitate cu prevederile legale si regulamentare incidente. BVB publica aceste Rapoarte in calitate de administrator al acestor piete, desemnat de catre ASF. In situatia in care, pentru informarea corespunzatoare a investitorilor, sunt publicate Rapoarte semnate de persoane diferite, sau cu informatii divergente, responsabilitatea juridica revine in totalitate semnatarilor respectivelor Rapoarte. BVB isi declina orice obligatie sau raspundere fata de emitenti sau terte parti, cu privire la realitatea, integralitatea si exactitatea informatiilor furnizate de catre acestia si distribuite de catre BVB. Utilizatorii website-ului au responsabilitatea de a verifica continutul rapoartelor. Orice raport (inclusiv orice prospect) care se adreseaza exclusiv unor persoane/tari specificate in acesta nu trebuie luate in considerare de catre persoanele / in tarile excluse. Termenii si conditiile , inclusiv restrictiile de utilizare si redistributie se aplica. ©2026 Bursa de Valori Bucuresti. Toate drepturile rezervate. Pentru Companii Prezentare generala Instrumente pentru finantare Be",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "e55c598ceef19760931ab7a1cb2c9f31886747ab",
+      "source_id": "bvb_market",
+      "market_scopes": [
+        "RO"
+      ],
+      "headline_original": "INTERCAPITAL EUR ROMANIA GOVT BOND 5-10YR UCITS ETF (ICGROETF)",
+      "published_at": "2026-10-23T08:35:11+00:00",
+      "official_article_url": "https://bvb.ro/infocont/infocont26/ICGROETF_20261023113411_2026-10-22-ROFI-ETF-Official-NAV.pdf",
+      "origin": "Bucharest Stock Exchange",
+      "source_body_sha256": null,
+      "source_excerpt_original": null,
+      "evidence_status": "SOURCE_BODY_UNAVAILABLE",
+      "source_body_error": "Original PDF text unavailable; scanned/encrypted files require review.",
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "b7338e410855e689d15e388caabf2a71855a26cf",
+      "source_id": "bvb_market",
+      "market_scopes": [
+        "RO"
+      ],
+      "headline_original": "INTERCAPITAL EUR ROMANIA GOVT BOND 5-10YR UCITS ETF (ICGROETF)",
+      "published_at": "2026-10-23T08:35:11+00:00",
+      "official_article_url": "https://bvb.ro/FinancialInstruments/SelectedData/NewsItem/ICGROETF-van-la-data-22-10-2026/B0494",
+      "origin": "Bucharest Stock Exchange",
+      "source_body_sha256": "6c0a798c2e07b365f131805e56ecd74971a46e49cb515f32f79e20a575b7743a",
+      "source_excerpt_original": "vineri | 23 octombrie, 2026 | Starea pietei: DESCHISA Despre noi si Guvernanta | Relatia cu Investitorii | Contact Login Inregistrare Cautare avansata Pentru Companii De ce Bursa de Valori Bucuresti? Prezentare generala Instrumente pentru finantare Beneficiile listarii Infografice Piata Principala Actiuni Obligatiuni Intermediari Intrebari frecvente Piata AeRO Actiuni Obligatiuni Consultanti Autorizati Intrebari frecvente Materiale utile Ghidul privind raportarea ESG Codul de Guvernanta Corporativa Instrumente Financiare Piete Actiuni Obligatiuni Unitati de fond Certificate Warrants Cautare avansata Indici Privire generala Profile indici Factsheets indici Performanta indici Informatii BMR Operatiuni corporative Info dividend Modificari capital social Societati provenite din divizari Informatii selective Rapoarte curente Rezultate financiare Indicatori Calendar Financiar Calendar Adunari Generale Operatiuni de piata Raportari actionari Lista monitorizare Tranzactionare si Statistici Tranzactionare Pietele astazi Ziua curenta Statistici toate pietele Sumare tranzactionare Oferte publice in derulare Vanzari speciale la ordin Date MiFiD II Statistici Statistici generale Evolutia pietei (actiuni) Top tranzactionare Publicatii Rapoarte zilnice Rapoarte lunare Program de tranzactionare Bursa in direct Intermediari Liste intermediari Toti intermediarii Top intermediari Lista Market Makeri Lista Furnizori Lichiditate Performanta MM si LP Lista Agenti Delegati Cum devin intermediar Servicii Vanzare date Pentru distribuitori de date Pentru profesionisti Pentru investitori Licentiere indici Cum licentiez un indice BVB? Conectivitate Sistemul de tranzactionare Arena Sistem de brokeraj Reglementari Legislatie Legi si regulamente Reglementari BVB Raportari MiFID II / MiFIR Camera Arbitrala Utile Link-uri utile Institutiile pietei de capital Stiri Piata INTERCAPITAL EUR ROMANIA GOVT BOND 5-10YR UCITS ETF - ICGROETF VAN la data 22.10.2026 Data Publicare: 23.10.2026 11:35:11 Cod IRIS: B0494 Valoarea certificata a Activului Net per unitate (VUAN) pentru clasa de Unitati InterCapital EUR Romania Govt Bond 5-10yr UCITS ETF tranzactionata la Bursa de Valori Bucuresti este de 58,8249 lei , la data de 22. octombrie 2026. Pentru mai multe informatii, va rugam sa consultati fisierul atasat. ICGROETF_20261023113411_2026-10-22-ROFI-ETF-Official-NAV.pdf Print Informatii furnizate prin IRIS , platforma de stiri a Bursei de Valori Bucuresti. ______________________ Bursa de Valori Bucuresti (\"BVB\") nu este responsabila de continutul acestui Raport. Emitentii ale caror instrumente financiare sunt tranzactionate pe pietele administrate de catre BVB au obligatia de a intocmi Rapoarte in conformitate cu prevederile legale si regulamentare incidente. BVB publica aceste Rapoarte in calitate de administrator al acestor piete, desemnat de catre ASF. In situatia in care, pentru informarea corespunzatoare a investitorilor, sunt publicate Rapoarte semnate de persoane diferite, sau cu informatii divergente, responsabilitatea juridica revine in totalitate semnatarilor respectivelor Rapoarte. BVB isi declina orice obligatie sau raspundere fata de emitenti sau terte parti, cu privire la realitatea, integralitatea si exactitatea informatiilor furnizate de catre acestia si distribuite de catre BVB. Utilizatorii website-ului au responsabilitatea de a verifica continutul rapoartelor. Orice raport (inclusiv orice prospect) care se adreseaza exclusiv unor persoane/tari specificate in acesta nu trebuie luate in considerare de catre persoanele / in tarile excluse. Termenii si conditiile , inclusiv restrictiile de utilizare si redistributie se aplica. ©2026 Bursa de Valori Bucuresti. Toate drepturile rezervate. Pentru Companii Prezentare generala Instrumente pentru finantare Beneficiile listarii Pentru Investitori Pentru inceput Devino Investitor La Bursa Exchange Live 2.0 Tranzactionare si Statistici Pietele astazi Statistici generale Top tranzactionare Despre noi si Guvernanta Descriere generala Structura de conducere Comunicate de presa Cariere Relatia cu Investitorii Privire generala Adunari Generale ale Actionarilor Raportari financiare Site-uri din Grupul BVB Depozitarul Central Website mobile | Termeni de Utilizare | Contact | © 2026 Bursa de Valori Bucuresti Distribuie:",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "98e7b12542dbe24cb1205a425ff68ad75de76e29",
+      "source_id": "ecb_press",
+      "market_scopes": [
+        "RO",
+        "FR"
+      ],
+      "headline_original": "ECB Consumer Expectations Survey results – September 2026",
+      "published_at": "2026-10-23T08:00:00+00:00",
+      "official_article_url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261023~a3d201c97c.en.html",
+      "origin": "European Central Bank",
+      "source_body_sha256": "4528a6874119c2b1d863bfac8474605fde9ec560c534c5025dc3eea6fda961ba",
+      "source_excerpt_original": "Skip to: Skip to navigation Skip to content Skip to footer EN Български Čeština Dansk Deutsch Eλληνικά English Español Eesti keel Suomi Français Gaeilge Hrvatski Magyar Italiano Lietuvių Latviešu Malti Nederlands Polski Português Română Slovenčina Slovenščina Svenska Menu Monetary policy & markets Monetary policy & markets Our monetary policy strategy, the tools we use and the impact they have Overview of monetary policy and markets Quick links What is monetary policy? Strategy review Asset purchase programmes Latest monetary policy press conference 10 September 2026 Introduction Benefits of price stability Scope of monetary policy Transmission mechanism Decisions, statements & accounts Monetary policy strategy Strategy review Medium-term orientation Two per cent inflation target Economic, monetary and financial analysis Economic analysis Monetary and financial analysis Monetary policy operations Open market operations TLTROs Asset purchase programmes Securities lending Pandemic emergency purchase programme Standing facilities Minimum reserves Two-tier system Euro central bank liquidity lines Swap lines EUREP Chronology of Eurosystem liquidity lines Emergency liquidity assistance (ELA) Liquidity analysis Collateral Eligibility criteria and assessment Marketable assets Non-marketable assets List of eligible marketable assets User guide Collateral management Eligible SSSs Eligible links Eligible triparty agents Risk mitigation ECAF Risk control Haircut categories Valuation Loan-level requirements Contacts Structure of the euro area economy Economic policy Fiscal policies External trade Effective exchange rates Financial structure Financial markets Financial intermediaries Economic diversity Labour market Market contact groups Bond market (BMCG) Money market (MMCG) Debt Issuance Market Contact Group (DIMCG) ECB Operations managers group (ECB OMG) Foreign exchange (FXCG) Institutional Investor Dialogue (IID) Monetary Analysis Contact Group (MACG) Payments & financial stability Payments & financial stability Insights into our work on financial stability and payments and market infrastructures Overview of payments and financial stability Quick links Digital euro Payments news & events Market contact groups TARGET professional use documents and links Latest Financial Stability Review 5 June 2025 Payments TARGET Services Shared features T2 Facts and figures Governance T2S Governance Facts and figures Pricing TIPS Cross-border payments Governance Facts and figures Onboarding ECMS Governance Pontes Governance TARGET professional use documents & links Shared features documents & links T2 documents & links T2S documents & links TIPS documents & links ECMS documents & links Pontes documents & links Tokenisation and DLT Appia Governance Exploratory work Retail payments Retail payments strategy ECB as a catalyst SEPA Instant payments Market contact groups Collateral management harmonisation SCoRE Implementation FAQ AMI-SeCo Cyber resilience Financial market infrastructures TIBER-EU Euro Cyber Resilience Board Oversight Payment systems TARGET2-Securities Electronic payments Securities settlement systems and central counterparties Critical service providers Correspondent and custodian banks SecuRe Pay forum Reserve management services Key aspects Range of services Cash professionals Cash handling Authentication devices Recirculation of banknotes Common detector interface specifications Banknote manufacturer accreditation Financial stability Introduction to financial stability Macroprudential Measures Financial stability contact groups Statistics Statistics Access to all ECB statistics and background information Overview of ECB statistics Quick links Key figures ECB Data Portal Statistical releases PRESS RELEASE - ECB launches pilot project for research access to confidential statistical data 13 March 2025 Frequently accessed Euro exchange rates Key ECB interest rates Euro short-term rate (€STR) Interest rate benchmarks Working group on euro risk-free rates Inflation Euro area yield curves All statistics & background All key statistics All data services Data reporting & standards Governance and quality framework Co-operation and standards Banks’ data reporting DPM Alliance IReF JBRC BIRD AnaCredit AnaCredit Q&A Public consultations Banking industry dialogue on ESCB statistics and integrated reporting SDMX – statistical data exchange model INEXDA - granular data network The euro The euro All you need to know about our common currency O",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "ed0235767285749ab094152d2084224aa79a89a8",
+      "source_id": "insee_conjuncture",
+      "market_scopes": [
+        "FR"
+      ],
+      "headline_original": "En octobre 2026, les industriels revoient à la hausse leurs investissements",
+      "published_at": "2026-10-22T06:45:00+00:00",
+      "official_article_url": "https://www.insee.fr/fr/statistiques/9095034",
+      "origin": "INSEE France",
+      "source_body_sha256": "e40142a61bb7771c8f2b6493b161fe28cb11bc25d86319f036716a8b5bf0a878",
+      "source_excerpt_original": "false Aller au contenu Aide Thèmes Recherche English Presse Menu Menu Blog Presse Aide English Lancer la recherche sur le site Thèmes Statistiques et études Cherchez vos statistiques par… Thèmes Économie - conjoncture - comptes nationaux Démographie Entreprises Plus de thèmes… Niveaux géographiques France Toutes les régions ou tous les départements Toutes les communes Plus de niveaux géographiques… Catégories Données Publications Plus de catégories… Collections Insee Première Notes et points de conjoncture Plus de collections… Définitions, méthodes et qualité Définitions Sources statistiques et indicateurs Liste des sources statistiques Liste des indicateurs Documentation complémentaire sur le recensement La qualité dans le Service statistique public (SSP) Le cadre de référence La gouvernance La politique et la stratégie qualité du SSP Les engagements européens Nomenclatures Nomenclature d’activités française Nomenclature agrégée - NA, 2008 Classification des produits française Classification des fonctions de consommation des ménages Catégories juridiques Nomenclatures des professions et catégories socioprofessionnelles Géographie administrative et d'étude Recherche sur une zone géographique Téléchargement de fichiers Historique des communes Modèles, méthodes et outils statistiques Les modèles statistiques Les outils statistiques Méthodologie statistique Courrier des statistiques Offre de données ouvertes Le catalogue des données de l'Insee Le catalogue des API de l'Insee L'offre de données au travers de nos produits de diffusion Les formats de mise à disposition des données Nos données disponibles sur d'autres plateformes Services Réviser une pension, un loyer, bail ou contrat Réviser une pension alimentaire Réviser un loyer d'habitation Réviser un bail commercial ou professionnel Indexer un contrat Convertisseur franc-euro : pouvoir d'achat de l'euro et du franc Consulter les indices et séries chronologiques Actualités des indices et séries chronologiques Accès des séries et indices chronologiques par thème Recherche par identifiant ou par mot-clé Service web SDMX Tables de passage Sirene Obtenir un avis de situation au répertoire Sirene Demander la modification de son statut de diffusion Demander la modification du code APE Immatriculation, cessation ou modification des données au répertoire Sirene Obtenir sa catégorie d'entreprise Consulter et télécharger la base Sirene Identifiant unique des intervenants sur les marchés financiers (LEI) Réponses à vos questions sur le répertoire Sirene Découvrir, apprendre, enseigner Pour commencer... Visualiser les données La Compétition européenne de statistiques Pour approfondir... Répondre à une enquête de l'Insee Enquêtes auprès des particuliers Enquêtes auprès des entreprises Vrai ou faux enquêteur de l’Insee, fraude, malveillance : comment vérifier ? S’informer sur l’actualité de notre diffusion Agenda de diffusion des indicateurs économiques Dernières publications de l’Insee Dernières publications des Services statistiques ministériels Évènements annoncés à la Une du site Thèmes d'actualité Gérer les répertoires des personnes physiques Recueil des données d'état civil Le Répertoire électoral unique Dématérialisation des échanges de données Nombre de décès quotidiens par département Fichiers des personnes décédées depuis 1970 Bibliothèque de l’Insee Alain Desrosières Portail documentaire et catalogue La Bibliothèque numérique de la statistique publique Commander une prestation, acheter une publication Diffusion sur mesure Acheter nos publications Nous suivre Lettres d'information Abonnements aux lettres d'information et aux avis de parution Abonnement aux flux RSS L'Insee sur les médias sociaux Insee Mobile Aide et contacts Réponses à vos questions Obtenir des informations par téléphone Espace presse Événements presse Calendrier des publications Communiqués de presse nationaux Communiqués de presse régionaux Nominations L'Insee et la statistique publique L'Insee Connaître l'Insee L’Insee en toute confiance Travailler à l'Insee Événements et colloques Un peu d'histoire Rapports d'activité Les activités de l'Insee Suivre l’économie française Connaître les entreprises Observer l'évolution de la société Réaliser le recensement de la population Décrire et analyser les régions et les territoires Gérer des grands répertoires Diffuser et valoriser ses productions Perfectionner ses méthodes et évaluer la qualité Contribuer à la construction de la statistique européenne et internat",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "76966a6ee85e571e1071a7d93327d47bf060afce",
+      "source_id": "insee_conjuncture",
+      "market_scopes": [
+        "FR"
+      ],
+      "headline_original": "En octobre 2026, le climat des affaires repart légèrement à la hausse",
+      "published_at": "2026-10-22T06:45:00+00:00",
+      "official_article_url": "https://www.insee.fr/fr/statistiques/9097429",
+      "origin": "INSEE France",
+      "source_body_sha256": "9ddeca248832baf7148b91b943fc05565ec10bf9cea08828b1601d8fddeba7f4",
+      "source_excerpt_original": "false Aller au contenu Aide Thèmes Recherche English Presse Menu Menu Blog Presse Aide English Lancer la recherche sur le site Thèmes Statistiques et études Cherchez vos statistiques par… Thèmes Économie - conjoncture - comptes nationaux Démographie Entreprises Plus de thèmes… Niveaux géographiques France Toutes les régions ou tous les départements Toutes les communes Plus de niveaux géographiques… Catégories Données Publications Plus de catégories… Collections Insee Première Notes et points de conjoncture Plus de collections… Définitions, méthodes et qualité Définitions Sources statistiques et indicateurs Liste des sources statistiques Liste des indicateurs Documentation complémentaire sur le recensement La qualité dans le Service statistique public (SSP) Le cadre de référence La gouvernance La politique et la stratégie qualité du SSP Les engagements européens Nomenclatures Nomenclature d’activités française Nomenclature agrégée - NA, 2008 Classification des produits française Classification des fonctions de consommation des ménages Catégories juridiques Nomenclatures des professions et catégories socioprofessionnelles Géographie administrative et d'étude Recherche sur une zone géographique Téléchargement de fichiers Historique des communes Modèles, méthodes et outils statistiques Les modèles statistiques Les outils statistiques Méthodologie statistique Courrier des statistiques Offre de données ouvertes Le catalogue des données de l'Insee Le catalogue des API de l'Insee L'offre de données au travers de nos produits de diffusion Les formats de mise à disposition des données Nos données disponibles sur d'autres plateformes Services Réviser une pension, un loyer, bail ou contrat Réviser une pension alimentaire Réviser un loyer d'habitation Réviser un bail commercial ou professionnel Indexer un contrat Convertisseur franc-euro : pouvoir d'achat de l'euro et du franc Consulter les indices et séries chronologiques Actualités des indices et séries chronologiques Accès des séries et indices chronologiques par thème Recherche par identifiant ou par mot-clé Service web SDMX Tables de passage Sirene Obtenir un avis de situation au répertoire Sirene Demander la modification de son statut de diffusion Demander la modification du code APE Immatriculation, cessation ou modification des données au répertoire Sirene Obtenir sa catégorie d'entreprise Consulter et télécharger la base Sirene Identifiant unique des intervenants sur les marchés financiers (LEI) Réponses à vos questions sur le répertoire Sirene Découvrir, apprendre, enseigner Pour commencer... Visualiser les données La Compétition européenne de statistiques Pour approfondir... Répondre à une enquête de l'Insee Enquêtes auprès des particuliers Enquêtes auprès des entreprises Vrai ou faux enquêteur de l’Insee, fraude, malveillance : comment vérifier ? S’informer sur l’actualité de notre diffusion Agenda de diffusion des indicateurs économiques Dernières publications de l’Insee Dernières publications des Services statistiques ministériels Évènements annoncés à la Une du site Thèmes d'actualité Gérer les répertoires des personnes physiques Recueil des données d'état civil Le Répertoire électoral unique Dématérialisation des échanges de données Nombre de décès quotidiens par département Fichiers des personnes décédées depuis 1970 Bibliothèque de l’Insee Alain Desrosières Portail documentaire et catalogue La Bibliothèque numérique de la statistique publique Commander une prestation, acheter une publication Diffusion sur mesure Acheter nos publications Nous suivre Lettres d'information Abonnements aux lettres d'information et aux avis de parution Abonnement aux flux RSS L'Insee sur les médias sociaux Insee Mobile Aide et contacts Réponses à vos questions Obtenir des informations par téléphone Espace presse Événements presse Calendrier des publications Communiqués de presse nationaux Communiqués de presse régionaux Nominations L'Insee et la statistique publique L'Insee Connaître l'Insee L’Insee en toute confiance Travailler à l'Insee Événements et colloques Un peu d'histoire Rapports d'activité Les activités de l'Insee Suivre l’économie française Connaître les entreprises Observer l'évolution de la société Réaliser le recensement de la population Décrire et analyser les régions et les territoires Gérer des grands répertoires Diffuser et valoriser ses productions Perfectionner ses méthodes et évaluer la qualité Contribuer à la construction de la statistique européenne et internat",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "6149dbf5347aafeed6693f079a6b5a651d3b495d",
+      "source_id": "insee_conjuncture",
+      "market_scopes": [
+        "FR"
+      ],
+      "headline_original": "En octobre 2026, le climat des affaires dans le bâtiment diminue",
+      "published_at": "2026-10-22T06:45:00+00:00",
+      "official_article_url": "https://www.insee.fr/fr/statistiques/9094600",
+      "origin": "INSEE France",
+      "source_body_sha256": "6993b787b92285559ef419310616c40707bcdf92e7b526974a7427a9ccb4f1ae",
+      "source_excerpt_original": "false Aller au contenu Aide Thèmes Recherche English Presse Menu Menu Blog Presse Aide English Lancer la recherche sur le site Thèmes Statistiques et études Cherchez vos statistiques par… Thèmes Économie - conjoncture - comptes nationaux Démographie Entreprises Plus de thèmes… Niveaux géographiques France Toutes les régions ou tous les départements Toutes les communes Plus de niveaux géographiques… Catégories Données Publications Plus de catégories… Collections Insee Première Notes et points de conjoncture Plus de collections… Définitions, méthodes et qualité Définitions Sources statistiques et indicateurs Liste des sources statistiques Liste des indicateurs Documentation complémentaire sur le recensement La qualité dans le Service statistique public (SSP) Le cadre de référence La gouvernance La politique et la stratégie qualité du SSP Les engagements européens Nomenclatures Nomenclature d’activités française Nomenclature agrégée - NA, 2008 Classification des produits française Classification des fonctions de consommation des ménages Catégories juridiques Nomenclatures des professions et catégories socioprofessionnelles Géographie administrative et d'étude Recherche sur une zone géographique Téléchargement de fichiers Historique des communes Modèles, méthodes et outils statistiques Les modèles statistiques Les outils statistiques Méthodologie statistique Courrier des statistiques Offre de données ouvertes Le catalogue des données de l'Insee Le catalogue des API de l'Insee L'offre de données au travers de nos produits de diffusion Les formats de mise à disposition des données Nos données disponibles sur d'autres plateformes Services Réviser une pension, un loyer, bail ou contrat Réviser une pension alimentaire Réviser un loyer d'habitation Réviser un bail commercial ou professionnel Indexer un contrat Convertisseur franc-euro : pouvoir d'achat de l'euro et du franc Consulter les indices et séries chronologiques Actualités des indices et séries chronologiques Accès des séries et indices chronologiques par thème Recherche par identifiant ou par mot-clé Service web SDMX Tables de passage Sirene Obtenir un avis de situation au répertoire Sirene Demander la modification de son statut de diffusion Demander la modification du code APE Immatriculation, cessation ou modification des données au répertoire Sirene Obtenir sa catégorie d'entreprise Consulter et télécharger la base Sirene Identifiant unique des intervenants sur les marchés financiers (LEI) Réponses à vos questions sur le répertoire Sirene Découvrir, apprendre, enseigner Pour commencer... Visualiser les données La Compétition européenne de statistiques Pour approfondir... Répondre à une enquête de l'Insee Enquêtes auprès des particuliers Enquêtes auprès des entreprises Vrai ou faux enquêteur de l’Insee, fraude, malveillance : comment vérifier ? S’informer sur l’actualité de notre diffusion Agenda de diffusion des indicateurs économiques Dernières publications de l’Insee Dernières publications des Services statistiques ministériels Évènements annoncés à la Une du site Thèmes d'actualité Gérer les répertoires des personnes physiques Recueil des données d'état civil Le Répertoire électoral unique Dématérialisation des échanges de données Nombre de décès quotidiens par département Fichiers des personnes décédées depuis 1970 Bibliothèque de l’Insee Alain Desrosières Portail documentaire et catalogue La Bibliothèque numérique de la statistique publique Commander une prestation, acheter une publication Diffusion sur mesure Acheter nos publications Nous suivre Lettres d'information Abonnements aux lettres d'information et aux avis de parution Abonnement aux flux RSS L'Insee sur les médias sociaux Insee Mobile Aide et contacts Réponses à vos questions Obtenir des informations par téléphone Espace presse Événements presse Calendrier des publications Communiqués de presse nationaux Communiqués de presse régionaux Nominations L'Insee et la statistique publique L'Insee Connaître l'Insee L’Insee en toute confiance Travailler à l'Insee Événements et colloques Un peu d'histoire Rapports d'activité Les activités de l'Insee Suivre l’économie française Connaître les entreprises Observer l'évolution de la société Réaliser le recensement de la population Décrire et analyser les régions et les territoires Gérer des grands répertoires Diffuser et valoriser ses productions Perfectionner ses méthodes et évaluer la qualité Contribuer à la construction de la statistique européenne et internat",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "5070cb660ec0db5cf184127bb0352eab82bbacfe",
+      "source_id": "insee_conjuncture",
+      "market_scopes": [
+        "FR"
+      ],
+      "headline_original": "En octobre 2026, le climat des affaires dans les services s’éclaircit légèrement",
+      "published_at": "2026-10-22T06:45:00+00:00",
+      "official_article_url": "https://www.insee.fr/fr/statistiques/9096273",
+      "origin": "INSEE France",
+      "source_body_sha256": "963dc94b01ff1c87ba8dc1e0d8b3ec276bcbe82adaa5e91a7c28d7f7d8696e93",
+      "source_excerpt_original": "false Aller au contenu Aide Thèmes Recherche English Presse Menu Menu Blog Presse Aide English Lancer la recherche sur le site Thèmes Statistiques et études Cherchez vos statistiques par… Thèmes Économie - conjoncture - comptes nationaux Démographie Entreprises Plus de thèmes… Niveaux géographiques France Toutes les régions ou tous les départements Toutes les communes Plus de niveaux géographiques… Catégories Données Publications Plus de catégories… Collections Insee Première Notes et points de conjoncture Plus de collections… Définitions, méthodes et qualité Définitions Sources statistiques et indicateurs Liste des sources statistiques Liste des indicateurs Documentation complémentaire sur le recensement La qualité dans le Service statistique public (SSP) Le cadre de référence La gouvernance La politique et la stratégie qualité du SSP Les engagements européens Nomenclatures Nomenclature d’activités française Nomenclature agrégée - NA, 2008 Classification des produits française Classification des fonctions de consommation des ménages Catégories juridiques Nomenclatures des professions et catégories socioprofessionnelles Géographie administrative et d'étude Recherche sur une zone géographique Téléchargement de fichiers Historique des communes Modèles, méthodes et outils statistiques Les modèles statistiques Les outils statistiques Méthodologie statistique Courrier des statistiques Offre de données ouvertes Le catalogue des données de l'Insee Le catalogue des API de l'Insee L'offre de données au travers de nos produits de diffusion Les formats de mise à disposition des données Nos données disponibles sur d'autres plateformes Services Réviser une pension, un loyer, bail ou contrat Réviser une pension alimentaire Réviser un loyer d'habitation Réviser un bail commercial ou professionnel Indexer un contrat Convertisseur franc-euro : pouvoir d'achat de l'euro et du franc Consulter les indices et séries chronologiques Actualités des indices et séries chronologiques Accès des séries et indices chronologiques par thème Recherche par identifiant ou par mot-clé Service web SDMX Tables de passage Sirene Obtenir un avis de situation au répertoire Sirene Demander la modification de son statut de diffusion Demander la modification du code APE Immatriculation, cessation ou modification des données au répertoire Sirene Obtenir sa catégorie d'entreprise Consulter et télécharger la base Sirene Identifiant unique des intervenants sur les marchés financiers (LEI) Réponses à vos questions sur le répertoire Sirene Découvrir, apprendre, enseigner Pour commencer... Visualiser les données La Compétition européenne de statistiques Pour approfondir... Répondre à une enquête de l'Insee Enquêtes auprès des particuliers Enquêtes auprès des entreprises Vrai ou faux enquêteur de l’Insee, fraude, malveillance : comment vérifier ? S’informer sur l’actualité de notre diffusion Agenda de diffusion des indicateurs économiques Dernières publications de l’Insee Dernières publications des Services statistiques ministériels Évènements annoncés à la Une du site Thèmes d'actualité Gérer les répertoires des personnes physiques Recueil des données d'état civil Le Répertoire électoral unique Dématérialisation des échanges de données Nombre de décès quotidiens par département Fichiers des personnes décédées depuis 1970 Bibliothèque de l’Insee Alain Desrosières Portail documentaire et catalogue La Bibliothèque numérique de la statistique publique Commander une prestation, acheter une publication Diffusion sur mesure Acheter nos publications Nous suivre Lettres d'information Abonnements aux lettres d'information et aux avis de parution Abonnement aux flux RSS L'Insee sur les médias sociaux Insee Mobile Aide et contacts Réponses à vos questions Obtenir des informations par téléphone Espace presse Événements presse Calendrier des publications Communiqués de presse nationaux Communiqués de presse régionaux Nominations L'Insee et la statistique publique L'Insee Connaître l'Insee L’Insee en toute confiance Travailler à l'Insee Événements et colloques Un peu d'histoire Rapports d'activité Les activités de l'Insee Suivre l’économie française Connaître les entreprises Observer l'évolution de la société Réaliser le recensement de la population Décrire et analyser les régions et les territoires Gérer des grands répertoires Diffuser et valoriser ses productions Perfectionner ses méthodes et évaluer la qualité Contribuer à la construction de la statistique européenne et internat",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "09baa9407887c8157161b499b94b8d0bacbe1c3a",
+      "source_id": "insee_conjuncture",
+      "market_scopes": [
+        "FR"
+      ],
+      "headline_original": "En octobre 2026, le climat des affaires dans l’industrie augmente fortement, porté par les matériels de transport",
+      "published_at": "2026-10-22T06:45:00+00:00",
+      "official_article_url": "https://www.insee.fr/fr/statistiques/9093009",
+      "origin": "INSEE France",
+      "source_body_sha256": "62a40e30b63c1df9463179af3e45aea91944477efe8a2c18c3db3a11296a59e5",
+      "source_excerpt_original": "false Aller au contenu Aide Thèmes Recherche English Presse Menu Menu Blog Presse Aide English Lancer la recherche sur le site Thèmes Statistiques et études Cherchez vos statistiques par… Thèmes Économie - conjoncture - comptes nationaux Démographie Entreprises Plus de thèmes… Niveaux géographiques France Toutes les régions ou tous les départements Toutes les communes Plus de niveaux géographiques… Catégories Données Publications Plus de catégories… Collections Insee Première Notes et points de conjoncture Plus de collections… Définitions, méthodes et qualité Définitions Sources statistiques et indicateurs Liste des sources statistiques Liste des indicateurs Documentation complémentaire sur le recensement La qualité dans le Service statistique public (SSP) Le cadre de référence La gouvernance La politique et la stratégie qualité du SSP Les engagements européens Nomenclatures Nomenclature d’activités française Nomenclature agrégée - NA, 2008 Classification des produits française Classification des fonctions de consommation des ménages Catégories juridiques Nomenclatures des professions et catégories socioprofessionnelles Géographie administrative et d'étude Recherche sur une zone géographique Téléchargement de fichiers Historique des communes Modèles, méthodes et outils statistiques Les modèles statistiques Les outils statistiques Méthodologie statistique Courrier des statistiques Offre de données ouvertes Le catalogue des données de l'Insee Le catalogue des API de l'Insee L'offre de données au travers de nos produits de diffusion Les formats de mise à disposition des données Nos données disponibles sur d'autres plateformes Services Réviser une pension, un loyer, bail ou contrat Réviser une pension alimentaire Réviser un loyer d'habitation Réviser un bail commercial ou professionnel Indexer un contrat Convertisseur franc-euro : pouvoir d'achat de l'euro et du franc Consulter les indices et séries chronologiques Actualités des indices et séries chronologiques Accès des séries et indices chronologiques par thème Recherche par identifiant ou par mot-clé Service web SDMX Tables de passage Sirene Obtenir un avis de situation au répertoire Sirene Demander la modification de son statut de diffusion Demander la modification du code APE Immatriculation, cessation ou modification des données au répertoire Sirene Obtenir sa catégorie d'entreprise Consulter et télécharger la base Sirene Identifiant unique des intervenants sur les marchés financiers (LEI) Réponses à vos questions sur le répertoire Sirene Découvrir, apprendre, enseigner Pour commencer... Visualiser les données La Compétition européenne de statistiques Pour approfondir... Répondre à une enquête de l'Insee Enquêtes auprès des particuliers Enquêtes auprès des entreprises Vrai ou faux enquêteur de l’Insee, fraude, malveillance : comment vérifier ? S’informer sur l’actualité de notre diffusion Agenda de diffusion des indicateurs économiques Dernières publications de l’Insee Dernières publications des Services statistiques ministériels Évènements annoncés à la Une du site Thèmes d'actualité Gérer les répertoires des personnes physiques Recueil des données d'état civil Le Répertoire électoral unique Dématérialisation des échanges de données Nombre de décès quotidiens par département Fichiers des personnes décédées depuis 1970 Bibliothèque de l’Insee Alain Desrosières Portail documentaire et catalogue La Bibliothèque numérique de la statistique publique Commander une prestation, acheter une publication Diffusion sur mesure Acheter nos publications Nous suivre Lettres d'information Abonnements aux lettres d'information et aux avis de parution Abonnement aux flux RSS L'Insee sur les médias sociaux Insee Mobile Aide et contacts Réponses à vos questions Obtenir des informations par téléphone Espace presse Événements presse Calendrier des publications Communiqués de presse nationaux Communiqués de presse régionaux Nominations L'Insee et la statistique publique L'Insee Connaître l'Insee L’Insee en toute confiance Travailler à l'Insee Événements et colloques Un peu d'histoire Rapports d'activité Les activités de l'Insee Suivre l’économie française Connaître les entreprises Observer l'évolution de la société Réaliser le recensement de la population Décrire et analyser les régions et les territoires Gérer des grands répertoires Diffuser et valoriser ses productions Perfectionner ses méthodes et évaluer la qualité Contribuer à la construction de la statistique européenne et internat",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "e52c175cb1685cd8b2aa89e31fdf7bb6fc544d13",
+      "source_id": "eurostat_releases",
+      "market_scopes": [
+        "RO",
+        "FR"
+      ],
+      "headline_original": "Seasonally adjusted government deficit at 3.3% of GDP in the euro area",
+      "published_at": "2026-10-21T09:00:00+00:00",
+      "official_article_url": "https://ec.europa.eu/eurostat/product?code=2-21102026-cp",
+      "origin": "Eurostat",
+      "source_body_sha256": null,
+      "source_excerpt_original": null,
+      "evidence_status": "SOURCE_BODY_UNAVAILABLE",
+      "source_body_error": "Publisher redirected; use a separately verified final article URL.",
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "9ededcb55fab69421b08fc3c157a059ca2329170",
+      "source_id": "eurostat_releases",
+      "market_scopes": [
+        "RO",
+        "FR"
+      ],
+      "headline_original": "Euro area government deficit at 3.0% and EU at 3.1% of GDP",
+      "published_at": "2026-10-21T09:00:00+00:00",
+      "official_article_url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-21102026-ap",
+      "origin": "Eurostat",
+      "source_body_sha256": "87e3856f379b14294a015b78bcb7f10109439187baeda84a0164fff383189926",
+      "source_excerpt_original": "Skip to Main Content Log in English English Select your language Close bg български es español cs čeština da dansk de Deutsch et eesti el ελληνικά fr français ga Gaeilge hr hrvatski it italiano lv latviešu lt lietuvių hu magyar mt Malti nl Nederlands pl polski pt português ru pусский ro română sk slovenčina sl slovenščina fi suomi sv svenska uk Українська Search Search Search by keyword Search Search How many women work in science? How many young people are unemployed? How many hours do people work in the EU? In which EU countries did poverty decrease? How much have fuel prices increased? When do young people move out from home? Where is GDP the highest? Warning Close Warning Friday, 23 October from 20:00 to 23:55: The services web services / API, Data Browser and data navigation tree will be temporarily unavailable. Menu Close Menu Back Previous items Next items Home Data Explore data Database Statistical themes Stats finder A-Z Experimental statistics Data visualisations European statistics learning hub Advanced tools and services Web services Bulk download GISCO:Geographical Information and maps Microdata Quality and European statistics Quality Metadata Data validation Data revision policy SDMX InfoSpace Research and methodology (CROS) Evaluations News News articles Euro indicators Podcasts Events and webinars Release calendar Publications Collections Flagship publications Interactive publications Key figures Online reads Manuals and guidelines Statistical working papers Statistical reports Leaflets Statistics Explained Release calendar About us Who we are Our mission and values Our organisation Our history Contact us Our work Producing statistics Communicating and disseminating statistics Innovating statistics Our policies Our partners European Statistical System EU institutions and bodies International cooperation Working with us Job opportunities Calls for tenders Grants Public consultations Events and webinars Visits Contact us User support Media and fact-checkers Institutional services Visit us Help Website guide Products and tools Services User guides Copyright notice and free re-use of data Alert Frequently asked questions Accessibility Maintenance information Home … News Euro indicators Euro indicators 21 October 2026 Next release: 21 April 2027 Provision of deficit and debt data for 2025 - second notification Euro area government deficit at 3.0% and EU at 3.1% of GDP Skip to the content Contents Loading Toggle page contents Print page Information Before printing Close Printing can have negative environmental impacts due to paper waste. We encourage you to explore eco-friendly alternatives. Bookmarking this page in your browser allows you to access it anytime. This publication can also be converted to PDF, if you have a PDF printer installed on your computer. PDF printers function as virtual printers, enabling you to create digital copies of web pages and access the content offline. Don't show this message again Close Print Government debt at 87.7% and 81.5% respectively Overview In the euro area (EA20) the government deficit to GDP ratio remained unchanged at 3.0% in 2024 and 2025. In the EU , it also remained unchanged at 3.1%, the same level as in 2024. In the euro area the government debt to GDP ratio increased from 86.6% at the end of 2024 to 87.7% at the end of 2025, and in the EU from 80.3% to 81.5%. In this release, Eurostat, the statistical office of the European Union , is providing government deficit and debt data for the years 2022-2025, based on figures reported by EU Member States in the second notification in 2026, for the application of the excessive deficit procedure (EDP). This notification is based on the ESA 2010 system of national accounts. This release also includes data on government expenditure and revenue. Deficit and debt data for Euro area and EU 2022 2023 2024 2025 Euro area 20 GDP market prices (mp) (million euro) 13 781 200 14 706 360 15 327 128 15 876 784 Government deficit (-) / surplus (+) (million euro) -463 598 -503 008 -466 739 -475 818 % of GDP -3.4 -3.4 -3.0 -3.0 Government expenditure % of GDP 49.8 49.2 49.3 49.8 Government revenue % of GDP 46.4 45.8 46.2 46.8 Government debt (million euro) 12 288 103 12 751 660 13 266 075 13 921 773 % of GDP 89.2 86.7 86.6 87.7 Euro area 21 GDP market prices (mp) (million euro) 13 867 536 14 801 461 15 432 407 15 993 333 Government deficit (-) / surplus (+) (million euro) -466 126 -504 891 -469 931 -480 482 % of GDP -3.4 -3.4 -3.0 -3",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "8b3b02107e1277295ac7f54b443b9255e885d4b6",
+      "source_id": "eurostat_releases",
+      "market_scopes": [
+        "RO",
+        "FR"
+      ],
+      "headline_original": "Government debt at 88.8% of GDP in euro area",
+      "published_at": "2026-10-21T09:00:00+00:00",
+      "official_article_url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-21102026-bp",
+      "origin": "Eurostat",
+      "source_body_sha256": "f1fb004ee7145ba572c055d434c71f5c56a49bd73101bb2621c19fa1b8529604",
+      "source_excerpt_original": "Skip to Main Content Log in English English Select your language Close bg български es español cs čeština da dansk de Deutsch et eesti el ελληνικά fr français ga Gaeilge hr hrvatski it italiano lv latviešu lt lietuvių hu magyar mt Malti nl Nederlands pl polski pt português ru pусский ro română sk slovenčina sl slovenščina fi suomi sv svenska uk Українська Search Search Search by keyword Search Search How many women work in science? How many young people are unemployed? How many hours do people work in the EU? In which EU countries did poverty decrease? How much have fuel prices increased? When do young people move out from home? Where is GDP the highest? Warning Close Warning Friday, 23 October from 20:00 to 23:55: The services web services / API, Data Browser and data navigation tree will be temporarily unavailable. Menu Close Menu Back Previous items Next items Home Data Explore data Database Statistical themes Stats finder A-Z Experimental statistics Data visualisations European statistics learning hub Advanced tools and services Web services Bulk download GISCO:Geographical Information and maps Microdata Quality and European statistics Quality Metadata Data validation Data revision policy SDMX InfoSpace Research and methodology (CROS) Evaluations News News articles Euro indicators Podcasts Events and webinars Release calendar Publications Collections Flagship publications Interactive publications Key figures Online reads Manuals and guidelines Statistical working papers Statistical reports Leaflets Statistics Explained Release calendar About us Who we are Our mission and values Our organisation Our history Contact us Our work Producing statistics Communicating and disseminating statistics Innovating statistics Our policies Our partners European Statistical System EU institutions and bodies International cooperation Working with us Job opportunities Calls for tenders Grants Public consultations Events and webinars Visits Contact us User support Media and fact-checkers Institutional services Visit us Help Website guide Products and tools Services User guides Copyright notice and free re-use of data Alert Frequently asked questions Accessibility Maintenance information Home … News Euro indicators Euro indicators 21 October 2026 Next release: 22 January 2027 Second quarter of 2026 Government debt at 88.8% of GDP in euro area Skip to the content Contents Loading Toggle page contents Print page Information Before printing Close Printing can have negative environmental impacts due to paper waste. We encourage you to explore eco-friendly alternatives. Bookmarking this page in your browser allows you to access it anytime. This publication can also be converted to PDF, if you have a PDF printer installed on your computer. PDF printers function as virtual printers, enabling you to create digital copies of web pages and access the content offline. Don't show this message again Close Print 82.9% of GDP in EU Overview At the end of the second quarter of 2026, the general government gross debt to GDP ratio in the euro area (EA21) stood at 88.8%, an increase compared with 88.4% at the end of the first quarter of 2026. In the EU , the ratio also increased from 82.5% to 82.9%. Compared with the second quarter of 2025, the government debt to GDP ratio increased in both the euro area (from 87.3% to 88.8%) and the EU (from 81.4% to 82.9%). At the end of the second quarter of 2026, the general government debt was made up of 84.5% debt securities in the euro area and 83.9% in the EU , 13.1% loans in the euro area and 13.8% in the EU and 2.4% currency and deposits in both the euro area and the EU . Due to the involvement of EU Member States' governments in lending to certain Member States, quarterly data on intergovernmental lending (IGL) are also published. The IGL as percentage of GDP at the end of the second quarter of 2026 stood at 1.3% in the euro area and at 1.1% in the EU . These data are released by Eurostat, the statistical office of the European Union . Euro area and EU general government gross debt 2025Q2 2026Q1p 2026Q2p Euro area General government gross debt (million euro) 13 705 629 14 245 798 14 438 114 (% of GDP) 87.3 88.4 88.8 Of which: Currency and deposits (million euro) 347 121 356 562 345 843 (% of total debt) 2.5 2.5 2.4 Debt securities (million euro) 11 542 693 12 005 756 12 204 655 (% of total debt) 84.2 84.3 84.5 Loans (million euro) 1 815 815 1 883 481 1 887 616 (% of total debt) 13.2 13.2 13.1 Memo: Intergover",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    }
+  ],
+  "us_index_close_snapshot_ready": false,
+  "google_docs_current_revision_loaded": false,
+  "review_status": "UNREVIEWED",
+  "delivery_allowed": false,
+  "telegram_sent": false,
+  "purpose": "Material for human/ChatGPT source-based editorial review, not market quote certification."
+}
