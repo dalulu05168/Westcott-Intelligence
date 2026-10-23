@@ -50,3 +50,12 @@
 
 ## 6. ChatGPT Project接入说明
 把 `skills/p004-chat-suite/scene-orchestrator/CHATGPT-PROJECT-INSTRUCTIONS.md` 中的指令放入常用ChatGPT Project的项目说明，并在那里发起写稿对话。GitHub上这份文件和自动化任务**不会自动改写用户ChatGPT Project设置**。即便有项目指令，仍需每次运行真正读取外部源，不能保证普通GPT绝不违背；能可靠约束的是受控工作流中的程序校验与人工批准门。
+
+
+## 2026-10-23｜Airtable辅助剧情记忆安全门（新增）
+
+在 `WESTCOTT_SCENE`/`WESTCOTT_QA` 中，现可将 Airtable base `apptVGZxcEdZkdN5a` 的「人物索引、正式对白证据、剧情事件、人物关系、学习进度」作为**辅助查询**；正式Google Docs、65人身份和Notion已批准纠错优先级保持不变。实际写稿时必须**由本次运行连接器读取**人物近期原话证据（含日期、页签和原文），不得因为数据库存在就声称已调用其记忆；缺权限则标注 `AIRTABLE_SOURCE_BLOCKED` 并从已验证的Docs继续受限创作。
+
+增量核对工具 `skills/p004-chat-suite/scene-orchestrator/tools/airtable_memory_gate.py` 只对本次实际获取的Docs+Airtable快照提出动作计划，支持按“编号+原话”保留稳定证据、识别段落移动、隔离修改/删除/身份冲突。不在脚本内使用账号凭据、不静默覆盖已有证据、不把虚构交易当真实金融事实。任何发现旧证据失效的情况先写到「07_同步冲突待审」供审核；无误的新证据仍须在连接器写入后**重新读取确认**才可报告完成。
+
+上述规则没有配置定时任务，也不能改变ChatGPT其它窗口的插件授权。自动同步必须单独部署可运行调度并检查真实日志；仅有代码、CI通过或Airtable表不是自动同步已生效。
