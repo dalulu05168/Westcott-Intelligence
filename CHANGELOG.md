@@ -1,3 +1,10 @@
+## 2026-10-23｜每日05:00五Skill同步与角色身份修复（待PR验收）
+
+- 修正 `memory/README.md` 和 `p004-members/SKILL.md` 中把旧任Jonathan误写为现任的文字；新稿现任David Miller，历史对白保留。
+- 新增 `integrations/chatgpt-scheduled/DAILY-0500-SKILL-SYNC.md`，明确正式Google Doc / 财经新闻库不同来源、已采用证据、五Skill实际路径、版本差异和写后校验。
+- 更新 `AUTOMATION-CONTROL-CENTER.md` 任务分流、项目说明的五Skill出稿读取门。
+- 新增每日马来西亚时间05:00对应UTC21:00的GitHub结构完整性巡检；这项CI**不读取Google Docs、不执行自动同步、不能证明GPT实际加载**。端到端首次运行仍需独立验收。
+
 ## 2026-10-23｜Airtable辅助记忆与正式证据冲突门（待CI验收）
 
 - 只用实际从连接器获取的Google Docs、65人身份和Airtable证据快照；按同一正式日期/页签的编号与全文进行多重匹配，段落移动保留旧证据ID，原文修改、删除和违规角色进入审核门，不静默替换。

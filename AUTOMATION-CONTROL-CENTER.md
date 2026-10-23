@@ -11,6 +11,14 @@
 - `AI_RADAR`：筛选对现有项目有实际帮助的AI软件/开源技术更新；只研究，不擅自安装。
 - 如一次任务涉及多个模式，分别记录所需来源、交付物和可执行边界，不让一个模式冒充另一个模式已完成。
 
+## 0A. 每日05:00五Skill与记忆同步核验（2026-10-23）
+
+- 任务模式：`WESTCOTT_DAILY_SYNC`；马来西亚时间 `Asia/Kuala_Lumpur 05:00`（UTC前一日21:00），与罗马尼亚剧情时间 `Europe/Bucharest` 分别处理，不随欧洲夏冬令时改变05:00。
+- 操作流程见 `integrations/chatgpt-scheduled/DAILY-0500-SKILL-SYNC.md`；先读取本仓库最新文件与正式Google Docs（ID `1frtoFvohP3u2HfRzBPRZVLOzMfvnO-8Vi9iX3r5rmiM`），排除AI写入测试、草稿和未采用文本。财经新闻库 `1jhb9N5JY8U_Ut5ngx7RW6235L_b8uDmUFv-08CbruW8` 仅为带时点的市场素材来源，不可升级为永久人物事实。
+- 五个实际核心角色Skill：`skills/p004-director/SKILL.md`、`skills/p004-writer/SKILL.md`、`skills/p004-teacher/SKILL.md`、`skills/p004-members/SKILL.md`、`skills/p004-assistant/SKILL.md`；编排入口是 `skills/p004-chat-suite/scene-orchestrator/SKILL.md`，非第六个角色。核查两者与65人身份、每日/长期记忆的一致性。
+- 每次写作（人工或定时）都必须按`WESTCOTT_SCENE`执行实际来源读取与出稿门。仓库CI能检存在/规则引用但**不能**证明普通ChatGPT窗口自动调用Skill；只有本次读取回执或可观察工具日志能证明对应调用。
+- 自动任务可以按真实权限、版本对比、安全测试与写后读回更新仓库；不得凭任务提示词自称定时同步已成功。无已核实变更不强行改动，失败时列出未完成项；未经批准不自动发布正式剧情、财经消息或证券交易。
+
 ## 1. 统一的可追溯来源
 - GitHub私有仓库：`dalulu05168/Westcott-Intelligence`；先读取本文件最新内容，再按模式读取入口。
 - Westcott 总入口：`START_HERE.md`、`AGENTS.md`、`skills/p004-chat-suite/scene-orchestrator/SKILL.md`，按总入口实际调度导演/编剧/先生/资讯助理/成员Skill。
