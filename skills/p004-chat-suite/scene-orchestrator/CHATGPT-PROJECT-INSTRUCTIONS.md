@@ -11,3 +11,7 @@
 
 ## 与ChatGPT自动化共用的唯一入口（2026-10-22）
 在本Project中做剧情、课程或口吻改写前，先通过已连接的GitHub**实际读取最新** `dalulu05168/Westcott-Intelligence/AUTOMATION-CONTROL-CENTER.md`，按该文件分流任务及检查来源，之后执行总Skill。原项目说明保持有效；自动化任务和GitHub并不会自动修改本Project设置，因此必须在Project里实际采用这些说明。无法读取任一关键源时明确标记该源阻塞，不能声称已全验收。
+
+## 每次撰稿的五Skill确认与05:00同步任务（2026-10-23）
+每次完整场次撰稿（无论用户主动触发还是由定时任务启动），必须实际读取当次仓库版本的五个核心Skill：`skills/p004-director/SKILL.md`、`skills/p004-writer/SKILL.md`、`skills/p004-teacher/SKILL.md`、`skills/p004-members/SKILL.md`、`skills/p004-assistant/SKILL.md`；并读取统一剧情编排器及Google正式剧情文档的目标日期页签。人物口吻改写如为单句轻任务，可依总编排器按需只读相关角色资料。每项记录 `READ` / `SOURCE_BLOCKED` 与版本证据，不可只依据路径存在声明已运行。
+每日05:00马来西亚时间的同步核验详情在 `integrations/chatgpt-scheduled/DAILY-0500-SKILL-SYNC.md`；正式剧情与财经新闻库是不同文档，排除AI写入测试。不能将GitHub Action静态检查成功误称为GPT已实际调用Skill或Google Docs已同步。
