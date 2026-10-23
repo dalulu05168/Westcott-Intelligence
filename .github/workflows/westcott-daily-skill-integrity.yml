@@ -1,0 +1,50 @@
+name: Westcott Daily Skill Integrity (MY 05:00)
+
+on:
+  schedule:
+    # 21:00 UTC = 05:00 next day in Asia/Kuala_Lumpur (UTC+08 all year)
+    - cron: "0 21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-five-skills:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify 65 identities and adopted memory integrity
+        run: python scripts/validate_repository.py
+      - name: Verify five Skill files and dispatch references
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          root = Path("skills")
+          roles = ("director", "writer", "teacher", "members", "assistant")
+          for role in roles:
+              path = root / f"p004-{role}" / "SKILL.md"
+              assert path.is_file(), f"Missing {path}"
+              content = path.read_text(encoding="utf-8")
+              assert content.startswith("---\n"), f"Bad header {path}"
+              assert f"name: p004-{role}" in content, f"Bad skill name {path}"
+              assert "scene-orchestrator/SKILL.md" in content, f"Missing orchestrator route {path}"
+              assert "David Miller" in content, f"Missing current speaker {path}"
+          for p in (Path("AGENTS.md"),
+                    root / "p004-chat-suite" / "SKILL.md"):
+              assert "scene-orchestrator/SKILL.md" in p.read_text(encoding="utf-8"), p
+          assert "David Miller" in Path("memory/README.md").read_text(encoding="utf-8")
+          assert Path("integrations/chatgpt-scheduled/DAILY-0500-SKILL-SYNC.md").is_file()
+          print("PASS: 5/5 Skill files, routing, David Miller, memory runbook")
+          PY
+      - name: Verify prepared memory projection
+        run: python scripts/sync_runtime_memory.py --check
+      - name: What this gate does and does not prove
+        if: always()
+        run: |
+          echo "### Westcott daily Skill gate" >> "$GITHUB_STEP_SUMMARY"
+          echo "Structural repository/identity/memory checks only. This run does NOT read Google Docs, modify Skill files, or prove GPT used them." >> "$GITHUB_STEP_SUMMARY"
+          echo "For actual Docs-to-GitHub syncing, verify the separate ChatGPT 05:00 task run and its readback evidence." >> "$GITHUB_STEP_SUMMARY"
