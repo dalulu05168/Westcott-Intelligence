@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-10-24",
+  "repository": "dalulu05168/Westcott-Intelligence",
+  "source": "用户在人物说话项目本次对话中的明确要求；引文不是程序执行回执",
+  "rules": [
+    {
+      "id": "USER-MEM-001",
+      "status": "confirmed",
+      "rule": "写作位置不限，历史可回查优先",
+      "user_quote": "这个都无所谓了，内容写在哪里都可以，让他连接谷歌文档是为了他以后方便读取有记忆",
+      "scope": "private_gpt_workflow"
+    },
+    {
+      "id": "USER-MEM-002",
+      "status": "confirmed",
+      "rule": "用户更正应持久保存并在新窗口恢复",
+      "user_quote": "可以将所有担心他忘记的内容或者指令更新到仓库",
+      "scope": "repository_memory"
+    },
+    {
+      "id": "USER-MEM-003",
+      "status": "confirmed",
+      "rule": "输出前核对编号、性别和人物历史；用户保留人工核对",
+      "user_quote": "我也会核实他写的对不对，编号与性别，不然我担心他写错",
+      "scope": "new_dialogue_and_review"
+    },
+    {
+      "id": "USER-MEM-004",
+      "status": "confirmed",
+      "rule": "停止该私有GPT的Google OAuth连接排障，改用实际可读来源",
+      "user_quote": "连不上就不连了   想别的办法",
+      "scope": "private_gpt_google_oauth_only"
+    },
+    {
+      "id": "USER-MEM-005",
+      "status": "confirmed",
+      "rule": "上午、下午、晚上各35条，助理和先生计入",
+      "user_quote": "35条只算编号人物发言，还是也包括资讯助理、教授的内容.。。包括在内",
+      "scope": "session_message_count"
+    },
+    {
+      "id": "USER-MEM-006",
+      "status": "confirmed",
+      "rule": "姓名提示只显示名字第一词，编号仍为唯一主键",
+      "user_quote": "罗马尼亚人相互称呼直说前面的那个单词  所以不用全名呈现",
+      "scope": "name_display"
+    },
+    {
+      "id": "USER-MEM-007",
+      "status": "confirmed",
+      "rule": "保留人物股票买卖参与原话、来源及确认级别，标记前后逻辑疑点",
+      "user_quote": "成员参与购票卖票的要有记录。内部成员在发言时输入65以内的数字要出现对应的人员姓名，之后用户会决定用不用这个名字进行确认。。还有上下文前后逻辑不符的信息要标记出来。",
+      "scope": "story_evidence_not_real_execution"
+    },
+    {
+      "id": "USER-MEM-008",
+      "status": "confirmed",
+      "rule": "可以将需长期记住的内容和指令写入当前仓库",
+      "user_quote": "可以连接仓库的呀，可以将所有担心他忘记的内容或者指令更新到仓库。",
+      "scope": "this_repository"
+    }
+  ],
+  "clarifications": {
+    "stock_wording": "用户已另行明确购票卖票指股票买卖；只记录虚构剧情参与，不当现实成交",
+    "scope_of_stopping_google": "仅停止该私有GPT的OAuth接入方案；不更改现有定时任务，不撤销其他窗口已有Docs权限",
+    "identity_authority": "skills/p004-chat-suite/characters/final-identity-65.json",
+    "active_member_authority": "skills/p004-chat-suite/references/active-member-roster-v2.2.md",
+    "active_ids": [
+      1,
+      42
+    ],
+    "current_teacher": "David Miller",
+    "story_archive_status": "FULL_CURRENT_STORY_NOT_IMPORTED_IN_THIS_CHANGE",
+    "private_gpt_repository_read_status": "NOT_YET_VERIFIED",
+    "cloud_progress_observation": {
+      "workspace": "main",
+      "last_verified_revision": 43,
+      "meaning": "已实测恢复四项长期要求，不是全量剧情或所有聊天历史"
+    }
+  }
+}

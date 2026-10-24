@@ -7,6 +7,11 @@ metadata:
   canonical-repo: dalulu05168/Westcott-Intelligence
 ---
 
+## 2026-10-24｜长期规则与来源切换
+
+先读取[仓库长期记忆入口](../../../memory/runtime/REPOSITORY-MEMORY-START-HERE.md)及其中用户确认规则。保留本仓库01—42出场、David身份、09:00上午开群等现行规则；用户停止的Google OAuth排障只作用于其私有GPT连接，不暂停其他任务。仓库可读、已入库与私有GPT已接通须分别验证。
+
+
 # ELLERY WESTCOTT · 一体化剧情/人物语言总Skill
 
 ## 0. 一句话任务入口
