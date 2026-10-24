@@ -80,14 +80,14 @@ export async function handleRepository(request,env,data){
   if(!data)return send({status:'missing',records:[],warning:'No repository export imported.'});
   if(url.pathname==='/v1/runtime'){
     const role=url.searchParams.get('role');if(role&&!['director','writer','teacher','assistant','members'].includes(role))return send({error:'invalid_role'},400);
-    return send({status:'ok',repository_commit:data.commit,exported_at:data.exported_at,rules:data.rules,skill:role?{role,text:data.skills[role]}:null,archive_dates:data.days.map(d=>d.snapshot.date),latest_archive_date:data.days.at(-1)?.snapshot.date??null,warnings:['Versioned repository export; commit is not proof of a live GitHub read.','Official news images come from publisher sources; GPT must not generate substitute news photos.','No scheduler or external-message sender is enabled by this read.']});
+    return send({status:'ok',repository_commit:data.commit,exported_at:data.exported_at,rules:data.rules,skill:role?{role,text:data.skills[role]}:null,archive_dates:data.days.map(d=>d.snapshot.date||d.snapshot.story_date),latest_archive_date:data.days.at(-1)?.snapshot.date??null,warnings:['Versioned repository export; commit is not proof of a live GitHub read.','Official news images come from publisher sources; GPT must not generate substitute news photos.','No scheduler or external-message sender is enabled by this read.']});
   }
   if(url.pathname==='/v1/archive'){
     const date=url.searchParams.get('date'),page=Number(url.searchParams.get('page')||'1');
     if(!/^\d{4}-\d{2}-\d{2}$/.test(date||'')||!Number.isInteger(page)||page<1)return send({error:'invalid_archive_parameters'},400);
-    const day=data.days.find(d=>d.snapshot.date===date);if(!day)return send({status:'missing',records:[],repository_commit:data.commit});
+    const day=data.days.find(d=>(d.snapshot.date||d.snapshot.story_date)===date);if(!day)return send({status:'missing',records:[],repository_commit:data.commit});
     const messages=day.snapshot.messages||[],size=12,part=messages.slice((page-1)*size,page*size);
-    return send({status:'stale',repository_commit:data.commit,source_path:day.path,source_revision:day.snapshot.source_document_revision??null,source_retrieved_at:day.snapshot.retrieved_at??null,date,page,total_messages:messages.length,next_page:page*size<messages.length?page+1:null,records:part,warnings:['Dated archive, not current live document. Preserve audit flags and exclude unadopted/invalid entries.']});
+    return send({status:'stale',repository_commit:data.commit,source_path:day.path,source_revision:day.snapshot.source_document_revision??null,source_retrieved_at:day.snapshot.retrieved_at??null,source_status:day.snapshot.status||day.snapshot.adoption||null,date_conflict:day.snapshot.date_conflict||null,date,page,total_messages:messages.length,next_page:page*size<messages.length?page+1:null,records:part,warnings:['Dated archive, not current live document. Preserve audit flags and exclude unadopted/invalid entries.']});
   }
   if(url.pathname==='/v1/validate-scene')return send(validateScene(data,await readBounded(request,500000)));
   return null;
