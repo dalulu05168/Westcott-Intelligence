@@ -1,0 +1,33 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {validateExport,validateScene,repositoryContext,repositoryNews,handleRepository} from './repository.mjs';
+const data=JSON.parse(await readFile(new URL('./repository-export.json',import.meta.url),'utf8'));
+const clean={...data,dirty_worktree:false};
+assert.equal(validateExport(clean).members.length,65);
+assert.throws(()=>validateExport({...clean,dirty_worktree:true}));
+assert.throws(()=>validateExport({...clean,members:clean.members.slice(1)}));
+const blocks=n=>Array.from({length:n},(_,i)=>`01男：测试内容${i}`).join('\n');
+const check=(text,session='morning',date='2026-10-26',extra={})=>validateScene(clean,{text,date,session,...extra});
+assert.equal(check(blocks(35)).status,'STRUCTURE_PASS');
+assert.equal(check(blocks(38)).status,'STRUCTURE_PASS');
+assert.ok(check(blocks(39)).errors.some(x=>x.code==='QUOTA_EXCEEDED'));
+assert.ok(check(blocks(34)).errors.some(x=>x.code==='QUOTA_SHORT'));
+assert.equal(check(blocks(39),'afternoon','2026-10-27').status,'STRUCTURE_PASS');
+assert.ok(check(blocks(39),'afternoon').errors.some(x=>x.code==='QUOTA_EXCEEDED'));
+assert.equal(check('42女：允许的新出场', 'afternoon').status,'STRUCTURE_PASS');
+for(const [text,code] of [['10男：错误','GENDER_MISMATCH'],['39男：错误','GENDER_MISMATCH'],['43男：禁止','INACTIVE_MEMBER'],['1男：错误','INVALID_ID'],['66男：错误','INVALID_ID'],['09男：','EMPTY_LABEL']])assert.ok(check(text).errors.some(x=>x.code===code),code);
+assert.equal(check('===== 资讯助理 =====\n助理内容\n===== 先生 =====\n先生内容', 'morning','2026-10-26',{mode:'partial',existing_count:33}).total_count,35);
+assert.ok(check('01男：同一句。\n02女：同一句。').errors.some(x=>x.code==='EXACT_DUPLICATE'));
+assert.equal(check(blocks(35)).semantic_review,'NOT_PERFORMED');
+assert.throws(()=>check(blocks(35),'morning','2026-02-30'));
+assert.equal(repositoryContext(clean,'14','历史').records[0].payload.identity.name,'Daniel Badea');
+assert.equal(repositoryContext(clean,'66','历史').error,'invalid_member_id');
+const news={...clean,news_editions:[{path:'fixture',edition:{window_end:'2026-10-25T12:00:00Z',status:'COMPLETE',candidates:[{id:'a',article_url:'https://official.example/a',published_at:'2026-10-25T11:00:00Z',original_image_candidate_url:'https://official.example/a.jpg'},{id:'future',article_url:'https://official.example/future',published_at:'2099-01-01T00:00:00Z'}]}}]};
+assert.equal(repositoryNews(news,'2026-10-25','10:05').status,'missing');
+assert.equal(repositoryNews(news,'2026-10-24','17:00').status,'missing');
+// Date fixture may be in the future relative to test host: no future items admitted.
+const result=repositoryNews(news,'2026-10-25','17:00');
+if(result.records.length){assert.equal(result.records[0].payload.items[0].fact_review_status,'UNREVIEWED');assert.equal(result.records[0].payload.items[0].original_image_url,'https://official.example/a.jpg');assert.equal(result.records[0].payload.items.length,1);}
+const response=await handleRepository(new Request('https://fixture/v1/archive?date=2026-10-21&page=1'),{},clean);
+const page=await response.json();assert.ok(page.records.length<=12);assert.equal(page.status,'stale');
+console.log('PASS repository identity, quota, archive paging, image provenance and no-future/no-prior-day news tests');

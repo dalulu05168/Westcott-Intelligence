@@ -114,6 +114,22 @@
         "fact_checks": "真实核对原始来源、发布日期、事件时间、数据截至、币种、涨跌幅比较基准和休市/延迟；缺证据保留未知；新闻图核对对应事件，不编造因果或交易",
         "unchanged": "01—42出场、43—65档案、65人身份、停止私有GPT Google OAuth排障、候选与采用边界不变；现有8时点仅是独立资讯备稿，未授权改变/恢复定时任务"
       }
+    },
+    {
+      "id": "USER-V23-002",
+      "status": "confirmed",
+      "effective_on": "2026-10-25",
+      "rule": "新闻配图由仓库从对应官网新闻提取原图及原文链接，核对事件匹配；不使用GPT生成图冒充新闻图片，缺图说明。",
+      "user_quote": "新闻配图不需要GPT生成，是需要仓库那边推送时候根据我们的要求金融提供官网的新闻配图。",
+      "scope": "private_gpt_repository_bridge"
+    },
+    {
+      "id": "USER-V23-003",
+      "status": "confirmed",
+      "effective_on": "2026-10-25",
+      "rule": "此次只做手动同步，不创建专用同步密钥，不配置或恢复自动定时推送。",
+      "user_quote": "先完成手动同步，不新建密钥",
+      "scope": "private_gpt_repository_bridge"
     }
   ],
   "clarifications": {
