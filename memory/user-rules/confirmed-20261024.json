@@ -34,10 +34,11 @@
     },
     {
       "id": "USER-MEM-005",
-      "status": "confirmed",
+      "status": "superseded",
       "rule": "上午、下午、晚上各35条，助理和先生计入",
       "user_quote": "35条只算编号人物发言，还是也包括资讯助理、教授的内容.。。包括在内",
-      "scope": "session_message_count"
+      "scope": "session_message_count",
+      "superseded_by": "USER-V23-001"
     },
     {
       "id": "USER-MEM-006",
@@ -59,6 +60,60 @@
       "rule": "可以将需长期记住的内容和指令写入当前仓库",
       "user_quote": "可以连接仓库的呀，可以将所有担心他忘记的内容或者指令更新到仓库。",
       "scope": "this_repository"
+    },
+    {
+      "id": "USER-V23-001",
+      "status": "confirmed",
+      "effective_on": "2026-10-24",
+      "supersedes": [
+        "USER-MEM-005",
+        "旧规则中固定35条及09:30/16:30推荐、16:00固定活动的冲突部分"
+      ],
+      "user_quote": "上午、晚上35—38；下午上限38或39，约09:40、15:40后，等你的材料安排，周日下午，男助理主持、先生讲解，增加模拟练习点评、必要作业与告别。更明确男助理主持、四类固定标题及篇幅。事实核验。",
+      "source": "本轮用户对V23对照差异的明确确认；细节来自已审查V23手册",
+      "scope": "daily_story_sessions",
+      "requirements": {
+        "timezone": "Europe/Bucharest",
+        "counts": {
+          "morning": {
+            "min": 35,
+            "max": 38
+          },
+          "afternoon": {
+            "monday_wednesday_friday_max": 38,
+            "tuesday_thursday_max": 39,
+            "min": null
+          },
+          "evening": {
+            "min": 35,
+            "max": 38
+          },
+          "counting": "助理、先生及编号成员均计入；每个非空发言标签与其正文算一条；换行不拆条；上限不是必须凑满"
+        },
+        "recommendations": {
+          "days": [
+            1,
+            3,
+            5
+          ],
+          "morning": "约09:40，等待用户股票代码及材料",
+          "afternoon": "约15:40后，按用户材料到达和当天安排决定推荐/活动顺序",
+          "missing_material": "不自行选股，不编造代码或行情"
+        },
+        "sunday_review": "周日下午，男资讯助理主持，David Miller先生讲解；具体时刻未指定",
+        "roles": "男资讯助理负责开场、转场、资讯、活动、邀请先生及最终闭群；David受邀讲授、点评、答疑，不替助理主持",
+        "evening_ending": "周一三五：先生点评一名学员的模拟练习、安排必要新作业并告别，可合1条；助理最终闭群另1条，预留2条。模拟练习明确为虚构教学案例/未采用，不伪称真实提交；用户当日取消作业则不加",
+        "news_headings": [
+          "🇷🇴 罗马尼亚股市｜开盘观察",
+          "🇺🇸 美国股市｜开盘观察",
+          "🇷🇴 罗马尼亚｜财经资讯快报",
+          "🇺🇸 美国｜财经资讯快报"
+        ],
+        "news_length": "财经资讯快报建议100—160中文字；不将此篇幅强加于先生课程",
+        "market_presentation": "用户提供的行情图承担数值；助理解读市场差异与观察条件，不机械复述全部数字。BVB一般10:20后按实际数据发布；美国16:45为观察节点，必须核实当天实际交易状态，不冒称全年刚开盘",
+        "fact_checks": "真实核对原始来源、发布日期、事件时间、数据截至、币种、涨跌幅比较基准和休市/延迟；缺证据保留未知；新闻图核对对应事件，不编造因果或交易",
+        "unchanged": "01—42出场、43—65档案、65人身份、停止私有GPT Google OAuth排障、候选与采用边界不变；现有8时点仅是独立资讯备稿，未授权改变/恢复定时任务"
+      }
     }
   ],
   "clarifications": {
