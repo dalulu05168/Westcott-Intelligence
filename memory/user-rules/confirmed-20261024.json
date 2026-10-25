@@ -132,39 +132,23 @@
       "scope": "private_gpt_repository_bridge"
     },
     {
-      "id": "USER-20261025-WINTER-001",
+      "id": "USER-20261025-WINTER-DELAY-CANCELLED",
       "status": "confirmed",
       "effective_on": "2026-10-25",
-      "scope": "Bucharest_operating_hours",
-      "user_quote": "罗马尼亚现在是冬季所有工作时间推迟一个小时",
-      "rule": "2026-10-25冬令时开始所有可控工作钟点延后一小时",
-      "overrides": "只覆盖USER-V23-001及旧Skill的运营时间，不覆盖人物身份、段数、材料等待和事实核验",
-      "requirements": {
-        "sessions": {
-          "morning": "10:00-13:00",
-          "afternoon": "15:00-18:30",
-          "evening": "20:30-23:30"
-        },
-        "mwf_recommendation": {
-          "morning_after": "10:40",
-          "afternoon_after": "16:40",
-          "requires_material": true
-        },
-        "tuesday_thursday_interaction": "20:30",
-        "weekday_lesson": "21:00",
-        "qa_reference": "22:00",
-        "sunday": "USER_SLOT_REQUIRED",
-        "news_slots": [
-          "09:30",
-          "11:05",
-          "11:30",
-          "15:00",
-          "16:00",
-          "17:00",
-          "17:30",
-          "18:00"
-        ],
-        "legacy_news_slots": [
+      "scope": "repository_all_controllable_working_clocks",
+      "user_quote": "罗马尼亚现在是冬季所有工作时间推迟一个小时。这个指令作废",
+      "rule": "撤销2026-10-25提出的所有工作时间因进入冬令时统一顺延一小时的指令。维持此前已经确认的罗马尼亚当地工作钟点，不因冬令时人工加一小时；时区仍Europe/Bucharest，并按日期自动从EEST/UTC+3切至EET/UTC+2。",
+      "supersedes_retracted_rule_id": "USER-20261025-WINTER-001",
+      "restored_operating_hours": {
+        "morning": "09:00-12:00",
+        "afternoon": "14:00-17:30",
+        "evening": "19:30-22:30",
+        "mwf_recommendation_morning_after": "09:40",
+        "mwf_recommendation_afternoon_after": "15:40",
+        "tuesday_thursday_interaction": "19:30",
+        "weekday_class": "20:00",
+        "evening_qa": "21:00",
+        "news_preparation_slots": [
           "08:30",
           "10:05",
           "10:30",
@@ -173,11 +157,15 @@
           "16:00",
           "16:30",
           "17:00"
-        ],
-        "no_scheduler_reactivation": true,
-        "source_path": "skills/p004-chat-suite/references/winter-operations-2026-10-25.md",
-        "external_deployment_verified": false
-      }
+        ]
+      },
+      "safeguards": [
+        "旧人工顺延指令作废，不保留其执行效力",
+        "Europe/Bucharest标准夏冬令时UTC转换仍然有效",
+        "不恢复暂停的通知、群发或生产端",
+        "不改变历史剧情与实际市场交易时间"
+      ],
+      "source": "用户于2026-10-25在本轮对话中明确撤销前一轮指令"
     }
   ],
   "clarifications": {
@@ -196,6 +184,7 @@
       "workspace": "main",
       "last_verified_revision": 43,
       "meaning": "已实测恢复四项长期要求，不是全量剧情或所有聊天历史"
-    }
+    },
+    "2026_10_25_winter_delay_instruction": "CANCELLED_BY_USER; STAY_AT_ORIGINAL_BUCHAREST_LOCAL_CLOCKS; DO_NOT_SHIFT_ONE_HOUR"
   }
 }

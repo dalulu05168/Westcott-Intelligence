@@ -54,8 +54,8 @@ class BotTests(unittest.TestCase):
         txt = build_message("N04", [self.notice], self.now)
         self.assertIn(self.notice["title"], txt)
         self.assertIn(self.notice["url"], txt)
-        self.assertIn("10:45", txt)
-        self.assertIn("10:30", txt)
+        self.assertIn("09:45", txt)
+        self.assertIn("09:30", txt)
         self.assertIn("未接入经验证的实时竞价", txt)
 
     def test_lesson_is_material_not_automated_role_play(self):

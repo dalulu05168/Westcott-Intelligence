@@ -2,10 +2,7 @@
 import {handleProgress} from './progress.mjs';
 import {loadRepository,handleRepository,repositoryContext,repositoryNews} from './repository.mjs';
 const ZONE = 'Europe/Bucharest';
-// Legacy slot keys remain readable as dated historical records. New winter keys require real intake.
-const LEGACY_SLOTS = ['08:30','10:05','10:30','14:00','15:00','16:00','16:30','17:00'];
-const WINTER_SLOTS = ['09:30','11:05','11:30','15:00','16:00','17:00','17:30','18:00'];
-const SLOTS = new Set([...LEGACY_SLOTS,...WINTER_SLOTS]);
+const SLOTS = new Set(['08:30','10:05','10:30','14:00','15:00','16:00','16:30','17:00']);
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
 const MEMBER = /^(0[1-9]|[1-5][0-9]|6[0-5])$/;
 const STAMP = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$/;

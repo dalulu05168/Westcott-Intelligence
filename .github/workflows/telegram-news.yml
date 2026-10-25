@@ -2,29 +2,29 @@ name: Telegram Finance News | 12 Bucharest Nodes
 
 on:
   schedule:
-    - cron: '35 8 * * 1-5'
+    - cron: '35 7 * * 1-5'
+      timezone: Europe/Bucharest
+    - cron: '45 7 * * 1-5'
+      timezone: Europe/Bucharest
+    - cron: '0 9 * * 1-5'
+      timezone: Europe/Bucharest
+    - cron: '30 9 * * 1-5'
       timezone: Europe/Bucharest
     - cron: '45 9 * * 1-5'
       timezone: Europe/Bucharest
-    - cron: '0 10 * * 1-5'
+    - cron: '15 11 * * 1-5'
       timezone: Europe/Bucharest
-    - cron: '30 10 * * 1-5'
+    - cron: '45 13 * * 1-5'
       timezone: Europe/Bucharest
-    - cron: '45 10 * * 1-5'
+    - cron: '45 15 * * 1-5'
       timezone: Europe/Bucharest
-    - cron: '45 12 * * 1-5'
+    - cron: '30 17 * * 1-5'
       timezone: Europe/Bucharest
-    - cron: '45 14 * * 1-5'
-      timezone: Europe/Bucharest
-    - cron: '45 16 * * 1-5'
-      timezone: Europe/Bucharest
-    - cron: '30 18 * * 1-5'
+    - cron: '45 19 * * 1-5'
       timezone: Europe/Bucharest
     - cron: '45 20 * * 1-5'
       timezone: Europe/Bucharest
     - cron: '45 21 * * 1-5'
-      timezone: Europe/Bucharest
-    - cron: '45 22 * * 1-5'
       timezone: Europe/Bucharest
     - cron: '15 * * * *'
       timezone: Europe/Bucharest
