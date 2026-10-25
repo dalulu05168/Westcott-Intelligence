@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "effective_date_local": "2026-10-25",
+  "timezone": "Europe/Bucharest",
+  "season": "winter",
+  "authorization": "用户明确要求所有可控工作时间顺延一小时并同步仓库",
+  "source_rule_ids": [
+    "USER-V23-001",
+    "USER-20261025-WINTER-001"
+  ],
+  "session_hours": {
+    "morning": {
+      "previous": "09:00-12:00",
+      "winter": "10:00-13:00"
+    },
+    "afternoon": {
+      "previous": "14:00-17:30",
+      "winter": "15:00-18:30"
+    },
+    "evening": {
+      "previous": "19:30-22:30",
+      "winter": "20:30-23:30"
+    }
+  },
+  "weekly_nodes": {
+    "monday_wednesday_friday_recommendation_morning": {
+      "previous": "09:40以后",
+      "winter": "10:40以后",
+      "requires_user_material": true
+    },
+    "monday_wednesday_friday_recommendation_afternoon": {
+      "previous": "15:40以后",
+      "winter": "16:40以后",
+      "requires_user_material": true
+    },
+    "tuesday_thursday_interaction": {
+      "previous": "19:30",
+      "winter": "20:30"
+    },
+    "tuesday_thursday_david_lesson": {
+      "previous": "20:00",
+      "winter": "21:00"
+    },
+    "qa_reference": {
+      "previous": "21:00",
+      "winter": "22:00"
+    }
+  },
+  "sunday_review": {
+    "winter": "由用户当天决定具体时间与条数",
+    "no_fixed_count": true
+  },
+  "news_preparation_migration": [
+    {
+      "backend_legacy_slot_key": "08:30",
+      "winter_target": "09:30",
+      "cloud_deployed": false
+    },
+    {
+      "backend_legacy_slot_key": "10:05",
+      "winter_target": "11:05",
+      "cloud_deployed": false
+    },
+    {
+      "backend_legacy_slot_key": "10:30",
+      "winter_target": "11:30",
+      "cloud_deployed": false
+    },
+    {
+      "backend_legacy_slot_key": "14:00",
+      "winter_target": "15:00",
+      "cloud_deployed": false
+    },
+    {
+      "backend_legacy_slot_key": "15:00",
+      "winter_target": "16:00",
+      "cloud_deployed": false
+    },
+    {
+      "backend_legacy_slot_key": "16:00",
+      "winter_target": "17:00",
+      "cloud_deployed": false
+    },
+    {
+      "backend_legacy_slot_key": "16:30",
+      "winter_target": "17:30",
+      "cloud_deployed": false
+    },
+    {
+      "backend_legacy_slot_key": "17:00",
+      "winter_target": "18:00",
+      "cloud_deployed": false
+    }
+  ],
+  "market_time_boundaries": {
+    "BVB_official_opening": "10:00 Europe/Bucharest (不变)",
+    "NYSE_NASDAQ_official_opening": "09:30 America/New_York (不变)",
+    "BVB_group_observation": "11:20以后，需核行情截至",
+    "US_group_observation": "17:45内部参考，非真实开市时间"
+  },
+  "non_actions": [
+    "不恢复/启动被暂停的任何任务",
+    "不配置群发或创建密钥",
+    "不修改证券交易所的真实钟点",
+    "不改2026-10-25之前剧情",
+    "不将新slot视为已有后端数据"
+  ],
+  "deployment_status": "REPO_RULE_SOURCE_ONLY; EXTERNAL_BACKEND_NOT_VERIFIED"
+}

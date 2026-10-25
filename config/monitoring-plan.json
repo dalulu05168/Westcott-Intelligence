@@ -9,44 +9,40 @@
   "existing_five_tasks_verified": false,
   "node_preparation": [
     {
-      "node": "07:50",
-      "prepare": "07:35"
-    },
-    {
-      "node": "08:00",
-      "prepare": "07:45"
-    },
-    {
-      "node": "09:15",
-      "prepare": "09:00"
-    },
-    {
-      "node": "09:45",
-      "prepare": "09:30"
+      "node": "08:50",
+      "prepare": "08:35"
     },
     {
       "node": "10:00",
       "prepare": "09:45"
     },
     {
-      "node": "11:30",
-      "prepare": "11:15"
+      "node": "10:15",
+      "prepare": "10:00"
     },
     {
-      "node": "14:00",
-      "prepare": "13:45"
+      "node": "10:45",
+      "prepare": "10:30"
     },
     {
-      "node": "16:00",
-      "prepare": "15:45"
+      "node": "11:00",
+      "prepare": "10:45"
     },
     {
-      "node": "17:45",
-      "prepare": "17:30"
+      "node": "13:00",
+      "prepare": "12:45"
     },
     {
-      "node": "20:00",
-      "prepare": "19:45"
+      "node": "15:00",
+      "prepare": "14:45"
+    },
+    {
+      "node": "17:00",
+      "prepare": "16:45"
+    },
+    {
+      "node": "18:45",
+      "prepare": "18:30"
     },
     {
       "node": "21:00",
@@ -55,6 +51,10 @@
     {
       "node": "22:00",
       "prepare": "21:45"
+    },
+    {
+      "node": "23:00",
+      "prepare": "22:45"
     }
   ],
   "proposed_responsibilities": [
@@ -67,5 +67,10 @@
   "missing_assets": [],
   "google_docs_write": false,
   "visual_assets_local_status": "MASTER_17_SECTIONS_AND_USER_LOGO_VERIFIED",
-  "visual_generation_runtime": "NOT_TESTED_NOT_DEPLOYED"
+  "visual_generation_runtime": "NOT_TESTED_NOT_DEPLOYED",
+  "winter_operations": {
+    "effective_date": "2026-10-25",
+    "source": "skills/p004-chat-suite/references/winter-operations-2026-10-25.md",
+    "remark": "N09 18:45仅后台资料，不延长18:30群聊；DRAFT不触发任何调度"
+  }
 }

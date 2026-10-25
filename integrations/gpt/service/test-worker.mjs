@@ -23,6 +23,11 @@ assert.equal(res.status,200);
 assert.equal((await res.json()).status,'missing');
 assert.deepEqual(queries.at(-1).params,['news','2026-10-23','14:00']);
 assert.ok(!queries.at(-1).sql.includes(' OR '));
+// Winter endpoint does not invent an edition when no new slot record exists.
+res=await worker.fetch(req('/v1/news?date=2026-10-26&slot=11:05'),env);
+assert.equal(res.status,200);
+assert.equal((await res.json()).status,'missing');
+assert.deepEqual(queries.at(-1).params,['news','2026-10-26','11:05']);
 res=await worker.fetch(req('/v1/news?date=2026-02-30&slot=14:00'),env);
 assert.equal(res.status,400);
 res=await worker.fetch(req('/v1/context?query=test&member_id=66'),env);

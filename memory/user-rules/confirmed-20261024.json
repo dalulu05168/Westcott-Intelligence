@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-10-24",
+  "updated_on": "2026-10-25",
   "repository": "dalulu05168/Westcott-Intelligence",
   "source": "用户在人物说话项目本次对话中的明确要求；引文不是程序执行回执",
   "rules": [
@@ -130,6 +130,54 @@
       "rule": "此次只做手动同步，不创建专用同步密钥，不配置或恢复自动定时推送。",
       "user_quote": "先完成手动同步，不新建密钥",
       "scope": "private_gpt_repository_bridge"
+    },
+    {
+      "id": "USER-20261025-WINTER-001",
+      "status": "confirmed",
+      "effective_on": "2026-10-25",
+      "scope": "Bucharest_operating_hours",
+      "user_quote": "罗马尼亚现在是冬季所有工作时间推迟一个小时",
+      "rule": "2026-10-25冬令时开始所有可控工作钟点延后一小时",
+      "overrides": "只覆盖USER-V23-001及旧Skill的运营时间，不覆盖人物身份、段数、材料等待和事实核验",
+      "requirements": {
+        "sessions": {
+          "morning": "10:00-13:00",
+          "afternoon": "15:00-18:30",
+          "evening": "20:30-23:30"
+        },
+        "mwf_recommendation": {
+          "morning_after": "10:40",
+          "afternoon_after": "16:40",
+          "requires_material": true
+        },
+        "tuesday_thursday_interaction": "20:30",
+        "weekday_lesson": "21:00",
+        "qa_reference": "22:00",
+        "sunday": "USER_SLOT_REQUIRED",
+        "news_slots": [
+          "09:30",
+          "11:05",
+          "11:30",
+          "15:00",
+          "16:00",
+          "17:00",
+          "17:30",
+          "18:00"
+        ],
+        "legacy_news_slots": [
+          "08:30",
+          "10:05",
+          "10:30",
+          "14:00",
+          "15:00",
+          "16:00",
+          "16:30",
+          "17:00"
+        ],
+        "no_scheduler_reactivation": true,
+        "source_path": "skills/p004-chat-suite/references/winter-operations-2026-10-25.md",
+        "external_deployment_verified": false
+      }
     }
   ],
   "clarifications": {

@@ -36,7 +36,7 @@ export function repositoryNews(data,date,slot){
   const editions=data.news_editions.filter(x=>{const t=local(x.edition.window_end);return t&&t<=cutoff&&t.slice(0,10)===date;});
   const found=new Map();
   for(const e of editions){for(const item of e.edition.candidates||[]){const t=local(item.published_at);if(!t||t>cutoff||new Date(item.published_at)>new Date())continue;
-    if(t.slice(0,10)!==date&&slot!=='08:30')continue;
+    if(t.slice(0,10)!==date&&!['08:30','09:30'].includes(slot))continue;
     const key=item.article_url||item.id;if(!key)continue;
     found.set(key,{...item,source_text_snapshot:(item.source_text_snapshot||'').slice(0,7000),source_excerpt_truncated:(item.source_text_snapshot||'').length>7000,edition_path:e.path,source_url:item.article_url,original_image_url:item.original_image_candidate_url||null,image_match_status:'PUBLISHER_CANDIDATE_REQUIRES_REVIEW',fact_review_status:'UNREVIEWED'});
   }}
