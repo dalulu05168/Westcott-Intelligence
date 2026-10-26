@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_on": "2026-10-25",
+  "updated_on": "2026-10-26",
   "repository": "dalulu05168/Westcott-Intelligence",
   "source": "用户在人物说话项目本次对话中的明确要求；引文不是程序执行回执",
   "rules": [
@@ -166,6 +166,25 @@
         "不改变历史剧情与实际市场交易时间"
       ],
       "source": "用户于2026-10-25在本轮对话中明确撤销前一轮指令"
+    },
+    {
+      "id": "USER-20261026-VERNACULAR-GENDER-REWRITE",
+      "status": "confirmed",
+      "effective_on": "2026-10-26",
+      "scope": "member_dialogue_rewrite",
+      "user_quote": "设置一条指令，识别用户发送内容按照性别对内容进行白话文整改但不偏离原话含义的指令",
+      "execution_authorization": "执行",
+      "rule": "自动识别用户提供的群聊成员编号和性别，核对65人最终身份后，根据原话语气和人物已采用口吻做白话文改写；只优化表达，不改变原意、事实、观点、情绪强弱、数字、证券代码、因果、条件、时间和交易状态。",
+      "requirements": {
+        "trigger": "用户提供编号对白，或明确要求白话文、口语化、润色时使用",
+        "gender": "编号优先核对最终身份表；标签与身份不符时提示冲突并暂停该行，不自行更正或猜测",
+        "style": "自然流畅，尊重人物个性和已采用对白；不得使用性别刻板印象",
+        "semantics": "逐句保留事实、数字、时间、股票代码、立场、否定、条件、确定性和情绪；不编造事实、经历或交易",
+        "multiple_speakers": "保持人物编号、正确性别标签、发言顺序和原对话关系，不增删合并",
+        "output": "默认只输出逐条改写后的编号对白；存在无法确认的身份或意义冲突时说明",
+        "minimal_change": "原句自然时不强行改动",
+        "reference": "skills/p004-chat-suite/voice-management/NUMBERED-VOICE-REWRITE.md"
+      }
     }
   ],
   "clarifications": {
