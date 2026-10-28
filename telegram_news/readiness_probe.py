@@ -15,8 +15,11 @@ def valid_existing_group_id(value):
     return isinstance(value, str) and value.startswith("-") and value[1:].isdigit()
 
 
-def check_telegram_identity(token):
-    if not token:
+def check_telegram_identity(token, expected_username=None):
+    if expected_username is None:
+        expected_username = os.getenv("TELEGRAM_EXPECTED_BOT_USERNAME", "ZhaoCai2026Bot")
+    expected = str(expected_username).strip().lstrip("@")
+    if not token or not expected:
         return False
     try:
         response = requests.post(
@@ -26,7 +29,7 @@ def check_telegram_identity(token):
         body = response.json()
         bot = body.get("result") or {}
         return (body.get("ok") is True and bot.get("is_bot") is True
-                and str(bot.get("username", "")).casefold() == "nuvexacheckbot")
+                and str(bot.get("username", "")).casefold() == expected.casefold())
     except (requests.RequestException, ValueError, TypeError, AttributeError):
         return False
 
@@ -77,10 +80,15 @@ def readiness():
     print("OPTIONAL_PRIVATE_CHAT_ID_PRESENT:",
           bool(os.getenv("TELEGRAM_PRIVATE_CHAT_ID", "").strip()))
     print("PUBLICATION_PATH: existing reviewed group publisher; unreviewed direct send blocked")
-    if all(checks.values()):
-        print("READINESS_RESULT: CONFIG_PRESENT_ONLY; independent source, review and real-news acceptance still required")
+    # The reviewed GitHub queue has no paid model/API requirement. Do not treat
+    # optional legacy dual-market credentials as group transport prerequisites.
+    core = ("bot_token_present", "existing_group_chat_secret_present",
+            "existing_group_chat_integer_format", "telegram_bot_token_accepted",
+            "existing_group_chat_type_and_title_verified")
+    if all(checks[key] for key in core):
+        print("READINESS_RESULT: GROUP_TRANSPORT_VERIFIED_ONLY; reviewed ledger and real Telegram delivery still unverified")
     else:
-        print("READINESS_RESULT: NOT_READY; do not enable unattended news publishing")
+        print("READINESS_RESULT: GROUP_TRANSPORT_NOT_READY; verify bot secret, group ID and permission")
     with open("telegram-readiness.json", "w", encoding="utf-8") as file:
         json.dump(checks, file, indent=2)
     return checks
