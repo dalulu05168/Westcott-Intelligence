@@ -1,0 +1,144 @@
+{
+  "status": "OFFICIAL_INTAKE_INCOMPLETE_UNREVIEWED",
+  "local_date": "2026-10-29",
+  "collected_at": "2026-10-29T11:05:30.971091+00:00",
+  "timezone": "Europe/Bucharest",
+  "source_window_hours": 48,
+  "market_scopes": [
+    "RO",
+    "FR",
+    "US"
+  ],
+  "coverage": [
+    {
+      "feed_id": "fed_monetary",
+      "status": "OK",
+      "recent_entries": 1
+    },
+    {
+      "feed_id": "ecb_press",
+      "status": "OK",
+      "recent_entries": 1
+    },
+    {
+      "feed_id": "bvb_market",
+      "status": "ERROR"
+    },
+    {
+      "feed_id": "bvb_announcements",
+      "status": "ERROR"
+    },
+    {
+      "feed_id": "insee_conjuncture",
+      "status": "OK",
+      "recent_entries": 1
+    },
+    {
+      "feed_id": "bls_cpi",
+      "status": "OK",
+      "recent_entries": 0
+    },
+    {
+      "feed_id": "bls_employment",
+      "status": "OK",
+      "recent_entries": 0
+    },
+    {
+      "feed_id": "eurostat_releases",
+      "status": "OK",
+      "recent_entries": 1
+    }
+  ],
+  "feed_errors": [
+    {
+      "feed_id": "bvb_market",
+      "error_type": "RadarError"
+    },
+    {
+      "feed_id": "bvb_announcements",
+      "error_type": "RadarError"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "6dcead3e1d4b895c73c19975d41cabc05ad236cd",
+      "source_id": "insee_conjuncture",
+      "market_scopes": [
+        "FR"
+      ],
+      "headline_original": "En août 2026, le chiffre d’affaires dans l’industrie manufacturière est quasi stable (+0,1 % après -1,0 %)",
+      "published_at": "2026-10-29T11:00:00+00:00",
+      "official_article_url": "https://www.insee.fr/fr/statistiques/9108549",
+      "origin": "INSEE France",
+      "source_body_sha256": "657fcd079afebb94d1ff4f6753ba17fa8046f9256749a01344e5ee2c36a153bb",
+      "source_excerpt_original": "false Aller au contenu Aide Thèmes Recherche English Presse Menu Menu Blog Presse Aide English Lancer la recherche sur le site Thèmes Statistiques et études Cherchez vos statistiques par… Thèmes Économie - conjoncture - comptes nationaux Démographie Entreprises Plus de thèmes… Niveaux géographiques France Toutes les régions ou tous les départements Toutes les communes Plus de niveaux géographiques… Catégories Données Publications Plus de catégories… Collections Insee Première Notes et points de conjoncture Plus de collections… Définitions, méthodes et qualité Définitions Sources statistiques et indicateurs Liste des sources statistiques Liste des indicateurs Documentation complémentaire sur le recensement La qualité dans le Service statistique public (SSP) Le cadre de référence La gouvernance La politique et la stratégie qualité du SSP Les engagements européens Nomenclatures Nomenclature d’activités française Nomenclature agrégée - NA, 2008 Classification des produits française Classification des fonctions de consommation des ménages Catégories juridiques Nomenclatures des professions et catégories socioprofessionnelles Géographie administrative et d'étude Recherche sur une zone géographique Téléchargement de fichiers Historique des communes Modèles, méthodes et outils statistiques Les modèles statistiques Les outils statistiques Méthodologie statistique Courrier des statistiques Offre de données ouvertes Le catalogue des données de l'Insee Le catalogue des API de l'Insee L'offre de données au travers de nos produits de diffusion Les formats de mise à disposition des données Nos données disponibles sur d'autres plateformes Services Réviser une pension, un loyer, bail ou contrat Réviser une pension alimentaire Réviser un loyer d'habitation Réviser un bail commercial ou professionnel Indexer un contrat Convertisseur franc-euro : pouvoir d'achat de l'euro et du franc Consulter les indices et séries chronologiques Actualités des indices et séries chronologiques Accès des séries et indices chronologiques par thème Recherche par identifiant ou par mot-clé Service web SDMX Tables de passage Sirene Obtenir un avis de situation au répertoire Sirene Demander la modification de son statut de diffusion Demander la modification du code APE Immatriculation, cessation ou modification des données au répertoire Sirene Obtenir sa catégorie d'entreprise Consulter et télécharger la base Sirene Identifiant unique des intervenants sur les marchés financiers (LEI) Réponses à vos questions sur le répertoire Sirene Découvrir, apprendre, enseigner Pour commencer... Visualiser les données La Compétition européenne de statistiques Pour approfondir... Répondre à une enquête de l'Insee Enquêtes auprès des particuliers Enquêtes auprès des entreprises Vrai ou faux enquêteur de l’Insee, fraude, malveillance : comment vérifier ? S’informer sur l’actualité de notre diffusion Agenda de diffusion des indicateurs économiques Dernières publications de l’Insee Dernières publications des Services statistiques ministériels Évènements annoncés à la Une du site Thèmes d'actualité Gérer les répertoires des personnes physiques Recueil des données d'état civil Le Répertoire électoral unique Dématérialisation des échanges de données Nombre de décès quotidiens par département Fichiers des personnes décédées depuis 1970 Bibliothèque de l’Insee Alain Desrosières Portail documentaire et catalogue La Bibliothèque numérique de la statistique publique Commander une prestation, acheter une publication Diffusion sur mesure Acheter nos publications Nous suivre Lettres d'information Abonnements aux lettres d'information et aux avis de parution Abonnement aux flux RSS L'Insee sur les médias sociaux Insee Mobile Aide et contacts Réponses à vos questions Obtenir des informations par téléphone Espace presse Événements presse Calendrier des publications Communiqués de presse nationaux Communiqués de presse régionaux Nominations L'Insee et la statistique publique L'Insee Connaître l'Insee L’Insee en toute confiance Travailler à l'Insee Événements et colloques Un peu d'histoire Rapports d'activité Les activités de l'Insee Suivre l’économie française Connaître les entreprises Observer l'évolution de la société Réaliser le recensement de la population Décrire et analyser les régions et les territoires Gérer des grands répertoires Diffuser et valoriser ses productions Perfectionner ses méthodes et évaluer la qualité Contribuer à la construction de la statistique européenne et internat",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "e0a79badc41504c72f919c5756bbec8f29892298",
+      "source_id": "ecb_press",
+      "market_scopes": [
+        "RO",
+        "FR"
+      ],
+      "headline_original": "ECB President Lagarde to step down on 7 February 2027",
+      "published_at": "2026-10-29T10:00:00+00:00",
+      "official_article_url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261029~abbb6dc64b.en.html",
+      "origin": "European Central Bank",
+      "source_body_sha256": "bfcc22f2b004ab8df8452efa791f4f0c76cad895be0536d931b7d810781f8f48",
+      "source_excerpt_original": "Skip to: Skip to navigation Skip to content Skip to footer EN Български Čeština Dansk Deutsch Eλληνικά English Español Eesti keel Suomi Français Gaeilge Hrvatski Magyar Italiano Lietuvių Latviešu Malti Nederlands Polski Português Română Slovenčina Slovenščina Svenska Menu Monetary policy & markets Monetary policy & markets Our monetary policy strategy, the tools we use and the impact they have Overview of monetary policy and markets Quick links What is monetary policy? Strategy review Asset purchase programmes Latest monetary policy press conference 29 October 2026 Introduction Benefits of price stability Scope of monetary policy Transmission mechanism Decisions, statements & accounts Monetary policy strategy Strategy review Medium-term orientation Two per cent inflation target Economic, monetary and financial analysis Economic analysis Monetary and financial analysis Monetary policy operations Open market operations TLTROs Asset purchase programmes Securities lending Pandemic emergency purchase programme Standing facilities Minimum reserves Two-tier system Euro central bank liquidity lines Swap lines EUREP Chronology of Eurosystem liquidity lines Emergency liquidity assistance (ELA) Liquidity analysis Collateral Eligibility criteria and assessment Marketable assets Non-marketable assets List of eligible marketable assets User guide Collateral management Eligible SSSs Eligible links Eligible triparty agents Risk mitigation ECAF Risk control Haircut categories Valuation Loan-level requirements Contacts Structure of the euro area economy Economic policy Fiscal policies External trade Effective exchange rates Financial structure Financial markets Financial intermediaries Economic diversity Labour market Market contact groups Bond market (BMCG) Money market (MMCG) Debt Issuance Market Contact Group (DIMCG) ECB Operations managers group (ECB OMG) Foreign exchange (FXCG) Institutional Investor Dialogue (IID) Monetary Analysis Contact Group (MACG) Payments & financial stability Payments & financial stability Insights into our work on financial stability and payments and market infrastructures Overview of payments and financial stability Quick links Digital euro Payments news & events Market contact groups TARGET professional use documents and links Latest Financial Stability Review 5 June 2025 Payments TARGET Services Shared features T2 Facts and figures Governance T2S Governance Facts and figures Pricing TIPS Cross-border payments Governance Facts and figures Onboarding ECMS Governance Pontes Governance TARGET professional use documents & links Shared features documents & links T2 documents & links T2S documents & links TIPS documents & links ECMS documents & links Pontes documents & links Tokenisation and DLT Appia Governance Exploratory work Retail payments Retail payments strategy ECB as a catalyst SEPA Instant payments Market contact groups Collateral management harmonisation SCoRE Implementation FAQ AMI-SeCo Cyber resilience Financial market infrastructures TIBER-EU Euro Cyber Resilience Board Oversight Payment systems TARGET2-Securities Electronic payments Securities settlement systems and central counterparties Critical service providers Correspondent and custodian banks SecuRe Pay forum Reserve management services Key aspects Range of services Cash professionals Cash handling Authentication devices Recirculation of banknotes Common detector interface specifications Banknote manufacturer accreditation Financial stability Introduction to financial stability Macroprudential Measures Financial stability contact groups Statistics Statistics Access to all ECB statistics and background information Overview of ECB statistics Quick links Key figures ECB Data Portal Statistical releases PRESS RELEASE - ECB launches pilot project for research access to confidential statistical data 13 March 2025 Frequently accessed Euro exchange rates Key ECB interest rates Euro short-term rate (€STR) Interest rate benchmarks Working group on euro risk-free rates Inflation Euro area yield curves All statistics & background All key statistics All data services Data reporting & standards Governance and quality framework Co-operation and standards Banks’ data reporting DPM Alliance IReF JBRC BIRD AnaCredit AnaCredit Q&A Public consultations Banking industry dialogue on ESCB statistics and integrated reporting SDMX – statistical data exchange model INEXDA - granular data network The euro The euro All you need to know about our common currency Ove",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "a0c3e1be77e8b5a27f797ac2698e8181f11f02e5",
+      "source_id": "fed_monetary",
+      "market_scopes": [
+        "US"
+      ],
+      "headline_original": "Federal Reserve issues FOMC statement",
+      "published_at": "2026-10-28T18:00:00+00:00",
+      "official_article_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+      "origin": "US Federal Reserve",
+      "source_body_sha256": "ac2ee68a44b4e5358f4aea0ce683cd5c7e837c8151086aac92f03204947757ff",
+      "source_excerpt_original": "﻿ Skip to main content An official website of the United States Government Here's how you know Official websites use .gov A .gov website belongs to an official government organization in the United States. Secure .gov websites use HTTPS A lock (Lock Locked padlock icon ) or https:// means you've safely connected to the .gov website. Share sensitive information only on official, secure websites. Back to Home Board of Governors of the Federal Reserve System Stay Connected Federal Reserve Facebook Page Federal Reserve Instagram Page Federal Reserve YouTube Page Federal Reserve Flickr Page Federal Reserve LinkedIn Page Federal Reserve Threads Page Federal Reserve X Page Federal Reserve Bluesky Page Subscribe to RSS Subscribe to Email Recent Postings Calendar Publications Site Map A-Z index Careers FAQs Videos Contact Search Submit Search Button Advanced Toggle Dropdown Menu Board of Governors of the Federal Reserve System The Federal Reserve, the central bank of the United States, provides the nation with a safe, flexible, and stable monetary and financial system. Main Menu Toggle Button Sections Search Toggle Button Search Search Submit Button Submit About the Fed Structure of the Federal Reserve System The Fed Explained Board Members Advisory Councils Federal Reserve Banks Federal Reserve Bank and Branch Directors Federal Reserve Act Currency Board Meetings Board Votes Careers Do Business with the Board Holidays Observed - K.8 Ethics & Values Contact Requesting Information (FOIA) FAQs Economic Education Fed Financial Statements Financial Innovation News & Events Press Releases Speeches & Testimony Calendar Videos Photo Gallery Conferences Monetary Policy Federal Open Market Committee About the FOMC Meeting calendars and information Transcripts and other historical materials FAQs Monetary Policy Principles and Practice Notes Policy Implementation Policy Normalization Policy Tools Reports Monetary Policy Report Beige Book Federal Reserve Balance Sheet Developments Review of Monetary Policy Strategy, Tools, and Communications Overview Supervision & Regulation Supervision Community Banks Regional Banks and Foreign Banks with U.S. Assets < $100 Billion Large Banks and Large Foreign Banks Global Systemically Important Banks Financial Market Utilities Consumer Compliance Resources for Supervised Institutions Reports Federal Reserve Supervision and Regulation Report Reporting Forms Recent Reporting Form Updates Information Collections Under Review Financial Statements Securities Exchange Act of 1934 Applications/Structure Change FFIEC Municipal and Government Securities Activities Monitoring Micro Data Reference Manual Legal Developments Enforcement Actions and Legal Developments Mergers, Acquisitions, and Other Applications Process Filing Information Board and Reserve Bank Actions Supervision and Regulation Letters By Year By Topic Regulatory and Policy Resources Federal Reserve Act Bank Holding Company Act Regulations Supervision Manuals Federal Reserve Regulatory Service Disaster Preparedness and Recovery Resources Banking and Data Structure Beneficial Ownership Reports U.S. Domestically Chartered Commercial Banks Minority Depository Institutions U.S. Offices of Foreign Entities Financial Holding Companies Interstate Branching Securities Underwriting and Dealing Subsidiaries State Member Banks Supervised by the Federal Reserve Financial Stability Financial Stability Assessments About Financial Stability Types of Financial System Vulnerabilities & Risks Monitoring Risk Across the Financial System Proactive Monitoring of Markets & Institutions Financial Stability & Stress Testing Financial Stability Coordination & Actions Responding to Financial System Emergencies Cooperation on Financial Stability Reports Financial Stability Report Payment Systems Regulations & Statutes Regulation CC (Availability of Funds and Collection of Checks) Regulation II (Debit Card Interchange Fees and Routing) Regulation HH (Financial Market Utilities) Other Regulations and Statutes Payment Policies Federal Reserve's Key Policies for the Provision of Financial Services Guidelines for Evaluating Joint Account Requests Overnight Overdrafts Payment System Risk Sponsorship for Priority Telecommunication Services Reserve Bank Payment Services & Data Automated Clearinghouse Services Check Services Currency and Coin Services Daylight Overdrafts and Fees FedNow® Service Fedwire Funds Services Fedwire Securities Services Fiscal Agency Services Master Accoun",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "bf9278dcb36068cb05548e19f64c326d1ce060bd",
+      "source_id": "eurostat_releases",
+      "market_scopes": [
+        "RO",
+        "FR"
+      ],
+      "headline_original": "Household real income per capita slightly increases in both the euro area and the EU",
+      "published_at": "2026-10-28T10:00:00+00:00",
+      "official_article_url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-28102026-ap",
+      "origin": "Eurostat",
+      "source_body_sha256": "f1e14d89e47fddf0b5e931ac647f1061fe001fad3df0de1fa33e177a1349cda4",
+      "source_excerpt_original": "Skip to Main Content Log in English English Select your language Close bg български es español cs čeština da dansk de Deutsch et eesti el ελληνικά fr français ga Gaeilge hr hrvatski it italiano lv latviešu lt lietuvių hu magyar mt Malti nl Nederlands pl polski pt português ru pусский ro română sk slovenčina sl slovenščina fi suomi sv svenska uk Українська Search Search Search by keyword Search Search How many women work in science? How many young people are unemployed? How many hours do people work in the EU? In which EU countries did poverty decrease? How much have fuel prices increased? When do young people move out from home? Where is GDP the highest? Menu Close Menu Back Previous items Next items Home Data Explore data Database Statistical themes Stats finder A-Z Experimental statistics Data visualisations European statistics learning hub Advanced tools and services Web services Bulk download GISCO:Geographical Information and maps Microdata Quality and European statistics Quality Metadata Data validation Data revision policy SDMX InfoSpace Research and methodology (CROS) Evaluations News News articles Euro indicators Podcasts Events and webinars Release calendar Publications Collections Flagship publications Interactive publications Key figures Online reads Manuals and guidelines Statistical working papers Statistical reports Leaflets Statistics Explained Release calendar About us Who we are Our mission and values Our organisation Our history Contact us Our work Producing statistics Communicating and disseminating statistics Innovating statistics Our policies Our partners European Statistical System EU institutions and bodies International cooperation Working with us Job opportunities Calls for tenders Grants Public consultations Events and webinars Visits Contact us User support Media and fact-checkers Institutional services Visit us Help Website guide Products and tools Services User guides Copyright notice and free re-use of data Alert Frequently asked questions Accessibility Maintenance information Home … News Euro indicators Euro indicators 28 October 2026 Next release: 28 January 2027 Non-financial sector accounts for the second quarter of 2026 Household real income per capita slightly increases in both the euro area and the EU Skip to the content Contents Loading Toggle page contents Print page Information Before printing Close Printing can have negative environmental impacts due to paper waste. We encourage you to explore eco-friendly alternatives. Bookmarking this page in your browser allows you to access it anytime. This publication can also be converted to PDF, if you have a PDF printer installed on your computer. PDF printers function as virtual printers, enabling you to create digital copies of web pages and access the content offline. Don't show this message again Close Print Real consumption per capita increases in the euro area and the EU Overview In the second quarter of 2026, household real income per capita increased by 0.1% in the euro area , after an increase of 0.1% in the first quarter of 2026. In the same period, household real consumption per capita increased by 0.3%, after having stayed stable in the previous quarter. These data come from a detailed set of seasonally adjusted quarterly European sector accounts that is published by Eurostat, the statistical office of the European Union . In the EU as a whole, household real income per capita increased by 0.1% in the second quarter of 2026, after having increased by 0.3% in the first quarter of 2026. At the same time, household real consumption per capita increased by 0.4%, after a decrease of 0.1% in the previous quarter. Components of household real income During the second quarter of 2026, the slight increase in household real income per capita in the euro area is mainly explained by the positive contribution of net property income and other net current transfers while in the EU by the compensation of employees and social benefits other than social transfers in kind . Conversely, the largest negative contributor in the euro area was gross operating surplus and gross mixed income while in the EU it was current taxes and net social contributions . Household saving rate decreased both in the euro area and the EU In the second quarter of 2026, the saving rate decreased by 0.2 percentage points (pp) in the euro area and by 0.3 pp in the EU , compared with the previous quarter. Among the Member States for which data are published, the househ",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    }
+  ],
+  "us_index_close_snapshot_ready": false,
+  "google_docs_current_revision_loaded": false,
+  "review_status": "UNREVIEWED",
+  "delivery_allowed": false,
+  "telegram_sent": false,
+  "purpose": "Material for human/ChatGPT source-based editorial review, not market quote certification."
+}
