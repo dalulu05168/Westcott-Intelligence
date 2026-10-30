@@ -1,0 +1,311 @@
+{
+  "status": "OFFICIAL_INTAKE_INCOMPLETE_UNREVIEWED",
+  "local_date": "2026-10-30",
+  "collected_at": "2026-10-30T11:01:08.586075+00:00",
+  "timezone": "Europe/Bucharest",
+  "source_window_hours": 48,
+  "market_scopes": [
+    "RO",
+    "FR",
+    "US"
+  ],
+  "coverage": [
+    {
+      "feed_id": "fed_monetary",
+      "status": "OK",
+      "recent_entries": 1
+    },
+    {
+      "feed_id": "ecb_press",
+      "status": "OK",
+      "recent_entries": 5
+    },
+    {
+      "feed_id": "bvb_market",
+      "status": "ERROR"
+    },
+    {
+      "feed_id": "bvb_announcements",
+      "status": "ERROR"
+    },
+    {
+      "feed_id": "insee_conjuncture",
+      "status": "OK",
+      "recent_entries": 6
+    },
+    {
+      "feed_id": "bls_cpi",
+      "status": "OK",
+      "recent_entries": 0
+    },
+    {
+      "feed_id": "bls_employment",
+      "status": "OK",
+      "recent_entries": 0
+    },
+    {
+      "feed_id": "eurostat_releases",
+      "status": "OK",
+      "recent_entries": 2
+    }
+  ],
+  "feed_errors": [
+    {
+      "feed_id": "bvb_market",
+      "error_type": "RadarError"
+    },
+    {
+      "feed_id": "bvb_announcements",
+      "error_type": "RadarError"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "d3df94040eeea47c1520e40da66f51941e5e0448",
+      "source_id": "eurostat_releases",
+      "market_scopes": [
+        "RO",
+        "FR"
+      ],
+      "headline_original": "GDP up by 0.4% in the euro area and by 0.5% in the EU",
+      "published_at": "2026-10-30T10:00:00+00:00",
+      "official_article_url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-30102026-ap",
+      "origin": "Eurostat",
+      "source_body_sha256": "d0b8bb2ed509c3c56cfb2a4d037d189c1906f6b65494c4d33cb14c0122a60521",
+      "source_excerpt_original": "Skip to Main Content Log in English English Select your language Close bg български es español cs čeština da dansk de Deutsch et eesti el ελληνικά fr français ga Gaeilge hr hrvatski it italiano lv latviešu lt lietuvių hu magyar mt Malti nl Nederlands pl polski pt português ru pусский ro română sk slovenčina sl slovenščina fi suomi sv svenska uk Українська Search Search Search by keyword Search Search How many women work in science? How many young people are unemployed? How many hours do people work in the EU? In which EU countries did poverty decrease? How much have fuel prices increased? When do young people move out from home? Where is GDP the highest? Menu Close Menu Back Previous items Next items Home Data Explore data Database Statistical themes Stats finder A-Z Experimental statistics Data visualisations European statistics learning hub Advanced tools and services Web services Bulk download GISCO:Geographical Information and maps Microdata Quality and European statistics Quality Metadata Data validation Data revision policy SDMX InfoSpace Research and methodology (CROS) Evaluations News News articles Euro indicators Podcasts Events and webinars Release calendar Publications Collections Flagship publications Interactive publications Key figures Online reads Manuals and guidelines Statistical working papers Statistical reports Leaflets Statistics Explained Release calendar About us Who we are Our mission and values Our organisation Our history Contact us Our work Producing statistics Communicating and disseminating statistics Innovating statistics Our policies Our partners European Statistical System EU institutions and bodies International cooperation Working with us Job opportunities Calls for tenders Grants Public consultations Events and webinars Visits Contact us User support Media and fact-checkers Institutional services Visit us Help Website guide Products and tools Services User guides Copyright notice and free re-use of data Alert Frequently asked questions Accessibility Maintenance information Home … News Euro indicators Euro indicators 30 October 2026 Next release: 29 January 2027 Preliminary flash estimate for the third quarter of 2026 GDP up by 0.4% in the euro area and by 0.5% in the EU Skip to the content Contents Loading Toggle page contents Print page Information Before printing Close Printing can have negative environmental impacts due to paper waste. We encourage you to explore eco-friendly alternatives. Bookmarking this page in your browser allows you to access it anytime. This publication can also be converted to PDF, if you have a PDF printer installed on your computer. PDF printers function as virtual printers, enabling you to create digital copies of web pages and access the content offline. Don't show this message again Close Print +1.3% and +1.5% respectively compared with the third quarter of 2025 Overview In the third quarter of 2026, seasonally adjusted GDP increased by 0.4% in the euro area and by 0.5% in the EU , compared with the previous quarter, according to a preliminary flash estimate published by Eurostat, the statistical office of the European Union . In the second quarter of 2026, GDP had increased by 0.6% in the euro area and by 0.7% in the EU . These preliminary GDP flash estimates are based on data sources that are incomplete and subject to further revisions. Compared with the same quarter of the previous year, seasonally adjusted GDP increased by 1.3% in the euro area and by 1.5% in the EU in the third quarter of 2026, after +1.2% in the euro area and +1.4% in the EU in the previous quarter. Among the Member States for which data are available for the third quarter of 2026, Ireland (+5.5%) recorded the highest increase compared to the previous quarter, followed by Estonia , Spain and Netherlands (all +0.6%). Declines were recorded in Lithuania (-1.0%) and France (-0.1%). The year-on-year growth rate was positive for fourteen countries and negative for one country. Table Growth rates of GDP in volume (based on seasonally adjusted* data) Percentage change compared with the previous quarter Percentage change compared with the same quarter of the previous year 2025Q4 2026Q1 2026Q2 2026Q3 2025Q4 2026Q1 2026Q2 2026Q3 Euro area 0.2 0.0 0.6 0.4 1.1 0.6 1.2 1.3 EU 0.3 0.1 0.7 0.5 1.3 0.9 1.4 1.5 Belgium 0.1 0.2 0.1 0.3 1.0 0.8 0.7 0.7 Czechia 0.7 0.1 0.3 0.5 2.8 2.1 1.8 1.6 Germany 0.3 0.4 0.3 0.2 0.3 0.6 1.0 1.2 Estonia 0.3 1.0 0.3 0.6 1.6 2.7 1.8 2.2 Ireland*** -3.3 -7.8 10.2 5",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "2cd6425d5eb1fc630c6fbb737ed64423cd688871",
+      "source_id": "eurostat_releases",
+      "market_scopes": [
+        "RO",
+        "FR"
+      ],
+      "headline_original": "Euro area unemployment at 6.5%",
+      "published_at": "2026-10-30T10:00:00+00:00",
+      "official_article_url": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/3-30102026-bp",
+      "origin": "Eurostat",
+      "source_body_sha256": "12b9a8cdd029d3448697d02faa6a01af982334c09c3ea6bf139fb54ced9f82e4",
+      "source_excerpt_original": "Skip to Main Content Log in English English Select your language Close bg български es español cs čeština da dansk de Deutsch et eesti el ελληνικά fr français ga Gaeilge hr hrvatski it italiano lv latviešu lt lietuvių hu magyar mt Malti nl Nederlands pl polski pt português ru pусский ro română sk slovenčina sl slovenščina fi suomi sv svenska uk Українська Search Search Search by keyword Search Search How many women work in science? How many young people are unemployed? How many hours do people work in the EU? In which EU countries did poverty decrease? How much have fuel prices increased? When do young people move out from home? Where is GDP the highest? Menu Close Menu Back Previous items Next items Home Data Explore data Database Statistical themes Stats finder A-Z Experimental statistics Data visualisations European statistics learning hub Advanced tools and services Web services Bulk download GISCO:Geographical Information and maps Microdata Quality and European statistics Quality Metadata Data validation Data revision policy SDMX InfoSpace Research and methodology (CROS) Evaluations News News articles Euro indicators Podcasts Events and webinars Release calendar Publications Collections Flagship publications Interactive publications Key figures Online reads Manuals and guidelines Statistical working papers Statistical reports Leaflets Statistics Explained Release calendar About us Who we are Our mission and values Our organisation Our history Contact us Our work Producing statistics Communicating and disseminating statistics Innovating statistics Our policies Our partners European Statistical System EU institutions and bodies International cooperation Working with us Job opportunities Calls for tenders Grants Public consultations Events and webinars Visits Contact us User support Media and fact-checkers Institutional services Visit us Help Website guide Products and tools Services User guides Copyright notice and free re-use of data Alert Frequently asked questions Accessibility Maintenance information Home … News Euro indicators Euro indicators 30 October 2026 Next release: 2 December 2026 September 2026 Euro area unemployment at 6.5% Skip to the content Contents Loading Toggle page contents Print page Information Before printing Close Printing can have negative environmental impacts due to paper waste. We encourage you to explore eco-friendly alternatives. Bookmarking this page in your browser allows you to access it anytime. This publication can also be converted to PDF, if you have a PDF printer installed on your computer. PDF printers function as virtual printers, enabling you to create digital copies of web pages and access the content offline. Don't show this message again Close Print EU at 6.2% Overview In September 2026, the euro area seasonally adjusted unemployment rate was 6.5%, stable compared with August 2026 and up from 6.3% in September 2025. The EU unemployment rate was 6.2% in September 2026, also stable compared with August 2026 and up from 6.0% in September 2025. These figures are published by Eurostat, the statistical office of the European Union . Eurostat estimates that 13.773 million persons in the EU , of whom 11.555 million in the euro area , were unemployed in September 2026. Compared with August 2026, unemployment increased by 105 thousand in the EU and by 122 thousand in the euro area . Compared with September 2025, unemployment increased by 471 thousand in the EU and by 420 thousand in the euro area . Youth unemployment In September 2026, 3.022 million young persons (under 25) were unemployed in the EU , of whom 2.469 million were in the euro area . In September 2026, the youth unemployment rate was 15.5% in the EU , up from 15.4% in the previous month, and 15.4% in the euro area , also up from 15.1% in August 2026. Compared with August 2026, youth unemployment increased by 44 thousand in the EU and by 69 thousand in the euro area . Compared with September 2025, youth unemployment increased by 45 thousand in the EU and by 80 thousand in the euro area . Unemployment by sex In September 2026, the unemployment rate for women was 6.4% in the EU and the unemployment rate for men was 6.0%, both stable compared with the previous month. In the euro area , the unemployment rate for women was 6.7%, stable compared with August 2026, and the unemployment rate for men was 6.4%, up from 6.3% in the previous month. Additional labour market indicators The estimates in this News Release are based on",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "e7ad213e30394acdb954982d6153ee735128f55b",
+      "source_id": "ecb_press",
+      "market_scopes": [
+        "RO",
+        "FR"
+      ],
+      "headline_original": "Results of the ECB Survey of Professional Forecasters for the fourth quarter of 2026",
+      "published_at": "2026-10-30T09:00:00+00:00",
+      "official_article_url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261030~e92c3c838c.en.html",
+      "origin": "European Central Bank",
+      "source_body_sha256": null,
+      "source_excerpt_original": null,
+      "evidence_status": "SOURCE_BODY_UNAVAILABLE",
+      "source_body_error": "Publisher canonical differs from feed story.",
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "e65f59ca8d8162e4696e777c8752d78bcad93e1d",
+      "source_id": "insee_conjuncture",
+      "market_scopes": [
+        "FR"
+      ],
+      "headline_original": "En octobre 2026, les prix à la consommation augmenteraient de 3,4 % sur un an",
+      "published_at": "2026-10-30T07:45:00+00:00",
+      "official_article_url": "https://www.insee.fr/fr/statistiques/9107965",
+      "origin": "INSEE France",
+      "source_body_sha256": "423edc4cf8897e3798c2b4881fbb95d1b2aa9d4d09627a02a11184364009595a",
+      "source_excerpt_original": "false Aller au contenu Aide Thèmes Recherche English Presse Menu Menu Blog Presse Aide English Lancer la recherche sur le site Thèmes Statistiques et études Cherchez vos statistiques par… Thèmes Économie - conjoncture - comptes nationaux Démographie Entreprises Plus de thèmes… Niveaux géographiques France Toutes les régions ou tous les départements Toutes les communes Plus de niveaux géographiques… Catégories Données Publications Plus de catégories… Collections Insee Première Notes et points de conjoncture Plus de collections… Définitions, méthodes et qualité Définitions Sources statistiques et indicateurs Liste des sources statistiques Liste des indicateurs Documentation complémentaire sur le recensement La qualité dans le Service statistique public (SSP) Le cadre de référence La gouvernance La politique et la stratégie qualité du SSP Les engagements européens Nomenclatures Nomenclature d’activités française Nomenclature agrégée - NA, 2008 Classification des produits française Classification des fonctions de consommation des ménages Catégories juridiques Nomenclatures des professions et catégories socioprofessionnelles Géographie administrative et d'étude Recherche sur une zone géographique Téléchargement de fichiers Historique des communes Modèles, méthodes et outils statistiques Les modèles statistiques Les outils statistiques Méthodologie statistique Courrier des statistiques Offre de données ouvertes Le catalogue des données de l'Insee Le catalogue des API de l'Insee L'offre de données au travers de nos produits de diffusion Les formats de mise à disposition des données Nos données disponibles sur d'autres plateformes Services Réviser une pension, un loyer, bail ou contrat Réviser une pension alimentaire Réviser un loyer d'habitation Réviser un bail commercial ou professionnel Indexer un contrat Convertisseur franc-euro : pouvoir d'achat de l'euro et du franc Consulter les indices et séries chronologiques Actualités des indices et séries chronologiques Accès des séries et indices chronologiques par thème Recherche par identifiant ou par mot-clé Service web SDMX Tables de passage Sirene Obtenir un avis de situation au répertoire Sirene Demander la modification de son statut de diffusion Demander la modification du code APE Immatriculation, cessation ou modification des données au répertoire Sirene Obtenir sa catégorie d'entreprise Consulter et télécharger la base Sirene Identifiant unique des intervenants sur les marchés financiers (LEI) Réponses à vos questions sur le répertoire Sirene Découvrir, apprendre, enseigner Pour commencer... Visualiser les données La Compétition européenne de statistiques Pour approfondir... Répondre à une enquête de l'Insee Enquêtes auprès des particuliers Enquêtes auprès des entreprises Vrai ou faux enquêteur de l’Insee, fraude, malveillance : comment vérifier ? S’informer sur l’actualité de notre diffusion Agenda de diffusion des indicateurs économiques Dernières publications de l’Insee Dernières publications des Services statistiques ministériels Évènements annoncés à la Une du site Thèmes d'actualité Gérer les répertoires des personnes physiques Recueil des données d'état civil Le Répertoire électoral unique Dématérialisation des échanges de données Nombre de décès quotidiens par département Fichiers des personnes décédées depuis 1970 Bibliothèque de l’Insee Alain Desrosières Portail documentaire et catalogue La Bibliothèque numérique de la statistique publique Commander une prestation, acheter une publication Diffusion sur mesure Acheter nos publications Nous suivre Lettres d'information Abonnements aux lettres d'information et aux avis de parution Abonnement aux flux RSS L'Insee sur les médias sociaux Insee Mobile Aide et contacts Réponses à vos questions Obtenir des informations par téléphone Espace presse Événements presse Calendrier des publications Communiqués de presse nationaux Communiqués de presse régionaux Nominations L'Insee et la statistique publique L'Insee Connaître l'Insee L’Insee en toute confiance Travailler à l'Insee Événements et colloques Un peu d'histoire Rapports d'activité Les activités de l'Insee Suivre l’économie française Connaître les entreprises Observer l'évolution de la société Réaliser le recensement de la population Décrire et analyser les régions et les territoires Gérer des grands répertoires Diffuser et valoriser ses productions Perfectionner ses méthodes et évaluer la qualité Contribuer à la construction de la statistique européenne et internat",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "a0ac467b4fa4a7600566859177096cf91ddf9b21",
+      "source_id": "insee_conjuncture",
+      "market_scopes": [
+        "FR"
+      ],
+      "headline_original": "En septembre 2026, les prix de production de l’industrie française augmentent de 1,7 % sur un mois et de 8,2 % sur un an",
+      "published_at": "2026-10-30T07:45:00+00:00",
+      "official_article_url": "https://www.insee.fr/fr/statistiques/9111678",
+      "origin": "INSEE France",
+      "source_body_sha256": "bb056ed8f5c0fc471817e9e612da3da3224e013b45bbde1b92cd29774dccf66b",
+      "source_excerpt_original": "false Aller au contenu Aide Thèmes Recherche English Presse Menu Menu Blog Presse Aide English Lancer la recherche sur le site Thèmes Statistiques et études Cherchez vos statistiques par… Thèmes Économie - conjoncture - comptes nationaux Démographie Entreprises Plus de thèmes… Niveaux géographiques France Toutes les régions ou tous les départements Toutes les communes Plus de niveaux géographiques… Catégories Données Publications Plus de catégories… Collections Insee Première Notes et points de conjoncture Plus de collections… Définitions, méthodes et qualité Définitions Sources statistiques et indicateurs Liste des sources statistiques Liste des indicateurs Documentation complémentaire sur le recensement La qualité dans le Service statistique public (SSP) Le cadre de référence La gouvernance La politique et la stratégie qualité du SSP Les engagements européens Nomenclatures Nomenclature d’activités française Nomenclature agrégée - NA, 2008 Classification des produits française Classification des fonctions de consommation des ménages Catégories juridiques Nomenclatures des professions et catégories socioprofessionnelles Géographie administrative et d'étude Recherche sur une zone géographique Téléchargement de fichiers Historique des communes Modèles, méthodes et outils statistiques Les modèles statistiques Les outils statistiques Méthodologie statistique Courrier des statistiques Offre de données ouvertes Le catalogue des données de l'Insee Le catalogue des API de l'Insee L'offre de données au travers de nos produits de diffusion Les formats de mise à disposition des données Nos données disponibles sur d'autres plateformes Services Réviser une pension, un loyer, bail ou contrat Réviser une pension alimentaire Réviser un loyer d'habitation Réviser un bail commercial ou professionnel Indexer un contrat Convertisseur franc-euro : pouvoir d'achat de l'euro et du franc Consulter les indices et séries chronologiques Actualités des indices et séries chronologiques Accès des séries et indices chronologiques par thème Recherche par identifiant ou par mot-clé SDMX service web Tables de passage Sirene Obtenir un avis de situation au répertoire Sirene Demander la modification de son statut de diffusion Demander la modification du code APE Immatriculation, cessation ou modification des données au répertoire Sirene Obtenir sa catégorie d'entreprise Consulter et télécharger la base Sirene Identifiant unique des intervenants sur les marchés financiers (LEI) Réponses à vos questions sur le répertoire Sirene Découvrir, apprendre, enseigner Pour commencer... Visualiser les données La Compétition européenne de statistiques Pour approfondir... Répondre à une enquête de l'Insee Enquêtes auprès des particuliers Enquêtes auprès des entreprises Vrai ou faux enquêteur de l’Insee, fraude, malveillance : comment vérifier ? S’informer sur l’actualité de notre diffusion Agenda de diffusion des indicateurs économiques Dernières publications de l’Insee Dernières publications des Services statistiques ministériels Évènements annoncés à la Une du site Thèmes d'actualité Gérer les répertoires des personnes physiques Recueil des données d'état civil Le Répertoire électoral unique Dématérialisation des échanges de données Nombre de décès quotidiens par département Fichiers des personnes décédées depuis 1970 Bibliothèque de l’Insee Alain Desrosières Portail documentaire et catalogue La Bibliothèque numérique de la statistique publique Commander une prestation, acheter une publication Diffusion sur mesure Acheter nos publications Nous suivre Lettres d'information Abonnements aux lettres d'information et aux avis de parution Abonnement aux flux RSS L'Insee sur les médias sociaux Insee Mobile Aide et contacts Réponses à vos questions Obtenir des informations par téléphone Espace presse Événements presse Calendrier des publications Communiqués de presse nationaux Communiqués de presse régionaux Nominations L'Insee et la statistique publique L'Insee Connaître l'Insee L’Insee en toute confiance Travailler à l'Insee Événements et colloques Un peu d'histoire Rapports d'activité Les activités de l'Insee Suivre l’économie française Connaître les entreprises Observer l'évolution de la société Réaliser le recensement de la population Décrire et analyser les régions et les territoires Gérer des grands répertoires Diffuser et valoriser ses productions Perfectionner ses méthodes et évaluer la qualité Contribuer à la construction de la statistique européenne et internat",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "70be0eb53c902a68224124c35fbd14e1f4b3aaba",
+      "source_id": "insee_conjuncture",
+      "market_scopes": [
+        "FR"
+      ],
+      "headline_original": "Au troisième trimestre 2026, l’emploi salarié du secteur privé est quasi stable sur le trimestre (-0,1 %) et en recul sur un an (-0,3 %)",
+      "published_at": "2026-10-30T07:45:00+00:00",
+      "official_article_url": "https://www.insee.fr/fr/statistiques/9109624",
+      "origin": "INSEE France",
+      "source_body_sha256": "bb95841c44d30c843f463480c50cbdfe7eebf482ad46c594855b7ecc0bcf6041",
+      "source_excerpt_original": "false Aller au contenu Aide Thèmes Recherche English Presse Menu Menu Blog Presse Aide English Lancer la recherche sur le site Thèmes Statistiques et études Cherchez vos statistiques par… Thèmes Économie - conjoncture - comptes nationaux Démographie Entreprises Plus de thèmes… Niveaux géographiques France Toutes les régions ou tous les départements Toutes les communes Plus de niveaux géographiques… Catégories Données Publications Plus de catégories… Collections Insee Première Notes et points de conjoncture Plus de collections… Définitions, méthodes et qualité Définitions Sources statistiques et indicateurs Liste des sources statistiques Liste des indicateurs Documentation complémentaire sur le recensement La qualité dans le Service statistique public (SSP) Le cadre de référence La gouvernance La politique et la stratégie qualité du SSP Les engagements européens Nomenclatures Nomenclature d’activités française Nomenclature agrégée - NA, 2008 Classification des produits française Classification des fonctions de consommation des ménages Catégories juridiques Nomenclatures des professions et catégories socioprofessionnelles Géographie administrative et d'étude Recherche sur une zone géographique Téléchargement de fichiers Historique des communes Modèles, méthodes et outils statistiques Les modèles statistiques Les outils statistiques Méthodologie statistique Courrier des statistiques Offre de données ouvertes Le catalogue des données de l'Insee Le catalogue des API de l'Insee L'offre de données au travers de nos produits de diffusion Les formats de mise à disposition des données Nos données disponibles sur d'autres plateformes Services Réviser une pension, un loyer, bail ou contrat Réviser une pension alimentaire Réviser un loyer d'habitation Réviser un bail commercial ou professionnel Indexer un contrat Convertisseur franc-euro : pouvoir d'achat de l'euro et du franc Consulter les indices et séries chronologiques Actualités des indices et séries chronologiques Accès des séries et indices chronologiques par thème Recherche par identifiant ou par mot-clé SDMX service web Tables de passage Sirene Obtenir un avis de situation au répertoire Sirene Demander la modification de son statut de diffusion Demander la modification du code APE Immatriculation, cessation ou modification des données au répertoire Sirene Obtenir sa catégorie d'entreprise Consulter et télécharger la base Sirene Identifiant unique des intervenants sur les marchés financiers (LEI) Réponses à vos questions sur le répertoire Sirene Découvrir, apprendre, enseigner Pour commencer... Visualiser les données La Compétition européenne de statistiques Pour approfondir... Répondre à une enquête de l'Insee Enquêtes auprès des particuliers Enquêtes auprès des entreprises Vrai ou faux enquêteur de l’Insee, fraude, malveillance : comment vérifier ? S’informer sur l’actualité de notre diffusion Agenda de diffusion des indicateurs économiques Dernières publications de l’Insee Dernières publications des Services statistiques ministériels Évènements annoncés à la Une du site Thèmes d'actualité Gérer les répertoires des personnes physiques Recueil des données d'état civil Le Répertoire électoral unique Dématérialisation des échanges de données Nombre de décès quotidiens par département Fichiers des personnes décédées depuis 1970 Bibliothèque de l’Insee Alain Desrosières Portail documentaire et catalogue La Bibliothèque numérique de la statistique publique Commander une prestation, acheter une publication Diffusion sur mesure Acheter nos publications Nous suivre Lettres d'information Abonnements aux lettres d'information et aux avis de parution Abonnement aux flux RSS L'Insee sur les médias sociaux Insee Mobile Aide et contacts Réponses à vos questions Obtenir des informations par téléphone Espace presse Événements presse Calendrier des publications Communiqués de presse nationaux Communiqués de presse régionaux Nominations L'Insee et la statistique publique L'Insee Connaître l'Insee L’Insee en toute confiance Travailler à l'Insee Événements et colloques Un peu d'histoire Rapports d'activité Les activités de l'Insee Suivre l’économie française Connaître les entreprises Observer l'évolution de la société Réaliser le recensement de la population Décrire et analyser les régions et les territoires Gérer des grands répertoires Diffuser et valoriser ses productions Perfectionner ses méthodes et évaluer la qualité Contribuer à la construction de la statistique européenne et internat",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "9e210a4374a592520cf2a825f76ab04a38253fb2",
+      "source_id": "insee_conjuncture",
+      "market_scopes": [
+        "FR"
+      ],
+      "headline_original": "Le PIB recule légèrement au troisième trimestre 2026 (-0,1 % après 0,0 %)",
+      "published_at": "2026-10-30T06:30:00+00:00",
+      "official_article_url": "https://www.insee.fr/fr/statistiques/9111036",
+      "origin": "INSEE France",
+      "source_body_sha256": "3951c0bee2fdf7838d25c367fd91b2e6985097a0ac59c731eab838a7b610e2e6",
+      "source_excerpt_original": "false Aller au contenu Aide Thèmes Recherche English Presse Menu Menu Blog Presse Aide English Lancer la recherche sur le site Thèmes Statistiques et études Cherchez vos statistiques par… Thèmes Économie - conjoncture - comptes nationaux Démographie Entreprises Plus de thèmes… Niveaux géographiques France Toutes les régions ou tous les départements Toutes les communes Plus de niveaux géographiques… Catégories Données Publications Plus de catégories… Collections Insee Première Notes et points de conjoncture Plus de collections… Définitions, méthodes et qualité Définitions Sources statistiques et indicateurs Liste des sources statistiques Liste des indicateurs Documentation complémentaire sur le recensement La qualité dans le Service statistique public (SSP) Le cadre de référence La gouvernance La politique et la stratégie qualité du SSP Les engagements européens Nomenclatures Nomenclature d’activités française Nomenclature agrégée - NA, 2008 Classification des produits française Classification des fonctions de consommation des ménages Catégories juridiques Nomenclatures des professions et catégories socioprofessionnelles Géographie administrative et d'étude Recherche sur une zone géographique Téléchargement de fichiers Historique des communes Modèles, méthodes et outils statistiques Les modèles statistiques Les outils statistiques Méthodologie statistique Courrier des statistiques Offre de données ouvertes Le catalogue des données de l'Insee Le catalogue des API de l'Insee L'offre de données au travers de nos produits de diffusion Les formats de mise à disposition des données Nos données disponibles sur d'autres plateformes Services Réviser une pension, un loyer, bail ou contrat Réviser une pension alimentaire Réviser un loyer d'habitation Réviser un bail commercial ou professionnel Indexer un contrat Convertisseur franc-euro : pouvoir d'achat de l'euro et du franc Consulter les indices et séries chronologiques Actualités des indices et séries chronologiques Accès des séries et indices chronologiques par thème Recherche par identifiant ou par mot-clé SDMX service web Tables de passage Sirene Obtenir un avis de situation au répertoire Sirene Demander la modification de son statut de diffusion Demander la modification du code APE Immatriculation, cessation ou modification des données au répertoire Sirene Obtenir sa catégorie d'entreprise Consulter et télécharger la base Sirene Identifiant unique des intervenants sur les marchés financiers (LEI) Réponses à vos questions sur le répertoire Sirene Découvrir, apprendre, enseigner Pour commencer... Visualiser les données La Compétition européenne de statistiques Pour approfondir... Répondre à une enquête de l'Insee Enquêtes auprès des particuliers Enquêtes auprès des entreprises Vrai ou faux enquêteur de l’Insee, fraude, malveillance : comment vérifier ? S’informer sur l’actualité de notre diffusion Agenda de diffusion des indicateurs économiques Dernières publications de l’Insee Dernières publications des Services statistiques ministériels Évènements annoncés à la Une du site Thèmes d'actualité Gérer les répertoires des personnes physiques Recueil des données d'état civil Le Répertoire électoral unique Dématérialisation des échanges de données Nombre de décès quotidiens par département Fichiers des personnes décédées depuis 1970 Bibliothèque de l’Insee Alain Desrosières Portail documentaire et catalogue La Bibliothèque numérique de la statistique publique Commander une prestation, acheter une publication Diffusion sur mesure Acheter nos publications Nous suivre Lettres d'information Abonnements aux lettres d'information et aux avis de parution Abonnement aux flux RSS L'Insee sur les médias sociaux Insee Mobile Aide et contacts Réponses à vos questions Obtenir des informations par téléphone Espace presse Événements presse Calendrier des publications Communiqués de presse nationaux Communiqués de presse régionaux Nominations L'Insee et la statistique publique L'Insee Connaître l'Insee L’Insee en toute confiance Travailler à l'Insee Événements et colloques Un peu d'histoire Rapports d'activité Les activités de l'Insee Suivre l’économie française Connaître les entreprises Observer l'évolution de la société Réaliser le recensement de la population Décrire et analyser les régions et les territoires Gérer des grands répertoires Diffuser et valoriser ses productions Perfectionner ses méthodes et évaluer la qualité Contribuer à la construction de la statistique européenne et internat",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "445f4c33f498ae3b6cbb6993b1e7e1b4f45c2d5f",
+      "source_id": "insee_conjuncture",
+      "market_scopes": [
+        "FR"
+      ],
+      "headline_original": "La consommation des ménages en biens diminue de nouveau en septembre 2026 (-0,5 % après -0,5 %)",
+      "published_at": "2026-10-30T06:30:00+00:00",
+      "official_article_url": "https://www.insee.fr/fr/statistiques/9109722",
+      "origin": "INSEE France",
+      "source_body_sha256": "7ecc98a43bd4823f422efc7ad792bb4eccc89f04825e420dea62a916462aef19",
+      "source_excerpt_original": "false Aller au contenu Aide Thèmes Recherche English Presse Menu Menu Blog Presse Aide English Lancer la recherche sur le site Thèmes Statistiques et études Cherchez vos statistiques par… Thèmes Économie - conjoncture - comptes nationaux Démographie Entreprises Plus de thèmes… Niveaux géographiques France Toutes les régions ou tous les départements Toutes les communes Plus de niveaux géographiques… Catégories Données Publications Plus de catégories… Collections Insee Première Notes et points de conjoncture Plus de collections… Définitions, méthodes et qualité Définitions Sources statistiques et indicateurs Liste des sources statistiques Liste des indicateurs Documentation complémentaire sur le recensement La qualité dans le Service statistique public (SSP) Le cadre de référence La gouvernance La politique et la stratégie qualité du SSP Les engagements européens Nomenclatures Nomenclature d’activités française Nomenclature agrégée - NA, 2008 Classification des produits française Classification des fonctions de consommation des ménages Catégories juridiques Nomenclatures des professions et catégories socioprofessionnelles Géographie administrative et d'étude Recherche sur une zone géographique Téléchargement de fichiers Historique des communes Modèles, méthodes et outils statistiques Les modèles statistiques Les outils statistiques Méthodologie statistique Courrier des statistiques Offre de données ouvertes Le catalogue des données de l'Insee Le catalogue des API de l'Insee L'offre de données au travers de nos produits de diffusion Les formats de mise à disposition des données Nos données disponibles sur d'autres plateformes Services Réviser une pension, un loyer, bail ou contrat Réviser une pension alimentaire Réviser un loyer d'habitation Réviser un bail commercial ou professionnel Indexer un contrat Convertisseur franc-euro : pouvoir d'achat de l'euro et du franc Consulter les indices et séries chronologiques Actualités des indices et séries chronologiques Accès des séries et indices chronologiques par thème Recherche par identifiant ou par mot-clé SDMX service web Tables de passage Sirene Obtenir un avis de situation au répertoire Sirene Demander la modification de son statut de diffusion Demander la modification du code APE Immatriculation, cessation ou modification des données au répertoire Sirene Obtenir sa catégorie d'entreprise Consulter et télécharger la base Sirene Identifiant unique des intervenants sur les marchés financiers (LEI) Réponses à vos questions sur le répertoire Sirene Découvrir, apprendre, enseigner Pour commencer... Visualiser les données La Compétition européenne de statistiques Pour approfondir... Répondre à une enquête de l'Insee Enquêtes auprès des particuliers Enquêtes auprès des entreprises Vrai ou faux enquêteur de l’Insee, fraude, malveillance : comment vérifier ? S’informer sur l’actualité de notre diffusion Agenda de diffusion des indicateurs économiques Dernières publications de l’Insee Dernières publications des Services statistiques ministériels Évènements annoncés à la Une du site Thèmes d'actualité Gérer les répertoires des personnes physiques Recueil des données d'état civil Le Répertoire électoral unique Dématérialisation des échanges de données Nombre de décès quotidiens par département Fichiers des personnes décédées depuis 1970 Bibliothèque de l’Insee Alain Desrosières Portail documentaire et catalogue La Bibliothèque numérique de la statistique publique Commander une prestation, acheter une publication Diffusion sur mesure Acheter nos publications Nous suivre Lettres d'information Abonnements aux lettres d'information et aux avis de parution Abonnement aux flux RSS L'Insee sur les médias sociaux Insee Mobile Aide et contacts Réponses à vos questions Obtenir des informations par téléphone Espace presse Événements presse Calendrier des publications Communiqués de presse nationaux Communiqués de presse régionaux Nominations L'Insee et la statistique publique L'Insee Connaître l'Insee L’Insee en toute confiance Travailler à l'Insee Événements et colloques Un peu d'histoire Rapports d'activité Les activités de l'Insee Suivre l’économie française Connaître les entreprises Observer l'évolution de la société Réaliser le recensement de la population Décrire et analyser les régions et les territoires Gérer des grands répertoires Diffuser et valoriser ses productions Perfectionner ses méthodes et évaluer la qualité Contribuer à la construction de la statistique européenne et internat",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "9eadc21a517cd05484fc050dbcea21d30e3da5e3",
+      "source_id": "ecb_press",
+      "market_scopes": [
+        "RO",
+        "FR"
+      ],
+      "headline_original": "Piero Cipollone: Next-day securities settlement, tokenisation and the transformation of Europe’s financial infrastructure",
+      "published_at": "2026-10-29T15:50:00+00:00",
+      "official_article_url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261029~e9b57c3495.en.html",
+      "origin": "European Central Bank",
+      "source_body_sha256": null,
+      "source_excerpt_original": null,
+      "evidence_status": "SOURCE_BODY_UNAVAILABLE",
+      "source_body_error": "Publisher canonical differs from feed story.",
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "68b91cf9e39d69165ea737300ed8fcc33ffbae09",
+      "source_id": "ecb_press",
+      "market_scopes": [
+        "RO",
+        "FR"
+      ],
+      "headline_original": "Christine Lagarde, Boris Vujčić: Monetary policy statement (with Q&A)",
+      "published_at": "2026-10-29T14:00:00+00:00",
+      "official_article_url": "https://www.ecb.europa.eu//press/press_conference/monetary-policy-statement/2026/html/ecb.is261029~5c5ffe99e5.en.html",
+      "origin": "European Central Bank",
+      "source_body_sha256": null,
+      "source_excerpt_original": null,
+      "evidence_status": "SOURCE_BODY_UNAVAILABLE",
+      "source_body_error": "Publisher canonical differs from feed story.",
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "7b7f5adf10a3b9f7d2f15801022a04c9ad7ad47f",
+      "source_id": "ecb_press",
+      "market_scopes": [
+        "RO",
+        "FR"
+      ],
+      "headline_original": "Monetary policy decisions",
+      "published_at": "2026-10-29T13:15:00+00:00",
+      "official_article_url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.mp261029~9a493adf17.en.html",
+      "origin": "European Central Bank",
+      "source_body_sha256": null,
+      "source_excerpt_original": null,
+      "evidence_status": "SOURCE_BODY_UNAVAILABLE",
+      "source_body_error": "Publisher canonical differs from feed story.",
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "e0a79badc41504c72f919c5756bbec8f29892298",
+      "source_id": "ecb_press",
+      "market_scopes": [
+        "RO",
+        "FR"
+      ],
+      "headline_original": "ECB President Lagarde to step down on 7 February 2027",
+      "published_at": "2026-10-29T10:00:00+00:00",
+      "official_article_url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261029~abbb6dc64b.en.html",
+      "origin": "European Central Bank",
+      "source_body_sha256": "bfcc22f2b004ab8df8452efa791f4f0c76cad895be0536d931b7d810781f8f48",
+      "source_excerpt_original": "Skip to: Skip to navigation Skip to content Skip to footer EN Български Čeština Dansk Deutsch Eλληνικά English Español Eesti keel Suomi Français Gaeilge Hrvatski Magyar Italiano Lietuvių Latviešu Malti Nederlands Polski Português Română Slovenčina Slovenščina Svenska Menu Monetary policy & markets Monetary policy & markets Our monetary policy strategy, the tools we use and the impact they have Overview of monetary policy and markets Quick links What is monetary policy? Strategy review Asset purchase programmes Latest monetary policy press conference 29 October 2026 Introduction Benefits of price stability Scope of monetary policy Transmission mechanism Decisions, statements & accounts Monetary policy strategy Strategy review Medium-term orientation Two per cent inflation target Economic, monetary and financial analysis Economic analysis Monetary and financial analysis Monetary policy operations Open market operations TLTROs Asset purchase programmes Securities lending Pandemic emergency purchase programme Standing facilities Minimum reserves Two-tier system Euro central bank liquidity lines Swap lines EUREP Chronology of Eurosystem liquidity lines Emergency liquidity assistance (ELA) Liquidity analysis Collateral Eligibility criteria and assessment Marketable assets Non-marketable assets List of eligible marketable assets User guide Collateral management Eligible SSSs Eligible links Eligible triparty agents Risk mitigation ECAF Risk control Haircut categories Valuation Loan-level requirements Contacts Structure of the euro area economy Economic policy Fiscal policies External trade Effective exchange rates Financial structure Financial markets Financial intermediaries Economic diversity Labour market Market contact groups Bond market (BMCG) Money market (MMCG) Debt Issuance Market Contact Group (DIMCG) ECB Operations managers group (ECB OMG) Foreign exchange (FXCG) Institutional Investor Dialogue (IID) Monetary Analysis Contact Group (MACG) Payments & financial stability Payments & financial stability Insights into our work on financial stability and payments and market infrastructures Overview of payments and financial stability Quick links Digital euro Payments news & events Market contact groups TARGET professional use documents and links Latest Financial Stability Review 5 June 2025 Payments TARGET Services Shared features T2 Facts and figures Governance T2S Governance Facts and figures Pricing TIPS Cross-border payments Governance Facts and figures Onboarding ECMS Governance Pontes Governance TARGET professional use documents & links Shared features documents & links T2 documents & links T2S documents & links TIPS documents & links ECMS documents & links Pontes documents & links Tokenisation and DLT Appia Governance Exploratory work Retail payments Retail payments strategy ECB as a catalyst SEPA Instant payments Market contact groups Collateral management harmonisation SCoRE Implementation FAQ AMI-SeCo Cyber resilience Financial market infrastructures TIBER-EU Euro Cyber Resilience Board Oversight Payment systems TARGET2-Securities Electronic payments Securities settlement systems and central counterparties Critical service providers Correspondent and custodian banks SecuRe Pay forum Reserve management services Key aspects Range of services Cash professionals Cash handling Authentication devices Recirculation of banknotes Common detector interface specifications Banknote manufacturer accreditation Financial stability Introduction to financial stability Macroprudential Measures Financial stability contact groups Statistics Statistics Access to all ECB statistics and background information Overview of ECB statistics Quick links Key figures ECB Data Portal Statistical releases PRESS RELEASE - ECB launches pilot project for research access to confidential statistical data 13 March 2025 Frequently accessed Euro exchange rates Key ECB interest rates Euro short-term rate (€STR) Interest rate benchmarks Working group on euro risk-free rates Inflation Euro area yield curves All statistics & background All key statistics All data services Data reporting & standards Governance and quality framework Co-operation and standards Banks’ data reporting DPM Alliance IReF JBRC BIRD AnaCredit AnaCredit Q&A Public consultations Banking industry dialogue on ESCB statistics and integrated reporting SDMX – statistical data exchange model INEXDA - granular data network The euro The euro All you need to know about our common currency Ove",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    },
+    {
+      "id": "a0c3e1be77e8b5a27f797ac2698e8181f11f02e5",
+      "source_id": "fed_monetary",
+      "market_scopes": [
+        "US"
+      ],
+      "headline_original": "Federal Reserve issues FOMC statement",
+      "published_at": "2026-10-28T18:00:00+00:00",
+      "official_article_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+      "origin": "US Federal Reserve",
+      "source_body_sha256": "ac2ee68a44b4e5358f4aea0ce683cd5c7e837c8151086aac92f03204947757ff",
+      "source_excerpt_original": "﻿ Skip to main content An official website of the United States Government Here's how you know Official websites use .gov A .gov website belongs to an official government organization in the United States. Secure .gov websites use HTTPS A lock (Lock Locked padlock icon ) or https:// means you've safely connected to the .gov website. Share sensitive information only on official, secure websites. Back to Home Board of Governors of the Federal Reserve System Stay Connected Federal Reserve Facebook Page Federal Reserve Instagram Page Federal Reserve YouTube Page Federal Reserve Flickr Page Federal Reserve LinkedIn Page Federal Reserve Threads Page Federal Reserve X Page Federal Reserve Bluesky Page Subscribe to RSS Subscribe to Email Recent Postings Calendar Publications Site Map A-Z index Careers FAQs Videos Contact Search Submit Search Button Advanced Toggle Dropdown Menu Board of Governors of the Federal Reserve System The Federal Reserve, the central bank of the United States, provides the nation with a safe, flexible, and stable monetary and financial system. Main Menu Toggle Button Sections Search Toggle Button Search Search Submit Button Submit About the Fed Structure of the Federal Reserve System The Fed Explained Board Members Advisory Councils Federal Reserve Banks Federal Reserve Bank and Branch Directors Federal Reserve Act Currency Board Meetings Board Votes Careers Do Business with the Board Holidays Observed - K.8 Ethics & Values Contact Requesting Information (FOIA) FAQs Economic Education Fed Financial Statements Financial Innovation News & Events Press Releases Speeches & Testimony Calendar Videos Photo Gallery Conferences Monetary Policy Federal Open Market Committee About the FOMC Meeting calendars and information Transcripts and other historical materials FAQs Monetary Policy Principles and Practice Notes Policy Implementation Policy Normalization Policy Tools Reports Monetary Policy Report Beige Book Federal Reserve Balance Sheet Developments Review of Monetary Policy Strategy, Tools, and Communications Overview Supervision & Regulation Supervision Community Banks Regional Banks and Foreign Banks with U.S. Assets < $100 Billion Large Banks and Large Foreign Banks Global Systemically Important Banks Financial Market Utilities Consumer Compliance Resources for Supervised Institutions Reports Federal Reserve Supervision and Regulation Report Reporting Forms Recent Reporting Form Updates Information Collections Under Review Financial Statements Securities Exchange Act of 1934 Applications/Structure Change FFIEC Municipal and Government Securities Activities Monitoring Micro Data Reference Manual Legal Developments Enforcement Actions and Legal Developments Mergers, Acquisitions, and Other Applications Process Filing Information Board and Reserve Bank Actions Supervision and Regulation Letters By Year By Topic Regulatory and Policy Resources Federal Reserve Act Bank Holding Company Act Regulations Supervision Manuals Federal Reserve Regulatory Service Disaster Preparedness and Recovery Resources Banking and Data Structure Beneficial Ownership Reports U.S. Domestically Chartered Commercial Banks Minority Depository Institutions U.S. Offices of Foreign Entities Financial Holding Companies Interstate Branching Securities Underwriting and Dealing Subsidiaries State Member Banks Supervised by the Federal Reserve Financial Stability Financial Stability Assessments About Financial Stability Types of Financial System Vulnerabilities & Risks Monitoring Risk Across the Financial System Proactive Monitoring of Markets & Institutions Financial Stability & Stress Testing Financial Stability Coordination & Actions Responding to Financial System Emergencies Cooperation on Financial Stability Reports Financial Stability Report Payment Systems Regulations & Statutes Regulation CC (Availability of Funds and Collection of Checks) Regulation II (Debit Card Interchange Fees and Routing) Regulation HH (Financial Market Utilities) Other Regulations and Statutes Payment Policies Federal Reserve's Key Policies for the Provision of Financial Services Guidelines for Evaluating Joint Account Requests Overnight Overdrafts Payment System Risk Sponsorship for Priority Telecommunication Services Reserve Bank Payment Services & Data Automated Clearinghouse Services Check Services Currency and Coin Services Daylight Overdrafts and Fees FedNow® Service Fedwire Funds Services Fedwire Securities Services Fiscal Agency Services Master Accoun",
+      "evidence_status": "BODY_CAPTURED_UNREVIEWED",
+      "source_body_error": null,
+      "editorial_review_required": true,
+      "market_impact_reviewed": false,
+      "telegram_publishable": false
+    }
+  ],
+  "us_index_close_snapshot_ready": false,
+  "google_docs_current_revision_loaded": false,
+  "review_status": "UNREVIEWED",
+  "delivery_allowed": false,
+  "telegram_sent": false,
+  "purpose": "Material for human/ChatGPT source-based editorial review, not market quote certification."
+}
