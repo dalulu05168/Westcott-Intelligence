@@ -1,3 +1,9 @@
+## 2026-10-31｜证据优先 Skill 强制入口（新增）
+
+所有涉及真实执行结果、财经新闻核验、数据精度、时效性、新闻图片和“已完成”声明的本仓库流程，先在**本次运行中实际读取** `skills/evidence-first-verification/SKILL.md`。能运行代码时，执行 `scripts/verify_completion_receipt.py` 并核对回执、原始来源、数值和实际动作；继续沿用原 `scripts/news_release_gate.py` 和 Telegram 原文核验，不得用新离线门禁替代真实事实审核。用户在其它 ChatGPT 页面是否调用 Skill 不能通过本仓库规则保证，需逐次验证连接器实际调用。此增量门禁不授权改动 Telegram 定时/群发逻辑。
+
+---
+
 # ChatGPT 自动化总控协议｜2026-10-22
 
 > 作用：让现有 ChatGPT 定时任务、ChatGPT Project 内的对话、Codex/仓库内流程**共享同一份最新来源和验收标准**。本文件不能改变 ChatGPT 产品的全局指令优先级，不能控制未接入该流程的独立聊天，不会自动触发或调用其他任务。不能把提示词约束称为硬性系统级保证。
