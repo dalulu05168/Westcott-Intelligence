@@ -1,3 +1,9 @@
+## 2026-10-31｜Evidence-first 必须执行门禁（新增）
+
+凡涉及本仓库的真实执行、GitHub改动、新闻/指标核查、新闻配图或声称测试/保存/发布/部署成功，**必须先实际读取** `skills/evidence-first-verification/SKILL.md`，再按任务执行当次验证。未实际读取和执行不得声称已执行 Skill。可运行时须执行 `scripts/verify_completion_receipt.py` 的证据回执校验；财经新闻继续执行已有 `scripts/news_release_gate.py` 与原文核验。机器门禁仅证明回执一致性，不证明新闻事实真实；缺实际来源、工具或读回时标记 `PARTIAL/BLOCKED`，不得声称完成。跨 ChatGPT 会话全局强制不可能仅靠本仓库文件实现；需要在每个实际使用的项目接入、CI和受保护分支分别配置。**未经用户批准不改变已运行的 Telegram 自动发布路径或仓库可见性。**
+
+---
+
 ## 2026-10-24｜长期规则与来源切换
 
 先读取[仓库长期记忆入口](memory/runtime/REPOSITORY-MEMORY-START-HERE.md)及其中用户确认规则。保留本仓库01—42出场、David身份、09:00上午开群等现行规则；用户停止的Google OAuth排障只作用于其私有GPT连接，不暂停其他任务。仓库可读、已入库与私有GPT已接通须分别验证。
