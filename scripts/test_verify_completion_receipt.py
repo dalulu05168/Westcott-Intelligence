@@ -89,6 +89,14 @@ class ReceiptGateTests(unittest.TestCase):
         self.data["actions"][0]["status"] = "BLOCKED"
         self.assertIn("ACTION_0_INCOMPLETE", self.check())
 
+    def test_partial_is_not_passed_as_completed(self):
+        self.data["claim"] = "PARTIAL"
+        self.assertIn("CLAIM_NOT_COMPLETED", self.check())
+
+    def test_blocked_is_not_passed_as_completed(self):
+        self.data["claim"] = "BLOCKED"
+        self.assertIn("CLAIM_NOT_COMPLETED", self.check())
+
     def test_stale_receipt_fails(self):
         self.data["recorded_at"] = "2026-10-25T02:00:00+00:00"
         self.assertIn("STALE_OR_FUTURE_RECEIPT", self.check())
