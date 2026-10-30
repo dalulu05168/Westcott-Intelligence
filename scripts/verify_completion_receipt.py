@@ -96,6 +96,8 @@ def validate(data, root, now=None):
                 errors.append(key + "_UNREADABLE_OR_INVALID")
     if data.get("claim") not in ("COMPLETED", "PARTIAL", "BLOCKED"):
         errors.append("INVALID_CLAIM")
+    elif data["claim"] != "COMPLETED":
+        errors.append("CLAIM_NOT_COMPLETED")
     if data.get("task_type") == "news":
         news = data.get("news")
         if not isinstance(news, dict):
