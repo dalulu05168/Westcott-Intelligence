@@ -1,0 +1,44 @@
+name: Evidence-First Verification Skill (offline gate)
+on:
+  pull_request:
+    paths:
+      - 'skills/evidence-first-verification/**'
+      - 'scripts/verify_completion_receipt.py'
+      - 'scripts/test_verify_completion_receipt.py'
+      - 'audit/completion-receipts/**'
+      - '.github/workflows/evidence-first-verification.yml'
+      - 'AGENTS.md'
+      - 'AUTOMATION-CONTROL-CENTER.md'
+  push:
+    paths:
+      - 'skills/evidence-first-verification/**'
+      - 'scripts/verify_completion_receipt.py'
+      - 'scripts/test_verify_completion_receipt.py'
+      - 'audit/completion-receipts/**'
+      - '.github/workflows/evidence-first-verification.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline-evidence-gate:
+    name: Unit tests and submitted evidence receipts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run negative and positive gate tests
+        run: python -m unittest discover -s scripts -p 'test_verify_completion_receipt.py' -v
+      - name: Check submitted receipts without assuming absent receipts are approved
+        shell: bash
+        run: |
+          shopt -s nullglob
+          receipts=(audit/completion-receipts/*.json)
+          if (( ${#receipts[@]} == 0 )); then
+            echo 'No production receipts supplied: only the gate implementation is tested; no external completion has been approved.'
+          else
+            for receipt in "${receipts[@]}"; do
+              python scripts/verify_completion_receipt.py "$receipt" --root .
+            done
+          fi
